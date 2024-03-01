@@ -6,21 +6,20 @@
 # │  specific packageId is also provided in this file.                                             │
 # ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
 
-
-id: my-ig
-canonical: http://example.com/fhir/example
-url: http://example.com/fhir/example
-name: ExampleIG
-title: "HL7 FHIR Implementation Guide: Example IG Release 1 - US Realm | STU1"
-description: Example IG exercises many of the fields in a SUSHI configuration.
+id: lk-nehr-fhir-ips
+canonical: http://fhir.health.gov.lk/ips
+url: http://fhir.health.gov.lk/ips/ImplementationGuide/lk-nehr-fhir-ips
+name: SriLankaIPS
+title: "LK NEHR Sri Lanka Patient Summary (IPS based) Implementation Guide"
+description: A FHIR Implementation Guide - Sri Lanka IPS
 status: active
 license: CC0-1.0
-date: 2020-02-26
-version: 1.0.0
+date: 2024-03-01
+version: 0.1.0
 
 # Although fhirVersions is 0..* in the ImplementationGuide resource
-# it can be a single item OR and array here, but the current tooling 
-# only supports one FHIR version per Implementation Guide
+# it can be a single item OR and array here (but so far SUSHI only
+# supports 4.0.1 anyway).
 fhirVersion: 4.0.1
 
 # The following two lines correspond to items that used to be in
@@ -37,16 +36,16 @@ releaseLabel: STU1
 # as IG.publisher.  The contact details and/or additional publishers
 # will be translated into IG.contact values.
 publisher:
-  name: My Organization 
-  url: http://example.com/committees
-  email: my-group@example.com
+  name: Ministry of Health, Sri Lanka
+  url: https://www.health.gov.lk/
+  email: digitalhealth@health.gov.lk
 
 # ContactDetail is required by the template.
 contact:
-  - name: Bob Smith
+  - name: Director, Health Information
     telecom:
       - system: email
-        value: bobsmith@example.com
+        value: digitalhealth@health.gov.lk
         use: work
 
 # The jurisdiction can be a single item or a list. The FHIR Shorthand
@@ -59,7 +58,11 @@ jurisdiction: http://unstats.un.org/unsd/methods/m49/m49.htm#001 "World"
 # The dependencies property corresponds to IG.dependsOn. The key is the
 # package id and the value is the version (or dev/current). For advanced
 # use cases, the value can be an object with keys for `uri` and `version`.
-#dependencies:
+dependencies:
+  hl7.fhir.uv.ips:
+    id: InternationalPatientSummaryIG
+    uri: http://hl7.org/fhir/uv/ips/ImplementationGuide/hl7.fhir.uv.ips
+    version: 1.1.0
 #  hl7.fhir.us.core: 3.1.0
 #  hl7.fhir.us.mcode:
 #    id: mcode

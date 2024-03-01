@@ -1,19 +1,17 @@
-Empty IG
+LK NEHR Sri Lanka Patient Summary (IPS based) Implementation Guide
 ---
-This is an empty IG
+Sri Lanka International Patient Summary Implementation
 <br> </br>
 ###
 ### Publication
-This ImplementationGuide is published in the following locations:
+This Implementation Guide (IG) is published in the following location:
 
-Continuous Build: __http://build.fhir.org/ig/openhie/fhir-ig-empty/branches/main/index.html__  
-Canonical / permanent URL: 
-<br> </br>
+* FHIR IG URL: <https://lk-gov-health-hiu.github.io/lk-nehr-fhir-ips/>
+<br>
 
 ### Issues
 Issues and change requests are managed here:  
 
-Issues:  __https://github.com/openhie/fhir-ig-empty/issues__  
-Kanban board:  __https://github.com/openhie/fhir-ig-empty/projects/1__  
+* Issues:  <https://github.com/lk-gov-health-hiu/lk-nehr-fhir-ips/issues>  
 
 ---
