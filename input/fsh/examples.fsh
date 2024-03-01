@@ -838,7 +838,7 @@ Description: "This is to record a patient's medication prescription request"
 * intent = #order
 * subject = Reference(HHIMSPatientExample)
 * encounter = Reference(HHIMSTargetFacilityEncounterExample)
-* medicationCodeableConcept.coding.code = #Vitamin-A-&-D
+* medicationCodeableConcept.coding.code = #01403501
 * medicationCodeableConcept.coding.system = "http://fhir.health.gov.lk/ips/CodeSystem/cs-medication-name"
 * medicationCodeableConcept.text = "Medication"
 * dosageInstruction[+].doseAndRate[+].doseQuantity.value = 3.0
@@ -889,7 +889,7 @@ Description: "This represents the procedure that was performed on a patient."
 * performer[+].actor = Reference(GeneralPractitionerExample)
 * location = Reference(ProvidersLocationExample)
 
-Instance: InjectionsExample
+/*Instance: InjectionsExample
 InstanceOf: Injections
 Usage: #example
 Title: "Injections"
@@ -903,7 +903,7 @@ Description: "Used to represent medication that is administered intravenously."
 * performer[+].actor = Reference(GeneralPractitionerExample)
 * dosage.dose.value = 12
 * dosage.route = $SCT#47625008
-* dosage.route.text = "Intravenous route"
+* dosage.route.text = "Intravenous route"*/
 
 Instance: DrugDispensationExample
 InstanceOf: DrugDispensation
@@ -918,7 +918,7 @@ Description: "Used to represent dispensed medication for a patient."
 * authorizingPrescription[+] = Reference(PrescriptionsExample)
 * whenHandedOver = "2023-10-11T17:21:33-08:00"
 * receiver[+] = Reference(HHIMSPatientExample)
-* medicationCodeableConcept.coding.code = #Vitamin-A-&-D
+* medicationCodeableConcept.coding.code = #01403501
 * medicationCodeableConcept.coding.system = "http://fhir.health.gov.lk/ips/CodeSystem/cs-medication-name"
 * medicationCodeableConcept.text = "Medication"
 
@@ -1033,11 +1033,11 @@ Description: "Clinical document used to represent the International Patient Summ
 * section[sectionMedications][=].text.status = #generated
 * section[sectionMedications][=].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: MedicationRequest</b><a name=\"PrescriptionsExample\"></a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource MedicationRequest &quot;PrescriptionsExample&quot; </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-medication-request.html\">Prescription Request</a></p></div><p><b>identifier</b>: Prescription identifier/prescription-12345</p><p><b>status</b>: completed</p><p><b>intent</b>: order</p><p><b>medication</b>: Medication <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"CodeSystem-cs-medication-name.html\">Medication Names</a>#Vitamin-A-&amp;-D)</span></p><p><b>subject</b>: See (https://lk-gov-health-hiu.github.io/lk-nehr-fhir-ips/Patient-HHIMSPatientExample)</p><p><b>encounter</b>: See (https://lk-gov-health-hiu.github.io/lk-nehr-fhir-ips/Encounter-HHIMSTargetFacilityEncounterExample)</p><p><b>authoredOn</b>: 2023-10-11 17:21:33-0800</p><p><b>requester</b>: See (https://lk-gov-health-hiu.github.io/lk-nehr-fhir-ips/Practitioner-GeneralPractitionerExample)</p><p><b>performer</b>: See (https://lk-gov-health-hiu.github.io/lk-nehr-fhir-ips/Practitioner-GeneralPractitionerExample)</p><p><b>recorder</b>: See (https://lk-gov-health-hiu.github.io/lk-nehr-fhir-ips/Practitioner-GeneralPractitionerExample)</p><p><b>note</b>: Additional information regarding the patient's medication prescription (By Organization-OrganizationExample @Oct 12, 2023, 1:21:33)</p><blockquote><p><b>dosageInstruction</b></p><p><b>timing</b>: Code: BID, Count 2 times, Duration 2days, 2 per 3 days</p><blockquote><p><b>doseAndRate</b></p></blockquote></blockquote><h3>DispenseRequests</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Quantity</b></td></tr><tr><td style=\"display: none\">*</td><td>5</td></tr></table><br /><p><b>Generated Narrative: MedicationDispense</b><a name=\"DrugDispensationExample\"></a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource MedicationDispense &quot;DrugDispensationExample&quot; </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-drug-dispensation.html\">Drug Dispensation</a></p></div><p><b>status</b>: completed</p><p><b>medication</b>: Medication <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"CodeSystem-cs-medication-name.html\">Medication Names</a>#Vitamin-A-&amp;-D)</span></p><p><b>subject</b>: See (https://lk-gov-health-hiu.github.io/lk-nehr-fhir-ips/Patient-HHIMSPatientExample)</p><p><b>context</b>: See (https://lk-gov-health-hiu.github.io/lk-nehr-fhir-ips/Encounter-HHIMSTargetFacilityEncounterExample)</p><h3>Performers</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Actor</b></td></tr><tr><td style=\"display: none\">*</td><td>See (https://lk-gov-health-hiu.github.io/lk-nehr-fhir-ips/Practitioner-GeneralPractitionerExample)</td></tr></table><p><b>location</b>: See (https://lk-gov-health-hiu.github.io/lk-nehr-fhir-ips/Location/ProvidersLocationExample)</p><p><b>authorizingPrescription</b>: See (https://lk-gov-health-hiu.github.io/lk-nehr-fhir-ips/MedicationRequest/PrescriptionsExample)</p><p><b>whenHandedOver</b>: 2023-10-11 17:21:33-0800</p><p><b>receiver</b>: See (https://lk-gov-health-hiu.github.io/lk-nehr-fhir-ips/Patient-HHIMSPatientExample)</p></div>"
 
-* section[sectionInjections][+].title = "Intravenous Injections Summary section"
-* section[sectionInjections][=].code = $LNC#95492-5
-* section[sectionInjections][=].entry[injection][+] = Reference(InjectionsExample)
-* section[sectionInjections][=].text.status = #generated
-* section[sectionInjections][=].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: MedicationAdministration</b><a name=\"InjectionsExample\"></a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource MedicationAdministration &quot;InjectionsExample&quot; </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-injection.html\">Injections</a></p></div><p><b>status</b>: completed</p><p><b>medication</b>: Busulfan <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"https://browser.ihtsdotools.org/\">SNOMED CT</a>#2571007)</span></p><p><b>subject</b>: See (https://lk-gov-health-hiu.github.io/lk-nehr-fhir-ips/Patient-HHIMSPatientExample)</p><p><b>context</b>: See (https://lk-gov-health-hiu.github.io/lk-nehr-fhir-ips/Encounter-HHIMSTargetFacilityEncounterExample)</p><p><b>effective</b>: 2023-10-11 17:21:33-0800</p><h3>Performers</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Actor</b></td></tr><tr><td style=\"display: none\">*</td><td>See (https://lk-gov-health-hiu.github.io/lk-nehr-fhir-ips/Practitioner-GeneralPractitionerExample)</td></tr></table><h3>Dosages</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Route</b></td><td><b>Dose</b></td></tr><tr><td style=\"display: none\">*</td><td>Intravenous route <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"https://browser.ihtsdotools.org/\">SNOMED CT</a>#47625008)</span></td><td>12</td></tr></table></div>"
+//* section[sectionInjections][+].title = "Intravenous Injections Summary section"
+//* section[sectionInjections][=].code = $LNC#95492-5
+//* section[sectionInjections][=].entry[injection][+] = Reference(InjectionsExample)
+//* section[sectionInjections][=].text.status = #generated
+//* section[sectionInjections][=].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: MedicationAdministration</b><a name=\"InjectionsExample\"></a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource MedicationAdministration &quot;InjectionsExample&quot; </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-injection.html\">Injections</a></p></div><p><b>status</b>: completed</p><p><b>medication</b>: Busulfan <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"https://browser.ihtsdotools.org/\">SNOMED CT</a>#2571007)</span></p><p><b>subject</b>: See (https://lk-gov-health-hiu.github.io/lk-nehr-fhir-ips/Patient-HHIMSPatientExample)</p><p><b>context</b>: See (https://lk-gov-health-hiu.github.io/lk-nehr-fhir-ips/Encounter-HHIMSTargetFacilityEncounterExample)</p><p><b>effective</b>: 2023-10-11 17:21:33-0800</p><h3>Performers</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Actor</b></td></tr><tr><td style=\"display: none\">*</td><td>See (https://lk-gov-health-hiu.github.io/lk-nehr-fhir-ips/Practitioner-GeneralPractitionerExample)</td></tr></table><h3>Dosages</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Route</b></td><td><b>Dose</b></td></tr><tr><td style=\"display: none\">*</td><td>Intravenous route <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"https://browser.ihtsdotools.org/\">SNOMED CT</a>#47625008)</span></td><td>12</td></tr></table></div>"
 
 * section[sectionAllergies][+].title = "IPS Allergies and Intolerances Section"
 * section[sectionAllergies][=].code = $LNC#48765-2

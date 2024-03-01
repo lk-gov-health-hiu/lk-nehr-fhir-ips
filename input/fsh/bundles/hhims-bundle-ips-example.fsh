@@ -18,7 +18,7 @@ Description: "HHIMS IPS Bundle"
 * insert ExampleDocumentEntry(AllergiesExample, allergyintolerance, AllergyIntolerance)
 * insert ExampleDocumentEntry(PrescriptionsExample, medicationrequest, MedicationRequest)
 * insert ExampleDocumentEntry(DrugDispensationExample, medication-dispensation, MedicationDispense)
-* insert ExampleDocumentEntry(InjectionsExample, medication-administration, MedicationAdministration)
+//* insert ExampleDocumentEntry(InjectionsExample, medication-administration, MedicationAdministration)
 * insert ExampleDocumentEntry(ProceduresExample, procedure, Procedure)
 * insert ExampleDocumentEntry(ImagingExample, imagingstudy, ImagingStudy)
 

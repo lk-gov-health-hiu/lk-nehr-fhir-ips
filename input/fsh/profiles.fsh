@@ -777,7 +777,7 @@ Description: "This represents the procedure that was performed on a patient."
 * location ^definition =
     "reason(s) why this should be supported."
 
-Profile: Injections
+/*Profile: Injections
 Parent: MedicationAdministration
 Id: injection
 Title: "Injections"
@@ -798,7 +798,7 @@ Description: "Used to represent medication that is administered intravenously."
 * dosage.dose 1..1
 * dosage.route 1..1
 * dosage.route from http://hl7.org/fhir/ValueSet/route-codes (example)
-* dosage.route.text 1..1
+* dosage.route.text 1..1*/
 
 Profile: DrugDispensation
 Parent: MedicationDispense
@@ -996,7 +996,7 @@ Description: "Clinical document used to represent the International Patient Summ
 * section ^slicing.ordered = false
 * section ^slicing.description = "An entry resource included in HHIMS IPS document bundle resource."
 * section contains
-    sectionInjections 0..1 MS and
+ //   sectionInjections 0..1 MS and
     sectionImaging 0..1 MS and
     sectionInvestigations 0..1 MS and
     sectionReferrals 0..1 MS and
@@ -1004,8 +1004,8 @@ Description: "Clinical document used to represent the International Patient Summ
     sectionEncounterLocation 0..1 MS and
     sectionPractitioners 0..1 MS
 
-* section[sectionInjections] ^definition =
-    "reason(s) why this should be supported."
+//* section[sectionInjections] ^definition =
+//    "reason(s) why this should be supported."
 * section[sectionImaging] ^definition =
     "reason(s) why this should be supported."
 * section[sectionInvestigations] ^definition =
@@ -1019,8 +1019,8 @@ Description: "Clinical document used to represent the International Patient Summ
 * section[sectionPractitioners] ^definition =
     "reason(s) why this should be supported."
 
-* insert CompositionEntry(MedicationAdministration, Injections, sectionInjections, $LNC#95492-5, Intravenous Injections Summary section, injection, 
-    Injections relevant for the scope of the patient summary, This lists the injections relevant for the scope of the patient summary., 0..*)
+//* insert CompositionEntry(MedicationAdministration, Injections, sectionInjections, $LNC#95492-5, Intravenous Injections Summary section, injection, 
+  //  Injections relevant for the scope of the patient summary, This lists the injections relevant for the scope of the patient summary., 0..*)
 
 * insert CompositionEntry(ImagingStudy or Task or ServiceRequest, Imaging, sectionImaging, $LNC#97684-5, Imaging Summary section, image, 
     Images relevant for the scope of the patient summary, This lists the images relevant for the scope of the patient summary., 0..*)

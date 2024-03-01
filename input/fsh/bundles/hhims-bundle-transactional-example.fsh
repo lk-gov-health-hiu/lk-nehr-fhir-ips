@@ -16,7 +16,7 @@ Description: "This bundle contains all of the HHIMS resources for transactional 
 * insert ExampleTransactionalEntry(AllergiesExample, allergyintolerance, AllergyIntolerance)
 * insert ExampleTransactionalEntry(PrescriptionsExample, medicationrequest, MedicationRequest)
 * insert ExampleTransactionalEntry(DrugDispensationExample, medication-dispensation, MedicationDispense)
-* insert ExampleTransactionalEntry(InjectionsExample, medication-administration, MedicationAdministration)
+//* insert ExampleTransactionalEntry(InjectionsExample, medication-administration, MedicationAdministration)
 * insert ExampleTransactionalEntry(ProceduresExample, procedure, Procedure)
 * insert ExampleTransactionalEntry(ImagingExample, imagingstudy, ImagingStudy)
 
