@@ -36,16 +36,16 @@ releaseLabel: STU1
 # as IG.publisher.  The contact details and/or additional publishers
 # will be translated into IG.contact values.
 publisher:
-  name: Ministry of Health, Sri Lanka
-  url: https://www.health.gov.lk/
-  email: digitalhealth@health.gov.lk
+  name: Jembi Health Systems 
+  url: https://www.jembi.org
+  email: info@jembi.org
 
 # ContactDetail is required by the template.
 contact:
-  - name: Director, Health Information
+  - name: Richard Langford
     telecom:
       - system: email
-        value: digitalhealth@health.gov.lk
+        value: richard.langford@jembi.org
         use: work
 
 # The jurisdiction can be a single item or a list. The FHIR Shorthand

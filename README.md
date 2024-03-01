@@ -1,17 +1,19 @@
-LK NEHR Sri Lanka Patient Summary (IPS based) Implementation Guide
+Empty IG
 ---
-Sri Lanka International Patient Summary Implementation
+This is an empty IG
 <br> </br>
 ###
 ### Publication
-This Implementation Guide (IG) is published in the following location:
+This ImplementationGuide is published in the following locations:
 
-* FHIR IG URL: <https://lk-gov-health-hiu.github.io/lk-nehr-fhir-ips/>
-<br>
+* Continuous Build: <http://build.fhir.org/ig/openhie/Sri-Lanka/>
+* Canonical/permanent URL: <https://github.com/jembi/Sri-Lanka-International-Patient-Summary-Implementation-Guide/>
+<br> </br>
 
 ### Issues
 Issues and change requests are managed here:  
 
-* Issues:  <https://github.com/lk-gov-health-hiu/lk-nehr-fhir-ips/issues>  
+* Issues:  <https://github.com/jembi/Sri-Lanka-International-Patient-Summary-Implementation-Guide/issues>  
+* Kanban board: 
 
 ---
