@@ -4,6 +4,7 @@ Id: hhims-transactional-bundle
 Title: "HHIMS Transactional Bundle"
 Description: "This bundle contains all of the HHIMS resources for transactional requests."
 * type = #transaction
+* identifier 1..
 * identifier.value 1..1
 * identifier.system = "http://fhir.health.gov.lk/ips/identifier/hhims-transactional"
 * timestamp 1..1

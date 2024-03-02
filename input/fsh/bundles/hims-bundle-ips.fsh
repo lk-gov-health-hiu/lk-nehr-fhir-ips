@@ -3,6 +3,7 @@ Parent: BundleUvIps
 Id: hims-ips-bundle
 Title: "HIMS IPS Bundle"
 Description: "This bundle contains all of the HIMS resources for IPS."
+* identifier 1..
 * identifier.value 1..1
 * identifier.system = "http://fhir.health.gov.lk/ips/identifier/hims-ips"
 * timestamp 1..1
