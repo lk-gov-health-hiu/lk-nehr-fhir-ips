@@ -12,6 +12,11 @@
         This profile represents the constraints applied to the Bundle resource that is specific to HIMS but derived from the IPS FHIR Implementation Guide.
     </p>
 
+    <p><a href="StructureDefinition-hims-transactional-bundle.html">Transactional Bundle</a>
+      <br />
+        This bundle contains all of the HIMS resources for transactional requests.
+    </p>
+
     <p><a href="StructureDefinition-hims-target-facility-encounter.html">Encounter</a>
       <br />
         This profile represents the current facility at which the HIMS patient is receiving health services.
@@ -22,10 +27,20 @@
         This profile represents the patient's risk for cardiovascular disease.
     </p>
 
+    <p><a href="StructureDefinition-follow-up-at-hlc.html">CarePlan - Follow-up At HLC</a>
+      <br />
+        This profile represents the follow-up event for the patient at HLC.
+    </p>
+
   <h3>HHIMS<a name="hhims"> </a></h3>
     <p><a href="StructureDefinition-hhims-ips-bundle.html">IPS Bundle</a>
         <br />
         This profile represents the constraints applied to the Bundle resource that is specific to HHIMS but derived from the IPS FHIR Implementation Guide.
+    </p>
+
+    <p><a href="StructureDefinition-hhims-transactional-bundle.html">Transactional Bundle</a>
+      <br />
+        This bundle contains all of the HHIMS resources for transactional requests.
     </p>
   
     <p><a href="StructureDefinition-hhims-target-facility-encounter.html">Encounter</a>
