@@ -4,8 +4,14 @@
   </style>
   
   <p>
-    The IPS for Sri Lanka is a document. All the profiles specified by this guide are used by the Sri Lanka IPS Composition and are derived from the <a href="https://hl7.org/fhir/uv/ips/index.html" target="_blank">base IPS specification</a> itself. 
+    The IPS for Sri Lanka is a document. All the profiles specified by this guide are used by the Sri Lanka IPS Composition and are derived from the <a href="https://hl7.org/fhir/uv/ips/index.html" target="_blank">base IPS specification</a> itself.  
   </p>
+  <blockquote class="stu-note">
+    <ul>
+        <li>Example implementation for each of these profiles can be seen in the <strong>Example tab</strong> of the profile definition.</li>
+    </ul>
+  </blockquote>
+
   <h3>HIMS<a name="hims"> </a></h3>
     <p><a href="StructureDefinition-hims-ips-bundle.html">IPS Bundle</a>
       <br />
