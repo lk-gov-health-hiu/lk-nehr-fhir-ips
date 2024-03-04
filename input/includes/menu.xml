@@ -19,11 +19,11 @@
 	</li>
 -->
 	<li class="dropdown">
-		<a data-toggle="dropdown" href="#" class="dropdown-toggle">Specifications<b class="caret"></b>
+		<a data-toggle="dropdown" href="#" class="dropdown-toggle">FHIR Artifacts<b class="caret"></b>
 		</a>
 		<ul class="dropdown-menu">
 			<li>
-				<a href="artifacts.html">Artifact Index</a>
+				<a href="library.html">Library</a>
 			</li>
 		</ul>
 	</li>
