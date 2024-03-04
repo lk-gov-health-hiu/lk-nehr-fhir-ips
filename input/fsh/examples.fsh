@@ -72,7 +72,7 @@ Description: "Is used to document demographics and other administrative informat
 
 * name[+].use = #official
 * name[=].family = "Smith"
-* name[=].given[+] = "Mr."
+* name[=].prefix[+] = "Mr."
 * name[=].given[+] = "Mike"
 * name[=].given[+] = "John"
 * gender = #male
@@ -119,7 +119,7 @@ Description: "Is used to document demographics and other administrative informat
 
 * name[+].use = #official
 * name[=].family = "Smith"
-* name[=].given[+] = "Mr."
+* name[=].prefix[+] = "Mr."
 * name[=].given[+] = "Mike"
 * name[=].given[+] = "John"
 * gender = #male
@@ -488,7 +488,7 @@ Usage: #example
 Title: "Practitioner"
 Description: 
 "Represents the practitioners who participated in the observation."
-* name[+].prefix = "Dr"
+* name[+].prefix[+] = "Dr"
 * name[=].given[+] = "Tom"
 * name[=].given[+] = "Junes"
 * name[=].family = "Smith"

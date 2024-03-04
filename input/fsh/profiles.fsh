@@ -27,6 +27,9 @@ Description:
 * name 1..*
 * name.given 1..*
 * name.family 1..1
+* name.prefix 0..* MS
+* name.prefix ^definition =
+    "reason(s) why this should be supported."
 * telecom 1..*
 
 Profile: GenericTargetFacilityEncounter
@@ -193,6 +196,9 @@ Description: "Is used to document demographics and other administrative informat
 * name 1..*
 * name.given 1..*
 * name.family 1..1
+* name.prefix 0..* MS
+* name.prefix ^definition =
+    "reason(s) why this should be supported."
 * gender 1..1
 * birthDate 1..1
 * address 0..* MS
