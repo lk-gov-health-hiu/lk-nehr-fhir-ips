@@ -27,6 +27,7 @@ Description:
 * name 1..*
 * name.given 1..*
 * name.family 1..1
+* name.prefix 1..1
 * telecom 1..*
 
 Profile: GenericTargetFacilityEncounter
@@ -193,6 +194,7 @@ Description: "Is used to document demographics and other administrative informat
 * name 1..*
 * name.given 1..*
 * name.family 1..1
+* name.prefix 1..1
 * gender 1..1
 * birthDate 1..1
 * address 0..* MS
