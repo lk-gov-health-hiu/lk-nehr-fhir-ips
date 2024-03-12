@@ -15,9 +15,6 @@ Description: "This bundle contains all of the HIMS resources for IPS."
     encounterLocations 0..* MS and
     careplan-hlc-follow-up 0..* MS
 
-//* entry[observation-tobacco-use].resource only RiskBehaviourTobaccoSmoker
-//* entry[observation-results].resource only ObservationResultsUvIps
-
 * entry[serviceRequests] ^definition =
     "reason(s) why this should be supported."
 * entry[practitioner] ^definition =
@@ -34,7 +31,7 @@ Description: "This bundle contains all of the HIMS resources for IPS."
     "reason(s) why this should be supported."
 
 * insert BundleEntry(GeneralPractitioner, practitioner, reason why this should be supported.)
-* insert BundleEntry(HIMSTargetFacilityEncounter, encounters, reason why this should be supported.)
+* insert BundleEntry(TargetFacilityEncounter, encounters, reason why this should be supported.)
 * insert BundleEntry(FollowUpPlanServiceRequest, serviceRequests, reason why this should be supported.)
 * insert BundleEntry(CVDRiskCategory, risk-assessment-cardiovascular-disease, reason why this should be supported.)
 * insert BundleEntry(ProvidersLocation, encounterLocations, reason why this should be supported.)

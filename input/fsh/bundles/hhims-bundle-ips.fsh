@@ -40,7 +40,7 @@ Description: "This bundle contains all of the HHIMS resources for IPS."
 * insert BundleEntry(NotifiableDiseasesNotified, communication-notifiable-conditions, reason why this should be supported.)
 * insert BundleEntry(ProvidersLocation, encounterLocations, reason why this should be supported.)
 * insert BundleEntry(GeneralPractitioner, practitioner, reason why this should be supported.)
-* insert BundleEntry(HHIMSTargetFacilityEncounter, encounters, reason why this should be supported.)
+* insert BundleEntry(TargetFacilityEncounter, encounters, reason why this should be supported.)
 //* insert BundleEntry(Injections, medication-administration, reason why this should be supported.)
 * insert BundleEntry(DrugDispensation, medication-dispensation, reason why this should be supported.)
 * insert BundleEntry(GenericServiceRequest, serviceRequests, reason why this should be supported.)

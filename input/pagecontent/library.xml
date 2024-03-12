@@ -4,11 +4,14 @@
   </style>
   
   <p>
-    The IPS for Sri Lanka is a document. All the profiles specified by this guide are used by the Sri Lanka IPS Composition and are derived from the <a href="https://hl7.org/fhir/uv/ips/index.html" target="_blank">base IPS specification</a> itself.  
+    The IPS for Sri Lanka is a document. All the profiles specified by this guide are used by the Sri Lanka IPS Composition and are derived from the <a href="https://hl7.org/fhir/uv/ips/index.html" target="_blank">base IPS specification</a> itself.
+    <br />
+    <br />
+    For the full list of system generated artifacts for this implementation guide, see <a href="artifacts.html" target="_blank">Artifacts Summary</a>.
   </p>
   <blockquote class="stu-note">
     <ul>
-        <li>Example implementation for each of these profiles can be seen in the <strong>Example tab</strong> of the profile definition.</li>
+        <li>Example implementation for each of these profiles can be seen in the <strong>Examples tab</strong> of the profile definition.</li>
     </ul>
   </blockquote>
 
@@ -23,9 +26,9 @@
         This bundle contains all of the HIMS resources for transactional requests.
     </p>
 
-    <p><a href="StructureDefinition-hims-target-facility-encounter.html">Encounter</a>
-      <br />
-        This profile represents the current facility at which the HIMS patient is receiving health services.
+     <p><a href="StructureDefinition-hims-composition.html">Composition</a>
+        <br />
+        This profile represents the International Patient Summary (IPS) data set for HIMS.
     </p>
 
     <p><a href="StructureDefinition-cvd-risk-category.html">Risk Assessment - Cardiovascular Disease</a>
@@ -33,9 +36,70 @@
         This profile represents the patient's risk for cardiovascular disease.
     </p>
 
+    <p><a href="StructureDefinition-follow-up-plan.html">Service Request - Referral Request For Follow-up Plan</a>
+      <br/>
+        This profile represents the referral request for a Follow-up Plan.
+    </p>
+
     <p><a href="StructureDefinition-follow-up-at-hlc.html">CarePlan - Follow-up At HLC</a>
       <br />
         This profile represents the follow-up event for the patient at HLC.
+    </p>
+
+    <p><a href="StructureDefinition-medical-history.html">Condition - Medical History</a>
+      <br />
+        This profile represents previous, pre-existing and new conditions for the patient.
+    </p>
+
+    <p><a href="StructureDefinition-random-blood-sugar.html">Observation - Random Blood Sugar</a>
+      <br />
+        This profile represents the patient's RBS results.
+    </p>
+
+    <p><a href="StructureDefinition-fasting-blood-sugar.html">Observation - Fasting Blood Sugar</a>
+      <br />
+        This profile represents the patient's FBS results.
+    </p>
+
+    <p><a href="StructureDefinition-blood-pressure.html">Observation - Blood Pressure</a>
+      <br />
+        This profile represents the patient's blood pressure.
+    </p>
+
+    <p><a href="StructureDefinition-total-cholesterol.html">Observation - Total Cholesterol</a>
+      <br />
+        This profile represents the patient's total cholesterol results.
+    </p>
+
+    <p><a href="StructureDefinition-risk-behaviour-physical-activity.html">Observation - Physical Activity Status</a>
+      <br />
+        This profile represents the physical activity status of the patient.
+    </p>
+
+    <p><a href="StructureDefinition-risk-behaviour-tobacco-smoker.html">Observation - Tobacco Smoker</a>
+      <br />
+        This profile represents the tobacco smoking status of the patient.
+    </p>
+
+    <p><a href="StructureDefinition-height.html">Observation - Patient Height</a>
+      <br />
+        This profile represents the patient's height.
+    </p>
+
+    <p><a href="StructureDefinition-bmi.html">Observation - BMI</a>
+      <br />
+        This profile represents the patient's BMI.
+    </p>
+
+     <p><a href="StructureDefinition-no-allergy-intolerance.html">Allergy Intolerance - No Allergy Information Available</a>
+        <br />
+        This profile indicates that there is no allergy information available for the patient.
+    </p>
+   
+
+    <p><a href="StructureDefinition-no-medication-requested.html">Medication Request - No Prescriptions</a>
+        <br />
+        This profile represents the fact that the patient has not received any prescriptions for drugs.
     </p>
 
   <h3>HHIMS<a name="hhims"> </a></h3>
@@ -48,16 +112,98 @@
       <br />
         This bundle contains all of the HHIMS resources for transactional requests.
     </p>
-  
-    <p><a href="StructureDefinition-hhims-target-facility-encounter.html">Encounter</a>
+
+    <p><a href="StructureDefinition-hhims-composition.html">Composition</a>
+        <br />
+        This profile represents the International Patient Summary (IPS) data set for HHIMS.
+    </p>
+
+    <p><a href="StructureDefinition-drug-dispensation.html">Medication Dispense</a>
       <br />
-        This profile represents the current facility at which the HHIMS patient is receiving health services.
+        This profile represents dispensed medication for an HHIMS patient.
+    </p>
+
+    <p><a href="StructureDefinition-notifiable-diseases-notified.html">Communication - Notifiable Diseases Notified</a>
+      <br />
+        This profile represents a message communicated to the practitioner about a patient's encounter.
+    </p>
+
+    <p><a href="StructureDefinition-imaging-study.html">Imaging Study</a>
+      <br />
+        This profile represents the content or results of a imaging study.
+    </p>
+
+    <p><a href="StructureDefinition-no-medical-history.html">Condition - Medical History Not Available</a>
+      <br />
+        This profile indicates that there is no information available about the subject's health problems or disabilities.
+    </p>
+
+    
+   <p><a href="StructureDefinition-allergy-intolerance.html">Allergy Intolerance</a>
+        <br />
+        This profile represents the allergy information available for the patient.
+    </p>
+
+
+    <p><a href="StructureDefinition-medication-request.html">Medication Request</a>
+        <br />
+        This profile is to record requests for medication that are prescribed to a patient or for Non-Medical Supplies Division (MDS) medicines.
+    </p>
+
+    <p><a href="StructureDefinition-procedures-request.html">Service Request - Procedures</a>
+        <br />
+        This profile initiates a request for a procedure.
+    </p>
+
+    <p><a href="StructureDefinition-investigations-request.html">Service Request - Investigations</a>
+        <br />
+        This profile initiates a request for an investigation.
+    </p>
+
+    <p><a href="StructureDefinition-imaging-request.html">Service Request - Imaging</a>
+        <br />
+        This profile initiates a request for imaging to be done.
+    </p>
+
+    <p><a href="StructureDefinition-referral-task.html">Task - Referral Task</a>
+        <br />
+        This profile is used to track the progress of a patient's referral.
     </p>
 
   <h3>Shared<a name="shared"> </a></h3> 
+   <p><a href="StructureDefinition-ips-patient.html">Patient</a>
+      <br />
+        This profile represents demographics and other administrative information about an HIMS or HHIMS individual receiving care or other health-related services.
+    </p>
+
+    <p><a href="StructureDefinition-target-facility-encounter.html">Encounter</a>
+      <br />
+        This profile represents the current facility at which the HIMS or HHIMS patient is receiving health services.
+    </p>
+
     <p><a href="StructureDefinition-practitioner.html">Practitioner</a>
         <br />
         This profile represents the practitioners who participated in the observation and/or procedure.
+    </p>
+
+    <p><a href="StructureDefinition-weight.html">Observation - Patient Weight</a>
+      <br />
+        This profile represents the patient's weight.
+    </p>
+
+    <p><a href="StructureDefinition-providers-location.html">Location</a>
+        <br />
+        This profile represents the physical location of the provider.
+    </p>
+
+    <p><a href="StructureDefinition-organization.html">Organization</a>
+        <br />
+        This profile represents the organization providing health related services.
+    </p>
+
+    <p><a href="StructureDefinition-device-information.html">Device Information</a>
+        <br />
+        This profile is used to record key information about the system that contributed to the patient’s record.
     </p>
 
 </div>

@@ -1,5 +1,7 @@
 == Suppressed Messages ==
 
-# Add warning and/or information messages here after you've confirmed that they aren't really a problem
-# (And include comments like this justifying why)
-# See https://github.com/FHIR/sample-ig/blob/master/input/ignoreWarnings.txt for examples
+# This is a known issue that is being addressed: https://chat.fhir.org/#narrow/stream/179202-terminology/topic/DICOM.20ValueSet.20Not.20Found
+ValueSet 'http://dicom.nema.org/medical/dicom/current/output/chtml/part04/sect_B.5.html#table_B.5-1' not found
+
+# These messages are not important as they are only indicating that this IG includes additional slices to the base IPS profiles
+This element does not match any known slice defined in the profile http://hl7.org/fhir/uv/ips/StructureDefinition/Composition-uv-ips|1.1.0 (this may not be a problem, but you should check that it's not intended to match a slice)

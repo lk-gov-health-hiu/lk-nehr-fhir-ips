@@ -32,20 +32,20 @@ Description:
     "reason(s) why this should be supported."
 * telecom 1..*
 
-Profile: GenericTargetFacilityEncounter
+Profile: TargetFacilityEncounter
 Parent: Encounter
-Id: generic-target-facility-encounter
-Title: "Generic Target Facility Encounter" 
+Id: target-facility-encounter
+Title: "Target Facility Encounter" 
 Description: "Represents the current facility at which the patient is receiving health services."
 * status 1..1
 * class 1..1
 * subject 1..1
-* subject only Reference(HIMSPatient or HHIMSPatient)
+* subject only Reference(IPSPatient)
 * period 1..1
 * reasonCode 0..* MS
 * reasonCode ^definition =
     "reason(s) why this should be supported."
-* reasonCode from http://hl7.org/fhir/ValueSet/encounter-reason (preferred)
+* reasonCode from VSReasonForEncounter (preferred)
 * reasonCode ^binding.extension[+].extension[+].url = "purpose"
 * reasonCode ^binding.extension[=].extension[=].valueCode = #candidate
 * reasonCode ^binding.extension[=].extension[+].url = "valueSet"
@@ -59,20 +59,6 @@ Description: "Represents the current facility at which the patient is receiving 
 * location.location 1..1
 * participant 1..*
 * participant.individual 1..1
-
-Profile: HIMSTargetFacilityEncounter
-Parent: GenericTargetFacilityEncounter
-Id: hims-target-facility-encounter
-Title: "HIMS Target Facility Encounter" 
-Description: "Represents the current facility at which the HIMS patient is receiving health services."
-* subject only Reference(HIMSPatient)
-
-Profile: HHIMSTargetFacilityEncounter
-Parent: GenericTargetFacilityEncounter
-Id: hhims-target-facility-encounter
-Title: "HHIMS Target Facility Encounter" 
-Description: "Represents the current facility at which the HHIMS patient is receiving health services."
-* subject only Reference(HHIMSPatient)
 
 Profile: ProvidersLocation
 Parent: Location
@@ -115,20 +101,22 @@ Title: "Notifiable Diseases Notified"
 Description: "Represents a message communicated to the practitioner about a patient's encounter."
 * status 1..1
 * subject 1..1
-* subject only Reference(HHIMSPatient)
+* subject only Reference(IPSPatient)
 * encounter 1..1
-* encounter only Reference(HHIMSTargetFacilityEncounter)
+* encounter only Reference(TargetFacilityEncounter)
 * sent 0..1 MS
 * sent ^definition =
     "reason(s) why this should be supported."
+* sender 0..1 MS
+* sender only Reference(DeviceInformation)
+* sender ^definition =
+    "reason(s) why this should be supported."
 
-Profile: HIMSPatient
-Parent: HHIMSPatient
-Id: hims-patient
-Title: "HIMS Patient"
-Description: 
-    "Is used to document demographics and other administrative information about an individual receiving care or other health-related services. 
-    In addition to the profiled data elements, this profile includes all data elements from the HHIMS Patient profile."
+Profile: IPSPatient
+Parent: PatientUvIps
+Id: ips-patient
+Title: "Patient"
+Description: "Is used to document demographics and other administrative information about an HIMS or HHIMS individual receiving care or other health-related services."
 * identifier 1..*
 * identifier ^slicing.discriminator.type = #value
 * identifier ^slicing.discriminator.path = "system"
@@ -136,6 +124,8 @@ Description:
 * identifier ^slicing.ordered = false
 * identifier ^slicing.description = "Slice based on the type of identifier."
 * identifier contains
+    NIC 0..* MS and
+    PHN 1..1 and
     PPN 1..* and
     Drivers 0..* MS and
     SCN 0..* MS
@@ -163,21 +153,6 @@ Description:
 * identifier[SCN].type.coding.system = "http://fhir.health.gov.lk/ips/CodeSystem/cs-identifier-types"
 * identifier[SCN].type.text = "Senior Citizen Number"
 
-Profile: HHIMSPatient
-Parent: PatientUvIps
-Id: hhims-patient
-Title: "HHIMS Patient"
-Description: "Is used to document demographics and other administrative information about an HHIMS individual receiving care or other health-related services."
-* identifier 1..*
-* identifier ^slicing.discriminator.type = #value
-* identifier ^slicing.discriminator.path = "system"
-* identifier ^slicing.rules = #open
-* identifier ^slicing.ordered = false
-* identifier ^slicing.description = "Slice based on the type of identifier."
-* identifier contains
-    NIC 0..* MS and
-    PHN 1..1
-
 * identifier[NIC] ^definition =
     "reason(s) why this should be supported."
 * identifier[NIC].value 1..1
@@ -192,6 +167,8 @@ Description: "Is used to document demographics and other administrative informat
 * identifier[PHN].type.coding.code = #PHN
 * identifier[PHN].type.coding.system = "http://fhir.health.gov.lk/ips/CodeSystem/cs-identifier-types"
 * identifier[PHN].type.text = "Personal Health Number"
+
+* extension contains PatientRegistrationSystem named RegistrationSystemID 1..1
 
 * name 1..*
 * name.given 1..*
@@ -224,17 +201,19 @@ Id: generic-observation
 Title: "Generic Observation"
 Description: "Base Observation elements that are inherited by other Observations resources."
 * status 1..1
-/** category 0..1 MS
+* category 0..1 MS
 * category ^definition =
     "reason(s) why this should be supported."
-* code 1..1*/
+* code 1..1
 * subject 1..1
-* subject only Reference(HHIMSPatient or HHIMSPatient)
+* subject only Reference(IPSPatient)
 * encounter 1..1
-* encounter only Reference(GenericTargetFacilityEncounter)
+* encounter only Reference(TargetFacilityEncounter)
 * effectiveDateTime 1..1
 * performer 1..*
 * performer only Reference(GeneralPractitioner or ServiceProvider)
+* device 1..1
+* device only Reference(DeviceInformation)
 
 Profile: RiskBehaviourPhysicalActivity
 Parent: GenericObservation
@@ -244,8 +223,8 @@ Description: "Represents the physical status of the patient."
 * category 1..1
 * category.coding.code = #activity
 * category.coding.system = "http://terminology.hl7.org/CodeSystem/observation-category"
-* subject only Reference(HIMSPatient)
-* encounter only Reference(HIMSTargetFacilityEncounter)
+* subject only Reference(IPSPatient)
+* encounter only Reference(TargetFacilityEncounter)
 * code = $SCT#106020009
 * code.text = "Physical Activity"
 * valueCodeableConcept 1..1
@@ -264,9 +243,9 @@ Description: "Represents the tobacco smoking status of the patient."
 * code = $LNC#81229-7
 * code.text = "Tobacco smoking status for tobacco smoker"
 * subject 1..1
-* subject only Reference(HIMSPatient)
+* subject only Reference(IPSPatient)
 * encounter 1..1
-* encounter only Reference(HIMSTargetFacilityEncounter)
+* encounter only Reference(TargetFacilityEncounter)
 * effectiveDateTime 1..1
 * performer 1..*
 * valueCodeableConcept 1..1
@@ -277,8 +256,8 @@ Parent: GenericObservation
 Id: blood-pressure
 Title: "Blood Pressure Observation"
 Description: "Represents the patient's blood pressure."
-* subject only Reference(HIMSPatient)
-* encounter only Reference(HIMSTargetFacilityEncounter)
+* subject only Reference(IPSPatient)
+* encounter only Reference(TargetFacilityEncounter)
 * code = $LNC#85354-9
 * code.text = "Blood Pressure"
 * category 1..1
@@ -312,12 +291,12 @@ Description: "Represents the patient's blood pressure."
 * component[Diastolic].valueQuantity.system = "http://unitsofmeasure.org"
 * component[Diastolic].valueQuantity.code = #mm[Hg]
 
-Profile: GenericWeight
+Profile: Weight
 Parent: GenericObservation
-Id: generic-weight
-Title: "Generic Patient Weight Observation"
+Id: weight
+Title: "Patient Weight Observation"
 Description: "Represents the patient's weight."
-//* subject only Reference(HIMSPatient or HHIMSPatient)
+* subject only Reference(IPSPatient)
 * category 1..1
 * category.coding.code = #vital-signs
 * category.coding.system = "http://terminology.hl7.org/CodeSystem/observation-category"
@@ -328,29 +307,13 @@ Description: "Represents the patient's weight."
 * valueQuantity.system = "http://unitsofmeasure.org"
 * valueQuantity.code = #kg
 
-Profile: HIMSWeight
-Parent: GenericWeight
-Id: hims-weight
-Title: "HIMS Patient Weight Observation"
-Description: "Represents the HIMS patient's weight."
-* subject only Reference(HIMSPatient)
-* encounter only Reference(HIMSTargetFacilityEncounter)
-
-Profile: HHIMSWeight
-Parent: GenericWeight
-Id: hhims-weight
-Title: "HHIMS Patient Weight Observation"
-Description: "Represents the HHIMS patient's weight."
-* subject only Reference(HHIMSPatient)
-* encounter only Reference(HHIMSTargetFacilityEncounter)
-
 Profile: Height
 Parent: GenericObservation
 Id: height
 Title: "Patient Height Observation"
 Description: "Represents the patient's height."
-* subject only Reference(HIMSPatient)
-* encounter only Reference(HIMSTargetFacilityEncounter)
+* subject only Reference(IPSPatient)
+* encounter only Reference(TargetFacilityEncounter)
 * category 1..1
 * category.coding.code = #vital-signs
 * category.coding.system = "http://terminology.hl7.org/CodeSystem/observation-category"
@@ -366,8 +329,8 @@ Parent: GenericObservation
 Id: bmi
 Title: "Patient BMI Observation"
 Description: "Represents the patient's BMI."
-* subject only Reference(HIMSPatient)
-* encounter only Reference(HIMSTargetFacilityEncounter)
+* subject only Reference(IPSPatient)
+* encounter only Reference(TargetFacilityEncounter)
 * category 1..1
 * category.coding.code = #vital-signs
 * category.coding.system = "http://terminology.hl7.org/CodeSystem/observation-category"
@@ -384,8 +347,8 @@ Parent: ObservationResultsLaboratoryUvIps
 Id: random-blood-sugar
 Title: "Random Blood Sugar Observation"
 Description: "Represents the patient's RBS results."
-* subject only Reference(HIMSPatient)
-* encounter only Reference(HIMSTargetFacilityEncounter)
+* subject only Reference(IPSPatient)
+* encounter only Reference(TargetFacilityEncounter)
 * category 1..1
 * category.coding.code = #laboratory
 * category.coding.system = "http://terminology.hl7.org/CodeSystem/observation-category"
@@ -403,14 +366,16 @@ Description: "Represents the patient's RBS results."
 
 * performer 1..*
 * performer only Reference(GeneralPractitioner or ServiceProvider)
+* device 1..1
+* device only Reference(DeviceInformation)
 
 Profile: FastingBloodSugar
 Parent: ObservationResultsLaboratoryUvIps
 Id: fasting-blood-sugar
 Title: "Fasting Blood Sugar Observation"
 Description: "Represents the patient's FBS results."
-* subject only Reference(HIMSPatient)
-* encounter only Reference(HIMSTargetFacilityEncounter)
+* subject only Reference(IPSPatient)
+* encounter only Reference(TargetFacilityEncounter)
 * category 1..1
 * category.coding.code = #laboratory
 * category.coding.system = "http://terminology.hl7.org/CodeSystem/observation-category"
@@ -428,14 +393,16 @@ Description: "Represents the patient's FBS results."
 
 * performer 1..*
 * performer only Reference(GeneralPractitioner or ServiceProvider)
+* device 1..1
+* device only Reference(DeviceInformation)
 
 Profile: TotalCholesterol
 Parent: ObservationResultsLaboratoryUvIps
 Id: total-cholesterol
 Title: "Total Cholesterol Observation"
 Description: "Represents the patient's total cholesterol results."
-* subject only Reference(HIMSPatient)
-* encounter only Reference(HIMSTargetFacilityEncounter)
+* subject only Reference(IPSPatient)
+* encounter only Reference(TargetFacilityEncounter)
 * category 1..1
 * category.coding.code = #laboratory
 * category.coding.system = "http://terminology.hl7.org/CodeSystem/observation-category"
@@ -453,6 +420,8 @@ Description: "Represents the patient's total cholesterol results."
 
 * performer 1..*
 * performer only Reference(GeneralPractitioner or ServiceProvider)
+* device 1..1
+* device only Reference(DeviceInformation)
 
 Profile: CVDRiskCategory
 Parent: RiskAssessment
@@ -461,14 +430,14 @@ Title: "Cardiovascular Risk Assessment"
 Description: "Represents the patient's CVD risk score."
 * status 1..1
 * subject 1..1
-* subject only Reference(HIMSPatient)
+* subject only Reference(IPSPatient)
 * encounter 1..1
-* encounter only Reference(HIMSTargetFacilityEncounter)
+* encounter only Reference(TargetFacilityEncounter)
 * occurrenceDateTime 1..1
 * code 1..1
 * code = $SCT#441829007
 * performer 1..1
-* performer only Reference(GeneralPractitioner)
+* performer only Reference(GeneralPractitioner or DeviceInformation)
 * basis 1..*
 * prediction 1..*
 * prediction.outcome 1..1
@@ -487,12 +456,12 @@ Description: "Base Task elements that are inherited by other Task resources."
 * status 1..1
 * intent 1..1
 * for 1..1
-* for only Reference(HIMSPatient or HHIMSPatient)
+* for only Reference(IPSPatient)
 * encounter 1..1
-* encounter only Reference(GenericTargetFacilityEncounter)
+* encounter only Reference(TargetFacilityEncounter)
 * authoredOn 1..1
 * requester 1..1
-* requester only Reference(GeneralPractitioner)
+* requester only Reference(GeneralPractitioner or DeviceInformation)
 * location 1..1
 * location only Reference(ProvidersLocation)
 * executionPeriod 0..1 MS
@@ -504,7 +473,7 @@ Parent: GenericTask
 Id: referral-task
 Title: "Referral Task"
 Description: "Is primarily used to track the progress of a patient's referral."
-* for only Reference(HHIMSPatient)
+* for only Reference(IPSPatient)
 * focus 1..1
 * focus only Reference(GeneralReferralServiceRequest)
 * priority 0..1 MS
@@ -524,11 +493,11 @@ Description: "Base ServiceRequest elements that are inherited by other ServiceRe
 * code 1..1
 * code from http://hl7.org/fhir/ValueSet/procedure-code (example)
 * subject 1..1
-* subject only Reference(HHIMSPatient or HIMSPatient)
+* subject only Reference(IPSPatient)
 * encounter 1..1
-* encounter only Reference(GenericTargetFacilityEncounter)
+* encounter only Reference(TargetFacilityEncounter)
 * requester 1..1
-* requester only Reference(GeneralPractitioner or ServiceProvider)
+* requester only Reference(GeneralPractitioner or ServiceProvider or DeviceInformation)
 * reasonCode 0..* MS
 * reasonCode ^definition =
     "reason(s) why this should be supported."
@@ -546,16 +515,16 @@ Description: "Used to initiate a request for a referral."
 * code = $SCT#3457005
 * code.text = "Patient referral"
 * occurrenceDateTime 1..1
-* subject only Reference(HHIMSPatient)
-* encounter only Reference(HHIMSTargetFacilityEncounter)
+* subject only Reference(IPSPatient)
+* encounter only Reference(TargetFacilityEncounter)
 
 Profile: FollowUpPlanServiceRequest
 Parent: GenericServiceRequest
 Id: follow-up-plan
 Title: "Referral Request For Follow-up Plan"
 Description: "Used to initiate a referral request for a Follow-up Plan."
-* subject only Reference(HIMSPatient)
-* encounter only Reference(HIMSTargetFacilityEncounter)
+* subject only Reference(IPSPatient)
+* encounter only Reference(TargetFacilityEncounter)
 * code from VSFollowUpPlan (extensible)
 * reasonCode from VSFollowUpReasons (extensible)
 * occurrenceTiming 1..1
@@ -572,22 +541,22 @@ Description: "Used to record the follow-up event for the patient at HLC."
 * status 1..1
 * intent 1..1
 * subject 1..1
-* subject only Reference(HIMSPatient)
+* subject only Reference(IPSPatient)
 * encounter 1..1
-* encounter only Reference(HIMSTargetFacilityEncounter)
+* encounter only Reference(TargetFacilityEncounter)
 * period 1..1
 * contributor 1..*
-* contributor only Reference(HIMSPatient or GeneralPractitioner or ServiceProvider)
+* contributor only Reference(IPSPatient or GeneralPractitioner or ServiceProvider or DeviceInformation)
 * activity 1..* 
 * activity.reference 1..1
 * activity.reference only Reference(FollowUpPlanServiceRequest)
-* encounter only Reference(HIMSTargetFacilityEncounter)
+* encounter only Reference(TargetFacilityEncounter)
 
-Profile: HIMSMedicalHistory
+Profile: MedicalHistory
 Parent: ConditionUvIps
-Id: medical-history-hims
+Id: medical-history
 Title: "Medical History"
-Description: "Represents previous, pre-existing and new conditions for the HIMS patient."
+Description: "Represents previous, pre-existing and new conditions for the patient."
 * clinicalStatus 1..1
 * verificationStatus 0..1 MS
 * verificationStatus ^definition =
@@ -598,63 +567,44 @@ Description: "Represents previous, pre-existing and new conditions for the HIMS 
 * code 1..1
 * code from VSMedicalConditions (extensible)
 * subject 1..1
-* subject only Reference(HIMSPatient)
+* subject only Reference(IPSPatient)
 * encounter 1..1
-* encounter only Reference(HIMSTargetFacilityEncounter)
+* encounter only Reference(TargetFacilityEncounter)
 * recorder 0..1 MS
-* recorder only Reference(GeneralPractitioner or HIMSPatient)
+* recorder only Reference(GeneralPractitioner or IPSPatient)
 * recorder ^definition =
     "reason(s) why this should be supported."
 * asserter 0..1 MS
-* asserter only Reference(GeneralPractitioner or HIMSPatient)
+* asserter only Reference(GeneralPractitioner or IPSPatient)
 * asserter ^definition =
     "reason(s) why this should be supported."
 * recordedDate 1..1
-* encounter only Reference(HIMSTargetFacilityEncounter)
 
-Profile: HHIMSMedicalHistory
+Profile: NoMedicalHistory
 Parent: ConditionUvIps
-Id: medical-history-hhims
+Id: no-medical-history
 Title: "Medical History"
 Description: "Indicates that there is no information available about the subject's health problems or disabilities."
 * clinicalStatus 1..1
 * code 1..1
 * code = http://hl7.org/fhir/uv/ips/CodeSystem/absent-unknown-uv-ips#no-problem-info
 * subject 1..1
-* subject only Reference(HHIMSPatient)
+* subject only Reference(IPSPatient)
 * encounter 1..1
-* encounter only Reference(HHIMSTargetFacilityEncounter)
+* encounter only Reference(TargetFacilityEncounter)
 * recordedDate 1..1
-* encounter only Reference(HHIMSTargetFacilityEncounter)
 
-Profile: HHIMSAllergies
-Parent: GenericAllergies
-Id: hhims-allergy-intolerance
-Title: "Allergy Intolerance"
-Description: "Used to represent the HHIMS patient's allergies."
-* encounter only Reference(HHIMSTargetFacilityEncounter)
-* patient only Reference(HHIMSPatient)
-
-Profile: HIMSAllergies
-Parent: GenericAllergies
-Id: hims-allergy-intolerance
-Title: "Allergy Intolerance"
-Description: "Used to represent the HIMS patient's allergies."
-* encounter only Reference(HIMSTargetFacilityEncounter)
-* patient only Reference(HIMSPatient)
-
-Profile: GenericAllergies
+Profile: Allergies
 Parent: AllergyIntoleranceUvIps
-Id: generic-allergy-intolerance
-Title: "Generic Allergy Intolerance"
+Id: allergy-intolerance
+Title: "Allergy Intolerance"
 Description: "Used to represent the patient's allergies."
 * encounter 1..1
-* encounter only Reference(HHIMSTargetFacilityEncounter or HIMSTargetFacilityEncounter)
+* encounter only Reference(TargetFacilityEncounter)
 * code 0..1 MS
 * code ^definition =
     "reason(s) why this should be supported."
 * code.text 1..1
-//* code from VSAllergies (extensible)
 * clinicalStatus 0..1 MS
 * clinicalStatus ^definition =
     "reason(s) why this should be supported."
@@ -662,21 +612,37 @@ Description: "Used to represent the patient's allergies."
 * verificationStatus ^definition =
     "reason(s) why this should be supported."
 * patient 1..1
-* patient only Reference(HHIMSPatient or HIMSPatient)
+* patient only Reference(IPSPatient)
 * onsetDateTime 0..1 MS
 * onsetDateTime ^definition =
     "reason(s) why this should be supported."
 * recorder 0..1 MS
-* recorder only Reference(GeneralPractitioner or HHIMSPatient)
+* recorder only Reference(GeneralPractitioner or IPSPatient)
 * recorder ^definition =
     "reason(s) why this should be supported."
 * type 1..1
 
-Profile: Prescriptions
+Profile: NoAllergies
+Parent: AllergyIntoleranceUvIps
+Id: no-allergy-intolerance
+Title: "Allergy Intolerance"
+Description: "This is to indicate that there is no information avaible for allergies."
+* encounter 1..1
+* encounter only Reference(TargetFacilityEncounter)
+* code 1..1
+* code = http://hl7.org/fhir/uv/ips/CodeSystem/absent-unknown-uv-ips#no-allergy-info
+* code.text 1..1
+* clinicalStatus 1..1
+* clinicalStatus = http://terminology.hl7.org/CodeSystem/allergyintolerance-clinical#inactive
+* patient 1..1
+* patient only Reference(IPSPatient)
+* type 1..1
+
+Profile: MedicationRequests
 Parent: MedicationRequestIPS
 Id: medication-request
-Title: "Prescription Request"
-Description: "This is to record a patient's medication prescription request"
+Title: "Medication Request"
+Description: "This is to record requests for medication that are prescribed to a patient or for Non-MDS medicines."
 * authoredOn 1..1
 * identifier 1..*
 * identifier ^slicing.discriminator.type = #value
@@ -685,22 +651,30 @@ Description: "This is to record a patient's medication prescription request"
 * identifier ^slicing.ordered = false
 * identifier ^slicing.description = "Slice based on the type of identifier."
 * identifier contains
-    PrescriptionID 1..1
-* identifier[PrescriptionID].value 1..1
-* identifier[PrescriptionID].system = "http://fhir.health.gov.lk/ips/identifier/prescription"
-* identifier[PrescriptionID].type.coding.code = #FILL
-* identifier[PrescriptionID].type.coding.system = "http://terminology.hl7.org/CodeSystem/v2-0203"
-* identifier[PrescriptionID].type.coding.display = "Filler Identifier"
-* identifier[PrescriptionID].type.text = "Prescription identifier"
+    RequestID 1..1
+* identifier[RequestID].value 1..1
+* identifier[RequestID].system = "http://fhir.health.gov.lk/ips/identifier/medication"
+* identifier[RequestID].type.coding.code = #FILL
+* identifier[RequestID].type.coding.system = "http://terminology.hl7.org/CodeSystem/v2-0203"
+* identifier[RequestID].type.coding.display = "Filler Identifier"
+* identifier[RequestID].type.text = "Prescription identifier"
 
 * status 1..1
 * intent 1..1
 * subject 1..1
-* subject only Reference(HHIMSPatient)
+* subject only Reference(IPSPatient)
 * encounter 1..1
-* encounter only Reference(HHIMSTargetFacilityEncounter)
+* encounter only Reference(TargetFacilityEncounter)
 * medicationCodeableConcept 1..1
-* medicationCodeableConcept from VSMedicationNames (extensible)
+* medicationCodeableConcept from VSMedicationNamesForMSD (extensible)
+* medicationCodeableConcept ^binding.extension[+].extension[+].url = "purpose"
+* medicationCodeableConcept ^binding.extension[=].extension[=].valueCode = #extensible
+* medicationCodeableConcept ^binding.extension[=].extension[+].url = "valueSet"
+* medicationCodeableConcept ^binding.extension[=].extension[=].valueCanonical = "http://fhir.health.gov.lk/ips/ValueSet/vs-medication-name-non-msd"
+* medicationCodeableConcept ^binding.extension[=].extension[+].url = "documentation"
+* medicationCodeableConcept ^binding.extension[=].extension[=].valueMarkdown = "A list of medications that typically are not prescribed for collection at the pharamcy a.k.a. Non-Medical Supplies."
+* medicationCodeableConcept ^binding.extension[=].url = "http://hl7.org/fhir/tools/StructureDefinition/additional-binding"
+
 * dosageInstruction.doseAndRate.doseQuantity 1..1
 * dosageInstruction.timing.repeat.count 1..1
 * dosageInstruction.timing.repeat.duration 1..1
@@ -718,11 +692,11 @@ Description: "This is to record a patient's medication prescription request"
 * dispenseRequest.quantity ^definition =
     "reason(s) why this should be supported."
 * requester 0..1 MS
-* requester only Reference(GeneralPractitioner or HHIMSPatient)
+* requester only Reference(GeneralPractitioner or IPSPatient or DeviceInformation)
 * requester ^definition =
     "reason(s) why this should be supported."
 * performer 0..1 MS
-* performer only Reference(GeneralPractitioner or HHIMSPatient)
+* performer only Reference(GeneralPractitioner or IPSPatient or DeviceInformation)
 * performer ^definition =
     "reason(s) why this should be supported."
 * recorder 0..1 MS
@@ -733,23 +707,23 @@ Description: "This is to record a patient's medication prescription request"
 Profile: NoPrescriptions
 Parent: MedicationRequestIPS
 Id: no-medication-requested
-Title: "Prescription Not Available"
+Title: "Medication Request"
 Description: "This is to indicate that the patient has not received any prescriptions for drugs."
 * status 1..1
 * status = #completed
 * intent 1..1
 * intent = #order
 * subject 1..1
-* subject only Reference(HIMSPatient)
+* subject only Reference(IPSPatient)
 * encounter 1..1
-* encounter only Reference(HIMSTargetFacilityEncounter)
+* encounter only Reference(TargetFacilityEncounter)
 * note 0..* MS
 * note ^definition =
     "reason(s) why this should be supported."
 * medicationCodeableConcept 1..1
 * medicationCodeableConcept = http://hl7.org/fhir/uv/ips/CodeSystem/absent-unknown-uv-ips#no-medication-info
 
-Profile: Procedures
+/*Profile: Procedures
 Parent: ProcedureUvIps
 Id: procedure
 Title: "Procedures"
@@ -764,24 +738,25 @@ Description: "This represents the procedure that was performed on a patient."
 * code 1..1
 * code from VSProcedures (extensible)
 * subject 1..1
-* subject only Reference(HHIMSPatient)
+* subject only Reference(IPSPatient)
 * encounter 1..1
-* encounter only Reference(HHIMSTargetFacilityEncounter)
+* encounter only Reference(TargetFacilityEncounter)
 * performedDateTime 1..1
 * recorder 0..1 MS
-* recorder only Reference(GeneralPractitioner or HHIMSPatient)
+* recorder only Reference(GeneralPractitioner or IPSPatient)
 * recorder ^definition =
     "reason(s) why this should be supported."
 * asserter 0..1 MS
-* asserter only Reference(GeneralPractitioner or HHIMSPatient)
+* asserter only Reference(GeneralPractitioner or IPSPatient)
 * asserter ^definition =
     "reason(s) why this should be supported."
 * performer 1..*
 * performer.actor 1..1
-* performer.actor only Reference(GeneralPractitioner or HHIMSPatient)
+* performer.actor only Reference(GeneralPractitioner or IPSPatient)
 * location 0..1 MS
 * location ^definition =
     "reason(s) why this should be supported."
+*/
 
 /*Profile: Injections
 Parent: MedicationAdministration
@@ -793,13 +768,13 @@ Description: "Used to represent medication that is administered intravenously."
 * medicationCodeableConcept from http://hl7.org/fhir/ValueSet/medication-codes (example)
 * medicationCodeableConcept.text 1..1
 * subject 1..1
-* subject only Reference(HHIMSPatient)
+* subject only Reference(IPSPatient)
 * context 1..1
-* context only Reference(HHIMSTargetFacilityEncounter)
+* context only Reference(TargetFacilityEncounter)
 * effectiveDateTime 1..1
 * performer 1..*
 * performer.actor 1..1
-* performer.actor only Reference(GeneralPractitioner or HHIMSPatient)
+* performer.actor only Reference(GeneralPractitioner or IPSPatient)
 * dosage 1..1
 * dosage.dose 1..1
 * dosage.route 1..1
@@ -813,12 +788,12 @@ Title: "Drug Dispensation"
 Description: "Used to represent dispensed medication for a patient."
 * status 1..1
 * subject 1..1
-* subject only Reference(HHIMSPatient)
+* subject only Reference(IPSPatient)
 * context 1..1
-* context only Reference(HHIMSTargetFacilityEncounter)
+* context only Reference(TargetFacilityEncounter)
 * performer 0..1 MS
 * performer.actor 1..1
-* performer.actor only Reference(GeneralPractitioner or HHIMSPatient)
+* performer.actor only Reference(GeneralPractitioner or IPSPatient or DeviceInformation)
 * performer ^definition =
     "reason(s) why this should be supported."
 * location 0..1 MS
@@ -826,12 +801,12 @@ Description: "Used to represent dispensed medication for a patient."
 * location ^definition =
     "reason(s) why this should be supported."
 * authorizingPrescription 1..*
-* authorizingPrescription only Reference(Prescriptions)
+* authorizingPrescription only Reference(MedicationRequests)
 * whenHandedOver 1..1
 * receiver 1..*
-* receiver only Reference(GeneralPractitioner or HHIMSPatient)
+* receiver only Reference(GeneralPractitioner or IPSPatient)
 * medicationCodeableConcept 1..1
-* medicationCodeableConcept from VSMedicationNames (extensible)
+* medicationCodeableConcept from VSMedicationNamesForMSD (extensible)
 
 Profile: InvestigationsServiceRequest
 Parent: GenericServiceRequest
@@ -840,10 +815,11 @@ Title: "Investigations Request"
 Description: "Used to initiate a request for an investigation."
 * code from VSInvestigations (extensible)
 * occurrenceDateTime 1..1
-* subject only Reference(HHIMSPatient)
-* encounter only Reference(HHIMSTargetFacilityEncounter)
+* subject only Reference(IPSPatient)
+* encounter only Reference(TargetFacilityEncounter)
+* authoredOn 1..1
 
-Profile: InvestigationsTask
+/*Profile: InvestigationsTask
 Parent: GenericTask
 Id: investigations-task
 Title: "Investigations Task"
@@ -857,8 +833,8 @@ Description: "Is primarily used to track the progress of an investigations reque
 * description ^definition =
     "reason(s) why this should be supported."
 * executionPeriod 1..1
-* for only Reference(HHIMSPatient)
-* encounter only Reference(HHIMSTargetFacilityEncounter)
+* for only Reference(IPSPatient)
+* encounter only Reference(TargetFacilityEncounter)*/
 
 Profile: ImagingServiceRequest
 Parent: GenericServiceRequest
@@ -867,10 +843,11 @@ Title: "Imaging Request"
 Description: "Used to initiate the request for imaging to be done."
 * code from VSImagingProcedures (extensible)
 * occurrenceDateTime 1..1
-* subject only Reference(HHIMSPatient)
-* encounter only Reference(HHIMSTargetFacilityEncounter)
+* subject only Reference(IPSPatient)
+* encounter only Reference(TargetFacilityEncounter)
+* authoredOn 1..1
 
-Profile: ImagingTask
+/*Profile: ImagingTask
 Parent: GenericTask
 Id: imaging-task
 Title: "Imaging Task"
@@ -884,8 +861,8 @@ Description: "Is primarily used to track the progress of an imaging request."
 * description ^definition =
     "reason(s) why this should be supported."
 * executionPeriod 1..1
-* encounter only Reference(HHIMSTargetFacilityEncounter)
-* for only Reference(HHIMSPatient)
+* encounter only Reference(TargetFacilityEncounter)
+* for only Reference(IPSPatient)*/
 
 Profile: Imaging
 Parent: ImagingStudyUvIps
@@ -894,9 +871,9 @@ Title: "Imaging Study"
 Description: "Used to represent the content or results of a imaging study."
 * status 1..1
 * subject 1..1
-* subject only Reference(HHIMSPatient)
+* subject only Reference(IPSPatient)
 * encounter 1..1
-* encounter only Reference(HHIMSTargetFacilityEncounter)
+* encounter only Reference(TargetFacilityEncounter)
 * started 0..1 MS
 * started ^definition =
     "reason(s) why this should be supported."
@@ -914,7 +891,7 @@ Description: "Used to represent the content or results of a imaging study."
     "reason(s) why this should be supported."
 * series 1..*
 * series.uid 1..1
-//* series.instance 1..*
+* series.instance 1..*
 * series.modality 1..1
 * series.description 0..1 MS
 * series.description ^definition =
@@ -924,9 +901,9 @@ Description: "Used to represent the content or results of a imaging study."
     "reason(s) why this should be supported."
 * series.performer 1..*
 * series.performer.actor 1..1
-* series.performer.actor only Reference(GeneralPractitioner or HHIMSPatient)
-* procedureReference 1..1
-* procedureReference only Reference(Procedures)
+* series.performer.actor only Reference(GeneralPractitioner or IPSPatient or DeviceInformation)
+//* procedureReference 1..1
+//* procedureReference only Reference(Procedures)
 
 Profile: HIMSComposition
 Parent: CompositionUvIps
@@ -938,13 +915,13 @@ Description: "Clinical document used to represent the International Patient Summ
 * identifier.system = "http://fhir.health.gov.lk/ips/identifier/hims-ips-document"
 * status 1..1
 * subject 1..1
-* subject only Reference(HIMSPatient)
+* subject only Reference(IPSPatient)
 * encounter 1..1
-* encounter only Reference(HIMSTargetFacilityEncounter)
+* encounter only Reference(TargetFacilityEncounter)
 * type 1..1
 * date 1..1
 * author 1..*
-* author only Reference(GeneralPractitioner or ServiceProvider)
+* author only Reference(GeneralPractitioner or ServiceProvider or DeviceInformation)
 * title 1..1
 * section 1..*
 * section ^slicing.discriminator[+].type = #pattern
@@ -957,7 +934,8 @@ Description: "Clinical document used to represent the International Patient Summ
     sectionPhysicalActivity 0..1 MS and
     sectionRiskAssessment 0..1 MS and
     sectionReferrals 0..1 MS and
-    sectionEncounterLocation 0..1 MS
+    sectionEncounterLocation 0..1 MS and
+    sectionDeviceInformation 0..1 MS
 
 * section[sectionPractitioners] ^definition =
     "reason(s) why this should be supported."
@@ -977,6 +955,9 @@ Description: "Clinical document used to represent the International Patient Summ
 * insert CompositionEntry(Location, ProvidersLocation, sectionEncounterLocation, $LNC#80412-0, List of Encounter Locations section, location, 
     Encounter Locations relevant for the scope of the patient summary, This lists the encounter locations relevant for the scope of the patient summary., 0..*)
 
+* insert CompositionEntry(Device, DeviceInformation, sectionDeviceInformation, http://fhir.health.gov.lk/ips/CodeSystem/cs-composition-codes#Device-Information, List of Used Devices section, device, 
+    Devices relevant for the scope of the patient summary, This lists the devices relevant for the scope of the patient summary., 0..*)
+
 Profile: HHIMSComposition
 Parent: CompositionUvIps
 Id: hhims-composition
@@ -987,13 +968,13 @@ Description: "Clinical document used to represent the International Patient Summ
 * identifier.system = "http://fhir.health.gov.lk/ips/identifier/hhims-ips-document"
 * status 1..1
 * subject 1..1
-* subject only Reference(HHIMSPatient)
+* subject only Reference(IPSPatient)
 * encounter 1..1
-* encounter only Reference(HHIMSTargetFacilityEncounter)
+* encounter only Reference(TargetFacilityEncounter)
 * type 1..1
 * date 1..1
 * author 1..*
-* author only Reference(GeneralPractitioner or ServiceProvider)
+* author only Reference(GeneralPractitioner or ServiceProvider or DeviceInformation)
 * title 1..1
 * section 1..*
 * section ^slicing.discriminator[+].type = #pattern
@@ -1004,15 +985,19 @@ Description: "Clinical document used to represent the International Patient Summ
 * section contains
  //   sectionInjections 0..1 MS and
     sectionImaging 0..1 MS and
+    sectionProcedures 0..1 MS and
     sectionInvestigations 0..1 MS and
     sectionReferrals 0..1 MS and
     sectionNotifiableConditions 0..1 MS and
     sectionEncounterLocation 0..1 MS and
-    sectionPractitioners 0..1 MS
+    sectionPractitioners 0..1 MS and
+    sectionDeviceInformation 0..1 MS
 
 //* section[sectionInjections] ^definition =
 //    "reason(s) why this should be supported."
 * section[sectionImaging] ^definition =
+    "reason(s) why this should be supported."
+* section[sectionProcedures] ^definition =
     "reason(s) why this should be supported."
 * section[sectionInvestigations] ^definition =
     "reason(s) why this should be supported."
@@ -1030,14 +1015,14 @@ Description: "Clinical document used to represent the International Patient Summ
 
 * insert CompositionEntry(ImagingStudy or Task or ServiceRequest, Imaging, sectionImaging, $LNC#97684-5, Imaging Summary section, image, 
     Images relevant for the scope of the patient summary, This lists the images relevant for the scope of the patient summary., 0..*)
-* insert EntryToSection(ImagingTask, sectionImaging, task, 0..*)
+//* insert EntryToSection(ImagingTask, sectionImaging, task, 0..*)
 * insert EntryToSection(ImagingServiceRequest, sectionImaging, serviceRequest, 0..*)
 
 * insert EntryToSection(DrugDispensation, sectionMedications, medicationDispense, 0..*)
 
 * insert CompositionEntry(Task or ServiceRequest, InvestigationsServiceRequest, sectionInvestigations, $LNC#77597-3, Laboratory Investigations Summary section, serviceRequest, 
     Investigatons relevant for the scope of the patient summary, This lists the investigations relevant for the scope of the patient summary., 0..*)
-* insert EntryToSection(InvestigationsTask, sectionInvestigations, task, 0..*)
+//* insert EntryToSection(InvestigationsTask, sectionInvestigations, task, 0..*)
 
 * insert CompositionEntry(Task or ServiceRequest, GeneralReferralServiceRequest, sectionReferrals, $LNC#57133-1, Referrals Summary section, serviceRequest, 
     Referrals relevant for the scope of the patient summary, This lists the referrals relevant for the scope of the patient summary., 0..*)
@@ -1051,3 +1036,74 @@ Description: "Clinical document used to represent the International Patient Summ
 
 * insert CompositionEntry(Practitioner, GeneralPractitioner, sectionPractitioners, $LNC#LA9327-3, List of Practitioners section, practitioner, 
     Practitioners relevant for the scope of the patient summary, This lists the practitioners relevant for the scope of the patient summary., 0..*)
+
+* insert CompositionEntry(ServiceRequest, ProcedureServiceRequest, sectionProcedures, http://fhir.health.gov.lk/ips/CodeSystem/cs-composition-codes#Procedures-History, Procedures Summary Section, serviceRequest, 
+    Procedures relevant for the scope of the patient summary, This lists the procedures relevant for the scope of the patient summary., 1..*)
+
+* insert CompositionEntry(Device, DeviceInformation, sectionDeviceInformation, http://fhir.health.gov.lk/ips/CodeSystem/cs-composition-codes#Device-Information, List of Used Devices section, device, 
+    Devices relevant for the scope of the patient summary, This lists the devices relevant for the scope of the patient summary., 0..*)
+
+Profile: RestrictedPatient
+Parent: Patient
+Id: patient-identity-cross-reference
+Title: "Patient Identity Cross Reference"
+Description: 
+    "Is used by the Client Register (CR) to re-identify the patient with his/her corresponding longitudinal clinical record"
+* identifier 0..0
+* name 0..0
+* active 0..0
+* telecom 0..0
+* gender 0..0
+* birthDate 0..0
+* deceased[x] 0..0
+* address 0..0
+* maritalStatus 0..0
+* multipleBirth[x] 0..0
+* photo 0..0
+* contact 0..0
+* communication 0..0
+* generalPractitioner 0..0
+* managingOrganization 0..0
+* contained 0..0
+* link 1..
+* link.other only Reference(IPSPatient)
+* link.type = #refer
+//* extension contains MasterPatientIndex named MPI 1..*
+
+Profile: ProcedureServiceRequest
+Parent: GenericServiceRequest
+Id: procedures-request
+Title: "Procedure Request"
+Description: "Used to initiate the request for a procedure."
+* code from VSProcedures (extensible)
+* occurrenceDateTime 1..1
+* subject only Reference(IPSPatient)
+* encounter only Reference(TargetFacilityEncounter)
+
+Profile: DeviceInformation
+Parent: Device
+Id: device-information
+Title: "Device Information"
+Description: "Is used to record key information about the system that contributed to the patient's record."
+* identifier 1..*
+* identifier ^slicing.discriminator.type = #value
+* identifier ^slicing.discriminator.path = "system"
+* identifier ^slicing.rules = #open
+* identifier ^slicing.ordered = false
+* identifier ^slicing.description = "Slice based on the type of identifier."
+* identifier contains
+    SYSTEMID 1..*
+
+* identifier[SYSTEMID].value 1..1
+* identifier[SYSTEMID].system = "http://fhir.health.gov.lk/ips/identifier/system-id"
+
+* status 1..1
+* type 1..1
+* owner 1..1
+* owner only Reference(ServiceProvider)
+* location 1..1
+* location only Reference(ProvidersLocation)
+* version 1..*
+* version.type 1..1
+* version.type from VSDeviceClassificationCodes (extensible)
+* version.value 1..1

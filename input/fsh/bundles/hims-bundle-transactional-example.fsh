@@ -8,11 +8,11 @@ Description: "This bundle contains all of the HIMS resources for transactional r
 * identifier.value = "transactional-id-1234"
 * identifier.system = "http://fhir.health.gov.lk/ips/identifier/hims-transactional"
 
-* insert ExampleTransactionalEntry(HIMSPatientExample, patient, Patient)
-* insert ExampleTransactionalEntry(HIMSTargetFacilityEncounterExample, encounters, Encounter)
-* insert ExampleTransactionalEntry(HIMSMedicalHistoryExample, condition-medical-history, Condition)
+* insert ExampleTransactionalEntry(PatientExample, patient, Patient)
+* insert ExampleTransactionalEntry(TargetFacilityEncounterExample, encounters, Encounter)
+* insert ExampleTransactionalEntry(MedicalHistoryExample, condition-medical-history, Condition)
 
-* insert ExampleTransactionalEntry(HIMSWeightExample, observation-weight, Observation)
+* insert ExampleTransactionalEntry(WeightExample, observation-weight, Observation)
 * insert ExampleTransactionalEntry(RiskBehaviourTobaccoSmokerExample, observation-tobacco-smoker, Observation)
 * insert ExampleTransactionalEntry(RiskBehaviourPhysicalActivityExample, observation-physical-activity, Observation)
 * insert ExampleTransactionalEntry(BloodPressureExample, observation-blood-pressure, Observation)
@@ -32,3 +32,5 @@ Description: "This bundle contains all of the HIMS resources for transactional r
 * insert ExampleTransactionalEntry(GeneralPractitionerExample, practitioner, Practitioner)
 * insert ExampleTransactionalEntry(ProvidersLocationExample, encounterLocations, Location)
 * insert ExampleTransactionalEntry(OrganizationExample, organization, Organization)
+
+* insert ExampleTransactionalEntry(DeviceInformationExample, device-information, Device)

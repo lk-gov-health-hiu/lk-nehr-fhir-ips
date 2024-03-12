@@ -39,7 +39,8 @@ Description: "This bundle contains all of the HIMS resources for transactional r
     condition-medical-history 0..* MS and
     organization 0..* MS and
     allergyintolerance 0..* MS and
-    medicationrequest 0..* MS
+    medicationrequest 0..* MS and
+    device-information 0..* MS
 
 * entry[serviceRequest-follow-up-plan] ^definition =
     "reason(s) why this should be supported."
@@ -78,16 +79,18 @@ Description: "This bundle contains all of the HIMS resources for transactional r
     "reason(s) why this should be supported."
 * entry[medicationrequest] ^definition =
     "reason(s) why this should be supported."
+* entry[device-information] ^definition =
+    "reason(s) why this should be supported."
 
 * entry[patient]
   * fullUrl 1..1
   * resource 1..
-  * resource only HIMSPatient
+  * resource only IPSPatient
 
 * entry[encounters]
   * fullUrl 1..1
   * resource 1..
-  * resource only HIMSTargetFacilityEncounter
+  * resource only TargetFacilityEncounter
 
 * insert BundleEntry(GeneralPractitioner, practitioner, reason why this should be supported.)
 * insert BundleEntry(FollowUpPlanServiceRequest, serviceRequest-follow-up-plan, reason why this should be supported.)
@@ -97,13 +100,14 @@ Description: "This bundle contains all of the HIMS resources for transactional r
 * insert BundleEntry(RiskBehaviourPhysicalActivity, observation-physical-activity, reason why this should be supported.)
 * insert BundleEntry(RiskBehaviourTobaccoSmoker, observation-tobacco-smoker, reason why this should be supported.)
 * insert BundleEntry(BloodPressure, observation-blood-pressure, reason why this should be supported.)
-* insert BundleEntry(HIMSWeight, observation-weight, reason why this should be supported.)
+* insert BundleEntry(Weight, observation-weight, reason why this should be supported.)
 * insert BundleEntry(Height, observation-height, reason why this should be supported.)
 * insert BundleEntry(BMI, observation-bmi, reason why this should be supported.)
 * insert BundleEntry(RandomBloodSugar, observation-random-blood-sugar, reason why this should be supported.)
 * insert BundleEntry(FastingBloodSugar, observation-fasting-blood-sugar, reason why this should be supported.)
 * insert BundleEntry(TotalCholesterol, observation-cholesterol, reason why this should be supported.)
-* insert BundleEntry(HIMSMedicalHistory, condition-medical-history, reason why this should be supported.)
+* insert BundleEntry(MedicalHistory, condition-medical-history, reason why this should be supported.)
 * insert BundleEntry(Organization, organization, reason why this should be supported.)
-* insert BundleEntry(HIMSAllergies, allergyintolerance, reason why this should be supported.)
-* insert BundleEntry(Prescriptions, medicationrequest, reason why this should be supported.)
+* insert BundleEntry(NoAllergies, allergyintolerance, reason why this should be supported.)
+* insert BundleEntry(NoPrescriptions, medicationrequest, reason why this should be supported.)
+* insert BundleEntry(DeviceInformation, device-information, reason why this should be supported.)

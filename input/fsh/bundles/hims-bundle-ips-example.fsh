@@ -10,11 +10,11 @@ Description: "HIMS IPS Bundle"
 
 * insert ExampleDocumentEntry(HIMSCompositionExample, composition, Composition)
 
-* insert ExampleDocumentEntry(HIMSPatientExample, patient, Patient)
-* insert ExampleDocumentEntry(HIMSTargetFacilityEncounterExample, encounters, Encounter)
-* insert ExampleDocumentEntry(HIMSMedicalHistoryExample, condition, Condition)
+* insert ExampleDocumentEntry(PatientExample, patient, Patient)
+* insert ExampleDocumentEntry(TargetFacilityEncounterExample, encounters, Encounter)
+* insert ExampleDocumentEntry(MedicalHistoryExample, condition, Condition)
 
-* insert ExampleDocumentEntry(HIMSWeightExample, observation-results, Observation)
+* insert ExampleDocumentEntry(WeightExample, observation-results, Observation)
 * insert ExampleDocumentEntry(RiskBehaviourTobaccoSmokerExample, observation-results, Observation)
 * insert ExampleDocumentEntry(RiskBehaviourPhysicalActivityExample, observation-results, Observation)
 * insert ExampleDocumentEntry(BloodPressureExample, observation-results, Observation)
@@ -34,3 +34,4 @@ Description: "HIMS IPS Bundle"
 * insert ExampleDocumentEntry(GeneralPractitionerExample, practitioner, Practitioner)
 * insert ExampleDocumentEntry(ProvidersLocationExample, encounterLocations, Location)
 * insert ExampleDocumentEntry(OrganizationExample, organization, Organization)
+* insert ExampleDocumentEntry(DeviceInformationExample, device, Device)
