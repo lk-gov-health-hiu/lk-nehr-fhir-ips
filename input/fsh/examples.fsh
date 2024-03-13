@@ -3,11 +3,11 @@ InstanceOf: ServiceProvider
 Usage: #example
 Title: "Organization"
 Description: "Organization providing health related services."
-* identifier[XX].value = "facility1"
-* identifier[XX].system = "http://fhir.health.gov.lk/ips/identifier/organization"
-* identifier[XX].type.coding.code = #XX
-* identifier[XX].type.coding.system = "http://terminology.hl7.org/CodeSystem/v2-0203"
-* identifier[XX].type.text = "Organization identifier"
+* identifier[HIN].value = "facility1"
+* identifier[HIN].system = "http://fhir.health.gov.lk/ips/identifier/hin"
+* identifier[HIN].type.coding.code = #XX
+* identifier[HIN].type.coding.system = "http://terminology.hl7.org/CodeSystem/v2-0203"
+* identifier[HIN].type.text = "Organization identifier"
 * name = "Some Health Facility"
 
 Instance: PatientExample
