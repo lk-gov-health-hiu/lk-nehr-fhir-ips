@@ -676,15 +676,23 @@ Description: "This is to record requests for medication that are prescribed to a
 * medicationCodeableConcept ^binding.extension[=].url = "http://hl7.org/fhir/tools/StructureDefinition/additional-binding"
 
 * dosageInstruction.doseAndRate.doseQuantity 1..1
+* dosageInstruction.timing obeys MedicationRequest-DosageInstruction-1
 * dosageInstruction.timing.repeat.count 1..1
 * dosageInstruction.timing.repeat.duration 1..1
 * dosageInstruction.timing.repeat.durationUnit 1..1
-* dosageInstruction.timing.repeat.period 1..1
-* dosageInstruction.timing.repeat.periodUnit 1..1
-* dosageInstruction.timing.repeat.frequency 1..1
+* dosageInstruction.timing.repeat.period 0..1 MS
+* dosageInstruction.timing.repeat.period ^definition =
+    "reason(s) why this should be supported."
+* dosageInstruction.timing.repeat.periodUnit 0..1 MS
+* dosageInstruction.timing.repeat.periodUnit ^definition =
+    "reason(s) why this should be supported."
+* dosageInstruction.timing.repeat.frequency 0..1 MS
+* dosageInstruction.timing.repeat.frequency ^definition =
+    "reason(s) why this should be supported."
 * dosageInstruction.timing.code 0..1 MS
 * dosageInstruction.timing.code ^definition =
     "reason(s) why this should be supported."
+* dosageInstruction.timing.code from VSDrugFrequency (extensible)
 * note 0..* MS
 * note ^definition =
     "reason(s) why this should be supported."
