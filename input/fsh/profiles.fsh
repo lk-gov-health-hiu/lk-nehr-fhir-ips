@@ -692,7 +692,7 @@ Description: "This is to record requests for medication that are prescribed to a
 * dosageInstruction.timing.code 0..1 MS
 * dosageInstruction.timing.code ^definition =
     "reason(s) why this should be supported."
-* dosageInstruction.timing.code from VSDrugFrequency (extensible)
+* dosageInstruction.timing.code from VSDrugFrequency (preferred)
 * note 0..* MS
 * note ^definition =
     "reason(s) why this should be supported."
