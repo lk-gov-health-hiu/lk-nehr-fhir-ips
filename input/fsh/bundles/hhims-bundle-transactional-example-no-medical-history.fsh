@@ -1,8 +1,8 @@
-Instance: HHIMSTransactionalBundleExample
+Instance: HHIMSTransactionalBundleExampleNoMedicalHistory
 InstanceOf: HHIMSTransactionalBundle
 Usage: #example
-Title: "HHIMS Transactional Bundle"
-Description: "This bundle contains all of the HHIMS resources for transactional requests."
+Title: "HHIMS Transactional Bundle with no medical history"
+Description: "A full transactional bundle containing no medical history for the HHIMS patient."
 * type = #transaction
 * timestamp = "2024-02-18T09:30:00+02:00"
 * identifier.value = "transactional-id-1234"

@@ -106,7 +106,7 @@ Description: "This bundle contains all of the HIMS resources for transactional r
 * insert BundleEntry(RandomBloodSugar, observation-random-blood-sugar, reason why this should be supported.)
 * insert BundleEntry(FastingBloodSugar, observation-fasting-blood-sugar, reason why this should be supported.)
 * insert BundleEntry(TotalCholesterol, observation-cholesterol, reason why this should be supported.)
-* insert BundleEntry(MedicalHistory, condition-medical-history, reason why this should be supported.)
+* insert BundleEntry(MedicalHistory or NoMedicalHistory, condition-medical-history, reason why this should be supported.)
 * insert BundleEntry(Organization, organization, reason why this should be supported.)
 * insert BundleEntry(NoAllergies, allergyintolerance, reason why this should be supported.)
 * insert BundleEntry(NoPrescriptions, medicationrequest, reason why this should be supported.)

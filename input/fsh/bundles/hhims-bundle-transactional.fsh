@@ -93,6 +93,6 @@ Description: "This bundle contains all of the HHIMS resources for transactional 
 * insert BundleEntry(Allergies, allergyintolerance, reason why this should be supported.)
 * insert BundleEntry(MedicationRequests, medicationrequest, reason why this should be supported.)
 //* insert BundleEntry(Procedures, procedure, reason why this should be supported.)
-* insert BundleEntry(NoMedicalHistory, condition, reason why this should be supported.)
+* insert BundleEntry(MedicalHistory or NoMedicalHistory, condition, reason why this should be supported.)
 * insert BundleEntry(Organization, organization, reason why this should be supported.)
 * insert BundleEntry(DeviceInformation, device-information, reason why this should be supported.)
