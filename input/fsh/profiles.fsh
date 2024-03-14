@@ -566,6 +566,13 @@ Description: "Represents previous, pre-existing and new conditions for the patie
     "reason(s) why this should be supported."
 * code 1..1
 * code from VSMedicalConditions (extensible)
+* code ^binding.extension[+].extension[+].url = "purpose"
+* code ^binding.extension[=].extension[=].valueCode = #candidate
+* code ^binding.extension[=].extension[+].url = "valueSet"
+* code ^binding.extension[=].extension[=].valueCanonical = "http://fhir.health.gov.lk/ips/ValueSet/vs-medical-conditions-additional"
+* code ^binding.extension[=].extension[+].url = "documentation"
+* code ^binding.extension[=].extension[=].valueMarkdown = "Sri Lanka Proprietary additional medical conditions."
+* code ^binding.extension[=].url = "http://hl7.org/fhir/tools/StructureDefinition/additional-binding"
 * subject 1..1
 * subject only Reference(IPSPatient)
 * encounter 1..1
