@@ -1076,6 +1076,7 @@ Description:
 * link 1..
 * link.other only Reference(IPSPatient)
 * link.type = #refer
+
 //* extension contains MasterPatientIndex named MPI 1..*
 
 Profile: ProcedureServiceRequest
