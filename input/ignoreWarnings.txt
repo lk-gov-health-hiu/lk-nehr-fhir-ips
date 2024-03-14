@@ -5,3 +5,7 @@ ValueSet 'http://dicom.nema.org/medical/dicom/current/output/chtml/part04/sect_B
 
 # These messages are not important as they are only indicating that this IG includes additional slices to the base IPS profiles
 This element does not match any known slice defined in the profile http://hl7.org/fhir/uv/ips/StructureDefinition/Composition-uv-ips|1.1.0 (this may not be a problem, but you should check that it's not intended to match a slice)
+
+# These messages are not important as they are only indicating that the bundle entry is profiled to allow more than one profile of the same type.
+%The entry resource matched more than one of the allowed profiles%
+%Found multiple matching profiles among 2 choices%
