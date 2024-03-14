@@ -2543,3 +2543,37 @@ Title: "Device Classification Codes"
 Description: "A list of device device classification codes."
 * ^experimental = false
 * include codes from system CSDeviceClassificationCodes
+
+CodeSystem: CSDrugFrequency
+Id: cs-drug-frequency
+Title: "Drug Frequency Codes"
+Description: "A list of drug frequency code for medication requests."
+* ^experimental = false
+* ^caseSensitive = true
+* #LK-DF-01 "Daily"
+* #LK-DF-02 "BD"
+* #LK-DF-03 "TDS"
+* #LK-DF-04 "qds"
+* #LK-DF-05 "Nocte"
+* #LK-DF-06 "STAT"
+* #LK-DF-07 "SOS (for High Fever)"
+* #LK-DF-08 "STAT & REPEAT DOSE IN 10 DAYS"
+* #LK-DF-09 "SOS"
+* #LK-DF-10 "5 H"
+* #LK-DF-11 "EOD"
+* #LK-DF-12 "Mane"
+* #LK-DF-13 "noon"
+* #LK-DF-14 "SOS (for Vomiting)"
+* #LK-DF-15 "vesper"
+* #LK-DF-16 "Weekly"
+* #LK-DF-17 "6 hourly"
+* #LK-DF-18 "8 hourly"
+* #LK-DF-19 "5 Times Per Day"
+* #LK-DF-20 "Today and repeat in 14 days"
+
+ValueSet: VSDrugFrequency
+Id: vs-drug-frequency
+Title: "Drug Frequency Codes"
+Description: "A list of drug frequency code for medication requests."
+* ^experimental = false
+* include codes from system CSDrugFrequency

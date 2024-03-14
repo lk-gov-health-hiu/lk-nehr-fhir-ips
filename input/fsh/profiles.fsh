@@ -10,12 +10,12 @@ Description: "Organization providing health related services."
 * identifier ^slicing.ordered = false
 * identifier ^slicing.description = "Slice based on the type of identifier."
 * identifier contains
-    XX 1..1
-* identifier[XX].value 1..1
-* identifier[XX].system = "http://fhir.health.gov.lk/ips/identifier/organization"
-* identifier[XX].type.coding.code = #XX
-* identifier[XX].type.coding.system = "http://terminology.hl7.org/CodeSystem/v2-0203"
-* identifier[XX].type.text = "Organization identifier"
+    HIN 1..1
+* identifier[HIN].value 1..1
+* identifier[HIN].system = "http://fhir.health.gov.lk/ips/identifier/hin"
+* identifier[HIN].type.coding.code = #XX
+* identifier[HIN].type.coding.system = "http://terminology.hl7.org/CodeSystem/v2-0203"
+* identifier[HIN].type.text = "Organization identifier"
 * name 1..1
 
 Profile: GeneralPractitioner
@@ -676,15 +676,23 @@ Description: "This is to record requests for medication that are prescribed to a
 * medicationCodeableConcept ^binding.extension[=].url = "http://hl7.org/fhir/tools/StructureDefinition/additional-binding"
 
 * dosageInstruction.doseAndRate.doseQuantity 1..1
+* dosageInstruction.timing obeys MedicationRequest-DosageInstruction-1
 * dosageInstruction.timing.repeat.count 1..1
 * dosageInstruction.timing.repeat.duration 1..1
 * dosageInstruction.timing.repeat.durationUnit 1..1
-* dosageInstruction.timing.repeat.period 1..1
-* dosageInstruction.timing.repeat.periodUnit 1..1
-* dosageInstruction.timing.repeat.frequency 1..1
+* dosageInstruction.timing.repeat.period 0..1 MS
+* dosageInstruction.timing.repeat.period ^definition =
+    "reason(s) why this should be supported."
+* dosageInstruction.timing.repeat.periodUnit 0..1 MS
+* dosageInstruction.timing.repeat.periodUnit ^definition =
+    "reason(s) why this should be supported."
+* dosageInstruction.timing.repeat.frequency 0..1 MS
+* dosageInstruction.timing.repeat.frequency ^definition =
+    "reason(s) why this should be supported."
 * dosageInstruction.timing.code 0..1 MS
 * dosageInstruction.timing.code ^definition =
     "reason(s) why this should be supported."
+* dosageInstruction.timing.code from VSDrugFrequency (preferred)
 * note 0..* MS
 * note ^definition =
     "reason(s) why this should be supported."
