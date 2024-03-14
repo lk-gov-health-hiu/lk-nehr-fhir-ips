@@ -630,7 +630,7 @@ Description: "Represents previous, pre-existing and new conditions for the patie
 * verificationStatus.coding.system = "http://terminology.hl7.org/CodeSystem/condition-ver-status"
 * category[+].coding.code = #problem-list-item
 * category[=].coding.system = "http://terminology.hl7.org/CodeSystem/condition-category"
-* code = $SCT#313435000
+* code[+] = $SCT#313435000
 * subject = Reference(PatientExample)
 * encounter = Reference(TargetFacilityEncounterExample)
 * recorder = Reference(GeneralPractitionerExample)
