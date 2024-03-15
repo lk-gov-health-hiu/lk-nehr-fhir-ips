@@ -46,13 +46,14 @@ Description: "Represents the current facility at which the patient is receiving 
 * reasonCode ^definition =
     "reason(s) why this should be supported."
 * reasonCode from VSReasonForEncounter (preferred)
-* reasonCode ^binding.extension[+].extension[+].url = "purpose"
+/** reasonCode ^binding.extension[+].extension[+].url = "purpose"
 * reasonCode ^binding.extension[=].extension[=].valueCode = #candidate
 * reasonCode ^binding.extension[=].extension[+].url = "valueSet"
 * reasonCode ^binding.extension[=].extension[=].valueCanonical = "http://fhir.health.gov.lk/ips/ValueSet/vs-reason-for-encounter"
 * reasonCode ^binding.extension[=].extension[+].url = "documentation"
 * reasonCode ^binding.extension[=].extension[=].valueMarkdown = "Sri Lanka Proprietary Reasons for the encounter."
 * reasonCode ^binding.extension[=].url = "http://hl7.org/fhir/tools/StructureDefinition/additional-binding"
+*/
 * location 0..* MS
 * location ^definition =
     "reason(s) why this should be supported."
