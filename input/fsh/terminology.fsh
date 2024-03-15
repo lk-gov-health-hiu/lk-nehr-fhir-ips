@@ -45,6 +45,9 @@ Title: "Follow up at HLC"
 Description: "Follow up at Healthy Lifestyle Center"
 * ^experimental = false
 * ^caseSensitive = true
+* #Followed-in-3-months-at-hlc "Followed in 3 months at HLC" "Needs definition"
+* #Followed-in-6-months-at-hlc "Followed in 6 months at HLC" "Needs definition"
+* #Followed-in-1-year-at-hlc "Followed in 1 year at HLC" "Needs definition"
 * #Followed-in-3-years-at-hlc "Followed in 3 years at HLC" "Needs definition"
 
 ValueSet: VSFollowUpReasons
@@ -52,8 +55,8 @@ Id: vs-follow-up-reasons
 Title: "Follow up at HLC"
 Description: "Follow up at Healthy Lifestyle Center"
 * ^experimental = false
-* include codes from system $SCT
-    where concept descendent-of #183616001
+//* include codes from system $SCT
+//    where concept descendent-of #183616001
 * include codes from system CSFollowUpReasons
 
 CodeSystem: CSCVDRiskCategory
