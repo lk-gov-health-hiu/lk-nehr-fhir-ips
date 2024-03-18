@@ -439,7 +439,7 @@ Description: "Represents the patient's CVD risk score."
 * code = $SCT#441829007
 * performer 1..1
 * performer only Reference(GeneralPractitioner or DeviceInformation)
-* basis 1..*
+* basis 0..*
 * prediction 1..*
 * prediction.outcome 1..1
 * prediction.probabilityDecimal 0..1 MS
