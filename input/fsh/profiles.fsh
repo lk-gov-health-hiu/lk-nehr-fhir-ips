@@ -830,7 +830,7 @@ Id: investigations-request
 Title: "Investigations Request"
 Description: "Used to initiate a request for an investigation."
 * code from VSInvestigations (extensible)
-* occurrenceDateTime 1..1
+//* occurrenceDateTime 1..1
 * subject only Reference(IPSPatient)
 * encounter only Reference(TargetFacilityEncounter)
 * authoredOn 1..1
@@ -858,7 +858,7 @@ Id: imaging-request
 Title: "Imaging Request"
 Description: "Used to initiate the request for imaging to be done."
 * code from VSImagingProcedures (extensible)
-* occurrenceDateTime 1..1
+//* occurrenceDateTime 1..1
 * subject only Reference(IPSPatient)
 * encounter only Reference(TargetFacilityEncounter)
 * authoredOn 1..1
@@ -1092,7 +1092,7 @@ Id: procedures-request
 Title: "Procedure Request"
 Description: "Used to initiate the request for a procedure."
 * code from VSProcedures (extensible)
-* occurrenceDateTime 1..1
+//* occurrenceDateTime 1..1
 * subject only Reference(IPSPatient)
 * encounter only Reference(TargetFacilityEncounter)
 
