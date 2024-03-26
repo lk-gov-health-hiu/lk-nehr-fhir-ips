@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Patient xmlns="http://hl7.org/fhir">
+  <id value="HHIMSPatientExample"/>
+  <meta>
+    <profile value="http://fhir.health.gov.lk/ips/StructureDefinition/hhims-patient"/>
+  </meta>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p style="border: 1px #661aff solid; background-color: #e6e6ff; padding: 10px;"><b>Mike John Smith (OFFICIAL)</b> male, DoB: 1983-05-22 ( Personal Health Number/personal health number)</p><hr/><table class="grid"><tr><td style="background-color: #f3f5da" title="Other Ids (see the one above)">Other Ids:</td><td colspan="3"><ul><li>National identity number/National identity number-1</li><li>National identity number/National identity number-2</li></ul></td></tr><tr><td style="background-color: #f3f5da" title="Ways to contact the Patient">Contact Details:</td><td colspan="3"><ul><li><a href="tel:+27829999999">+27829999999</a></li><li><a href="mailto:someone@something.com">someone@something.com</a></li><li><a href="mailto:someone2@something.com">someone2@something.com</a></li><li>177 Nawala Road Nugegoda Colombo 32350 LK </li></ul></td></tr></table></div>
+  </text>
+  <identifier>
+    <type>
+      <coding>
+        <system value="http://fhir.health.gov.lk/ips/CodeSystem/cs-identifier-types"/>
+        <code value="PHN"/>
+      </coding>
+      <text value="Personal Health Number"/>
+    </type>
+    <system value="http://fhir.health.gov.lk/ips/identifier/phn"/>
+    <value value="personal health number"/>
+  </identifier>
+  <identifier>
+    <type>
+      <coding>
+        <system value="http://fhir.health.gov.lk/ips/CodeSystem/cs-identifier-types"/>
+        <code value="NIC"/>
+      </coding>
+      <text value="National identity number"/>
+    </type>
+    <system value="http://fhir.health.gov.lk/ips/identifier/nic"/>
+    <value value="National identity number-1"/>
+  </identifier>
+  <identifier>
+    <type>
+      <coding>
+        <system value="http://fhir.health.gov.lk/ips/CodeSystem/cs-identifier-types"/>
+        <code value="NIC"/>
+      </coding>
+      <text value="National identity number"/>
+    </type>
+    <system value="http://fhir.health.gov.lk/ips/identifier/nic"/>
+    <value value="National identity number-2"/>
+  </identifier>
+  <name>
+    <use value="official"/>
+    <family value="Smith"/>
+    <given value="Mike"/>
+    <given value="John"/>
+    <prefix value="Mr."/>
+  </name>
+  <telecom>
+    <system value="phone"/>
+    <value value="+27829999999"/>
+  </telecom>
+  <telecom>
+    <system value="email"/>
+    <value value="someone@something.com"/>
+  </telecom>
+  <telecom>
+    <system value="email"/>
+    <value value="someone2@something.com"/>
+  </telecom>
+  <gender value="male"/>
+  <birthDate value="1983-05-22"/>
+  <address>
+    <type value="postal"/>
+    <line value="177"/>
+    <line value="Nawala Road"/>
+    <city value="Nugegoda"/>
+    <district value="Ampara"/>
+    <state value="Colombo"/>
+    <postalCode value="32350"/>
+    <country value="LK"/>
+  </address>
+</Patient>

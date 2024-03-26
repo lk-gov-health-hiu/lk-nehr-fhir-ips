@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<RiskAssessment xmlns="http://hl7.org/fhir">
+  <id value="CVDRiskCategoryExample"/>
+  <meta>
+    <profile value="http://fhir.health.gov.lk/ips/StructureDefinition/cvd-risk-category"/>
+  </meta>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative: RiskAssessment</b><a name="CVDRiskCategoryExample"> </a><a name="hcCVDRiskCategoryExample"> </a></p><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Resource RiskAssessment &quot;CVDRiskCategoryExample&quot; </p><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-cvd-risk-category.html">Cardiovascular Risk Assessment</a></p></div><p><b>status</b>: final</p><p><b>code</b>: Assessment for risk of cardiovascular disease <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="https://browser.ihtsdotools.org/">SNOMED CT</a>#441829007)</span></p><p><b>subject</b>: <a href="Patient-PatientExample.html">Patient/PatientExample</a> &quot; SMITH&quot;</p><p><b>encounter</b>: <a href="Encounter-TargetFacilityEncounterExample.html">Encounter/TargetFacilityEncounterExample</a></p><p><b>occurrence</b>: 2023-10-06 13:28:17-0500</p><p><b>performer</b>: <a href="Practitioner-GeneralPractitionerExample.html">Practitioner/GeneralPractitionerExample</a> &quot; SMITH&quot;</p><p><b>basis</b>: </p><ul><li><a href="Patient-PatientExample.html">Patient/PatientExample</a> &quot; SMITH&quot;</li><li><a href="Observation-RiskBehaviourTobaccoSmokerExample.html">Observation/RiskBehaviourTobaccoSmokerExample</a></li><li><a href="Observation-TotalCholesterolExample.html">Observation/TotalCholesterolExample</a></li><li><a href="Observation-BloodPressureExample.html">Observation/BloodPressureExample</a></li><li><a href="Observation-RandomBloodSugarExample.html">Observation/RandomBloodSugarExample</a></li><li><a href="Observation-FastingBloodSugarExample.html">Observation/FastingBloodSugarExample</a></li></ul><h3>Predictions</h3><table class="grid"><tr><td style="display: none">-</td><td><b>Outcome</b></td><td><b>Probability[x]</b></td><td><b>QualitativeRisk</b></td><td><b>When[x]</b></td></tr><tr><td style="display: none">*</td><td>Risk of heart attack <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="https://browser.ihtsdotools.org/">SNOMED CT</a>#395112001)</span></td><td>0.02</td><td>Risk Category <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="CodeSystem-cs-cvd-risk-category.html">Cardiovascular Risk Categories</a>#Critical)</span></td><td>39-49 years</td></tr></table></div>
+  </text>
+  <status value="final"/>
+  <code>
+    <coding>
+      <system value="http://snomed.info/sct"/>
+      <code value="441829007"/>
+    </coding>
+    <text value="Assessment for risk of cardiovascular disease"/>
+  </code>
+  <subject>
+    <reference value="Patient/PatientExample"/>
+  </subject>
+  <encounter>
+    <reference value="Encounter/TargetFacilityEncounterExample"/>
+  </encounter>
+  <occurrenceDateTime value="2023-10-06T13:28:17-05:00"/>
+  <performer>
+    <reference value="Practitioner/GeneralPractitionerExample"/>
+  </performer>
+  <basis>
+    <reference value="Patient/PatientExample"/>
+  </basis>
+  <basis>
+    <reference value="Observation/RiskBehaviourTobaccoSmokerExample"/>
+  </basis>
+  <basis>
+    <reference value="Observation/TotalCholesterolExample"/>
+  </basis>
+  <basis>
+    <reference value="Observation/BloodPressureExample"/>
+  </basis>
+  <basis>
+    <reference value="Observation/RandomBloodSugarExample"/>
+  </basis>
+  <basis>
+    <reference value="Observation/FastingBloodSugarExample"/>
+  </basis>
+  <prediction>
+    <outcome>
+      <coding>
+        <system value="http://snomed.info/sct"/>
+        <code value="395112001"/>
+      </coding>
+      <text value="Risk of heart attack"/>
+    </outcome>
+    <probabilityDecimal value="0.02"/>
+    <qualitativeRisk>
+      <coding>
+        <system value="http://fhir.health.gov.lk/ips/CodeSystem/cs-cvd-risk-category"/>
+        <code value="Critical"/>
+      </coding>
+      <text value="Risk Category"/>
+    </qualitativeRisk>
+    <whenRange>
+      <low>
+        <value value="39"/>
+        <unit value="years"/>
+        <system value="http://unitsofmeasure.org"/>
+        <code value="a"/>
+      </low>
+      <high>
+        <value value="49"/>
+        <unit value="years"/>
+        <system value="http://unitsofmeasure.org"/>
+        <code value="a"/>
+      </high>
+    </whenRange>
+  </prediction>
+</RiskAssessment>

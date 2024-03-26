@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ValueSet xmlns="http://hl7.org/fhir">
+  <id value="vs-medical-conditions"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p>This value set includes codes based on the following rules:</p><ul><li>Include these codes as defined in <a href="http://www.snomed.org/"><code>http://snomed.info/sct</code></a><table class="none"><tr><td style="white-space:nowrap"><b>Code</b></td><td><b>Display</b></td></tr><tr><td><a href="http://snomed.info/id/38341003">38341003</a></td><td>Hypertension</td></tr><tr><td><a href="http://snomed.info/id/195967001">195967001</a></td><td>Asthma</td></tr><tr><td><a href="http://snomed.info/id/230690007">230690007</a></td><td>Cerebrovascular accident</td></tr></table></li><li>Include codes from <a href="http://www.snomed.org/"><code>http://snomed.info/sct</code></a> where concept  descends from  73211009 (Diabetes mellitus)</li></ul></div>
+  </text>
+  <url value="http://fhir.health.gov.lk/ips/ValueSet/vs-medical-conditions"/>
+  <version value="0.1.0"/>
+  <name value="VSMedicalConditions"/>
+  <title value="Conditions"/>
+  <status value="active"/>
+  <experimental value="false"/>
+  <date value="2024-03-12T13:39:02+00:00"/>
+  <publisher value="Ministry of Health, Sri Lanka"/>
+  <contact>
+    <name value="Ministry of Health, Sri Lanka"/>
+    <telecom>
+      <system value="url"/>
+      <value value="https://www.health.gov.lk/"/>
+    </telecom>
+    <telecom>
+      <system value="email"/>
+      <value value="digitalhealth@health.gov.lk"/>
+    </telecom>
+  </contact>
+  <contact>
+    <name value="Director, Health Information"/>
+    <telecom>
+      <system value="email"/>
+      <value value="digitalhealth@health.gov.lk"/>
+      <use value="work"/>
+    </telecom>
+  </contact>
+  <description value="Represents previous, pre-existing and new conditions."/>
+  <jurisdiction>
+    <coding>
+      <system value="http://unstats.un.org/unsd/methods/m49/m49.htm"/>
+      <code value="001"/>
+      <display value="World"/>
+    </coding>
+  </jurisdiction>
+  <compose>
+    <include>
+      <system value="http://snomed.info/sct"/>
+      <concept>
+        <code value="38341003"/>
+        <display value="Hypertension"/>
+      </concept>
+      <concept>
+        <code value="195967001"/>
+        <display value="Asthma"/>
+      </concept>
+      <concept>
+        <code value="230690007"/>
+        <display value="Cerebrovascular accident"/>
+      </concept>
+    </include>
+    <include>
+      <system value="http://snomed.info/sct"/>
+      <filter>
+        <property value="concept"/>
+        <op value="descendent-of"/>
+        <value value="73211009"/>
+      </filter>
+    </include>
+  </compose>
+</ValueSet>

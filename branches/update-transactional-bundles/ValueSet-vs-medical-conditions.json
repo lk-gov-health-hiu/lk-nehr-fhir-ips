@@ -1,0 +1,68 @@
+{
+  "resourceType" : "ValueSet",
+  "id" : "vs-medical-conditions",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>This value set includes codes based on the following rules:</p><ul><li>Include these codes as defined in <a href=\"http://www.snomed.org/\"><code>http://snomed.info/sct</code></a><table class=\"none\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td></tr><tr><td><a href=\"http://snomed.info/id/38341003\">38341003</a></td><td>Hypertension</td></tr><tr><td><a href=\"http://snomed.info/id/195967001\">195967001</a></td><td>Asthma</td></tr><tr><td><a href=\"http://snomed.info/id/230690007\">230690007</a></td><td>Cerebrovascular accident</td></tr></table></li><li>Include codes from <a href=\"http://www.snomed.org/\"><code>http://snomed.info/sct</code></a> where concept  descends from  73211009 (Diabetes mellitus)</li></ul></div>"
+  },
+  "url" : "http://fhir.health.gov.lk/ips/ValueSet/vs-medical-conditions",
+  "version" : "0.1.0",
+  "name" : "VSMedicalConditions",
+  "title" : "Conditions",
+  "status" : "active",
+  "experimental" : false,
+  "date" : "2024-03-13T05:40:04+00:00",
+  "publisher" : "Ministry of Health, Sri Lanka",
+  "contact" : [{
+    "name" : "Ministry of Health, Sri Lanka",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://www.health.gov.lk/"
+    },
+    {
+      "system" : "email",
+      "value" : "digitalhealth@health.gov.lk"
+    }]
+  },
+  {
+    "name" : "Director, Health Information",
+    "telecom" : [{
+      "system" : "email",
+      "value" : "digitalhealth@health.gov.lk",
+      "use" : "work"
+    }]
+  }],
+  "description" : "Represents previous, pre-existing and new conditions.",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "http://unstats.un.org/unsd/methods/m49/m49.htm",
+      "code" : "001",
+      "display" : "World"
+    }]
+  }],
+  "compose" : {
+    "include" : [{
+      "system" : "http://snomed.info/sct",
+      "concept" : [{
+        "code" : "38341003",
+        "display" : "Hypertension"
+      },
+      {
+        "code" : "195967001",
+        "display" : "Asthma"
+      },
+      {
+        "code" : "230690007",
+        "display" : "Cerebrovascular accident"
+      }]
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "filter" : [{
+        "property" : "concept",
+        "op" : "descendent-of",
+        "value" : "73211009"
+      }]
+    }]
+  }
+}

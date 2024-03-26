@@ -1,0 +1,48 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://fhir.health.gov.lk/ips/Task/HHIMSReferralTaskExample> a fhir:Task ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "HHIMSReferralTaskExample"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://fhir.health.gov.lk/ips/StructureDefinition/referral-task"^^xsd:anyURI ;
+       fhir:link <http://fhir.health.gov.lk/ips/StructureDefinition/referral-task>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: Task</b><a name=\"HHIMSReferralTaskExample\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource Task &quot;HHIMSReferralTaskExample&quot; </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-referral-task.html\">Referral Task</a></p></div><p><b>status</b>: completed</p><p><b>intent</b>: order</p><p><b>priority</b>: routine</p><p><b>description</b>: some information regarding the need for the referral request, if any.</p><p><b>focus</b>: <a href=\"ServiceRequest-GeneralReferralServiceRequestExample.html\">ServiceRequest/GeneralReferralServiceRequestExample</a></p><p><b>for</b>: <a href=\"Patient-HHIMSPatientExample.html\">Patient/HHIMSPatientExample</a> &quot; SMITH&quot;</p><p><b>encounter</b>: <a href=\"Encounter-HHIMSTargetFacilityEncounterExample.html\">Encounter/HHIMSTargetFacilityEncounterExample</a></p><p><b>authoredOn</b>: 2023-10-06 13:28:17-0500</p><p><b>requester</b>: <a href=\"Practitioner-GeneralPractitionerExample.html\">Practitioner/GeneralPractitionerExample</a> &quot; SMITH&quot;</p><p><b>location</b>: <a href=\"Location-ProvidersLocationExample.html\">Location/ProvidersLocationExample</a> &quot;Name for the location&quot;</p></div>"
+  ] ; # 
+  fhir:status [ fhir:v "completed"] ; # 
+  fhir:intent [ fhir:v "order"] ; # 
+  fhir:priority [ fhir:v "routine"] ; # 
+  fhir:description [ fhir:v "some information regarding the need for the referral request, if any."] ; # 
+  fhir:focus [
+     fhir:link <http://fhir.health.gov.lk/ips/ServiceRequest/GeneralReferralServiceRequestExample> ;
+     fhir:reference [ fhir:v "ServiceRequest/GeneralReferralServiceRequestExample" ]
+  ] ; # 
+  fhir:for [
+     fhir:link <http://fhir.health.gov.lk/ips/Patient/HHIMSPatientExample> ;
+     fhir:reference [ fhir:v "Patient/HHIMSPatientExample" ]
+  ] ; # 
+  fhir:encounter [
+     fhir:link <http://fhir.health.gov.lk/ips/Encounter/HHIMSTargetFacilityEncounterExample> ;
+     fhir:reference [ fhir:v "Encounter/HHIMSTargetFacilityEncounterExample" ]
+  ] ; # 
+  fhir:authoredOn [ fhir:v "2023-10-06T13:28:17-05:00"^^xsd:dateTime] ; # 
+  fhir:requester [
+     fhir:link <http://fhir.health.gov.lk/ips/Practitioner/GeneralPractitionerExample> ;
+     fhir:reference [ fhir:v "Practitioner/GeneralPractitionerExample" ]
+  ] ; # 
+  fhir:location [
+     fhir:link <http://fhir.health.gov.lk/ips/Location/ProvidersLocationExample> ;
+     fhir:reference [ fhir:v "Location/ProvidersLocationExample" ]
+  ] . # 
+
+# -------------------------------------------------------------------------------------
+

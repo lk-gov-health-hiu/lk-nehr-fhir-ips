@@ -1,0 +1,20 @@
+{
+  "url" : "http://fhir.health.gov.lk/ips/ImplementationGuide/lk-nehr-fhir-ips",
+  "name" : "SriLankaIPS",
+  "title" : "LK NEHR Sri Lanka Patient Summary (IPS based) Implementation Guide",
+  "description" : "A FHIR Implementation Guide - Sri Lanka IPS",
+  "ig-date" : "2024-03-01",
+  "status" : "active",
+  "package-id" : "lk-nehr-fhir-ips",
+  "ig-ver" : "0.1.0",
+  "date" : "Thu, 14 Mar, 2024 09:29:40 +0000",
+  "dateISO8601" : "2024-03-14T09:29:40+00:00",
+  "errs" : 0,
+  "warnings" : 1,
+  "hints" : 14,
+  "suppressed-hints" : 23,
+  "suppressed-warnings" : 9,
+  "version" : "4.0.1",
+  "tool" : "5.0.0 (3)",
+  "maxMemory" : 3586426176
+}

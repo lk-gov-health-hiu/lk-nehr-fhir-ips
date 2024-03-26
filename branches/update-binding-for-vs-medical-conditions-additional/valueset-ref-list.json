@@ -1,0 +1,210 @@
+{
+  "codeSystems" : [
+    {
+      "url" : "http://fhir.health.gov.lk/ips/ValueSet/vs-cvd-risk-category",
+      "version" : "0.1.0",
+      "status" : "active",
+      "name" : "VSCVDRiskCategory",
+      "title" : "Cardiovascular Risk Categories",
+      "description" : "Cardiovascular risk is expressed as a percentage",
+      "systems" : [
+        "http://fhir.health.gov.lk/ips/CodeSystem/cs-cvd-risk-category"
+      ],
+      "uses" : {
+      },
+      "StructureDefinition-cvd-risk-category.html" : "Cardiovascular Risk Assessment"
+    },
+    {
+      "url" : "http://fhir.health.gov.lk/ips/ValueSet/vs-device-classification",
+      "version" : "0.1.0",
+      "status" : "active",
+      "name" : "VSDeviceClassificationCodes",
+      "title" : "Device Classification Codes",
+      "description" : "A list of device classification codes.",
+      "systems" : [
+        "http://fhir.health.gov.lk/ips/CodeSystem/cs-device-classification"
+      ],
+      "uses" : {
+      },
+      "StructureDefinition-device-information.html" : "Device Information"
+    },
+    {
+      "url" : "http://fhir.health.gov.lk/ips/ValueSet/vs-drug-frequency",
+      "version" : "0.1.0",
+      "status" : "active",
+      "name" : "VSDrugFrequency",
+      "title" : "Drug Frequency Codes",
+      "description" : "A list of drug frequency code for medication requests.",
+      "systems" : ["http://fhir.health.gov.lk/ips/CodeSystem/cs-drug-frequency"],
+      "uses" : {
+      },
+      "StructureDefinition-medication-request.html" : "Medication Request"
+    },
+    {
+      "url" : "http://fhir.health.gov.lk/ips/ValueSet/vs-follow-up-plan",
+      "version" : "0.1.0",
+      "status" : "active",
+      "name" : "VSFollowUpPlan",
+      "title" : "Follow-up plan",
+      "description" : "Follow-up plan",
+      "systems" : ["http://snomed.info/sct"],
+      "uses" : {
+      },
+      "StructureDefinition-follow-up-plan.html" : "Referral Request For Follow-up Plan"
+    },
+    {
+      "url" : "http://fhir.health.gov.lk/ips/ValueSet/vs-follow-up-reasons",
+      "version" : "0.1.0",
+      "status" : "active",
+      "name" : "VSFollowUpReasons",
+      "title" : "Follow up at HLC",
+      "description" : "Follow up at Healthy Lifestyle Center",
+      "systems" : [
+        "http://fhir.health.gov.lk/ips/CodeSystem/cs-follow-up-reasons"
+      ],
+      "uses" : {
+      },
+      "StructureDefinition-follow-up-plan.html" : "Referral Request For Follow-up Plan"
+    },
+    {
+      "url" : "http://fhir.health.gov.lk/ips/ValueSet/vs-identifier-types",
+      "version" : "0.1.0",
+      "status" : "active",
+      "name" : "VSIdentifierTypes",
+      "title" : "Patient Business Identifier Types",
+      "description" : "Patient Business Identifier Types",
+      "systems" : [
+        "http://fhir.health.gov.lk/ips/CodeSystem/cs-identifier-types"
+      ],
+      "uses" : {
+      },
+      "StructureDefinition-ips-patient.html" : "Patient"
+    },
+    {
+      "url" : "http://fhir.health.gov.lk/ips/ValueSet/vs-investigation",
+      "version" : "0.1.0",
+      "status" : "active",
+      "name" : "VSInvestigations",
+      "title" : "Investigations",
+      "description" : "Investigations",
+      "systems" : ["http://fhir.health.gov.lk/ips/CodeSystem/cs-investigation"],
+      "uses" : {
+      },
+      "StructureDefinition-investigations-request.html" : "Investigations Request"
+    },
+    {
+      "url" : "http://fhir.health.gov.lk/ips/ValueSet/vs-medical-conditions",
+      "version" : "0.1.0",
+      "status" : "active",
+      "name" : "VSMedicalConditions",
+      "title" : "Conditions",
+      "description" : "Represents previous, pre-existing and new conditions.",
+      "systems" : ["http://snomed.info/sct"],
+      "uses" : {
+      },
+      "StructureDefinition-medical-history.html" : "Medical History"
+    },
+    {
+      "url" : "http://fhir.health.gov.lk/ips/ValueSet/vs-medical-conditions-additional",
+      "version" : "0.1.0",
+      "status" : "active",
+      "name" : "VSMedicalConditionAdditional",
+      "title" : "Additional Conditions",
+      "description" : "Represents previous, pre-existing and new conditions.",
+      "systems" : [
+        "http://fhir.health.gov.lk/ips/CodeSystem/cs-medical-conditions-additional"
+      ]
+    },
+    {
+      "url" : "http://fhir.health.gov.lk/ips/ValueSet/vs-medication-name-msd",
+      "version" : "0.1.0",
+      "status" : "active",
+      "name" : "VSMedicationNamesForMSD",
+      "title" : "Medication Names For Pharmacy",
+      "description" : "A list of typical medications that can be prescribed to the patient.",
+      "systems" : [
+        "http://fhir.health.gov.lk/ips/CodeSystem/cs-medication-name-msd"
+      ],
+      "uses" : {
+      },
+      "StructureDefinition-medication-request.html" : "Medication Request",
+      "StructureDefinition-drug-dispensation.html" : "Drug Dispensation"
+    },
+    {
+      "url" : "http://fhir.health.gov.lk/ips/ValueSet/vs-medication-name-non-msd",
+      "version" : "0.1.0",
+      "status" : "active",
+      "name" : "VSMedicationNamesForNonMSD",
+      "title" : "Medication Names Not For Pharmacy",
+      "description" : "A list of medications that typically are not prescribed for collection at the pharamcy a.k.a. Non-Medical Supplies.",
+      "systems" : [
+        "http://fhir.health.gov.lk/ips/CodeSystem/cs-medication-name-non-msd"
+      ]
+    },
+    {
+      "url" : "http://fhir.health.gov.lk/ips/ValueSet/vs-procedure",
+      "version" : "0.1.0",
+      "status" : "active",
+      "name" : "VSProcedures",
+      "title" : "Procedures",
+      "description" : "Procedures",
+      "systems" : ["http://fhir.health.gov.lk/ips/CodeSystem/cs-procedure"],
+      "uses" : {
+      },
+      "StructureDefinition-procedures-request.html" : "Procedure Request"
+    },
+    {
+      "url" : "http://fhir.health.gov.lk/ips/ValueSet/vs-procedure-imaging",
+      "version" : "0.1.0",
+      "status" : "active",
+      "name" : "VSImagingProcedures",
+      "title" : "Procedures",
+      "description" : "Imaging Procedures",
+      "systems" : [
+        "http://fhir.health.gov.lk/ips/CodeSystem/cs-procedure-imaging"
+      ],
+      "uses" : {
+      },
+      "StructureDefinition-imaging-request.html" : "Imaging Request"
+    },
+    {
+      "url" : "http://fhir.health.gov.lk/ips/ValueSet/vs-reason-for-encounter",
+      "version" : "0.1.0",
+      "status" : "active",
+      "name" : "VSReasonForEncounter",
+      "title" : "Reason For Encounter",
+      "description" : "Encounter reasons.",
+      "systems" : ["http://snomed.info/sct"],
+      "uses" : {
+      },
+      "StructureDefinition-target-facility-encounter.html" : "Target Facility Encounter"
+    },
+    {
+      "url" : "http://fhir.health.gov.lk/ips/ValueSet/vs-risk-behaviour-physical-activity",
+      "version" : "0.1.0",
+      "status" : "active",
+      "name" : "VSRiskBehaviourPhysicalActivity",
+      "title" : "Physical Activity",
+      "description" : "Physical Activity Status",
+      "systems" : ["http://snomed.info/sct"],
+      "uses" : {
+      },
+      "StructureDefinition-risk-behaviour-physical-activity.html" : "Physical Activity Status Observation"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/procedure-code",
+      "version" : "4.0.1",
+      "status" : "draft",
+      "name" : "ProcedureCodes(SNOMEDCT)",
+      "title" : "Procedure Codes (SNOMED CT)",
+      "description" : "Procedure Code: All SNOMED CT procedure codes.",
+      "systems" : ["http://snomed.info/sct"],
+      "oids" : ["2.16.840.1.113883.4.642.3.427"],
+      "sources" : ["2.16.840.1.113883.4.642.3.427"],
+      "uses" : {
+      },
+      "StructureDefinition-general-referral-request.html" : "General Referral Request",
+      "StructureDefinition-generic-service-request.html" : "Generic Service Request"
+    }
+  ]
+}

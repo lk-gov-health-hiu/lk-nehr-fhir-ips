@@ -1,0 +1,381 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE HTML>
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
+    <title>Conditions - LK NEHR Sri Lanka Patient Summary (IPS based) Implementation Guide v0.1.0</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="author" content="http://hl7.org/fhir"/>
+
+    <link href="fhir.css" rel="stylesheet"/>
+
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap-fhir.css" rel="stylesheet"/>
+
+    <!-- Project extras -->
+    <link href="assets/css/project.css" rel="stylesheet"/>
+    <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
+    <link href="assets/css/jquery-ui.css" rel="stylesheet"/>
+  	<link href="assets/css/prism.css" rel="stylesheet" />
+    <!-- Placeholder for child template CSS declarations -->
+<link href="assets/css/openhie.css" rel="stylesheet"/>
+<link href="assets/css/lforms.min.css" rel="stylesheet"/>
+
+
+    <script type="text/javascript" src="fhir-table-scripts.js"> </script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="assets/js/html5shiv.js"></script>
+    <script src="assets/js/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Favicons -->
+    <link rel="fhir-logo" sizes="144x144" href="assets/ico/icon-fhir-144.png"/>
+    <link rel="fhir-logo" sizes="114x114" href="assets/ico/icon-fhir-114.png"/>
+    <link rel="fhir-logo" sizes="72x72" href="assets/ico/icon-fhir-72.png"/>
+    <link rel="fhir-logo" href="assets/ico/icon-fhir-57.png"/>
+    <link rel="shortcut icon" href="assets/ico/favicon.png"/>
+  </head>
+  <body onload="document.body.style.opacity='1'">
+
+	  <script src="assets/js/prism.js"></script>
+
+    <style type="text/css">h2{--heading-prefix:"4.46"}
+    h3,h4,h5,h6{--heading-prefix:"4.46"}</style>
+    <div id="segment-header" class="segment">  <!-- segment-header -->
+      <div class="container">  <!-- container -->
+        <!-- Placeholder for child template header declarations -->
+
+<!-- Left logo - typically the publisher's logo - project or affiliate -->
+        <div id="project-nav">
+          <a id="project-logo" no-external="true" href="https://ohie.org/">
+            <img height="71" alt="Project home" src="assets/images/home.png"/>
+          </a>
+        </div>
+
+<!-- Right logo - for example the FHIR logo -->
+<!-- Make sure you have authorization to use the FHIR logo -->
+        <div id="family-nav">
+          <a id="family-logo" no-external="true" href="http://hl7.org/fhir"><img height="70" alt="FHIR website" src="assets/images/fire.png"/> </a>
+        </div>
+
+<!-- search icon - if you want -->
+<!--
+        <div id="hl7-search">
+          <a id="hl7-search-lnk" no-external="true" href="http://hl7.org/fhir/search.cfm"><img alt="Search FHIR" src="assets/images/search.png"/></a>
+        </div>
+-->
+
+
+        <div id="ig-status">
+          <p><span style="font-size:12pt;font-weight:bold">LK NEHR Sri Lanka Patient Summary (IPS based) Implementation Guide</span>
+            <br/>
+            <span style="display:inline-block;">0.1.0 - STU1
+
+
+
+  <img alt="International flag" src="assets/images/001.svg" height="16" title="International"/>
+
+
+            </span>
+          </p>
+        </div>
+      </div> <!-- /container -->
+    </div>  <!-- /segment-header -->
+
+    <div id="segment-navbar" class="segment">  <!-- segment-navbar -->
+      <div id="stripe"> </div>
+      <div class="container">  <!-- container -->
+        <!-- HEADER CONTENT -->
+
+        <nav class="navbar navbar-inverse">
+          <!--status-bar-->
+          <div class="container">
+            <button data-target=".navbar-inverse-collapse" class="navbar-toggle" data-toggle="collapse" type="button">
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+            </button>
+            <a class="navbar-brand hidden" href="http://hl7.org/fhir/R4/index.html">FHIR</a>
+            <div class="nav-collapse collapse navbar-inverse-collapse">
+              <ul
+	xmlns="http://www.w3.org/1999/xhtml" class="nav navbar-nav">
+	<li>
+		<a href="index.html">IG Home</a>
+	</li>
+	<li>
+		<a href="toc.html">Table of Contents</a>
+	</li>
+<!--
+	<li class="dropdown">
+		<a data-toggle="dropdown" href="#" class="dropdown-toggle">Background<b class="caret"></b>
+		</a>
+
+	</li>
+	<li class="dropdown">
+		<a data-toggle="dropdown" href="#" class="dropdown-toggle">Functional Description<b class="caret"></b>
+		</a>
+
+	</li>
+-->
+	<li class="dropdown">
+		<a data-toggle="dropdown" href="#" class="dropdown-toggle">FHIR Artifacts<b class="caret"></b>
+		</a>
+		<ul class="dropdown-menu">
+			<li>
+				<a href="library.html">Library</a>
+			</li>
+		</ul>
+	</li>
+</ul>      
+            </div>  <!-- /.nav-collapse -->
+          </div>  <!-- /.container -->
+        </nav>  <!-- /.navbar -->
+      <!-- /HEADER CONTENT -->
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-navbar -->
+    <!--status-bar-->
+
+    <div id="segment-breadcrumb" class="segment">  <!-- segment-breadcrumb -->
+      <div class="container">  <!-- container -->
+        <ul class="breadcrumb">
+          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='artifacts.html'><b>Artifacts Summary</b></a></li><li><b>Conditions</b></li>
+
+        </ul>
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-breadcrumb -->
+
+    <a name="top"> </a>
+    <div id="segment-content" class="segment">  <!-- segment-content -->
+      <div class="container">  <!-- container -->
+        <div class="row">
+          <div class="inner-wrapper">
+
+<div class="col-12">
+  <!--ReleaseHeader--><p id="publish-box">LK NEHR Sri Lanka Patient Summary (IPS based) Implementation Guide, published by Ministry of Health, Sri Lanka. This guide is not an authorized publication; it is the continuous build for version 0.1.0 built by the FHIR (HL7® FHIR® Standard) CI Build. This version is based on the current content of <a href="https://github.com/lk-gov-health-hiu/lk-nehr-fhir-ips">https://github.com/lk-gov-health-hiu/lk-nehr-fhir-ips</a> and changes regularly. See the <a href="http://fhir.health.gov.lk/ips/history.html">Directory of published versions</a></p><!--EndReleaseHeader-->
+  
+
+
+
+
+
+
+
+
+<ul class="nav nav-tabs">
+
+  <li class="active">
+    <a href="#">Narrative Content</a>
+  </li>
+
+
+
+  
+    <li>
+      <a href="ValueSet-vs-medical-conditions.xml.html">XML</a>
+    </li>
+  
+
+
+  
+    <li>
+      <a href="ValueSet-vs-medical-conditions.json.html">JSON</a>
+    </li>
+  
+
+
+  
+    <li>
+      <a href="ValueSet-vs-medical-conditions.ttl.html">TTL</a>
+    </li>
+  
+
+
+
+</ul>
+
+  <a name="root"> </a>
+  <h2 id="root">ValueSet: Conditions
+
+  </h2>
+  <table class="colsi">
+
+    <tr>
+      <td colspan="4"><i>Official URL</i>: <span class="copy-text">http://fhir.health.gov.lk/ips/ValueSet/vs-medical-conditions<button title="Click to copy URL" class="btn-copy" data-clipboard-text="http://fhir.health.gov.lk/ips/ValueSet/vs-medical-conditions"/></span>
+      </td>
+      <td><i>Version</i>:
+      <span class="copy-text">0.1.0<button title="Click to copy versioned URL" class="btn-copy" data-clipboard-text="http://fhir.health.gov.lk/ips/ValueSet/vs-medical-conditions|0.1.0"/></span>
+      </td>
+    </tr>
+
+    <tr>
+
+
+
+
+
+
+
+      <td colspan="4">
+        
+          Active
+          
+            as of 2024-03-25
+          
+        
+      </td>
+
+
+
+      <td><i>Computable Name</i>: <span style="font-family: monospace;">VSMedicalConditions</span></td>
+    </tr>
+
+
+
+
+  </table>
+
+<p>
+<p>Represents previous, pre-existing and new conditions.</p>
+
+</p>
+
+
+  <p>
+    <b>References</b>
+  </p>
+  
+<ul>
+ <li><a href="StructureDefinition-medical-history.html">Medical History</a></li>
+</ul>
+
+
+  <!-- insert intro if present -->
+  
+
+
+
+  <a name="definition"> </a>
+
+<!-- Content Logical Definition heading in the fragment -->
+  <h3>Logical Definition (CLD)</h3>
+<div xmlns="http://www.w3.org/1999/xhtml"><p>This value set includes codes based on the following rules:</p><ul><li>Include these codes as defined in <a href="http://www.snomed.org/"><code>http://snomed.info/sct</code></a><table class="none"><tr><td style="white-space:nowrap"><b>Code</b></td><td><b>Display</b></td></tr><tr><td><a href="http://snomed.info/id/38341003">38341003</a></td><td>Hypertension</td></tr><tr><td><a href="http://snomed.info/id/195967001">195967001</a></td><td>Asthma</td></tr><tr><td><a href="http://snomed.info/id/230690007">230690007</a></td><td>Cerebrovascular accident</td></tr></table></li><li>Include codes from <a href="http://www.snomed.org/"><code>http://snomed.info/sct</code></a> where concept  descends from  73211009 (Diabetes mellitus)</li></ul></div>
+
+  <p>&#160;</p>
+  <a name="expansion"> </a>
+  <h3 id="expansion">Expansion</h3>
+
+  <div xmlns="http://www.w3.org/1999/xhtml"><p style="border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px">Expansion based on SNOMED CT International edition 01-Feb 2024</p><p>This value set expansion contains 135 concepts.</p><table class="codes"><tr><td style="white-space:nowrap"><b>Code</b></td><td><b>System</b></td><td><b>Display</b></td></tr><tr><td style="white-space:nowrap"><a name="http---snomed.info-sct-38341003"> </a>  <a href="http://snomed.info/id/38341003">38341003</a></td><td>http://snomed.info/sct</td><td>Hypertension</td></tr><tr><td style="white-space:nowrap"><a name="http---snomed.info-sct-195967001"> </a>  <a href="http://snomed.info/id/195967001">195967001</a></td><td>http://snomed.info/sct</td><td>Airway hyperreactivity</td></tr><tr><td style="white-space:nowrap"><a name="http---snomed.info-sct-230690007"> </a>  <a href="http://snomed.info/id/230690007">230690007</a></td><td>http://snomed.info/sct</td><td>CVA - Cerebrovascular accident</td></tr><tr><td style="white-space:nowrap"><a name="http---snomed.info-sct-2751001"> </a>  <a href="http://snomed.info/id/2751001">2751001</a></td><td>http://snomed.info/sct</td><td>Fibrocalculous pancreatic diabetes</td></tr><tr><td style="white-space:nowrap"><a name="http---snomed.info-sct-4783006"> </a>  <a href="http://snomed.info/id/4783006">4783006</a></td><td>http://snomed.info/sct</td><td>Maternal diabetes mellitus with hypoglycemia affecting fetus OR newborn</td></tr><tr><td style="white-space:nowrap"><a name="http---snomed.info-sct-5368009"> </a>  <a href="http://snomed.info/id/5368009">5368009</a></td><td>http://snomed.info/sct</td><td>Drug-induced diabetes mellitus</td></tr><tr><td style="white-space:nowrap"><a name="http---snomed.info-sct-5969009"> </a>  <a href="http://snomed.info/id/5969009">5969009</a></td><td>http://snomed.info/sct</td><td>Diabetes mellitus associated with genetic syndrome</td></tr><tr><td style="white-space:nowrap"><a name="http---snomed.info-sct-8801005"> </a>  <a href="http://snomed.info/id/8801005">8801005</a></td><td>http://snomed.info/sct</td><td>Secondary diabetes mellitus</td></tr><tr><td style="white-space:nowrap"><a name="http---snomed.info-sct-11530004"> </a>  <a href="http://snomed.info/id/11530004">11530004</a></td><td>http://snomed.info/sct</td><td>Brittle diabetes</td></tr><tr><td style="white-space:nowrap"><a name="http---snomed.info-sct-11687002"> </a>  <a href="http://snomed.info/id/11687002">11687002</a></td><td>http://snomed.info/sct</td><td>Gestational diabetes mellitus</td></tr><tr><td style="white-space:nowrap"><a name="http---snomed.info-sct-23045005"> </a>  <a href="http://snomed.info/id/23045005">23045005</a></td><td>http://snomed.info/sct</td><td>Insulin dependent diabetes mellitus type IA</td></tr><tr><td style="white-space:nowrap"><a name="http---snomed.info-sct-24203005"> </a>  <a href="http://snomed.info/id/24203005">24203005</a></td><td>http://snomed.info/sct</td><td>Extreme insulin resistance with acanthosis nigricans, hirsutism AND abnormal insulin receptors</td></tr><tr><td style="white-space:nowrap"><a name="http---snomed.info-sct-28032008"> </a>  <a href="http://snomed.info/id/28032008">28032008</a></td><td>http://snomed.info/sct</td><td>Insulin dependent diabetes mellitus type IB</td></tr><tr><td style="white-space:nowrap"><a name="http---snomed.info-sct-33559001"> </a>  <a href="http://snomed.info/id/33559001">33559001</a></td><td>http://snomed.info/sct</td><td>Pineal hyperplasia AND diabetes mellitus syndrome</td></tr><tr><td style="white-space:nowrap"><a name="http---snomed.info-sct-42954008"> </a>  <a href="http://snomed.info/id/42954008">42954008</a></td><td>http://snomed.info/sct</td><td>Diabetes mellitus associated with receptor abnormality</td></tr><tr><td style="white-space:nowrap"><a name="http---snomed.info-sct-44054006"> </a>  <a href="http://snomed.info/id/44054006">44054006</a></td><td>http://snomed.info/sct</td><td>Diabetes mellitus type II</td></tr><tr><td style="white-space:nowrap"><a name="http---snomed.info-sct-46635009"> </a>  <a href="http://snomed.info/id/46635009">46635009</a></td><td>http://snomed.info/sct</td><td>Diabetes mellitus type I</td></tr><tr><td style="white-space:nowrap"><a name="http---snomed.info-sct-46894009"> </a>  <a href="http://snomed.info/id/46894009">46894009</a></td><td>http://snomed.info/sct</td><td>Gestational diabetes mellitus class A2 (disorder)</td></tr><tr><td style="white-space:nowrap"><a name="http---snomed.info-sct-49817004"> </a>  <a href="http://snomed.info/id/49817004">49817004</a></td><td>http://snomed.info/sct</td><td>Neonatal diabetes mellitus</td></tr><tr><td style="white-space:nowrap"><a name="http---snomed.info-sct-51002006"> </a>  <a href="http://snomed.info/id/51002006">51002006</a></td><td>http://snomed.info/sct</td><td>Diabetes mellitus associated with pancreatic disease</td></tr><tr><td style="white-space:nowrap"><a name="http---snomed.info-sct-57886004"> </a>  <a href="http://snomed.info/id/57886004">57886004</a></td><td>http://snomed.info/sct</td><td>Protein-deficient diabetes mellitus</td></tr><tr><td style="white-space:nowrap"><a name="http---snomed.info-sct-59079001"> </a>  <a href="http://snomed.info/id/59079001">59079001</a></td><td>http://snomed.info/sct</td><td>Diabetes mellitus associated with hormonal etiology</td></tr><tr><td style="white-space:nowrap"><a name="http---snomed.info-sct-70694009"> </a>  <a href="http://snomed.info/id/70694009">70694009</a></td><td>http://snomed.info/sct</td><td>Marquardt-Loriaux syndrome</td></tr><tr><td style="white-space:nowrap"><a name="http---snomed.info-sct-75022004"> </a>  <a href="http://snomed.info/id/75022004">75022004</a></td><td>http://snomed.info/sct</td><td>Gestational diabetes mellitus class A1 (disorder)</td></tr><tr><td style="white-space:nowrap"><a name="http---snomed.info-sct-75524006"> </a>  <a href="http://snomed.info/id/75524006">75524006</a></td><td>http://snomed.info/sct</td><td>Malnutrition related diabetes mellitus</td></tr><tr><td style="white-space:nowrap"><a name="http---snomed.info-sct-75682002"> </a>  <a href="http://snomed.info/id/75682002">75682002</a></td><td>http://snomed.info/sct</td><td>Diabetes mellitus caused by insulin receptor antibodies (disorder)</td></tr><tr><td style="white-space:nowrap"><a name="http---snomed.info-sct-76751001"> </a>  <a href="http://snomed.info/id/76751001">76751001</a></td><td>http://snomed.info/sct</td><td>Diabetes mellitus in mother complicating pregnancy, childbirth AND/OR puerperium</td></tr><tr><td style="white-space:nowrap"><a name="http---snomed.info-sct-81531005"> </a>  <a href="http://snomed.info/id/81531005">81531005</a></td><td>http://snomed.info/sct</td><td>Diabetes mellitus type 2 in obese</td></tr><tr><td style="white-space:nowrap"><a name="http---snomed.info-sct-91352004"> </a>  <a href="http://snomed.info/id/91352004">91352004</a></td><td>http://snomed.info/sct</td><td>Insulinopathy</td></tr><tr><td style="white-space:nowrap"><a name="http---snomed.info-sct-111307005"> </a>  <a href="http://snomed.info/id/111307005">111307005</a></td><td>http://snomed.info/sct</td><td>Leprechaunism syndrome</td></tr><tr><td style="white-space:nowrap"><a name="http---snomed.info-sct-111552007"> </a>  <a href="http://snomed.info/id/111552007">111552007</a></td><td>http://snomed.info/sct</td><td>Diabetes mellitus without complication</td></tr><tr><td style="white-space:nowrap"><a name="http---snomed.info-sct-123763000"> </a>  <a href="http://snomed.info/id/123763000">123763000</a></td><td>http://snomed.info/sct</td><td>Houssay's syndrome</td></tr><tr><td style="white-space:nowrap"><a name="http---snomed.info-sct-127012008"> </a>  <a href="http://snomed.info/id/127012008">127012008</a></td><td>http://snomed.info/sct</td><td>Lipoatrophic diabetes</td></tr><tr><td style="white-space:nowrap"><a name="http---snomed.info-sct-190368000"> </a>  <a href="http://snomed.info/id/190368000">190368000</a></td><td>http://snomed.info/sct</td><td>Type I diabetes mellitus with ulcer</td></tr><tr><td style="white-space:nowrap"><a name="http---snomed.info-sct-190372001"> </a>  <a href="http://snomed.info/id/190372001">190372001</a></td><td>http://snomed.info/sct</td><td>Type I diabetes mellitus maturity onset</td></tr><tr><td style="white-space:nowrap"><a name="http---snomed.info-sct-190389009"> </a>  <a href="http://snomed.info/id/190389009">190389009</a></td><td>http://snomed.info/sct</td><td>Type 2 diabetes mellitus with ulcer</td></tr><tr><td style="white-space:nowrap"><a name="http---snomed.info-sct-190407009"> </a>  <a href="http://snomed.info/id/190407009">190407009</a></td><td>http://snomed.info/sct</td><td>Malnutrition-related diabetes mellitus with renal complications</td></tr><tr><td style="white-space:nowrap"><a name="http---snomed.info-sct-190410002"> </a>  <a href="http://snomed.info/id/190410002">190410002</a></td><td>http://snomed.info/sct</td><td>Malnutrition-related diabetes mellitus with peripheral circulatory complications</td></tr><tr><td style="white-space:nowrap"><a name="http---snomed.info-sct-190412005"> </a>  <a href="http://snomed.info/id/190412005">190412005</a></td><td>http://snomed.info/sct</td><td>Malnutrition-related diabetes mellitus without complications</td></tr><tr><td style="white-space:nowrap"><a name="http---snomed.info-sct-190416008"> </a>  <a href="http://snomed.info/id/190416008">190416008</a></td><td>http://snomed.info/sct</td><td>Steroid-induced diabetes mellitus without complication</td></tr><tr><td style="white-space:nowrap"><a name="http---snomed.info-sct-190447002"> </a>  <a href="http://snomed.info/id/190447002">190447002</a></td><td>http://snomed.info/sct</td><td>Steroid-induced diabetes</td></tr><tr><td style="white-space:nowrap"><a name="http---snomed.info-sct-199223000"> </a>  <a href="http://snomed.info/id/199223000">199223000</a></td><td>http://snomed.info/sct</td><td>Diabetes mellitus during pregnancy, childbirth and the puerperium</td></tr><tr><td style="white-space:nowrap"><a name="http---snomed.info-sct-199229001"> </a>  <a href="http://snomed.info/id/199229001">199229001</a></td><td>http://snomed.info/sct</td><td>Pre-existing type 1 diabetes mellitus (disorder)</td></tr><tr><td style="white-space:nowrap"><a name="http---snomed.info-sct-199230006"> </a>  <a href="http://snomed.info/id/199230006">199230006</a></td><td>http://snomed.info/sct</td><td>Pre-existing type 2 diabetes mellitus</td></tr><tr><td style="white-space:nowrap"><a name="http---snomed.info-sct-199231005"> </a>  <a href="http://snomed.info/id/199231005">199231005</a></td><td>http://snomed.info/sct</td><td>Pre-existing malnutrition-related diabetes mellitus</td></tr><tr><td style="white-space:nowrap"><a name="http---snomed.info-sct-237599002"> </a>  <a href="http://snomed.info/id/237599002">237599002</a></td><td>http://snomed.info/sct</td><td>Insulin treated Type II diabetes mellitus</td></tr><tr><td style="white-space:nowrap"><a name="http---snomed.info-sct-237600004"> </a>  <a href="http://snomed.info/id/237600004">237600004</a></td><td>http://snomed.info/sct</td><td>Malnutrition-related diabetes mellitus - fibrocalculous</td></tr><tr><td style="white-space:nowrap"><a name="http---snomed.info-sct-237601000"> </a>  <a href="http://snomed.info/id/237601000">237601000</a></td><td>http://snomed.info/sct</td><td>Secondary endocrine diabetes mellitus</td></tr><tr><td style="white-space:nowrap"><a name="http---snomed.info-sct-237603002"> </a>  <a href="http://snomed.info/id/237603002">237603002</a></td><td>http://snomed.info/sct</td><td>Transitory neonatal diabetes mellitus</td></tr><tr><td style="white-space:nowrap"><a name="http---snomed.info-sct-237604008"> </a>  <a href="http://snomed.info/id/237604008">237604008</a></td><td>http://snomed.info/sct</td><td>Diabetes mellitus autosomal dominant type II</td></tr><tr><td style="white-space:nowrap"><a name="http---snomed.info-sct-237611007"> </a>  <a href="http://snomed.info/id/237611007">237611007</a></td><td>http://snomed.info/sct</td><td>Muscular atrophy, ataxia, retinitis pigmentosa, and diabetes mellitus</td></tr><tr><td style="white-space:nowrap"><a name="http---snomed.info-sct-237612000"> </a>  <a href="http://snomed.info/id/237612000">237612000</a></td><td>http://snomed.info/sct</td><td>Photomyoclonus, diabetes mellitus, deafness, nephropathy and cerebral dysfunction</td></tr><tr><td style="white-space:nowrap"><a name="http---snomed.info-sct-237617006"> </a>  <a href="http://snomed.info/id/237617006">237617006</a></td><td>http://snomed.info/sct</td><td>Megaloblastic anemia, thiamine-responsive, with diabetes mellitus and sensorineural deafness</td></tr><tr><td style="white-space:nowrap"><a name="http---snomed.info-sct-237619009"> </a>  <a href="http://snomed.info/id/237619009">237619009</a></td><td>http://snomed.info/sct</td><td>Ballinger-Wallace syndrome</td></tr><tr><td style="white-space:nowrap"><a name="http---snomed.info-sct-237627000"> </a>  <a href="http://snomed.info/id/237627000">237627000</a></td><td>http://snomed.info/sct</td><td>Pregnancy and type 2 diabetes mellitus</td></tr><tr><td style="white-space:nowrap"><a name="http---snomed.info-sct-237651005"> </a>  <a href="http://snomed.info/id/237651005">237651005</a></td><td>http://snomed.info/sct</td><td>Insulin resistance - type A</td></tr><tr><td style="white-space:nowrap"><a name="http---snomed.info-sct-237652003"> </a>  <a href="http://snomed.info/id/237652003">237652003</a></td><td>http://snomed.info/sct</td><td>Insulin resistance - type B</td></tr><tr><td style="white-space:nowrap"><a name="http---snomed.info-sct-276560009"> </a>  <a href="http://snomed.info/id/276560009">276560009</a></td><td>http://snomed.info/sct</td><td>Diabetes mellitus in neonate small for gestational age</td></tr><tr><td style="white-space:nowrap"><a name="http---snomed.info-sct-290002008"> </a>  <a href="http://snomed.info/id/290002008">290002008</a></td><td>http://snomed.info/sct</td><td>Unstable type I diabetes mellitus</td></tr><tr><td style="white-space:nowrap"><a name="http---snomed.info-sct-313435000"> </a>  <a href="http://snomed.info/id/313435000">313435000</a></td><td>http://snomed.info/sct</td><td>Type I diabetes mellitus without complication</td></tr><tr><td style="white-space:nowrap"><a name="http---snomed.info-sct-313436004"> </a>  <a href="http://snomed.info/id/313436004">313436004</a></td><td>http://snomed.info/sct</td><td>Type 2 diabetes mellitus without complication</td></tr><tr><td style="white-space:nowrap"><a name="http---snomed.info-sct-359642000"> </a>  <a href="http://snomed.info/id/359642000">359642000</a></td><td>http://snomed.info/sct</td><td>Diabetes mellitus type 2 in nonobese</td></tr><tr><td style="white-space:nowrap"><a name="http---snomed.info-sct-405749004"> </a>  <a href="http://snomed.info/id/405749004">405749004</a></td><td>http://snomed.info/sct</td><td>Newly diagnosed diabetes</td></tr><tr><td style="white-space:nowrap"><a name="http---snomed.info-sct-408540003"> </a>  <a href="http://snomed.info/id/408540003">408540003</a></td><td>http://snomed.info/sct</td><td>Diabetes mellitus induced by non-steroid drugs</td></tr><tr><td style="white-space:nowrap"><a name="http---snomed.info-sct-413183008"> </a>  <a href="http://snomed.info/id/413183008">413183008</a></td><td>http://snomed.info/sct</td><td>Diabetes mellitus induced by non-steroid drugs without complication</td></tr><tr><td style="white-space:nowrap"><a name="http---snomed.info-sct-426705001"> </a>  <a href="http://snomed.info/id/426705001">426705001</a></td><td>http://snomed.info/sct</td><td>Diabetes mellitus associated with cystic fibrosis</td></tr><tr><td style="white-space:nowrap"><a name="http---snomed.info-sct-426875007"> </a>  <a href="http://snomed.info/id/426875007">426875007</a></td><td>http://snomed.info/sct</td><td>Latent autoimmune diabetes mellitus in adult (disorder)</td></tr><tr><td style="white-space:nowrap"><a name="http---snomed.info-sct-427089005"> </a>  <a href="http://snomed.info/id/427089005">427089005</a></td><td>http://snomed.info/sct</td><td>Diabetes mellitus due to cystic fibrosis (disorder)</td></tr><tr><td style="white-space:nowrap"><a name="http---snomed.info-sct-443694000"> </a>  <a href="http://snomed.info/id/443694000">443694000</a></td><td>http://snomed.info/sct</td><td>Type II diabetes mellitus uncontrolled</td></tr><tr><td style="white-space:nowrap"><a name="http---snomed.info-sct-444073006"> </a>  <a href="http://snomed.info/id/444073006">444073006</a></td><td>http://snomed.info/sct</td><td>Type I diabetes mellitus uncontrolled</td></tr><tr><td style="white-space:nowrap"><a name="http---snomed.info-sct-444074000"> </a>  <a href="http://snomed.info/id/444074000">444074000</a></td><td>http://snomed.info/sct</td><td>Type I diabetes mellitus well controlled</td></tr><tr><td style="white-space:nowrap"><a name="http---snomed.info-sct-444110003"> </a>  <a href="http://snomed.info/id/444110003">444110003</a></td><td>http://snomed.info/sct</td><td>Type II diabetes mellitus well controlled</td></tr><tr><td style="white-space:nowrap"><a name="http---snomed.info-sct-445260006"> </a>  <a href="http://snomed.info/id/445260006">445260006</a></td><td>http://snomed.info/sct</td><td>Posttransplant diabetes mellitus (disorder)</td></tr><tr><td style="white-space:nowrap"><a name="http---snomed.info-sct-445353002"> </a>  <a href="http://snomed.info/id/445353002">445353002</a></td><td>http://snomed.info/sct</td><td>Brittle type II diabetes mellitus</td></tr><tr><td style="white-space:nowrap"><a name="http---snomed.info-sct-472699005"> </a>  <a href="http://snomed.info/id/472699005">472699005</a></td><td>http://snomed.info/sct</td><td>Gestational diabetes mellitus uncontrolled</td></tr><tr><td style="white-space:nowrap"><a name="http---snomed.info-sct-609561005"> </a>  <a href="http://snomed.info/id/609561005">609561005</a></td><td>http://snomed.info/sct</td><td>Maturity-onset diabetes of the young (disorder)</td></tr><tr><td style="white-space:nowrap"><a name="http---snomed.info-sct-609562003"> </a>  <a href="http://snomed.info/id/609562003">609562003</a></td><td>http://snomed.info/sct</td><td>Maturity onset diabetes of the young, type 1 (disorder)</td></tr><tr><td style="white-space:nowrap"><a name="http---snomed.info-sct-609563008"> </a>  <a href="http://snomed.info/id/609563008">609563008</a></td><td>http://snomed.info/sct</td><td>Pre-existing diabetes mellitus in pregnancy (disorder)</td></tr><tr><td style="white-space:nowrap"><a name="http---snomed.info-sct-609564002"> </a>  <a href="http://snomed.info/id/609564002">609564002</a></td><td>http://snomed.info/sct</td><td>Pre-existing type 1 diabetes mellitus in pregnancy</td></tr><tr><td style="white-space:nowrap"><a name="http---snomed.info-sct-609565001"> </a>  <a href="http://snomed.info/id/609565001">609565001</a></td><td>http://snomed.info/sct</td><td>Permanent neonatal diabetes mellitus (disorder)</td></tr><tr><td style="white-space:nowrap"><a name="http---snomed.info-sct-609566000"> </a>  <a href="http://snomed.info/id/609566000">609566000</a></td><td>http://snomed.info/sct</td><td>Pregnancy and type 1 diabetes mellitus</td></tr><tr><td style="white-space:nowrap"><a name="http---snomed.info-sct-609567009"> </a>  <a href="http://snomed.info/id/609567009">609567009</a></td><td>http://snomed.info/sct</td><td>Pre-existing type 2 diabetes mellitus in pregnancy</td></tr><tr><td style="white-space:nowrap"><a name="http---snomed.info-sct-609568004"> </a>  <a href="http://snomed.info/id/609568004">609568004</a></td><td>http://snomed.info/sct</td><td>Diabetes mellitus due to genetic defect in beta cell function</td></tr><tr><td style="white-space:nowrap"><a name="http---snomed.info-sct-609569007"> </a>  <a href="http://snomed.info/id/609569007">609569007</a></td><td>http://snomed.info/sct</td><td>Diabetes mellitus due to genetic defect in insulin action</td></tr><tr><td style="white-space:nowrap"><a name="http---snomed.info-sct-609570008"> </a>  <a href="http://snomed.info/id/609570008">609570008</a></td><td>http://snomed.info/sct</td><td>Maturity-onset diabetes of the young, type 3 (disorder)</td></tr><tr><td style="white-space:nowrap"><a name="http---snomed.info-sct-609571007"> </a>  <a href="http://snomed.info/id/609571007">609571007</a></td><td>http://snomed.info/sct</td><td>Maturity-onset diabetes of the young, type 4</td></tr><tr><td style="white-space:nowrap"><a name="http---snomed.info-sct-609572000"> </a>  <a href="http://snomed.info/id/609572000">609572000</a></td><td>http://snomed.info/sct</td><td>Maturity-onset diabetes of the young, type 5 (disorder)</td></tr><tr><td style="white-space:nowrap"><a name="http---snomed.info-sct-609573005"> </a>  <a href="http://snomed.info/id/609573005">609573005</a></td><td>http://snomed.info/sct</td><td>Maturity-onset diabetes of the young, type 6 (disorder)</td></tr><tr><td style="white-space:nowrap"><a name="http---snomed.info-sct-609574004"> </a>  <a href="http://snomed.info/id/609574004">609574004</a></td><td>http://snomed.info/sct</td><td>Maturity-onset diabetes of the young, type 7</td></tr><tr><td style="white-space:nowrap"><a name="http---snomed.info-sct-609575003"> </a>  <a href="http://snomed.info/id/609575003">609575003</a></td><td>http://snomed.info/sct</td><td>Diabetes-pancreatic exocrine dysfunction syndrome</td></tr><tr><td style="white-space:nowrap"><a name="http---snomed.info-sct-609576002"> </a>  <a href="http://snomed.info/id/609576002">609576002</a></td><td>http://snomed.info/sct</td><td>Maturity-onset diabetes of the young, type 9</td></tr><tr><td style="white-space:nowrap"><a name="http---snomed.info-sct-609577006"> </a>  <a href="http://snomed.info/id/609577006">609577006</a></td><td>http://snomed.info/sct</td><td>Maturity-onset diabetes of the young, type 10 (disorder)</td></tr><tr><td style="white-space:nowrap"><a name="http---snomed.info-sct-609578001"> </a>  <a href="http://snomed.info/id/609578001">609578001</a></td><td>http://snomed.info/sct</td><td>Maturity-onset diabetes of the young, type 11</td></tr><tr><td style="white-space:nowrap"><a name="http---snomed.info-sct-609579009"> </a>  <a href="http://snomed.info/id/609579009">609579009</a></td><td>http://snomed.info/sct</td><td>Diabetes mellitus, transient neonatal 1</td></tr><tr><td style="white-space:nowrap"><a name="http---snomed.info-sct-609580007"> </a>  <a href="http://snomed.info/id/609580007">609580007</a></td><td>http://snomed.info/sct</td><td>Diabetes mellitus, transient neonatal 2 (disorder)</td></tr><tr><td style="white-space:nowrap"><a name="http---snomed.info-sct-609581006"> </a>  <a href="http://snomed.info/id/609581006">609581006</a></td><td>http://snomed.info/sct</td><td>Diabetes mellitus, transient neonatal 3 (disorder)</td></tr><tr><td style="white-space:nowrap"><a name="http---snomed.info-sct-703136005"> </a>  <a href="http://snomed.info/id/703136005">703136005</a></td><td>http://snomed.info/sct</td><td>Diabetes mellitus in remission (disorder)</td></tr><tr><td style="white-space:nowrap"><a name="http---snomed.info-sct-703137001"> </a>  <a href="http://snomed.info/id/703137001">703137001</a></td><td>http://snomed.info/sct</td><td>Type I diabetes mellitus in remission (disorder)</td></tr><tr><td style="white-space:nowrap"><a name="http---snomed.info-sct-703138006"> </a>  <a href="http://snomed.info/id/703138006">703138006</a></td><td>http://snomed.info/sct</td><td>Type II diabetes mellitus in remission (disorder)</td></tr><tr><td style="white-space:nowrap"><a name="http---snomed.info-sct-709147009"> </a>  <a href="http://snomed.info/id/709147009">709147009</a></td><td>http://snomed.info/sct</td><td>Gingivitis co-occurrent with diabetes mellitus</td></tr><tr><td style="white-space:nowrap"><a name="http---snomed.info-sct-716362006"> </a>  <a href="http://snomed.info/id/716362006">716362006</a></td><td>http://snomed.info/sct</td><td>Gingival disease co-occurrent with diabetes mellitus (disorder)</td></tr><tr><td style="white-space:nowrap"><a name="http---snomed.info-sct-720519003"> </a>  <a href="http://snomed.info/id/720519003">720519003</a></td><td>http://snomed.info/sct</td><td>Atherosclerosis, deafness, diabetes, epilepsy, nephropathy syndrome (disorder)</td></tr><tr><td style="white-space:nowrap"><a name="http---snomed.info-sct-721088003"> </a>  <a href="http://snomed.info/id/721088003">721088003</a></td><td>http://snomed.info/sct</td><td>Developmental delay, epilepsy, neonatal diabetes syndrome (disorder)</td></tr><tr><td style="white-space:nowrap"><a name="http---snomed.info-sct-722206009"> </a>  <a href="http://snomed.info/id/722206009">722206009</a></td><td>http://snomed.info/sct</td><td>Pancreatic hypoplasia, diabetes mellitus, congenital heart disease syndrome (disorder)</td></tr><tr><td style="white-space:nowrap"><a name="http---snomed.info-sct-722454003"> </a>  <a href="http://snomed.info/id/722454003">722454003</a></td><td>http://snomed.info/sct</td><td>Intellectual disability, craniofacial dysmorphism, hypogonadism, diabetes mellitus syndrome (disorder)</td></tr><tr><td style="white-space:nowrap"><a name="http---snomed.info-sct-724067006"> </a>  <a href="http://snomed.info/id/724067006">724067006</a></td><td>http://snomed.info/sct</td><td>Permanent neonatal diabetes mellitus with cerebellar agenesis syndrome (disorder)</td></tr><tr><td style="white-space:nowrap"><a name="http---snomed.info-sct-733072002"> </a>  <a href="http://snomed.info/id/733072002">733072002</a></td><td>http://snomed.info/sct</td><td>Stimmler syndrome</td></tr><tr><td style="white-space:nowrap"><a name="http---snomed.info-sct-734022008"> </a>  <a href="http://snomed.info/id/734022008">734022008</a></td><td>http://snomed.info/sct</td><td>Wolfram-like syndrome (disorder)</td></tr><tr><td style="white-space:nowrap"><a name="http---snomed.info-sct-737212004"> </a>  <a href="http://snomed.info/id/737212004">737212004</a></td><td>http://snomed.info/sct</td><td>Diabetes mellitus caused by chemical (disorder)</td></tr><tr><td style="white-space:nowrap"><a name="http---snomed.info-sct-782755007"> </a>  <a href="http://snomed.info/id/782755007">782755007</a></td><td>http://snomed.info/sct</td><td>Primary microcephaly, mild intellectual disability, young-onset diabetes syndrome (disorder)</td></tr><tr><td style="white-space:nowrap"><a name="http---snomed.info-sct-782825008"> </a>  <a href="http://snomed.info/id/782825008">782825008</a></td><td>http://snomed.info/sct</td><td>Primary microcephaly, epilepsy, permanent neonatal diabetes syndrome</td></tr><tr><td style="white-space:nowrap"><a name="http---snomed.info-sct-783722008"> </a>  <a href="http://snomed.info/id/783722008">783722008</a></td><td>http://snomed.info/sct</td><td>Myopathy and diabetes mellitus (disorder)</td></tr><tr><td style="white-space:nowrap"><a name="http---snomed.info-sct-816067005"> </a>  <a href="http://snomed.info/id/816067005">816067005</a></td><td>http://snomed.info/sct</td><td>Diabetes, hypogonadism, deafness, intellectual disability syndrome</td></tr><tr><td style="white-space:nowrap"><a name="http---snomed.info-sct-870528001"> </a>  <a href="http://snomed.info/id/870528001">870528001</a></td><td>http://snomed.info/sct</td><td>Newly diagnosed diabetes mellitus type 1</td></tr><tr><td style="white-space:nowrap"><a name="http---snomed.info-sct-890171006"> </a>  <a href="http://snomed.info/id/890171006">890171006</a></td><td>http://snomed.info/sct</td><td>Ketosis-prone diabetes mellitus</td></tr><tr><td style="white-space:nowrap"><a name="http---snomed.info-sct-1142044000"> </a>  <a href="http://snomed.info/id/1142044000">1142044000</a></td><td>http://snomed.info/sct</td><td>Pre-existing malnutrition-related diabetes mellitus in pregnancy</td></tr><tr><td style="white-space:nowrap"><a name="http---snomed.info-sct-1197592001"> </a>  <a href="http://snomed.info/id/1197592001">1197592001</a></td><td>http://snomed.info/sct</td><td>Intrauterine growth restriction, short stature, early adult-onset diabetes syndrome</td></tr><tr><td style="white-space:nowrap"><a name="http---snomed.info-sct-1217044000"> </a>  <a href="http://snomed.info/id/1217044000">1217044000</a></td><td>http://snomed.info/sct</td><td>Ketosis-resistant diabetes mellitus</td></tr><tr><td style="white-space:nowrap"><a name="http---snomed.info-sct-1217068008"> </a>  <a href="http://snomed.info/id/1217068008">1217068008</a></td><td>http://snomed.info/sct</td><td>Fulminant type 1 diabetes mellitus (disorder)</td></tr><tr><td style="white-space:nowrap"><a name="http---snomed.info-sct-1255271005"> </a>  <a href="http://snomed.info/id/1255271005">1255271005</a></td><td>http://snomed.info/sct</td><td>Juvenile-onset diabetes mellitus, central and peripheral neurodegeneration syndrome (disorder)</td></tr><tr><td style="white-space:nowrap"><a name="http---snomed.info-sct-1285518004"> </a>  <a href="http://snomed.info/id/1285518004">1285518004</a></td><td>http://snomed.info/sct</td><td>Wolfram syndrome type I</td></tr><tr><td style="white-space:nowrap"><a name="http---snomed.info-sct-1285519007"> </a>  <a href="http://snomed.info/id/1285519007">1285519007</a></td><td>http://snomed.info/sct</td><td>Wolfram syndrome type 2</td></tr><tr><td style="white-space:nowrap"><a name="http---snomed.info-sct-1290118005"> </a>  <a href="http://snomed.info/id/1290118005">1290118005</a></td><td>http://snomed.info/sct</td><td>Presymptomatic T1DM (type 1 diabetes mellitus)</td></tr><tr><td style="white-space:nowrap"><a name="http---snomed.info-sct-201000119106"> </a>  <a href="http://snomed.info/id/201000119106">201000119106</a></td><td>http://snomed.info/sct</td><td>Disorder due to well controlled type 2 diabetes mellitus (disorder)</td></tr><tr><td style="white-space:nowrap"><a name="http---snomed.info-sct-1481000119100"> </a>  <a href="http://snomed.info/id/1481000119100">1481000119100</a></td><td>http://snomed.info/sct</td><td>Diabetes mellitus type 2 without retinopathy</td></tr><tr><td style="white-space:nowrap"><a name="http---snomed.info-sct-31321000119102"> </a>  <a href="http://snomed.info/id/31321000119102">31321000119102</a></td><td>http://snomed.info/sct</td><td>Diabetes mellitus type 1 without retinopathy (disorder)</td></tr><tr><td style="white-space:nowrap"><a name="http---snomed.info-sct-40791000119105"> </a>  <a href="http://snomed.info/id/40791000119105">40791000119105</a></td><td>http://snomed.info/sct</td><td>Postpartum gestational diabetes mellitus (disorder)</td></tr><tr><td style="white-space:nowrap"><a name="http---snomed.info-sct-40801000119106"> </a>  <a href="http://snomed.info/id/40801000119106">40801000119106</a></td><td>http://snomed.info/sct</td><td>Gestational diabetes mellitus complicating pregnancy</td></tr><tr><td style="white-space:nowrap"><a name="http---snomed.info-sct-105401000119101"> </a>  <a href="http://snomed.info/id/105401000119101">105401000119101</a></td><td>http://snomed.info/sct</td><td>Diabetes mellitus due to pancreatic injury (disorder)</td></tr><tr><td style="white-space:nowrap"><a name="http---snomed.info-sct-106281000119103"> </a>  <a href="http://snomed.info/id/106281000119103">106281000119103</a></td><td>http://snomed.info/sct</td><td>Pre-existing diabetes mellitus in mother complicating childbirth (disorder)</td></tr><tr><td style="white-space:nowrap"><a name="http---snomed.info-sct-164971000119101"> </a>  <a href="http://snomed.info/id/164971000119101">164971000119101</a></td><td>http://snomed.info/sct</td><td>Type 2 diabetes mellitus controlled by diet</td></tr><tr><td style="white-space:nowrap"><a name="http---snomed.info-sct-368521000119107"> </a>  <a href="http://snomed.info/id/368521000119107">368521000119107</a></td><td>http://snomed.info/sct</td><td>Disorder of nerve co-occurrent and due to type 1 diabetes mellitus (disorder)</td></tr><tr><td style="white-space:nowrap"><a name="http---snomed.info-sct-10753491000119101"> </a>  <a href="http://snomed.info/id/10753491000119101">10753491000119101</a></td><td>http://snomed.info/sct</td><td>Gestational diabetes mellitus in childbirth (disorder)</td></tr><tr><td style="white-space:nowrap"><a name="http---snomed.info-sct-10754881000119104"> </a>  <a href="http://snomed.info/id/10754881000119104">10754881000119104</a></td><td>http://snomed.info/sct</td><td>Diabetes mellitus in mother complicating childbirth (disorder)</td></tr><tr><td style="white-space:nowrap"><a name="http---snomed.info-sct-530558861000132104"> </a>  <a href="http://snomed.info/id/530558861000132104">530558861000132104</a></td><td>http://snomed.info/sct</td><td>Atypical diabetes mellitus (disorder)</td></tr></table></div>
+
+  <hr/>
+  <p>
+    Explanation of the columns that may appear on this page:
+  </p>
+  <table class="grid">
+    <tr>
+      <td>Level</td>
+      <td>A few code lists that FHIR defines are hierarchical - each code is assigned a level.
+          In this scheme, some codes are under other codes, and imply that the code they are under also applies</td>
+    </tr>
+    <tr>
+      <td>System</td>
+      <td>The source of the definition of the code (when the value set draws in codes defined elsewhere)</td>
+    </tr>
+    <tr>
+      <td>Code</td>
+      <td>The code (used as the code in the resource instance)</td>
+    </tr>
+    <tr>
+      <td>Display</td>
+      <td>The display (used in the <i>display</i> element of a <a href="http://hl7.org/fhir/R4/datatypes.html#Coding">Coding</a>). If there is no display, implementers should not simply display the code, but map the concept into their application</td>
+    </tr>
+    <tr>
+      <td>Definition</td>
+      <td>An explanation of the meaning of the concept</td>
+    </tr>
+    <tr>
+      <td>Comments</td>
+      <td>Additional notes about how to use the code</td>
+    </tr>
+  </table>
+
+  
+
+  <!-- insert notes if present -->
+  
+
+
+
+  
+
+</div>
+        </div>  <!-- /inner-wrapper -->
+      </div>  <!-- /row -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-content -->
+
+  <script type="text/javascript" src="assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+  <script type="text/javascript" src="assets/js/jquery-ui.min.js"> </script>
+
+  <script type="text/javascript">
+    $(document).ready(function(){
+      if(window.location.hash != "") {
+          $('a[href="' + window.location.hash + '"]').click()
+      }
+    });
+  </script>
+  <a name="bottom"> </a>
+  <div id="segment-footer" igtool="footer" class="segment">  <!-- segment-footer -->
+    <div class="container">  <!-- container -->
+
+           
+      <div class="inner-wrapper">
+        <p>
+          IG &#169; 2021+ <a style="color: #81BEF7" href="https://www.health.gov.lk/">Ministry of Health, Sri Lanka</a>.  Package lk-nehr-fhir-ips#0.1.0 based on <a style="color: #81BEF7" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Mon, Mar 25, 2024 10:45+0000">2024-03-25</span>
+          <br/>
+          <span style="color: #FFFF77">
+                      Links: <a style="color: #81BEF7" href="toc.html">Table of Contents</a> |
+                 <a style="color: #81BEF7" href="qa.html">QA Report</a> |
+                 
+                 <a style="color: #81BEF7" target="_blank" href="http://fhir.health.gov.lk/ips/history.html">Version History</a> |
+                 <a style="color: #81BEF7" rel="license" href="http://hl7.org/fhir/R4/license.html"><img style="border-style: none;" alt="CC-BY" src="assets/images/cc-by.png" height="17"/></a> |
+                 <!--<a style="color: #81BEF7" href="todo.html">Search</a> | --> 
+
+
+          </span>
+        </p>
+      </div>  <!-- /inner-wrapper -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-footer -->
+  
+  <div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+    <div class="container">  <!-- container -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-post-footer -->
+  
+  <!-- JS and analytics only. -->
+  <!-- Bootstrap core JavaScript
+  ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script type="text/javascript" src="assets/js/bootstrap.min.js"> </script>
+  <script type="text/javascript" src="assets/js/respond.min.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard-btn.js"> </script>
+  <script>anchors.options.visible = 'hover'
+anchors.add()</script>
+  
+  <!-- feedback form - Google forms -->
+<!-- v0.1, 2021-01-09 -->
+
+
+
+<!-- / feedback form  -->
+
+  <!-- Analytics Below
+  ================================================== -->
+  </body>
+</html>
+

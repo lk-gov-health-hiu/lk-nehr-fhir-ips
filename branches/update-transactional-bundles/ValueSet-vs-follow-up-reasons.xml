@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ValueSet xmlns="http://hl7.org/fhir">
+  <id value="vs-follow-up-reasons"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p>This value set includes codes based on the following rules:</p><ul><li>Include codes from <a href="http://www.snomed.org/"><code>http://snomed.info/sct</code></a> where concept  descends from  183616001 (Follow-up arranged)</li><li>Include all codes defined in <a href="CodeSystem-cs-follow-up-reasons.html"><code>http://fhir.health.gov.lk/ips/CodeSystem/cs-follow-up-reasons</code></a></li></ul></div>
+  </text>
+  <url value="http://fhir.health.gov.lk/ips/ValueSet/vs-follow-up-reasons"/>
+  <version value="0.1.0"/>
+  <name value="VSFollowUpReasons"/>
+  <title value="Follow up at HLC"/>
+  <status value="active"/>
+  <experimental value="false"/>
+  <date value="2024-03-13T05:40:04+00:00"/>
+  <publisher value="Ministry of Health, Sri Lanka"/>
+  <contact>
+    <name value="Ministry of Health, Sri Lanka"/>
+    <telecom>
+      <system value="url"/>
+      <value value="https://www.health.gov.lk/"/>
+    </telecom>
+    <telecom>
+      <system value="email"/>
+      <value value="digitalhealth@health.gov.lk"/>
+    </telecom>
+  </contact>
+  <contact>
+    <name value="Director, Health Information"/>
+    <telecom>
+      <system value="email"/>
+      <value value="digitalhealth@health.gov.lk"/>
+      <use value="work"/>
+    </telecom>
+  </contact>
+  <description value="Follow up at Healthy Lifestyle Center"/>
+  <jurisdiction>
+    <coding>
+      <system value="http://unstats.un.org/unsd/methods/m49/m49.htm"/>
+      <code value="001"/>
+      <display value="World"/>
+    </coding>
+  </jurisdiction>
+  <compose>
+    <include>
+      <system value="http://snomed.info/sct"/>
+      <filter>
+        <property value="concept"/>
+        <op value="descendent-of"/>
+        <value value="183616001"/>
+      </filter>
+    </include>
+    <include>
+      <system value="http://fhir.health.gov.lk/ips/CodeSystem/cs-follow-up-reasons"/>
+    </include>
+  </compose>
+</ValueSet>

@@ -1,0 +1,68 @@
+{
+  "resourceType" : "ValueSet",
+  "id" : "vs-follow-up-plan",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>This value set includes codes based on the following rules:</p><ul><li>Include codes from <a href=\"http://www.snomed.org/\"><code>http://snomed.info/sct</code></a> where concept  descends from  183851006 (Referral to clinic)</li><li>Include these codes as defined in <a href=\"http://www.snomed.org/\"><code>http://snomed.info/sct</code></a><table class=\"none\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td></tr><tr><td><a href=\"http://snomed.info/id/772071006\">772071006</a></td><td>Referral to dentist</td></tr><tr><td><a href=\"http://snomed.info/id/410321003\">410321003</a></td><td>Wellness health education, guidance, and counseling</td></tr><tr><td><a href=\"http://snomed.info/id/306110004\">306110004</a></td><td>Referral to medical service</td></tr></table></li></ul></div>"
+  },
+  "url" : "http://fhir.health.gov.lk/ips/ValueSet/vs-follow-up-plan",
+  "version" : "0.1.0",
+  "name" : "VSFollowUpPlan",
+  "title" : "Follow-up plan",
+  "status" : "active",
+  "experimental" : false,
+  "date" : "2024-03-14T09:29:40+00:00",
+  "publisher" : "Ministry of Health, Sri Lanka",
+  "contact" : [{
+    "name" : "Ministry of Health, Sri Lanka",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://www.health.gov.lk/"
+    },
+    {
+      "system" : "email",
+      "value" : "digitalhealth@health.gov.lk"
+    }]
+  },
+  {
+    "name" : "Director, Health Information",
+    "telecom" : [{
+      "system" : "email",
+      "value" : "digitalhealth@health.gov.lk",
+      "use" : "work"
+    }]
+  }],
+  "description" : "Follow-up plan",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "http://unstats.un.org/unsd/methods/m49/m49.htm",
+      "code" : "001",
+      "display" : "World"
+    }]
+  }],
+  "compose" : {
+    "include" : [{
+      "system" : "http://snomed.info/sct",
+      "filter" : [{
+        "property" : "concept",
+        "op" : "descendent-of",
+        "value" : "183851006"
+      }]
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "concept" : [{
+        "code" : "772071006",
+        "display" : "Referral to dentist"
+      },
+      {
+        "code" : "410321003",
+        "display" : "Wellness health education, guidance, and counseling"
+      },
+      {
+        "code" : "306110004",
+        "display" : "Referral to medical service"
+      }]
+    }]
+  }
+}

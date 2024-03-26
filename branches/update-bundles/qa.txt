@@ -1,0 +1,260 @@
+SriLankaIPS : Validation Results
+=========================================
+
+err = 0, warn = 0, info = 19
+IG Publisher Version: 1.6.0
+Generated Sat Mar 02 08:17:44 UTC 2024. FHIR version 4.0.1 for lk-nehr-fhir-ips#0.1.0 (canonical = http://fhir.health.gov.lk/ips)
+ Build Errors : 0 / 0 / 0
+ /github/workspace/fsh-generated/resources/AllergyIntolerance-AllergiesExample : 0 / 0 / 1
+ /github/workspace/fsh-generated/resources/AllergyIntolerance-GenericAllergiesExample : 0 / 0 / 1
+ /github/workspace/fsh-generated/resources/AllergyIntolerance-NoAllergiesExample : 0 / 0 / 1
+ /github/workspace/fsh-generated/resources/Bundle-HHIMSIPSBundleExample : 0 / 0 / 70
+ /github/workspace/fsh-generated/resources/Bundle-HHIMSTransactionalBundleExample : 0 / 0 / 59
+ /github/workspace/fsh-generated/resources/Bundle-HIMSIPSBundleExample : 0 / 0 / 77
+ /github/workspace/fsh-generated/resources/Bundle-HIMSTransactionalBundleExample : 0 / 0 / 69
+ /github/workspace/fsh-generated/resources/CarePlan-FollowUpAtHLCExample : 0 / 0 / 1
+ /github/workspace/fsh-generated/resources/CodeSystem-cs-cvd-risk-category : 0 / 0 / 1
+ /github/workspace/fsh-generated/resources/CodeSystem-cs-follow-up-reasons : 0 / 0 / 1
+ /github/workspace/fsh-generated/resources/CodeSystem-cs-identifier-types : 0 / 0 / 1
+ /github/workspace/fsh-generated/resources/CodeSystem-cs-investigation : 0 / 0 / 1
+ /github/workspace/fsh-generated/resources/CodeSystem-cs-medication-name : 0 / 0 / 1
+ /github/workspace/fsh-generated/resources/CodeSystem-cs-procedure : 0 / 0 / 1
+ /github/workspace/fsh-generated/resources/CodeSystem-cs-procedure-imaging : 0 / 0 / 1
+ /github/workspace/fsh-generated/resources/CodeSystem-cs-reason-for-encounter : 0 / 0 / 1
+ /github/workspace/fsh-generated/resources/Communication-NotifiableDiseasesNotifiedExample : 0 / 0 / 1
+ /github/workspace/fsh-generated/resources/Composition-HHIMSCompositionExample : 0 / 0 / 1
+ /github/workspace/fsh-generated/resources/Composition-HIMSCompositionExample : 0 / 0 / 1
+ /github/workspace/fsh-generated/resources/Condition-HHIMSMedicalHistoryExample : 0 / 0 / 1
+ /github/workspace/fsh-generated/resources/Condition-HIMSMedicalHistoryExample : 0 / 0 / 2
+ /github/workspace/fsh-generated/resources/Encounter-GenericTargetFacilityEncounterExample : 0 / 0 / 1
+ /github/workspace/fsh-generated/resources/Encounter-HHIMSTargetFacilityEncounterExample : 0 / 0 / 1
+ /github/workspace/fsh-generated/resources/Encounter-HIMSTargetFacilityEncounterExample : 0 / 0 / 1
+ /github/workspace/fsh-generated/resources/ImagingStudy-ImagingExample : 0 / 0 / 1
+ /github/workspace/fsh-generated/resources/ImplementationGuide-lk-nehr-fhir-ips : 0 / 0 / 1
+ /github/workspace/fsh-generated/resources/Location-ProvidersLocationExample : 0 / 0 / 1
+ /github/workspace/fsh-generated/resources/MedicationDispense-DrugDispensationExample : 0 / 0 / 1
+ /github/workspace/fsh-generated/resources/MedicationRequest-NoPrescriptionsExample : 0 / 0 / 1
+ /github/workspace/fsh-generated/resources/MedicationRequest-PrescriptionsExample : 0 / 0 / 1
+ /github/workspace/fsh-generated/resources/Observation-BMIExample : 0 / 0 / 2
+ /github/workspace/fsh-generated/resources/Observation-BloodPressureExample : 0 / 0 / 2
+ /github/workspace/fsh-generated/resources/Observation-FastingBloodSugarExample : 0 / 0 / 1
+ /github/workspace/fsh-generated/resources/Observation-GenericObservationExample : 0 / 0 / 1
+ /github/workspace/fsh-generated/resources/Observation-GenericWeightExample : 0 / 0 / 2
+ /github/workspace/fsh-generated/resources/Observation-HHIMSWeightExample : 0 / 0 / 2
+ /github/workspace/fsh-generated/resources/Observation-HIMSWeightExample : 0 / 0 / 2
+ /github/workspace/fsh-generated/resources/Observation-HeightExample : 0 / 0 / 2
+ /github/workspace/fsh-generated/resources/Observation-RandomBloodSugarExample : 0 / 0 / 1
+ /github/workspace/fsh-generated/resources/Observation-RiskBehaviourPhysicalActivityExample : 0 / 0 / 1
+ /github/workspace/fsh-generated/resources/Observation-RiskBehaviourTobaccoSmokerExample : 0 / 0 / 1
+ /github/workspace/fsh-generated/resources/Observation-TotalCholesterolExample : 0 / 0 / 1
+ /github/workspace/fsh-generated/resources/Organization-OrganizationExample : 0 / 0 / 1
+ /github/workspace/fsh-generated/resources/Patient-HHIMSPatientExample : 0 / 0 / 1
+ /github/workspace/fsh-generated/resources/Patient-HIMSPatientExample : 0 / 0 / 1
+ /github/workspace/fsh-generated/resources/Practitioner-GeneralPractitionerExample : 0 / 0 / 1
+ /github/workspace/fsh-generated/resources/Procedure-ProceduresExample : 0 / 0 / 1
+ /github/workspace/fsh-generated/resources/RiskAssessment-CVDRiskCategoryExample : 0 / 0 / 1
+ /github/workspace/fsh-generated/resources/ServiceRequest-FollowUpPlanServiceRequestExample : 0 / 0 / 1
+ /github/workspace/fsh-generated/resources/ServiceRequest-GeneralReferralServiceRequestExample : 0 / 0 / 1
+ /github/workspace/fsh-generated/resources/ServiceRequest-GenericServiceRequestExample : 0 / 0 / 1
+ /github/workspace/fsh-generated/resources/ServiceRequest-ImagingServiceRequestExample : 0 / 0 / 1
+ /github/workspace/fsh-generated/resources/ServiceRequest-InvestigationsServiceRequestExample : 0 / 0 / 1
+ /github/workspace/fsh-generated/resources/StructureDefinition-blood-pressure : 0 / 0 / 1
+ /github/workspace/fsh-generated/resources/StructureDefinition-bmi : 0 / 0 / 1
+ /github/workspace/fsh-generated/resources/StructureDefinition-cvd-risk-category : 0 / 0 / 1
+ /github/workspace/fsh-generated/resources/StructureDefinition-drug-dispensation : 0 / 0 / 2
+ /github/workspace/fsh-generated/resources/StructureDefinition-fasting-blood-sugar : 0 / 0 / 2
+ /github/workspace/fsh-generated/resources/StructureDefinition-follow-up-at-hlc : 0 / 0 / 1
+ /github/workspace/fsh-generated/resources/StructureDefinition-follow-up-plan : 0 / 0 / 1
+ /github/workspace/fsh-generated/resources/StructureDefinition-general-referral-request : 0 / 0 / 1
+ /github/workspace/fsh-generated/resources/StructureDefinition-generic-allergy-intolerance : 0 / 0 / 1
+ /github/workspace/fsh-generated/resources/StructureDefinition-generic-observation : 0 / 0 / 1
+ /github/workspace/fsh-generated/resources/StructureDefinition-generic-service-request : 0 / 0 / 1
+ /github/workspace/fsh-generated/resources/StructureDefinition-generic-target-facility-encounter : 0 / 0 / 1
+ /github/workspace/fsh-generated/resources/StructureDefinition-generic-task : 0 / 0 / 1
+ /github/workspace/fsh-generated/resources/StructureDefinition-generic-weight : 0 / 0 / 1
+ /github/workspace/fsh-generated/resources/StructureDefinition-height : 0 / 0 / 1
+ /github/workspace/fsh-generated/resources/StructureDefinition-hhims-allergy-intolerance : 0 / 0 / 1
+ /github/workspace/fsh-generated/resources/StructureDefinition-hhims-composition : 0 / 0 / 1
+ /github/workspace/fsh-generated/resources/StructureDefinition-hhims-ips-bundle : 0 / 0 / 1
+ /github/workspace/fsh-generated/resources/StructureDefinition-hhims-patient : 0 / 0 / 1
+ /github/workspace/fsh-generated/resources/StructureDefinition-hhims-target-facility-encounter : 0 / 0 / 1
+ /github/workspace/fsh-generated/resources/StructureDefinition-hhims-transactional-bundle : 0 / 0 / 1
+ /github/workspace/fsh-generated/resources/StructureDefinition-hhims-weight : 0 / 0 / 1
+ /github/workspace/fsh-generated/resources/StructureDefinition-hims-allergy-intolerance : 0 / 0 / 1
+ /github/workspace/fsh-generated/resources/StructureDefinition-hims-composition : 0 / 0 / 1
+ /github/workspace/fsh-generated/resources/StructureDefinition-hims-ips-bundle : 0 / 0 / 1
+ /github/workspace/fsh-generated/resources/StructureDefinition-hims-patient : 0 / 0 / 1
+ /github/workspace/fsh-generated/resources/StructureDefinition-hims-target-facility-encounter : 0 / 0 / 1
+ /github/workspace/fsh-generated/resources/StructureDefinition-hims-transactional-bundle : 0 / 0 / 1
+ /github/workspace/fsh-generated/resources/StructureDefinition-hims-weight : 0 / 0 / 1
+ /github/workspace/fsh-generated/resources/StructureDefinition-imaging-request : 0 / 0 / 1
+ /github/workspace/fsh-generated/resources/StructureDefinition-imaging-study : 0 / 0 / 1
+ /github/workspace/fsh-generated/resources/StructureDefinition-imaging-task : 0 / 0 / 1
+ /github/workspace/fsh-generated/resources/StructureDefinition-investigations-request : 0 / 0 / 1
+ /github/workspace/fsh-generated/resources/StructureDefinition-investigations-task : 0 / 0 / 1
+ /github/workspace/fsh-generated/resources/StructureDefinition-medical-history-hhims : 0 / 0 / 1
+ /github/workspace/fsh-generated/resources/StructureDefinition-medical-history-hims : 0 / 0 / 1
+ /github/workspace/fsh-generated/resources/StructureDefinition-medication-request : 0 / 0 / 1
+ /github/workspace/fsh-generated/resources/StructureDefinition-no-medication-requested : 0 / 0 / 1
+ /github/workspace/fsh-generated/resources/StructureDefinition-notifiable-diseases-notified : 0 / 0 / 1
+ /github/workspace/fsh-generated/resources/StructureDefinition-organization : 0 / 0 / 1
+ /github/workspace/fsh-generated/resources/StructureDefinition-practitioner : 0 / 0 / 1
+ /github/workspace/fsh-generated/resources/StructureDefinition-procedure : 0 / 0 / 1
+ /github/workspace/fsh-generated/resources/StructureDefinition-providers-location : 0 / 0 / 1
+ /github/workspace/fsh-generated/resources/StructureDefinition-random-blood-sugar : 0 / 0 / 2
+ /github/workspace/fsh-generated/resources/StructureDefinition-referral-task : 0 / 0 / 1
+ /github/workspace/fsh-generated/resources/StructureDefinition-risk-behaviour-physical-activity : 0 / 0 / 1
+ /github/workspace/fsh-generated/resources/StructureDefinition-risk-behaviour-tobacco-smoker : 0 / 0 / 1
+ /github/workspace/fsh-generated/resources/StructureDefinition-total-cholesterol : 0 / 0 / 2
+ /github/workspace/fsh-generated/resources/Task-GenericTaskExample : 0 / 0 / 1
+ /github/workspace/fsh-generated/resources/Task-HHIMSReferralTaskExample : 0 / 0 / 1
+ /github/workspace/fsh-generated/resources/Task-ImagingTaskExample : 0 / 0 / 1
+ /github/workspace/fsh-generated/resources/Task-InvestigationsTaskExample : 0 / 0 / 1
+ /github/workspace/fsh-generated/resources/ValueSet-vs-cvd-risk-category : 0 / 0 / 1
+ /github/workspace/fsh-generated/resources/ValueSet-vs-follow-up-plan : 0 / 0 / 1
+ /github/workspace/fsh-generated/resources/ValueSet-vs-follow-up-reasons : 0 / 0 / 1
+ /github/workspace/fsh-generated/resources/ValueSet-vs-identifier-types : 0 / 0 / 1
+ /github/workspace/fsh-generated/resources/ValueSet-vs-investigation : 0 / 0 / 1
+ /github/workspace/fsh-generated/resources/ValueSet-vs-medical-conditions : 0 / 0 / 1
+ /github/workspace/fsh-generated/resources/ValueSet-vs-medication-name : 0 / 0 / 1
+ /github/workspace/fsh-generated/resources/ValueSet-vs-procedure : 0 / 0 / 1
+ /github/workspace/fsh-generated/resources/ValueSet-vs-procedure-imaging : 0 / 0 / 1
+ /github/workspace/fsh-generated/resources/ValueSet-vs-reason-for-encounter : 0 / 0 / 1
+ /github/workspace/fsh-generated/resources/ValueSet-vs-risk-behaviour-physical-activity : 0 / 0 / 1
+</table>
+== n/a ==
+== fsh-generated/resources/AllergyIntolerance-AllergiesExample.json ==
+== fsh-generated/resources/AllergyIntolerance-GenericAllergiesExample.json ==
+== fsh-generated/resources/AllergyIntolerance-NoAllergiesExample.json ==
+== fsh-generated/resources/Bundle-HHIMSIPSBundleExample.json ==
+INFORMATION: Bundle/HHIMSIPSBundleExample: Bundle.entry[0].resource.section[5]: This element does not match any known slice defined in the profile http://hl7.org/fhir/uv/ips/StructureDefinition/Composition-uv-ips|1.1.0 (this may not be a problem, but you should check that it's not intended to match a slice)
+INFORMATION: Bundle/HHIMSIPSBundleExample: Bundle.entry[0].resource.section[6]: This element does not match any known slice defined in the profile http://hl7.org/fhir/uv/ips/StructureDefinition/Composition-uv-ips|1.1.0 (this may not be a problem, but you should check that it's not intended to match a slice)
+INFORMATION: Bundle/HHIMSIPSBundleExample: Bundle.entry[0].resource.section[7]: This element does not match any known slice defined in the profile http://hl7.org/fhir/uv/ips/StructureDefinition/Composition-uv-ips|1.1.0 (this may not be a problem, but you should check that it's not intended to match a slice)
+INFORMATION: Bundle/HHIMSIPSBundleExample: Bundle.entry[0].resource.section[8]: This element does not match any known slice defined in the profile http://hl7.org/fhir/uv/ips/StructureDefinition/Composition-uv-ips|1.1.0 (this may not be a problem, but you should check that it's not intended to match a slice)
+INFORMATION: Bundle/HHIMSIPSBundleExample: Bundle.entry[0].resource.section[9]: This element does not match any known slice defined in the profile http://hl7.org/fhir/uv/ips/StructureDefinition/Composition-uv-ips|1.1.0 (this may not be a problem, but you should check that it's not intended to match a slice)
+INFORMATION: Bundle/HHIMSIPSBundleExample: Bundle.entry[0].resource.section[10]: This element does not match any known slice defined in the profile http://hl7.org/fhir/uv/ips/StructureDefinition/Composition-uv-ips|1.1.0 (this may not be a problem, but you should check that it's not intended to match a slice)
+INFORMATION: Bundle/HHIMSIPSBundleExample: Bundle.entry[0].resource.section[0].entry[1]: This element does not match any known slice defined in the profile http://hl7.org/fhir/uv/ips/StructureDefinition/Composition-uv-ips|1.1.0 (this may not be a problem, but you should check that it's not intended to match a slice)
+== fsh-generated/resources/Bundle-HHIMSTransactionalBundleExample.json ==
+== fsh-generated/resources/Bundle-HIMSIPSBundleExample.json ==
+INFORMATION: Bundle/HIMSIPSBundleExample: Bundle.entry[0].resource.section[4]: This element does not match any known slice defined in the profile http://hl7.org/fhir/uv/ips/StructureDefinition/Composition-uv-ips|1.1.0 (this may not be a problem, but you should check that it's not intended to match a slice)
+INFORMATION: Bundle/HIMSIPSBundleExample: Bundle.entry[0].resource.section[6]: This element does not match any known slice defined in the profile http://hl7.org/fhir/uv/ips/StructureDefinition/Composition-uv-ips|1.1.0 (this may not be a problem, but you should check that it's not intended to match a slice)
+INFORMATION: Bundle/HIMSIPSBundleExample: Bundle.entry[0].resource.section[7]: This element does not match any known slice defined in the profile http://hl7.org/fhir/uv/ips/StructureDefinition/Composition-uv-ips|1.1.0 (this may not be a problem, but you should check that it's not intended to match a slice)
+INFORMATION: Bundle/HIMSIPSBundleExample: Bundle.entry[0].resource.section[9]: This element does not match any known slice defined in the profile http://hl7.org/fhir/uv/ips/StructureDefinition/Composition-uv-ips|1.1.0 (this may not be a problem, but you should check that it's not intended to match a slice)
+INFORMATION: Bundle/HIMSIPSBundleExample: Bundle.entry[3].resource.category[0]: Reference to draft CodeSystem http://terminology.hl7.org/CodeSystem/condition-category|0.5.0
+== fsh-generated/resources/Bundle-HIMSTransactionalBundleExample.json ==
+INFORMATION: Bundle/HIMSTransactionalBundleExample: Bundle.entry[13]: This element does not match any known slice defined in the profile http://fhir.health.gov.lk/ips/StructureDefinition/hims-transactional-bundle|0.1.0 (this may not be a problem, but you should check that it's not intended to match a slice)
+INFORMATION: Bundle/HIMSTransactionalBundleExample: Bundle.entry[2].resource.category[0]: Reference to draft CodeSystem http://terminology.hl7.org/CodeSystem/condition-category|0.5.0
+== fsh-generated/resources/CarePlan-FollowUpAtHLCExample.json ==
+== fsh-generated/resources/CodeSystem-cs-cvd-risk-category.json ==
+== fsh-generated/resources/CodeSystem-cs-follow-up-reasons.json ==
+== fsh-generated/resources/CodeSystem-cs-identifier-types.json ==
+== fsh-generated/resources/CodeSystem-cs-investigation.json ==
+== fsh-generated/resources/CodeSystem-cs-medication-name.json ==
+== fsh-generated/resources/CodeSystem-cs-procedure.json ==
+== fsh-generated/resources/CodeSystem-cs-procedure-imaging.json ==
+== fsh-generated/resources/CodeSystem-cs-reason-for-encounter.json ==
+== fsh-generated/resources/Communication-NotifiableDiseasesNotifiedExample.json ==
+== fsh-generated/resources/Composition-HHIMSCompositionExample.json ==
+== fsh-generated/resources/Composition-HIMSCompositionExample.json ==
+== fsh-generated/resources/Condition-HHIMSMedicalHistoryExample.json ==
+== fsh-generated/resources/Condition-HIMSMedicalHistoryExample.json ==
+INFORMATION: Condition/HIMSMedicalHistoryExample: Condition.category[0]: Reference to draft CodeSystem http://terminology.hl7.org/CodeSystem/condition-category|0.5.0
+== fsh-generated/resources/Encounter-GenericTargetFacilityEncounterExample.json ==
+== fsh-generated/resources/Encounter-HHIMSTargetFacilityEncounterExample.json ==
+== fsh-generated/resources/Encounter-HIMSTargetFacilityEncounterExample.json ==
+== fsh-generated/resources/ImagingStudy-ImagingExample.json ==
+== fsh-generated/resources/ImplementationGuide-lk-nehr-fhir-ips.json ==
+== fsh-generated/resources/Location-ProvidersLocationExample.json ==
+== fsh-generated/resources/MedicationDispense-DrugDispensationExample.json ==
+== fsh-generated/resources/MedicationRequest-NoPrescriptionsExample.json ==
+== fsh-generated/resources/MedicationRequest-PrescriptionsExample.json ==
+== fsh-generated/resources/Observation-BMIExample.json ==
+== fsh-generated/resources/Observation-BloodPressureExample.json ==
+== fsh-generated/resources/Observation-FastingBloodSugarExample.json ==
+== fsh-generated/resources/Observation-GenericObservationExample.json ==
+== fsh-generated/resources/Observation-GenericWeightExample.json ==
+== fsh-generated/resources/Observation-HHIMSWeightExample.json ==
+== fsh-generated/resources/Observation-HIMSWeightExample.json ==
+== fsh-generated/resources/Observation-HeightExample.json ==
+== fsh-generated/resources/Observation-RandomBloodSugarExample.json ==
+== fsh-generated/resources/Observation-RiskBehaviourPhysicalActivityExample.json ==
+== fsh-generated/resources/Observation-RiskBehaviourTobaccoSmokerExample.json ==
+== fsh-generated/resources/Observation-TotalCholesterolExample.json ==
+== fsh-generated/resources/Organization-OrganizationExample.json ==
+== fsh-generated/resources/Patient-HHIMSPatientExample.json ==
+== fsh-generated/resources/Patient-HIMSPatientExample.json ==
+== fsh-generated/resources/Practitioner-GeneralPractitionerExample.json ==
+== fsh-generated/resources/Procedure-ProceduresExample.json ==
+== fsh-generated/resources/RiskAssessment-CVDRiskCategoryExample.json ==
+== fsh-generated/resources/ServiceRequest-FollowUpPlanServiceRequestExample.json ==
+== fsh-generated/resources/ServiceRequest-GeneralReferralServiceRequestExample.json ==
+== fsh-generated/resources/ServiceRequest-GenericServiceRequestExample.json ==
+== fsh-generated/resources/ServiceRequest-ImagingServiceRequestExample.json ==
+== fsh-generated/resources/ServiceRequest-InvestigationsServiceRequestExample.json ==
+== fsh-generated/resources/StructureDefinition-blood-pressure.json ==
+== fsh-generated/resources/StructureDefinition-bmi.json ==
+== fsh-generated/resources/StructureDefinition-cvd-risk-category.json ==
+== fsh-generated/resources/StructureDefinition-drug-dispensation.json ==
+INFORMATION: StructureDefinition/drug-dispensation: StructureDefinition.snapshot.element[29].mapping[0].map: The string value contains text that looks like embedded HTML tags. If this content is rendered to HTML without appropriate post-processing, it may be a security risk
+== fsh-generated/resources/StructureDefinition-fasting-blood-sugar.json ==
+INFORMATION: StructureDefinition/fasting-blood-sugar: StructureDefinition.snapshot.element[29].pattern.ofType(CodeableConcept): Reference to draft CodeSystem http://terminology.hl7.org/CodeSystem/observation-category|0.1.0
+== fsh-generated/resources/StructureDefinition-follow-up-at-hlc.json ==
+== fsh-generated/resources/StructureDefinition-follow-up-plan.json ==
+== fsh-generated/resources/StructureDefinition-general-referral-request.json ==
+== fsh-generated/resources/StructureDefinition-generic-allergy-intolerance.json ==
+== fsh-generated/resources/StructureDefinition-generic-observation.json ==
+== fsh-generated/resources/StructureDefinition-generic-service-request.json ==
+== fsh-generated/resources/StructureDefinition-generic-target-facility-encounter.json ==
+== fsh-generated/resources/StructureDefinition-generic-task.json ==
+== fsh-generated/resources/StructureDefinition-generic-weight.json ==
+== fsh-generated/resources/StructureDefinition-height.json ==
+== fsh-generated/resources/StructureDefinition-hhims-allergy-intolerance.json ==
+== fsh-generated/resources/StructureDefinition-hhims-composition.json ==
+== fsh-generated/resources/StructureDefinition-hhims-ips-bundle.json ==
+== fsh-generated/resources/StructureDefinition-hhims-patient.json ==
+== fsh-generated/resources/StructureDefinition-hhims-target-facility-encounter.json ==
+== fsh-generated/resources/StructureDefinition-hhims-transactional-bundle.json ==
+== fsh-generated/resources/StructureDefinition-hhims-weight.json ==
+== fsh-generated/resources/StructureDefinition-hims-allergy-intolerance.json ==
+== fsh-generated/resources/StructureDefinition-hims-composition.json ==
+== fsh-generated/resources/StructureDefinition-hims-ips-bundle.json ==
+== fsh-generated/resources/StructureDefinition-hims-patient.json ==
+== fsh-generated/resources/StructureDefinition-hims-target-facility-encounter.json ==
+== fsh-generated/resources/StructureDefinition-hims-transactional-bundle.json ==
+== fsh-generated/resources/StructureDefinition-hims-weight.json ==
+== fsh-generated/resources/StructureDefinition-imaging-request.json ==
+== fsh-generated/resources/StructureDefinition-imaging-study.json ==
+== fsh-generated/resources/StructureDefinition-imaging-task.json ==
+== fsh-generated/resources/StructureDefinition-investigations-request.json ==
+== fsh-generated/resources/StructureDefinition-investigations-task.json ==
+== fsh-generated/resources/StructureDefinition-medical-history-hhims.json ==
+== fsh-generated/resources/StructureDefinition-medical-history-hims.json ==
+== fsh-generated/resources/StructureDefinition-medication-request.json ==
+== fsh-generated/resources/StructureDefinition-no-medication-requested.json ==
+== fsh-generated/resources/StructureDefinition-notifiable-diseases-notified.json ==
+== fsh-generated/resources/StructureDefinition-organization.json ==
+== fsh-generated/resources/StructureDefinition-practitioner.json ==
+== fsh-generated/resources/StructureDefinition-procedure.json ==
+== fsh-generated/resources/StructureDefinition-providers-location.json ==
+== fsh-generated/resources/StructureDefinition-random-blood-sugar.json ==
+INFORMATION: StructureDefinition/random-blood-sugar: StructureDefinition.snapshot.element[29].pattern.ofType(CodeableConcept): Reference to draft CodeSystem http://terminology.hl7.org/CodeSystem/observation-category|0.1.0
+== fsh-generated/resources/StructureDefinition-referral-task.json ==
+== fsh-generated/resources/StructureDefinition-risk-behaviour-physical-activity.json ==
+== fsh-generated/resources/StructureDefinition-risk-behaviour-tobacco-smoker.json ==
+== fsh-generated/resources/StructureDefinition-total-cholesterol.json ==
+INFORMATION: StructureDefinition/total-cholesterol: StructureDefinition.snapshot.element[29].pattern.ofType(CodeableConcept): Reference to draft CodeSystem http://terminology.hl7.org/CodeSystem/observation-category|0.1.0
+== fsh-generated/resources/Task-GenericTaskExample.json ==
+== fsh-generated/resources/Task-HHIMSReferralTaskExample.json ==
+== fsh-generated/resources/Task-ImagingTaskExample.json ==
+== fsh-generated/resources/Task-InvestigationsTaskExample.json ==
+== fsh-generated/resources/ValueSet-vs-cvd-risk-category.json ==
+== fsh-generated/resources/ValueSet-vs-follow-up-plan.json ==
+== fsh-generated/resources/ValueSet-vs-follow-up-reasons.json ==
+== fsh-generated/resources/ValueSet-vs-identifier-types.json ==
+== fsh-generated/resources/ValueSet-vs-investigation.json ==
+== fsh-generated/resources/ValueSet-vs-medical-conditions.json ==
+== fsh-generated/resources/ValueSet-vs-medication-name.json ==
+== fsh-generated/resources/ValueSet-vs-procedure.json ==
+== fsh-generated/resources/ValueSet-vs-procedure-imaging.json ==
+== fsh-generated/resources/ValueSet-vs-reason-for-encounter.json ==
+== fsh-generated/resources/ValueSet-vs-risk-behaviour-physical-activity.json ==

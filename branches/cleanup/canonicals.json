@@ -1,0 +1,471 @@
+[
+  {
+    "id" : "cs-composition-codes",
+    "type" : "CodeSystem",
+    "url" : "http://fhir.health.gov.lk/ips/CodeSystem/cs-composition-codes",
+    "version" : "0.1.0",
+    "name" : "SectionCompositionCodes"
+  },
+  {
+    "id" : "cs-cvd-risk-category",
+    "type" : "CodeSystem",
+    "url" : "http://fhir.health.gov.lk/ips/CodeSystem/cs-cvd-risk-category",
+    "version" : "0.1.0",
+    "name" : "CSCVDRiskCategory"
+  },
+  {
+    "id" : "cs-device-classification",
+    "type" : "CodeSystem",
+    "url" : "http://fhir.health.gov.lk/ips/CodeSystem/cs-device-classification",
+    "version" : "0.1.0",
+    "name" : "CSDeviceClassificationCodes"
+  },
+  {
+    "id" : "cs-follow-up-reasons",
+    "type" : "CodeSystem",
+    "url" : "http://fhir.health.gov.lk/ips/CodeSystem/cs-follow-up-reasons",
+    "version" : "0.1.0",
+    "name" : "CSFollowUpReasons"
+  },
+  {
+    "id" : "cs-identifier-types",
+    "type" : "CodeSystem",
+    "url" : "http://fhir.health.gov.lk/ips/CodeSystem/cs-identifier-types",
+    "version" : "0.1.0",
+    "name" : "CSIdentifierTypes"
+  },
+  {
+    "id" : "cs-investigation",
+    "type" : "CodeSystem",
+    "url" : "http://fhir.health.gov.lk/ips/CodeSystem/cs-investigation",
+    "version" : "0.1.0",
+    "name" : "CSInvestigations"
+  },
+  {
+    "id" : "cs-medication-name-msd",
+    "type" : "CodeSystem",
+    "url" : "http://fhir.health.gov.lk/ips/CodeSystem/cs-medication-name-msd",
+    "version" : "0.1.0",
+    "name" : "CSMedicationNamesForMSD"
+  },
+  {
+    "id" : "cs-medication-name-non-msd",
+    "type" : "CodeSystem",
+    "url" : "http://fhir.health.gov.lk/ips/CodeSystem/cs-medication-name-non-msd",
+    "version" : "0.1.0",
+    "name" : "CSMedicationNamesForNonMSD"
+  },
+  {
+    "id" : "cs-procedure",
+    "type" : "CodeSystem",
+    "url" : "http://fhir.health.gov.lk/ips/CodeSystem/cs-procedure",
+    "version" : "0.1.0",
+    "name" : "CSProcedures"
+  },
+  {
+    "id" : "cs-procedure-imaging",
+    "type" : "CodeSystem",
+    "url" : "http://fhir.health.gov.lk/ips/CodeSystem/cs-procedure-imaging",
+    "version" : "0.1.0",
+    "name" : "CSImagingProcedures"
+  },
+  {
+    "id" : "lk-nehr-fhir-ips",
+    "type" : "ImplementationGuide",
+    "url" : "http://fhir.health.gov.lk/ips/ImplementationGuide/lk-nehr-fhir-ips",
+    "version" : "0.1.0",
+    "name" : "SriLankaIPS"
+  },
+  {
+    "id" : "allergy-intolerance",
+    "type" : "StructureDefinition",
+    "url" : "http://fhir.health.gov.lk/ips/StructureDefinition/allergy-intolerance",
+    "version" : "0.1.0",
+    "name" : "Allergies"
+  },
+  {
+    "id" : "blood-pressure",
+    "type" : "StructureDefinition",
+    "url" : "http://fhir.health.gov.lk/ips/StructureDefinition/blood-pressure",
+    "version" : "0.1.0",
+    "name" : "BloodPressure"
+  },
+  {
+    "id" : "bmi",
+    "type" : "StructureDefinition",
+    "url" : "http://fhir.health.gov.lk/ips/StructureDefinition/bmi",
+    "version" : "0.1.0",
+    "name" : "BMI"
+  },
+  {
+    "id" : "cvd-risk-category",
+    "type" : "StructureDefinition",
+    "url" : "http://fhir.health.gov.lk/ips/StructureDefinition/cvd-risk-category",
+    "version" : "0.1.0",
+    "name" : "CVDRiskCategory"
+  },
+  {
+    "id" : "device-information",
+    "type" : "StructureDefinition",
+    "url" : "http://fhir.health.gov.lk/ips/StructureDefinition/device-information",
+    "version" : "0.1.0",
+    "name" : "DeviceInformation"
+  },
+  {
+    "id" : "drug-dispensation",
+    "type" : "StructureDefinition",
+    "url" : "http://fhir.health.gov.lk/ips/StructureDefinition/drug-dispensation",
+    "version" : "0.1.0",
+    "name" : "DrugDispensation"
+  },
+  {
+    "id" : "fasting-blood-sugar",
+    "type" : "StructureDefinition",
+    "url" : "http://fhir.health.gov.lk/ips/StructureDefinition/fasting-blood-sugar",
+    "version" : "0.1.0",
+    "name" : "FastingBloodSugar"
+  },
+  {
+    "id" : "follow-up-at-hlc",
+    "type" : "StructureDefinition",
+    "url" : "http://fhir.health.gov.lk/ips/StructureDefinition/follow-up-at-hlc",
+    "version" : "0.1.0",
+    "name" : "FollowUpAtHLC"
+  },
+  {
+    "id" : "follow-up-plan",
+    "type" : "StructureDefinition",
+    "url" : "http://fhir.health.gov.lk/ips/StructureDefinition/follow-up-plan",
+    "version" : "0.1.0",
+    "name" : "FollowUpPlanServiceRequest"
+  },
+  {
+    "id" : "general-referral-request",
+    "type" : "StructureDefinition",
+    "url" : "http://fhir.health.gov.lk/ips/StructureDefinition/general-referral-request",
+    "version" : "0.1.0",
+    "name" : "GeneralReferralServiceRequest"
+  },
+  {
+    "id" : "generic-observation",
+    "type" : "StructureDefinition",
+    "url" : "http://fhir.health.gov.lk/ips/StructureDefinition/generic-observation",
+    "version" : "0.1.0",
+    "name" : "GenericObservation"
+  },
+  {
+    "id" : "generic-service-request",
+    "type" : "StructureDefinition",
+    "url" : "http://fhir.health.gov.lk/ips/StructureDefinition/generic-service-request",
+    "version" : "0.1.0",
+    "name" : "GenericServiceRequest"
+  },
+  {
+    "id" : "generic-task",
+    "type" : "StructureDefinition",
+    "url" : "http://fhir.health.gov.lk/ips/StructureDefinition/generic-task",
+    "version" : "0.1.0",
+    "name" : "GenericTask"
+  },
+  {
+    "id" : "height",
+    "type" : "StructureDefinition",
+    "url" : "http://fhir.health.gov.lk/ips/StructureDefinition/height",
+    "version" : "0.1.0",
+    "name" : "Height"
+  },
+  {
+    "id" : "hhims-composition",
+    "type" : "StructureDefinition",
+    "url" : "http://fhir.health.gov.lk/ips/StructureDefinition/hhims-composition",
+    "version" : "0.1.0",
+    "name" : "HHIMSComposition"
+  },
+  {
+    "id" : "hhims-ips-bundle",
+    "type" : "StructureDefinition",
+    "url" : "http://fhir.health.gov.lk/ips/StructureDefinition/hhims-ips-bundle",
+    "version" : "0.1.0",
+    "name" : "HHIMSIPSBundle"
+  },
+  {
+    "id" : "hhims-transactional-bundle",
+    "type" : "StructureDefinition",
+    "url" : "http://fhir.health.gov.lk/ips/StructureDefinition/hhims-transactional-bundle",
+    "version" : "0.1.0",
+    "name" : "HHIMSTransactionalBundle"
+  },
+  {
+    "id" : "hims-composition",
+    "type" : "StructureDefinition",
+    "url" : "http://fhir.health.gov.lk/ips/StructureDefinition/hims-composition",
+    "version" : "0.1.0",
+    "name" : "HIMSComposition"
+  },
+  {
+    "id" : "hims-ips-bundle",
+    "type" : "StructureDefinition",
+    "url" : "http://fhir.health.gov.lk/ips/StructureDefinition/hims-ips-bundle",
+    "version" : "0.1.0",
+    "name" : "HIMSIPSBundle"
+  },
+  {
+    "id" : "hims-transactional-bundle",
+    "type" : "StructureDefinition",
+    "url" : "http://fhir.health.gov.lk/ips/StructureDefinition/hims-transactional-bundle",
+    "version" : "0.1.0",
+    "name" : "HIMSTransactionalBundle"
+  },
+  {
+    "id" : "imaging-request",
+    "type" : "StructureDefinition",
+    "url" : "http://fhir.health.gov.lk/ips/StructureDefinition/imaging-request",
+    "version" : "0.1.0",
+    "name" : "ImagingServiceRequest"
+  },
+  {
+    "id" : "imaging-study",
+    "type" : "StructureDefinition",
+    "url" : "http://fhir.health.gov.lk/ips/StructureDefinition/imaging-study",
+    "version" : "0.1.0",
+    "name" : "Imaging"
+  },
+  {
+    "id" : "investigations-request",
+    "type" : "StructureDefinition",
+    "url" : "http://fhir.health.gov.lk/ips/StructureDefinition/investigations-request",
+    "version" : "0.1.0",
+    "name" : "InvestigationsServiceRequest"
+  },
+  {
+    "id" : "ips-patient",
+    "type" : "StructureDefinition",
+    "url" : "http://fhir.health.gov.lk/ips/StructureDefinition/ips-patient",
+    "version" : "0.1.0",
+    "name" : "IPSPatient"
+  },
+  {
+    "id" : "medical-history",
+    "type" : "StructureDefinition",
+    "url" : "http://fhir.health.gov.lk/ips/StructureDefinition/medical-history",
+    "version" : "0.1.0",
+    "name" : "MedicalHistory"
+  },
+  {
+    "id" : "medication-request",
+    "type" : "StructureDefinition",
+    "url" : "http://fhir.health.gov.lk/ips/StructureDefinition/medication-request",
+    "version" : "0.1.0",
+    "name" : "MedicationRequests"
+  },
+  {
+    "id" : "no-allergy-intolerance",
+    "type" : "StructureDefinition",
+    "url" : "http://fhir.health.gov.lk/ips/StructureDefinition/no-allergy-intolerance",
+    "version" : "0.1.0",
+    "name" : "NoAllergies"
+  },
+  {
+    "id" : "no-medical-history",
+    "type" : "StructureDefinition",
+    "url" : "http://fhir.health.gov.lk/ips/StructureDefinition/no-medical-history",
+    "version" : "0.1.0",
+    "name" : "NoMedicalHistory"
+  },
+  {
+    "id" : "no-medication-requested",
+    "type" : "StructureDefinition",
+    "url" : "http://fhir.health.gov.lk/ips/StructureDefinition/no-medication-requested",
+    "version" : "0.1.0",
+    "name" : "NoPrescriptions"
+  },
+  {
+    "id" : "notifiable-diseases-notified",
+    "type" : "StructureDefinition",
+    "url" : "http://fhir.health.gov.lk/ips/StructureDefinition/notifiable-diseases-notified",
+    "version" : "0.1.0",
+    "name" : "NotifiableDiseasesNotified"
+  },
+  {
+    "id" : "organization",
+    "type" : "StructureDefinition",
+    "url" : "http://fhir.health.gov.lk/ips/StructureDefinition/organization",
+    "version" : "0.1.0",
+    "name" : "ServiceProvider"
+  },
+  {
+    "id" : "patient-identity-cross-reference",
+    "type" : "StructureDefinition",
+    "url" : "http://fhir.health.gov.lk/ips/StructureDefinition/patient-identity-cross-reference",
+    "version" : "0.1.0",
+    "name" : "RestrictedPatient"
+  },
+  {
+    "id" : "patient-registration-system",
+    "type" : "StructureDefinition",
+    "url" : "http://fhir.health.gov.lk/ips/StructureDefinition/patient-registration-system",
+    "version" : "0.1.0",
+    "name" : "PatientRegistrationSystem"
+  },
+  {
+    "id" : "practitioner",
+    "type" : "StructureDefinition",
+    "url" : "http://fhir.health.gov.lk/ips/StructureDefinition/practitioner",
+    "version" : "0.1.0",
+    "name" : "GeneralPractitioner"
+  },
+  {
+    "id" : "procedures-request",
+    "type" : "StructureDefinition",
+    "url" : "http://fhir.health.gov.lk/ips/StructureDefinition/procedures-request",
+    "version" : "0.1.0",
+    "name" : "ProcedureServiceRequest"
+  },
+  {
+    "id" : "providers-location",
+    "type" : "StructureDefinition",
+    "url" : "http://fhir.health.gov.lk/ips/StructureDefinition/providers-location",
+    "version" : "0.1.0",
+    "name" : "ProvidersLocation"
+  },
+  {
+    "id" : "random-blood-sugar",
+    "type" : "StructureDefinition",
+    "url" : "http://fhir.health.gov.lk/ips/StructureDefinition/random-blood-sugar",
+    "version" : "0.1.0",
+    "name" : "RandomBloodSugar"
+  },
+  {
+    "id" : "referral-task",
+    "type" : "StructureDefinition",
+    "url" : "http://fhir.health.gov.lk/ips/StructureDefinition/referral-task",
+    "version" : "0.1.0",
+    "name" : "ReferralTask"
+  },
+  {
+    "id" : "risk-behaviour-physical-activity",
+    "type" : "StructureDefinition",
+    "url" : "http://fhir.health.gov.lk/ips/StructureDefinition/risk-behaviour-physical-activity",
+    "version" : "0.1.0",
+    "name" : "RiskBehaviourPhysicalActivity"
+  },
+  {
+    "id" : "risk-behaviour-tobacco-smoker",
+    "type" : "StructureDefinition",
+    "url" : "http://fhir.health.gov.lk/ips/StructureDefinition/risk-behaviour-tobacco-smoker",
+    "version" : "0.1.0",
+    "name" : "RiskBehaviourTobaccoSmoker"
+  },
+  {
+    "id" : "target-facility-encounter",
+    "type" : "StructureDefinition",
+    "url" : "http://fhir.health.gov.lk/ips/StructureDefinition/target-facility-encounter",
+    "version" : "0.1.0",
+    "name" : "TargetFacilityEncounter"
+  },
+  {
+    "id" : "total-cholesterol",
+    "type" : "StructureDefinition",
+    "url" : "http://fhir.health.gov.lk/ips/StructureDefinition/total-cholesterol",
+    "version" : "0.1.0",
+    "name" : "TotalCholesterol"
+  },
+  {
+    "id" : "weight",
+    "type" : "StructureDefinition",
+    "url" : "http://fhir.health.gov.lk/ips/StructureDefinition/weight",
+    "version" : "0.1.0",
+    "name" : "Weight"
+  },
+  {
+    "id" : "vs-cvd-risk-category",
+    "type" : "ValueSet",
+    "url" : "http://fhir.health.gov.lk/ips/ValueSet/vs-cvd-risk-category",
+    "version" : "0.1.0",
+    "name" : "VSCVDRiskCategory"
+  },
+  {
+    "id" : "vs-device-classification",
+    "type" : "ValueSet",
+    "url" : "http://fhir.health.gov.lk/ips/ValueSet/vs-device-classification",
+    "version" : "0.1.0",
+    "name" : "VSDeviceClassificationCodes"
+  },
+  {
+    "id" : "vs-follow-up-plan",
+    "type" : "ValueSet",
+    "url" : "http://fhir.health.gov.lk/ips/ValueSet/vs-follow-up-plan",
+    "version" : "0.1.0",
+    "name" : "VSFollowUpPlan"
+  },
+  {
+    "id" : "vs-follow-up-reasons",
+    "type" : "ValueSet",
+    "url" : "http://fhir.health.gov.lk/ips/ValueSet/vs-follow-up-reasons",
+    "version" : "0.1.0",
+    "name" : "VSFollowUpReasons"
+  },
+  {
+    "id" : "vs-identifier-types",
+    "type" : "ValueSet",
+    "url" : "http://fhir.health.gov.lk/ips/ValueSet/vs-identifier-types",
+    "version" : "0.1.0",
+    "name" : "VSIdentifierTypes"
+  },
+  {
+    "id" : "vs-investigation",
+    "type" : "ValueSet",
+    "url" : "http://fhir.health.gov.lk/ips/ValueSet/vs-investigation",
+    "version" : "0.1.0",
+    "name" : "VSInvestigations"
+  },
+  {
+    "id" : "vs-medical-conditions",
+    "type" : "ValueSet",
+    "url" : "http://fhir.health.gov.lk/ips/ValueSet/vs-medical-conditions",
+    "version" : "0.1.0",
+    "name" : "VSMedicalConditions"
+  },
+  {
+    "id" : "vs-medication-name-msd",
+    "type" : "ValueSet",
+    "url" : "http://fhir.health.gov.lk/ips/ValueSet/vs-medication-name-msd",
+    "version" : "0.1.0",
+    "name" : "VSMedicationNamesForMSD"
+  },
+  {
+    "id" : "vs-medication-name-non-msd",
+    "type" : "ValueSet",
+    "url" : "http://fhir.health.gov.lk/ips/ValueSet/vs-medication-name-non-msd",
+    "version" : "0.1.0",
+    "name" : "VSMedicationNamesForNonMSD"
+  },
+  {
+    "id" : "vs-procedure",
+    "type" : "ValueSet",
+    "url" : "http://fhir.health.gov.lk/ips/ValueSet/vs-procedure",
+    "version" : "0.1.0",
+    "name" : "VSProcedures"
+  },
+  {
+    "id" : "vs-procedure-imaging",
+    "type" : "ValueSet",
+    "url" : "http://fhir.health.gov.lk/ips/ValueSet/vs-procedure-imaging",
+    "version" : "0.1.0",
+    "name" : "VSImagingProcedures"
+  },
+  {
+    "id" : "vs-reason-for-encounter",
+    "type" : "ValueSet",
+    "url" : "http://fhir.health.gov.lk/ips/ValueSet/vs-reason-for-encounter",
+    "version" : "0.1.0",
+    "name" : "VSReasonForEncounter"
+  },
+  {
+    "id" : "vs-risk-behaviour-physical-activity",
+    "type" : "ValueSet",
+    "url" : "http://fhir.health.gov.lk/ips/ValueSet/vs-risk-behaviour-physical-activity",
+    "version" : "0.1.0",
+    "name" : "VSRiskBehaviourPhysicalActivity"
+  }
+]

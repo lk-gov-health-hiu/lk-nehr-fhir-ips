@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ValueSet xmlns="http://hl7.org/fhir">
+  <id value="vs-procedure"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><ul><li>Include all codes defined in <a href="CodeSystem-cs-procedure.html"><code>http://fhir.health.gov.lk/ips/CodeSystem/cs-procedure</code></a></li></ul></div>
+  </text>
+  <url value="http://fhir.health.gov.lk/ips/ValueSet/vs-procedure"/>
+  <version value="0.1.0"/>
+  <name value="VSProcedures"/>
+  <title value="Procedures"/>
+  <status value="active"/>
+  <experimental value="false"/>
+  <date value="2024-03-26T12:48:20+00:00"/>
+  <publisher value="Ministry of Health, Sri Lanka"/>
+  <contact>
+    <name value="Ministry of Health, Sri Lanka"/>
+    <telecom>
+      <system value="url"/>
+      <value value="https://www.health.gov.lk/"/>
+    </telecom>
+    <telecom>
+      <system value="email"/>
+      <value value="digitalhealth@health.gov.lk"/>
+    </telecom>
+  </contact>
+  <contact>
+    <name value="Director, Health Information"/>
+    <telecom>
+      <system value="email"/>
+      <value value="digitalhealth@health.gov.lk"/>
+      <use value="work"/>
+    </telecom>
+  </contact>
+  <description value="Procedures"/>
+  <jurisdiction>
+    <coding>
+      <system value="http://unstats.un.org/unsd/methods/m49/m49.htm"/>
+      <code value="001"/>
+      <display value="World"/>
+    </coding>
+  </jurisdiction>
+  <compose>
+    <include>
+      <system value="http://fhir.health.gov.lk/ips/CodeSystem/cs-procedure"/>
+    </include>
+  </compose>
+</ValueSet>

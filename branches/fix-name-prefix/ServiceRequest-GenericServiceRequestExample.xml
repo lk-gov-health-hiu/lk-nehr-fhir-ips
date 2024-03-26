@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ServiceRequest xmlns="http://hl7.org/fhir">
+  <id value="GenericServiceRequestExample"/>
+  <meta>
+    <profile value="http://fhir.health.gov.lk/ips/StructureDefinition/generic-service-request"/>
+  </meta>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative: ServiceRequest</b><a name="GenericServiceRequestExample"> </a></p><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Resource ServiceRequest &quot;GenericServiceRequestExample&quot; </p><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-generic-service-request.html">Generic Service Request</a></p></div><p><b>status</b>: completed</p><p><b>intent</b>: order</p><p><b>code</b>: Patient referral <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="https://browser.ihtsdotools.org/">SNOMED CT</a>#3457005)</span></p><p><b>subject</b>: <a href="Patient-HHIMSPatientExample.html">Patient/HHIMSPatientExample</a> &quot; SMITH&quot;</p><p><b>encounter</b>: <a href="Encounter-HHIMSTargetFacilityEncounterExample.html">Encounter/HHIMSTargetFacilityEncounterExample</a></p><p><b>occurrence</b>: 2023-10-06 13:28:17-0500</p><p><b>requester</b>: <a href="Practitioner-GeneralPractitionerExample.html">Practitioner/GeneralPractitionerExample</a> &quot; SMITH&quot;</p><p><b>locationReference</b>: <a href="Location-ProvidersLocationExample.html">Location/ProvidersLocationExample</a> &quot;Name for the location&quot;</p></div>
+  </text>
+  <status value="completed"/>
+  <intent value="order"/>
+  <code>
+    <coding>
+      <system value="http://snomed.info/sct"/>
+      <code value="3457005"/>
+    </coding>
+    <text value="Patient referral"/>
+  </code>
+  <subject>
+    <reference value="Patient/HHIMSPatientExample"/>
+  </subject>
+  <encounter>
+    <reference value="Encounter/HHIMSTargetFacilityEncounterExample"/>
+  </encounter>
+  <occurrenceDateTime value="2023-10-06T13:28:17-05:00"/>
+  <requester>
+    <reference value="Practitioner/GeneralPractitionerExample"/>
+  </requester>
+  <locationReference>
+    <reference value="Location/ProvidersLocationExample"/>
+  </locationReference>
+</ServiceRequest>

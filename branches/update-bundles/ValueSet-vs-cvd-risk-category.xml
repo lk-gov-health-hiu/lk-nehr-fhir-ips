@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ValueSet xmlns="http://hl7.org/fhir">
+  <id value="vs-cvd-risk-category"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><ul><li>Include all codes defined in <a href="CodeSystem-cs-cvd-risk-category.html"><code>http://fhir.health.gov.lk/ips/CodeSystem/cs-cvd-risk-category</code></a></li></ul></div>
+  </text>
+  <url value="http://fhir.health.gov.lk/ips/ValueSet/vs-cvd-risk-category"/>
+  <version value="0.1.0"/>
+  <name value="VSCVDRiskCategory"/>
+  <title value="Cardiovascular Risk Categories"/>
+  <status value="active"/>
+  <experimental value="false"/>
+  <date value="2024-03-02T08:11:52+00:00"/>
+  <publisher value="Ministry of Health, Sri Lanka"/>
+  <contact>
+    <name value="Ministry of Health, Sri Lanka"/>
+    <telecom>
+      <system value="url"/>
+      <value value="https://www.health.gov.lk/"/>
+    </telecom>
+    <telecom>
+      <system value="email"/>
+      <value value="digitalhealth@health.gov.lk"/>
+    </telecom>
+  </contact>
+  <contact>
+    <name value="Director, Health Information"/>
+    <telecom>
+      <system value="email"/>
+      <value value="digitalhealth@health.gov.lk"/>
+      <use value="work"/>
+    </telecom>
+  </contact>
+  <description value="Cardiovascular risk is expressed as a percentage"/>
+  <jurisdiction>
+    <coding>
+      <system value="http://unstats.un.org/unsd/methods/m49/m49.htm"/>
+      <code value="001"/>
+      <display value="World"/>
+    </coding>
+  </jurisdiction>
+  <compose>
+    <include>
+      <system value="http://fhir.health.gov.lk/ips/CodeSystem/cs-cvd-risk-category"/>
+    </include>
+  </compose>
+</ValueSet>

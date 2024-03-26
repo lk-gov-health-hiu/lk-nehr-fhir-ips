@@ -1,0 +1,63 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://fhir.health.gov.lk/ips/ImagingStudy/ImagingExample> a fhir:ImagingStudy ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "ImagingExample"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://fhir.health.gov.lk/ips/StructureDefinition/imaging-study"^^xsd:anyURI ;
+       fhir:link <http://fhir.health.gov.lk/ips/StructureDefinition/imaging-study>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: ImagingStudy</b><a name=\"ImagingExample\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource ImagingStudy &quot;ImagingExample&quot; </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-imaging-study.html\">Imaging Study</a></p></div><p><b>status</b>: registered</p><p><b>subject</b>: <a href=\"Patient-HHIMSPatientExample.html\">Patient/HHIMSPatientExample</a> &quot; SMITH&quot;</p><p><b>encounter</b>: <a href=\"Encounter-HHIMSTargetFacilityEncounterExample.html\">Encounter/HHIMSTargetFacilityEncounterExample</a></p><p><b>started</b>: 2023-10-06 13:28:17-0500</p><p><b>basedOn</b>: <a href=\"ServiceRequest-ImagingServiceRequestExample.html\">ServiceRequest/ImagingServiceRequestExample</a></p><p><b>referrer</b>: <a href=\"Practitioner-GeneralPractitionerExample.html\">Practitioner/GeneralPractitionerExample</a> &quot; SMITH&quot;</p><p><b>procedureReference</b>: <a href=\"Procedure-ProceduresExample.html\">Procedure/ProceduresExample</a></p><p><b>location</b>: <a href=\"Location-ProvidersLocationExample.html\">Location/ProvidersLocationExample</a> &quot;Name for the location&quot;</p><p><b>description</b>: Imaging Description</p><blockquote><p><b>series</b></p><p><b>uid</b>: 1.3.6.1.4.1.9590.100.1.2.233356826718900746130806599050232146691</p><p><b>modality</b>: X-Ray Angiography (Details: DICOM code XA = 'X-Ray Angiography', stated as 'null')</p><h3>Performers</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Actor</b></td></tr><tr><td style=\"display: none\">*</td><td><a href=\"Practitioner-GeneralPractitionerExample.html\">Practitioner/GeneralPractitionerExample</a> &quot; SMITH&quot;</td></tr></table></blockquote></div>"
+  ] ; # 
+  fhir:status [ fhir:v "registered"] ; # 
+  fhir:subject [
+     fhir:link <http://fhir.health.gov.lk/ips/Patient/HHIMSPatientExample> ;
+     fhir:reference [ fhir:v "Patient/HHIMSPatientExample" ]
+  ] ; # 
+  fhir:encounter [
+     fhir:link <http://fhir.health.gov.lk/ips/Encounter/HHIMSTargetFacilityEncounterExample> ;
+     fhir:reference [ fhir:v "Encounter/HHIMSTargetFacilityEncounterExample" ]
+  ] ; # 
+  fhir:started [ fhir:v "2023-10-06T13:28:17-05:00"^^xsd:dateTime] ; # 
+  fhir:basedOn ( [
+     fhir:link <http://fhir.health.gov.lk/ips/ServiceRequest/ImagingServiceRequestExample> ;
+     fhir:reference [ fhir:v "ServiceRequest/ImagingServiceRequestExample" ]
+  ] ) ; # 
+  fhir:referrer [
+     fhir:link <http://fhir.health.gov.lk/ips/Practitioner/GeneralPractitionerExample> ;
+     fhir:reference [ fhir:v "Practitioner/GeneralPractitionerExample" ]
+  ] ; # 
+  fhir:procedureReference [
+     fhir:link <http://fhir.health.gov.lk/ips/Procedure/ProceduresExample> ;
+     fhir:reference [ fhir:v "Procedure/ProceduresExample" ]
+  ] ; # 
+  fhir:location [
+     fhir:link <http://fhir.health.gov.lk/ips/Location/ProvidersLocationExample> ;
+     fhir:reference [ fhir:v "Location/ProvidersLocationExample" ]
+  ] ; # 
+  fhir:description [ fhir:v "Imaging Description"] ; # 
+  fhir:series ( [
+     fhir:uid [ fhir:v "1.3.6.1.4.1.9590.100.1.2.233356826718900746130806599050232146691" ] ;
+     fhir:modality [
+       fhir:system [ fhir:v "http://dicom.nema.org/resources/ontology/DCM"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "XA" ]
+     ] ;
+     fhir:performer ( [
+       fhir:actor [
+         fhir:link <http://fhir.health.gov.lk/ips/Practitioner/GeneralPractitionerExample> ;
+         fhir:reference [ fhir:v "Practitioner/GeneralPractitionerExample" ]
+       ]
+     ] )
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

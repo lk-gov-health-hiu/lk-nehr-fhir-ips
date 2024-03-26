@@ -1,0 +1,490 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://fhir.health.gov.lk/ips/CodeSystem/cs-investigation> a fhir:CodeSystem ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "cs-investigation"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>This case-sensitive code system <code>http://fhir.health.gov.lk/ips/CodeSystem/cs-investigation</code> defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style=\"white-space:nowrap\">CLOTTING-PROFILE-BT<a name=\"cs-investigation-CLOTTING-PROFILE-BT\"> </a></td><td>CLOTTING PROFILE - BT</td><td>Needs definition</td></tr><tr><td style=\"white-space:nowrap\">CLOTTING-PROFILE-CT<a name=\"cs-investigation-CLOTTING-PROFILE-CT\"> </a></td><td>CLOTTING PROFILE - CT</td><td>Needs definition</td></tr><tr><td style=\"white-space:nowrap\">CLOTTING-PROFILE-APTT<a name=\"cs-investigation-CLOTTING-PROFILE-APTT\"> </a></td><td>CLOTTING PROFILE - APTT</td><td>Needs definition</td></tr><tr><td style=\"white-space:nowrap\">CLOTTING-PROFILE-INR<a name=\"cs-investigation-CLOTTING-PROFILE-INR\"> </a></td><td>CLOTTING PROFILE - INR</td><td>Needs definition</td></tr><tr><td style=\"white-space:nowrap\">UFR-Albumin<a name=\"cs-investigation-UFR-Albumin\"> </a></td><td>UFR - Albumin</td><td>Needs definition</td></tr><tr><td style=\"white-space:nowrap\">UFR-Pus-cells<a name=\"cs-investigation-UFR-Pus-cells\"> </a></td><td>UFR - Pus cells</td><td>Needs definition</td></tr><tr><td style=\"white-space:nowrap\">UFR-Red-cells<a name=\"cs-investigation-UFR-Red-cells\"> </a></td><td>UFR - Red cells</td><td>Needs definition</td></tr><tr><td style=\"white-space:nowrap\">UFR-Cast<a name=\"cs-investigation-UFR-Cast\"> </a></td><td>UFR - Cast</td><td>Needs definition</td></tr><tr><td style=\"white-space:nowrap\">UFR-Crystals<a name=\"cs-investigation-UFR-Crystals\"> </a></td><td>UFR - Crystals</td><td>Needs definition</td></tr><tr><td style=\"white-space:nowrap\">UFR-Epithelial-cells<a name=\"cs-investigation-UFR-Epithelial-cells\"> </a></td><td>UFR - Epithelial cells</td><td>Needs definition</td></tr><tr><td style=\"white-space:nowrap\">UFR-Yeast<a name=\"cs-investigation-UFR-Yeast\"> </a></td><td>UFR - Yeast</td><td>Needs definition</td></tr><tr><td style=\"white-space:nowrap\">UFR-Organism<a name=\"cs-investigation-UFR-Organism\"> </a></td><td>UFR - Organism</td><td>Needs definition</td></tr><tr><td style=\"white-space:nowrap\">Urine-Microalburin<a name=\"cs-investigation-Urine-Microalburin\"> </a></td><td>Urine Microalburin</td><td>Needs definition</td></tr><tr><td style=\"white-space:nowrap\">Urine-AIbumin-Creatinine-Ratio<a name=\"cs-investigation-Urine-AIbumin-Creatinine-Ratio\"> </a></td><td>Urine AIbumin Creatinine Ratio</td><td>Needs definition</td></tr><tr><td style=\"white-space:nowrap\">Virology-Covid-Rapid-antigen<a name=\"cs-investigation-Virology-Covid-Rapid-antigen\"> </a></td><td>Virology - Covid Rapid antigen</td><td>Needs definition</td></tr><tr><td style=\"white-space:nowrap\">Thyroid-Function-Test-TSH<a name=\"cs-investigation-Thyroid-Function-Test-TSH\"> </a></td><td>Thyroid Function Test - TSH</td><td>Needs definition</td></tr><tr><td style=\"white-space:nowrap\">Thyroid-Function-Test-FT3<a name=\"cs-investigation-Thyroid-Function-Test-FT3\"> </a></td><td>Thyroid Function Test - FT3</td><td>Needs definition</td></tr><tr><td style=\"white-space:nowrap\">Thyroid-Function-Test-FT4<a name=\"cs-investigation-Thyroid-Function-Test-FT4\"> </a></td><td>Thyroid Function Test - FT4</td><td>Needs definition</td></tr><tr><td style=\"white-space:nowrap\">Sputum-AFB-Sputum-AFB-Sample-1<a name=\"cs-investigation-Sputum-AFB-Sputum-AFB-Sample-1\"> </a></td><td>Sputum AFB - Sputum AFB Sample 1</td><td>Needs definition</td></tr><tr><td style=\"white-space:nowrap\">Sputum-AFB-Sputum-AFB-Sample-2<a name=\"cs-investigation-Sputum-AFB-Sputum-AFB-Sample-2\"> </a></td><td>Sputum AFB - Sputum AFB Sample 2</td><td>Needs definition</td></tr><tr><td style=\"white-space:nowrap\">Sputum-AFB-Sputum-AFB-Sample-3<a name=\"cs-investigation-Sputum-AFB-Sputum-AFB-Sample-3\"> </a></td><td>Sputum AFB - Sputum AFB Sample 3</td><td>Needs definition</td></tr><tr><td style=\"white-space:nowrap\">Serum-electrolyte-S.-Na<a name=\"cs-investigation-Serum-electrolyte-S.46-Na\"> </a></td><td>Serum electrolyte - S. Na</td><td>Needs definition</td></tr><tr><td style=\"white-space:nowrap\">Serum-electrolyte-S.-K<a name=\"cs-investigation-Serum-electrolyte-S.46-K\"> </a></td><td>Serum electrolyte - S. K</td><td>Needs definition</td></tr><tr><td style=\"white-space:nowrap\">Serum-electrolyte-Serum-Chloride<a name=\"cs-investigation-Serum-electrolyte-Serum-Chloride\"> </a></td><td>Serum electrolyte - Serum Chloride</td><td>Needs definition</td></tr><tr><td style=\"white-space:nowrap\">Lipid-profile-Total-Cholesterol<a name=\"cs-investigation-Lipid-profile-Total-Cholesterol\"> </a></td><td>Lipid profile - Total Cholesterol</td><td>Needs definition</td></tr><tr><td style=\"white-space:nowrap\">Lipid-profile-HDL-Cholesterol<a name=\"cs-investigation-Lipid-profile-HDL-Cholesterol\"> </a></td><td>Lipid profile - HDL Cholesterol</td><td>Needs definition</td></tr><tr><td style=\"white-space:nowrap\">Lipid-profile-LDL-Cholesterol<a name=\"cs-investigation-Lipid-profile-LDL-Cholesterol\"> </a></td><td>Lipid profile - LDL Cholesterol</td><td>Needs definition</td></tr><tr><td style=\"white-space:nowrap\">Lipid-profile-T.-Cho/HDL-Ratio<a name=\"cs-investigation-Lipid-profile-T.46-Cho.47HDL-Ratio\"> </a></td><td>Lipid profile - T. Cho/HDL Ratio</td><td>Needs definition</td></tr><tr><td style=\"white-space:nowrap\">Lipid-profile-Triglyceride<a name=\"cs-investigation-Lipid-profile-Triglyceride\"> </a></td><td>Lipid profile - Triglyceride</td><td>Needs definition</td></tr><tr><td style=\"white-space:nowrap\">Lipid-profile-VLDL<a name=\"cs-investigation-Lipid-profile-VLDL\"> </a></td><td>Lipid profile - VLDL</td><td>Needs definition</td></tr><tr><td style=\"white-space:nowrap\">Hepatitis-Screening-Hep-B-Surface-Antigen<a name=\"cs-investigation-Hepatitis-Screening-Hep-B-Surface-Antigen\"> </a></td><td>Hepatitis Screening - Hep B Surface Antigen</td><td>Needs definition</td></tr><tr><td style=\"white-space:nowrap\">Hepatitis-Screening-Hep-C-Antibody<a name=\"cs-investigation-Hepatitis-Screening-Hep-C-Antibody\"> </a></td><td>Hepatitis Screening - Hep C Antibody</td><td>Needs definition</td></tr><tr><td style=\"white-space:nowrap\">Hepatitis-Screening-Hep-A-Antibody<a name=\"cs-investigation-Hepatitis-Screening-Hep-A-Antibody\"> </a></td><td>Hepatitis Screening - Hep A Antibody</td><td>Needs definition</td></tr><tr><td style=\"white-space:nowrap\">HbA1c-HbA1c<a name=\"cs-investigation-HbA1c-HbA1c\"> </a></td><td>HbA1c - HbA1c</td><td>Needs definition</td></tr><tr><td style=\"white-space:nowrap\">FBC-BAS%<a name=\"cs-investigation-FBC-BAS.37\"> </a></td><td>FBC - BAS%</td><td>Needs definition</td></tr><tr><td style=\"white-space:nowrap\">FBC-EOS%<a name=\"cs-investigation-FBC-EOS.37\"> </a></td><td>FBC - EOS%</td><td>Needs definition</td></tr><tr><td style=\"white-space:nowrap\">FBC-LYM%<a name=\"cs-investigation-FBC-LYM.37\"> </a></td><td>FBC - LYM%</td><td>Needs definition</td></tr><tr><td style=\"white-space:nowrap\">FBC-MON%<a name=\"cs-investigation-FBC-MON.37\"> </a></td><td>FBC - MON%</td><td>Needs definition</td></tr><tr><td style=\"white-space:nowrap\">FBC-NEU%<a name=\"cs-investigation-FBC-NEU.37\"> </a></td><td>FBC - NEU%</td><td>Needs definition</td></tr><tr><td style=\"white-space:nowrap\">FBC-MCV-fl<a name=\"cs-investigation-FBC-MCV-fl\"> </a></td><td>FBC - MCV (fl)</td><td>Needs definition</td></tr><tr><td style=\"white-space:nowrap\">FBC-PLT<a name=\"cs-investigation-FBC-PLT\"> </a></td><td>FBC - PLT</td><td>Needs definition</td></tr><tr><td style=\"white-space:nowrap\">FBC-WBC-th/uL<a name=\"cs-investigation-FBC-WBC-th.47uL\"> </a></td><td>FBC - WBC (th/uL)</td><td>Needs definition</td></tr><tr><td style=\"white-space:nowrap\">FBC-BAS#<a name=\"cs-investigation-FBC-BAS.35\"> </a></td><td>FBC - BAS#</td><td>Needs definition</td></tr><tr><td style=\"white-space:nowrap\">FBC-NEU#<a name=\"cs-investigation-FBC-NEU.35\"> </a></td><td>FBC - NEU#</td><td>Needs definition</td></tr><tr><td style=\"white-space:nowrap\">FBC-EOS#<a name=\"cs-investigation-FBC-EOS.35\"> </a></td><td>FBC - EOS#</td><td>Needs definition</td></tr><tr><td style=\"white-space:nowrap\">FBC-LYM#<a name=\"cs-investigation-FBC-LYM.35\"> </a></td><td>FBC - LYM#</td><td>Needs definition</td></tr><tr><td style=\"white-space:nowrap\">FBC-MON#<a name=\"cs-investigation-FBC-MON.35\"> </a></td><td>FBC - MON#</td><td>Needs definition</td></tr><tr><td style=\"white-space:nowrap\">FBC-RBC<a name=\"cs-investigation-FBC-RBC\"> </a></td><td>FBC - RBC</td><td>Needs definition</td></tr><tr><td style=\"white-space:nowrap\">Haemoglobin-HPLC-HGB<a name=\"cs-investigation-Haemoglobin-HPLC-HGB\"> </a></td><td>Haemoglobin HPLC - HGB</td><td>Needs definition</td></tr><tr><td style=\"white-space:nowrap\">Haemoglobin-HPLC-MCH<a name=\"cs-investigation-Haemoglobin-HPLC-MCH\"> </a></td><td>Haemoglobin HPLC - MCH</td><td>Needs definition</td></tr><tr><td style=\"white-space:nowrap\">Haemoglobin-HPLC-MCHC<a name=\"cs-investigation-Haemoglobin-HPLC-MCHC\"> </a></td><td>Haemoglobin HPLC - MCHC</td><td>Needs definition</td></tr><tr><td style=\"white-space:nowrap\">Haemoglobin-HPLC-RDW-CV<a name=\"cs-investigation-Haemoglobin-HPLC-RDW-CV\"> </a></td><td>Haemoglobin HPLC - RDW-CV</td><td>Needs definition</td></tr><tr><td style=\"white-space:nowrap\">Haemoglobin-HPLC-RDW-SD<a name=\"cs-investigation-Haemoglobin-HPLC-RDW-SD\"> </a></td><td>Haemoglobin HPLC - RDW-SD</td><td>Needs definition</td></tr><tr><td style=\"white-space:nowrap\">Haemoglobin-HPLC-HCT<a name=\"cs-investigation-Haemoglobin-HPLC-HCT\"> </a></td><td>Haemoglobin HPLC - HCT</td><td>Needs definition</td></tr><tr><td style=\"white-space:nowrap\">Haemoglobin-HPLC-MPV<a name=\"cs-investigation-Haemoglobin-HPLC-MPV\"> </a></td><td>Haemoglobin HPLC - MPV</td><td>Needs definition</td></tr><tr><td style=\"white-space:nowrap\">Haemoglobin-HPLC-PDW<a name=\"cs-investigation-Haemoglobin-HPLC-PDW\"> </a></td><td>Haemoglobin HPLC - PDW</td><td>Needs definition</td></tr><tr><td style=\"white-space:nowrap\">Haemoglobin-HPLC-PCT<a name=\"cs-investigation-Haemoglobin-HPLC-PCT\"> </a></td><td>Haemoglobin HPLC - PCT</td><td>Needs definition</td></tr><tr><td style=\"white-space:nowrap\">Haemoglobin-HPLC-PLCC<a name=\"cs-investigation-Haemoglobin-HPLC-PLCC\"> </a></td><td>Haemoglobin HPLC - PLCC</td><td>Needs definition</td></tr><tr><td style=\"white-space:nowrap\">Haemoglobin-HPLC-PLCR<a name=\"cs-investigation-Haemoglobin-HPLC-PLCR\"> </a></td><td>Haemoglobin HPLC - PLCR</td><td>Needs definition</td></tr><tr><td style=\"white-space:nowrap\">ESR-ESR-1st-Hour<a name=\"cs-investigation-ESR-ESR-1st-Hour\"> </a></td><td>ESR - ESR 1st Hour</td><td>Needs definition</td></tr><tr><td style=\"white-space:nowrap\">Dengue-Test-NS1-Antigen<a name=\"cs-investigation-Dengue-Test-NS1-Antigen\"> </a></td><td>Dengue Test - NS1 Antigen</td><td>Needs definition</td></tr><tr><td style=\"white-space:nowrap\">Dengue-Test-Dengue-Ig-M<a name=\"cs-investigation-Dengue-Test-Dengue-Ig-M\"> </a></td><td>Dengue Test - Dengue Ig M</td><td>Needs definition</td></tr><tr><td style=\"white-space:nowrap\">Dengue-Test-Dengue-Ig-G<a name=\"cs-investigation-Dengue-Test-Dengue-Ig-G\"> </a></td><td>Dengue Test - Dengue Ig G</td><td>Needs definition</td></tr><tr><td style=\"white-space:nowrap\">Blood-Sugar-FBS<a name=\"cs-investigation-Blood-Sugar-FBS\"> </a></td><td>Blood Sugar - FBS</td><td>Needs definition</td></tr><tr><td style=\"white-space:nowrap\">HbA1c-HBA1C<a name=\"cs-investigation-HbA1c-HBA1C\"> </a></td><td>HbA1c - HBA1C</td><td>Needs definition</td></tr><tr><td style=\"white-space:nowrap\">HbA1c-PPBS<a name=\"cs-investigation-HbA1c-PPBS\"> </a></td><td>HbA1c - PPBS</td><td>Needs definition</td></tr><tr><td style=\"white-space:nowrap\">HbA1c-RBS<a name=\"cs-investigation-HbA1c-RBS\"> </a></td><td>HbA1c - RBS</td><td>Needs definition</td></tr><tr><td style=\"white-space:nowrap\">HbA1c-OGTT<a name=\"cs-investigation-HbA1c-OGTT\"> </a></td><td>HbA1c - OGTT</td><td>Needs definition</td></tr><tr><td style=\"white-space:nowrap\">Serum-Creatinine-S-Creatinine<a name=\"cs-investigation-Serum-Creatinine-S-Creatinine\"> </a></td><td>Serum Creatinine - S Creatinine</td><td>Needs definition</td></tr><tr><td style=\"white-space:nowrap\">Blood-Urea-Blood-Urea<a name=\"cs-investigation-Blood-Urea-Blood-Urea\"> </a></td><td>Blood Urea - Blood Urea</td><td>Needs definition</td></tr><tr><td style=\"white-space:nowrap\">S-Uric-Acid<a name=\"cs-investigation-S-Uric-Acid\"> </a></td><td>S Uric Acid</td><td>Needs definition</td></tr><tr><td style=\"white-space:nowrap\">Serum-Calcium-Total<a name=\"cs-investigation-Serum-Calcium-Total\"> </a></td><td>Serum Calcium-Total</td><td>Needs definition</td></tr><tr><td style=\"white-space:nowrap\">Serum-Magnesium<a name=\"cs-investigation-Serum-Magnesium\"> </a></td><td>Serum Magnesium</td><td>Needs definition</td></tr><tr><td style=\"white-space:nowrap\">Serum-Phosphorous<a name=\"cs-investigation-Serum-Phosphorous\"> </a></td><td>Serum Phosphorous</td><td>Needs definition</td></tr><tr><td style=\"white-space:nowrap\">Corrected-Calcium<a name=\"cs-investigation-Corrected-Calcium\"> </a></td><td>Corrected Calcium</td><td>Needs definition</td></tr><tr><td style=\"white-space:nowrap\">CRP-C-Reactive-Protein<a name=\"cs-investigation-CRP-C-Reactive-Protein\"> </a></td><td>CRP - C Reactive Protein</td><td>Needs definition</td></tr><tr><td style=\"white-space:nowrap\">S-LDH-LDH<a name=\"cs-investigation-S-LDH-LDH\"> </a></td><td>S LDH - LDH</td><td>Needs definition</td></tr><tr><td style=\"white-space:nowrap\">Creatine-Kinase-Creatinine-Kinase<a name=\"cs-investigation-Creatine-Kinase-Creatinine-Kinase\"> </a></td><td>Creatine Kinase - Creatinine Kinase</td><td>Needs definition</td></tr><tr><td style=\"white-space:nowrap\">Stool-Full-Report<a name=\"cs-investigation-Stool-Full-Report\"> </a></td><td>Stool Full Report</td><td>Needs definition</td></tr><tr><td style=\"white-space:nowrap\">S.-Vitamin-D-Level<a name=\"cs-investigation-S.46-Vitamin-D-Level\"> </a></td><td>S. Vitamin D Level</td><td>Needs definition</td></tr><tr><td style=\"white-space:nowrap\">Rheumaloid-Facior<a name=\"cs-investigation-Rheumaloid-Facior\"> </a></td><td>Rheumaloid Facior</td><td>Needs definition</td></tr><tr><td style=\"white-space:nowrap\">Blood-Picture<a name=\"cs-investigation-Blood-Picture\"> </a></td><td>Blood Picture</td><td>Needs definition</td></tr><tr><td style=\"white-space:nowrap\">S-Prostate-Specific-Antigen<a name=\"cs-investigation-S-Prostate-Specific-Antigen\"> </a></td><td>S Prostate Specific Antigen</td><td>Needs definition</td></tr><tr><td style=\"white-space:nowrap\">serum-Amylase-units/L<a name=\"cs-investigation-serum-Amylase-units.47L\"> </a></td><td>serum Amylase (units/L)</td><td>Needs definition</td></tr><tr><td style=\"white-space:nowrap\">Rheumatoid-Factor<a name=\"cs-investigation-Rheumatoid-Factor\"> </a></td><td>Rheumatoid Factor</td><td>Needs definition</td></tr><tr><td style=\"white-space:nowrap\">Iron-Studies<a name=\"cs-investigation-Iron-Studies\"> </a></td><td>Iron Studies</td><td>Needs definition</td></tr><tr><td style=\"white-space:nowrap\">S.-Uric-Acid<a name=\"cs-investigation-S.46-Uric-Acid\"> </a></td><td>S. Uric Acid</td><td>Needs definition</td></tr><tr><td style=\"white-space:nowrap\">Liver-profile-SGOT-U/L<a name=\"cs-investigation-Liver-profile-SGOT-U.47L\"> </a></td><td>Liver profile - SGOT U/L</td><td>Needs definition</td></tr><tr><td style=\"white-space:nowrap\">SGOT/PT-SGPT-U/L<a name=\"cs-investigation-SGOT.47PT-SGPT-U.47L\"> </a></td><td>SGOT/PT - SGPT U/L</td><td>Needs definition</td></tr><tr><td style=\"white-space:nowrap\">S-Alkaline-Phosphatasee-Alakaline-Phosphatase-IU/L<a name=\"cs-investigation-S-Alkaline-Phosphatasee-Alakaline-Phosphatase-IU.47L\"> </a></td><td>S Alkaline Phosphatasee - Alakaline Phosphatase IU/L</td><td>Needs definition</td></tr><tr><td style=\"white-space:nowrap\">S.-Bilirubin-Bilirubin-Direct-mg/dl<a name=\"cs-investigation-S.46-Bilirubin-Bilirubin-Direct-mg.47dl\"> </a></td><td>S. Bilirubin - Bilirubin Direct mg/dl</td><td>Needs definition</td></tr><tr><td style=\"white-space:nowrap\">S.-Bilirubin-Bilirubin-Total-mg/dl<a name=\"cs-investigation-S.46-Bilirubin-Bilirubin-Total-mg.47dl\"> </a></td><td>S. Bilirubin - Bilirubin Total mg/dl</td><td>Needs definition</td></tr><tr><td style=\"white-space:nowrap\">Serum-Prolein-Total-Protein-g/dl<a name=\"cs-investigation-Serum-Prolein-Total-Protein-g.47dl\"> </a></td><td>Serum Prolein - Total Protein g/dl</td><td>Needs definition</td></tr><tr><td style=\"white-space:nowrap\">S.-Amilase-Bilirubin-Indirect-mg/dl<a name=\"cs-investigation-S.46-Amilase-Bilirubin-Indirect-mg.47dl\"> </a></td><td>S. Amilase - Bilirubin Indirect mg/dl</td><td>Needs definition</td></tr><tr><td style=\"white-space:nowrap\">S.-ALP-Serum-albumin<a name=\"cs-investigation-S.46-ALP-Serum-albumin\"> </a></td><td>S. ALP - Serum albumin</td><td>Needs definition</td></tr><tr><td style=\"white-space:nowrap\">S.-Electrolyte-Globulin<a name=\"cs-investigation-S.46-Electrolyte-Globulin\"> </a></td><td>S. Electrolyte - Globulin</td><td>Needs definition</td></tr><tr><td style=\"white-space:nowrap\">Albumin-/-Globulin-Ratio<a name=\"cs-investigation-Albumin-.47-Globulin-Ratio\"> </a></td><td>Albumin / Globulin Ratio</td><td>Needs definition</td></tr><tr><td style=\"white-space:nowrap\">S-Gamma-GT-S-Gamma-GT<a name=\"cs-investigation-S-Gamma-GT-S-Gamma-GT\"> </a></td><td>S Gamma GT - S Gamma GT</td><td>Needs definition</td></tr><tr><td style=\"white-space:nowrap\">Liver-Enzymes<a name=\"cs-investigation-Liver-Enzymes\"> </a></td><td>Liver Enzymes</td><td>Needs definition</td></tr><tr><td style=\"white-space:nowrap\">Alpha-fetoprotein<a name=\"cs-investigation-Alpha-fetoprotein\"> </a></td><td>Alpha-fetoprotein</td><td>Needs definition</td></tr><tr><td style=\"white-space:nowrap\">Hepatitis-Screening<a name=\"cs-investigation-Hepatitis-Screening\"> </a></td><td>Hepatitis Screening</td><td>Needs definition</td></tr><tr><td style=\"white-space:nowrap\">CSF<a name=\"cs-investigation-CSF\"> </a></td><td>CSF</td><td>Needs definition</td></tr><tr><td style=\"white-space:nowrap\">Renal-Function-Tests<a name=\"cs-investigation-Renal-Function-Tests\"> </a></td><td>Renal Function Tests</td><td>Needs definition</td></tr><tr><td style=\"white-space:nowrap\">Stool-examination<a name=\"cs-investigation-Stool-examination\"> </a></td><td>Stool examination</td><td>Needs definition</td></tr><tr><td style=\"white-space:nowrap\">Urinalysis<a name=\"cs-investigation-Urinalysis\"> </a></td><td>Urinalysis</td><td>Needs definition</td></tr><tr><td style=\"white-space:nowrap\">Urine-for-BJP<a name=\"cs-investigation-Urine-for-BJP\"> </a></td><td>Urine for BJP</td><td>Needs definition</td></tr><tr><td style=\"white-space:nowrap\">Cytology<a name=\"cs-investigation-Cytology\"> </a></td><td>Cytology</td><td>Needs definition</td></tr><tr><td style=\"white-space:nowrap\">Antibody-testing<a name=\"cs-investigation-Antibody-testing\"> </a></td><td>Antibody testing</td><td>Needs definition</td></tr><tr><td style=\"white-space:nowrap\">Biochem-basic-tests<a name=\"cs-investigation-Biochem-basic-tests\"> </a></td><td>Biochem - basic tests</td><td>Needs definition</td></tr></table></div>"
+  ] ; # 
+  fhir:url [ fhir:v "http://fhir.health.gov.lk/ips/CodeSystem/cs-investigation"^^xsd:anyURI] ; # 
+  fhir:version [ fhir:v "0.1.0"] ; # 
+  fhir:name [ fhir:v "CSInvestigations"] ; # 
+  fhir:title [ fhir:v "Investigations"] ; # 
+  fhir:status [ fhir:v "active"] ; # 
+  fhir:experimental [ fhir:v "false"^^xsd:boolean] ; # 
+  fhir:date [ fhir:v "2024-03-12T13:49:50+00:00"^^xsd:dateTime] ; # 
+  fhir:publisher [ fhir:v "Ministry of Health, Sri Lanka"] ; # 
+  fhir:contact ( [
+     fhir:name [ fhir:v "Ministry of Health, Sri Lanka" ] ;
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "https://www.health.gov.lk/" ]
+     ] [
+       fhir:system [ fhir:v "email" ] ;
+       fhir:value [ fhir:v "digitalhealth@health.gov.lk" ]
+     ] )
+  ] [
+     fhir:name [ fhir:v "Director, Health Information" ] ;
+     fhir:telecom ( [
+       fhir:system [ fhir:v "email" ] ;
+       fhir:value [ fhir:v "digitalhealth@health.gov.lk" ] ;
+       fhir:use [ fhir:v "work" ]
+     ] )
+  ] ) ; # 
+  fhir:description [ fhir:v "Investigations"] ; # 
+  fhir:jurisdiction ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://unstats.un.org/unsd/methods/m49/m49.htm"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "001" ] ;
+       fhir:display [ fhir:v "World" ]
+     ] )
+  ] ) ; # 
+  fhir:caseSensitive [ fhir:v "true"^^xsd:boolean] ; # 
+  fhir:content [ fhir:v "complete"] ; # 
+  fhir:count [ fhir:v "109"^^xsd:nonNegativeInteger] ; # 
+  fhir:concept ( [
+     fhir:code [ fhir:v "CLOTTING-PROFILE-BT" ] ;
+     fhir:display [ fhir:v "CLOTTING PROFILE - BT" ] ;
+     fhir:definition [ fhir:v "Needs definition" ]
+  ] [
+     fhir:code [ fhir:v "CLOTTING-PROFILE-CT" ] ;
+     fhir:display [ fhir:v "CLOTTING PROFILE - CT" ] ;
+     fhir:definition [ fhir:v "Needs definition" ]
+  ] [
+     fhir:code [ fhir:v "CLOTTING-PROFILE-APTT" ] ;
+     fhir:display [ fhir:v "CLOTTING PROFILE - APTT" ] ;
+     fhir:definition [ fhir:v "Needs definition" ]
+  ] [
+     fhir:code [ fhir:v "CLOTTING-PROFILE-INR" ] ;
+     fhir:display [ fhir:v "CLOTTING PROFILE - INR" ] ;
+     fhir:definition [ fhir:v "Needs definition" ]
+  ] [
+     fhir:code [ fhir:v "UFR-Albumin" ] ;
+     fhir:display [ fhir:v "UFR - Albumin" ] ;
+     fhir:definition [ fhir:v "Needs definition" ]
+  ] [
+     fhir:code [ fhir:v "UFR-Pus-cells" ] ;
+     fhir:display [ fhir:v "UFR - Pus cells" ] ;
+     fhir:definition [ fhir:v "Needs definition" ]
+  ] [
+     fhir:code [ fhir:v "UFR-Red-cells" ] ;
+     fhir:display [ fhir:v "UFR - Red cells" ] ;
+     fhir:definition [ fhir:v "Needs definition" ]
+  ] [
+     fhir:code [ fhir:v "UFR-Cast" ] ;
+     fhir:display [ fhir:v "UFR - Cast" ] ;
+     fhir:definition [ fhir:v "Needs definition" ]
+  ] [
+     fhir:code [ fhir:v "UFR-Crystals" ] ;
+     fhir:display [ fhir:v "UFR - Crystals" ] ;
+     fhir:definition [ fhir:v "Needs definition" ]
+  ] [
+     fhir:code [ fhir:v "UFR-Epithelial-cells" ] ;
+     fhir:display [ fhir:v "UFR - Epithelial cells" ] ;
+     fhir:definition [ fhir:v "Needs definition" ]
+  ] [
+     fhir:code [ fhir:v "UFR-Yeast" ] ;
+     fhir:display [ fhir:v "UFR - Yeast" ] ;
+     fhir:definition [ fhir:v "Needs definition" ]
+  ] [
+     fhir:code [ fhir:v "UFR-Organism" ] ;
+     fhir:display [ fhir:v "UFR - Organism" ] ;
+     fhir:definition [ fhir:v "Needs definition" ]
+  ] [
+     fhir:code [ fhir:v "Urine-Microalburin" ] ;
+     fhir:display [ fhir:v "Urine Microalburin" ] ;
+     fhir:definition [ fhir:v "Needs definition" ]
+  ] [
+     fhir:code [ fhir:v "Urine-AIbumin-Creatinine-Ratio" ] ;
+     fhir:display [ fhir:v "Urine AIbumin Creatinine Ratio" ] ;
+     fhir:definition [ fhir:v "Needs definition" ]
+  ] [
+     fhir:code [ fhir:v "Virology-Covid-Rapid-antigen" ] ;
+     fhir:display [ fhir:v "Virology - Covid Rapid antigen" ] ;
+     fhir:definition [ fhir:v "Needs definition" ]
+  ] [
+     fhir:code [ fhir:v "Thyroid-Function-Test-TSH" ] ;
+     fhir:display [ fhir:v "Thyroid Function Test - TSH" ] ;
+     fhir:definition [ fhir:v "Needs definition" ]
+  ] [
+     fhir:code [ fhir:v "Thyroid-Function-Test-FT3" ] ;
+     fhir:display [ fhir:v "Thyroid Function Test - FT3" ] ;
+     fhir:definition [ fhir:v "Needs definition" ]
+  ] [
+     fhir:code [ fhir:v "Thyroid-Function-Test-FT4" ] ;
+     fhir:display [ fhir:v "Thyroid Function Test - FT4" ] ;
+     fhir:definition [ fhir:v "Needs definition" ]
+  ] [
+     fhir:code [ fhir:v "Sputum-AFB-Sputum-AFB-Sample-1" ] ;
+     fhir:display [ fhir:v "Sputum AFB - Sputum AFB Sample 1" ] ;
+     fhir:definition [ fhir:v "Needs definition" ]
+  ] [
+     fhir:code [ fhir:v "Sputum-AFB-Sputum-AFB-Sample-2" ] ;
+     fhir:display [ fhir:v "Sputum AFB - Sputum AFB Sample 2" ] ;
+     fhir:definition [ fhir:v "Needs definition" ]
+  ] [
+     fhir:code [ fhir:v "Sputum-AFB-Sputum-AFB-Sample-3" ] ;
+     fhir:display [ fhir:v "Sputum AFB - Sputum AFB Sample 3" ] ;
+     fhir:definition [ fhir:v "Needs definition" ]
+  ] [
+     fhir:code [ fhir:v "Serum-electrolyte-S.-Na" ] ;
+     fhir:display [ fhir:v "Serum electrolyte - S. Na" ] ;
+     fhir:definition [ fhir:v "Needs definition" ]
+  ] [
+     fhir:code [ fhir:v "Serum-electrolyte-S.-K" ] ;
+     fhir:display [ fhir:v "Serum electrolyte - S. K" ] ;
+     fhir:definition [ fhir:v "Needs definition" ]
+  ] [
+     fhir:code [ fhir:v "Serum-electrolyte-Serum-Chloride" ] ;
+     fhir:display [ fhir:v "Serum electrolyte - Serum Chloride" ] ;
+     fhir:definition [ fhir:v "Needs definition" ]
+  ] [
+     fhir:code [ fhir:v "Lipid-profile-Total-Cholesterol" ] ;
+     fhir:display [ fhir:v "Lipid profile - Total Cholesterol" ] ;
+     fhir:definition [ fhir:v "Needs definition" ]
+  ] [
+     fhir:code [ fhir:v "Lipid-profile-HDL-Cholesterol" ] ;
+     fhir:display [ fhir:v "Lipid profile - HDL Cholesterol" ] ;
+     fhir:definition [ fhir:v "Needs definition" ]
+  ] [
+     fhir:code [ fhir:v "Lipid-profile-LDL-Cholesterol" ] ;
+     fhir:display [ fhir:v "Lipid profile - LDL Cholesterol" ] ;
+     fhir:definition [ fhir:v "Needs definition" ]
+  ] [
+     fhir:code [ fhir:v "Lipid-profile-T.-Cho/HDL-Ratio" ] ;
+     fhir:display [ fhir:v "Lipid profile - T. Cho/HDL Ratio" ] ;
+     fhir:definition [ fhir:v "Needs definition" ]
+  ] [
+     fhir:code [ fhir:v "Lipid-profile-Triglyceride" ] ;
+     fhir:display [ fhir:v "Lipid profile - Triglyceride" ] ;
+     fhir:definition [ fhir:v "Needs definition" ]
+  ] [
+     fhir:code [ fhir:v "Lipid-profile-VLDL" ] ;
+     fhir:display [ fhir:v "Lipid profile - VLDL" ] ;
+     fhir:definition [ fhir:v "Needs definition" ]
+  ] [
+     fhir:code [ fhir:v "Hepatitis-Screening-Hep-B-Surface-Antigen" ] ;
+     fhir:display [ fhir:v "Hepatitis Screening - Hep B Surface Antigen" ] ;
+     fhir:definition [ fhir:v "Needs definition" ]
+  ] [
+     fhir:code [ fhir:v "Hepatitis-Screening-Hep-C-Antibody" ] ;
+     fhir:display [ fhir:v "Hepatitis Screening - Hep C Antibody" ] ;
+     fhir:definition [ fhir:v "Needs definition" ]
+  ] [
+     fhir:code [ fhir:v "Hepatitis-Screening-Hep-A-Antibody" ] ;
+     fhir:display [ fhir:v "Hepatitis Screening - Hep A Antibody" ] ;
+     fhir:definition [ fhir:v "Needs definition" ]
+  ] [
+     fhir:code [ fhir:v "HbA1c-HbA1c" ] ;
+     fhir:display [ fhir:v "HbA1c - HbA1c" ] ;
+     fhir:definition [ fhir:v "Needs definition" ]
+  ] [
+     fhir:code [ fhir:v "FBC-BAS%" ] ;
+     fhir:display [ fhir:v "FBC - BAS%" ] ;
+     fhir:definition [ fhir:v "Needs definition" ]
+  ] [
+     fhir:code [ fhir:v "FBC-EOS%" ] ;
+     fhir:display [ fhir:v "FBC - EOS%" ] ;
+     fhir:definition [ fhir:v "Needs definition" ]
+  ] [
+     fhir:code [ fhir:v "FBC-LYM%" ] ;
+     fhir:display [ fhir:v "FBC - LYM%" ] ;
+     fhir:definition [ fhir:v "Needs definition" ]
+  ] [
+     fhir:code [ fhir:v "FBC-MON%" ] ;
+     fhir:display [ fhir:v "FBC - MON%" ] ;
+     fhir:definition [ fhir:v "Needs definition" ]
+  ] [
+     fhir:code [ fhir:v "FBC-NEU%" ] ;
+     fhir:display [ fhir:v "FBC - NEU%" ] ;
+     fhir:definition [ fhir:v "Needs definition" ]
+  ] [
+     fhir:code [ fhir:v "FBC-MCV-fl" ] ;
+     fhir:display [ fhir:v "FBC - MCV (fl)" ] ;
+     fhir:definition [ fhir:v "Needs definition" ]
+  ] [
+     fhir:code [ fhir:v "FBC-PLT" ] ;
+     fhir:display [ fhir:v "FBC - PLT" ] ;
+     fhir:definition [ fhir:v "Needs definition" ]
+  ] [
+     fhir:code [ fhir:v "FBC-WBC-th/uL" ] ;
+     fhir:display [ fhir:v "FBC - WBC (th/uL)" ] ;
+     fhir:definition [ fhir:v "Needs definition" ]
+  ] [
+     fhir:code [ fhir:v "FBC-BAS#" ] ;
+     fhir:display [ fhir:v "FBC - BAS#" ] ;
+     fhir:definition [ fhir:v "Needs definition" ]
+  ] [
+     fhir:code [ fhir:v "FBC-NEU#" ] ;
+     fhir:display [ fhir:v "FBC - NEU#" ] ;
+     fhir:definition [ fhir:v "Needs definition" ]
+  ] [
+     fhir:code [ fhir:v "FBC-EOS#" ] ;
+     fhir:display [ fhir:v "FBC - EOS#" ] ;
+     fhir:definition [ fhir:v "Needs definition" ]
+  ] [
+     fhir:code [ fhir:v "FBC-LYM#" ] ;
+     fhir:display [ fhir:v "FBC - LYM#" ] ;
+     fhir:definition [ fhir:v "Needs definition" ]
+  ] [
+     fhir:code [ fhir:v "FBC-MON#" ] ;
+     fhir:display [ fhir:v "FBC - MON#" ] ;
+     fhir:definition [ fhir:v "Needs definition" ]
+  ] [
+     fhir:code [ fhir:v "FBC-RBC" ] ;
+     fhir:display [ fhir:v "FBC - RBC" ] ;
+     fhir:definition [ fhir:v "Needs definition" ]
+  ] [
+     fhir:code [ fhir:v "Haemoglobin-HPLC-HGB" ] ;
+     fhir:display [ fhir:v "Haemoglobin HPLC - HGB" ] ;
+     fhir:definition [ fhir:v "Needs definition" ]
+  ] [
+     fhir:code [ fhir:v "Haemoglobin-HPLC-MCH" ] ;
+     fhir:display [ fhir:v "Haemoglobin HPLC - MCH" ] ;
+     fhir:definition [ fhir:v "Needs definition" ]
+  ] [
+     fhir:code [ fhir:v "Haemoglobin-HPLC-MCHC" ] ;
+     fhir:display [ fhir:v "Haemoglobin HPLC - MCHC" ] ;
+     fhir:definition [ fhir:v "Needs definition" ]
+  ] [
+     fhir:code [ fhir:v "Haemoglobin-HPLC-RDW-CV" ] ;
+     fhir:display [ fhir:v "Haemoglobin HPLC - RDW-CV" ] ;
+     fhir:definition [ fhir:v "Needs definition" ]
+  ] [
+     fhir:code [ fhir:v "Haemoglobin-HPLC-RDW-SD" ] ;
+     fhir:display [ fhir:v "Haemoglobin HPLC - RDW-SD" ] ;
+     fhir:definition [ fhir:v "Needs definition" ]
+  ] [
+     fhir:code [ fhir:v "Haemoglobin-HPLC-HCT" ] ;
+     fhir:display [ fhir:v "Haemoglobin HPLC - HCT" ] ;
+     fhir:definition [ fhir:v "Needs definition" ]
+  ] [
+     fhir:code [ fhir:v "Haemoglobin-HPLC-MPV" ] ;
+     fhir:display [ fhir:v "Haemoglobin HPLC - MPV" ] ;
+     fhir:definition [ fhir:v "Needs definition" ]
+  ] [
+     fhir:code [ fhir:v "Haemoglobin-HPLC-PDW" ] ;
+     fhir:display [ fhir:v "Haemoglobin HPLC - PDW" ] ;
+     fhir:definition [ fhir:v "Needs definition" ]
+  ] [
+     fhir:code [ fhir:v "Haemoglobin-HPLC-PCT" ] ;
+     fhir:display [ fhir:v "Haemoglobin HPLC - PCT" ] ;
+     fhir:definition [ fhir:v "Needs definition" ]
+  ] [
+     fhir:code [ fhir:v "Haemoglobin-HPLC-PLCC" ] ;
+     fhir:display [ fhir:v "Haemoglobin HPLC - PLCC" ] ;
+     fhir:definition [ fhir:v "Needs definition" ]
+  ] [
+     fhir:code [ fhir:v "Haemoglobin-HPLC-PLCR" ] ;
+     fhir:display [ fhir:v "Haemoglobin HPLC - PLCR" ] ;
+     fhir:definition [ fhir:v "Needs definition" ]
+  ] [
+     fhir:code [ fhir:v "ESR-ESR-1st-Hour" ] ;
+     fhir:display [ fhir:v "ESR - ESR 1st Hour" ] ;
+     fhir:definition [ fhir:v "Needs definition" ]
+  ] [
+     fhir:code [ fhir:v "Dengue-Test-NS1-Antigen" ] ;
+     fhir:display [ fhir:v "Dengue Test - NS1 Antigen" ] ;
+     fhir:definition [ fhir:v "Needs definition" ]
+  ] [
+     fhir:code [ fhir:v "Dengue-Test-Dengue-Ig-M" ] ;
+     fhir:display [ fhir:v "Dengue Test - Dengue Ig M" ] ;
+     fhir:definition [ fhir:v "Needs definition" ]
+  ] [
+     fhir:code [ fhir:v "Dengue-Test-Dengue-Ig-G" ] ;
+     fhir:display [ fhir:v "Dengue Test - Dengue Ig G" ] ;
+     fhir:definition [ fhir:v "Needs definition" ]
+  ] [
+     fhir:code [ fhir:v "Blood-Sugar-FBS" ] ;
+     fhir:display [ fhir:v "Blood Sugar - FBS" ] ;
+     fhir:definition [ fhir:v "Needs definition" ]
+  ] [
+     fhir:code [ fhir:v "HbA1c-HBA1C" ] ;
+     fhir:display [ fhir:v "HbA1c - HBA1C" ] ;
+     fhir:definition [ fhir:v "Needs definition" ]
+  ] [
+     fhir:code [ fhir:v "HbA1c-PPBS" ] ;
+     fhir:display [ fhir:v "HbA1c - PPBS" ] ;
+     fhir:definition [ fhir:v "Needs definition" ]
+  ] [
+     fhir:code [ fhir:v "HbA1c-RBS" ] ;
+     fhir:display [ fhir:v "HbA1c - RBS" ] ;
+     fhir:definition [ fhir:v "Needs definition" ]
+  ] [
+     fhir:code [ fhir:v "HbA1c-OGTT" ] ;
+     fhir:display [ fhir:v "HbA1c - OGTT" ] ;
+     fhir:definition [ fhir:v "Needs definition" ]
+  ] [
+     fhir:code [ fhir:v "Serum-Creatinine-S-Creatinine" ] ;
+     fhir:display [ fhir:v "Serum Creatinine - S Creatinine" ] ;
+     fhir:definition [ fhir:v "Needs definition" ]
+  ] [
+     fhir:code [ fhir:v "Blood-Urea-Blood-Urea" ] ;
+     fhir:display [ fhir:v "Blood Urea - Blood Urea" ] ;
+     fhir:definition [ fhir:v "Needs definition" ]
+  ] [
+     fhir:code [ fhir:v "S-Uric-Acid" ] ;
+     fhir:display [ fhir:v "S Uric Acid" ] ;
+     fhir:definition [ fhir:v "Needs definition" ]
+  ] [
+     fhir:code [ fhir:v "Serum-Calcium-Total" ] ;
+     fhir:display [ fhir:v "Serum Calcium-Total" ] ;
+     fhir:definition [ fhir:v "Needs definition" ]
+  ] [
+     fhir:code [ fhir:v "Serum-Magnesium" ] ;
+     fhir:display [ fhir:v "Serum Magnesium" ] ;
+     fhir:definition [ fhir:v "Needs definition" ]
+  ] [
+     fhir:code [ fhir:v "Serum-Phosphorous" ] ;
+     fhir:display [ fhir:v "Serum Phosphorous" ] ;
+     fhir:definition [ fhir:v "Needs definition" ]
+  ] [
+     fhir:code [ fhir:v "Corrected-Calcium" ] ;
+     fhir:display [ fhir:v "Corrected Calcium" ] ;
+     fhir:definition [ fhir:v "Needs definition" ]
+  ] [
+     fhir:code [ fhir:v "CRP-C-Reactive-Protein" ] ;
+     fhir:display [ fhir:v "CRP - C Reactive Protein" ] ;
+     fhir:definition [ fhir:v "Needs definition" ]
+  ] [
+     fhir:code [ fhir:v "S-LDH-LDH" ] ;
+     fhir:display [ fhir:v "S LDH - LDH" ] ;
+     fhir:definition [ fhir:v "Needs definition" ]
+  ] [
+     fhir:code [ fhir:v "Creatine-Kinase-Creatinine-Kinase" ] ;
+     fhir:display [ fhir:v "Creatine Kinase - Creatinine Kinase" ] ;
+     fhir:definition [ fhir:v "Needs definition" ]
+  ] [
+     fhir:code [ fhir:v "Stool-Full-Report" ] ;
+     fhir:display [ fhir:v "Stool Full Report" ] ;
+     fhir:definition [ fhir:v "Needs definition" ]
+  ] [
+     fhir:code [ fhir:v "S.-Vitamin-D-Level" ] ;
+     fhir:display [ fhir:v "S. Vitamin D Level" ] ;
+     fhir:definition [ fhir:v "Needs definition" ]
+  ] [
+     fhir:code [ fhir:v "Rheumaloid-Facior" ] ;
+     fhir:display [ fhir:v "Rheumaloid Facior" ] ;
+     fhir:definition [ fhir:v "Needs definition" ]
+  ] [
+     fhir:code [ fhir:v "Blood-Picture" ] ;
+     fhir:display [ fhir:v "Blood Picture" ] ;
+     fhir:definition [ fhir:v "Needs definition" ]
+  ] [
+     fhir:code [ fhir:v "S-Prostate-Specific-Antigen" ] ;
+     fhir:display [ fhir:v "S Prostate Specific Antigen" ] ;
+     fhir:definition [ fhir:v "Needs definition" ]
+  ] [
+     fhir:code [ fhir:v "serum-Amylase-units/L" ] ;
+     fhir:display [ fhir:v "serum Amylase (units/L)" ] ;
+     fhir:definition [ fhir:v "Needs definition" ]
+  ] [
+     fhir:code [ fhir:v "Rheumatoid-Factor" ] ;
+     fhir:display [ fhir:v "Rheumatoid Factor" ] ;
+     fhir:definition [ fhir:v "Needs definition" ]
+  ] [
+     fhir:code [ fhir:v "Iron-Studies" ] ;
+     fhir:display [ fhir:v "Iron Studies" ] ;
+     fhir:definition [ fhir:v "Needs definition" ]
+  ] [
+     fhir:code [ fhir:v "S.-Uric-Acid" ] ;
+     fhir:display [ fhir:v "S. Uric Acid" ] ;
+     fhir:definition [ fhir:v "Needs definition" ]
+  ] [
+     fhir:code [ fhir:v "Liver-profile-SGOT-U/L" ] ;
+     fhir:display [ fhir:v "Liver profile - SGOT U/L" ] ;
+     fhir:definition [ fhir:v "Needs definition" ]
+  ] [
+     fhir:code [ fhir:v "SGOT/PT-SGPT-U/L" ] ;
+     fhir:display [ fhir:v "SGOT/PT - SGPT U/L" ] ;
+     fhir:definition [ fhir:v "Needs definition" ]
+  ] [
+     fhir:code [ fhir:v "S-Alkaline-Phosphatasee-Alakaline-Phosphatase-IU/L" ] ;
+     fhir:display [ fhir:v "S Alkaline Phosphatasee - Alakaline Phosphatase IU/L" ] ;
+     fhir:definition [ fhir:v "Needs definition" ]
+  ] [
+     fhir:code [ fhir:v "S.-Bilirubin-Bilirubin-Direct-mg/dl" ] ;
+     fhir:display [ fhir:v "S. Bilirubin - Bilirubin Direct mg/dl" ] ;
+     fhir:definition [ fhir:v "Needs definition" ]
+  ] [
+     fhir:code [ fhir:v "S.-Bilirubin-Bilirubin-Total-mg/dl" ] ;
+     fhir:display [ fhir:v "S. Bilirubin - Bilirubin Total mg/dl" ] ;
+     fhir:definition [ fhir:v "Needs definition" ]
+  ] [
+     fhir:code [ fhir:v "Serum-Prolein-Total-Protein-g/dl" ] ;
+     fhir:display [ fhir:v "Serum Prolein - Total Protein g/dl" ] ;
+     fhir:definition [ fhir:v "Needs definition" ]
+  ] [
+     fhir:code [ fhir:v "S.-Amilase-Bilirubin-Indirect-mg/dl" ] ;
+     fhir:display [ fhir:v "S. Amilase - Bilirubin Indirect mg/dl" ] ;
+     fhir:definition [ fhir:v "Needs definition" ]
+  ] [
+     fhir:code [ fhir:v "S.-ALP-Serum-albumin" ] ;
+     fhir:display [ fhir:v "S. ALP - Serum albumin" ] ;
+     fhir:definition [ fhir:v "Needs definition" ]
+  ] [
+     fhir:code [ fhir:v "S.-Electrolyte-Globulin" ] ;
+     fhir:display [ fhir:v "S. Electrolyte - Globulin" ] ;
+     fhir:definition [ fhir:v "Needs definition" ]
+  ] [
+     fhir:code [ fhir:v "Albumin-/-Globulin-Ratio" ] ;
+     fhir:display [ fhir:v "Albumin / Globulin Ratio" ] ;
+     fhir:definition [ fhir:v "Needs definition" ]
+  ] [
+     fhir:code [ fhir:v "S-Gamma-GT-S-Gamma-GT" ] ;
+     fhir:display [ fhir:v "S Gamma GT - S Gamma GT" ] ;
+     fhir:definition [ fhir:v "Needs definition" ]
+  ] [
+     fhir:code [ fhir:v "Liver-Enzymes" ] ;
+     fhir:display [ fhir:v "Liver Enzymes" ] ;
+     fhir:definition [ fhir:v "Needs definition" ]
+  ] [
+     fhir:code [ fhir:v "Alpha-fetoprotein" ] ;
+     fhir:display [ fhir:v "Alpha-fetoprotein" ] ;
+     fhir:definition [ fhir:v "Needs definition" ]
+  ] [
+     fhir:code [ fhir:v "Hepatitis-Screening" ] ;
+     fhir:display [ fhir:v "Hepatitis Screening" ] ;
+     fhir:definition [ fhir:v "Needs definition" ]
+  ] [
+     fhir:code [ fhir:v "CSF" ] ;
+     fhir:display [ fhir:v "CSF" ] ;
+     fhir:definition [ fhir:v "Needs definition" ]
+  ] [
+     fhir:code [ fhir:v "Renal-Function-Tests" ] ;
+     fhir:display [ fhir:v "Renal Function Tests" ] ;
+     fhir:definition [ fhir:v "Needs definition" ]
+  ] [
+     fhir:code [ fhir:v "Stool-examination" ] ;
+     fhir:display [ fhir:v "Stool examination" ] ;
+     fhir:definition [ fhir:v "Needs definition" ]
+  ] [
+     fhir:code [ fhir:v "Urinalysis" ] ;
+     fhir:display [ fhir:v "Urinalysis" ] ;
+     fhir:definition [ fhir:v "Needs definition" ]
+  ] [
+     fhir:code [ fhir:v "Urine-for-BJP" ] ;
+     fhir:display [ fhir:v "Urine for BJP" ] ;
+     fhir:definition [ fhir:v "Needs definition" ]
+  ] [
+     fhir:code [ fhir:v "Cytology" ] ;
+     fhir:display [ fhir:v "Cytology" ] ;
+     fhir:definition [ fhir:v "Needs definition" ]
+  ] [
+     fhir:code [ fhir:v "Antibody-testing" ] ;
+     fhir:display [ fhir:v "Antibody testing" ] ;
+     fhir:definition [ fhir:v "Needs definition" ]
+  ] [
+     fhir:code [ fhir:v "Biochem-basic-tests" ] ;
+     fhir:display [ fhir:v "Biochem - basic tests" ] ;
+     fhir:definition [ fhir:v "Needs definition" ]
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

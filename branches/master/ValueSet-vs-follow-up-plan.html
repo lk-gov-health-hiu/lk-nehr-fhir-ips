@@ -1,0 +1,381 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE HTML>
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
+    <title>Follow-up plan - LK NEHR Sri Lanka Patient Summary (IPS based) Implementation Guide v0.1.0</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="author" content="http://hl7.org/fhir"/>
+
+    <link href="fhir.css" rel="stylesheet"/>
+
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap-fhir.css" rel="stylesheet"/>
+
+    <!-- Project extras -->
+    <link href="assets/css/project.css" rel="stylesheet"/>
+    <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
+    <link href="assets/css/jquery-ui.css" rel="stylesheet"/>
+  	<link href="assets/css/prism.css" rel="stylesheet" />
+    <!-- Placeholder for child template CSS declarations -->
+<link href="assets/css/openhie.css" rel="stylesheet"/>
+<link href="assets/css/lforms.min.css" rel="stylesheet"/>
+
+
+    <script type="text/javascript" src="fhir-table-scripts.js"> </script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="assets/js/html5shiv.js"></script>
+    <script src="assets/js/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Favicons -->
+    <link rel="fhir-logo" sizes="144x144" href="assets/ico/icon-fhir-144.png"/>
+    <link rel="fhir-logo" sizes="114x114" href="assets/ico/icon-fhir-114.png"/>
+    <link rel="fhir-logo" sizes="72x72" href="assets/ico/icon-fhir-72.png"/>
+    <link rel="fhir-logo" href="assets/ico/icon-fhir-57.png"/>
+    <link rel="shortcut icon" href="assets/ico/favicon.png"/>
+  </head>
+  <body onload="document.body.style.opacity='1'">
+
+	  <script src="assets/js/prism.js"></script>
+
+    <style type="text/css">h2{--heading-prefix:"4.50"}
+    h3,h4,h5,h6{--heading-prefix:"4.50"}</style>
+    <div id="segment-header" class="segment">  <!-- segment-header -->
+      <div class="container">  <!-- container -->
+        <!-- Placeholder for child template header declarations -->
+
+<!-- Left logo - typically the publisher's logo - project or affiliate -->
+        <div id="project-nav">
+          <a id="project-logo" no-external="true" href="https://ohie.org/">
+            <img height="71" alt="Project home" src="assets/images/home.png"/>
+          </a>
+        </div>
+
+<!-- Right logo - for example the FHIR logo -->
+<!-- Make sure you have authorization to use the FHIR logo -->
+        <div id="family-nav">
+          <a id="family-logo" no-external="true" href="http://hl7.org/fhir"><img height="70" alt="FHIR website" src="assets/images/fire.png"/> </a>
+        </div>
+
+<!-- search icon - if you want -->
+<!--
+        <div id="hl7-search">
+          <a id="hl7-search-lnk" no-external="true" href="http://hl7.org/fhir/search.cfm"><img alt="Search FHIR" src="assets/images/search.png"/></a>
+        </div>
+-->
+
+
+        <div id="ig-status">
+          <p><span style="font-size:12pt;font-weight:bold">LK NEHR Sri Lanka Patient Summary (IPS based) Implementation Guide</span>
+            <br/>
+            <span style="display:inline-block;">0.1.0 - STU1
+
+
+
+  <img alt="International flag" src="assets/images/001.svg" height="16" title="International"/>
+
+
+            </span>
+          </p>
+        </div>
+      </div> <!-- /container -->
+    </div>  <!-- /segment-header -->
+
+    <div id="segment-navbar" class="segment">  <!-- segment-navbar -->
+      <div id="stripe"> </div>
+      <div class="container">  <!-- container -->
+        <!-- HEADER CONTENT -->
+
+        <nav class="navbar navbar-inverse">
+          <!--status-bar-->
+          <div class="container">
+            <button data-target=".navbar-inverse-collapse" class="navbar-toggle" data-toggle="collapse" type="button">
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+            </button>
+            <a class="navbar-brand hidden" href="http://hl7.org/fhir/R4/index.html">FHIR</a>
+            <div class="nav-collapse collapse navbar-inverse-collapse">
+              <ul
+	xmlns="http://www.w3.org/1999/xhtml" class="nav navbar-nav">
+	<li>
+		<a href="index.html">IG Home</a>
+	</li>
+	<li>
+		<a href="toc.html">Table of Contents</a>
+	</li>
+<!--
+	<li class="dropdown">
+		<a data-toggle="dropdown" href="#" class="dropdown-toggle">Background<b class="caret"></b>
+		</a>
+
+	</li>
+	<li class="dropdown">
+		<a data-toggle="dropdown" href="#" class="dropdown-toggle">Functional Description<b class="caret"></b>
+		</a>
+
+	</li>
+-->
+	<li class="dropdown">
+		<a data-toggle="dropdown" href="#" class="dropdown-toggle">FHIR Artifacts<b class="caret"></b>
+		</a>
+		<ul class="dropdown-menu">
+			<li>
+				<a href="library.html">Library</a>
+			</li>
+		</ul>
+	</li>
+</ul>      
+            </div>  <!-- /.nav-collapse -->
+          </div>  <!-- /.container -->
+        </nav>  <!-- /.navbar -->
+      <!-- /HEADER CONTENT -->
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-navbar -->
+    <!--status-bar-->
+
+    <div id="segment-breadcrumb" class="segment">  <!-- segment-breadcrumb -->
+      <div class="container">  <!-- container -->
+        <ul class="breadcrumb">
+          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='artifacts.html'><b>Artifacts Summary</b></a></li><li><b>Follow-up plan</b></li>
+
+        </ul>
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-breadcrumb -->
+
+    <a name="top"> </a>
+    <div id="segment-content" class="segment">  <!-- segment-content -->
+      <div class="container">  <!-- container -->
+        <div class="row">
+          <div class="inner-wrapper">
+
+<div class="col-12">
+  <!--ReleaseHeader--><p id="publish-box">LK NEHR Sri Lanka Patient Summary (IPS based) Implementation Guide, published by Ministry of Health, Sri Lanka. This guide is not an authorized publication; it is the continuous build for version 0.1.0 built by the FHIR (HL7® FHIR® Standard) CI Build. This version is based on the current content of <a href="https://github.com/lk-gov-health-hiu/lk-nehr-fhir-ips">https://github.com/lk-gov-health-hiu/lk-nehr-fhir-ips</a> and changes regularly. See the <a href="http://fhir.health.gov.lk/ips/history.html">Directory of published versions</a></p><!--EndReleaseHeader-->
+  
+
+
+
+
+
+
+
+
+<ul class="nav nav-tabs">
+
+  <li class="active">
+    <a href="#">Narrative Content</a>
+  </li>
+
+
+
+  
+    <li>
+      <a href="ValueSet-vs-follow-up-plan.xml.html">XML</a>
+    </li>
+  
+
+
+  
+    <li>
+      <a href="ValueSet-vs-follow-up-plan.json.html">JSON</a>
+    </li>
+  
+
+
+  
+    <li>
+      <a href="ValueSet-vs-follow-up-plan.ttl.html">TTL</a>
+    </li>
+  
+
+
+
+</ul>
+
+  <a name="root"> </a>
+  <h2 id="root">ValueSet: Follow-up plan
+
+  </h2>
+  <table class="colsi">
+
+    <tr>
+      <td colspan="4"><i>Official URL</i>: <span class="copy-text">http://fhir.health.gov.lk/ips/ValueSet/vs-follow-up-plan<button title="Click to copy URL" class="btn-copy" data-clipboard-text="http://fhir.health.gov.lk/ips/ValueSet/vs-follow-up-plan"/></span>
+      </td>
+      <td><i>Version</i>:
+      <span class="copy-text">0.1.0<button title="Click to copy versioned URL" class="btn-copy" data-clipboard-text="http://fhir.health.gov.lk/ips/ValueSet/vs-follow-up-plan|0.1.0"/></span>
+      </td>
+    </tr>
+
+    <tr>
+
+
+
+
+
+
+
+      <td colspan="4">
+        
+          Active
+          
+            as of 2024-03-26
+          
+        
+      </td>
+
+
+
+      <td><i>Computable Name</i>: <span style="font-family: monospace;">VSFollowUpPlan</span></td>
+    </tr>
+
+
+
+
+  </table>
+
+<p>
+<p>Follow-up plan</p>
+
+</p>
+
+
+  <p>
+    <b>References</b>
+  </p>
+  
+<ul>
+ <li><a href="StructureDefinition-follow-up-plan.html">Referral Request For Follow-up Plan</a></li>
+</ul>
+
+
+  <!-- insert intro if present -->
+  
+
+
+
+  <a name="definition"> </a>
+
+<!-- Content Logical Definition heading in the fragment -->
+  <h3>Logical Definition (CLD)</h3>
+<div xmlns="http://www.w3.org/1999/xhtml"><p>This value set includes codes based on the following rules:</p><ul><li>Include codes from <a href="http://www.snomed.org/"><code>http://snomed.info/sct</code></a> where concept  descends from  183851006 (Referral to clinic)</li><li>Include these codes as defined in <a href="http://www.snomed.org/"><code>http://snomed.info/sct</code></a><table class="none"><tr><td style="white-space:nowrap"><b>Code</b></td><td><b>Display</b></td></tr><tr><td><a href="http://snomed.info/id/772071006">772071006</a></td><td>Referral to dentist</td></tr><tr><td><a href="http://snomed.info/id/410321003">410321003</a></td><td>Wellness health education, guidance, and counseling</td></tr><tr><td><a href="http://snomed.info/id/306110004">306110004</a></td><td>Referral to medical service</td></tr></table></li></ul></div>
+
+  <p>&#160;</p>
+  <a name="expansion"> </a>
+  <h3 id="expansion">Expansion</h3>
+
+  <div xmlns="http://www.w3.org/1999/xhtml"><p style="border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px">Expansion based on SNOMED CT International edition 01-Feb 2024</p><p>This value set expansion contains 55 concepts.</p><table class="codes"><tr><td style="white-space:nowrap"><b>Code</b></td><td><b>System</b></td><td><b>Display</b></td></tr><tr><td style="white-space:nowrap"><a name="http---snomed.info-sct-134440006"> </a>  <a href="http://snomed.info/id/134440006">134440006</a></td><td>http://snomed.info/sct</td><td>Referral to heart failure clinic</td></tr><tr><td style="white-space:nowrap"><a name="http---snomed.info-sct-183852004"> </a>  <a href="http://snomed.info/id/183852004">183852004</a></td><td>http://snomed.info/sct</td><td>Referral to lipid clinic</td></tr><tr><td style="white-space:nowrap"><a name="http---snomed.info-sct-183853009"> </a>  <a href="http://snomed.info/id/183853009">183853009</a></td><td>http://snomed.info/sct</td><td>Refer to hearing aid clinic</td></tr><tr><td style="white-space:nowrap"><a name="http---snomed.info-sct-183854003"> </a>  <a href="http://snomed.info/id/183854003">183854003</a></td><td>http://snomed.info/sct</td><td>Referral to audiology clinic</td></tr><tr><td style="white-space:nowrap"><a name="http---snomed.info-sct-183855002"> </a>  <a href="http://snomed.info/id/183855002">183855002</a></td><td>http://snomed.info/sct</td><td>Referral to orthodontic clinic</td></tr><tr><td style="white-space:nowrap"><a name="http---snomed.info-sct-183856001"> </a>  <a href="http://snomed.info/id/183856001">183856001</a></td><td>http://snomed.info/sct</td><td>Referral to hypertension clinic</td></tr><tr><td style="white-space:nowrap"><a name="http---snomed.info-sct-183857005"> </a>  <a href="http://snomed.info/id/183857005">183857005</a></td><td>http://snomed.info/sct</td><td>Referral to developmental clinic</td></tr><tr><td style="white-space:nowrap"><a name="http---snomed.info-sct-183858000"> </a>  <a href="http://snomed.info/id/183858000">183858000</a></td><td>http://snomed.info/sct</td><td>Referral to varicose vein clinic</td></tr><tr><td style="white-space:nowrap"><a name="http---snomed.info-sct-183859008"> </a>  <a href="http://snomed.info/id/183859008">183859008</a></td><td>http://snomed.info/sct</td><td>Referral to mammography clinic</td></tr><tr><td style="white-space:nowrap"><a name="http---snomed.info-sct-183860003"> </a>  <a href="http://snomed.info/id/183860003">183860003</a></td><td>http://snomed.info/sct</td><td>Referral to antenatal clinic</td></tr><tr><td style="white-space:nowrap"><a name="http---snomed.info-sct-183861004"> </a>  <a href="http://snomed.info/id/183861004">183861004</a></td><td>http://snomed.info/sct</td><td>Referral to postnatal clinic</td></tr><tr><td style="white-space:nowrap"><a name="http---snomed.info-sct-183862006"> </a>  <a href="http://snomed.info/id/183862006">183862006</a></td><td>http://snomed.info/sct</td><td>Referral to fertility clinic</td></tr><tr><td style="white-space:nowrap"><a name="http---snomed.info-sct-183863001"> </a>  <a href="http://snomed.info/id/183863001">183863001</a></td><td>http://snomed.info/sct</td><td>Referral to well woman clinic</td></tr><tr><td style="white-space:nowrap"><a name="http---snomed.info-sct-183864007"> </a>  <a href="http://snomed.info/id/183864007">183864007</a></td><td>http://snomed.info/sct</td><td>Referral to family planning clinic</td></tr><tr><td style="white-space:nowrap"><a name="http---snomed.info-sct-183866009"> </a>  <a href="http://snomed.info/id/183866009">183866009</a></td><td>http://snomed.info/sct</td><td>Referral to emergency clinic</td></tr><tr><td style="white-space:nowrap"><a name="http---snomed.info-sct-183867000"> </a>  <a href="http://snomed.info/id/183867000">183867000</a></td><td>http://snomed.info/sct</td><td>Referred to acute chest pain clinic</td></tr><tr><td style="white-space:nowrap"><a name="http---snomed.info-sct-183868005"> </a>  <a href="http://snomed.info/id/183868005">183868005</a></td><td>http://snomed.info/sct</td><td>Referral to back pain clinic</td></tr><tr><td style="white-space:nowrap"><a name="http---snomed.info-sct-313186001"> </a>  <a href="http://snomed.info/id/313186001">313186001</a></td><td>http://snomed.info/sct</td><td>Referral to breast clinic</td></tr><tr><td style="white-space:nowrap"><a name="http---snomed.info-sct-315015006"> </a>  <a href="http://snomed.info/id/315015006">315015006</a></td><td>http://snomed.info/sct</td><td>Referral to rapid access chest pain clinic</td></tr><tr><td style="white-space:nowrap"><a name="http---snomed.info-sct-315232003"> </a>  <a href="http://snomed.info/id/315232003">315232003</a></td><td>http://snomed.info/sct</td><td>Referral to stop-smoking clinic</td></tr><tr><td style="white-space:nowrap"><a name="http---snomed.info-sct-391104004"> </a>  <a href="http://snomed.info/id/391104004">391104004</a></td><td>http://snomed.info/sct</td><td>Referral to soft tissue injury clinic (procedure)</td></tr><tr><td style="white-space:nowrap"><a name="http---snomed.info-sct-400973003"> </a>  <a href="http://snomed.info/id/400973003">400973003</a></td><td>http://snomed.info/sct</td><td>Referral to eating disorders clinic (procedure)</td></tr><tr><td style="white-space:nowrap"><a name="http---snomed.info-sct-412712007"> </a>  <a href="http://snomed.info/id/412712007">412712007</a></td><td>http://snomed.info/sct</td><td>Referral to sexually transmitted infections clinic (procedure)</td></tr><tr><td style="white-space:nowrap"><a name="http---snomed.info-sct-412717001"> </a>  <a href="http://snomed.info/id/412717001">412717001</a></td><td>http://snomed.info/sct</td><td>Referral to osteoporosis clinic (procedure)</td></tr><tr><td style="white-space:nowrap"><a name="http---snomed.info-sct-412773009"> </a>  <a href="http://snomed.info/id/412773009">412773009</a></td><td>http://snomed.info/sct</td><td>Referral to stroke clinic (procedure)</td></tr><tr><td style="white-space:nowrap"><a name="http---snomed.info-sct-413159000"> </a>  <a href="http://snomed.info/id/413159000">413159000</a></td><td>http://snomed.info/sct</td><td>Referral to musculoskeletal clinic (procedure)</td></tr><tr><td style="white-space:nowrap"><a name="http---snomed.info-sct-415265005"> </a>  <a href="http://snomed.info/id/415265005">415265005</a></td><td>http://snomed.info/sct</td><td>Referral to asthma clinic (procedure)</td></tr><tr><td style="white-space:nowrap"><a name="http---snomed.info-sct-415266006"> </a>  <a href="http://snomed.info/id/415266006">415266006</a></td><td>http://snomed.info/sct</td><td>Referral to cataract clinic (procedure)</td></tr><tr><td style="white-space:nowrap"><a name="http---snomed.info-sct-415269004"> </a>  <a href="http://snomed.info/id/415269004">415269004</a></td><td>http://snomed.info/sct</td><td>Referral to diabetes preconception counseling clinic</td></tr><tr><td style="white-space:nowrap"><a name="http---snomed.info-sct-415272006"> </a>  <a href="http://snomed.info/id/415272006">415272006</a></td><td>http://snomed.info/sct</td><td>Referral to genitourinary clinic (procedure)</td></tr><tr><td style="white-space:nowrap"><a name="http---snomed.info-sct-415273001"> </a>  <a href="http://snomed.info/id/415273001">415273001</a></td><td>http://snomed.info/sct</td><td>Referral to glaucoma clinic (procedure)</td></tr><tr><td style="white-space:nowrap"><a name="http---snomed.info-sct-415274007"> </a>  <a href="http://snomed.info/id/415274007">415274007</a></td><td>http://snomed.info/sct</td><td>Referral to incontinence clinic (procedure)</td></tr><tr><td style="white-space:nowrap"><a name="http---snomed.info-sct-415275008"> </a>  <a href="http://snomed.info/id/415275008">415275008</a></td><td>http://snomed.info/sct</td><td>Referral to male urology clinic (procedure)</td></tr><tr><td style="white-space:nowrap"><a name="http---snomed.info-sct-415276009"> </a>  <a href="http://snomed.info/id/415276009">415276009</a></td><td>http://snomed.info/sct</td><td>Referral to memory clinic (procedure)</td></tr><tr><td style="white-space:nowrap"><a name="http---snomed.info-sct-415278005"> </a>  <a href="http://snomed.info/id/415278005">415278005</a></td><td>http://snomed.info/sct</td><td>Referral to psychosexual clinic (procedure)</td></tr><tr><td style="white-space:nowrap"><a name="http---snomed.info-sct-415279002"> </a>  <a href="http://snomed.info/id/415279002">415279002</a></td><td>http://snomed.info/sct</td><td>Referral to rheumatology clinic (procedure)</td></tr><tr><td style="white-space:nowrap"><a name="http---snomed.info-sct-416457004"> </a>  <a href="http://snomed.info/id/416457004">416457004</a></td><td>http://snomed.info/sct</td><td>Referral to vasectomy clinic (procedure)</td></tr><tr><td style="white-space:nowrap"><a name="http---snomed.info-sct-416977004"> </a>  <a href="http://snomed.info/id/416977004">416977004</a></td><td>http://snomed.info/sct</td><td>Referral to minor ailments clinic (procedure)</td></tr><tr><td style="white-space:nowrap"><a name="http---snomed.info-sct-428574006"> </a>  <a href="http://snomed.info/id/428574006">428574006</a></td><td>http://snomed.info/sct</td><td>Referral to enuresis clinic (procedure)</td></tr><tr><td style="white-space:nowrap"><a name="http---snomed.info-sct-431883007"> </a>  <a href="http://snomed.info/id/431883007">431883007</a></td><td>http://snomed.info/sct</td><td>Referral to deep vein thrombosis clinic (procedure)</td></tr><tr><td style="white-space:nowrap"><a name="http---snomed.info-sct-438517001"> </a>  <a href="http://snomed.info/id/438517001">438517001</a></td><td>http://snomed.info/sct</td><td>Referral to sleep clinic (procedure)</td></tr><tr><td style="white-space:nowrap"><a name="http---snomed.info-sct-442135008"> </a>  <a href="http://snomed.info/id/442135008">442135008</a></td><td>http://snomed.info/sct</td><td>Referral to infectious disease clinic</td></tr><tr><td style="white-space:nowrap"><a name="http---snomed.info-sct-698559005"> </a>  <a href="http://snomed.info/id/698559005">698559005</a></td><td>http://snomed.info/sct</td><td>Referral to tropical medicine clinic (procedure)</td></tr><tr><td style="white-space:nowrap"><a name="http---snomed.info-sct-698560000"> </a>  <a href="http://snomed.info/id/698560000">698560000</a></td><td>http://snomed.info/sct</td><td>Referral to sleep apnea clinic</td></tr><tr><td style="white-space:nowrap"><a name="http---snomed.info-sct-700432001"> </a>  <a href="http://snomed.info/id/700432001">700432001</a></td><td>http://snomed.info/sct</td><td>Referral to hematuria clinic (procedure)</td></tr><tr><td style="white-space:nowrap"><a name="http---snomed.info-sct-704048004"> </a>  <a href="http://snomed.info/id/704048004">704048004</a></td><td>http://snomed.info/sct</td><td>Referral to erectile dysfunction clinic</td></tr><tr><td style="white-space:nowrap"><a name="http---snomed.info-sct-705146005"> </a>  <a href="http://snomed.info/id/705146005">705146005</a></td><td>http://snomed.info/sct</td><td>Referral to transient ischemic attack clinic</td></tr><tr><td style="white-space:nowrap"><a name="http---snomed.info-sct-710916001"> </a>  <a href="http://snomed.info/id/710916001">710916001</a></td><td>http://snomed.info/sct</td><td>Referral to breastfeeding education class during prenatal period (procedure)</td></tr><tr><td style="white-space:nowrap"><a name="http---snomed.info-sct-736086007"> </a>  <a href="http://snomed.info/id/736086007">736086007</a></td><td>http://snomed.info/sct</td><td>Referral to respiratory clinic (procedure)</td></tr><tr><td style="white-space:nowrap"><a name="http---snomed.info-sct-758600000"> </a>  <a href="http://snomed.info/id/758600000">758600000</a></td><td>http://snomed.info/sct</td><td>Referral to atrial fibrillation clinic (procedure)</td></tr><tr><td style="white-space:nowrap"><a name="http---snomed.info-sct-770789008"> </a>  <a href="http://snomed.info/id/770789008">770789008</a></td><td>http://snomed.info/sct</td><td>Referral to community diabetes antenatal clinic</td></tr><tr><td style="white-space:nowrap"><a name="http---snomed.info-sct-770811007"> </a>  <a href="http://snomed.info/id/770811007">770811007</a></td><td>http://snomed.info/sct</td><td>Referral to hospital diabetes antenatal clinic (procedure)</td></tr><tr><td style="white-space:nowrap"><a name="http---snomed.info-sct-772071006"> </a>  <a href="http://snomed.info/id/772071006">772071006</a></td><td>http://snomed.info/sct</td><td>Referral to dentist</td></tr><tr><td style="white-space:nowrap"><a name="http---snomed.info-sct-410321003"> </a>  <a href="http://snomed.info/id/410321003">410321003</a></td><td>http://snomed.info/sct</td><td>Wellness health education, guidance, and counseling</td></tr><tr><td style="white-space:nowrap"><a name="http---snomed.info-sct-306110004"> </a>  <a href="http://snomed.info/id/306110004">306110004</a></td><td>http://snomed.info/sct</td><td>Referral to medical service</td></tr></table></div>
+
+  <hr/>
+  <p>
+    Explanation of the columns that may appear on this page:
+  </p>
+  <table class="grid">
+    <tr>
+      <td>Level</td>
+      <td>A few code lists that FHIR defines are hierarchical - each code is assigned a level.
+          In this scheme, some codes are under other codes, and imply that the code they are under also applies</td>
+    </tr>
+    <tr>
+      <td>System</td>
+      <td>The source of the definition of the code (when the value set draws in codes defined elsewhere)</td>
+    </tr>
+    <tr>
+      <td>Code</td>
+      <td>The code (used as the code in the resource instance)</td>
+    </tr>
+    <tr>
+      <td>Display</td>
+      <td>The display (used in the <i>display</i> element of a <a href="http://hl7.org/fhir/R4/datatypes.html#Coding">Coding</a>). If there is no display, implementers should not simply display the code, but map the concept into their application</td>
+    </tr>
+    <tr>
+      <td>Definition</td>
+      <td>An explanation of the meaning of the concept</td>
+    </tr>
+    <tr>
+      <td>Comments</td>
+      <td>Additional notes about how to use the code</td>
+    </tr>
+  </table>
+
+  
+
+  <!-- insert notes if present -->
+  
+
+
+
+  
+
+</div>
+        </div>  <!-- /inner-wrapper -->
+      </div>  <!-- /row -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-content -->
+
+  <script type="text/javascript" src="assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+  <script type="text/javascript" src="assets/js/jquery-ui.min.js"> </script>
+
+  <script type="text/javascript">
+    $(document).ready(function(){
+      if(window.location.hash != "") {
+          $('a[href="' + window.location.hash + '"]').click()
+      }
+    });
+  </script>
+  <a name="bottom"> </a>
+  <div id="segment-footer" igtool="footer" class="segment">  <!-- segment-footer -->
+    <div class="container">  <!-- container -->
+
+           
+      <div class="inner-wrapper">
+        <p>
+          IG &#169; 2021+ <a style="color: #81BEF7" href="https://www.health.gov.lk/">Ministry of Health, Sri Lanka</a>.  Package lk-nehr-fhir-ips#0.1.0 based on <a style="color: #81BEF7" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Tue, Mar 26, 2024 13:02+0000">2024-03-26</span>
+          <br/>
+          <span style="color: #FFFF77">
+                      Links: <a style="color: #81BEF7" href="toc.html">Table of Contents</a> |
+                 <a style="color: #81BEF7" href="qa.html">QA Report</a> |
+                 
+                 <a style="color: #81BEF7" target="_blank" href="http://fhir.health.gov.lk/ips/history.html">Version History</a> |
+                 <a style="color: #81BEF7" rel="license" href="http://hl7.org/fhir/R4/license.html"><img style="border-style: none;" alt="CC-BY" src="assets/images/cc-by.png" height="17"/></a> |
+                 <!--<a style="color: #81BEF7" href="todo.html">Search</a> | --> 
+
+
+          </span>
+        </p>
+      </div>  <!-- /inner-wrapper -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-footer -->
+  
+  <div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+    <div class="container">  <!-- container -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-post-footer -->
+  
+  <!-- JS and analytics only. -->
+  <!-- Bootstrap core JavaScript
+  ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script type="text/javascript" src="assets/js/bootstrap.min.js"> </script>
+  <script type="text/javascript" src="assets/js/respond.min.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard-btn.js"> </script>
+  <script>anchors.options.visible = 'hover'
+anchors.add()</script>
+  
+  <!-- feedback form - Google forms -->
+<!-- v0.1, 2021-01-09 -->
+
+
+
+<!-- / feedback form  -->
+
+  <!-- Analytics Below
+  ================================================== -->
+  </body>
+</html>
+

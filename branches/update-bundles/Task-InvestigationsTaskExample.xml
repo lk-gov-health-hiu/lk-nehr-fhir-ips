@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Task xmlns="http://hl7.org/fhir">
+  <id value="InvestigationsTaskExample"/>
+  <meta>
+    <profile value="http://fhir.health.gov.lk/ips/StructureDefinition/investigations-task"/>
+  </meta>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative: Task</b><a name="InvestigationsTaskExample"> </a></p><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Resource Task &quot;InvestigationsTaskExample&quot; </p><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-investigations-task.html">Investigations Task</a></p></div><p><b>basedOn</b>: <a href="ServiceRequest-InvestigationsServiceRequestExample.html">ServiceRequest/InvestigationsServiceRequestExample</a></p><p><b>status</b>: completed</p><p><b>intent</b>: order</p><p><b>priority</b>: routine</p><p><b>description</b>: some information regarding the need for the investigations request, if any.</p><p><b>for</b>: <a href="Patient-HHIMSPatientExample.html">Patient/HHIMSPatientExample</a> &quot; SMITH&quot;</p><p><b>encounter</b>: <a href="Encounter-HHIMSTargetFacilityEncounterExample.html">Encounter/HHIMSTargetFacilityEncounterExample</a></p><p><b>executionPeriod</b>: 2023-10-06 13:28:17-0500 --&gt; 2023-10-09 16:28:17-0500</p><p><b>authoredOn</b>: 2023-10-06 13:28:17-0500</p><p><b>requester</b>: <a href="Practitioner-GeneralPractitionerExample.html">Practitioner/GeneralPractitionerExample</a> &quot; SMITH&quot;</p><p><b>location</b>: <a href="Location-ProvidersLocationExample.html">Location/ProvidersLocationExample</a> &quot;Name for the location&quot;</p></div>
+  </text>
+  <basedOn>
+    <reference value="ServiceRequest/InvestigationsServiceRequestExample"/>
+  </basedOn>
+  <status value="completed"/>
+  <intent value="order"/>
+  <priority value="routine"/>
+  <description value="some information regarding the need for the investigations request, if any."/>
+  <for>
+    <reference value="Patient/HHIMSPatientExample"/>
+  </for>
+  <encounter>
+    <reference value="Encounter/HHIMSTargetFacilityEncounterExample"/>
+  </encounter>
+  <executionPeriod>
+    <start value="2023-10-06T13:28:17-05:00"/>
+    <end value="2023-10-09T16:28:17-05:00"/>
+  </executionPeriod>
+  <authoredOn value="2023-10-06T13:28:17-05:00"/>
+  <requester>
+    <reference value="Practitioner/GeneralPractitionerExample"/>
+  </requester>
+  <location>
+    <reference value="Location/ProvidersLocationExample"/>
+  </location>
+</Task>

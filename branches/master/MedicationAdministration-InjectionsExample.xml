@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<MedicationAdministration xmlns="http://hl7.org/fhir">
+  <id value="InjectionsExample"/>
+  <meta>
+    <profile value="http://fhir.health.gov.lk/ips/StructureDefinition/injection"/>
+  </meta>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative: MedicationAdministration</b><a name="InjectionsExample"> </a></p><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Resource MedicationAdministration &quot;InjectionsExample&quot; </p><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-injection.html">Injections</a></p></div><p><b>status</b>: completed</p><p><b>medication</b>: Busulfan <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="https://browser.ihtsdotools.org/">SNOMED CT</a>#2571007)</span></p><p><b>subject</b>: <a href="Patient-HHIMSPatientExample.html">Patient/HHIMSPatientExample</a> &quot; SMITH&quot;</p><p><b>context</b>: <a href="Encounter-HHIMSTargetFacilityEncounterExample.html">Encounter/HHIMSTargetFacilityEncounterExample</a></p><p><b>effective</b>: 2023-10-11 17:21:33-0800</p><h3>Performers</h3><table class="grid"><tr><td style="display: none">-</td><td><b>Actor</b></td></tr><tr><td style="display: none">*</td><td><a href="Practitioner-GeneralPractitionerExample.html">Practitioner/GeneralPractitionerExample</a> &quot; SMITH&quot;</td></tr></table><h3>Dosages</h3><table class="grid"><tr><td style="display: none">-</td><td><b>Route</b></td><td><b>Dose</b></td></tr><tr><td style="display: none">*</td><td>Intravenous route <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="https://browser.ihtsdotools.org/">SNOMED CT</a>#47625008)</span></td><td>12</td></tr></table></div>
+  </text>
+  <status value="completed"/>
+  <medicationCodeableConcept>
+    <coding>
+      <system value="http://snomed.info/sct"/>
+      <code value="2571007"/>
+    </coding>
+    <text value="Busulfan"/>
+  </medicationCodeableConcept>
+  <subject>
+    <reference value="Patient/HHIMSPatientExample"/>
+  </subject>
+  <context>
+    <reference value="Encounter/HHIMSTargetFacilityEncounterExample"/>
+  </context>
+  <effectiveDateTime value="2023-10-11T17:21:33-08:00"/>
+  <performer>
+    <actor>
+      <reference value="Practitioner/GeneralPractitionerExample"/>
+    </actor>
+  </performer>
+  <dosage>
+    <route>
+      <coding>
+        <system value="http://snomed.info/sct"/>
+        <code value="47625008"/>
+      </coding>
+      <text value="Intravenous route"/>
+    </route>
+    <dose>
+      <value value="12"/>
+    </dose>
+  </dosage>
+</MedicationAdministration>

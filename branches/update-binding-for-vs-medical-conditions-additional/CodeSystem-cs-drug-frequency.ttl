@@ -1,0 +1,114 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://fhir.health.gov.lk/ips/CodeSystem/cs-drug-frequency> a fhir:CodeSystem ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "cs-drug-frequency"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>This case-sensitive code system <code>http://fhir.health.gov.lk/ips/CodeSystem/cs-drug-frequency</code> defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td></tr><tr><td style=\"white-space:nowrap\">LK-DF-01<a name=\"cs-drug-frequency-LK-DF-01\"> </a></td><td>Daily</td></tr><tr><td style=\"white-space:nowrap\">LK-DF-02<a name=\"cs-drug-frequency-LK-DF-02\"> </a></td><td>BD</td></tr><tr><td style=\"white-space:nowrap\">LK-DF-03<a name=\"cs-drug-frequency-LK-DF-03\"> </a></td><td>TDS</td></tr><tr><td style=\"white-space:nowrap\">LK-DF-04<a name=\"cs-drug-frequency-LK-DF-04\"> </a></td><td>qds</td></tr><tr><td style=\"white-space:nowrap\">LK-DF-05<a name=\"cs-drug-frequency-LK-DF-05\"> </a></td><td>Nocte</td></tr><tr><td style=\"white-space:nowrap\">LK-DF-06<a name=\"cs-drug-frequency-LK-DF-06\"> </a></td><td>STAT</td></tr><tr><td style=\"white-space:nowrap\">LK-DF-07<a name=\"cs-drug-frequency-LK-DF-07\"> </a></td><td>SOS (for High Fever)</td></tr><tr><td style=\"white-space:nowrap\">LK-DF-08<a name=\"cs-drug-frequency-LK-DF-08\"> </a></td><td>STAT &amp; REPEAT DOSE IN 10 DAYS</td></tr><tr><td style=\"white-space:nowrap\">LK-DF-09<a name=\"cs-drug-frequency-LK-DF-09\"> </a></td><td>SOS</td></tr><tr><td style=\"white-space:nowrap\">LK-DF-10<a name=\"cs-drug-frequency-LK-DF-10\"> </a></td><td>5 H</td></tr><tr><td style=\"white-space:nowrap\">LK-DF-11<a name=\"cs-drug-frequency-LK-DF-11\"> </a></td><td>EOD</td></tr><tr><td style=\"white-space:nowrap\">LK-DF-12<a name=\"cs-drug-frequency-LK-DF-12\"> </a></td><td>Mane</td></tr><tr><td style=\"white-space:nowrap\">LK-DF-13<a name=\"cs-drug-frequency-LK-DF-13\"> </a></td><td>noon</td></tr><tr><td style=\"white-space:nowrap\">LK-DF-14<a name=\"cs-drug-frequency-LK-DF-14\"> </a></td><td>SOS (for Vomiting)</td></tr><tr><td style=\"white-space:nowrap\">LK-DF-15<a name=\"cs-drug-frequency-LK-DF-15\"> </a></td><td>vesper</td></tr><tr><td style=\"white-space:nowrap\">LK-DF-16<a name=\"cs-drug-frequency-LK-DF-16\"> </a></td><td>Weekly</td></tr><tr><td style=\"white-space:nowrap\">LK-DF-17<a name=\"cs-drug-frequency-LK-DF-17\"> </a></td><td>6 hourly</td></tr><tr><td style=\"white-space:nowrap\">LK-DF-18<a name=\"cs-drug-frequency-LK-DF-18\"> </a></td><td>8 hourly</td></tr><tr><td style=\"white-space:nowrap\">LK-DF-19<a name=\"cs-drug-frequency-LK-DF-19\"> </a></td><td>5 Times Per Day</td></tr><tr><td style=\"white-space:nowrap\">LK-DF-20<a name=\"cs-drug-frequency-LK-DF-20\"> </a></td><td>Today and repeat in 14 days</td></tr></table></div>"
+  ] ; # 
+  fhir:url [ fhir:v "http://fhir.health.gov.lk/ips/CodeSystem/cs-drug-frequency"^^xsd:anyURI] ; # 
+  fhir:version [ fhir:v "0.1.0"] ; # 
+  fhir:name [ fhir:v "CSDrugFrequency"] ; # 
+  fhir:title [ fhir:v "Drug Frequency Codes"] ; # 
+  fhir:status [ fhir:v "active"] ; # 
+  fhir:experimental [ fhir:v "false"^^xsd:boolean] ; # 
+  fhir:date [ fhir:v "2024-03-26T12:48:20+00:00"^^xsd:dateTime] ; # 
+  fhir:publisher [ fhir:v "Ministry of Health, Sri Lanka"] ; # 
+  fhir:contact ( [
+     fhir:name [ fhir:v "Ministry of Health, Sri Lanka" ] ;
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "https://www.health.gov.lk/" ]
+     ] [
+       fhir:system [ fhir:v "email" ] ;
+       fhir:value [ fhir:v "digitalhealth@health.gov.lk" ]
+     ] )
+  ] [
+     fhir:name [ fhir:v "Director, Health Information" ] ;
+     fhir:telecom ( [
+       fhir:system [ fhir:v "email" ] ;
+       fhir:value [ fhir:v "digitalhealth@health.gov.lk" ] ;
+       fhir:use [ fhir:v "work" ]
+     ] )
+  ] ) ; # 
+  fhir:description [ fhir:v "A list of drug frequency code for medication requests."] ; # 
+  fhir:jurisdiction ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://unstats.un.org/unsd/methods/m49/m49.htm"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "001" ] ;
+       fhir:display [ fhir:v "World" ]
+     ] )
+  ] ) ; # 
+  fhir:caseSensitive [ fhir:v "true"^^xsd:boolean] ; # 
+  fhir:content [ fhir:v "complete"] ; # 
+  fhir:count [ fhir:v "20"^^xsd:nonNegativeInteger] ; # 
+  fhir:concept ( [
+     fhir:code [ fhir:v "LK-DF-01" ] ;
+     fhir:display [ fhir:v "Daily" ]
+  ] [
+     fhir:code [ fhir:v "LK-DF-02" ] ;
+     fhir:display [ fhir:v "BD" ]
+  ] [
+     fhir:code [ fhir:v "LK-DF-03" ] ;
+     fhir:display [ fhir:v "TDS" ]
+  ] [
+     fhir:code [ fhir:v "LK-DF-04" ] ;
+     fhir:display [ fhir:v "qds" ]
+  ] [
+     fhir:code [ fhir:v "LK-DF-05" ] ;
+     fhir:display [ fhir:v "Nocte" ]
+  ] [
+     fhir:code [ fhir:v "LK-DF-06" ] ;
+     fhir:display [ fhir:v "STAT" ]
+  ] [
+     fhir:code [ fhir:v "LK-DF-07" ] ;
+     fhir:display [ fhir:v "SOS (for High Fever)" ]
+  ] [
+     fhir:code [ fhir:v "LK-DF-08" ] ;
+     fhir:display [ fhir:v "STAT & REPEAT DOSE IN 10 DAYS" ]
+  ] [
+     fhir:code [ fhir:v "LK-DF-09" ] ;
+     fhir:display [ fhir:v "SOS" ]
+  ] [
+     fhir:code [ fhir:v "LK-DF-10" ] ;
+     fhir:display [ fhir:v "5 H" ]
+  ] [
+     fhir:code [ fhir:v "LK-DF-11" ] ;
+     fhir:display [ fhir:v "EOD" ]
+  ] [
+     fhir:code [ fhir:v "LK-DF-12" ] ;
+     fhir:display [ fhir:v "Mane" ]
+  ] [
+     fhir:code [ fhir:v "LK-DF-13" ] ;
+     fhir:display [ fhir:v "noon" ]
+  ] [
+     fhir:code [ fhir:v "LK-DF-14" ] ;
+     fhir:display [ fhir:v "SOS (for Vomiting)" ]
+  ] [
+     fhir:code [ fhir:v "LK-DF-15" ] ;
+     fhir:display [ fhir:v "vesper" ]
+  ] [
+     fhir:code [ fhir:v "LK-DF-16" ] ;
+     fhir:display [ fhir:v "Weekly" ]
+  ] [
+     fhir:code [ fhir:v "LK-DF-17" ] ;
+     fhir:display [ fhir:v "6 hourly" ]
+  ] [
+     fhir:code [ fhir:v "LK-DF-18" ] ;
+     fhir:display [ fhir:v "8 hourly" ]
+  ] [
+     fhir:code [ fhir:v "LK-DF-19" ] ;
+     fhir:display [ fhir:v "5 Times Per Day" ]
+  ] [
+     fhir:code [ fhir:v "LK-DF-20" ] ;
+     fhir:display [ fhir:v "Today and repeat in 14 days" ]
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

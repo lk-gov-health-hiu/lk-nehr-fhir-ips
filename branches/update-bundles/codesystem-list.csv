@@ -1,0 +1,9 @@
+URL,Version,Status,OIDs,Name,Title,Descriptino,Used
+http://fhir.health.gov.lk/ips/CodeSystem/cs-cvd-risk-category,0.1.0,active,,CSCVDRiskCategory,Cardiovascular Risk Categories,"Cardiovascular risk is expressed as a percentage",
+http://fhir.health.gov.lk/ips/CodeSystem/cs-follow-up-reasons,0.1.0,active,,CSFollowUpReasons,Follow up at HLC,"Follow up at Healthy Lifestyle Center",
+http://fhir.health.gov.lk/ips/CodeSystem/cs-identifier-types,0.1.0,active,,CSIdentifierTypes,Patient Business Identifier Types,"Patient Business Identifier Types",
+http://fhir.health.gov.lk/ips/CodeSystem/cs-investigation,0.1.0,active,,CSInvestigations,Investigations,"Investigations",
+http://fhir.health.gov.lk/ips/CodeSystem/cs-medication-name,0.1.0,active,,CSMedicationNames,Medication Names,"Medication Names",
+http://fhir.health.gov.lk/ips/CodeSystem/cs-procedure,0.1.0,active,,CSProcedures,Procedures,"Other Procedures",
+http://fhir.health.gov.lk/ips/CodeSystem/cs-procedure-imaging,0.1.0,active,,CSImagingProcedures,Procedures,"Imaging Procedures",
+http://fhir.health.gov.lk/ips/CodeSystem/cs-reason-for-encounter,0.1.0,active,,CSReasonForEncounter,Reason For Encounter,"Encounter reasons.",

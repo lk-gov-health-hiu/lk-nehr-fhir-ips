@@ -1,0 +1,46 @@
+{
+  "resourceType" : "ServiceRequest",
+  "id" : "FollowUpPlanServiceRequestExample",
+  "meta" : {
+    "profile" : ["http://fhir.health.gov.lk/ips/StructureDefinition/follow-up-plan"]
+  },
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: ServiceRequest</b><a name=\"FollowUpPlanServiceRequestExample\"> </a><a name=\"hcFollowUpPlanServiceRequestExample\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource ServiceRequest &quot;FollowUpPlanServiceRequestExample&quot; </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-follow-up-plan.html\">Referral Request For Follow-up Plan</a></p></div><p><b>status</b>: completed</p><p><b>intent</b>: order</p><p><b>code</b>: Follow up at HLC <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"https://browser.ihtsdotools.org/\">SNOMED CT</a>#410321003)</span></p><p><b>subject</b>: <a href=\"Patient-PatientExample.html\">Patient/PatientExample</a> &quot; SMITH&quot;</p><p><b>encounter</b>: <a href=\"Encounter-TargetFacilityEncounterExample.html\">Encounter/TargetFacilityEncounterExample</a></p><p><b>occurrence</b>: Count 1 times, Duration 3?ngen-7?, Once</p><p><b>requester</b>: <a href=\"Practitioner-GeneralPractitionerExample.html\">Practitioner/GeneralPractitionerExample</a> &quot; SMITH&quot;</p><p><b>locationReference</b>: <a href=\"Location-ProvidersLocationExample.html\">Location/ProvidersLocationExample</a> &quot;Name for the location&quot;</p><p><b>reasonCode</b>: Followed in 6 months at HLC <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"CodeSystem-cs-follow-up-reasons.html\">Follow up at HLC</a>#Followed-in-3-years-at-hlc)</span></p></div>"
+  },
+  "status" : "completed",
+  "intent" : "order",
+  "code" : {
+    "coding" : [{
+      "system" : "http://snomed.info/sct",
+      "code" : "410321003"
+    }],
+    "text" : "Follow up at HLC"
+  },
+  "subject" : {
+    "reference" : "Patient/PatientExample"
+  },
+  "encounter" : {
+    "reference" : "Encounter/TargetFacilityEncounterExample"
+  },
+  "occurrenceTiming" : {
+    "repeat" : {
+      "count" : 1,
+      "duration" : 3,
+      "durationUnit" : "mo"
+    }
+  },
+  "requester" : {
+    "reference" : "Practitioner/GeneralPractitionerExample"
+  },
+  "locationReference" : [{
+    "reference" : "Location/ProvidersLocationExample"
+  }],
+  "reasonCode" : [{
+    "coding" : [{
+      "system" : "http://fhir.health.gov.lk/ips/CodeSystem/cs-follow-up-reasons",
+      "code" : "Followed-in-3-years-at-hlc"
+    }],
+    "text" : "Followed in 6 months at HLC"
+  }]
+}

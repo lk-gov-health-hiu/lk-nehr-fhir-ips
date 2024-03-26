@@ -1,0 +1,209 @@
+{
+  "package": "lk-nehr-fhir-ips",
+  "version": "0.1.0",
+  "fhirVersion": "4.0.1",
+  "jurisdiction": "001",
+  "extensions": [],
+  "profiles": {
+    "Observation": [
+      {
+        "url": "http://fhir.health.gov.lk/ips/StructureDefinition/risk-behaviour-physical-activity",
+        "title": "Physical Activity Status Observation"
+      },
+      {
+        "url": "http://fhir.health.gov.lk/ips/StructureDefinition/risk-behaviour-tobacco-smoker",
+        "title": "Tobacco Smoker Observation"
+      },
+      {
+        "url": "http://fhir.health.gov.lk/ips/StructureDefinition/total-cholesterol",
+        "title": "Total Cholesterol Observation"
+      }
+    ],
+    "RiskAssessment": [
+      {
+        "url": "http://fhir.health.gov.lk/ips/StructureDefinition/cvd-risk-category",
+        "title": "Cardiovascular Risk Assessment"
+      }
+    ],
+    "MedicationDispense": [
+      {
+        "url": "http://fhir.health.gov.lk/ips/StructureDefinition/drug-dispensation",
+        "title": "Drug Dispensation"
+      }
+    ],
+    "CarePlan": [
+      {
+        "url": "http://fhir.health.gov.lk/ips/StructureDefinition/follow-up-at-hlc",
+        "title": "Follow-up at HLC"
+      }
+    ],
+    "ServiceRequest": [
+      {
+        "url": "http://fhir.health.gov.lk/ips/StructureDefinition/investigations-request",
+        "title": "Investigations Request"
+      }
+    ],
+    "AllergyIntolerance": [
+      {
+        "url": "http://fhir.health.gov.lk/ips/StructureDefinition/hims-allergy-intolerance",
+        "title": "Allergy Intolerance"
+      }
+    ],
+    "Encounter": [
+      {
+        "url": "http://fhir.health.gov.lk/ips/StructureDefinition/hims-target-facility-encounter",
+        "title": "HIMS Target Facility Encounter"
+      }
+    ],
+    "Task": [
+      {
+        "url": "http://fhir.health.gov.lk/ips/StructureDefinition/referral-task",
+        "title": "Referral Task"
+      }
+    ],
+    "Composition": [
+      {
+        "url": "http://fhir.health.gov.lk/ips/StructureDefinition/hims-composition",
+        "title": "HIMS Composition"
+      }
+    ],
+    "Bundle": [
+      {
+        "url": "http://fhir.health.gov.lk/ips/StructureDefinition/hims-transactional-bundle",
+        "title": "HIMS Transactional Bundle"
+      }
+    ],
+    "Patient": [
+      {
+        "url": "http://fhir.health.gov.lk/ips/StructureDefinition/hims-patient",
+        "title": "HIMS Patient"
+      }
+    ],
+    "ImagingStudy": [
+      {
+        "url": "http://fhir.health.gov.lk/ips/StructureDefinition/imaging-study",
+        "title": "Imaging Study"
+      }
+    ],
+    "Condition": [
+      {
+        "url": "http://fhir.health.gov.lk/ips/StructureDefinition/medical-history-hhims",
+        "title": "Medical History"
+      },
+      {
+        "url": "http://fhir.health.gov.lk/ips/StructureDefinition/medical-history-hims",
+        "title": "Medical History"
+      }
+    ],
+    "MedicationRequest": [
+      {
+        "url": "http://fhir.health.gov.lk/ips/StructureDefinition/medication-request",
+        "title": "Prescription Request"
+      },
+      {
+        "url": "http://fhir.health.gov.lk/ips/StructureDefinition/no-medication-requested",
+        "title": "Prescription Not Available"
+      }
+    ],
+    "Communication": [
+      {
+        "url": "http://fhir.health.gov.lk/ips/StructureDefinition/notifiable-diseases-notified",
+        "title": "Notifiable Diseases Notified"
+      }
+    ],
+    "Organization": [
+      {
+        "url": "http://fhir.health.gov.lk/ips/StructureDefinition/organization",
+        "title": "Organization"
+      }
+    ],
+    "Practitioner": [
+      {
+        "url": "http://fhir.health.gov.lk/ips/StructureDefinition/practitioner",
+        "title": "Practitioner"
+      }
+    ],
+    "Procedure": [
+      {
+        "url": "http://fhir.health.gov.lk/ips/StructureDefinition/procedure",
+        "title": "Procedures"
+      }
+    ],
+    "Location": [
+      {
+        "url": "http://fhir.health.gov.lk/ips/StructureDefinition/providers-location",
+        "title": "Providers Location"
+      }
+    ]
+  },
+  "usage": {
+    "http://hl7.org/fhir/StructureDefinition/composition-clinicaldocument-versionNumber": [
+      "Composition"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/data-absent-reason": [
+      "MedicationRequest.dispenseRequest.validityPeriod",
+      "Observation.effective[x]",
+      "Procedure.performed[x]"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/elementdefinition-bestpractice": [
+      "StructureDefinition.snapshot.element.constraint"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/elementdefinition-bestpractice-explanation": [
+      "StructureDefinition.snapshot.element.constraint"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName": [
+      "StructureDefinition.snapshot.element.binding"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/elementdefinition-maxValueSet": [
+      "StructureDefinition.snapshot.element.binding"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable": [
+      "StructureDefinition.snapshot.element"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support": [
+      "StructureDefinition.differential.element.type",
+      "StructureDefinition.snapshot.element.type"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/regex": [
+      "StructureDefinition.snapshot.element.type"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/structuredefinition-display-hint": [
+      "StructureDefinition.snapshot.element"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name": [
+      "StructureDefinition.snapshot.element"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/structuredefinition-fhir-type": [
+      "StructureDefinition.snapshot.element.type"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/structuredefinition-hierarchy": [
+      "StructureDefinition.snapshot.element.type"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/translation": [
+      "Observation.category.coding.display"
+    ],
+    "http://hl7.org/fhir/tools/StructureDefinition/additional-binding": [
+      "StructureDefinition.differential.element.binding",
+      "StructureDefinition.snapshot.element.binding"
+    ],
+    "http://hl7.org/fhir/tools/StructureDefinition/ig-internal-dependency": [
+      "ImplementationGuide.definition"
+    ],
+    "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name": [
+      "ImplementationGuide.definition.page",
+      "ImplementationGuide.definition.page.page"
+    ],
+    "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter": [
+      "ImplementationGuide.definition"
+    ],
+    "http://hl7.org/fhir/tools/StructureDefinition/implementationguide-dependency-comment": [
+      "ImplementationGuide.dependsOn"
+    ],
+    "http://hl7.org/fhir/tools/StructureDefinition/resource-information": [
+      "ImplementationGuide.definition.resource"
+    ],
+    "http://hl7.org/fhir/uv/ips/StructureDefinition/abatement-dateTime-uv-ips": [
+      "AllergyIntolerance"
+    ]
+  }
+}

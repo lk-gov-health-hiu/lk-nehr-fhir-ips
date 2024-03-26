@@ -1,0 +1,2097 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://fhir.health.gov.lk/ips/ImplementationGuide/lk-nehr-fhir-ips> a fhir:ImplementationGuide ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "lk-nehr-fhir-ips"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "extensions" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>SriLankaIPS</h2><p>The official URL for this implementation guide is: </p><pre>http://fhir.health.gov.lk/ips/ImplementationGuide/lk-nehr-fhir-ips</pre><div><p>A FHIR Implementation Guide - Sri Lanka IPS</p>\n</div></div>"
+  ] ; # 
+  fhir:url [ fhir:v "http://fhir.health.gov.lk/ips/ImplementationGuide/lk-nehr-fhir-ips"^^xsd:anyURI] ; # 
+  fhir:version [ fhir:v "0.1.0"] ; # 
+  fhir:name [ fhir:v "SriLankaIPS"] ; # 
+  fhir:title [ fhir:v "LK NEHR Sri Lanka Patient Summary (IPS based) Implementation Guide"] ; # 
+  fhir:status [ fhir:v "active"] ; # 
+  fhir:date [ fhir:v "2024-03-01"^^xsd:date] ; # 
+  fhir:publisher [ fhir:v "Ministry of Health, Sri Lanka"] ; # 
+  fhir:contact ( [
+     fhir:name [ fhir:v "Ministry of Health, Sri Lanka" ] ;
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "https://www.health.gov.lk/" ]
+     ] [
+       fhir:system [ fhir:v "email" ] ;
+       fhir:value [ fhir:v "digitalhealth@health.gov.lk" ]
+     ] )
+  ] [
+     fhir:name [ fhir:v "Director, Health Information" ] ;
+     fhir:telecom ( [
+       fhir:system [ fhir:v "email" ] ;
+       fhir:value [ fhir:v "digitalhealth@health.gov.lk" ] ;
+       fhir:use [ fhir:v "work" ]
+     ] )
+  ] ) ; # 
+  fhir:description [ fhir:v "A FHIR Implementation Guide - Sri Lanka IPS"] ; # 
+  fhir:jurisdiction ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://unstats.un.org/unsd/methods/m49/m49.htm"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "001" ] ;
+       fhir:display [ fhir:v "World" ]
+     ] )
+  ] ) ; # 
+  fhir:packageId [ fhir:v "lk-nehr-fhir-ips"] ; # 
+  fhir:license [ fhir:v "CC0-1.0"] ; # 
+  fhir:fhirVersion ( [ fhir:v "4.0.1"] ) ; # 
+  fhir:dependsOn ( [
+     fhir:id [ fhir:v "hl7tx" ] ;
+     fhir:extension ( [
+       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/implementationguide-dependency-comment"^^xsd:anyURI ] ;
+       fhir:value [ fhir:v "Automatically added as a dependency - all IGs depend on HL7 Terminology" ]
+     ] ) ;
+     fhir:uri [
+       fhir:v "http://terminology.hl7.org/ImplementationGuide/hl7.terminology"^^xsd:anyURI ;
+       fhir:link <http://terminology.hl7.org/ImplementationGuide/hl7.terminology>
+     ] ;
+     fhir:packageId [ fhir:v "hl7.terminology.r4" ] ;
+     fhir:version [ fhir:v "5.3.0" ]
+  ] [
+     fhir:id [ fhir:v "hl7ext" ] ;
+     fhir:extension ( [
+       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/implementationguide-dependency-comment"^^xsd:anyURI ] ;
+       fhir:value [ fhir:v "Automatically added as a dependency - all IGs depend on the HL7 Extension Pack" ]
+     ] ) ;
+     fhir:uri [
+       fhir:v "http://hl7.org/fhir/extensions/ImplementationGuide/hl7.fhir.uv.extensions"^^xsd:anyURI ;
+       fhir:link <http://hl7.org/fhir/extensions/ImplementationGuide/hl7.fhir.uv.extensions>
+     ] ;
+     fhir:packageId [ fhir:v "hl7.fhir.uv.extensions.r4" ] ;
+     fhir:version [ fhir:v "1.0.0" ]
+  ] [
+     fhir:id [ fhir:v "InternationalPatientSummaryIG" ] ;
+     fhir:uri [
+       fhir:v "http://hl7.org/fhir/uv/ips/ImplementationGuide/hl7.fhir.uv.ips"^^xsd:anyURI ;
+       fhir:link <http://hl7.org/fhir/uv/ips/ImplementationGuide/hl7.fhir.uv.ips>
+     ] ;
+     fhir:packageId [ fhir:v "hl7.fhir.uv.ips" ] ;
+     fhir:version [ fhir:v "1.1.0" ]
+  ] [
+     fhir:id [ fhir:v "fhir_dicom" ] ;
+     fhir:uri [
+       fhir:v "http://fhir.org/packages/fhir.dicom/ImplementationGuide/fhir.dicom"^^xsd:anyURI ;
+       fhir:link <http://fhir.org/packages/fhir.dicom/ImplementationGuide/fhir.dicom>
+     ] ;
+     fhir:packageId [ fhir:v "fhir.dicom" ] ;
+     fhir:version [ fhir:v "2024.1.20240120" ]
+  ] ) ; # 
+  fhir:definition [
+     fhir:extension ( [
+       fhir:extension ( [
+         fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "copyrightyear" ]
+       ] [
+         fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "2021+" ]
+       ] ) ;
+       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "releaselabel" ]
+       ] [
+         fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "STU1" ]
+       ] ) ;
+       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "autoload-resources" ]
+       ] [
+         fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "true" ]
+       ] ) ;
+       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "path-liquid" ]
+       ] [
+         fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "template/liquid" ]
+       ] ) ;
+       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "path-liquid" ]
+       ] [
+         fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "input/liquid" ]
+       ] ) ;
+       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "path-qa" ]
+       ] [
+         fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "temp/qa" ]
+       ] ) ;
+       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "path-temp" ]
+       ] [
+         fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "temp/pages" ]
+       ] ) ;
+       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "path-output" ]
+       ] [
+         fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "output" ]
+       ] ) ;
+       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "path-suppressed-warnings" ]
+       ] [
+         fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "input/ignoreWarnings.txt" ]
+       ] ) ;
+       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "path-history" ]
+       ] [
+         fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "http://fhir.health.gov.lk/ips/history.html" ]
+       ] ) ;
+       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "template-html" ]
+       ] [
+         fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "template-page.html" ]
+       ] ) ;
+       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "template-md" ]
+       ] [
+         fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "template-page-md.html" ]
+       ] ) ;
+       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "apply-contact" ]
+       ] [
+         fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "true" ]
+       ] ) ;
+       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "apply-context" ]
+       ] [
+         fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "true" ]
+       ] ) ;
+       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "apply-copyright" ]
+       ] [
+         fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "true" ]
+       ] ) ;
+       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "apply-jurisdiction" ]
+       ] [
+         fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "true" ]
+       ] ) ;
+       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "apply-license" ]
+       ] [
+         fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "true" ]
+       ] ) ;
+       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "apply-publisher" ]
+       ] [
+         fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "true" ]
+       ] ) ;
+       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "apply-version" ]
+       ] [
+         fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "true" ]
+       ] ) ;
+       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "apply-wg" ]
+       ] [
+         fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "true" ]
+       ] ) ;
+       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "active-tables" ]
+       ] [
+         fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "true" ]
+       ] ) ;
+       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "fmm-definition" ]
+       ] [
+         fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "http://hl7.org/fhir/versions.html#maturity" ]
+       ] ) ;
+       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "propagate-status" ]
+       ] [
+         fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "true" ]
+       ] ) ;
+       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "excludelogbinaryformat" ]
+       ] [
+         fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "true" ]
+       ] ) ;
+       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "tabbed-snapshots" ]
+       ] [
+         fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "true" ]
+       ] ) ;
+       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
+     ] [
+       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-internal-dependency"^^xsd:anyURI ] ;
+       fhir:value [ fhir:v "hl7.fhir.uv.tools#0.1.0" ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "copyrightyear" ]
+       ] [
+         fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "2021+" ]
+       ] ) ;
+       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "releaselabel" ]
+       ] [
+         fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "STU1" ]
+       ] ) ;
+       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "autoload-resources" ]
+       ] [
+         fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "true" ]
+       ] ) ;
+       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "path-liquid" ]
+       ] [
+         fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "template/liquid" ]
+       ] ) ;
+       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "path-liquid" ]
+       ] [
+         fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "input/liquid" ]
+       ] ) ;
+       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "path-qa" ]
+       ] [
+         fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "temp/qa" ]
+       ] ) ;
+       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "path-temp" ]
+       ] [
+         fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "temp/pages" ]
+       ] ) ;
+       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "path-output" ]
+       ] [
+         fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "output" ]
+       ] ) ;
+       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "path-suppressed-warnings" ]
+       ] [
+         fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "input/ignoreWarnings.txt" ]
+       ] ) ;
+       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "path-history" ]
+       ] [
+         fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "http://fhir.health.gov.lk/ips/history.html" ]
+       ] ) ;
+       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "template-html" ]
+       ] [
+         fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "template-page.html" ]
+       ] ) ;
+       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "template-md" ]
+       ] [
+         fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "template-page-md.html" ]
+       ] ) ;
+       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "apply-contact" ]
+       ] [
+         fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "true" ]
+       ] ) ;
+       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "apply-context" ]
+       ] [
+         fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "true" ]
+       ] ) ;
+       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "apply-copyright" ]
+       ] [
+         fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "true" ]
+       ] ) ;
+       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "apply-jurisdiction" ]
+       ] [
+         fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "true" ]
+       ] ) ;
+       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "apply-license" ]
+       ] [
+         fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "true" ]
+       ] ) ;
+       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "apply-publisher" ]
+       ] [
+         fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "true" ]
+       ] ) ;
+       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "apply-version" ]
+       ] [
+         fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "true" ]
+       ] ) ;
+       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "apply-wg" ]
+       ] [
+         fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "true" ]
+       ] ) ;
+       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "active-tables" ]
+       ] [
+         fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "true" ]
+       ] ) ;
+       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "fmm-definition" ]
+       ] [
+         fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "http://hl7.org/fhir/versions.html#maturity" ]
+       ] ) ;
+       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "propagate-status" ]
+       ] [
+         fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "true" ]
+       ] ) ;
+       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "excludelogbinaryformat" ]
+       ] [
+         fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "true" ]
+       ] ) ;
+       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "tabbed-snapshots" ]
+       ] [
+         fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "true" ]
+       ] ) ;
+       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
+     ] ) ;
+     fhir:resource ( [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "StructureDefinition:resource" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://fhir.health.gov.lk/ips/StructureDefinition/allergy-intolerance> ;
+         fhir:reference [ fhir:v "StructureDefinition/allergy-intolerance" ]
+       ] ;
+       fhir:name [ fhir:v "Allergy Intolerance" ] ;
+       fhir:description [ fhir:v "Used to represent the patient's allergies." ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "StructureDefinition:resource" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://fhir.health.gov.lk/ips/StructureDefinition/no-allergy-intolerance> ;
+         fhir:reference [ fhir:v "StructureDefinition/no-allergy-intolerance" ]
+       ] ;
+       fhir:name [ fhir:v "Allergy Intolerance" ] ;
+       fhir:description [ fhir:v "This is to indicate that there is no information avaible for allergies." ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "AllergyIntolerance" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://fhir.health.gov.lk/ips/AllergyIntolerance/AllergiesExample> ;
+         fhir:reference [ fhir:v "AllergyIntolerance/AllergiesExample" ]
+       ] ;
+       fhir:name [ fhir:v "Allergy Intolerance" ] ;
+       fhir:description [ fhir:v "This is to record allergy information available for the patient." ] ;
+       fhir:example [
+         fhir:v "http://fhir.health.gov.lk/ips/StructureDefinition/allergy-intolerance"^^xsd:anyURI ;
+         fhir:link <http://fhir.health.gov.lk/ips/StructureDefinition/allergy-intolerance>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "AllergyIntolerance" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://fhir.health.gov.lk/ips/AllergyIntolerance/NoAllergiesExample> ;
+         fhir:reference [ fhir:v "AllergyIntolerance/NoAllergiesExample" ]
+       ] ;
+       fhir:name [ fhir:v "Allergy Intolerance" ] ;
+       fhir:description [ fhir:v "This is to indicate that there is no information avaible for allergies." ] ;
+       fhir:example [
+         fhir:v "http://fhir.health.gov.lk/ips/StructureDefinition/no-allergy-intolerance"^^xsd:anyURI ;
+         fhir:link <http://fhir.health.gov.lk/ips/StructureDefinition/no-allergy-intolerance>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "StructureDefinition:resource" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://fhir.health.gov.lk/ips/StructureDefinition/blood-pressure> ;
+         fhir:reference [ fhir:v "StructureDefinition/blood-pressure" ]
+       ] ;
+       fhir:name [ fhir:v "Blood Pressure Observation" ] ;
+       fhir:description [ fhir:v "Represents the patient's blood pressure." ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "Observation" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://fhir.health.gov.lk/ips/Observation/BloodPressureExample> ;
+         fhir:reference [ fhir:v "Observation/BloodPressureExample" ]
+       ] ;
+       fhir:name [ fhir:v "Blood Pressure Observation" ] ;
+       fhir:description [ fhir:v "Represents the Systolic and Diastolic blood pressure for the patient." ] ;
+       fhir:example [
+         fhir:v "http://fhir.health.gov.lk/ips/StructureDefinition/blood-pressure"^^xsd:anyURI ;
+         fhir:link <http://fhir.health.gov.lk/ips/StructureDefinition/blood-pressure>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "StructureDefinition:resource" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://fhir.health.gov.lk/ips/StructureDefinition/cvd-risk-category> ;
+         fhir:reference [ fhir:v "StructureDefinition/cvd-risk-category" ]
+       ] ;
+       fhir:name [ fhir:v "Cardiovascular Risk Assessment" ] ;
+       fhir:description [ fhir:v "Represents the patient's CVD risk score." ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "RiskAssessment" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://fhir.health.gov.lk/ips/RiskAssessment/CVDRiskCategoryExample> ;
+         fhir:reference [ fhir:v "RiskAssessment/CVDRiskCategoryExample" ]
+       ] ;
+       fhir:name [ fhir:v "Cardiovascular Risk Assessment" ] ;
+       fhir:description [ fhir:v "Represents the patient's CVD risk score." ] ;
+       fhir:example [
+         fhir:v "http://fhir.health.gov.lk/ips/StructureDefinition/cvd-risk-category"^^xsd:anyURI ;
+         fhir:link <http://fhir.health.gov.lk/ips/StructureDefinition/cvd-risk-category>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "ValueSet" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://fhir.health.gov.lk/ips/ValueSet/vs-cvd-risk-category> ;
+         fhir:reference [ fhir:v "ValueSet/vs-cvd-risk-category" ]
+       ] ;
+       fhir:name [ fhir:v "Cardiovascular Risk Categories" ] ;
+       fhir:description [ fhir:v "Cardiovascular risk is expressed as a percentage" ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "CodeSystem" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://fhir.health.gov.lk/ips/CodeSystem/cs-cvd-risk-category> ;
+         fhir:reference [ fhir:v "CodeSystem/cs-cvd-risk-category" ]
+       ] ;
+       fhir:name [ fhir:v "Cardiovascular Risk Categories" ] ;
+       fhir:description [ fhir:v "Cardiovascular risk is expressed as a percentage" ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "CodeSystem" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://fhir.health.gov.lk/ips/CodeSystem/cs-composition-codes> ;
+         fhir:reference [ fhir:v "CodeSystem/cs-composition-codes" ]
+       ] ;
+       fhir:name [ fhir:v "Composition Section Codes" ] ;
+       fhir:description [ fhir:v "A list of Composition section codes." ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "ValueSet" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://fhir.health.gov.lk/ips/ValueSet/vs-medical-conditions> ;
+         fhir:reference [ fhir:v "ValueSet/vs-medical-conditions" ]
+       ] ;
+       fhir:name [ fhir:v "Conditions" ] ;
+       fhir:description [ fhir:v "Represents previous, pre-existing and new conditions." ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "ValueSet" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://fhir.health.gov.lk/ips/ValueSet/vs-device-classification> ;
+         fhir:reference [ fhir:v "ValueSet/vs-device-classification" ]
+       ] ;
+       fhir:name [ fhir:v "Device Classification Codes" ] ;
+       fhir:description [ fhir:v "A list of device device classification codes." ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "CodeSystem" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://fhir.health.gov.lk/ips/CodeSystem/cs-device-classification> ;
+         fhir:reference [ fhir:v "CodeSystem/cs-device-classification" ]
+       ] ;
+       fhir:name [ fhir:v "Device Classification Codes" ] ;
+       fhir:description [ fhir:v "A list of device device classification codes." ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "StructureDefinition:resource" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://fhir.health.gov.lk/ips/StructureDefinition/device-information> ;
+         fhir:reference [ fhir:v "StructureDefinition/device-information" ]
+       ] ;
+       fhir:name [ fhir:v "Device Information" ] ;
+       fhir:description [ fhir:v "Is used to record key information about the system that contributed to the patient's record." ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "Device" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://fhir.health.gov.lk/ips/Device/DeviceInformationExample> ;
+         fhir:reference [ fhir:v "Device/DeviceInformationExample" ]
+       ] ;
+       fhir:name [ fhir:v "Device Information" ] ;
+       fhir:description [ fhir:v "Is used to record key information about the system that contributed to the patient's record." ] ;
+       fhir:example [
+         fhir:v "http://fhir.health.gov.lk/ips/StructureDefinition/device-information"^^xsd:anyURI ;
+         fhir:link <http://fhir.health.gov.lk/ips/StructureDefinition/device-information>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "StructureDefinition:resource" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://fhir.health.gov.lk/ips/StructureDefinition/drug-dispensation> ;
+         fhir:reference [ fhir:v "StructureDefinition/drug-dispensation" ]
+       ] ;
+       fhir:name [ fhir:v "Drug Dispensation" ] ;
+       fhir:description [ fhir:v "Used to represent dispensed medication for a patient." ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "MedicationDispense" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://fhir.health.gov.lk/ips/MedicationDispense/DrugDispensationExample> ;
+         fhir:reference [ fhir:v "MedicationDispense/DrugDispensationExample" ]
+       ] ;
+       fhir:name [ fhir:v "Drug Dispensation" ] ;
+       fhir:description [ fhir:v "Used to represent dispensed medication for a patient." ] ;
+       fhir:example [
+         fhir:v "http://fhir.health.gov.lk/ips/StructureDefinition/drug-dispensation"^^xsd:anyURI ;
+         fhir:link <http://fhir.health.gov.lk/ips/StructureDefinition/drug-dispensation>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "StructureDefinition:resource" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://fhir.health.gov.lk/ips/StructureDefinition/fasting-blood-sugar> ;
+         fhir:reference [ fhir:v "StructureDefinition/fasting-blood-sugar" ]
+       ] ;
+       fhir:name [ fhir:v "Fasting Blood Sugar Observation" ] ;
+       fhir:description [ fhir:v "Represents the patient's FBS results." ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "Observation" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://fhir.health.gov.lk/ips/Observation/FastingBloodSugarExample> ;
+         fhir:reference [ fhir:v "Observation/FastingBloodSugarExample" ]
+       ] ;
+       fhir:name [ fhir:v "Fasting Blood Sugar Observation" ] ;
+       fhir:description [ fhir:v "Represents the patient's FBS results." ] ;
+       fhir:example [
+         fhir:v "http://fhir.health.gov.lk/ips/StructureDefinition/fasting-blood-sugar"^^xsd:anyURI ;
+         fhir:link <http://fhir.health.gov.lk/ips/StructureDefinition/fasting-blood-sugar>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "ValueSet" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://fhir.health.gov.lk/ips/ValueSet/vs-follow-up-reasons> ;
+         fhir:reference [ fhir:v "ValueSet/vs-follow-up-reasons" ]
+       ] ;
+       fhir:name [ fhir:v "Follow up at HLC" ] ;
+       fhir:description [ fhir:v "Follow up at Healthy Lifestyle Center" ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "CodeSystem" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://fhir.health.gov.lk/ips/CodeSystem/cs-follow-up-reasons> ;
+         fhir:reference [ fhir:v "CodeSystem/cs-follow-up-reasons" ]
+       ] ;
+       fhir:name [ fhir:v "Follow up at HLC" ] ;
+       fhir:description [ fhir:v "Follow up at Healthy Lifestyle Center" ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "StructureDefinition:resource" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://fhir.health.gov.lk/ips/StructureDefinition/follow-up-at-hlc> ;
+         fhir:reference [ fhir:v "StructureDefinition/follow-up-at-hlc" ]
+       ] ;
+       fhir:name [ fhir:v "Follow-up at HLC" ] ;
+       fhir:description [ fhir:v "Used to record the follow-up event for the patient at HLC." ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "CarePlan" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://fhir.health.gov.lk/ips/CarePlan/FollowUpAtHLCExample> ;
+         fhir:reference [ fhir:v "CarePlan/FollowUpAtHLCExample" ]
+       ] ;
+       fhir:name [ fhir:v "Follow-up at HLC" ] ;
+       fhir:description [ fhir:v "Used to record the follow-up event for the patient at HLC." ] ;
+       fhir:example [
+         fhir:v "http://fhir.health.gov.lk/ips/StructureDefinition/follow-up-at-hlc"^^xsd:anyURI ;
+         fhir:link <http://fhir.health.gov.lk/ips/StructureDefinition/follow-up-at-hlc>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "ValueSet" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://fhir.health.gov.lk/ips/ValueSet/vs-follow-up-plan> ;
+         fhir:reference [ fhir:v "ValueSet/vs-follow-up-plan" ]
+       ] ;
+       fhir:name [ fhir:v "Follow-up plan" ] ;
+       fhir:description [ fhir:v "Follow-up plan" ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "StructureDefinition:resource" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://fhir.health.gov.lk/ips/StructureDefinition/general-referral-request> ;
+         fhir:reference [ fhir:v "StructureDefinition/general-referral-request" ]
+       ] ;
+       fhir:name [ fhir:v "General Referral Request" ] ;
+       fhir:description [ fhir:v "Used to initiate a request for a referral." ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "ServiceRequest" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://fhir.health.gov.lk/ips/ServiceRequest/GeneralReferralServiceRequestExample> ;
+         fhir:reference [ fhir:v "ServiceRequest/GeneralReferralServiceRequestExample" ]
+       ] ;
+       fhir:name [ fhir:v "General Referral Request" ] ;
+       fhir:description [ fhir:v "Used to initiate a request for a referral." ] ;
+       fhir:example [
+         fhir:v "http://fhir.health.gov.lk/ips/StructureDefinition/general-referral-request"^^xsd:anyURI ;
+         fhir:link <http://fhir.health.gov.lk/ips/StructureDefinition/general-referral-request>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "StructureDefinition:resource" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://fhir.health.gov.lk/ips/StructureDefinition/generic-observation> ;
+         fhir:reference [ fhir:v "StructureDefinition/generic-observation" ]
+       ] ;
+       fhir:name [ fhir:v "Generic Observation" ] ;
+       fhir:description [ fhir:v "Base Observation elements that are inherited by other Observations resources." ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "Observation" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://fhir.health.gov.lk/ips/Observation/GenericObservationExample> ;
+         fhir:reference [ fhir:v "Observation/GenericObservationExample" ]
+       ] ;
+       fhir:name [ fhir:v "Generic Observation" ] ;
+       fhir:description [ fhir:v "Base Observation elements that are inherited by other Observations resources." ] ;
+       fhir:example [
+         fhir:v "http://fhir.health.gov.lk/ips/StructureDefinition/generic-observation"^^xsd:anyURI ;
+         fhir:link <http://fhir.health.gov.lk/ips/StructureDefinition/generic-observation>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "StructureDefinition:resource" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://fhir.health.gov.lk/ips/StructureDefinition/generic-service-request> ;
+         fhir:reference [ fhir:v "StructureDefinition/generic-service-request" ]
+       ] ;
+       fhir:name [ fhir:v "Generic Service Request" ] ;
+       fhir:description [ fhir:v "Base ServiceRequest elements that are inherited by other ServiceRequest resources." ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "ServiceRequest" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://fhir.health.gov.lk/ips/ServiceRequest/GenericServiceRequestExample> ;
+         fhir:reference [ fhir:v "ServiceRequest/GenericServiceRequestExample" ]
+       ] ;
+       fhir:name [ fhir:v "Generic Service Request" ] ;
+       fhir:description [ fhir:v "Base ServiceRequest elements that are inherited by other ServiceRequest resources." ] ;
+       fhir:example [
+         fhir:v "http://fhir.health.gov.lk/ips/StructureDefinition/generic-service-request"^^xsd:anyURI ;
+         fhir:link <http://fhir.health.gov.lk/ips/StructureDefinition/generic-service-request>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "StructureDefinition:resource" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://fhir.health.gov.lk/ips/StructureDefinition/generic-task> ;
+         fhir:reference [ fhir:v "StructureDefinition/generic-task" ]
+       ] ;
+       fhir:name [ fhir:v "Generic Task" ] ;
+       fhir:description [ fhir:v "Base Task elements that are inherited by other Task resources." ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "Task" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://fhir.health.gov.lk/ips/Task/GenericTaskExample> ;
+         fhir:reference [ fhir:v "Task/GenericTaskExample" ]
+       ] ;
+       fhir:name [ fhir:v "Generic Task" ] ;
+       fhir:description [ fhir:v "Base Task elements that are inherited by other Task resources." ] ;
+       fhir:example [
+         fhir:v "http://fhir.health.gov.lk/ips/StructureDefinition/generic-task"^^xsd:anyURI ;
+         fhir:link <http://fhir.health.gov.lk/ips/StructureDefinition/generic-task>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "StructureDefinition:resource" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://fhir.health.gov.lk/ips/StructureDefinition/hhims-composition> ;
+         fhir:reference [ fhir:v "StructureDefinition/hhims-composition" ]
+       ] ;
+       fhir:name [ fhir:v "HHIMS Composition" ] ;
+       fhir:description [ fhir:v "Clinical document used to represent the International Patient Summary (IPS) data set for HHIMS" ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "Composition" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://fhir.health.gov.lk/ips/Composition/HHIMSCompositionExampleWithMedicalHistory> ;
+         fhir:reference [ fhir:v "Composition/HHIMSCompositionExampleWithMedicalHistory" ]
+       ] ;
+       fhir:name [ fhir:v "HHIMS Composition" ] ;
+       fhir:description [ fhir:v "Clinical document used to represent the International Patient Summary (IPS) data set for a HHIMS patient with a medical history" ] ;
+       fhir:example [
+         fhir:v "http://fhir.health.gov.lk/ips/StructureDefinition/hhims-composition"^^xsd:anyURI ;
+         fhir:link <http://fhir.health.gov.lk/ips/StructureDefinition/hhims-composition>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "Composition" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://fhir.health.gov.lk/ips/Composition/HHIMSCompositionExampleNoMedicalHistory> ;
+         fhir:reference [ fhir:v "Composition/HHIMSCompositionExampleNoMedicalHistory" ]
+       ] ;
+       fhir:name [ fhir:v "HHIMS Composition" ] ;
+       fhir:description [ fhir:v "Clinical document used to represent the International Patient Summary (IPS) data set for a HHIMS patient with no medical history" ] ;
+       fhir:example [
+         fhir:v "http://fhir.health.gov.lk/ips/StructureDefinition/hhims-composition"^^xsd:anyURI ;
+         fhir:link <http://fhir.health.gov.lk/ips/StructureDefinition/hhims-composition>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "StructureDefinition:resource" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://fhir.health.gov.lk/ips/StructureDefinition/hhims-ips-bundle> ;
+         fhir:reference [ fhir:v "StructureDefinition/hhims-ips-bundle" ]
+       ] ;
+       fhir:name [ fhir:v "HHIMS IPS Bundle" ] ;
+       fhir:description [ fhir:v "This bundle contains all of the HHIMS resources for IPS." ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "Bundle" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://fhir.health.gov.lk/ips/Bundle/HHIMSIPSBundleExampleWithMedicalHistory> ;
+         fhir:reference [ fhir:v "Bundle/HHIMSIPSBundleExampleWithMedicalHistory" ]
+       ] ;
+       fhir:name [ fhir:v "HHIMS IPS Bundle with medical history" ] ;
+       fhir:description [ fhir:v "A full IPS derived bundle containing a medical history for the HHIMS patient." ] ;
+       fhir:example [
+         fhir:v "http://fhir.health.gov.lk/ips/StructureDefinition/hhims-ips-bundle"^^xsd:anyURI ;
+         fhir:link <http://fhir.health.gov.lk/ips/StructureDefinition/hhims-ips-bundle>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "Bundle" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://fhir.health.gov.lk/ips/Bundle/HHIMSIPSBundleExampleNoMedicalHistory> ;
+         fhir:reference [ fhir:v "Bundle/HHIMSIPSBundleExampleNoMedicalHistory" ]
+       ] ;
+       fhir:name [ fhir:v "HHIMS IPS Bundle with no medical history" ] ;
+       fhir:description [ fhir:v "A full IPS derived bundle containing no medical history for the HHIMS patient." ] ;
+       fhir:example [
+         fhir:v "http://fhir.health.gov.lk/ips/StructureDefinition/hhims-ips-bundle"^^xsd:anyURI ;
+         fhir:link <http://fhir.health.gov.lk/ips/StructureDefinition/hhims-ips-bundle>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "StructureDefinition:resource" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://fhir.health.gov.lk/ips/StructureDefinition/hhims-transactional-bundle> ;
+         fhir:reference [ fhir:v "StructureDefinition/hhims-transactional-bundle" ]
+       ] ;
+       fhir:name [ fhir:v "HHIMS Transactional Bundle" ] ;
+       fhir:description [ fhir:v "This bundle contains all of the HHIMS resources for transactional requests." ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "Bundle" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://fhir.health.gov.lk/ips/Bundle/HHIMSTransactionalBundleExampleWithMedicalHistory> ;
+         fhir:reference [ fhir:v "Bundle/HHIMSTransactionalBundleExampleWithMedicalHistory" ]
+       ] ;
+       fhir:name [ fhir:v "HHIMS Transactional Bundle with medical history" ] ;
+       fhir:description [ fhir:v "A full transactional bundle containing a medical history for the HHIMS patient." ] ;
+       fhir:example [
+         fhir:v "http://fhir.health.gov.lk/ips/StructureDefinition/hhims-transactional-bundle"^^xsd:anyURI ;
+         fhir:link <http://fhir.health.gov.lk/ips/StructureDefinition/hhims-transactional-bundle>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "Bundle" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://fhir.health.gov.lk/ips/Bundle/HHIMSTransactionalBundleExampleNoMedicalHistory> ;
+         fhir:reference [ fhir:v "Bundle/HHIMSTransactionalBundleExampleNoMedicalHistory" ]
+       ] ;
+       fhir:name [ fhir:v "HHIMS Transactional Bundle with no medical history" ] ;
+       fhir:description [ fhir:v "A full transactional bundle containing no medical history for the HHIMS patient." ] ;
+       fhir:example [
+         fhir:v "http://fhir.health.gov.lk/ips/StructureDefinition/hhims-transactional-bundle"^^xsd:anyURI ;
+         fhir:link <http://fhir.health.gov.lk/ips/StructureDefinition/hhims-transactional-bundle>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "StructureDefinition:resource" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://fhir.health.gov.lk/ips/StructureDefinition/hims-composition> ;
+         fhir:reference [ fhir:v "StructureDefinition/hims-composition" ]
+       ] ;
+       fhir:name [ fhir:v "HIMS Composition" ] ;
+       fhir:description [ fhir:v "Clinical document used to represent the International Patient Summary (IPS) data set for HIMS" ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "Composition" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://fhir.health.gov.lk/ips/Composition/HIMSCompositionExample> ;
+         fhir:reference [ fhir:v "Composition/HIMSCompositionExample" ]
+       ] ;
+       fhir:name [ fhir:v "HIMS Composition" ] ;
+       fhir:description [ fhir:v "Clinical document used to represent the International Patient Summary (IPS) data set for HIMS." ] ;
+       fhir:example [
+         fhir:v "http://fhir.health.gov.lk/ips/StructureDefinition/hims-composition"^^xsd:anyURI ;
+         fhir:link <http://fhir.health.gov.lk/ips/StructureDefinition/hims-composition>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "StructureDefinition:resource" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://fhir.health.gov.lk/ips/StructureDefinition/hims-ips-bundle> ;
+         fhir:reference [ fhir:v "StructureDefinition/hims-ips-bundle" ]
+       ] ;
+       fhir:name [ fhir:v "HIMS IPS Bundle" ] ;
+       fhir:description [ fhir:v "This bundle contains all of the HIMS resources for IPS." ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "Bundle" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://fhir.health.gov.lk/ips/Bundle/HIMSIPSBundleExample> ;
+         fhir:reference [ fhir:v "Bundle/HIMSIPSBundleExample" ]
+       ] ;
+       fhir:name [ fhir:v "HIMS IPS Bundle" ] ;
+       fhir:description [ fhir:v "HIMS IPS Bundle" ] ;
+       fhir:example [
+         fhir:v "http://fhir.health.gov.lk/ips/StructureDefinition/hims-ips-bundle"^^xsd:anyURI ;
+         fhir:link <http://fhir.health.gov.lk/ips/StructureDefinition/hims-ips-bundle>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "StructureDefinition:resource" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://fhir.health.gov.lk/ips/StructureDefinition/hims-transactional-bundle> ;
+         fhir:reference [ fhir:v "StructureDefinition/hims-transactional-bundle" ]
+       ] ;
+       fhir:name [ fhir:v "HIMS Transactional Bundle" ] ;
+       fhir:description [ fhir:v "This bundle contains all of the HIMS resources for transactional requests." ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "Bundle" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://fhir.health.gov.lk/ips/Bundle/HIMSTransactionalBundleExample> ;
+         fhir:reference [ fhir:v "Bundle/HIMSTransactionalBundleExample" ]
+       ] ;
+       fhir:name [ fhir:v "HIMS Transactional Bundle" ] ;
+       fhir:description [ fhir:v "This bundle contains all of the HIMS resources for transactional requests." ] ;
+       fhir:example [
+         fhir:v "http://fhir.health.gov.lk/ips/StructureDefinition/hims-transactional-bundle"^^xsd:anyURI ;
+         fhir:link <http://fhir.health.gov.lk/ips/StructureDefinition/hims-transactional-bundle>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "StructureDefinition:resource" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://fhir.health.gov.lk/ips/StructureDefinition/imaging-request> ;
+         fhir:reference [ fhir:v "StructureDefinition/imaging-request" ]
+       ] ;
+       fhir:name [ fhir:v "Imaging Request" ] ;
+       fhir:description [ fhir:v "Used to initiate the request for imaging to be done." ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "ServiceRequest" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://fhir.health.gov.lk/ips/ServiceRequest/ImagingServiceRequestExample> ;
+         fhir:reference [ fhir:v "ServiceRequest/ImagingServiceRequestExample" ]
+       ] ;
+       fhir:name [ fhir:v "Imaging Request" ] ;
+       fhir:description [ fhir:v "Used to initiate the request for imaging to be done." ] ;
+       fhir:example [
+         fhir:v "http://fhir.health.gov.lk/ips/StructureDefinition/imaging-request"^^xsd:anyURI ;
+         fhir:link <http://fhir.health.gov.lk/ips/StructureDefinition/imaging-request>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "StructureDefinition:resource" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://fhir.health.gov.lk/ips/StructureDefinition/imaging-study> ;
+         fhir:reference [ fhir:v "StructureDefinition/imaging-study" ]
+       ] ;
+       fhir:name [ fhir:v "Imaging Study" ] ;
+       fhir:description [ fhir:v "Used to represent the content or results of a imaging study." ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "ImagingStudy" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://fhir.health.gov.lk/ips/ImagingStudy/ImagingExample> ;
+         fhir:reference [ fhir:v "ImagingStudy/ImagingExample" ]
+       ] ;
+       fhir:name [ fhir:v "Imaging Study" ] ;
+       fhir:description [ fhir:v "Used to represent the content or results of a imaging study." ] ;
+       fhir:example [
+         fhir:v "http://fhir.health.gov.lk/ips/StructureDefinition/imaging-study"^^xsd:anyURI ;
+         fhir:link <http://fhir.health.gov.lk/ips/StructureDefinition/imaging-study>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "ValueSet" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://fhir.health.gov.lk/ips/ValueSet/vs-investigation> ;
+         fhir:reference [ fhir:v "ValueSet/vs-investigation" ]
+       ] ;
+       fhir:name [ fhir:v "Investigations" ] ;
+       fhir:description [ fhir:v "Investigations" ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "CodeSystem" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://fhir.health.gov.lk/ips/CodeSystem/cs-investigation> ;
+         fhir:reference [ fhir:v "CodeSystem/cs-investigation" ]
+       ] ;
+       fhir:name [ fhir:v "Investigations" ] ;
+       fhir:description [ fhir:v "Investigations" ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "StructureDefinition:resource" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://fhir.health.gov.lk/ips/StructureDefinition/investigations-request> ;
+         fhir:reference [ fhir:v "StructureDefinition/investigations-request" ]
+       ] ;
+       fhir:name [ fhir:v "Investigations Request" ] ;
+       fhir:description [ fhir:v "Used to initiate a request for an investigation." ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "ServiceRequest" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://fhir.health.gov.lk/ips/ServiceRequest/InvestigationsServiceRequestExample> ;
+         fhir:reference [ fhir:v "ServiceRequest/InvestigationsServiceRequestExample" ]
+       ] ;
+       fhir:name [ fhir:v "Investigations Request" ] ;
+       fhir:description [ fhir:v "Used to initiate a request for an investigation." ] ;
+       fhir:example [
+         fhir:v "http://fhir.health.gov.lk/ips/StructureDefinition/investigations-request"^^xsd:anyURI ;
+         fhir:link <http://fhir.health.gov.lk/ips/StructureDefinition/investigations-request>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "StructureDefinition:resource" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://fhir.health.gov.lk/ips/StructureDefinition/medical-history> ;
+         fhir:reference [ fhir:v "StructureDefinition/medical-history" ]
+       ] ;
+       fhir:name [ fhir:v "Medical History" ] ;
+       fhir:description [ fhir:v "Represents previous, pre-existing and new conditions for the patient." ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "StructureDefinition:resource" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://fhir.health.gov.lk/ips/StructureDefinition/no-medical-history> ;
+         fhir:reference [ fhir:v "StructureDefinition/no-medical-history" ]
+       ] ;
+       fhir:name [ fhir:v "Medical History" ] ;
+       fhir:description [ fhir:v "Indicates that there is no information available about the subject's health problems or disabilities." ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "Condition" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://fhir.health.gov.lk/ips/Condition/MedicalHistoryExample> ;
+         fhir:reference [ fhir:v "Condition/MedicalHistoryExample" ]
+       ] ;
+       fhir:name [ fhir:v "Medical History" ] ;
+       fhir:description [ fhir:v "Represents previous, pre-existing and new conditions for the patient." ] ;
+       fhir:example [
+         fhir:v "http://fhir.health.gov.lk/ips/StructureDefinition/medical-history"^^xsd:anyURI ;
+         fhir:link <http://fhir.health.gov.lk/ips/StructureDefinition/medical-history>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "Condition" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://fhir.health.gov.lk/ips/Condition/NoMedicalHistoryExample> ;
+         fhir:reference [ fhir:v "Condition/NoMedicalHistoryExample" ]
+       ] ;
+       fhir:name [ fhir:v "Medical History" ] ;
+       fhir:description [ fhir:v "Indicates that there is no information available about the subject's health problems or disabilities." ] ;
+       fhir:example [
+         fhir:v "http://fhir.health.gov.lk/ips/StructureDefinition/no-medical-history"^^xsd:anyURI ;
+         fhir:link <http://fhir.health.gov.lk/ips/StructureDefinition/no-medical-history>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "ValueSet" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://fhir.health.gov.lk/ips/ValueSet/vs-medication-name-msd> ;
+         fhir:reference [ fhir:v "ValueSet/vs-medication-name-msd" ]
+       ] ;
+       fhir:name [ fhir:v "Medication Names For Pharmacy" ] ;
+       fhir:description [ fhir:v "A list of typical medications that can be prescribed to the patient." ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "CodeSystem" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://fhir.health.gov.lk/ips/CodeSystem/cs-medication-name-msd> ;
+         fhir:reference [ fhir:v "CodeSystem/cs-medication-name-msd" ]
+       ] ;
+       fhir:name [ fhir:v "Medication Names For Pharmacy" ] ;
+       fhir:description [ fhir:v "A list of typical medications that can be prescribed to the patient." ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "ValueSet" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://fhir.health.gov.lk/ips/ValueSet/vs-medication-name-non-msd> ;
+         fhir:reference [ fhir:v "ValueSet/vs-medication-name-non-msd" ]
+       ] ;
+       fhir:name [ fhir:v "Medication Names Not For Pharmacy" ] ;
+       fhir:description [ fhir:v "A list of medications that typically are not prescribed for collection at the pharamcy a.k.a. Non-Medical Supplies." ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "CodeSystem" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://fhir.health.gov.lk/ips/CodeSystem/cs-medication-name-non-msd> ;
+         fhir:reference [ fhir:v "CodeSystem/cs-medication-name-non-msd" ]
+       ] ;
+       fhir:name [ fhir:v "Medication Names Not For Pharmacy" ] ;
+       fhir:description [ fhir:v "A list of medications that typically are not prescribed for collection at the pharamcy a.k.a. Non-Medical Supplies." ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "StructureDefinition:resource" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://fhir.health.gov.lk/ips/StructureDefinition/medication-request> ;
+         fhir:reference [ fhir:v "StructureDefinition/medication-request" ]
+       ] ;
+       fhir:name [ fhir:v "Medication Request" ] ;
+       fhir:description [ fhir:v "This is to record requests for medication that are prescribed to a patient or for Non-MDS medicines." ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "StructureDefinition:resource" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://fhir.health.gov.lk/ips/StructureDefinition/no-medication-requested> ;
+         fhir:reference [ fhir:v "StructureDefinition/no-medication-requested" ]
+       ] ;
+       fhir:name [ fhir:v "Medication Request" ] ;
+       fhir:description [ fhir:v "This is to indicate that the patient has not received any prescriptions for drugs." ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "MedicationRequest" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://fhir.health.gov.lk/ips/MedicationRequest/MedicationRequestsExample> ;
+         fhir:reference [ fhir:v "MedicationRequest/MedicationRequestsExample" ]
+       ] ;
+       fhir:name [ fhir:v "Medication Request" ] ;
+       fhir:description [ fhir:v "This is to record requests for medication that are prescribed to a patient or for Non-MDS medicines." ] ;
+       fhir:example [
+         fhir:v "http://fhir.health.gov.lk/ips/StructureDefinition/medication-request"^^xsd:anyURI ;
+         fhir:link <http://fhir.health.gov.lk/ips/StructureDefinition/medication-request>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "MedicationRequest" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://fhir.health.gov.lk/ips/MedicationRequest/NoPrescriptionsExample> ;
+         fhir:reference [ fhir:v "MedicationRequest/NoPrescriptionsExample" ]
+       ] ;
+       fhir:name [ fhir:v "Medication Request" ] ;
+       fhir:description [ fhir:v "This is to indicate that the patient has not received any prescriptions for drugs." ] ;
+       fhir:example [
+         fhir:v "http://fhir.health.gov.lk/ips/StructureDefinition/no-medication-requested"^^xsd:anyURI ;
+         fhir:link <http://fhir.health.gov.lk/ips/StructureDefinition/no-medication-requested>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "StructureDefinition:resource" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://fhir.health.gov.lk/ips/StructureDefinition/notifiable-diseases-notified> ;
+         fhir:reference [ fhir:v "StructureDefinition/notifiable-diseases-notified" ]
+       ] ;
+       fhir:name [ fhir:v "Notifiable Diseases Notified" ] ;
+       fhir:description [ fhir:v "Represents a message communicated to the practitioner about a patient's encounter." ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "Communication" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://fhir.health.gov.lk/ips/Communication/NotifiableDiseasesNotifiedExample> ;
+         fhir:reference [ fhir:v "Communication/NotifiableDiseasesNotifiedExample" ]
+       ] ;
+       fhir:name [ fhir:v "Notifiable Diseases Notified" ] ;
+       fhir:description [ fhir:v "Represents a message communicated to the practitioner about a patient's encounter." ] ;
+       fhir:example [
+         fhir:v "http://fhir.health.gov.lk/ips/StructureDefinition/notifiable-diseases-notified"^^xsd:anyURI ;
+         fhir:link <http://fhir.health.gov.lk/ips/StructureDefinition/notifiable-diseases-notified>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "StructureDefinition:resource" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://fhir.health.gov.lk/ips/StructureDefinition/organization> ;
+         fhir:reference [ fhir:v "StructureDefinition/organization" ]
+       ] ;
+       fhir:name [ fhir:v "Organization" ] ;
+       fhir:description [ fhir:v "Organization providing health related services." ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "Organization" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://fhir.health.gov.lk/ips/Organization/OrganizationExample> ;
+         fhir:reference [ fhir:v "Organization/OrganizationExample" ]
+       ] ;
+       fhir:name [ fhir:v "Organization" ] ;
+       fhir:description [ fhir:v "Organization providing health related services." ] ;
+       fhir:example [
+         fhir:v "http://fhir.health.gov.lk/ips/StructureDefinition/organization"^^xsd:anyURI ;
+         fhir:link <http://fhir.health.gov.lk/ips/StructureDefinition/organization>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "StructureDefinition:resource" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://fhir.health.gov.lk/ips/StructureDefinition/ips-patient> ;
+         fhir:reference [ fhir:v "StructureDefinition/ips-patient" ]
+       ] ;
+       fhir:name [ fhir:v "Patient" ] ;
+       fhir:description [ fhir:v "Is used to document demographics and other administrative information about an HIMS or HHIMS individual receiving care or other health-related services." ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "Patient" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://fhir.health.gov.lk/ips/Patient/PatientExample> ;
+         fhir:reference [ fhir:v "Patient/PatientExample" ]
+       ] ;
+       fhir:name [ fhir:v "Patient" ] ;
+       fhir:description [ fhir:v "Is used to document demographics and other administrative information about an HIMS or HHIMS individual receiving care or other health-related services." ] ;
+       fhir:example [
+         fhir:v "http://fhir.health.gov.lk/ips/StructureDefinition/ips-patient"^^xsd:anyURI ;
+         fhir:link <http://fhir.health.gov.lk/ips/StructureDefinition/ips-patient>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "StructureDefinition:resource" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://fhir.health.gov.lk/ips/StructureDefinition/bmi> ;
+         fhir:reference [ fhir:v "StructureDefinition/bmi" ]
+       ] ;
+       fhir:name [ fhir:v "Patient BMI Observation" ] ;
+       fhir:description [ fhir:v "Represents the patient's BMI." ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "Observation" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://fhir.health.gov.lk/ips/Observation/BMIExample> ;
+         fhir:reference [ fhir:v "Observation/BMIExample" ]
+       ] ;
+       fhir:name [ fhir:v "Patient BMI Observation" ] ;
+       fhir:description [ fhir:v "Represents the patient's BMI." ] ;
+       fhir:example [
+         fhir:v "http://fhir.health.gov.lk/ips/StructureDefinition/bmi"^^xsd:anyURI ;
+         fhir:link <http://fhir.health.gov.lk/ips/StructureDefinition/bmi>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "ValueSet" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://fhir.health.gov.lk/ips/ValueSet/vs-identifier-types> ;
+         fhir:reference [ fhir:v "ValueSet/vs-identifier-types" ]
+       ] ;
+       fhir:name [ fhir:v "Patient Business Identifier Types" ] ;
+       fhir:description [ fhir:v "Patient Business Identifier Types" ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "CodeSystem" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://fhir.health.gov.lk/ips/CodeSystem/cs-identifier-types> ;
+         fhir:reference [ fhir:v "CodeSystem/cs-identifier-types" ]
+       ] ;
+       fhir:name [ fhir:v "Patient Business Identifier Types" ] ;
+       fhir:description [ fhir:v "Patient Business Identifier Types" ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "StructureDefinition:resource" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://fhir.health.gov.lk/ips/StructureDefinition/height> ;
+         fhir:reference [ fhir:v "StructureDefinition/height" ]
+       ] ;
+       fhir:name [ fhir:v "Patient Height Observation" ] ;
+       fhir:description [ fhir:v "Represents the patient's height." ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "Observation" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://fhir.health.gov.lk/ips/Observation/HeightExample> ;
+         fhir:reference [ fhir:v "Observation/HeightExample" ]
+       ] ;
+       fhir:name [ fhir:v "Patient Height Observation" ] ;
+       fhir:description [ fhir:v "Represents the patient's height." ] ;
+       fhir:example [
+         fhir:v "http://fhir.health.gov.lk/ips/StructureDefinition/height"^^xsd:anyURI ;
+         fhir:link <http://fhir.health.gov.lk/ips/StructureDefinition/height>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "StructureDefinition:resource" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://fhir.health.gov.lk/ips/StructureDefinition/patient-identity-cross-reference> ;
+         fhir:reference [ fhir:v "StructureDefinition/patient-identity-cross-reference" ]
+       ] ;
+       fhir:name [ fhir:v "Patient Identity Cross Reference" ] ;
+       fhir:description [ fhir:v "Is used by the Client Register (CR) to re-identify the patient with his/her corresponding longitudinal clinical record" ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "Patient" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://fhir.health.gov.lk/ips/Patient/RestrictedPatientExample> ;
+         fhir:reference [ fhir:v "Patient/RestrictedPatientExample" ]
+       ] ;
+       fhir:name [ fhir:v "Patient Identity Cross Reference" ] ;
+       fhir:description [ fhir:v "Is used by the Client Register (CR) to re-identify the patient with his/her corresponding longitudinal clinical record" ] ;
+       fhir:example [
+         fhir:v "http://fhir.health.gov.lk/ips/StructureDefinition/patient-identity-cross-reference"^^xsd:anyURI ;
+         fhir:link <http://fhir.health.gov.lk/ips/StructureDefinition/patient-identity-cross-reference>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "StructureDefinition:extension" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://fhir.health.gov.lk/ips/StructureDefinition/patient-registration-system> ;
+         fhir:reference [ fhir:v "StructureDefinition/patient-registration-system" ]
+       ] ;
+       fhir:name [ fhir:v "Patient Registration System Information" ] ;
+       fhir:description [ fhir:v "Captures the information of the system that was used to register the patient." ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "StructureDefinition:resource" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://fhir.health.gov.lk/ips/StructureDefinition/weight> ;
+         fhir:reference [ fhir:v "StructureDefinition/weight" ]
+       ] ;
+       fhir:name [ fhir:v "Patient Weight Observation" ] ;
+       fhir:description [ fhir:v "Represents the patient's weight." ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "Observation" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://fhir.health.gov.lk/ips/Observation/WeightExample> ;
+         fhir:reference [ fhir:v "Observation/WeightExample" ]
+       ] ;
+       fhir:name [ fhir:v "Patient Weight Observation" ] ;
+       fhir:description [ fhir:v "Represents the patient's weight." ] ;
+       fhir:example [
+         fhir:v "http://fhir.health.gov.lk/ips/StructureDefinition/weight"^^xsd:anyURI ;
+         fhir:link <http://fhir.health.gov.lk/ips/StructureDefinition/weight>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "ValueSet" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://fhir.health.gov.lk/ips/ValueSet/vs-risk-behaviour-physical-activity> ;
+         fhir:reference [ fhir:v "ValueSet/vs-risk-behaviour-physical-activity" ]
+       ] ;
+       fhir:name [ fhir:v "Physical Activity" ] ;
+       fhir:description [ fhir:v "Physical Activity Status" ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "StructureDefinition:resource" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://fhir.health.gov.lk/ips/StructureDefinition/risk-behaviour-physical-activity> ;
+         fhir:reference [ fhir:v "StructureDefinition/risk-behaviour-physical-activity" ]
+       ] ;
+       fhir:name [ fhir:v "Physical Activity Status Observation" ] ;
+       fhir:description [ fhir:v "Represents the physical status of the patient." ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "Observation" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://fhir.health.gov.lk/ips/Observation/RiskBehaviourPhysicalActivityExample> ;
+         fhir:reference [ fhir:v "Observation/RiskBehaviourPhysicalActivityExample" ]
+       ] ;
+       fhir:name [ fhir:v "Physical Activity Status Observation" ] ;
+       fhir:description [ fhir:v "Represents the physical status of the patient." ] ;
+       fhir:example [
+         fhir:v "http://fhir.health.gov.lk/ips/StructureDefinition/risk-behaviour-physical-activity"^^xsd:anyURI ;
+         fhir:link <http://fhir.health.gov.lk/ips/StructureDefinition/risk-behaviour-physical-activity>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "StructureDefinition:resource" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://fhir.health.gov.lk/ips/StructureDefinition/practitioner> ;
+         fhir:reference [ fhir:v "StructureDefinition/practitioner" ]
+       ] ;
+       fhir:name [ fhir:v "Practitioner" ] ;
+       fhir:description [ fhir:v "Represents the practitioners who participated in the observation." ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "Practitioner" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://fhir.health.gov.lk/ips/Practitioner/GeneralPractitionerExample> ;
+         fhir:reference [ fhir:v "Practitioner/GeneralPractitionerExample" ]
+       ] ;
+       fhir:name [ fhir:v "Practitioner" ] ;
+       fhir:description [ fhir:v "Represents the practitioners who participated in the observation." ] ;
+       fhir:example [
+         fhir:v "http://fhir.health.gov.lk/ips/StructureDefinition/practitioner"^^xsd:anyURI ;
+         fhir:link <http://fhir.health.gov.lk/ips/StructureDefinition/practitioner>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "StructureDefinition:resource" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://fhir.health.gov.lk/ips/StructureDefinition/procedures-request> ;
+         fhir:reference [ fhir:v "StructureDefinition/procedures-request" ]
+       ] ;
+       fhir:name [ fhir:v "Procedure Request" ] ;
+       fhir:description [ fhir:v "Used to initiate the request for a procedure." ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "ServiceRequest" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://fhir.health.gov.lk/ips/ServiceRequest/ProcedureServiceRequestExample> ;
+         fhir:reference [ fhir:v "ServiceRequest/ProcedureServiceRequestExample" ]
+       ] ;
+       fhir:name [ fhir:v "Procedure Request" ] ;
+       fhir:description [ fhir:v "Used to initiate the request for a procedure." ] ;
+       fhir:example [
+         fhir:v "http://fhir.health.gov.lk/ips/StructureDefinition/procedures-request"^^xsd:anyURI ;
+         fhir:link <http://fhir.health.gov.lk/ips/StructureDefinition/procedures-request>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "ValueSet" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://fhir.health.gov.lk/ips/ValueSet/vs-procedure> ;
+         fhir:reference [ fhir:v "ValueSet/vs-procedure" ]
+       ] ;
+       fhir:name [ fhir:v "Procedures" ] ;
+       fhir:description [ fhir:v "Procedures" ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "ValueSet" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://fhir.health.gov.lk/ips/ValueSet/vs-procedure-imaging> ;
+         fhir:reference [ fhir:v "ValueSet/vs-procedure-imaging" ]
+       ] ;
+       fhir:name [ fhir:v "Procedures" ] ;
+       fhir:description [ fhir:v "Imaging Procedures" ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "CodeSystem" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://fhir.health.gov.lk/ips/CodeSystem/cs-procedure> ;
+         fhir:reference [ fhir:v "CodeSystem/cs-procedure" ]
+       ] ;
+       fhir:name [ fhir:v "Procedures" ] ;
+       fhir:description [ fhir:v "Procedures" ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "CodeSystem" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://fhir.health.gov.lk/ips/CodeSystem/cs-procedure-imaging> ;
+         fhir:reference [ fhir:v "CodeSystem/cs-procedure-imaging" ]
+       ] ;
+       fhir:name [ fhir:v "Procedures" ] ;
+       fhir:description [ fhir:v "Imaging Procedures" ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "StructureDefinition:resource" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://fhir.health.gov.lk/ips/StructureDefinition/providers-location> ;
+         fhir:reference [ fhir:v "StructureDefinition/providers-location" ]
+       ] ;
+       fhir:name [ fhir:v "Providers Location" ] ;
+       fhir:description [ fhir:v "Represents the physical location of the provider." ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "Location" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://fhir.health.gov.lk/ips/Location/ProvidersLocationExample> ;
+         fhir:reference [ fhir:v "Location/ProvidersLocationExample" ]
+       ] ;
+       fhir:name [ fhir:v "Providers Location" ] ;
+       fhir:description [ fhir:v "Represents the physical location of the provider." ] ;
+       fhir:example [
+         fhir:v "http://fhir.health.gov.lk/ips/StructureDefinition/providers-location"^^xsd:anyURI ;
+         fhir:link <http://fhir.health.gov.lk/ips/StructureDefinition/providers-location>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "StructureDefinition:resource" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://fhir.health.gov.lk/ips/StructureDefinition/random-blood-sugar> ;
+         fhir:reference [ fhir:v "StructureDefinition/random-blood-sugar" ]
+       ] ;
+       fhir:name [ fhir:v "Random Blood Sugar Observation" ] ;
+       fhir:description [ fhir:v "Represents the patient's RBS results." ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "Observation" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://fhir.health.gov.lk/ips/Observation/RandomBloodSugarExample> ;
+         fhir:reference [ fhir:v "Observation/RandomBloodSugarExample" ]
+       ] ;
+       fhir:name [ fhir:v "Random Blood Sugar Observation" ] ;
+       fhir:description [ fhir:v "Represents the patient's RBS results." ] ;
+       fhir:example [
+         fhir:v "http://fhir.health.gov.lk/ips/StructureDefinition/random-blood-sugar"^^xsd:anyURI ;
+         fhir:link <http://fhir.health.gov.lk/ips/StructureDefinition/random-blood-sugar>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "ValueSet" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://fhir.health.gov.lk/ips/ValueSet/vs-reason-for-encounter> ;
+         fhir:reference [ fhir:v "ValueSet/vs-reason-for-encounter" ]
+       ] ;
+       fhir:name [ fhir:v "Reason For Encounter" ] ;
+       fhir:description [ fhir:v "Encounter reasons." ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "StructureDefinition:resource" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://fhir.health.gov.lk/ips/StructureDefinition/follow-up-plan> ;
+         fhir:reference [ fhir:v "StructureDefinition/follow-up-plan" ]
+       ] ;
+       fhir:name [ fhir:v "Referral Request For Follow-up Plan" ] ;
+       fhir:description [ fhir:v "Used to initiate a referral request for a Follow-up Plan." ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "ServiceRequest" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://fhir.health.gov.lk/ips/ServiceRequest/FollowUpPlanServiceRequestExample> ;
+         fhir:reference [ fhir:v "ServiceRequest/FollowUpPlanServiceRequestExample" ]
+       ] ;
+       fhir:name [ fhir:v "Referral Request For Follow-up Plan" ] ;
+       fhir:description [ fhir:v "Used to initiate a referral request for a Follow-up Plan." ] ;
+       fhir:example [
+         fhir:v "http://fhir.health.gov.lk/ips/StructureDefinition/follow-up-plan"^^xsd:anyURI ;
+         fhir:link <http://fhir.health.gov.lk/ips/StructureDefinition/follow-up-plan>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "StructureDefinition:resource" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://fhir.health.gov.lk/ips/StructureDefinition/referral-task> ;
+         fhir:reference [ fhir:v "StructureDefinition/referral-task" ]
+       ] ;
+       fhir:name [ fhir:v "Referral Task" ] ;
+       fhir:description [ fhir:v "Is primarily used to track the progress of a patient's referral." ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "Task" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://fhir.health.gov.lk/ips/Task/HHIMSReferralTaskExample> ;
+         fhir:reference [ fhir:v "Task/HHIMSReferralTaskExample" ]
+       ] ;
+       fhir:name [ fhir:v "Referral Task" ] ;
+       fhir:description [ fhir:v "Is primarily used to track the progress of a patient's referral." ] ;
+       fhir:example [
+         fhir:v "http://fhir.health.gov.lk/ips/StructureDefinition/referral-task"^^xsd:anyURI ;
+         fhir:link <http://fhir.health.gov.lk/ips/StructureDefinition/referral-task>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "StructureDefinition:resource" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://fhir.health.gov.lk/ips/StructureDefinition/target-facility-encounter> ;
+         fhir:reference [ fhir:v "StructureDefinition/target-facility-encounter" ]
+       ] ;
+       fhir:name [ fhir:v "Target Facility Encounter" ] ;
+       fhir:description [ fhir:v "Represents the current facility at which the patient is receiving health services." ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "Encounter" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://fhir.health.gov.lk/ips/Encounter/TargetFacilityEncounterExample> ;
+         fhir:reference [ fhir:v "Encounter/TargetFacilityEncounterExample" ]
+       ] ;
+       fhir:name [ fhir:v "Target Facility Encounter" ] ;
+       fhir:description [ fhir:v "Represents the current facility at which the patient is receiving health services." ] ;
+       fhir:example [
+         fhir:v "http://fhir.health.gov.lk/ips/StructureDefinition/target-facility-encounter"^^xsd:anyURI ;
+         fhir:link <http://fhir.health.gov.lk/ips/StructureDefinition/target-facility-encounter>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "StructureDefinition:resource" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://fhir.health.gov.lk/ips/StructureDefinition/risk-behaviour-tobacco-smoker> ;
+         fhir:reference [ fhir:v "StructureDefinition/risk-behaviour-tobacco-smoker" ]
+       ] ;
+       fhir:name [ fhir:v "Tobacco Smoker Observation" ] ;
+       fhir:description [ fhir:v "Represents the tobacco smoking status of the patient." ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "Observation" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://fhir.health.gov.lk/ips/Observation/RiskBehaviourTobaccoSmokerExample> ;
+         fhir:reference [ fhir:v "Observation/RiskBehaviourTobaccoSmokerExample" ]
+       ] ;
+       fhir:name [ fhir:v "Tobacco Smoker Observation" ] ;
+       fhir:description [ fhir:v "Represents the tobacco smoking status of the patient." ] ;
+       fhir:example [
+         fhir:v "http://fhir.health.gov.lk/ips/StructureDefinition/risk-behaviour-tobacco-smoker"^^xsd:anyURI ;
+         fhir:link <http://fhir.health.gov.lk/ips/StructureDefinition/risk-behaviour-tobacco-smoker>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "StructureDefinition:resource" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://fhir.health.gov.lk/ips/StructureDefinition/total-cholesterol> ;
+         fhir:reference [ fhir:v "StructureDefinition/total-cholesterol" ]
+       ] ;
+       fhir:name [ fhir:v "Total Cholesterol Observation" ] ;
+       fhir:description [ fhir:v "Represents the patient's total cholesterol results." ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "Observation" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://fhir.health.gov.lk/ips/Observation/TotalCholesterolExample> ;
+         fhir:reference [ fhir:v "Observation/TotalCholesterolExample" ]
+       ] ;
+       fhir:name [ fhir:v "Total Cholesterol Observation" ] ;
+       fhir:description [ fhir:v "Represents the patient's total cholesterol results." ] ;
+       fhir:example [
+         fhir:v "http://fhir.health.gov.lk/ips/StructureDefinition/total-cholesterol"^^xsd:anyURI ;
+         fhir:link <http://fhir.health.gov.lk/ips/StructureDefinition/total-cholesterol>
+       ]
+     ] ) ;
+     fhir:page [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "toc.html"^^xsd:anyURI ]
+       ] ) ;
+       fhir:name [ fhir:v "toc.html"^^xsd:anyURI ] ;
+       fhir:title [ fhir:v "Table of Contents" ] ;
+       fhir:generation [ fhir:v "html" ] ;
+       fhir:page ( [
+         fhir:extension ( [
+           fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name"^^xsd:anyURI ] ;
+           fhir:value [ fhir:v "index.html"^^xsd:anyURI ]
+         ] ) ;
+         fhir:name [ fhir:v "index.html"^^xsd:anyURI ] ;
+         fhir:title [ fhir:v "Home" ] ;
+         fhir:generation [ fhir:v "html" ]
+       ] [
+         fhir:extension ( [
+           fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name"^^xsd:anyURI ] ;
+           fhir:value [ fhir:v "changes.html"^^xsd:anyURI ]
+         ] ) ;
+         fhir:name [ fhir:v "changes.html"^^xsd:anyURI ] ;
+         fhir:title [ fhir:v "Changes" ] ;
+         fhir:generation [ fhir:v "html" ]
+       ] [
+         fhir:extension ( [
+           fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name"^^xsd:anyURI ] ;
+           fhir:value [ fhir:v "library.html"^^xsd:anyURI ]
+         ] ) ;
+         fhir:name [ fhir:v "library.html"^^xsd:anyURI ] ;
+         fhir:title [ fhir:v "Library" ] ;
+         fhir:generation [ fhir:v "html" ]
+       ] )
+     ] ;
+     fhir:parameter ( [
+       fhir:code [ fhir:v "path-resource" ] ;
+       fhir:value [ fhir:v "input/capabilities" ]
+     ] [
+       fhir:code [ fhir:v "path-resource" ] ;
+       fhir:value [ fhir:v "input/examples" ]
+     ] [
+       fhir:code [ fhir:v "path-resource" ] ;
+       fhir:value [ fhir:v "input/extensions" ]
+     ] [
+       fhir:code [ fhir:v "path-resource" ] ;
+       fhir:value [ fhir:v "input/models" ]
+     ] [
+       fhir:code [ fhir:v "path-resource" ] ;
+       fhir:value [ fhir:v "input/operations" ]
+     ] [
+       fhir:code [ fhir:v "path-resource" ] ;
+       fhir:value [ fhir:v "input/profiles" ]
+     ] [
+       fhir:code [ fhir:v "path-resource" ] ;
+       fhir:value [ fhir:v "input/resources" ]
+     ] [
+       fhir:code [ fhir:v "path-resource" ] ;
+       fhir:value [ fhir:v "input/vocabulary" ]
+     ] [
+       fhir:code [ fhir:v "path-resource" ] ;
+       fhir:value [ fhir:v "input/maps" ]
+     ] [
+       fhir:code [ fhir:v "path-resource" ] ;
+       fhir:value [ fhir:v "input/testing" ]
+     ] [
+       fhir:code [ fhir:v "path-resource" ] ;
+       fhir:value [ fhir:v "input/history" ]
+     ] [
+       fhir:code [ fhir:v "path-resource" ] ;
+       fhir:value [ fhir:v "fsh-generated/resources" ]
+     ] [
+       fhir:code [ fhir:v "path-pages" ] ;
+       fhir:value [ fhir:v "template/config" ]
+     ] [
+       fhir:code [ fhir:v "path-pages" ] ;
+       fhir:value [ fhir:v "input/images" ]
+     ] [
+       fhir:code [ fhir:v "path-tx-cache" ] ;
+       fhir:value [ fhir:v "input-cache/txcache" ]
+     ] )
+  ] . # 
+
+# -------------------------------------------------------------------------------------
+

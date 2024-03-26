@@ -1,0 +1,340 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE HTML>
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
+    <title>Investigations - LK NEHR Sri Lanka Patient Summary (IPS based) Implementation Guide v0.1.0</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="author" content="http://hl7.org/fhir"/>
+
+    <link href="fhir.css" rel="stylesheet"/>
+
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap-fhir.css" rel="stylesheet"/>
+
+    <!-- Project extras -->
+    <link href="assets/css/project.css" rel="stylesheet"/>
+    <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
+    <link href="assets/css/jquery-ui.css" rel="stylesheet"/>
+  	<link href="assets/css/prism.css" rel="stylesheet" />
+    <!-- Placeholder for child template CSS declarations -->
+<link href="assets/css/openhie.css" rel="stylesheet"/>
+<link href="assets/css/lforms.min.css" rel="stylesheet"/>
+
+
+    <script type="text/javascript" src="fhir-table-scripts.js"> </script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="assets/js/html5shiv.js"></script>
+    <script src="assets/js/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Favicons -->
+    <link rel="fhir-logo" sizes="144x144" href="assets/ico/icon-fhir-144.png"/>
+    <link rel="fhir-logo" sizes="114x114" href="assets/ico/icon-fhir-114.png"/>
+    <link rel="fhir-logo" sizes="72x72" href="assets/ico/icon-fhir-72.png"/>
+    <link rel="fhir-logo" href="assets/ico/icon-fhir-57.png"/>
+    <link rel="shortcut icon" href="assets/ico/favicon.png"/>
+  </head>
+  <body onload="document.body.style.opacity='1'">
+
+	  <script src="assets/js/prism.js"></script>
+
+    <style type="text/css">h2{--heading-prefix:"3.62"}
+    h3,h4,h5,h6{--heading-prefix:"3.62"}</style>
+    <div id="segment-header" class="segment">  <!-- segment-header -->
+      <div class="container">  <!-- container -->
+        <!-- Placeholder for child template header declarations -->
+
+<!-- Left logo - typically the publisher's logo - project or affiliate -->
+        <div id="project-nav">
+          <a id="project-logo" no-external="true" href="https://ohie.org/">
+            <img height="71" alt="Project home" src="assets/images/home.png"/>
+          </a>
+        </div>
+
+<!-- Right logo - for example the FHIR logo -->
+<!-- Make sure you have authorization to use the FHIR logo -->
+        <div id="family-nav">
+          <a id="family-logo" no-external="true" href="http://hl7.org/fhir"><img height="70" alt="FHIR website" src="assets/images/fire.png"/> </a>
+        </div>
+
+<!-- search icon - if you want -->
+<!--
+        <div id="hl7-search">
+          <a id="hl7-search-lnk" no-external="true" href="http://hl7.org/fhir/search.cfm"><img alt="Search FHIR" src="assets/images/search.png"/></a>
+        </div>
+-->
+
+
+        <div id="ig-status">
+          <p><span style="font-size:12pt;font-weight:bold">LK NEHR Sri Lanka Patient Summary (IPS based) Implementation Guide</span>
+            <br/>
+            <span style="display:inline-block;">0.1.0 - STU1
+
+
+
+  <img alt="International flag" src="assets/images/001.svg" height="16" title="International"/>
+
+
+            </span>
+          </p>
+        </div>
+      </div> <!-- /container -->
+    </div>  <!-- /segment-header -->
+
+    <div id="segment-navbar" class="segment">  <!-- segment-navbar -->
+      <div id="stripe"> </div>
+      <div class="container">  <!-- container -->
+        <!-- HEADER CONTENT -->
+
+        <nav class="navbar navbar-inverse">
+          <!--status-bar-->
+          <div class="container">
+            <button data-target=".navbar-inverse-collapse" class="navbar-toggle" data-toggle="collapse" type="button">
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+            </button>
+            <a class="navbar-brand hidden" href="http://hl7.org/fhir/R4/index.html">FHIR</a>
+            <div class="nav-collapse collapse navbar-inverse-collapse">
+              <ul
+	xmlns="http://www.w3.org/1999/xhtml" class="nav navbar-nav">
+	<li>
+		<a href="index.html">IG Home</a>
+	</li>
+	<li>
+		<a href="toc.html">Table of Contents</a>
+	</li>
+<!--
+	<li class="dropdown">
+		<a data-toggle="dropdown" href="#" class="dropdown-toggle">Background<b class="caret"></b>
+		</a>
+
+	</li>
+	<li class="dropdown">
+		<a data-toggle="dropdown" href="#" class="dropdown-toggle">Functional Description<b class="caret"></b>
+		</a>
+
+	</li>
+-->
+	<li class="dropdown">
+		<a data-toggle="dropdown" href="#" class="dropdown-toggle">Specifications<b class="caret"></b>
+		</a>
+		<ul class="dropdown-menu">
+			<li>
+				<a href="artifacts.html">Artifact Index</a>
+			</li>
+		</ul>
+	</li>
+</ul>      
+            </div>  <!-- /.nav-collapse -->
+          </div>  <!-- /.container -->
+        </nav>  <!-- /.navbar -->
+      <!-- /HEADER CONTENT -->
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-navbar -->
+    <!--status-bar-->
+
+    <div id="segment-breadcrumb" class="segment">  <!-- segment-breadcrumb -->
+      <div class="container">  <!-- container -->
+        <ul class="breadcrumb">
+          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='artifacts.html'><b>Artifacts Summary</b></a></li><li><b>Investigations</b></li>
+
+        </ul>
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-breadcrumb -->
+
+    <a name="top"> </a>
+    <div id="segment-content" class="segment">  <!-- segment-content -->
+      <div class="container">  <!-- container -->
+        <div class="row">
+          <div class="inner-wrapper">
+
+<div class="col-12">
+  <!--ReleaseHeader--><p id="publish-box">LK NEHR Sri Lanka Patient Summary (IPS based) Implementation Guide, published by Ministry of Health, Sri Lanka. This guide is not an authorized publication; it is the continuous build for version 0.1.0 built by the FHIR (HL7® FHIR® Standard) CI Build. This version is based on the current content of <a href="https://github.com/jembi/Sri-Lanka-International-Patient-Summary-Implementation-Guide">https://github.com/jembi/Sri-Lanka-International-Patient-Summary-Implementation-Guide</a> and changes regularly. See the <a href="http://fhir.health.gov.lk/ips/history.html">Directory of published versions</a></p><!--EndReleaseHeader-->
+  
+
+
+
+
+
+
+
+
+<ul class="nav nav-tabs">
+
+  <li class="active">
+    <a href="#">Narrative Content</a>
+  </li>
+
+
+
+  
+    <li>
+      <a href="CodeSystem-cs-investigation.xml.html">XML</a>
+    </li>
+  
+
+
+  
+    <li>
+      <a href="CodeSystem-cs-investigation.json.html">JSON</a>
+    </li>
+  
+
+
+  
+    <li>
+      <a href="CodeSystem-cs-investigation.ttl.html">TTL</a>
+    </li>
+  
+
+
+
+</ul>
+
+  <a name="root"> </a>
+  <h2 id="root">CodeSystem: Investigations
+
+  </h2>
+
+  <table class="colsi">
+
+    <tr>
+      <td colspan="4"><i>Official URL</i>: <span class="copy-text">http://fhir.health.gov.lk/ips/CodeSystem/cs-investigation<button title="Click to copy URL" class="btn-copy" data-clipboard-text="http://fhir.health.gov.lk/ips/CodeSystem/cs-investigation"/></span>
+      </td>
+      <td><i>Version</i>:
+      <span class="copy-text">0.1.0<button title="Click to copy versioned URL" class="btn-copy" data-clipboard-text="http://fhir.health.gov.lk/ips/CodeSystem/cs-investigation|0.1.0"/></span>
+      </td>
+    </tr>
+
+    <tr>
+
+
+
+
+
+
+
+      <td colspan="4">
+        
+          Active
+          
+            as of 2024-03-02
+          
+        
+      </td>
+
+
+
+      <td><i>Computable Name</i>: <span style="font-family: monospace;">CSInvestigations</span></td>
+    </tr>
+
+
+
+
+  </table>
+
+<p>
+<p>Investigations</p>
+
+</p>
+
+  <!-- insert intro if present -->
+  
+
+
+
+  <p>
+  This Code system is referenced in the content logical definition of the following value sets:
+  </p>
+
+  
+<ul>
+ <li><a href="ValueSet-vs-investigation.html">VSInvestigations</a></li>
+</ul>
+
+
+  <div xmlns="http://www.w3.org/1999/xhtml"><p>This case-sensitive code system <code>http://fhir.health.gov.lk/ips/CodeSystem/cs-investigation</code> defines the following codes:</p><table class="codes"><tr><td style="white-space:nowrap"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style="white-space:nowrap">CLOTTING-PROFILE-BT<a name="cs-investigation-CLOTTING-PROFILE-BT"> </a></td><td>CLOTTING PROFILE - BT</td><td>Needs definition</td></tr><tr><td style="white-space:nowrap">CLOTTING-PROFILE-CT<a name="cs-investigation-CLOTTING-PROFILE-CT"> </a></td><td>CLOTTING PROFILE - CT</td><td>Needs definition</td></tr><tr><td style="white-space:nowrap">CLOTTING-PROFILE-APTT<a name="cs-investigation-CLOTTING-PROFILE-APTT"> </a></td><td>CLOTTING PROFILE - APTT</td><td>Needs definition</td></tr><tr><td style="white-space:nowrap">CLOTTING-PROFILE-INR<a name="cs-investigation-CLOTTING-PROFILE-INR"> </a></td><td>CLOTTING PROFILE - INR</td><td>Needs definition</td></tr><tr><td style="white-space:nowrap">UFR-Albumin<a name="cs-investigation-UFR-Albumin"> </a></td><td>UFR - Albumin</td><td>Needs definition</td></tr><tr><td style="white-space:nowrap">UFR-Pus-cells<a name="cs-investigation-UFR-Pus-cells"> </a></td><td>UFR - Pus cells</td><td>Needs definition</td></tr><tr><td style="white-space:nowrap">UFR-Red-cells<a name="cs-investigation-UFR-Red-cells"> </a></td><td>UFR - Red cells</td><td>Needs definition</td></tr><tr><td style="white-space:nowrap">UFR-Cast<a name="cs-investigation-UFR-Cast"> </a></td><td>UFR - Cast</td><td>Needs definition</td></tr><tr><td style="white-space:nowrap">UFR-Crystals<a name="cs-investigation-UFR-Crystals"> </a></td><td>UFR - Crystals</td><td>Needs definition</td></tr><tr><td style="white-space:nowrap">UFR-Epithelial-cells<a name="cs-investigation-UFR-Epithelial-cells"> </a></td><td>UFR - Epithelial cells</td><td>Needs definition</td></tr><tr><td style="white-space:nowrap">UFR-Yeast<a name="cs-investigation-UFR-Yeast"> </a></td><td>UFR - Yeast</td><td>Needs definition</td></tr><tr><td style="white-space:nowrap">UFR-Organism<a name="cs-investigation-UFR-Organism"> </a></td><td>UFR - Organism</td><td>Needs definition</td></tr><tr><td style="white-space:nowrap">Urine-Microalburin<a name="cs-investigation-Urine-Microalburin"> </a></td><td>Urine Microalburin</td><td>Needs definition</td></tr><tr><td style="white-space:nowrap">Urine-AIbumin-Creatinine-Ratio<a name="cs-investigation-Urine-AIbumin-Creatinine-Ratio"> </a></td><td>Urine AIbumin Creatinine Ratio</td><td>Needs definition</td></tr><tr><td style="white-space:nowrap">Virology-Covid-Rapid-antigen<a name="cs-investigation-Virology-Covid-Rapid-antigen"> </a></td><td>Virology - Covid Rapid antigen</td><td>Needs definition</td></tr><tr><td style="white-space:nowrap">Thyroid-Function-Test-TSH<a name="cs-investigation-Thyroid-Function-Test-TSH"> </a></td><td>Thyroid Function Test - TSH</td><td>Needs definition</td></tr><tr><td style="white-space:nowrap">Thyroid-Function-Test-FT3<a name="cs-investigation-Thyroid-Function-Test-FT3"> </a></td><td>Thyroid Function Test - FT3</td><td>Needs definition</td></tr><tr><td style="white-space:nowrap">Thyroid-Function-Test-FT4<a name="cs-investigation-Thyroid-Function-Test-FT4"> </a></td><td>Thyroid Function Test - FT4</td><td>Needs definition</td></tr><tr><td style="white-space:nowrap">Sputum-AFB-Sputum-AFB-Sample-1<a name="cs-investigation-Sputum-AFB-Sputum-AFB-Sample-1"> </a></td><td>Sputum AFB - Sputum AFB Sample 1</td><td>Needs definition</td></tr><tr><td style="white-space:nowrap">Sputum-AFB-Sputum-AFB-Sample-2<a name="cs-investigation-Sputum-AFB-Sputum-AFB-Sample-2"> </a></td><td>Sputum AFB - Sputum AFB Sample 2</td><td>Needs definition</td></tr><tr><td style="white-space:nowrap">Sputum-AFB-Sputum-AFB-Sample-3<a name="cs-investigation-Sputum-AFB-Sputum-AFB-Sample-3"> </a></td><td>Sputum AFB - Sputum AFB Sample 3</td><td>Needs definition</td></tr><tr><td style="white-space:nowrap">Serum-electrolyte-S.-Na<a name="cs-investigation-Serum-electrolyte-S.46-Na"> </a></td><td>Serum electrolyte - S. Na</td><td>Needs definition</td></tr><tr><td style="white-space:nowrap">Serum-electrolyte-S.-K<a name="cs-investigation-Serum-electrolyte-S.46-K"> </a></td><td>Serum electrolyte - S. K</td><td>Needs definition</td></tr><tr><td style="white-space:nowrap">Serum-electrolyte-Serum-Chloride<a name="cs-investigation-Serum-electrolyte-Serum-Chloride"> </a></td><td>Serum electrolyte - Serum Chloride</td><td>Needs definition</td></tr><tr><td style="white-space:nowrap">Lipid-profile-Total-Cholesterol<a name="cs-investigation-Lipid-profile-Total-Cholesterol"> </a></td><td>Lipid profile - Total Cholesterol</td><td>Needs definition</td></tr><tr><td style="white-space:nowrap">Lipid-profile-HDL-Cholesterol<a name="cs-investigation-Lipid-profile-HDL-Cholesterol"> </a></td><td>Lipid profile - HDL Cholesterol</td><td>Needs definition</td></tr><tr><td style="white-space:nowrap">Lipid-profile-LDL-Cholesterol<a name="cs-investigation-Lipid-profile-LDL-Cholesterol"> </a></td><td>Lipid profile - LDL Cholesterol</td><td>Needs definition</td></tr><tr><td style="white-space:nowrap">Lipid-profile-T.-Cho/HDL-Ratio<a name="cs-investigation-Lipid-profile-T.46-Cho.47HDL-Ratio"> </a></td><td>Lipid profile - T. Cho/HDL Ratio</td><td>Needs definition</td></tr><tr><td style="white-space:nowrap">Lipid-profile-Triglyceride<a name="cs-investigation-Lipid-profile-Triglyceride"> </a></td><td>Lipid profile - Triglyceride</td><td>Needs definition</td></tr><tr><td style="white-space:nowrap">Lipid-profile-VLDL<a name="cs-investigation-Lipid-profile-VLDL"> </a></td><td>Lipid profile - VLDL</td><td>Needs definition</td></tr><tr><td style="white-space:nowrap">Hepatitis-Screening-Hep-B-Surface-Antigen<a name="cs-investigation-Hepatitis-Screening-Hep-B-Surface-Antigen"> </a></td><td>Hepatitis Screening - Hep B Surface Antigen</td><td>Needs definition</td></tr><tr><td style="white-space:nowrap">Hepatitis-Screening-Hep-C-Antibody<a name="cs-investigation-Hepatitis-Screening-Hep-C-Antibody"> </a></td><td>Hepatitis Screening - Hep C Antibody</td><td>Needs definition</td></tr><tr><td style="white-space:nowrap">Hepatitis-Screening-Hep-A-Antibody<a name="cs-investigation-Hepatitis-Screening-Hep-A-Antibody"> </a></td><td>Hepatitis Screening - Hep A Antibody</td><td>Needs definition</td></tr><tr><td style="white-space:nowrap">HbA1c-HbA1c<a name="cs-investigation-HbA1c-HbA1c"> </a></td><td>HbA1c - HbA1c</td><td>Needs definition</td></tr><tr><td style="white-space:nowrap">FBC-BAS%<a name="cs-investigation-FBC-BAS.37"> </a></td><td>FBC - BAS%</td><td>Needs definition</td></tr><tr><td style="white-space:nowrap">FBC-EOS%<a name="cs-investigation-FBC-EOS.37"> </a></td><td>FBC - EOS%</td><td>Needs definition</td></tr><tr><td style="white-space:nowrap">FBC-LYM%<a name="cs-investigation-FBC-LYM.37"> </a></td><td>FBC - LYM%</td><td>Needs definition</td></tr><tr><td style="white-space:nowrap">FBC-MON%<a name="cs-investigation-FBC-MON.37"> </a></td><td>FBC - MON%</td><td>Needs definition</td></tr><tr><td style="white-space:nowrap">FBC-NEU%<a name="cs-investigation-FBC-NEU.37"> </a></td><td>FBC - NEU%</td><td>Needs definition</td></tr><tr><td style="white-space:nowrap">FBC-MCV-fl<a name="cs-investigation-FBC-MCV-fl"> </a></td><td>FBC - MCV (fl)</td><td>Needs definition</td></tr><tr><td style="white-space:nowrap">FBC-PLT<a name="cs-investigation-FBC-PLT"> </a></td><td>FBC - PLT</td><td>Needs definition</td></tr><tr><td style="white-space:nowrap">FBC-WBC-th/uL<a name="cs-investigation-FBC-WBC-th.47uL"> </a></td><td>FBC - WBC (th/uL)</td><td>Needs definition</td></tr><tr><td style="white-space:nowrap">FBC-BAS#<a name="cs-investigation-FBC-BAS.35"> </a></td><td>FBC - BAS#</td><td>Needs definition</td></tr><tr><td style="white-space:nowrap">FBC-NEU#<a name="cs-investigation-FBC-NEU.35"> </a></td><td>FBC - NEU#</td><td>Needs definition</td></tr><tr><td style="white-space:nowrap">FBC-EOS#<a name="cs-investigation-FBC-EOS.35"> </a></td><td>FBC - EOS#</td><td>Needs definition</td></tr><tr><td style="white-space:nowrap">FBC-LYM#<a name="cs-investigation-FBC-LYM.35"> </a></td><td>FBC - LYM#</td><td>Needs definition</td></tr><tr><td style="white-space:nowrap">FBC-MON#<a name="cs-investigation-FBC-MON.35"> </a></td><td>FBC - MON#</td><td>Needs definition</td></tr><tr><td style="white-space:nowrap">FBC-RBC<a name="cs-investigation-FBC-RBC"> </a></td><td>FBC - RBC</td><td>Needs definition</td></tr><tr><td style="white-space:nowrap">Haemoglobin-HPLC-HGB<a name="cs-investigation-Haemoglobin-HPLC-HGB"> </a></td><td>Haemoglobin HPLC - HGB</td><td>Needs definition</td></tr><tr><td style="white-space:nowrap">Haemoglobin-HPLC-MCH<a name="cs-investigation-Haemoglobin-HPLC-MCH"> </a></td><td>Haemoglobin HPLC - MCH</td><td>Needs definition</td></tr><tr><td style="white-space:nowrap">Haemoglobin-HPLC-MCHC<a name="cs-investigation-Haemoglobin-HPLC-MCHC"> </a></td><td>Haemoglobin HPLC - MCHC</td><td>Needs definition</td></tr><tr><td style="white-space:nowrap">Haemoglobin-HPLC-RDW-CV<a name="cs-investigation-Haemoglobin-HPLC-RDW-CV"> </a></td><td>Haemoglobin HPLC - RDW-CV</td><td>Needs definition</td></tr><tr><td style="white-space:nowrap">Haemoglobin-HPLC-RDW-SD<a name="cs-investigation-Haemoglobin-HPLC-RDW-SD"> </a></td><td>Haemoglobin HPLC - RDW-SD</td><td>Needs definition</td></tr><tr><td style="white-space:nowrap">Haemoglobin-HPLC-HCT<a name="cs-investigation-Haemoglobin-HPLC-HCT"> </a></td><td>Haemoglobin HPLC - HCT</td><td>Needs definition</td></tr><tr><td style="white-space:nowrap">Haemoglobin-HPLC-MPV<a name="cs-investigation-Haemoglobin-HPLC-MPV"> </a></td><td>Haemoglobin HPLC - MPV</td><td>Needs definition</td></tr><tr><td style="white-space:nowrap">Haemoglobin-HPLC-PDW<a name="cs-investigation-Haemoglobin-HPLC-PDW"> </a></td><td>Haemoglobin HPLC - PDW</td><td>Needs definition</td></tr><tr><td style="white-space:nowrap">Haemoglobin-HPLC-PCT<a name="cs-investigation-Haemoglobin-HPLC-PCT"> </a></td><td>Haemoglobin HPLC - PCT</td><td>Needs definition</td></tr><tr><td style="white-space:nowrap">Haemoglobin-HPLC-PLCC<a name="cs-investigation-Haemoglobin-HPLC-PLCC"> </a></td><td>Haemoglobin HPLC - PLCC</td><td>Needs definition</td></tr><tr><td style="white-space:nowrap">Haemoglobin-HPLC-PLCR<a name="cs-investigation-Haemoglobin-HPLC-PLCR"> </a></td><td>Haemoglobin HPLC - PLCR</td><td>Needs definition</td></tr><tr><td style="white-space:nowrap">ESR-ESR-1st-Hour<a name="cs-investigation-ESR-ESR-1st-Hour"> </a></td><td>ESR - ESR 1st Hour</td><td>Needs definition</td></tr><tr><td style="white-space:nowrap">Dengue-Test-NS1-Antigen<a name="cs-investigation-Dengue-Test-NS1-Antigen"> </a></td><td>Dengue Test - NS1 Antigen</td><td>Needs definition</td></tr><tr><td style="white-space:nowrap">Dengue-Test-Dengue-Ig-M<a name="cs-investigation-Dengue-Test-Dengue-Ig-M"> </a></td><td>Dengue Test - Dengue Ig M</td><td>Needs definition</td></tr><tr><td style="white-space:nowrap">Dengue-Test-Dengue-Ig-G<a name="cs-investigation-Dengue-Test-Dengue-Ig-G"> </a></td><td>Dengue Test - Dengue Ig G</td><td>Needs definition</td></tr><tr><td style="white-space:nowrap">Blood-Sugar-FBS<a name="cs-investigation-Blood-Sugar-FBS"> </a></td><td>Blood Sugar - FBS</td><td>Needs definition</td></tr><tr><td style="white-space:nowrap">HbA1c-HBA1C<a name="cs-investigation-HbA1c-HBA1C"> </a></td><td>HbA1c - HBA1C</td><td>Needs definition</td></tr><tr><td style="white-space:nowrap">HbA1c-PPBS<a name="cs-investigation-HbA1c-PPBS"> </a></td><td>HbA1c - PPBS</td><td>Needs definition</td></tr><tr><td style="white-space:nowrap">HbA1c-RBS<a name="cs-investigation-HbA1c-RBS"> </a></td><td>HbA1c - RBS</td><td>Needs definition</td></tr><tr><td style="white-space:nowrap">HbA1c-OGTT<a name="cs-investigation-HbA1c-OGTT"> </a></td><td>HbA1c - OGTT</td><td>Needs definition</td></tr><tr><td style="white-space:nowrap">Serum-Creatinine-S-Creatinine<a name="cs-investigation-Serum-Creatinine-S-Creatinine"> </a></td><td>Serum Creatinine - S Creatinine</td><td>Needs definition</td></tr><tr><td style="white-space:nowrap">Blood-Urea-Blood-Urea<a name="cs-investigation-Blood-Urea-Blood-Urea"> </a></td><td>Blood Urea - Blood Urea</td><td>Needs definition</td></tr><tr><td style="white-space:nowrap">S-Uric-Acid<a name="cs-investigation-S-Uric-Acid"> </a></td><td>S Uric Acid</td><td>Needs definition</td></tr><tr><td style="white-space:nowrap">Serum-Calcium-Total<a name="cs-investigation-Serum-Calcium-Total"> </a></td><td>Serum Calcium-Total</td><td>Needs definition</td></tr><tr><td style="white-space:nowrap">Serum-Magnesium<a name="cs-investigation-Serum-Magnesium"> </a></td><td>Serum Magnesium</td><td>Needs definition</td></tr><tr><td style="white-space:nowrap">Serum-Phosphorous<a name="cs-investigation-Serum-Phosphorous"> </a></td><td>Serum Phosphorous</td><td>Needs definition</td></tr><tr><td style="white-space:nowrap">Corrected-Calcium<a name="cs-investigation-Corrected-Calcium"> </a></td><td>Corrected Calcium</td><td>Needs definition</td></tr><tr><td style="white-space:nowrap">CRP-C-Reactive-Protein<a name="cs-investigation-CRP-C-Reactive-Protein"> </a></td><td>CRP - C Reactive Protein</td><td>Needs definition</td></tr><tr><td style="white-space:nowrap">S-LDH-LDH<a name="cs-investigation-S-LDH-LDH"> </a></td><td>S LDH - LDH</td><td>Needs definition</td></tr><tr><td style="white-space:nowrap">Creatine-Kinase-Creatinine-Kinase<a name="cs-investigation-Creatine-Kinase-Creatinine-Kinase"> </a></td><td>Creatine Kinase - Creatinine Kinase</td><td>Needs definition</td></tr><tr><td style="white-space:nowrap">Stool-Full-Report<a name="cs-investigation-Stool-Full-Report"> </a></td><td>Stool Full Report</td><td>Needs definition</td></tr><tr><td style="white-space:nowrap">S.-Vitamin-D-Level<a name="cs-investigation-S.46-Vitamin-D-Level"> </a></td><td>S. Vitamin D Level</td><td>Needs definition</td></tr><tr><td style="white-space:nowrap">Rheumaloid-Facior<a name="cs-investigation-Rheumaloid-Facior"> </a></td><td>Rheumaloid Facior</td><td>Needs definition</td></tr><tr><td style="white-space:nowrap">Blood-Picture<a name="cs-investigation-Blood-Picture"> </a></td><td>Blood Picture</td><td>Needs definition</td></tr><tr><td style="white-space:nowrap">S-Prostate-Specific-Antigen<a name="cs-investigation-S-Prostate-Specific-Antigen"> </a></td><td>S Prostate Specific Antigen</td><td>Needs definition</td></tr><tr><td style="white-space:nowrap">serum-Amylase-units/L<a name="cs-investigation-serum-Amylase-units.47L"> </a></td><td>serum Amylase (units/L)</td><td>Needs definition</td></tr><tr><td style="white-space:nowrap">Rheumatoid-Factor<a name="cs-investigation-Rheumatoid-Factor"> </a></td><td>Rheumatoid Factor</td><td>Needs definition</td></tr><tr><td style="white-space:nowrap">Iron-Studies<a name="cs-investigation-Iron-Studies"> </a></td><td>Iron Studies</td><td>Needs definition</td></tr><tr><td style="white-space:nowrap">S.-Uric-Acid<a name="cs-investigation-S.46-Uric-Acid"> </a></td><td>S. Uric Acid</td><td>Needs definition</td></tr><tr><td style="white-space:nowrap">Liver-profile-SGOT-U/L<a name="cs-investigation-Liver-profile-SGOT-U.47L"> </a></td><td>Liver profile - SGOT U/L</td><td>Needs definition</td></tr><tr><td style="white-space:nowrap">SGOT/PT-SGPT-U/L<a name="cs-investigation-SGOT.47PT-SGPT-U.47L"> </a></td><td>SGOT/PT - SGPT U/L</td><td>Needs definition</td></tr><tr><td style="white-space:nowrap">S-Alkaline-Phosphatasee-Alakaline-Phosphatase-IU/L<a name="cs-investigation-S-Alkaline-Phosphatasee-Alakaline-Phosphatase-IU.47L"> </a></td><td>S Alkaline Phosphatasee - Alakaline Phosphatase IU/L</td><td>Needs definition</td></tr><tr><td style="white-space:nowrap">S.-Bilirubin-Bilirubin-Direct-mg/dl<a name="cs-investigation-S.46-Bilirubin-Bilirubin-Direct-mg.47dl"> </a></td><td>S. Bilirubin - Bilirubin Direct mg/dl</td><td>Needs definition</td></tr><tr><td style="white-space:nowrap">S.-Bilirubin-Bilirubin-Total-mg/dl<a name="cs-investigation-S.46-Bilirubin-Bilirubin-Total-mg.47dl"> </a></td><td>S. Bilirubin - Bilirubin Total mg/dl</td><td>Needs definition</td></tr><tr><td style="white-space:nowrap">Serum-Prolein-Total-Protein-g/dl<a name="cs-investigation-Serum-Prolein-Total-Protein-g.47dl"> </a></td><td>Serum Prolein - Total Protein g/dl</td><td>Needs definition</td></tr><tr><td style="white-space:nowrap">S.-Amilase-Bilirubin-Indirect-mg/dl<a name="cs-investigation-S.46-Amilase-Bilirubin-Indirect-mg.47dl"> </a></td><td>S. Amilase - Bilirubin Indirect mg/dl</td><td>Needs definition</td></tr><tr><td style="white-space:nowrap">S.-ALP-Serum-albumin<a name="cs-investigation-S.46-ALP-Serum-albumin"> </a></td><td>S. ALP - Serum albumin</td><td>Needs definition</td></tr><tr><td style="white-space:nowrap">S.-Electrolyte-Globulin<a name="cs-investigation-S.46-Electrolyte-Globulin"> </a></td><td>S. Electrolyte - Globulin</td><td>Needs definition</td></tr><tr><td style="white-space:nowrap">Albumin-/-Globulin-Ratio<a name="cs-investigation-Albumin-.47-Globulin-Ratio"> </a></td><td>Albumin / Globulin Ratio</td><td>Needs definition</td></tr><tr><td style="white-space:nowrap">S-Gamma-GT-S-Gamma-GT<a name="cs-investigation-S-Gamma-GT-S-Gamma-GT"> </a></td><td>S Gamma GT - S Gamma GT</td><td>Needs definition</td></tr><tr><td style="white-space:nowrap">Liver-Enzymes<a name="cs-investigation-Liver-Enzymes"> </a></td><td>Liver Enzymes</td><td>Needs definition</td></tr><tr><td style="white-space:nowrap">Alpha-fetoprotein<a name="cs-investigation-Alpha-fetoprotein"> </a></td><td>Alpha-fetoprotein</td><td>Needs definition</td></tr><tr><td style="white-space:nowrap">Hepatitis-Screening<a name="cs-investigation-Hepatitis-Screening"> </a></td><td>Hepatitis Screening</td><td>Needs definition</td></tr><tr><td style="white-space:nowrap">CSF<a name="cs-investigation-CSF"> </a></td><td>CSF</td><td>Needs definition</td></tr><tr><td style="white-space:nowrap">Renal-Function-Tests<a name="cs-investigation-Renal-Function-Tests"> </a></td><td>Renal Function Tests</td><td>Needs definition</td></tr><tr><td style="white-space:nowrap">Stool-examination<a name="cs-investigation-Stool-examination"> </a></td><td>Stool examination</td><td>Needs definition</td></tr><tr><td style="white-space:nowrap">Urinalysis<a name="cs-investigation-Urinalysis"> </a></td><td>Urinalysis</td><td>Needs definition</td></tr><tr><td style="white-space:nowrap">Urine-for-BJP<a name="cs-investigation-Urine-for-BJP"> </a></td><td>Urine for BJP</td><td>Needs definition</td></tr><tr><td style="white-space:nowrap">Cytology<a name="cs-investigation-Cytology"> </a></td><td>Cytology</td><td>Needs definition</td></tr><tr><td style="white-space:nowrap">Antibody-testing<a name="cs-investigation-Antibody-testing"> </a></td><td>Antibody testing</td><td>Needs definition</td></tr><tr><td style="white-space:nowrap">Biochem-basic-tests<a name="cs-investigation-Biochem-basic-tests"> </a></td><td>Biochem - basic tests</td><td>Needs definition</td></tr></table></div>
+
+  
+
+  <!-- insert notes if present -->
+  
+
+
+
+  
+
+</div>
+        </div>  <!-- /inner-wrapper -->
+      </div>  <!-- /row -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-content -->
+
+  <script type="text/javascript" src="assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+  <script type="text/javascript" src="assets/js/jquery-ui.min.js"> </script>
+
+  <script type="text/javascript">
+    $(document).ready(function(){
+      if(window.location.hash != "") {
+          $('a[href="' + window.location.hash + '"]').click()
+      }
+    });
+  </script>
+  <a name="bottom"> </a>
+  <div id="segment-footer" igtool="footer" class="segment">  <!-- segment-footer -->
+    <div class="container">  <!-- container -->
+
+           
+      <div class="inner-wrapper">
+        <p>
+          IG &#169; 2021+ <a style="color: #81BEF7" href="https://www.health.gov.lk/">Ministry of Health, Sri Lanka</a>.  Package lk-nehr-fhir-ips#0.1.0 based on <a style="color: #81BEF7" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Sat, Mar 2, 2024 08:11+0000">2024-03-02</span>
+          <br/>
+          <span style="color: #FFFF77">
+                      Links: <a style="color: #81BEF7" href="toc.html">Table of Contents</a> |
+                 <a style="color: #81BEF7" href="qa.html">QA Report</a> |
+                 
+                 <a style="color: #81BEF7" target="_blank" href="http://fhir.health.gov.lk/ips/history.html">Version History</a> |
+                 <a style="color: #81BEF7" rel="license" href="http://hl7.org/fhir/R4/license.html"><img style="border-style: none;" alt="CC-BY" src="assets/images/cc-by.png" height="17"/></a> |
+                 <!--<a style="color: #81BEF7" href="todo.html">Search</a> | --> 
+
+
+          </span>
+        </p>
+      </div>  <!-- /inner-wrapper -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-footer -->
+  
+  <div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+    <div class="container">  <!-- container -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-post-footer -->
+  
+  <!-- JS and analytics only. -->
+  <!-- Bootstrap core JavaScript
+  ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script type="text/javascript" src="assets/js/bootstrap.min.js"> </script>
+  <script type="text/javascript" src="assets/js/respond.min.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard-btn.js"> </script>
+  <script>anchors.options.visible = 'hover'
+anchors.add()</script>
+  
+  <!-- feedback form - Google forms -->
+<!-- v0.1, 2021-01-09 -->
+
+
+
+<!-- / feedback form  -->
+
+  <!-- Analytics Below
+  ================================================== -->
+  </body>
+</html>
+
