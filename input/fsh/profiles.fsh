@@ -568,7 +568,7 @@ Description: "Represents previous, pre-existing and new conditions for the patie
 * code 1..1
 * code from VSMedicalConditions (extensible)
 * code ^binding.extension[+].extension[+].url = "purpose"
-* code ^binding.extension[=].extension[=].valueCode = #candidate
+* code ^binding.extension[=].extension[=].valueCode = #extensible
 * code ^binding.extension[=].extension[+].url = "valueSet"
 * code ^binding.extension[=].extension[=].valueCanonical = "http://fhir.health.gov.lk/ips/ValueSet/vs-medical-conditions-additional"
 * code ^binding.extension[=].extension[+].url = "documentation"
