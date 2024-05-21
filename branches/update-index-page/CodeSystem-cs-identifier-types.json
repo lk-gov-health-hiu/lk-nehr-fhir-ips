@@ -1,0 +1,66 @@
+{
+  "resourceType" : "CodeSystem",
+  "id" : "cs-identifier-types",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>This case-sensitive code system <code>http://fhir.health.gov.lk/ips/CodeSystem/cs-identifier-types</code> defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style=\"white-space:nowrap\">SCN<a name=\"cs-identifier-types-SCN\"> </a></td><td>Senior Citizen Number</td><td>Needs definition</td></tr><tr><td style=\"white-space:nowrap\">PHN<a name=\"cs-identifier-types-PHN\"> </a></td><td>Personal Health Number</td><td>Needs definition</td></tr><tr><td style=\"white-space:nowrap\">NIC<a name=\"cs-identifier-types-NIC\"> </a></td><td>National Identity Card</td><td>Needs definition</td></tr><tr><td style=\"white-space:nowrap\">PLOC<a name=\"cs-identifier-types-PLOC\"> </a></td><td>Provider Location</td><td>Needs definition</td></tr></table></div>"
+  },
+  "url" : "http://fhir.health.gov.lk/ips/CodeSystem/cs-identifier-types",
+  "version" : "0.1.0",
+  "name" : "CSIdentifierTypes",
+  "title" : "Patient Business Identifier Types",
+  "status" : "active",
+  "experimental" : false,
+  "date" : "2024-05-21T08:44:33+00:00",
+  "publisher" : "Ministry of Health, Sri Lanka",
+  "contact" : [{
+    "name" : "Ministry of Health, Sri Lanka",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://www.health.gov.lk/"
+    },
+    {
+      "system" : "email",
+      "value" : "digitalhealth@health.gov.lk"
+    }]
+  },
+  {
+    "name" : "Director, Health Information",
+    "telecom" : [{
+      "system" : "email",
+      "value" : "digitalhealth@health.gov.lk",
+      "use" : "work"
+    }]
+  }],
+  "description" : "Patient Business Identifier Types",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "http://unstats.un.org/unsd/methods/m49/m49.htm",
+      "code" : "001",
+      "display" : "World"
+    }]
+  }],
+  "caseSensitive" : true,
+  "content" : "complete",
+  "count" : 4,
+  "concept" : [{
+    "code" : "SCN",
+    "display" : "Senior Citizen Number",
+    "definition" : "Needs definition"
+  },
+  {
+    "code" : "PHN",
+    "display" : "Personal Health Number",
+    "definition" : "Needs definition"
+  },
+  {
+    "code" : "NIC",
+    "display" : "National Identity Card",
+    "definition" : "Needs definition"
+  },
+  {
+    "code" : "PLOC",
+    "display" : "Provider Location",
+    "definition" : "Needs definition"
+  }]
+}

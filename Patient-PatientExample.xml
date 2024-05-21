@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Patient xmlns="http://hl7.org/fhir">
+  <id value="PatientExample"/>
+  <meta>
+    <profile value="http://fhir.health.gov.lk/ips/StructureDefinition/ips-patient"/>
+  </meta>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p style="border: 1px #661aff solid; background-color: #e6e6ff; padding: 10px;"><b>Mike John Smith (Official)</b> male, DoB: 1983-05-22 ( Personal Health Number/personal health number)</p><hr/><table class="grid"><tr><td style="background-color: #f3f5da" title="Other Ids (see the one above)">Other Ids:</td><td colspan="3"><ul><li>Passport number/Passport-1</li><li>Passport number/Passport-2</li><li>Driver's license number/Drivers license-1</li><li>Driver's license number/Drivers license-2</li><li>National identity number/National identity number-1</li><li>National identity number/National identity number-2</li><li>Senior Citizen Number/Senior citizen number-1</li><li>Senior Citizen Number/Senior citizen number-2</li></ul></td></tr><tr><td style="background-color: #f3f5da" title="Ways to contact the Patient">Contact Detail</td><td colspan="3"><ul><li><a href="tel:+27829999999">+27829999999</a></li><li><a href="mailto:someone@something.com">someone@something.com</a></li><li><a href="mailto:someone2@something.com">someone2@something.com</a></li><li>177 Nawala Road Nugegoda Colombo 32350 LK </li></ul></td></tr><tr><td style="background-color: #f3f5da" title="Captures the information of the system that was used to register the patient."><a href="StructureDefinition-patient-registration-system.html">Patient Registration System Information</a></td><td colspan="3"><ul><li><a href="Device-DeviceInformationExample.html">Device/DeviceInformationExample</a></li></ul></td></tr></table></div>
+  </text>
+  <extension url="http://fhir.health.gov.lk/ips/StructureDefinition/patient-registration-system">
+    <valueReference>
+      <reference value="Device/DeviceInformationExample"/>
+    </valueReference>
+  </extension>
+  <identifier>
+    <type>
+      <coding>
+        <system value="http://fhir.health.gov.lk/ips/CodeSystem/cs-identifier-types"/>
+        <code value="PHN"/>
+      </coding>
+      <text value="Personal Health Number"/>
+    </type>
+    <system value="http://fhir.health.gov.lk/ips/identifier/phn"/>
+    <value value="personal health number"/>
+  </identifier>
+  <identifier>
+    <type>
+      <coding>
+        <system value="http://terminology.hl7.org/CodeSystem/v2-0203"/>
+        <code value="PPN"/>
+      </coding>
+      <text value="Passport number"/>
+    </type>
+    <system value="http://fhir.health.gov.lk/ips/identifier/passport"/>
+    <value value="Passport-1"/>
+  </identifier>
+  <identifier>
+    <type>
+      <coding>
+        <system value="http://terminology.hl7.org/CodeSystem/v2-0203"/>
+        <code value="PPN"/>
+      </coding>
+      <text value="Passport number"/>
+    </type>
+    <system value="http://fhir.health.gov.lk/ips/identifier/passport"/>
+    <value value="Passport-2"/>
+  </identifier>
+  <identifier>
+    <type>
+      <coding>
+        <system value="http://terminology.hl7.org/CodeSystem/v2-0203"/>
+        <code value="DL"/>
+      </coding>
+      <text value="Driver's license number"/>
+    </type>
+    <system value="http://fhir.health.gov.lk/ips/identifier/drivers"/>
+    <value value="Drivers license-1"/>
+  </identifier>
+  <identifier>
+    <type>
+      <coding>
+        <system value="http://terminology.hl7.org/CodeSystem/v2-0203"/>
+        <code value="DL"/>
+      </coding>
+      <text value="Driver's license number"/>
+    </type>
+    <system value="http://fhir.health.gov.lk/ips/identifier/drivers"/>
+    <value value="Drivers license-2"/>
+  </identifier>
+  <identifier>
+    <type>
+      <coding>
+        <system value="http://fhir.health.gov.lk/ips/CodeSystem/cs-identifier-types"/>
+        <code value="NIC"/>
+      </coding>
+      <text value="National identity number"/>
+    </type>
+    <system value="http://fhir.health.gov.lk/ips/identifier/nic"/>
+    <value value="National identity number-1"/>
+  </identifier>
+  <identifier>
+    <type>
+      <coding>
+        <system value="http://fhir.health.gov.lk/ips/CodeSystem/cs-identifier-types"/>
+        <code value="NIC"/>
+      </coding>
+      <text value="National identity number"/>
+    </type>
+    <system value="http://fhir.health.gov.lk/ips/identifier/nic"/>
+    <value value="National identity number-2"/>
+  </identifier>
+  <identifier>
+    <type>
+      <coding>
+        <system value="http://fhir.health.gov.lk/ips/CodeSystem/cs-identifier-types"/>
+        <code value="SCN"/>
+      </coding>
+      <text value="Senior Citizen Number"/>
+    </type>
+    <system value="http://fhir.health.gov.lk/ips/identifier/scn"/>
+    <value value="Senior citizen number-1"/>
+  </identifier>
+  <identifier>
+    <type>
+      <coding>
+        <system value="http://fhir.health.gov.lk/ips/CodeSystem/cs-identifier-types"/>
+        <code value="SCN"/>
+      </coding>
+      <text value="Senior Citizen Number"/>
+    </type>
+    <system value="http://fhir.health.gov.lk/ips/identifier/scn"/>
+    <value value="Senior citizen number-2"/>
+  </identifier>
+  <name>
+    <use value="official"/>
+    <family value="Smith"/>
+    <given value="Mike"/>
+    <given value="John"/>
+    <prefix value="Mr."/>
+  </name>
+  <telecom>
+    <system value="phone"/>
+    <value value="+27829999999"/>
+  </telecom>
+  <telecom>
+    <system value="email"/>
+    <value value="someone@something.com"/>
+  </telecom>
+  <telecom>
+    <system value="email"/>
+    <value value="someone2@something.com"/>
+  </telecom>
+  <gender value="male"/>
+  <birthDate value="1983-05-22"/>
+  <address>
+    <type value="postal"/>
+    <line value="177"/>
+    <line value="Nawala Road"/>
+    <city value="Nugegoda"/>
+    <district value="Ampara"/>
+    <state value="Colombo"/>
+    <postalCode value="32350"/>
+    <country value="LK"/>
+  </address>
+</Patient>

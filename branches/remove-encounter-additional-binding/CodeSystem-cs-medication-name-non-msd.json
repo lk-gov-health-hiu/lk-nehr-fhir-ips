@@ -1,0 +1,91 @@
+{
+  "resourceType" : "CodeSystem",
+  "id" : "cs-medication-name-non-msd",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>This case-sensitive code system <code>http://fhir.health.gov.lk/ips/CodeSystem/cs-medication-name-non-msd</code> defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style=\"white-space:nowrap\">ARV-0.1ml-2-sites<a name=\"cs-medication-name-non-msd-ARV-0.461ml-2-sites\"> </a></td><td>ARV 0.1 ml ID x 2 Sites</td><td>Needs definition</td></tr><tr><td style=\"white-space:nowrap\">ARV-0.1ml-4-sites<a name=\"cs-medication-name-non-msd-ARV-0.461ml-4-sites\"> </a></td><td>ARV 0.1 ml ID x 4 Sites</td><td>Needs definition</td></tr><tr><td style=\"white-space:nowrap\">Benzathine-Penicillin-Injection<a name=\"cs-medication-name-non-msd-Benzathine-Penicillin-Injection\"> </a></td><td>Benzathine Penicillin Injection</td><td>Needs definition</td></tr><tr><td style=\"white-space:nowrap\">Erythropoietin<a name=\"cs-medication-name-non-msd-Erythropoietin\"> </a></td><td>Erythropoietin</td><td>Needs definition</td></tr><tr><td style=\"white-space:nowrap\">Nebulization-With-Salbutamol-NS-And-Oxygen<a name=\"cs-medication-name-non-msd-Nebulization-With-Salbutamol-NS-And-Oxygen\"> </a></td><td>Nebulization With Salbutamol + N.S. + Oxygen</td><td>Needs definition</td></tr><tr><td style=\"white-space:nowrap\">Nebulize-With-Ipravent-And-NS-And-Oxygen<a name=\"cs-medication-name-non-msd-Nebulize-With-Ipravent-And-NS-And-Oxygen\"> </a></td><td>Nebulize with Ipravent + N.S. + Oxygen</td><td>Needs definition</td></tr><tr><td style=\"white-space:nowrap\">Nebulize-with-Salbutamol-And-Ipravent-And-NS-And-Oxygen<a name=\"cs-medication-name-non-msd-Nebulize-with-Salbutamol-And-Ipravent-And-NS-And-Oxygen\"> </a></td><td>Nebulize with Salbutamol + Ipravent + N.S. + Oxygen</td><td>Needs definition</td></tr><tr><td style=\"white-space:nowrap\">Tetanus-toxoid-0.5ml-IM-3-doses<a name=\"cs-medication-name-non-msd-Tetanus-toxoid-0.465ml-IM-3-doses\"> </a></td><td>Tetanus toxoid 0.5 ml IM - 3 doses</td><td>Needs definition</td></tr><tr><td style=\"white-space:nowrap\">Tetanus-toxoid-0.5ml-IM-Stat<a name=\"cs-medication-name-non-msd-Tetanus-toxoid-0.465ml-IM-Stat\"> </a></td><td>Tetanus toxoid 0.5ml IM - Stat</td><td>Needs definition</td></tr></table></div>"
+  },
+  "url" : "http://fhir.health.gov.lk/ips/CodeSystem/cs-medication-name-non-msd",
+  "version" : "0.1.0",
+  "name" : "CSMedicationNamesForNonMSD",
+  "title" : "Medication Names Not For Pharmacy",
+  "status" : "active",
+  "experimental" : false,
+  "date" : "2024-03-15T06:39:26+00:00",
+  "publisher" : "Ministry of Health, Sri Lanka",
+  "contact" : [{
+    "name" : "Ministry of Health, Sri Lanka",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://www.health.gov.lk/"
+    },
+    {
+      "system" : "email",
+      "value" : "digitalhealth@health.gov.lk"
+    }]
+  },
+  {
+    "name" : "Director, Health Information",
+    "telecom" : [{
+      "system" : "email",
+      "value" : "digitalhealth@health.gov.lk",
+      "use" : "work"
+    }]
+  }],
+  "description" : "A list of medications that typically are not prescribed for collection at the pharamcy a.k.a. Non-Medical Supplies.",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "http://unstats.un.org/unsd/methods/m49/m49.htm",
+      "code" : "001",
+      "display" : "World"
+    }]
+  }],
+  "caseSensitive" : true,
+  "content" : "complete",
+  "count" : 9,
+  "concept" : [{
+    "code" : "ARV-0.1ml-2-sites",
+    "display" : "ARV 0.1 ml ID x 2 Sites",
+    "definition" : "Needs definition"
+  },
+  {
+    "code" : "ARV-0.1ml-4-sites",
+    "display" : "ARV 0.1 ml ID x 4 Sites",
+    "definition" : "Needs definition"
+  },
+  {
+    "code" : "Benzathine-Penicillin-Injection",
+    "display" : "Benzathine Penicillin Injection",
+    "definition" : "Needs definition"
+  },
+  {
+    "code" : "Erythropoietin",
+    "display" : "Erythropoietin",
+    "definition" : "Needs definition"
+  },
+  {
+    "code" : "Nebulization-With-Salbutamol-NS-And-Oxygen",
+    "display" : "Nebulization With Salbutamol + N.S. + Oxygen",
+    "definition" : "Needs definition"
+  },
+  {
+    "code" : "Nebulize-With-Ipravent-And-NS-And-Oxygen",
+    "display" : "Nebulize with Ipravent + N.S. + Oxygen",
+    "definition" : "Needs definition"
+  },
+  {
+    "code" : "Nebulize-with-Salbutamol-And-Ipravent-And-NS-And-Oxygen",
+    "display" : "Nebulize with Salbutamol + Ipravent + N.S. + Oxygen",
+    "definition" : "Needs definition"
+  },
+  {
+    "code" : "Tetanus-toxoid-0.5ml-IM-3-doses",
+    "display" : "Tetanus toxoid 0.5 ml IM - 3 doses",
+    "definition" : "Needs definition"
+  },
+  {
+    "code" : "Tetanus-toxoid-0.5ml-IM-Stat",
+    "display" : "Tetanus toxoid 0.5ml IM - Stat",
+    "definition" : "Needs definition"
+  }]
+}

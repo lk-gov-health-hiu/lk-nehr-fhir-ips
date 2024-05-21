@@ -1,0 +1,102 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://fhir.health.gov.lk/ips/CodeSystem/cs-procedure> a fhir:CodeSystem ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "cs-procedure"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>This case-sensitive code system <code>http://fhir.health.gov.lk/ips/CodeSystem/cs-procedure</code> defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style=\"white-space:nowrap\">ARV-0.1ml-2-sites<a name=\"cs-procedure-ARV-0.461ml-2-sites\"> </a></td><td>ARV 0.1 ml ID x 2 Sites</td><td>Needs definition</td></tr><tr><td style=\"white-space:nowrap\">ARV-0.1ml-4-sites<a name=\"cs-procedure-ARV-0.461ml-4-sites\"> </a></td><td>ARV 0.1 ml ID x 4 Sites</td><td>Needs definition</td></tr><tr><td style=\"white-space:nowrap\">Benzathine-Penicillin-Injection<a name=\"cs-procedure-Benzathine-Penicillin-Injection\"> </a></td><td>Benzathine Penicillin Injection</td><td>Needs definition</td></tr><tr><td style=\"white-space:nowrap\">Cleaning-and-Dressing<a name=\"cs-procedure-Cleaning-and-Dressing\"> </a></td><td>Cleaning and Dressing</td><td>Needs definition</td></tr><tr><td style=\"white-space:nowrap\">Erythropoietin<a name=\"cs-procedure-Erythropoietin\"> </a></td><td>Erythropoietin</td><td>Needs definition</td></tr><tr><td style=\"white-space:nowrap\">Give-Injection<a name=\"cs-procedure-Give-Injection\"> </a></td><td>Give Injection</td><td>Needs definition</td></tr><tr><td style=\"white-space:nowrap\">Health-Education<a name=\"cs-procedure-Health-Education\"> </a></td><td>Health Education</td><td>Needs definition</td></tr><tr><td style=\"white-space:nowrap\">Nebulization-With-Salbutamol-NS-And-Oxygen<a name=\"cs-procedure-Nebulization-With-Salbutamol-NS-And-Oxygen\"> </a></td><td>Nebulization With Salbutamol + N.S. + Oxygen</td><td>Needs definition</td></tr><tr><td style=\"white-space:nowrap\">Nebulize-With-Ipravent-And-NS-And-Oxygen<a name=\"cs-procedure-Nebulize-With-Ipravent-And-NS-And-Oxygen\"> </a></td><td>Nebulize with Ipravent + N.S. + Oxygen</td><td>Needs definition</td></tr><tr><td style=\"white-space:nowrap\">Nebulize-with-Salbutamol-And-Ipravent-And-NS-And-Oxygen<a name=\"cs-procedure-Nebulize-with-Salbutamol-And-Ipravent-And-NS-And-Oxygen\"> </a></td><td>Nebulize with Salbutamol + Ipravent + N.S. + Oxygen</td><td>Needs definition</td></tr><tr><td style=\"white-space:nowrap\">Tetanus-toxoid-0.5ml-IM-3-doses<a name=\"cs-procedure-Tetanus-toxoid-0.465ml-IM-3-doses\"> </a></td><td>Tetanus toxoid 0.5 ml IM - 3 doses</td><td>Needs definition</td></tr><tr><td style=\"white-space:nowrap\">Tetanus-toxoid-0.5ml-IM-Stat<a name=\"cs-procedure-Tetanus-toxoid-0.465ml-IM-Stat\"> </a></td><td>Tetanus toxoid 0.5ml IM - Stat</td><td>Needs definition</td></tr></table></div>"
+  ] ; # 
+  fhir:url [ fhir:v "http://fhir.health.gov.lk/ips/CodeSystem/cs-procedure"^^xsd:anyURI] ; # 
+  fhir:version [ fhir:v "0.1.0"] ; # 
+  fhir:name [ fhir:v "CSProcedures"] ; # 
+  fhir:title [ fhir:v "Procedures"] ; # 
+  fhir:status [ fhir:v "active"] ; # 
+  fhir:experimental [ fhir:v "false"^^xsd:boolean] ; # 
+  fhir:date [ fhir:v "2024-03-04T09:15:38+00:00"^^xsd:dateTime] ; # 
+  fhir:publisher [ fhir:v "Ministry of Health, Sri Lanka"] ; # 
+  fhir:contact ( [
+     fhir:name [ fhir:v "Ministry of Health, Sri Lanka" ] ;
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "https://www.health.gov.lk/" ]
+     ] [
+       fhir:system [ fhir:v "email" ] ;
+       fhir:value [ fhir:v "digitalhealth@health.gov.lk" ]
+     ] )
+  ] [
+     fhir:name [ fhir:v "Director, Health Information" ] ;
+     fhir:telecom ( [
+       fhir:system [ fhir:v "email" ] ;
+       fhir:value [ fhir:v "digitalhealth@health.gov.lk" ] ;
+       fhir:use [ fhir:v "work" ]
+     ] )
+  ] ) ; # 
+  fhir:description [ fhir:v "Other Procedures"] ; # 
+  fhir:jurisdiction ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://unstats.un.org/unsd/methods/m49/m49.htm"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "001" ] ;
+       fhir:display [ fhir:v "World" ]
+     ] )
+  ] ) ; # 
+  fhir:caseSensitive [ fhir:v "true"^^xsd:boolean] ; # 
+  fhir:content [ fhir:v "complete"] ; # 
+  fhir:count [ fhir:v "12"^^xsd:nonNegativeInteger] ; # 
+  fhir:concept ( [
+     fhir:code [ fhir:v "ARV-0.1ml-2-sites" ] ;
+     fhir:display [ fhir:v "ARV 0.1 ml ID x 2 Sites" ] ;
+     fhir:definition [ fhir:v "Needs definition" ]
+  ] [
+     fhir:code [ fhir:v "ARV-0.1ml-4-sites" ] ;
+     fhir:display [ fhir:v "ARV 0.1 ml ID x 4 Sites" ] ;
+     fhir:definition [ fhir:v "Needs definition" ]
+  ] [
+     fhir:code [ fhir:v "Benzathine-Penicillin-Injection" ] ;
+     fhir:display [ fhir:v "Benzathine Penicillin Injection" ] ;
+     fhir:definition [ fhir:v "Needs definition" ]
+  ] [
+     fhir:code [ fhir:v "Cleaning-and-Dressing" ] ;
+     fhir:display [ fhir:v "Cleaning and Dressing" ] ;
+     fhir:definition [ fhir:v "Needs definition" ]
+  ] [
+     fhir:code [ fhir:v "Erythropoietin" ] ;
+     fhir:display [ fhir:v "Erythropoietin" ] ;
+     fhir:definition [ fhir:v "Needs definition" ]
+  ] [
+     fhir:code [ fhir:v "Give-Injection" ] ;
+     fhir:display [ fhir:v "Give Injection" ] ;
+     fhir:definition [ fhir:v "Needs definition" ]
+  ] [
+     fhir:code [ fhir:v "Health-Education" ] ;
+     fhir:display [ fhir:v "Health Education" ] ;
+     fhir:definition [ fhir:v "Needs definition" ]
+  ] [
+     fhir:code [ fhir:v "Nebulization-With-Salbutamol-NS-And-Oxygen" ] ;
+     fhir:display [ fhir:v "Nebulization With Salbutamol + N.S. + Oxygen" ] ;
+     fhir:definition [ fhir:v "Needs definition" ]
+  ] [
+     fhir:code [ fhir:v "Nebulize-With-Ipravent-And-NS-And-Oxygen" ] ;
+     fhir:display [ fhir:v "Nebulize with Ipravent + N.S. + Oxygen" ] ;
+     fhir:definition [ fhir:v "Needs definition" ]
+  ] [
+     fhir:code [ fhir:v "Nebulize-with-Salbutamol-And-Ipravent-And-NS-And-Oxygen" ] ;
+     fhir:display [ fhir:v "Nebulize with Salbutamol + Ipravent + N.S. + Oxygen" ] ;
+     fhir:definition [ fhir:v "Needs definition" ]
+  ] [
+     fhir:code [ fhir:v "Tetanus-toxoid-0.5ml-IM-3-doses" ] ;
+     fhir:display [ fhir:v "Tetanus toxoid 0.5 ml IM - 3 doses" ] ;
+     fhir:definition [ fhir:v "Needs definition" ]
+  ] [
+     fhir:code [ fhir:v "Tetanus-toxoid-0.5ml-IM-Stat" ] ;
+     fhir:display [ fhir:v "Tetanus toxoid 0.5ml IM - Stat" ] ;
+     fhir:definition [ fhir:v "Needs definition" ]
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

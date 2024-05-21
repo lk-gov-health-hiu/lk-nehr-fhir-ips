@@ -1,0 +1,68 @@
+{
+  "codeSystems" : [
+    {
+      "url" : "http://fhir.health.gov.lk/ips/CodeSystem/cs-cvd-risk-category",
+      "version" : "0.1.0",
+      "status" : "active",
+      "name" : "CSCVDRiskCategory",
+      "title" : "Cardiovascular Risk Categories",
+      "description" : "Cardiovascular risk is expressed as a percentage"
+    },
+    {
+      "url" : "http://fhir.health.gov.lk/ips/CodeSystem/cs-follow-up-reasons",
+      "version" : "0.1.0",
+      "status" : "active",
+      "name" : "CSFollowUpReasons",
+      "title" : "Follow up at HLC",
+      "description" : "Follow up at Healthy Lifestyle Center"
+    },
+    {
+      "url" : "http://fhir.health.gov.lk/ips/CodeSystem/cs-identifier-types",
+      "version" : "0.1.0",
+      "status" : "active",
+      "name" : "CSIdentifierTypes",
+      "title" : "Patient Business Identifier Types",
+      "description" : "Patient Business Identifier Types"
+    },
+    {
+      "url" : "http://fhir.health.gov.lk/ips/CodeSystem/cs-investigation",
+      "version" : "0.1.0",
+      "status" : "active",
+      "name" : "CSInvestigations",
+      "title" : "Investigations",
+      "description" : "Investigations"
+    },
+    {
+      "url" : "http://fhir.health.gov.lk/ips/CodeSystem/cs-medication-name",
+      "version" : "0.1.0",
+      "status" : "active",
+      "name" : "CSMedicationNames",
+      "title" : "Medication Names",
+      "description" : "Medication Names"
+    },
+    {
+      "url" : "http://fhir.health.gov.lk/ips/CodeSystem/cs-procedure",
+      "version" : "0.1.0",
+      "status" : "active",
+      "name" : "CSProcedures",
+      "title" : "Procedures",
+      "description" : "Other Procedures"
+    },
+    {
+      "url" : "http://fhir.health.gov.lk/ips/CodeSystem/cs-procedure-imaging",
+      "version" : "0.1.0",
+      "status" : "active",
+      "name" : "CSImagingProcedures",
+      "title" : "Procedures",
+      "description" : "Imaging Procedures"
+    },
+    {
+      "url" : "http://fhir.health.gov.lk/ips/CodeSystem/cs-reason-for-encounter",
+      "version" : "0.1.0",
+      "status" : "active",
+      "name" : "CSReasonForEncounter",
+      "title" : "Reason For Encounter",
+      "description" : "Encounter reasons."
+    }
+  ]
+}

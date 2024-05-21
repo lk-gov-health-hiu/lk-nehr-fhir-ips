@@ -1,0 +1,65 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sct: <http://snomed.info/id/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://fhir.health.gov.lk/ips/Procedure/ProceduresExample> a fhir:Procedure ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "ProceduresExample"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://fhir.health.gov.lk/ips/StructureDefinition/procedure"^^xsd:anyURI ;
+       fhir:link <http://fhir.health.gov.lk/ips/StructureDefinition/procedure>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: Procedure</b><a name=\"ProceduresExample\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource Procedure &quot;ProceduresExample&quot; </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-procedure.html\">Procedures</a></p></div><p><b>status</b>: in-progress</p><p><b>category</b>: Education <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"https://browser.ihtsdotools.org/\">SNOMED CT</a>#409073007)</span></p><p><b>code</b>: X-Ray <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"CodeSystem-cs-procedure-imaging.html\">Procedures</a>#X-Ray)</span></p><p><b>subject</b>: <a href=\"Patient-HHIMSPatientExample.html\">Patient/HHIMSPatientExample</a> &quot; SMITH&quot;</p><p><b>encounter</b>: <a href=\"Encounter-HHIMSTargetFacilityEncounterExample.html\">Encounter/HHIMSTargetFacilityEncounterExample</a></p><p><b>performed</b>: 2023-10-11 17:21:33-0800</p><p><b>recorder</b>: <a href=\"Practitioner-GeneralPractitionerExample.html\">Practitioner/GeneralPractitionerExample</a> &quot; SMITH&quot;</p><p><b>asserter</b>: <a href=\"Practitioner-GeneralPractitionerExample.html\">Practitioner/GeneralPractitionerExample</a> &quot; SMITH&quot;</p><h3>Performers</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Actor</b></td></tr><tr><td style=\"display: none\">*</td><td><a href=\"Practitioner-GeneralPractitionerExample.html\">Practitioner/GeneralPractitionerExample</a> &quot; SMITH&quot;</td></tr></table><p><b>location</b>: <a href=\"Location-ProvidersLocationExample.html\">Location/ProvidersLocationExample</a> &quot;Name for the location&quot;</p></div>"
+  ] ; # 
+  fhir:status [ fhir:v "in-progress"] ; # 
+  fhir:category [
+     fhir:coding ( [
+       a sct:409073007 ;
+       fhir:system [ fhir:v "http://snomed.info/sct"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "409073007" ]
+     ] )
+  ] ; # 
+  fhir:code [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://fhir.health.gov.lk/ips/CodeSystem/cs-procedure-imaging"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "X-Ray" ]
+     ] )
+  ] ; # 
+  fhir:subject [
+     fhir:link <http://fhir.health.gov.lk/ips/Patient/HHIMSPatientExample> ;
+     fhir:reference [ fhir:v "Patient/HHIMSPatientExample" ]
+  ] ; # 
+  fhir:encounter [
+     fhir:link <http://fhir.health.gov.lk/ips/Encounter/HHIMSTargetFacilityEncounterExample> ;
+     fhir:reference [ fhir:v "Encounter/HHIMSTargetFacilityEncounterExample" ]
+  ] ; # 
+  fhir:performed [ fhir:v "2023-10-11T17:21:33-08:00"^^xsd:dateTime] ; # 
+  fhir:recorder [
+     fhir:link <http://fhir.health.gov.lk/ips/Practitioner/GeneralPractitionerExample> ;
+     fhir:reference [ fhir:v "Practitioner/GeneralPractitionerExample" ]
+  ] ; # 
+  fhir:asserter [
+     fhir:link <http://fhir.health.gov.lk/ips/Practitioner/GeneralPractitionerExample> ;
+     fhir:reference [ fhir:v "Practitioner/GeneralPractitionerExample" ]
+  ] ; # 
+  fhir:performer ( [
+     fhir:actor [
+       fhir:link <http://fhir.health.gov.lk/ips/Practitioner/GeneralPractitionerExample> ;
+       fhir:reference [ fhir:v "Practitioner/GeneralPractitionerExample" ]
+     ]
+  ] ) ; # 
+  fhir:location [
+     fhir:link <http://fhir.health.gov.lk/ips/Location/ProvidersLocationExample> ;
+     fhir:reference [ fhir:v "Location/ProvidersLocationExample" ]
+  ] . # 
+
+# -------------------------------------------------------------------------------------
+

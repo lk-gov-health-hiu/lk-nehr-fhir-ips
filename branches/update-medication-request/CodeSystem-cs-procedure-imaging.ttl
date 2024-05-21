@@ -1,0 +1,110 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://fhir.health.gov.lk/ips/CodeSystem/cs-procedure-imaging> a fhir:CodeSystem ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "cs-procedure-imaging"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>This case-sensitive code system <code>http://fhir.health.gov.lk/ips/CodeSystem/cs-procedure-imaging</code> defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style=\"white-space:nowrap\">X-Ray<a name=\"cs-procedure-imaging-X-Ray\"> </a></td><td>X-Ray</td><td>Needs definition</td></tr><tr><td style=\"white-space:nowrap\">MRI<a name=\"cs-procedure-imaging-MRI\"> </a></td><td>MRI</td><td>Needs definition</td></tr><tr><td style=\"white-space:nowrap\">Ultrasound<a name=\"cs-procedure-imaging-Ultrasound\"> </a></td><td>Ultrasound</td><td>Needs definition</td></tr><tr><td style=\"white-space:nowrap\">CT<a name=\"cs-procedure-imaging-CT\"> </a></td><td>CT</td><td>Needs definition</td></tr><tr><td style=\"white-space:nowrap\">Fluoroscopy<a name=\"cs-procedure-imaging-Fluoroscopy\"> </a></td><td>Fluoroscopy</td><td>Needs definition</td></tr><tr><td style=\"white-space:nowrap\">Angiography<a name=\"cs-procedure-imaging-Angiography\"> </a></td><td>Angiography</td><td>Needs definition</td></tr><tr><td style=\"white-space:nowrap\">Mammography<a name=\"cs-procedure-imaging-Mammography\"> </a></td><td>Mammography</td><td>Needs definition</td></tr><tr><td style=\"white-space:nowrap\">Breast-Tomosynthesis<a name=\"cs-procedure-imaging-Breast-Tomosynthesis\"> </a></td><td>Breast Tomosynthesis</td><td>Needs definition</td></tr><tr><td style=\"white-space:nowrap\">PET<a name=\"cs-procedure-imaging-PET\"> </a></td><td>PET</td><td>Needs definition</td></tr><tr><td style=\"white-space:nowrap\">SPECT<a name=\"cs-procedure-imaging-SPECT\"> </a></td><td>SPECT</td><td>Needs definition</td></tr><tr><td style=\"white-space:nowrap\">Endoscopy<a name=\"cs-procedure-imaging-Endoscopy\"> </a></td><td>Endoscopy</td><td>Needs definition</td></tr><tr><td style=\"white-space:nowrap\">Microscopy<a name=\"cs-procedure-imaging-Microscopy\"> </a></td><td>Microscopy</td><td>Needs definition</td></tr><tr><td style=\"white-space:nowrap\">Whole-Slide-Imaging<a name=\"cs-procedure-imaging-Whole-Slide-Imaging\"> </a></td><td>Whole Slide Imaging</td><td>Needs definition</td></tr><tr><td style=\"white-space:nowrap\">OCT<a name=\"cs-procedure-imaging-OCT\"> </a></td><td>OCT</td><td>Needs definition</td></tr></table></div>"
+  ] ; # 
+  fhir:url [ fhir:v "http://fhir.health.gov.lk/ips/CodeSystem/cs-procedure-imaging"^^xsd:anyURI] ; # 
+  fhir:version [ fhir:v "0.1.0"] ; # 
+  fhir:name [ fhir:v "CSImagingProcedures"] ; # 
+  fhir:title [ fhir:v "Procedures"] ; # 
+  fhir:status [ fhir:v "active"] ; # 
+  fhir:experimental [ fhir:v "false"^^xsd:boolean] ; # 
+  fhir:date [ fhir:v "2024-03-14T09:29:40+00:00"^^xsd:dateTime] ; # 
+  fhir:publisher [ fhir:v "Ministry of Health, Sri Lanka"] ; # 
+  fhir:contact ( [
+     fhir:name [ fhir:v "Ministry of Health, Sri Lanka" ] ;
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "https://www.health.gov.lk/" ]
+     ] [
+       fhir:system [ fhir:v "email" ] ;
+       fhir:value [ fhir:v "digitalhealth@health.gov.lk" ]
+     ] )
+  ] [
+     fhir:name [ fhir:v "Director, Health Information" ] ;
+     fhir:telecom ( [
+       fhir:system [ fhir:v "email" ] ;
+       fhir:value [ fhir:v "digitalhealth@health.gov.lk" ] ;
+       fhir:use [ fhir:v "work" ]
+     ] )
+  ] ) ; # 
+  fhir:description [ fhir:v "Imaging Procedures"] ; # 
+  fhir:jurisdiction ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://unstats.un.org/unsd/methods/m49/m49.htm"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "001" ] ;
+       fhir:display [ fhir:v "World" ]
+     ] )
+  ] ) ; # 
+  fhir:caseSensitive [ fhir:v "true"^^xsd:boolean] ; # 
+  fhir:content [ fhir:v "complete"] ; # 
+  fhir:count [ fhir:v "14"^^xsd:nonNegativeInteger] ; # 
+  fhir:concept ( [
+     fhir:code [ fhir:v "X-Ray" ] ;
+     fhir:display [ fhir:v "X-Ray" ] ;
+     fhir:definition [ fhir:v "Needs definition" ]
+  ] [
+     fhir:code [ fhir:v "MRI" ] ;
+     fhir:display [ fhir:v "MRI" ] ;
+     fhir:definition [ fhir:v "Needs definition" ]
+  ] [
+     fhir:code [ fhir:v "Ultrasound" ] ;
+     fhir:display [ fhir:v "Ultrasound" ] ;
+     fhir:definition [ fhir:v "Needs definition" ]
+  ] [
+     fhir:code [ fhir:v "CT" ] ;
+     fhir:display [ fhir:v "CT" ] ;
+     fhir:definition [ fhir:v "Needs definition" ]
+  ] [
+     fhir:code [ fhir:v "Fluoroscopy" ] ;
+     fhir:display [ fhir:v "Fluoroscopy" ] ;
+     fhir:definition [ fhir:v "Needs definition" ]
+  ] [
+     fhir:code [ fhir:v "Angiography" ] ;
+     fhir:display [ fhir:v "Angiography" ] ;
+     fhir:definition [ fhir:v "Needs definition" ]
+  ] [
+     fhir:code [ fhir:v "Mammography" ] ;
+     fhir:display [ fhir:v "Mammography" ] ;
+     fhir:definition [ fhir:v "Needs definition" ]
+  ] [
+     fhir:code [ fhir:v "Breast-Tomosynthesis" ] ;
+     fhir:display [ fhir:v "Breast Tomosynthesis" ] ;
+     fhir:definition [ fhir:v "Needs definition" ]
+  ] [
+     fhir:code [ fhir:v "PET" ] ;
+     fhir:display [ fhir:v "PET" ] ;
+     fhir:definition [ fhir:v "Needs definition" ]
+  ] [
+     fhir:code [ fhir:v "SPECT" ] ;
+     fhir:display [ fhir:v "SPECT" ] ;
+     fhir:definition [ fhir:v "Needs definition" ]
+  ] [
+     fhir:code [ fhir:v "Endoscopy" ] ;
+     fhir:display [ fhir:v "Endoscopy" ] ;
+     fhir:definition [ fhir:v "Needs definition" ]
+  ] [
+     fhir:code [ fhir:v "Microscopy" ] ;
+     fhir:display [ fhir:v "Microscopy" ] ;
+     fhir:definition [ fhir:v "Needs definition" ]
+  ] [
+     fhir:code [ fhir:v "Whole-Slide-Imaging" ] ;
+     fhir:display [ fhir:v "Whole Slide Imaging" ] ;
+     fhir:definition [ fhir:v "Needs definition" ]
+  ] [
+     fhir:code [ fhir:v "OCT" ] ;
+     fhir:display [ fhir:v "OCT" ] ;
+     fhir:definition [ fhir:v "Needs definition" ]
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

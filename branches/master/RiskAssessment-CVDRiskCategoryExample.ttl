@@ -1,0 +1,98 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sct: <http://snomed.info/id/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://fhir.health.gov.lk/ips/RiskAssessment/CVDRiskCategoryExample> a fhir:RiskAssessment ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "CVDRiskCategoryExample"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://fhir.health.gov.lk/ips/StructureDefinition/cvd-risk-category"^^xsd:anyURI ;
+       fhir:link <http://fhir.health.gov.lk/ips/StructureDefinition/cvd-risk-category>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: RiskAssessment </b><a name=\"CVDRiskCategoryExample\"> </a><a name=\"hcCVDRiskCategoryExample\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">ResourceRiskAssessment &quot;CVDRiskCategoryExample&quot; </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-cvd-risk-category.html\">Cardiovascular Risk Assessment</a></p></div><p><b>status</b>: final</p><p><b>code</b>: Assessment for risk of cardiovascular disease <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"https://browser.ihtsdotools.org/\">SNOMED CT</a>#441829007)</span></p><p><b>subject</b>: <a href=\"Patient-PatientExample.html\">Patient/PatientExample</a> &quot; SMITH&quot;</p><p><b>encounter</b>: <a href=\"Encounter-TargetFacilityEncounterExample.html\">Encounter/TargetFacilityEncounterExample</a></p><p><b>occurrence</b>: 2023-10-06 13:28:17-0500</p><p><b>performer</b>: <a href=\"Practitioner-GeneralPractitionerExample.html\">Practitioner/GeneralPractitionerExample</a> &quot; SMITH&quot;</p><p><b>basis</b>: </p><ul><li><a href=\"Patient-PatientExample.html\">Patient/PatientExample</a> &quot; SMITH&quot;</li><li><a href=\"Observation-RiskBehaviourTobaccoSmokerExample.html\">Observation/RiskBehaviourTobaccoSmokerExample</a></li><li><a href=\"Observation-TotalCholesterolExample.html\">Observation/TotalCholesterolExample</a></li><li><a href=\"Observation-BloodPressureExample.html\">Observation/BloodPressureExample</a></li><li><a href=\"Observation-RandomBloodSugarExample.html\">Observation/RandomBloodSugarExample</a></li><li><a href=\"Observation-FastingBloodSugarExample.html\">Observation/FastingBloodSugarExample</a></li></ul><h3>Predictions</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Outcome</b></td><td><b>Probability[x]</b></td><td><b>QualitativeRisk</b></td><td><b>When[x]</b></td></tr><tr><td style=\"display: none\">*</td><td>Risk of heart attack <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"https://browser.ihtsdotools.org/\">SNOMED CT</a>#395112001)</span></td><td>0.02</td><td>Risk Category <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"CodeSystem-cs-cvd-risk-category.html\">Cardiovascular Risk Categories</a>#Critical)</span></td><td>39-49 years</td></tr></table></div>"
+  ] ; # 
+  fhir:status [ fhir:v "final"] ; # 
+  fhir:code [
+     fhir:coding ( [
+       a sct:441829007 ;
+       fhir:system [ fhir:v "http://snomed.info/sct"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "441829007" ]
+     ] ) ;
+     fhir:text [ fhir:v "Assessment for risk of cardiovascular disease" ]
+  ] ; # 
+  fhir:subject [
+     fhir:link <http://fhir.health.gov.lk/ips/Patient/PatientExample> ;
+     fhir:reference [ fhir:v "Patient/PatientExample" ]
+  ] ; # 
+  fhir:encounter [
+     fhir:link <http://fhir.health.gov.lk/ips/Encounter/TargetFacilityEncounterExample> ;
+     fhir:reference [ fhir:v "Encounter/TargetFacilityEncounterExample" ]
+  ] ; # 
+  fhir:occurrence [ fhir:v "2023-10-06T13:28:17-05:00"^^xsd:dateTime] ; # 
+  fhir:performer [
+     fhir:link <http://fhir.health.gov.lk/ips/Practitioner/GeneralPractitionerExample> ;
+     fhir:reference [ fhir:v "Practitioner/GeneralPractitionerExample" ]
+  ] ; # 
+  fhir:basis ( [
+     fhir:link <http://fhir.health.gov.lk/ips/Patient/PatientExample> ;
+     fhir:reference [ fhir:v "Patient/PatientExample" ]
+  ] [
+     fhir:link <http://fhir.health.gov.lk/ips/Observation/RiskBehaviourTobaccoSmokerExample> ;
+     fhir:reference [ fhir:v "Observation/RiskBehaviourTobaccoSmokerExample" ]
+  ] [
+     fhir:link <http://fhir.health.gov.lk/ips/Observation/TotalCholesterolExample> ;
+     fhir:reference [ fhir:v "Observation/TotalCholesterolExample" ]
+  ] [
+     fhir:link <http://fhir.health.gov.lk/ips/Observation/BloodPressureExample> ;
+     fhir:reference [ fhir:v "Observation/BloodPressureExample" ]
+  ] [
+     fhir:link <http://fhir.health.gov.lk/ips/Observation/RandomBloodSugarExample> ;
+     fhir:reference [ fhir:v "Observation/RandomBloodSugarExample" ]
+  ] [
+     fhir:link <http://fhir.health.gov.lk/ips/Observation/FastingBloodSugarExample> ;
+     fhir:reference [ fhir:v "Observation/FastingBloodSugarExample" ]
+  ] ) ; # 
+  fhir:prediction ( [
+     fhir:outcome [
+       fhir:coding ( [
+         a sct:395112001 ;
+         fhir:system [ fhir:v "http://snomed.info/sct"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "395112001" ]
+       ] ) ;
+       fhir:text [ fhir:v "Risk of heart attack" ]
+     ] ;
+     fhir:probability [ fhir:v "0.02"^^xsd:decimal ] ;
+     fhir:qualitativeRisk [
+       fhir:coding ( [
+         fhir:system [ fhir:v "http://fhir.health.gov.lk/ips/CodeSystem/cs-cvd-risk-category"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "Critical" ]
+       ] ) ;
+       fhir:text [ fhir:v "Risk Category" ]
+     ] ;
+     fhir:when [
+       a fhir:Range ;
+       fhir:low [
+         fhir:value [ fhir:v "39"^^xsd:decimal ] ;
+         fhir:unit [ fhir:v "years" ] ;
+         fhir:system [ fhir:v "http://unitsofmeasure.org"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "a" ]
+       ] ;
+       fhir:high [
+         fhir:value [ fhir:v "49"^^xsd:decimal ] ;
+         fhir:unit [ fhir:v "years" ] ;
+         fhir:system [ fhir:v "http://unitsofmeasure.org"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "a" ]
+       ]
+     ]
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

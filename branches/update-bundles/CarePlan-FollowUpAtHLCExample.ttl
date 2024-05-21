@@ -1,0 +1,46 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://fhir.health.gov.lk/ips/CarePlan/FollowUpAtHLCExample> a fhir:CarePlan ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "FollowUpAtHLCExample"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://fhir.health.gov.lk/ips/StructureDefinition/follow-up-at-hlc"^^xsd:anyURI ;
+       fhir:link <http://fhir.health.gov.lk/ips/StructureDefinition/follow-up-at-hlc>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: CarePlan</b><a name=\"FollowUpAtHLCExample\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource CarePlan &quot;FollowUpAtHLCExample&quot; </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-follow-up-at-hlc.html\">Follow-up at HLC</a></p></div><p><b>status</b>: active</p><p><b>intent</b>: order</p><p><b>subject</b>: <a href=\"Patient-HIMSPatientExample.html\">Patient/HIMSPatientExample</a> &quot; SMITH&quot;</p><p><b>encounter</b>: <a href=\"Encounter-HIMSTargetFacilityEncounterExample.html\">Encounter/HIMSTargetFacilityEncounterExample</a></p><p><b>period</b>: 2022-12-01 --&gt; (ongoing)</p><p><b>contributor</b>: <a href=\"Organization-OrganizationExample.html\">Organization/OrganizationExample</a> &quot;Some Health Facility&quot;</p><h3>Activities</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Reference</b></td></tr><tr><td style=\"display: none\">*</td><td><a href=\"ServiceRequest-FollowUpPlanServiceRequestExample.html\">ServiceRequest/FollowUpPlanServiceRequestExample</a></td></tr></table></div>"
+  ] ; # 
+  fhir:status [ fhir:v "active"] ; # 
+  fhir:intent [ fhir:v "order"] ; # 
+  fhir:subject [
+     fhir:link <http://fhir.health.gov.lk/ips/Patient/HIMSPatientExample> ;
+     fhir:reference [ fhir:v "Patient/HIMSPatientExample" ]
+  ] ; # 
+  fhir:encounter [
+     fhir:link <http://fhir.health.gov.lk/ips/Encounter/HIMSTargetFacilityEncounterExample> ;
+     fhir:reference [ fhir:v "Encounter/HIMSTargetFacilityEncounterExample" ]
+  ] ; # 
+  fhir:period [
+     fhir:start [ fhir:v "2022-12-01"^^xsd:date ]
+  ] ; # 
+  fhir:contributor ( [
+     fhir:link <http://fhir.health.gov.lk/ips/Organization/OrganizationExample> ;
+     fhir:reference [ fhir:v "Organization/OrganizationExample" ]
+  ] ) ; # 
+  fhir:activity ( [
+     fhir:reference [
+       fhir:link <http://fhir.health.gov.lk/ips/ServiceRequest/FollowUpPlanServiceRequestExample> ;
+       fhir:reference [ fhir:v "ServiceRequest/FollowUpPlanServiceRequestExample" ]
+     ]
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

@@ -1,0 +1,48 @@
+{
+  "resourceType" : "ValueSet",
+  "id" : "vs-procedure",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><ul><li>Include all codes defined in <a href=\"CodeSystem-cs-procedure.html\"><code>http://fhir.health.gov.lk/ips/CodeSystem/cs-procedure</code></a></li></ul></div>"
+  },
+  "url" : "http://fhir.health.gov.lk/ips/ValueSet/vs-procedure",
+  "version" : "0.1.0",
+  "name" : "VSProcedures",
+  "title" : "Procedures",
+  "status" : "active",
+  "experimental" : false,
+  "date" : "2024-03-15T08:10:37+00:00",
+  "publisher" : "Ministry of Health, Sri Lanka",
+  "contact" : [{
+    "name" : "Ministry of Health, Sri Lanka",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://www.health.gov.lk/"
+    },
+    {
+      "system" : "email",
+      "value" : "digitalhealth@health.gov.lk"
+    }]
+  },
+  {
+    "name" : "Director, Health Information",
+    "telecom" : [{
+      "system" : "email",
+      "value" : "digitalhealth@health.gov.lk",
+      "use" : "work"
+    }]
+  }],
+  "description" : "Procedures",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "http://unstats.un.org/unsd/methods/m49/m49.htm",
+      "code" : "001",
+      "display" : "World"
+    }]
+  }],
+  "compose" : {
+    "include" : [{
+      "system" : "http://fhir.health.gov.lk/ips/CodeSystem/cs-procedure"
+    }]
+  }
+}

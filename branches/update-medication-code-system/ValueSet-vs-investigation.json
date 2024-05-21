@@ -1,0 +1,48 @@
+{
+  "resourceType" : "ValueSet",
+  "id" : "vs-investigation",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><ul><li>Include all codes defined in <a href=\"CodeSystem-cs-investigation.html\"><code>http://fhir.health.gov.lk/ips/CodeSystem/cs-investigation</code></a></li></ul></div>"
+  },
+  "url" : "http://fhir.health.gov.lk/ips/ValueSet/vs-investigation",
+  "version" : "0.1.0",
+  "name" : "VSInvestigations",
+  "title" : "Investigations",
+  "status" : "active",
+  "experimental" : false,
+  "date" : "2024-03-25T10:45:10+00:00",
+  "publisher" : "Ministry of Health, Sri Lanka",
+  "contact" : [{
+    "name" : "Ministry of Health, Sri Lanka",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://www.health.gov.lk/"
+    },
+    {
+      "system" : "email",
+      "value" : "digitalhealth@health.gov.lk"
+    }]
+  },
+  {
+    "name" : "Director, Health Information",
+    "telecom" : [{
+      "system" : "email",
+      "value" : "digitalhealth@health.gov.lk",
+      "use" : "work"
+    }]
+  }],
+  "description" : "Investigations",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "http://unstats.un.org/unsd/methods/m49/m49.htm",
+      "code" : "001",
+      "display" : "World"
+    }]
+  }],
+  "compose" : {
+    "include" : [{
+      "system" : "http://fhir.health.gov.lk/ips/CodeSystem/cs-investigation"
+    }]
+  }
+}

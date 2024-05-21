@@ -1,0 +1,141 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://fhir.health.gov.lk/ips/Patient/HIMSPatientExample> a fhir:Patient ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "HIMSPatientExample"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://fhir.health.gov.lk/ips/StructureDefinition/hims-patient"^^xsd:anyURI ;
+       fhir:link <http://fhir.health.gov.lk/ips/StructureDefinition/hims-patient>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p style=\"border: 1px #661aff solid; background-color: #e6e6ff; padding: 10px;\"><b>Mike John Smith (OFFICIAL)</b> male, DoB: 1983-05-22 ( Personal Health Number/personal health number)</p><hr/><table class=\"grid\"><tr><td style=\"background-color: #f3f5da\" title=\"Other Ids (see the one above)\">Other Ids:</td><td colspan=\"3\"><ul><li>Passport number/Passport-1</li><li>Passport number/Passport-2</li><li>Driver's license number/Drivers license-1</li><li>Driver's license number/Drivers license-2</li><li>National identity number/National identity number-1</li><li>National identity number/National identity number-2</li><li>Senior Citizen Number/Senior citizen number-1</li><li>Senior Citizen Number/Senior citizen number-2</li></ul></td></tr><tr><td style=\"background-color: #f3f5da\" title=\"Ways to contact the Patient\">Contact Details:</td><td colspan=\"3\"><ul><li><a href=\"tel:+27829999999\">+27829999999</a></li><li><a href=\"mailto:someone@something.com\">someone@something.com</a></li><li><a href=\"mailto:someone2@something.com\">someone2@something.com</a></li><li>177 Nawala Road Nugegoda Colombo 32350 LK </li></ul></td></tr></table></div>"
+  ] ; # 
+  fhir:identifier ( [
+     fhir:type [
+       fhir:coding ( [
+         fhir:system [ fhir:v "http://fhir.health.gov.lk/ips/CodeSystem/cs-identifier-types"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "PHN" ]
+       ] ) ;
+       fhir:text [ fhir:v "Personal Health Number" ]
+     ] ;
+     fhir:system [ fhir:v "http://fhir.health.gov.lk/ips/identifier/phn"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "personal health number" ]
+  ] [
+     fhir:type [
+       fhir:coding ( [
+         fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/v2-0203"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "PPN" ]
+       ] ) ;
+       fhir:text [ fhir:v "Passport number" ]
+     ] ;
+     fhir:system [ fhir:v "http://fhir.health.gov.lk/ips/identifier/passport"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "Passport-1" ]
+  ] [
+     fhir:type [
+       fhir:coding ( [
+         fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/v2-0203"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "PPN" ]
+       ] ) ;
+       fhir:text [ fhir:v "Passport number" ]
+     ] ;
+     fhir:system [ fhir:v "http://fhir.health.gov.lk/ips/identifier/passport"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "Passport-2" ]
+  ] [
+     fhir:type [
+       fhir:coding ( [
+         fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/v2-0203"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "DL" ]
+       ] ) ;
+       fhir:text [ fhir:v "Driver's license number" ]
+     ] ;
+     fhir:system [ fhir:v "http://fhir.health.gov.lk/ips/identifier/drivers"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "Drivers license-1" ]
+  ] [
+     fhir:type [
+       fhir:coding ( [
+         fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/v2-0203"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "DL" ]
+       ] ) ;
+       fhir:text [ fhir:v "Driver's license number" ]
+     ] ;
+     fhir:system [ fhir:v "http://fhir.health.gov.lk/ips/identifier/drivers"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "Drivers license-2" ]
+  ] [
+     fhir:type [
+       fhir:coding ( [
+         fhir:system [ fhir:v "http://fhir.health.gov.lk/ips/CodeSystem/cs-identifier-types"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "NIC" ]
+       ] ) ;
+       fhir:text [ fhir:v "National identity number" ]
+     ] ;
+     fhir:system [ fhir:v "http://fhir.health.gov.lk/ips/identifier/nic"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "National identity number-1" ]
+  ] [
+     fhir:type [
+       fhir:coding ( [
+         fhir:system [ fhir:v "http://fhir.health.gov.lk/ips/CodeSystem/cs-identifier-types"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "NIC" ]
+       ] ) ;
+       fhir:text [ fhir:v "National identity number" ]
+     ] ;
+     fhir:system [ fhir:v "http://fhir.health.gov.lk/ips/identifier/nic"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "National identity number-2" ]
+  ] [
+     fhir:type [
+       fhir:coding ( [
+         fhir:system [ fhir:v "http://fhir.health.gov.lk/ips/CodeSystem/cs-identifier-types"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "SCN" ]
+       ] ) ;
+       fhir:text [ fhir:v "Senior Citizen Number" ]
+     ] ;
+     fhir:system [ fhir:v "http://fhir.health.gov.lk/ips/identifier/scn"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "Senior citizen number-1" ]
+  ] [
+     fhir:type [
+       fhir:coding ( [
+         fhir:system [ fhir:v "http://fhir.health.gov.lk/ips/CodeSystem/cs-identifier-types"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "SCN" ]
+       ] ) ;
+       fhir:text [ fhir:v "Senior Citizen Number" ]
+     ] ;
+     fhir:system [ fhir:v "http://fhir.health.gov.lk/ips/identifier/scn"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "Senior citizen number-2" ]
+  ] ) ; # 
+  fhir:name ( [
+     fhir:use [ fhir:v "official" ] ;
+     fhir:family [ fhir:v "Smith" ] ;
+     fhir:given ( [ fhir:v "Mike" ] [ fhir:v "John" ] ) ;
+     fhir:prefix ( [ fhir:v "Mr." ] )
+  ] ) ; # 
+  fhir:telecom ( [
+     fhir:system [ fhir:v "phone" ] ;
+     fhir:value [ fhir:v "+27829999999" ]
+  ] [
+     fhir:system [ fhir:v "email" ] ;
+     fhir:value [ fhir:v "someone@something.com" ]
+  ] [
+     fhir:system [ fhir:v "email" ] ;
+     fhir:value [ fhir:v "someone2@something.com" ]
+  ] ) ; # 
+  fhir:gender [ fhir:v "male"] ; # 
+  fhir:birthDate [ fhir:v "1983-05-22"^^xsd:date] ; # 
+  fhir:address ( [
+     fhir:type [ fhir:v "postal" ] ;
+     fhir:line ( [ fhir:v "177" ] [ fhir:v "Nawala Road" ] ) ;
+     fhir:city [ fhir:v "Nugegoda" ] ;
+     fhir:district [ fhir:v "Ampara" ] ;
+     fhir:state [ fhir:v "Colombo" ] ;
+     fhir:postalCode [ fhir:v "32350" ] ;
+     fhir:country [ fhir:v "LK" ]
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

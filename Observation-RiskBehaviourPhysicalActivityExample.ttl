@@ -1,0 +1,68 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sct: <http://snomed.info/id/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://fhir.health.gov.lk/ips/Observation/RiskBehaviourPhysicalActivityExample> a fhir:Observation ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "RiskBehaviourPhysicalActivityExample"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://fhir.health.gov.lk/ips/StructureDefinition/risk-behaviour-physical-activity"^^xsd:anyURI ;
+       fhir:link <http://fhir.health.gov.lk/ips/StructureDefinition/risk-behaviour-physical-activity>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: Observation </b><a name=\"RiskBehaviourPhysicalActivityExample\"> </a><a name=\"hcRiskBehaviourPhysicalActivityExample\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">ResourceObservation &quot;RiskBehaviourPhysicalActivityExample&quot; </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-risk-behaviour-physical-activity.html\">Physical Activity Status Observation</a></p></div><p><b>status</b>: final</p><p><b>category</b>: Activity <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"http://terminology.hl7.org/5.5.0/CodeSystem-observation-category.html\">Observation Category Codes</a>#activity)</span></p><p><b>code</b>: Physical Activity <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"https://browser.ihtsdotools.org/\">SNOMED CT</a>#106020009)</span></p><p><b>subject</b>: <a href=\"Patient-PatientExample.html\">Patient/PatientExample</a> &quot; SMITH&quot;</p><p><b>encounter</b>: <a href=\"Encounter-TargetFacilityEncounterExample.html\">Encounter/TargetFacilityEncounterExample</a></p><p><b>effective</b>: 2022-11-30</p><p><b>performer</b>: </p><ul><li><a href=\"Organization-OrganizationExample.html\">Organization/OrganizationExample</a> &quot;Some Health Facility&quot;</li><li><a href=\"Practitioner-GeneralPractitionerExample.html\">Practitioner/GeneralPractitionerExample</a> &quot; SMITH&quot;</li></ul><p><b>value</b>: Physically not active <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"https://browser.ihtsdotools.org/\">SNOMED CT</a>#9011000175102)</span></p><p><b>device</b>: <a href=\"Device-DeviceInformationExample.html\">Device/DeviceInformationExample</a></p></div>"
+  ] ; # 
+  fhir:status [ fhir:v "final"] ; # 
+  fhir:category ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/observation-category"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "activity" ]
+     ] )
+  ] ) ; # 
+  fhir:code [
+     fhir:coding ( [
+       a sct:106020009 ;
+       fhir:system [ fhir:v "http://snomed.info/sct"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "106020009" ]
+     ] ) ;
+     fhir:text [ fhir:v "Physical Activity" ]
+  ] ; # 
+  fhir:subject [
+     fhir:link <http://fhir.health.gov.lk/ips/Patient/PatientExample> ;
+     fhir:reference [ fhir:v "Patient/PatientExample" ]
+  ] ; # 
+  fhir:encounter [
+     fhir:link <http://fhir.health.gov.lk/ips/Encounter/TargetFacilityEncounterExample> ;
+     fhir:reference [ fhir:v "Encounter/TargetFacilityEncounterExample" ]
+  ] ; # 
+  fhir:effective [ fhir:v "2022-11-30"^^xsd:date] ; # 
+  fhir:performer ( [
+     fhir:link <http://fhir.health.gov.lk/ips/Organization/OrganizationExample> ;
+     fhir:reference [ fhir:v "Organization/OrganizationExample" ]
+  ] [
+     fhir:link <http://fhir.health.gov.lk/ips/Practitioner/GeneralPractitionerExample> ;
+     fhir:reference [ fhir:v "Practitioner/GeneralPractitionerExample" ]
+  ] ) ; # 
+  fhir:value [
+     a fhir:CodeableConcept ;
+     fhir:coding ( [
+       a sct:9011000175102 ;
+       fhir:system [ fhir:v "http://snomed.info/sct"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "9011000175102" ]
+     ] ) ;
+     fhir:text [ fhir:v "Physically not active" ]
+  ] ; # 
+  fhir:device [
+     fhir:link <http://fhir.health.gov.lk/ips/Device/DeviceInformationExample> ;
+     fhir:reference [ fhir:v "Device/DeviceInformationExample" ]
+  ] . # 
+
+# -------------------------------------------------------------------------------------
+

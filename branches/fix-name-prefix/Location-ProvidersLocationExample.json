@@ -1,0 +1,60 @@
+{
+  "resourceType" : "Location",
+  "id" : "ProvidersLocationExample",
+  "meta" : {
+    "profile" : ["http://fhir.health.gov.lk/ips/StructureDefinition/providers-location"]
+  },
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: Location</b><a name=\"ProvidersLocationExample\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource Location &quot;ProvidersLocationExample&quot; </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-providers-location.html\">Providers Location</a></p></div><p><b>identifier</b>: Provider location identifier/Location-ID-1, Provider location identifier/Location-ID-2</p><p><b>status</b>: active</p><p><b>name</b>: Name for the location</p><p><b>telecom</b>: <a href=\"tel:+27829999999\">+27829999999</a>, <a href=\"mailto:someone@something.com\">someone@something.com</a>, <a href=\"mailto:someone2@something.com\">someone2@something.com</a></p><p><b>address</b>: 177 Nawala Road Nugegoda Colombo 32350 LK </p><p><b>managingOrganization</b>: <a href=\"Organization-OrganizationExample.html\">Organization/OrganizationExample</a> &quot;Some Health Facility&quot;</p></div>"
+  },
+  "identifier" : [{
+    "type" : {
+      "coding" : [{
+        "system" : "http://fhir.health.gov.lk/ips/CodeSystem/cs-identifier-types",
+        "code" : "PLOC"
+      }],
+      "text" : "Provider location identifier"
+    },
+    "system" : "http://fhir.health.gov.lk/ips/identifier/provider-location",
+    "value" : "Location-ID-1"
+  },
+  {
+    "type" : {
+      "coding" : [{
+        "system" : "http://fhir.health.gov.lk/ips/CodeSystem/cs-identifier-types",
+        "code" : "PLOC"
+      }],
+      "text" : "Provider location identifier"
+    },
+    "system" : "http://fhir.health.gov.lk/ips/identifier/provider-location",
+    "value" : "Location-ID-2"
+  }],
+  "status" : "active",
+  "name" : "Name for the location",
+  "telecom" : [{
+    "system" : "phone",
+    "value" : "+27829999999"
+  },
+  {
+    "system" : "email",
+    "value" : "someone@something.com"
+  },
+  {
+    "system" : "email",
+    "value" : "someone2@something.com"
+  }],
+  "address" : {
+    "type" : "postal",
+    "line" : ["177",
+    "Nawala Road"],
+    "city" : "Nugegoda",
+    "district" : "Ampara",
+    "state" : "Colombo",
+    "postalCode" : "32350",
+    "country" : "LK"
+  },
+  "managingOrganization" : {
+    "reference" : "Organization/OrganizationExample"
+  }
+}

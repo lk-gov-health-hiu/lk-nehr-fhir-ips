@@ -1,0 +1,12 @@
+URL,Version,Status,OIDs,Name,Title,Descriptino,Used
+http://fhir.health.gov.lk/ips/CodeSystem/cs-cvd-risk-category,0.1.0,active,,CSCVDRiskCategory,Cardiovascular Risk Categories,"Cardiovascular risk is expressed as a percentage","ValueSet/vs-cvd-risk-category"
+http://fhir.health.gov.lk/ips/CodeSystem/cs-device-classification,0.1.0,active,,CSDeviceClassificationCodes,Device Classification Codes,"A list of device device classification codes.","ValueSet/vs-device-classification"
+http://fhir.health.gov.lk/ips/CodeSystem/cs-drug-frequency,0.1.0,active,,CSDrugFrequency,Drug Frequency Codes,"A list of drug frequency code for medication requests.","ValueSet/vs-drug-frequency"
+http://fhir.health.gov.lk/ips/CodeSystem/cs-follow-up-reasons,0.1.0,active,,CSFollowUpReasons,Follow up at HLC,"Follow up at Healthy Lifestyle Center","ValueSet/vs-follow-up-reasons"
+http://fhir.health.gov.lk/ips/CodeSystem/cs-identifier-types,0.1.0,active,,CSIdentifierTypes,Patient Business Identifier Types,"Patient Business Identifier Types","ValueSet/vs-identifier-types"
+http://fhir.health.gov.lk/ips/CodeSystem/cs-investigation,0.1.0,active,,CSInvestigations,Investigations,"Investigations","ValueSet/vs-investigation"
+http://fhir.health.gov.lk/ips/CodeSystem/cs-medication-name-msd,0.1.0,active,,CSMedicationNamesForMSD,Medication Names For Pharmacy,"A list of typical medications that can be prescribed to the patient.","ValueSet/vs-medication-name-msd"
+http://fhir.health.gov.lk/ips/CodeSystem/cs-medication-name-non-msd,0.1.0,active,,CSMedicationNamesForNonMSD,Medication Names Not For Pharmacy,"A list of medications that typically are not prescribed for collection at the pharamcy a.k.a. Non-Medical Supplies.","ValueSet/vs-medication-name-non-msd"
+http://fhir.health.gov.lk/ips/CodeSystem/cs-procedure,0.1.0,active,,CSProcedures,Procedures,"Procedures","ValueSet/vs-procedure"
+http://fhir.health.gov.lk/ips/CodeSystem/cs-procedure-imaging,0.1.0,active,,CSImagingProcedures,Procedures,"Imaging Procedures","ValueSet/vs-procedure-imaging"
+http://snomed.info/sct,null,active,"2.16.840.1.113883.6.96",SNOMED_CT,SNOMED CT (all versions),"SNOMED CT is the most comprehensive and precise clinical health terminology product in the world, owned and distributed around the world by The International Health Terminology Standards Development Organisation (IHTSDO).","ValueSet/vs-reason-for-encounter,ValueSet/vs-medical-conditions,ValueSet/vs-follow-up-plan,ValueSet/vs-follow-up-reasons,ValueSet/vs-risk-behaviour-physical-activity,ValueSet/procedure-code"

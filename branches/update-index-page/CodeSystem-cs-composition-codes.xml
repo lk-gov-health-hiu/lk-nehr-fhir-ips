@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<CodeSystem xmlns="http://hl7.org/fhir">
+  <id value="cs-composition-codes"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p>This case-sensitive code system <code>http://fhir.health.gov.lk/ips/CodeSystem/cs-composition-codes</code> defines the following codes:</p><table class="codes"><tr><td style="white-space:nowrap"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style="white-space:nowrap">Procedures-History<a name="cs-composition-codes-Procedures-History"> </a></td><td>History of Procedures Section</td><td>Needs definition</td></tr><tr><td style="white-space:nowrap">Device-Information<a name="cs-composition-codes-Device-Information"> </a></td><td>Device Information</td><td>Needs definition</td></tr></table></div>
+  </text>
+  <url value="http://fhir.health.gov.lk/ips/CodeSystem/cs-composition-codes"/>
+  <version value="0.1.0"/>
+  <name value="SectionCompositionCodes"/>
+  <title value="Composition Section Codes"/>
+  <status value="active"/>
+  <experimental value="false"/>
+  <date value="2024-05-21T08:44:33+00:00"/>
+  <publisher value="Ministry of Health, Sri Lanka"/>
+  <contact>
+    <name value="Ministry of Health, Sri Lanka"/>
+    <telecom>
+      <system value="url"/>
+      <value value="https://www.health.gov.lk/"/>
+    </telecom>
+    <telecom>
+      <system value="email"/>
+      <value value="digitalhealth@health.gov.lk"/>
+    </telecom>
+  </contact>
+  <contact>
+    <name value="Director, Health Information"/>
+    <telecom>
+      <system value="email"/>
+      <value value="digitalhealth@health.gov.lk"/>
+      <use value="work"/>
+    </telecom>
+  </contact>
+  <description value="A list of Composition section codes."/>
+  <jurisdiction>
+    <coding>
+      <system value="http://unstats.un.org/unsd/methods/m49/m49.htm"/>
+      <code value="001"/>
+      <display value="World"/>
+    </coding>
+  </jurisdiction>
+  <caseSensitive value="true"/>
+  <content value="complete"/>
+  <count value="2"/>
+  <concept>
+    <code value="Procedures-History"/>
+    <display value="History of Procedures Section"/>
+    <definition value="Needs definition"/>
+  </concept>
+  <concept>
+    <code value="Device-Information"/>
+    <display value="Device Information"/>
+    <definition value="Needs definition"/>
+  </concept>
+</CodeSystem>

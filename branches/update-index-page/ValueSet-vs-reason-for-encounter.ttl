@@ -1,0 +1,2024 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://fhir.health.gov.lk/ips/ValueSet/vs-reason-for-encounter> a fhir:ValueSet ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "vs-reason-for-encounter"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><ul><li>Include these codes as defined in <a href=\"http://www.snomed.org/\"><code>http://snomed.info/sct</code></a><table class=\"none\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td></tr><tr><td><a href=\"http://snomed.info/id/73438004\">73438004</a></td><td>Unemployed</td></tr><tr><td><a href=\"http://snomed.info/id/23406007\">23406007</a></td><td>Fracture of upper limb</td></tr><tr><td><a href=\"http://snomed.info/id/4506002\">4506002</a></td><td>Educational problem</td></tr><tr><td><a href=\"http://snomed.info/id/46866001\">46866001</a></td><td>Fracture of lower limb</td></tr><tr><td><a href=\"http://snomed.info/id/161152002\">161152002</a></td><td>Social problem</td></tr><tr><td><a href=\"http://snomed.info/id/125599006\">125599006</a></td><td>Injury of hand</td></tr><tr><td><a href=\"http://snomed.info/id/22268004\">22268004</a></td><td>Legal problem</td></tr><tr><td><a href=\"http://snomed.info/id/125604000\">125604000</a></td><td>Injury of foot</td></tr><tr><td><a href=\"http://snomed.info/id/371128008\">371128008</a></td><td>Occupational injury</td></tr><tr><td><a href=\"http://snomed.info/id/410122002\">410122002</a></td><td>Assessment of compliance with medication regimen</td></tr><tr><td><a href=\"http://snomed.info/id/1041000119100\">1041000119100</a></td><td>Partner relationship problem</td></tr><tr><td><a href=\"http://snomed.info/id/27355003\">27355003</a></td><td>Toothache</td></tr><tr><td><a href=\"http://snomed.info/id/416956002\">416956002</a></td><td>Undifferentiated inflammatory polyarthritis</td></tr><tr><td><a href=\"http://snomed.info/id/266971002\">266971002</a></td><td>Spouse unwell</td></tr><tr><td><a href=\"http://snomed.info/id/699462004\">699462004</a></td><td>Monoarthritis</td></tr><tr><td><a href=\"http://snomed.info/id/398033008\">398033008</a></td><td>Death of relative</td></tr><tr><td><a href=\"http://snomed.info/id/267102003\">267102003</a></td><td>Sore throat</td></tr><tr><td><a href=\"http://snomed.info/id/737368006\">737368006</a></td><td>Caregiver-child relationship problem</td></tr><tr><td><a href=\"http://snomed.info/id/299709002\">299709002</a></td><td>Dental abscess</td></tr><tr><td><a href=\"http://snomed.info/id/275142008\">275142008</a></td><td>Sick child</td></tr><tr><td><a href=\"http://snomed.info/id/21522001\">21522001</a></td><td>Abdominal pain</td></tr><tr><td><a href=\"http://snomed.info/id/416462003\">416462003</a></td><td>Wound</td></tr><tr><td><a href=\"http://snomed.info/id/102171000119108\">102171000119108</a></td><td>Relationship problems with family members due to medical condition</td></tr><tr><td><a href=\"http://snomed.info/id/277843001\">277843001</a></td><td>Problem behavior</td></tr><tr><td><a href=\"http://snomed.info/id/128477000\">128477000</a></td><td>Abscess</td></tr><tr><td><a href=\"http://snomed.info/id/266966009\">266966009</a></td><td>Family illness</td></tr><tr><td><a href=\"http://snomed.info/id/128045006\">128045006</a></td><td>Cellulitis</td></tr><tr><td><a href=\"http://snomed.info/id/26237000\">26237000</a></td><td>Ankle edema</td></tr><tr><td><a href=\"http://snomed.info/id/386692008\">386692008</a></td><td>Menorrhagia</td></tr><tr><td><a href=\"http://snomed.info/id/224154000\">224154000</a></td><td>Relationship with neighbors</td></tr><tr><td><a href=\"http://snomed.info/id/40930008\">40930008</a></td><td>Hypothyroidism</td></tr><tr><td><a href=\"http://snomed.info/id/52684005\">52684005</a></td><td>Assault</td></tr><tr><td><a href=\"http://snomed.info/id/47933007\">47933007</a></td><td>Foot pain</td></tr><tr><td><a href=\"http://snomed.info/id/279039007\">279039007</a></td><td>Low back pain</td></tr><tr><td><a href=\"http://snomed.info/id/21134002\">21134002</a></td><td>Disability</td></tr><tr><td><a href=\"http://snomed.info/id/2733002\">2733002</a></td><td>Heel pain</td></tr><tr><td><a href=\"http://snomed.info/id/193462001\">193462001</a></td><td>Insomnia</td></tr><tr><td><a href=\"http://snomed.info/id/82272006\">82272006</a></td><td>Common cold</td></tr><tr><td><a href=\"http://snomed.info/id/126907002\">126907002</a></td><td>Neoplasm of female genital organ</td></tr><tr><td><a href=\"http://snomed.info/id/63650001\">63650001</a></td><td>Cholera</td></tr><tr><td><a href=\"http://snomed.info/id/127277000\">127277000</a></td><td>Injury of female genital system</td></tr><tr><td><a href=\"http://snomed.info/id/58750007\">58750007</a></td><td>Plague</td></tr><tr><td><a href=\"http://snomed.info/id/20927009\">20927009</a></td><td>Dengue hemorrhagic fever</td></tr><tr><td><a href=\"http://snomed.info/id/18973006\">18973006</a></td><td>Uterovaginal prolapse</td></tr><tr><td><a href=\"http://snomed.info/id/27431007\">27431007</a></td><td>Fibrocystic disease of breast</td></tr><tr><td><a href=\"http://snomed.info/id/397430003\">397430003</a></td><td>Diphtheria due to Corynebacterium diphtheriae</td></tr><tr><td><a href=\"http://snomed.info/id/82639001\">82639001</a></td><td>Premenstrual tension syndrome</td></tr><tr><td><a href=\"http://snomed.info/id/46799006\">46799006</a></td><td>Dysenteric diarrhea</td></tr><tr><td><a href=\"http://snomed.info/id/33839006\">33839006</a></td><td>Genital herpes simplex</td></tr><tr><td><a href=\"http://snomed.info/id/45170000\">45170000</a></td><td>Encephalitis</td></tr><tr><td><a href=\"http://snomed.info/id/240542006\">240542006</a></td><td>Condyloma acuminatum of the anogenital region</td></tr><tr><td><a href=\"http://snomed.info/id/399907009\">399907009</a></td><td>Animal bite wound</td></tr><tr><td><a href=\"http://snomed.info/id/105629000\">105629000</a></td><td>Chlamydial infection</td></tr><tr><td><a href=\"http://snomed.info/id/398508004\">398508004</a></td><td>Salmonella enterica subsp. enterica</td></tr><tr><td><a href=\"http://snomed.info/id/312196000\">312196000</a></td><td>Female genital infection</td></tr><tr><td><a href=\"http://snomed.info/id/75258004\">75258004</a></td><td>Food poisoning</td></tr><tr><td><a href=\"http://snomed.info/id/285375003\">285375003</a></td><td>Pain in penis</td></tr><tr><td><a href=\"http://snomed.info/id/14168008\">14168008</a></td><td>Rabies</td></tr><tr><td><a href=\"http://snomed.info/id/63901009\">63901009</a></td><td>Pain in testicle</td></tr><tr><td><a href=\"http://snomed.info/id/77377001\">77377001</a></td><td>Leptospirosis</td></tr><tr><td><a href=\"http://snomed.info/id/9957009\">9957009</a></td><td>Urethral discharge</td></tr><tr><td><a href=\"http://snomed.info/id/704425001\">704425001</a></td><td>Chronic fever</td></tr><tr><td><a href=\"http://snomed.info/id/43424001\">43424001</a></td><td>Tetanus neonatorum</td></tr><tr><td><a href=\"http://snomed.info/id/118238000\">118238000</a></td><td>Urogenital finding</td></tr><tr><td><a href=\"http://snomed.info/id/303497001\">303497001</a></td><td>Urogenital implant</td></tr><tr><td><a href=\"http://snomed.info/id/4834000\">4834000</a></td><td>Typhoid fever</td></tr><tr><td><a href=\"http://snomed.info/id/840544004\">840544004</a></td><td>Suspected COVID-19</td></tr><tr><td><a href=\"http://snomed.info/id/11441004\">11441004</a></td><td>Prostatism</td></tr><tr><td><a href=\"http://snomed.info/id/1119302008\">1119302008</a></td><td>Acute COVID-19</td></tr><tr><td><a href=\"http://snomed.info/id/860914002\">860914002</a></td><td>Erectile dysfunction</td></tr><tr><td><a href=\"http://snomed.info/id/840539006\">840539006</a></td><td>COVID-19</td></tr><tr><td><a href=\"http://snomed.info/id/162206003\">162206003</a></td><td>Sexual symptom</td></tr><tr><td><a href=\"http://snomed.info/id/161587009\">161587009</a></td><td>H/O: head injury</td></tr><tr><td><a href=\"http://snomed.info/id/2904007\">2904007</a></td><td>Male infertility</td></tr><tr><td><a href=\"http://snomed.info/id/32485007\">32485007</a></td><td>Hospital admission</td></tr><tr><td><a href=\"http://snomed.info/id/22523008\">22523008</a></td><td>Vasectomy</td></tr><tr><td><a href=\"http://snomed.info/id/302497006\">302497006</a></td><td>Hemodialysis</td></tr><tr><td><a href=\"http://snomed.info/id/389095005\">389095005</a></td><td>Contraception care</td></tr><tr><td><a href=\"http://snomed.info/id/441662001\">441662001</a></td><td>Diagnostic imaging department</td></tr><tr><td><a href=\"http://snomed.info/id/290085007\">290085007</a></td><td>Breast problem</td></tr><tr><td><a href=\"http://snomed.info/id/724452000\">724452000</a></td><td>Fear of sexual dysfunction</td></tr><tr><td><a href=\"http://snomed.info/id/212962007\">212962007</a></td><td>Drowning and non-fatal immersion</td></tr><tr><td><a href=\"http://snomed.info/id/247868009\">247868009</a></td><td>Fear of contracting sexually transmitted disease</td></tr><tr><td><a href=\"http://snomed.info/id/473011001\">473011001</a></td><td>Allergic condition</td></tr><tr><td><a href=\"http://snomed.info/id/724450008\">724450008</a></td><td>Fear of genital cancer</td></tr><tr><td><a href=\"http://snomed.info/id/75478009\">75478009</a></td><td>Poisoning</td></tr><tr><td><a href=\"http://snomed.info/id/724448000\">724448000</a></td><td>Fear of genital disease</td></tr><tr><td><a href=\"http://snomed.info/id/23697004\">23697004</a></td><td>Crush syndrome</td></tr><tr><td><a href=\"http://snomed.info/id/218164000\">218164000</a></td><td>Accident caused by electric current</td></tr><tr><td><a href=\"http://snomed.info/id/76272004\">76272004</a></td><td>Syphilis</td></tr><tr><td><a href=\"http://snomed.info/id/68704007\">68704007</a></td><td>Neisseria gonorrhoeae</td></tr><tr><td><a href=\"http://snomed.info/id/9713002\">9713002</a></td><td>Prostatitis</td></tr><tr><td><a href=\"http://snomed.info/id/197983000\">197983000</a></td><td>Orchitis and epididymitis</td></tr><tr><td><a href=\"http://snomed.info/id/44882003\">44882003</a></td><td>Balanitis</td></tr><tr><td><a href=\"http://snomed.info/id/214031005\">214031005</a></td><td>Motor vehicle traffic accident</td></tr><tr><td><a href=\"http://snomed.info/id/219346009\">219346009</a></td><td>Injury of unknown intent due to fall from height</td></tr><tr><td><a href=\"http://snomed.info/id/427849003\">427849003</a></td><td>Fall on hard surface</td></tr><tr><td><a href=\"http://snomed.info/id/363515000\">363515000</a></td><td>Malignant tumor of male genital organ</td></tr><tr><td><a href=\"http://snomed.info/id/312608009\">312608009</a></td><td>Laceration - injury</td></tr><tr><td><a href=\"http://snomed.info/id/92207002\">92207002</a></td><td>Benign neoplasm of male genital organ</td></tr><tr><td><a href=\"http://snomed.info/id/262917005\">262917005</a></td><td>Injury of male genital organ</td></tr><tr><td><a href=\"http://snomed.info/id/449826002\">449826002</a></td><td>Phimosis</td></tr><tr><td><a href=\"http://snomed.info/id/242869008\">242869008</a></td><td>Assault by firearms</td></tr><tr><td><a href=\"http://snomed.info/id/416010008\">416010008</a></td><td>Hypospadias</td></tr><tr><td><a href=\"http://snomed.info/id/425359009\">425359009</a></td><td>Blunt injury</td></tr><tr><td><a href=\"http://snomed.info/id/204878001\">204878001</a></td><td>Undescended testicle</td></tr><tr><td><a href=\"http://snomed.info/id/312609001\">312609001</a></td><td>Puncture wound - injury</td></tr><tr><td><a href=\"http://snomed.info/id/4406004\">4406004</a></td><td>Congenital anomaly of male genital system</td></tr><tr><td><a href=\"http://snomed.info/id/276853009\">276853009</a></td><td>Self inflicted injury</td></tr><tr><td><a href=\"http://snomed.info/id/266569009\">266569009</a></td><td>Benign prostatic hyperplasia</td></tr><tr><td><a href=\"http://snomed.info/id/26614003\">26614003</a></td><td>Hydrocele of testis</td></tr><tr><td><a href=\"http://snomed.info/id/64557000\">64557000</a></td><td>Disorder of male genital organ</td></tr><tr><td><a href=\"http://snomed.info/id/82271004\">82271004</a></td><td>Injury of head</td></tr><tr><td><a href=\"http://snomed.info/id/160932005\">160932005</a></td><td>Financial problem</td></tr><tr><td><a href=\"http://snomed.info/id/1078229009\">1078229009</a></td><td>Food security</td></tr><tr><td><a href=\"http://snomed.info/id/105531004\">105531004</a></td><td>Housing problem</td></tr><tr><td><a href=\"http://snomed.info/id/125665001\">125665001</a></td><td>Crushing injury</td></tr><tr><td><a href=\"http://snomed.info/id/75148009\">75148009</a></td><td>Employment problem</td></tr><tr><td><a href=\"http://snomed.info/id/418908004\">418908004</a></td><td>Exposure to electric current</td></tr><tr><td><a href=\"http://snomed.info/id/58532003\">58532003</a></td><td>Unwanted pregnancy</td></tr><tr><td><a href=\"http://snomed.info/id/723118001\">723118001</a></td><td>Fear of musculoskeletal cancer</td></tr><tr><td><a href=\"http://snomed.info/id/34801009\">34801009</a></td><td>Ectopic pregnancy</td></tr><tr><td><a href=\"http://snomed.info/id/398254007\">398254007</a></td><td>Pre-eclampsia</td></tr><tr><td><a href=\"http://snomed.info/id/17369002\">17369002</a></td><td>Miscarriage</td></tr><tr><td><a href=\"http://snomed.info/id/129890008\">129890008</a></td><td>Musculoskeletal alteration</td></tr><tr><td><a href=\"http://snomed.info/id/75857000\">75857000</a></td><td>Fracture of radius AND ulna</td></tr><tr><td><a href=\"http://snomed.info/id/237364002\">237364002</a></td><td>Stillbirth</td></tr><tr><td><a href=\"http://snomed.info/id/414293001\">414293001</a></td><td>Fracture of tibia AND fibula</td></tr><tr><td><a href=\"http://snomed.info/id/45757002\">45757002</a></td><td>Labor problem</td></tr><tr><td><a href=\"http://snomed.info/id/15574005\">15574005</a></td><td>Fracture of foot</td></tr><tr><td><a href=\"http://snomed.info/id/71620000\">71620000</a></td><td>Fracture of femur</td></tr><tr><td><a href=\"http://snomed.info/id/47200007\">47200007</a></td><td>High risk pregnancy</td></tr><tr><td><a href=\"http://snomed.info/id/267004000\">267004000</a></td><td>H/O: musculoskeletal disease</td></tr><tr><td><a href=\"http://snomed.info/id/11687002\">11687002</a></td><td>Gestational diabetes mellitus</td></tr><tr><td><a href=\"http://snomed.info/id/428281000\">428281000</a></td><td>Malignant neoplasm of bone</td></tr><tr><td><a href=\"http://snomed.info/id/35874009\">35874009</a></td><td>Normal labor</td></tr><tr><td><a href=\"http://snomed.info/id/700038005\">700038005</a></td><td>Mastitis associated with lactation</td></tr><tr><td><a href=\"http://snomed.info/id/125605004\">125605004</a></td><td>Fracture of bone</td></tr><tr><td><a href=\"http://snomed.info/id/79604008\">79604008</a></td><td>Disorder of breast</td></tr><tr><td><a href=\"http://snomed.info/id/44465007\">44465007</a></td><td>Sprain of ankle</td></tr><tr><td><a href=\"http://snomed.info/id/54888009\">54888009</a></td><td>Sprain of knee</td></tr><tr><td><a href=\"http://snomed.info/id/80113008\">80113008</a></td><td>Complication of the puerperium</td></tr><tr><td><a href=\"http://snomed.info/id/198609003\">198609003</a></td><td>Complication of pregnancy, childbirth and/or puerperium</td></tr><tr><td><a href=\"http://snomed.info/id/105611005\">105611005</a></td><td>Sprain of joint</td></tr><tr><td><a href=\"http://snomed.info/id/108367008\">108367008</a></td><td>Dislocation of joint</td></tr><tr><td><a href=\"http://snomed.info/id/105606008\">105606008</a></td><td>Injury of musculoskeletal system</td></tr><tr><td><a href=\"http://snomed.info/id/266599000\">266599000</a></td><td>Dysmenorrhea</td></tr><tr><td><a href=\"http://snomed.info/id/118939000\">118939000</a></td><td>Disorder of neck</td></tr><tr><td><a href=\"http://snomed.info/id/71315007\">71315007</a></td><td>Dyspareunia</td></tr><tr><td><a href=\"http://snomed.info/id/278860009\">278860009</a></td><td>Chronic low back pain</td></tr><tr><td><a href=\"http://snomed.info/id/64996003\">64996003</a></td><td>Irregular intermenstrual bleeding</td></tr><tr><td><a href=\"http://snomed.info/id/405773007\">405773007</a></td><td>Kyphoscoliosis deformity of spine</td></tr><tr><td><a href=\"http://snomed.info/id/364306002\">364306002</a></td><td>Frequency of menstruation</td></tr><tr><td><a href=\"http://snomed.info/id/84017003\">84017003</a></td><td>Bursitis</td></tr><tr><td><a href=\"http://snomed.info/id/237132003\">237132003</a></td><td>Intermenstrual bleeding - regular</td></tr><tr><td><a href=\"http://snomed.info/id/239791005\">239791005</a></td><td>Seropositive rheumatoid arthritis</td></tr><tr><td><a href=\"http://snomed.info/id/10885003\">10885003</a></td><td>Premenstrual symptom</td></tr><tr><td><a href=\"http://snomed.info/id/239872002\">239872002</a></td><td>Osteoarthritis of hip</td></tr><tr><td><a href=\"http://snomed.info/id/161718009\">161718009</a></td><td>Menstruation postponed</td></tr><tr><td><a href=\"http://snomed.info/id/21801002\">21801002</a></td><td>Menopausal symptom</td></tr><tr><td><a href=\"http://snomed.info/id/76742009\">76742009</a></td><td>Postmenopausal bleeding</td></tr><tr><td><a href=\"http://snomed.info/id/274139008\">274139008</a></td><td>Shoulder syndrome</td></tr><tr><td><a href=\"http://snomed.info/id/48880000\">48880000</a></td><td>Postcoital bleeding</td></tr><tr><td><a href=\"http://snomed.info/id/202855006\">202855006</a></td><td>Lateral epicondylitis</td></tr><tr><td><a href=\"http://snomed.info/id/271939006\">271939006</a></td><td>Vaginal discharge</td></tr><tr><td><a href=\"http://snomed.info/id/64859006\">64859006</a></td><td>Osteoporosis</td></tr><tr><td><a href=\"http://snomed.info/id/299328006\">299328006</a></td><td>Deformity of knee joint</td></tr><tr><td><a href=\"http://snomed.info/id/363229000\">363229000</a></td><td>Neoplasm of musculoskeletal system</td></tr><tr><td><a href=\"http://snomed.info/id/53430007\">53430007</a></td><td>Pain of breast</td></tr><tr><td><a href=\"http://snomed.info/id/88562000\">88562000</a></td><td>Acquired deformity of ankle AND/OR foot</td></tr><tr><td><a href=\"http://snomed.info/id/89164003\">89164003</a></td><td>Breast lump</td></tr><tr><td><a href=\"http://snomed.info/id/290119008\">290119008</a></td><td>Nipple problem</td></tr><tr><td><a href=\"http://snomed.info/id/724451007\">724451007</a></td><td>Fear of breast cancer</td></tr><tr><td><a href=\"http://snomed.info/id/724449008\">724449008</a></td><td>Fear of breast disease</td></tr><tr><td><a href=\"http://snomed.info/id/386661006\">386661006</a></td><td>Fever</td></tr><tr><td><a href=\"http://snomed.info/id/35089004\">35089004</a></td><td>Urogenital infection by Trichomonas vaginalis</td></tr><tr><td><a href=\"http://snomed.info/id/200767005\">200767005</a></td><td>Pityriasis simplex</td></tr><tr><td><a href=\"http://snomed.info/id/34630004\">34630004</a></td><td>Pityriasis</td></tr><tr><td><a href=\"http://snomed.info/id/198130006\">198130006</a></td><td>Female pelvic inflammatory disease</td></tr><tr><td><a href=\"http://snomed.info/id/405729008\">405729008</a></td><td>Hematochezia</td></tr><tr><td><a href=\"http://snomed.info/id/363354003\">363354003</a></td><td>Malignant tumor of cervix</td></tr><tr><td><a href=\"http://snomed.info/id/10601006\">10601006</a></td><td>Pain in lower limb</td></tr><tr><td><a href=\"http://snomed.info/id/372064008\">372064008</a></td><td>Malignant neoplasm of female breast</td></tr><tr><td><a href=\"http://snomed.info/id/28442001\">28442001</a></td><td>Polyuria</td></tr><tr><td><a href=\"http://snomed.info/id/95315005\">95315005</a></td><td>Uterine leiomyoma</td></tr><tr><td><a href=\"http://snomed.info/id/202882003\">202882003</a></td><td>Plantar fasciitis</td></tr><tr><td><a href=\"http://snomed.info/id/92102001\">92102001</a></td><td>Benign neoplasm of female breast</td></tr><tr><td><a href=\"http://snomed.info/id/70076002\">70076002</a></td><td>Rhinitis</td></tr><tr><td><a href=\"http://snomed.info/id/92103006\">92103006</a></td><td>Benign neoplasm of female genital organ</td></tr><tr><td><a href=\"http://snomed.info/id/264287008\">264287008</a></td><td>Animal dander</td></tr><tr><td><a href=\"http://snomed.info/id/44054006\">44054006</a></td><td>Type 2 diabetes mellitus</td></tr><tr><td><a href=\"http://snomed.info/id/80313002\">80313002</a></td><td>Palpitations</td></tr><tr><td><a href=\"http://snomed.info/id/47563007\">47563007</a></td><td>Nutritional deficiency state</td></tr><tr><td><a href=\"http://snomed.info/id/171224000\">171224000</a></td><td>Risk factors present at heart disease screening</td></tr><tr><td><a href=\"http://snomed.info/id/49650001\">49650001</a></td><td>Dysuria</td></tr><tr><td><a href=\"http://snomed.info/id/34436003\">34436003</a></td><td>Blood in urine</td></tr><tr><td><a href=\"http://snomed.info/id/249274008\">249274008</a></td><td>Urinary symptoms</td></tr><tr><td><a href=\"http://snomed.info/id/162116003\">162116003</a></td><td>Increased frequency of urination</td></tr><tr><td><a href=\"http://snomed.info/id/723086009\">723086009</a></td><td>Fear of heart disease</td></tr><tr><td><a href=\"http://snomed.info/id/165232002\">165232002</a></td><td>Urinary incontinence</td></tr><tr><td><a href=\"http://snomed.info/id/102932008\">102932008</a></td><td>Fear of hypertension</td></tr><tr><td><a href=\"http://snomed.info/id/723087000\">723087000</a></td><td>Fear of cardiovascular disease</td></tr><tr><td><a href=\"http://snomed.info/id/197941005\">197941005</a></td><td>Frank hematuria</td></tr><tr><td><a href=\"http://snomed.info/id/42030000\">42030000</a></td><td>Disorder of the genitourinary system</td></tr><tr><td><a href=\"http://snomed.info/id/49601007\">49601007</a></td><td>Disorder of cardiovascular system</td></tr><tr><td><a href=\"http://snomed.info/id/236648008\">236648008</a></td><td>Acute retention of urine</td></tr><tr><td><a href=\"http://snomed.info/id/42643001\">42643001</a></td><td>Disorder of bladder</td></tr><tr><td><a href=\"http://snomed.info/id/23685000\">23685000</a></td><td>Rheumatic heart disease</td></tr><tr><td><a href=\"http://snomed.info/id/387842002\">387842002</a></td><td>Neoplasm of heart</td></tr><tr><td><a href=\"http://snomed.info/id/9904008\">9904008</a></td><td>Congenital anomaly of cardiovascular system</td></tr><tr><td><a href=\"http://snomed.info/id/735688001\">735688001</a></td><td>Fear of urinary disease</td></tr><tr><td><a href=\"http://snomed.info/id/414545008\">414545008</a></td><td>Ischemic heart disease</td></tr><tr><td><a href=\"http://snomed.info/id/45816000\">45816000</a></td><td>Pyelonephritis</td></tr><tr><td><a href=\"http://snomed.info/id/84114007\">84114007</a></td><td>Heart failure</td></tr><tr><td><a href=\"http://snomed.info/id/38822007\">38822007</a></td><td>Cystitis</td></tr><tr><td><a href=\"http://snomed.info/id/49436004\">49436004</a></td><td>Atrial fibrillation</td></tr><tr><td><a href=\"http://snomed.info/id/12026006\">12026006</a></td><td>Paroxysmal tachycardia</td></tr><tr><td><a href=\"http://snomed.info/id/31822004\">31822004</a></td><td>Urethritis</td></tr><tr><td><a href=\"http://snomed.info/id/363518003\">363518003</a></td><td>Malignant tumor of kidney</td></tr><tr><td><a href=\"http://snomed.info/id/698247007\">698247007</a></td><td>Cardiac arrhythmia</td></tr><tr><td><a href=\"http://snomed.info/id/399326009\">399326009</a></td><td>Malignant tumor of urinary bladder</td></tr><tr><td><a href=\"http://snomed.info/id/88610006\">88610006</a></td><td>Heart murmur</td></tr><tr><td><a href=\"http://snomed.info/id/419052002\">419052002</a></td><td>Malignant tumor of urinary system</td></tr><tr><td><a href=\"http://snomed.info/id/70995007\">70995007</a></td><td>Pulmonary hypertension</td></tr><tr><td><a href=\"http://snomed.info/id/92468007\">92468007</a></td><td>Benign neoplasm of urinary system</td></tr><tr><td><a href=\"http://snomed.info/id/368009\">368009</a></td><td>Heart valve disorder</td></tr><tr><td><a href=\"http://snomed.info/id/254913005\">254913005</a></td><td>Neoplasm of urinary tract proper</td></tr><tr><td><a href=\"http://snomed.info/id/56265001\">56265001</a></td><td>Heart disease</td></tr><tr><td><a href=\"http://snomed.info/id/262890007\">262890007</a></td><td>Injury of urinary tract</td></tr><tr><td><a href=\"http://snomed.info/id/24184005\">24184005</a></td><td>Elevated blood pressure</td></tr><tr><td><a href=\"http://snomed.info/id/118642009\">118642009</a></td><td>Congenital anomaly of the urinary tract proper</td></tr><tr><td><a href=\"http://snomed.info/id/194767001\">194767001</a></td><td>Benign hypertensive heart disease with congestive cardiac failure</td></tr><tr><td><a href=\"http://snomed.info/id/10725009\">10725009</a></td><td>Benign hypertension</td></tr><tr><td><a href=\"http://snomed.info/id/36171008\">36171008</a></td><td>Glomerulonephritis</td></tr><tr><td><a href=\"http://snomed.info/id/32482005\">32482005</a></td><td>Orthostatic proteinuria</td></tr><tr><td><a href=\"http://snomed.info/id/28651003\">28651003</a></td><td>Orthostatic hypotension</td></tr><tr><td><a href=\"http://snomed.info/id/20342001\">20342001</a></td><td>Calculus in urethra</td></tr><tr><td><a href=\"http://snomed.info/id/266257000\">266257000</a></td><td>Transient cerebral ischemia</td></tr><tr><td><a href=\"http://snomed.info/id/171251002\">171251002</a></td><td>Urine screening abnormal</td></tr><tr><td><a href=\"http://snomed.info/id/230690007\">230690007</a></td><td>Cerebrovascular accident</td></tr><tr><td><a href=\"http://snomed.info/id/431309003\">431309003</a></td><td>Acute urinary tract infection</td></tr><tr><td><a href=\"http://snomed.info/id/62914000\">62914000</a></td><td>Cerebrovascular disease</td></tr><tr><td><a href=\"http://snomed.info/id/51274000\">51274000</a></td><td>Atherosclerosis of arteries of the extremities</td></tr><tr><td><a href=\"http://snomed.info/id/191733007\">191733007</a></td><td>Fear of pregnancy</td></tr><tr><td><a href=\"http://snomed.info/id/59282003\">59282003</a></td><td>Pulmonary embolism</td></tr><tr><td><a href=\"http://snomed.info/id/34842007\">34842007</a></td><td>Antepartum hemorrhage</td></tr><tr><td><a href=\"http://snomed.info/id/64156001\">64156001</a></td><td>Thrombophlebitis</td></tr><tr><td><a href=\"http://snomed.info/id/90325002\">90325002</a></td><td>Vomiting of pregnancy</td></tr><tr><td><a href=\"http://snomed.info/id/72866009\">72866009</a></td><td>Varicose veins of lower extremity</td></tr><tr><td><a href=\"http://snomed.info/id/275813002\">275813002</a></td><td>Emergency contraception</td></tr><tr><td><a href=\"http://snomed.info/id/70153002\">70153002</a></td><td>Hemorrhoids</td></tr><tr><td><a href=\"http://snomed.info/id/5935008\">5935008</a></td><td>Uses oral contraception</td></tr><tr><td><a href=\"http://snomed.info/id/266995000\">266995000</a></td><td>H/O: cardiovascular disease</td></tr><tr><td><a href=\"http://snomed.info/id/312079003\">312079003</a></td><td>Uses intrauterine contraception</td></tr><tr><td><a href=\"http://snomed.info/id/81680005\">81680005</a></td><td>Neck pain</td></tr><tr><td><a href=\"http://snomed.info/id/60890002\">60890002</a></td><td>Female sterilization</td></tr><tr><td><a href=\"http://snomed.info/id/302258001\">302258001</a></td><td>Back problem</td></tr><tr><td><a href=\"http://snomed.info/id/161798008\">161798008</a></td><td>H/O: infertility - female</td></tr><tr><td><a href=\"http://snomed.info/id/161920001\">161920001</a></td><td>Respiratory symptom</td></tr><tr><td><a href=\"http://snomed.info/id/47821001\">47821001</a></td><td>Postpartum hemorrhage</td></tr><tr><td><a href=\"http://snomed.info/id/274667000\">274667000</a></td><td>Jaw pain</td></tr><tr><td><a href=\"http://snomed.info/id/58219009\">58219009</a></td><td>Lactation problem</td></tr><tr><td><a href=\"http://snomed.info/id/45326000\">45326000</a></td><td>Shoulder pain</td></tr><tr><td><a href=\"http://snomed.info/id/443732006\">443732006</a></td><td>Dissatisfaction with body image</td></tr><tr><td><a href=\"http://snomed.info/id/717696001\">717696001</a></td><td>Fear of complications of pregnancy</td></tr><tr><td><a href=\"http://snomed.info/id/202480001\">202480001</a></td><td>Elbow joint pain</td></tr><tr><td><a href=\"http://snomed.info/id/202482009\">202482009</a></td><td>Wrist joint pain</td></tr><tr><td><a href=\"http://snomed.info/id/118185001\">118185001</a></td><td>Finding related to pregnancy</td></tr><tr><td><a href=\"http://snomed.info/id/53057004\">53057004</a></td><td>Hand pain</td></tr><tr><td><a href=\"http://snomed.info/id/49218002\">49218002</a></td><td>Hip pain</td></tr><tr><td><a href=\"http://snomed.info/id/2858002\">2858002</a></td><td>Puerperal sepsis</td></tr><tr><td><a href=\"http://snomed.info/id/78514002\">78514002</a></td><td>Thigh pain</td></tr><tr><td><a href=\"http://snomed.info/id/1003721002\">1003721002</a></td><td>Pain of joint of knee</td></tr><tr><td><a href=\"http://snomed.info/id/202490009\">202490009</a></td><td>Ankle joint pain</td></tr><tr><td><a href=\"http://snomed.info/id/426997005\">426997005</a></td><td>Traumatic injury during pregnancy</td></tr><tr><td><a href=\"http://snomed.info/id/68962001\">68962001</a></td><td>Muscle pain</td></tr><tr><td><a href=\"http://snomed.info/id/77386006\">77386006</a></td><td>Pregnancy</td></tr><tr><td><a href=\"http://snomed.info/id/57676002\">57676002</a></td><td>Joint pain</td></tr><tr><td><a href=\"http://snomed.info/id/308926009\">308926009</a></td><td>Skin symptom</td></tr><tr><td><a href=\"http://snomed.info/id/443182008\">443182008</a></td><td>Disorder of cornea associated with contact lens</td></tr><tr><td><a href=\"http://snomed.info/id/4740000\">4740000</a></td><td>Herpes zoster</td></tr><tr><td><a href=\"http://snomed.info/id/88594005\">88594005</a></td><td>Herpes simplex</td></tr><tr><td><a href=\"http://snomed.info/id/726403001\">726403001</a></td><td>Fear of eye disease</td></tr><tr><td><a href=\"http://snomed.info/id/187214007\">187214007</a></td><td>Acariasis</td></tr><tr><td><a href=\"http://snomed.info/id/81000006\">81000006</a></td><td>Pediculosis capitis</td></tr><tr><td><a href=\"http://snomed.info/id/308923001\">308923001</a></td><td>Eye symptom</td></tr><tr><td><a href=\"http://snomed.info/id/47382004\">47382004</a></td><td>Dermatophytosis</td></tr><tr><td><a href=\"http://snomed.info/id/299699004\">299699004</a></td><td>Infective conjunctivitis</td></tr><tr><td><a href=\"http://snomed.info/id/49883006\">49883006</a></td><td>Candidiasis of skin</td></tr><tr><td><a href=\"http://snomed.info/id/473460002\">473460002</a></td><td>Allergic conjunctivitis</td></tr><tr><td><a href=\"http://snomed.info/id/108365000\">108365000</a></td><td>Infection of skin</td></tr><tr><td><a href=\"http://snomed.info/id/41446000\">41446000</a></td><td>Blepharitis</td></tr><tr><td><a href=\"http://snomed.info/id/372130007\">372130007</a></td><td>Malignant neoplasm of skin</td></tr><tr><td><a href=\"http://snomed.info/id/128351009\">128351009</a></td><td>Eye infection</td></tr><tr><td><a href=\"http://snomed.info/id/93163002\">93163002</a></td><td>Lipoma</td></tr><tr><td><a href=\"http://snomed.info/id/371481006\">371481006</a></td><td>Neoplasm of eye region</td></tr><tr><td><a href=\"http://snomed.info/id/92384009\">92384009</a></td><td>Benign neoplasm of skin</td></tr><tr><td><a href=\"http://snomed.info/id/367423000\">367423000</a></td><td>Contusion of eye</td></tr><tr><td><a href=\"http://snomed.info/id/218201004\">218201004</a></td><td>Overexposure to sun rays</td></tr><tr><td><a href=\"http://snomed.info/id/82576008\">82576008</a></td><td>Retained foreign body in eye</td></tr><tr><td><a href=\"http://snomed.info/id/400210000\">400210000</a></td><td>Hemangioma</td></tr><tr><td><a href=\"http://snomed.info/id/282752000\">282752000</a></td><td>Injury of eye region</td></tr><tr><td><a href=\"http://snomed.info/id/239107007\">239107007</a></td><td>Epidermal nevus</td></tr><tr><td><a href=\"http://snomed.info/id/416920000\">416920000</a></td><td>Obstruction of lacrimal canaliculus</td></tr><tr><td><a href=\"http://snomed.info/id/199879009\">199879009</a></td><td>Congenital anomaly of skin</td></tr><tr><td><a href=\"http://snomed.info/id/19416009\">19416009</a></td><td>Congenital anomaly of eye</td></tr><tr><td><a href=\"http://snomed.info/id/48277006\">48277006</a></td><td>Impetigo</td></tr><tr><td><a href=\"http://snomed.info/id/42059000\">42059000</a></td><td>Retinal detachment</td></tr><tr><td><a href=\"http://snomed.info/id/47639008\">47639008</a></td><td>Pilonidal cyst</td></tr><tr><td><a href=\"http://snomed.info/id/50563003\">50563003</a></td><td>Seborrheic dermatitis</td></tr><tr><td><a href=\"http://snomed.info/id/267718000\">267718000</a></td><td>Age related macular degeneration</td></tr><tr><td><a href=\"http://snomed.info/id/24079001\">24079001</a></td><td>Atopic dermatitis</td></tr><tr><td><a href=\"http://snomed.info/id/91514001\">91514001</a></td><td>Corneal ulcer</td></tr><tr><td><a href=\"http://snomed.info/id/40275004\">40275004</a></td><td>Contact dermatitis</td></tr><tr><td><a href=\"http://snomed.info/id/2576002\">2576002</a></td><td>Trachoma</td></tr><tr><td><a href=\"http://snomed.info/id/91487003\">91487003</a></td><td>Diaper rash</td></tr><tr><td><a href=\"http://snomed.info/id/90927000\">90927000</a></td><td>Refractive amblyopia</td></tr><tr><td><a href=\"http://snomed.info/id/77252004\">77252004</a></td><td>Pityriasis rosea</td></tr><tr><td><a href=\"http://snomed.info/id/193570009\">193570009</a></td><td>Cataract</td></tr><tr><td><a href=\"http://snomed.info/id/9014002\">9014002</a></td><td>Psoriasis</td></tr><tr><td><a href=\"http://snomed.info/id/23986001\">23986001</a></td><td>Glaucoma</td></tr><tr><td><a href=\"http://snomed.info/id/193699007\">193699007</a></td><td>Blindness - both eyes</td></tr><tr><td><a href=\"http://snomed.info/id/238748009\">238748009</a></td><td>Sebaceous hyperplasia</td></tr><tr><td><a href=\"http://snomed.info/id/22066006\">22066006</a></td><td>Strabismus</td></tr><tr><td><a href=\"http://snomed.info/id/400097005\">400097005</a></td><td>Ingrowing nail</td></tr><tr><td><a href=\"http://snomed.info/id/40070004\">40070004</a></td><td>Molluscum contagiosum infection</td></tr><tr><td><a href=\"http://snomed.info/id/301354004\">301354004</a></td><td>Pain of ear</td></tr><tr><td><a href=\"http://snomed.info/id/11381005\">11381005</a></td><td>Acne</td></tr><tr><td><a href=\"http://snomed.info/id/300228004\">300228004</a></td><td>Hearing problem</td></tr><tr><td><a href=\"http://snomed.info/id/19429009\">19429009</a></td><td>Chronic ulcer of skin</td></tr><tr><td><a href=\"http://snomed.info/id/60862001\">60862001</a></td><td>Tinnitus</td></tr><tr><td><a href=\"http://snomed.info/id/126485001\">126485001</a></td><td>Urticaria</td></tr><tr><td><a href=\"http://snomed.info/id/300132001\">300132001</a></td><td>Ear discharge</td></tr><tr><td><a href=\"http://snomed.info/id/171237002\">171237002</a></td><td>Skin disease screening</td></tr><tr><td><a href=\"http://snomed.info/id/26322001\">26322001</a></td><td>Bleeding from ear</td></tr><tr><td><a href=\"http://snomed.info/id/17173007\">17173007</a></td><td>Excessive thirst</td></tr><tr><td><a href=\"http://snomed.info/id/315217005\">315217005</a></td><td>Ear symptom</td></tr><tr><td><a href=\"http://snomed.info/id/102608004\">102608004</a></td><td>Excessive appetite</td></tr><tr><td><a href=\"http://snomed.info/id/79890006\">79890006</a></td><td>Loss of appetite</td></tr><tr><td><a href=\"http://snomed.info/id/3135009\">3135009</a></td><td>Otitis externa</td></tr><tr><td><a href=\"http://snomed.info/id/89362005\">89362005</a></td><td>Weight loss</td></tr><tr><td><a href=\"http://snomed.info/id/3110003\">3110003</a></td><td>Acute otitis media</td></tr><tr><td><a href=\"http://snomed.info/id/248290002\">248290002</a></td><td>Developmental delay</td></tr><tr><td><a href=\"http://snomed.info/id/80327007\">80327007</a></td><td>Serous otitis media</td></tr><tr><td><a href=\"http://snomed.info/id/34095006\">34095006</a></td><td>Dehydration</td></tr><tr><td><a href=\"http://snomed.info/id/270491006\">270491006</a></td><td>Eustachian tube salpingitis</td></tr><tr><td><a href=\"http://snomed.info/id/723115003\">723115003</a></td><td>Fear of cancer of endocrine system</td></tr><tr><td><a href=\"http://snomed.info/id/21186006\">21186006</a></td><td>Chronic otitis media</td></tr><tr><td><a href=\"http://snomed.info/id/723112000\">723112000</a></td><td>Fear of endocrine disease</td></tr><tr><td><a href=\"http://snomed.info/id/363228008\">363228008</a></td><td>Neoplasm of ear</td></tr><tr><td><a href=\"http://snomed.info/id/75441006\">75441006</a></td><td>Foreign body in ear</td></tr><tr><td><a href=\"http://snomed.info/id/60442001\">60442001</a></td><td>Perforation of tympanic membrane</td></tr><tr><td><a href=\"http://snomed.info/id/362969004\">362969004</a></td><td>Disorder of endocrine system</td></tr><tr><td><a href=\"http://snomed.info/id/283026008\">283026008</a></td><td>Superficial injury of ear region</td></tr><tr><td><a href=\"http://snomed.info/id/94098005\">94098005</a></td><td>Primary malignant neoplasm of thyroid gland</td></tr><tr><td><a href=\"http://snomed.info/id/2999009\">2999009</a></td><td>Injury of ear</td></tr><tr><td><a href=\"http://snomed.info/id/92439006\">92439006</a></td><td>Benign neoplasm of thyroid gland</td></tr><tr><td><a href=\"http://snomed.info/id/387922007\">387922007</a></td><td>Neoplasm of endocrine gland</td></tr><tr><td><a href=\"http://snomed.info/id/126946000\">126946000</a></td><td>Excessive cerumen in ear canal</td></tr><tr><td><a href=\"http://snomed.info/id/39462005\">39462005</a></td><td>Thyroglossal duct cyst</td></tr><tr><td><a href=\"http://snomed.info/id/87118001\">87118001</a></td><td>Vertiginous syndrome</td></tr><tr><td><a href=\"http://snomed.info/id/11543004\">11543004</a></td><td>Otosclerosis</td></tr><tr><td><a href=\"http://snomed.info/id/3716002\">3716002</a></td><td>Goiter</td></tr><tr><td><a href=\"http://snomed.info/id/49526009\">49526009</a></td><td>Presbycusis</td></tr><tr><td><a href=\"http://snomed.info/id/414916001\">414916001</a></td><td>Obesity</td></tr><tr><td><a href=\"http://snomed.info/id/238131007\">238131007</a></td><td>Overweight</td></tr><tr><td><a href=\"http://snomed.info/id/162344009\">162344009</a></td><td>Bilateral deafness</td></tr><tr><td><a href=\"http://snomed.info/id/34486009\">34486009</a></td><td>Hyperthyroidism</td></tr><tr><td><a href=\"http://snomed.info/id/426396005\">426396005</a></td><td>Cardiac chest pain</td></tr><tr><td><a href=\"http://snomed.info/id/302866003\">302866003</a></td><td>Hypoglycemia</td></tr><tr><td><a href=\"http://snomed.info/id/23924001\">23924001</a></td><td>Tight chest</td></tr><tr><td><a href=\"http://snomed.info/id/28032008\">28032008</a></td><td>Insulin dependent diabetes mellitus type 1B</td></tr><tr><td><a href=\"http://snomed.info/id/301358001\">301358001</a></td><td>Pain of cardiovascular structure</td></tr><tr><td><a href=\"http://snomed.info/id/398032003\">398032003</a></td><td>Loose stool</td></tr><tr><td><a href=\"http://snomed.info/id/8414002\">8414002</a></td><td>Abscess of nose</td></tr><tr><td><a href=\"http://snomed.info/id/129851009\">129851009</a></td><td>Alteration in bowel elimination</td></tr><tr><td><a href=\"http://snomed.info/id/54398005\">54398005</a></td><td>Acute upper respiratory infection</td></tr><tr><td><a href=\"http://snomed.info/id/105995000\">105995000</a></td><td>Disorder of teeth AND/OR supporting structures</td></tr><tr><td><a href=\"http://snomed.info/id/36971009\">36971009</a></td><td>Sinusitis</td></tr><tr><td><a href=\"http://snomed.info/id/162009001\">162009001</a></td><td>Mouth symptoms</td></tr><tr><td><a href=\"http://snomed.info/id/17741008\">17741008</a></td><td>Acute tonsillitis</td></tr><tr><td><a href=\"http://snomed.info/id/45913009\">45913009</a></td><td>Laryngitis</td></tr><tr><td><a href=\"http://snomed.info/id/399122003\">399122003</a></td><td>Swallowing problem</td></tr><tr><td><a href=\"http://snomed.info/id/80515008\">80515008</a></td><td>Large liver</td></tr><tr><td><a href=\"http://snomed.info/id/271860004\">271860004</a></td><td>Abdominal mass</td></tr><tr><td><a href=\"http://snomed.info/id/63480004\">63480004</a></td><td>Chronic bronchitis</td></tr><tr><td><a href=\"http://snomed.info/id/271835004\">271835004</a></td><td>Abdominal distension, gaseous</td></tr><tr><td><a href=\"http://snomed.info/id/6142004\">6142004</a></td><td>Influenza</td></tr><tr><td><a href=\"http://snomed.info/id/722843001\">722843001</a></td><td>Fear of having cancer of digestive system</td></tr><tr><td><a href=\"http://snomed.info/id/233604007\">233604007</a></td><td>Pneumonia</td></tr><tr><td><a href=\"http://snomed.info/id/722842006\">722842006</a></td><td>Fear of having digestive disease</td></tr><tr><td><a href=\"http://snomed.info/id/276433004\">276433004</a></td><td>Insect bite - wound</td></tr><tr><td><a href=\"http://snomed.info/id/64766004\">64766004</a></td><td>Ulcerative colitis</td></tr><tr><td><a href=\"http://snomed.info/id/262555007\">262555007</a></td><td>Human bite - wound</td></tr><tr><td><a href=\"http://snomed.info/id/30037006\">30037006</a></td><td>Anal fissure</td></tr><tr><td><a href=\"http://snomed.info/id/225358003\">225358003</a></td><td>Wound care</td></tr><tr><td><a href=\"http://snomed.info/id/60046008\">60046008</a></td><td>Pleural effusion</td></tr><tr><td><a href=\"http://snomed.info/id/196075003\">196075003</a></td><td>Pleurisy</td></tr><tr><td><a href=\"http://snomed.info/id/275498002\">275498002</a></td><td>Respiratory tract infection</td></tr><tr><td><a href=\"http://snomed.info/id/308925008\">308925008</a></td><td>Digestive symptom</td></tr><tr><td><a href=\"http://snomed.info/id/363493006\">363493006</a></td><td>Malignant tumor of bronchus</td></tr><tr><td><a href=\"http://snomed.info/id/715852004\">715852004</a></td><td>Gastrointestinal infection</td></tr><tr><td><a href=\"http://snomed.info/id/449096009\">449096009</a></td><td>Malignant neoplasm of respiratory system</td></tr><tr><td><a href=\"http://snomed.info/id/36989005\">36989005</a></td><td>Mumps</td></tr><tr><td><a href=\"http://snomed.info/id/255166003\">255166003</a></td><td>Benign neoplasm of respiratory system</td></tr><tr><td><a href=\"http://snomed.info/id/3738000\">3738000</a></td><td>Viral hepatitis</td></tr><tr><td><a href=\"http://snomed.info/id/262599003\">262599003</a></td><td>Foreign body in respiratory tract</td></tr><tr><td><a href=\"http://snomed.info/id/25374005\">25374005</a></td><td>Gastroenteritis</td></tr><tr><td><a href=\"http://snomed.info/id/127275008\">127275008</a></td><td>Injury of respiratory system</td></tr><tr><td><a href=\"http://snomed.info/id/363349007\">363349007</a></td><td>Malignant tumor of stomach</td></tr><tr><td><a href=\"http://snomed.info/id/47147007\">47147007</a></td><td>Congenital anomaly of lung</td></tr><tr><td><a href=\"http://snomed.info/id/14532008\">14532008</a></td><td>Congenital anomaly of trachea</td></tr><tr><td><a href=\"http://snomed.info/id/11223009\">11223009</a></td><td>Congenital anomaly of pharynx</td></tr><tr><td><a href=\"http://snomed.info/id/363351006\">363351006</a></td><td>Malignant tumor of rectum</td></tr><tr><td><a href=\"http://snomed.info/id/46689006\">46689006</a></td><td>Hypertrophy of tonsils</td></tr><tr><td><a href=\"http://snomed.info/id/363418001\">363418001</a></td><td>Malignant tumor of pancreas</td></tr><tr><td><a href=\"http://snomed.info/id/255077007\">255077007</a></td><td>Malignant tumor of digestive organ</td></tr><tr><td><a href=\"http://snomed.info/id/13645005\">13645005</a></td><td>Chronic obstructive lung disease</td></tr><tr><td><a href=\"http://snomed.info/id/128348002\">128348002</a></td><td>Neoplasm of digestive system</td></tr><tr><td><a href=\"http://snomed.info/id/195967001\">195967001</a></td><td>Asthma</td></tr><tr><td><a href=\"http://snomed.info/id/33334006\">33334006</a></td><td>Foreign body in digestive tract</td></tr><tr><td><a href=\"http://snomed.info/id/61582004\">61582004</a></td><td>Allergic rhinitis</td></tr><tr><td><a href=\"http://snomed.info/id/68978004\">68978004</a></td><td>Hyperventilation</td></tr><tr><td><a href=\"http://snomed.info/id/50043002\">50043002</a></td><td>Disorder of respiratory system</td></tr><tr><td><a href=\"http://snomed.info/id/301364008\">301364008</a></td><td>Pain of skin</td></tr><tr><td><a href=\"http://snomed.info/id/118938008\">118938008</a></td><td>Disease of mouth</td></tr><tr><td><a href=\"http://snomed.info/id/64144002\">64144002</a></td><td>Pruritic rash</td></tr><tr><td><a href=\"http://snomed.info/id/37657006\">37657006</a></td><td>Disorder of esophagus</td></tr><tr><td><a href=\"http://snomed.info/id/266113007\">266113007</a></td><td>Genital warts</td></tr><tr><td><a href=\"http://snomed.info/id/34580000\">34580000</a></td><td>Duodenal ulcer without hemorrhage, without perforation AND without obstruction</td></tr><tr><td><a href=\"http://snomed.info/id/13200003\">13200003</a></td><td>Peptic ulcer</td></tr><tr><td><a href=\"http://snomed.info/id/248528002\">248528002</a></td><td>Multiple lumps</td></tr><tr><td><a href=\"http://snomed.info/id/386211005\">386211005</a></td><td>Disorder of function of stomach</td></tr><tr><td><a href=\"http://snomed.info/id/74400008\">74400008</a></td><td>Appendicitis</td></tr><tr><td><a href=\"http://snomed.info/id/396232000\">396232000</a></td><td>Inguinal hernia</td></tr><tr><td><a href=\"http://snomed.info/id/370172004\">370172004</a></td><td>Skin pigmentation</td></tr><tr><td><a href=\"http://snomed.info/id/84089009\">84089009</a></td><td>Hiatal hernia</td></tr><tr><td><a href=\"http://snomed.info/id/300950007\">300950007</a></td><td>Infected hand</td></tr><tr><td><a href=\"http://snomed.info/id/52515009\">52515009</a></td><td>Hernia of abdominal cavity</td></tr><tr><td><a href=\"http://snomed.info/id/416893007\">416893007</a></td><td>Carbuncle</td></tr><tr><td><a href=\"http://snomed.info/id/397881000\">397881000</a></td><td>Diverticular disease</td></tr><tr><td><a href=\"http://snomed.info/id/423858006\">423858006</a></td><td>Scald of skin</td></tr><tr><td><a href=\"http://snomed.info/id/87282003\">87282003</a></td><td>Intestinal parasitism</td></tr><tr><td><a href=\"http://snomed.info/id/93458008\">93458008</a></td><td>Foreign body in skin</td></tr><tr><td><a href=\"http://snomed.info/id/125667009\">125667009</a></td><td>Contusion</td></tr><tr><td><a href=\"http://snomed.info/id/235856003\">235856003</a></td><td>Disease of liver</td></tr><tr><td><a href=\"http://snomed.info/id/399963005\">399963005</a></td><td>Abrasion</td></tr><tr><td><a href=\"http://snomed.info/id/76581006\">76581006</a></td><td>Cholecystitis</td></tr><tr><td><a href=\"http://snomed.info/id/61578001\">61578001</a></td><td>Abnormal digestive tract function</td></tr><tr><td><a href=\"http://snomed.info/id/274165007\">274165007</a></td><td>Laceration of skin</td></tr><tr><td><a href=\"http://snomed.info/id/41652007\">41652007</a></td><td>Pain in eye</td></tr><tr><td><a href=\"http://snomed.info/id/703630003\">703630003</a></td><td>Red eye</td></tr><tr><td><a href=\"http://snomed.info/id/412357001\">412357001</a></td><td>Corn</td></tr><tr><td><a href=\"http://snomed.info/id/246679005\">246679005</a></td><td>Discharge from eye</td></tr><tr><td><a href=\"http://snomed.info/id/274672009\">274672009</a></td><td>Changes in skin texture</td></tr><tr><td><a href=\"http://snomed.info/id/297989000\">297989000</a></td><td>Nail problem</td></tr><tr><td><a href=\"http://snomed.info/id/15013002\">15013002</a></td><td>Vitreous floaters</td></tr><tr><td><a href=\"http://snomed.info/id/278040002\">278040002</a></td><td>Loss of hair</td></tr><tr><td><a href=\"http://snomed.info/id/63102001\">63102001</a></td><td>Visual disturbance</td></tr><tr><td><a href=\"http://snomed.info/id/2070002\">2070002</a></td><td>Burning sensation in eye</td></tr><tr><td><a href=\"http://snomed.info/id/403593004\">403593004</a></td><td>Phobic fear of skin cancer</td></tr><tr><td><a href=\"http://snomed.info/id/563001\">563001</a></td><td>Nystagmus</td></tr><tr><td><a href=\"http://snomed.info/id/724879005\">724879005</a></td><td>Fear of skin disease</td></tr><tr><td><a href=\"http://snomed.info/id/60113004\">60113004</a></td><td>Disorder of eyelid</td></tr><tr><td><a href=\"http://snomed.info/id/50121007\">50121007</a></td><td>Eyeglasses</td></tr><tr><td><a href=\"http://snomed.info/id/395496008\">395496008</a></td><td>Throat symptom</td></tr><tr><td><a href=\"http://snomed.info/id/3696007\">3696007</a></td><td>Nonulcer dyspepsia</td></tr><tr><td><a href=\"http://snomed.info/id/38160000\">38160000</a></td><td>Abnormal voice</td></tr><tr><td><a href=\"http://snomed.info/id/271832001\">271832001</a></td><td>Flatulence, eructation and gas pain</td></tr><tr><td><a href=\"http://snomed.info/id/66857006\">66857006</a></td><td>Hemoptysis</td></tr><tr><td><a href=\"http://snomed.info/id/422587007\">422587007</a></td><td>Nausea</td></tr><tr><td><a href=\"http://snomed.info/id/248596009\">248596009</a></td><td>Sputum - symptom</td></tr><tr><td><a href=\"http://snomed.info/id/422400008\">422400008</a></td><td>Vomiting</td></tr><tr><td><a href=\"http://snomed.info/id/723093008\">723093008</a></td><td>Fear of cancer of respiratory system</td></tr><tr><td><a href=\"http://snomed.info/id/62315008\">62315008</a></td><td>Diarrhea</td></tr><tr><td><a href=\"http://snomed.info/id/14760008\">14760008</a></td><td>Constipation</td></tr><tr><td><a href=\"http://snomed.info/id/723092003\">723092003</a></td><td>Fear of respiratory disease</td></tr><tr><td><a href=\"http://snomed.info/id/18165001\">18165001</a></td><td>Jaundice</td></tr><tr><td><a href=\"http://snomed.info/id/8765009\">8765009</a></td><td>Hematemesis</td></tr><tr><td><a href=\"http://snomed.info/id/2901004\">2901004</a></td><td>Melena</td></tr><tr><td><a href=\"http://snomed.info/id/27836007\">27836007</a></td><td>Pertussis</td></tr><tr><td><a href=\"http://snomed.info/id/12063002\">12063002</a></td><td>Rectal hemorrhage</td></tr><tr><td><a href=\"http://snomed.info/id/195658003\">195658003</a></td><td>Acute bacterial pharyngitis</td></tr><tr><td><a href=\"http://snomed.info/id/72042002\">72042002</a></td><td>Incontinence of feces</td></tr><tr><td><a href=\"http://snomed.info/id/10743008\">10743008</a></td><td>Irritable bowel syndrome</td></tr><tr><td><a href=\"http://snomed.info/id/37796009\">37796009</a></td><td>Migraine</td></tr><tr><td><a href=\"http://snomed.info/id/14189004\">14189004</a></td><td>Measles</td></tr><tr><td><a href=\"http://snomed.info/id/193031009\">193031009</a></td><td>Cluster headache</td></tr><tr><td><a href=\"http://snomed.info/id/309465005\">309465005</a></td><td>Varicella-zoster virus infection</td></tr><tr><td><a href=\"http://snomed.info/id/193093009\">193093009</a></td><td>Bell's palsy</td></tr><tr><td><a href=\"http://snomed.info/id/61462000\">61462000</a></td><td>Malaria</td></tr><tr><td><a href=\"http://snomed.info/id/31681005\">31681005</a></td><td>Trigeminal neuralgia</td></tr><tr><td><a href=\"http://snomed.info/id/36653000\">36653000</a></td><td>Rubella</td></tr><tr><td><a href=\"http://snomed.info/id/22722001\">22722001</a></td><td>Idiopathic peripheral neuropathy</td></tr><tr><td><a href=\"http://snomed.info/id/271558008\">271558008</a></td><td>Infectious mononucleosis</td></tr><tr><td><a href=\"http://snomed.info/id/49882001\">49882001</a></td><td>Viral exanthem</td></tr><tr><td><a href=\"http://snomed.info/id/398057008\">398057008</a></td><td>Tension-type headache</td></tr><tr><td><a href=\"http://snomed.info/id/34014006\">34014006</a></td><td>Viral disease</td></tr><tr><td><a href=\"http://snomed.info/id/118940003\">118940003</a></td><td>Disorder of nervous system</td></tr><tr><td><a href=\"http://snomed.info/id/40733004\">40733004</a></td><td>Infectious disease</td></tr><tr><td><a href=\"http://snomed.info/id/48694002\">48694002</a></td><td>Anxiety</td></tr><tr><td><a href=\"http://snomed.info/id/21594007\">21594007</a></td><td>Malignant</td></tr><tr><td><a href=\"http://snomed.info/id/67195008\">67195008</a></td><td>Acute stress disorder</td></tr><tr><td><a href=\"http://snomed.info/id/417746004\">417746004</a></td><td>Traumatic injury</td></tr><tr><td><a href=\"http://snomed.info/id/366979004\">366979004</a></td><td>Depressed mood</td></tr><tr><td><a href=\"http://snomed.info/id/262519004\">262519004</a></td><td>Multiple injuries</td></tr><tr><td><a href=\"http://snomed.info/id/274646000\">274646000</a></td><td>Irritability and anger</td></tr><tr><td><a href=\"http://snomed.info/id/39093002\">39093002</a></td><td>Post-trauma response</td></tr><tr><td><a href=\"http://snomed.info/id/26677001\">26677001</a></td><td>Sleep pattern disturbance</td></tr><tr><td><a href=\"http://snomed.info/id/270903007\">270903007</a></td><td>Lack or loss of sexual desire</td></tr><tr><td><a href=\"http://snomed.info/id/62014003\">62014003</a></td><td>Adverse reaction to drug</td></tr><tr><td><a href=\"http://snomed.info/id/248760008\">248760008</a></td><td>Sexual intercourse unsuccessful</td></tr><tr><td><a href=\"http://snomed.info/id/275390005\">275390005</a></td><td>Toxic effect of plant</td></tr><tr><td><a href=\"http://snomed.info/id/248090005\">248090005</a></td><td>Concern about sexual orientation</td></tr><tr><td><a href=\"http://snomed.info/id/39423001\">39423001</a></td><td>Stuttering</td></tr><tr><td><a href=\"http://snomed.info/id/95869003\">95869003</a></td><td>Adverse effect of prosthetic device</td></tr><tr><td><a href=\"http://snomed.info/id/102609007\">102609007</a></td><td>Feeding problem in child</td></tr><tr><td><a href=\"http://snomed.info/id/53350007\">53350007</a></td><td>Prosthesis</td></tr><tr><td><a href=\"http://snomed.info/id/386489000\">386489000</a></td><td>Urinary incontinence care: enuresis</td></tr><tr><td><a href=\"http://snomed.info/id/302690004\">302690004</a></td><td>Encopresis</td></tr><tr><td><a href=\"http://snomed.info/id/165346000\">165346000</a></td><td>Laboratory test result abnormal</td></tr><tr><td><a href=\"http://snomed.info/id/15167005\">15167005</a></td><td>Alcohol abuse</td></tr><tr><td><a href=\"http://snomed.info/id/419076005\">419076005</a></td><td>Allergic reaction</td></tr><tr><td><a href=\"http://snomed.info/id/395507008\">395507008</a></td><td>Premature infant</td></tr><tr><td><a href=\"http://snomed.info/id/110483000\">110483000</a></td><td>Tobacco user</td></tr><tr><td><a href=\"http://snomed.info/id/191939002\">191939002</a></td><td>Misuse of prescription only drugs</td></tr><tr><td><a href=\"http://snomed.info/id/276506001\">276506001</a></td><td>Newborn death</td></tr><tr><td><a href=\"http://snomed.info/id/26416006\">26416006</a></td><td>Drug abuse</td></tr><tr><td><a href=\"http://snomed.info/id/419620001\">419620001</a></td><td>Death</td></tr><tr><td><a href=\"http://snomed.info/id/386807006\">386807006</a></td><td>Memory impairment</td></tr><tr><td><a href=\"http://snomed.info/id/409036009\">409036009</a></td><td>Child behavior alteration</td></tr><tr><td><a href=\"http://snomed.info/id/24441001\">24441001</a></td><td>Health maintenance alteration</td></tr><tr><td><a href=\"http://snomed.info/id/409037000\">409037000</a></td><td>Adolescent behavior alteration</td></tr><tr><td><a href=\"http://snomed.info/id/64572001\">64572001</a></td><td>Disease</td></tr><tr><td><a href=\"http://snomed.info/id/161129001\">161129001</a></td><td>Learning difficulties</td></tr><tr><td><a href=\"http://snomed.info/id/274741002\">274741002</a></td><td>Generalized enlarged lymph nodes</td></tr><tr><td><a href=\"http://snomed.info/id/9431000\">9431000</a></td><td>Phase of life problem</td></tr><tr><td><a href=\"http://snomed.info/id/762349007\">762349007</a></td><td>Fear of mental disorder</td></tr><tr><td><a href=\"http://snomed.info/id/102920009\">102920009</a></td><td>Fear of contracting HIV infection</td></tr><tr><td><a href=\"http://snomed.info/id/723121004\">723121004</a></td><td>Fear of hematological cancer</td></tr><tr><td><a href=\"http://snomed.info/id/413307004\">413307004</a></td><td>Mental health problem</td></tr><tr><td><a href=\"http://snomed.info/id/52448006\">52448006</a></td><td>Dementia</td></tr><tr><td><a href=\"http://snomed.info/id/5510009\">5510009</a></td><td>Organic delusional disorder</td></tr><tr><td><a href=\"http://snomed.info/id/58214004\">58214004</a></td><td>Schizophrenia</td></tr><tr><td><a href=\"http://snomed.info/id/41174002\">41174002</a></td><td>Acute lymphadenitis</td></tr><tr><td><a href=\"http://snomed.info/id/441704009\">441704009</a></td><td>Affective psychosis</td></tr><tr><td><a href=\"http://snomed.info/id/32035007\">32035007</a></td><td>Chronic lymphadenitis</td></tr><tr><td><a href=\"http://snomed.info/id/197480006\">197480006</a></td><td>Anxiety disorder</td></tr><tr><td><a href=\"http://snomed.info/id/1163005009\">1163005009</a></td><td>Hodgkin lymphoma</td></tr><tr><td><a href=\"http://snomed.info/id/397923000\">397923000</a></td><td>Somatization disorder</td></tr><tr><td><a href=\"http://snomed.info/id/93143009\">93143009</a></td><td>Leukemia</td></tr><tr><td><a href=\"http://snomed.info/id/35489007\">35489007</a></td><td>Depressive disorder</td></tr><tr><td><a href=\"http://snomed.info/id/44301001\">44301001</a></td><td>Suicide</td></tr><tr><td><a href=\"http://snomed.info/id/43756009\">43756009</a></td><td>Traumatic rupture of spleen</td></tr><tr><td><a href=\"http://snomed.info/id/33449004\">33449004</a></td><td>Personality disorder</td></tr><tr><td><a href=\"http://snomed.info/id/38911009\">38911009</a></td><td>Hereditary hemolytic anemia</td></tr><tr><td><a href=\"http://snomed.info/id/44548000\">44548000</a></td><td>Hyperactive behavior</td></tr><tr><td><a href=\"http://snomed.info/id/87522002\">87522002</a></td><td>Iron deficiency anemia</td></tr><tr><td><a href=\"http://snomed.info/id/53165003\">53165003</a></td><td>Megaloblastic anemia</td></tr><tr><td><a href=\"http://snomed.info/id/78004001\">78004001</a></td><td>Bulimia nervosa</td></tr><tr><td><a href=\"http://snomed.info/id/56882008\">56882008</a></td><td>Anorexia nervosa</td></tr><tr><td><a href=\"http://snomed.info/id/271737000\">271737000</a></td><td>Anemia</td></tr><tr><td><a href=\"http://snomed.info/id/54097007\">54097007</a></td><td>White blood cell disorder</td></tr><tr><td><a href=\"http://snomed.info/id/301355003\">301355003</a></td><td>Pain of respiratory structure</td></tr><tr><td><a href=\"http://snomed.info/id/16294009\">16294009</a></td><td>Splenomegaly</td></tr><tr><td><a href=\"http://snomed.info/id/267036007\">267036007</a></td><td>Dyspnea</td></tr><tr><td><a href=\"http://snomed.info/id/165816005\">165816005</a></td><td>HIV detected</td></tr><tr><td><a href=\"http://snomed.info/id/56018004\">56018004</a></td><td>Wheezing</td></tr><tr><td><a href=\"http://snomed.info/id/386813002\">386813002</a></td><td>Abnormal breathing</td></tr><tr><td><a href=\"http://snomed.info/id/49727002\">49727002</a></td><td>Cough</td></tr><tr><td><a href=\"http://snomed.info/id/79922009\">79922009</a></td><td>Epigastric pain</td></tr><tr><td><a href=\"http://snomed.info/id/249366005\">249366005</a></td><td>Bleeding from nose</td></tr><tr><td><a href=\"http://snomed.info/id/68235000\">68235000</a></td><td>Nasal congestion</td></tr><tr><td><a href=\"http://snomed.info/id/77880009\">77880009</a></td><td>Rectal pain</td></tr><tr><td><a href=\"http://snomed.info/id/275448003\">275448003</a></td><td>Perianal dermatitis</td></tr><tr><td><a href=\"http://snomed.info/id/162402004\">162402004</a></td><td>Blocked sinuses</td></tr><tr><td><a href=\"http://snomed.info/id/102613000\">102613000</a></td><td>Localized abdominal pain</td></tr><tr><td><a href=\"http://snomed.info/id/1144523008\">1144523008</a></td><td>Normal activity tolerance</td></tr><tr><td><a href=\"http://snomed.info/id/371524004\">371524004</a></td><td>Clinical report</td></tr><tr><td><a href=\"http://snomed.info/id/225886003\">225886003</a></td><td>Medical assessment</td></tr><tr><td><a href=\"http://snomed.info/id/79206001\">79206001</a></td><td>Specialized medical examination</td></tr><tr><td><a href=\"http://snomed.info/id/135840009\">135840009</a></td><td>Blood pressure monitoring</td></tr><tr><td><a href=\"http://snomed.info/id/15220000\">15220000</a></td><td>Laboratory test</td></tr><tr><td><a href=\"http://snomed.info/id/10850741000119108\">10850741000119108</a></td><td>Accidental needle stick injury</td></tr><tr><td><a href=\"http://snomed.info/id/167222005\">167222005</a></td><td>Abnormal urinalysis</td></tr><tr><td><a href=\"http://snomed.info/id/119339001\">119339001</a></td><td>Stool specimen</td></tr><tr><td><a href=\"http://snomed.info/id/373372005\">373372005</a></td><td>Histological grade finding</td></tr><tr><td><a href=\"http://snomed.info/id/289530006\">289530006</a></td><td>Vaginal bleeding</td></tr><tr><td><a href=\"http://snomed.info/id/423827005\">423827005</a></td><td>Endoscopy</td></tr><tr><td><a href=\"http://snomed.info/id/162051008\">162051008</a></td><td>Right iliac fossa pain</td></tr><tr><td><a href=\"http://snomed.info/id/271921002\">271921002</a></td><td>ECG finding</td></tr><tr><td><a href=\"http://snomed.info/id/103693007\">103693007</a></td><td>Diagnostic procedure</td></tr><tr><td><a href=\"http://snomed.info/id/47609003\">47609003</a></td><td>Foreign body in esophagus</td></tr><tr><td><a href=\"http://snomed.info/id/444813003\">444813003</a></td><td>Prophylactic immunotherapy</td></tr><tr><td><a href=\"http://snomed.info/id/1539003\">1539003</a></td><td>Acquired trigger finger</td></tr><tr><td><a href=\"http://snomed.info/id/410314003\">410314003</a></td><td>Health promotion education, guidance, and counseling</td></tr><tr><td><a href=\"http://snomed.info/id/11429006\">11429006</a></td><td>Consultation</td></tr><tr><td><a href=\"http://snomed.info/id/30549001\">30549001</a></td><td>Removal of suture</td></tr><tr><td><a href=\"http://snomed.info/id/309395003\">309395003</a></td><td>Hospital specialist</td></tr><tr><td><a href=\"http://snomed.info/id/185351004\">185351004</a></td><td>Administrative reason for encounter</td></tr><tr><td><a href=\"http://snomed.info/id/183515008\">183515008</a></td><td>Referral to physician</td></tr><tr><td><a href=\"http://snomed.info/id/71388002\">71388002</a></td><td>Procedure</td></tr><tr><td><a href=\"http://snomed.info/id/14766002\">14766002</a></td><td>Aspiration</td></tr><tr><td><a href=\"http://snomed.info/id/86273004\">86273004</a></td><td>Biopsy</td></tr><tr><td><a href=\"http://snomed.info/id/19923001\">19923001</a></td><td>Catheter</td></tr><tr><td><a href=\"http://snomed.info/id/386761002\">386761002</a></td><td>Local anesthesia</td></tr><tr><td><a href=\"http://snomed.info/id/22253000\">22253000</a></td><td>Pain</td></tr><tr><td><a href=\"http://snomed.info/id/129003000\">129003000</a></td><td>Dressing</td></tr><tr><td><a href=\"http://snomed.info/id/7973008\">7973008</a></td><td>Abnormal vision</td></tr><tr><td><a href=\"http://snomed.info/id/52052004\">52052004</a></td><td>Rehabilitation therapy</td></tr><tr><td><a href=\"http://snomed.info/id/201040000\">201040000</a></td><td>Callosity</td></tr><tr><td><a href=\"http://snomed.info/id/409063005\">409063005</a></td><td>Counseling</td></tr><tr><td><a href=\"http://snomed.info/id/52073004\">52073004</a></td><td>Oligomenorrhea</td></tr><tr><td><a href=\"http://snomed.info/id/184477002\">184477002</a></td><td>Minor surgery done - excision</td></tr><tr><td><a href=\"http://snomed.info/id/165355002\">165355002</a></td><td>Patient informed - test result</td></tr><tr><td><a href=\"http://snomed.info/id/309538000\">309538000</a></td><td>Numbness of foot</td></tr><tr><td><a href=\"http://snomed.info/id/14734007\">14734007</a></td><td>Administrative procedure</td></tr><tr><td><a href=\"http://snomed.info/id/25064002\">25064002</a></td><td>Headache</td></tr><tr><td><a href=\"http://snomed.info/id/95668009\">95668009</a></td><td>Pain in face</td></tr><tr><td><a href=\"http://snomed.info/id/32914008\">32914008</a></td><td>Restless legs</td></tr><tr><td><a href=\"http://snomed.info/id/429783005\">429783005</a></td><td>Paresthesia of lower extremity</td></tr><tr><td><a href=\"http://snomed.info/id/310449005\">310449005</a></td><td>Referral to hospital</td></tr><tr><td><a href=\"http://snomed.info/id/398026008\">398026008</a></td><td>Reduced sensation of skin</td></tr><tr><td><a href=\"http://snomed.info/id/91175000\">91175000</a></td><td>Seizure</td></tr><tr><td><a href=\"http://snomed.info/id/260912008\">260912008</a></td><td>Abnormal involuntary movement</td></tr><tr><td><a href=\"http://snomed.info/id/112105008\">112105008</a></td><td>Sense of smell altered</td></tr><tr><td><a href=\"http://snomed.info/id/274640006\">274640006</a></td><td>Fever with chills</td></tr><tr><td><a href=\"http://snomed.info/id/44695005\">44695005</a></td><td>Paralysis</td></tr><tr><td><a href=\"http://snomed.info/id/271795006\">271795006</a></td><td>Malaise and fatigue</td></tr><tr><td><a href=\"http://snomed.info/id/231543005\">231543005</a></td><td>Speech and language disorder</td></tr><tr><td><a href=\"http://snomed.info/id/271594007\">271594007</a></td><td>Syncope</td></tr><tr><td><a href=\"http://snomed.info/id/724824002\">724824002</a></td><td>Fear of neurological disease</td></tr><tr><td><a href=\"http://snomed.info/id/371632003\">371632003</a></td><td>Coma</td></tr><tr><td><a href=\"http://snomed.info/id/52526003\">52526003</a></td><td>Sweating problem</td></tr><tr><td><a href=\"http://snomed.info/id/398102009\">398102009</a></td><td>Acute poliomyelitis</td></tr><tr><td><a href=\"http://snomed.info/id/131148009\">131148009</a></td><td>Bleeding</td></tr><tr><td><a href=\"http://snomed.info/id/7180009\">7180009</a></td><td>Meningitis</td></tr><tr><td><a href=\"http://snomed.info/id/29857009\">29857009</a></td><td>Chest pain</td></tr><tr><td><a href=\"http://snomed.info/id/76902006\">76902006</a></td><td>Tetanus</td></tr><tr><td><a href=\"http://snomed.info/id/699389008\">699389008</a></td><td>Fear of medical treatment</td></tr><tr><td><a href=\"http://snomed.info/id/444951002\">444951002</a></td><td>Unsettled infant</td></tr><tr><td><a href=\"http://snomed.info/id/372063002\">372063002</a></td><td>Malignant neoplasm of nervous system</td></tr><tr><td><a href=\"http://snomed.info/id/92247009\">92247009</a></td><td>Benign neoplasm of nervous system</td></tr><tr><td><a href=\"http://snomed.info/id/225871009\">225871009</a></td><td>Requests euthanasia</td></tr><tr><td><a href=\"http://snomed.info/id/126950007\">126950007</a></td><td>Neoplasm of nervous system</td></tr><tr><td><a href=\"http://snomed.info/id/110030002\">110030002</a></td><td>Concussion injury of brain</td></tr><tr><td><a href=\"http://snomed.info/id/282749008\">282749008</a></td><td>Head and neck injury</td></tr><tr><td><a href=\"http://snomed.info/id/102912007\">102912007</a></td><td>Fear of death</td></tr><tr><td><a href=\"http://snomed.info/id/128239009\">128239009</a></td><td>Injury of nervous system</td></tr><tr><td><a href=\"http://snomed.info/id/57148006\">57148006</a></td><td>Congenital anomaly of brain</td></tr><tr><td><a href=\"http://snomed.info/id/247866008\">247866008</a></td><td>Fear of contracting disease</td></tr><tr><td><a href=\"http://snomed.info/id/24700007\">24700007</a></td><td>Multiple sclerosis</td></tr><tr><td><a href=\"http://snomed.info/id/32798002\">32798002</a></td><td>Parkinsonism</td></tr><tr><td><a href=\"http://snomed.info/id/84757009\">84757009</a></td><td>Epilepsy</td></tr><tr><td><a href=\"http://snomed.info/id/267022002\">267022002</a></td><td>General symptom</td></tr><tr><td><a href=\"http://snomed.info/id/56717001\">56717001</a></td><td>Tuberculosis</td></tr></table></li></ul></div>"
+  ] ; # 
+  fhir:url [ fhir:v "http://fhir.health.gov.lk/ips/ValueSet/vs-reason-for-encounter"^^xsd:anyURI] ; # 
+  fhir:version [ fhir:v "0.1.0"] ; # 
+  fhir:name [ fhir:v "VSReasonForEncounter"] ; # 
+  fhir:title [ fhir:v "Reason For Encounter"] ; # 
+  fhir:status [ fhir:v "active"] ; # 
+  fhir:experimental [ fhir:v "false"^^xsd:boolean] ; # 
+  fhir:date [ fhir:v "2024-05-21T08:44:33+00:00"^^xsd:dateTime] ; # 
+  fhir:publisher [ fhir:v "Ministry of Health, Sri Lanka"] ; # 
+  fhir:contact ( [
+     fhir:name [ fhir:v "Ministry of Health, Sri Lanka" ] ;
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "https://www.health.gov.lk/" ]
+     ] [
+       fhir:system [ fhir:v "email" ] ;
+       fhir:value [ fhir:v "digitalhealth@health.gov.lk" ]
+     ] )
+  ] [
+     fhir:name [ fhir:v "Director, Health Information" ] ;
+     fhir:telecom ( [
+       fhir:system [ fhir:v "email" ] ;
+       fhir:value [ fhir:v "digitalhealth@health.gov.lk" ] ;
+       fhir:use [ fhir:v "work" ]
+     ] )
+  ] ) ; # 
+  fhir:description [ fhir:v "Encounter reasons."] ; # 
+  fhir:jurisdiction ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://unstats.un.org/unsd/methods/m49/m49.htm"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "001" ] ;
+       fhir:display [ fhir:v "World" ]
+     ] )
+  ] ) ; # 
+  fhir:compose [
+     fhir:include ( [
+       fhir:system [ fhir:v "http://snomed.info/sct"^^xsd:anyURI ] ;
+       fhir:concept ( [
+         fhir:code [ fhir:v "73438004" ] ;
+         fhir:display [ fhir:v "Unemployed" ]
+       ] [
+         fhir:code [ fhir:v "23406007" ] ;
+         fhir:display [ fhir:v "Fracture of upper limb" ]
+       ] [
+         fhir:code [ fhir:v "4506002" ] ;
+         fhir:display [ fhir:v "Educational problem" ]
+       ] [
+         fhir:code [ fhir:v "46866001" ] ;
+         fhir:display [ fhir:v "Fracture of lower limb" ]
+       ] [
+         fhir:code [ fhir:v "161152002" ] ;
+         fhir:display [ fhir:v "Social problem" ]
+       ] [
+         fhir:code [ fhir:v "125599006" ] ;
+         fhir:display [ fhir:v "Injury of hand" ]
+       ] [
+         fhir:code [ fhir:v "22268004" ] ;
+         fhir:display [ fhir:v "Legal problem" ]
+       ] [
+         fhir:code [ fhir:v "125604000" ] ;
+         fhir:display [ fhir:v "Injury of foot" ]
+       ] [
+         fhir:code [ fhir:v "371128008" ] ;
+         fhir:display [ fhir:v "Occupational injury" ]
+       ] [
+         fhir:code [ fhir:v "410122002" ] ;
+         fhir:display [ fhir:v "Assessment of compliance with medication regimen" ]
+       ] [
+         fhir:code [ fhir:v "1041000119100" ] ;
+         fhir:display [ fhir:v "Partner relationship problem" ]
+       ] [
+         fhir:code [ fhir:v "27355003" ] ;
+         fhir:display [ fhir:v "Toothache" ]
+       ] [
+         fhir:code [ fhir:v "416956002" ] ;
+         fhir:display [ fhir:v "Undifferentiated inflammatory polyarthritis" ]
+       ] [
+         fhir:code [ fhir:v "266971002" ] ;
+         fhir:display [ fhir:v "Spouse unwell" ]
+       ] [
+         fhir:code [ fhir:v "699462004" ] ;
+         fhir:display [ fhir:v "Monoarthritis" ]
+       ] [
+         fhir:code [ fhir:v "398033008" ] ;
+         fhir:display [ fhir:v "Death of relative" ]
+       ] [
+         fhir:code [ fhir:v "267102003" ] ;
+         fhir:display [ fhir:v "Sore throat" ]
+       ] [
+         fhir:code [ fhir:v "737368006" ] ;
+         fhir:display [ fhir:v "Caregiver-child relationship problem" ]
+       ] [
+         fhir:code [ fhir:v "299709002" ] ;
+         fhir:display [ fhir:v "Dental abscess" ]
+       ] [
+         fhir:code [ fhir:v "275142008" ] ;
+         fhir:display [ fhir:v "Sick child" ]
+       ] [
+         fhir:code [ fhir:v "21522001" ] ;
+         fhir:display [ fhir:v "Abdominal pain" ]
+       ] [
+         fhir:code [ fhir:v "416462003" ] ;
+         fhir:display [ fhir:v "Wound" ]
+       ] [
+         fhir:code [ fhir:v "102171000119108" ] ;
+         fhir:display [ fhir:v "Relationship problems with family members due to medical condition" ]
+       ] [
+         fhir:code [ fhir:v "277843001" ] ;
+         fhir:display [ fhir:v "Problem behavior" ]
+       ] [
+         fhir:code [ fhir:v "128477000" ] ;
+         fhir:display [ fhir:v "Abscess" ]
+       ] [
+         fhir:code [ fhir:v "266966009" ] ;
+         fhir:display [ fhir:v "Family illness" ]
+       ] [
+         fhir:code [ fhir:v "128045006" ] ;
+         fhir:display [ fhir:v "Cellulitis" ]
+       ] [
+         fhir:code [ fhir:v "26237000" ] ;
+         fhir:display [ fhir:v "Ankle edema" ]
+       ] [
+         fhir:code [ fhir:v "386692008" ] ;
+         fhir:display [ fhir:v "Menorrhagia" ]
+       ] [
+         fhir:code [ fhir:v "224154000" ] ;
+         fhir:display [ fhir:v "Relationship with neighbors" ]
+       ] [
+         fhir:code [ fhir:v "40930008" ] ;
+         fhir:display [ fhir:v "Hypothyroidism" ]
+       ] [
+         fhir:code [ fhir:v "52684005" ] ;
+         fhir:display [ fhir:v "Assault" ]
+       ] [
+         fhir:code [ fhir:v "47933007" ] ;
+         fhir:display [ fhir:v "Foot pain" ]
+       ] [
+         fhir:code [ fhir:v "279039007" ] ;
+         fhir:display [ fhir:v "Low back pain" ]
+       ] [
+         fhir:code [ fhir:v "21134002" ] ;
+         fhir:display [ fhir:v "Disability" ]
+       ] [
+         fhir:code [ fhir:v "2733002" ] ;
+         fhir:display [ fhir:v "Heel pain" ]
+       ] [
+         fhir:code [ fhir:v "193462001" ] ;
+         fhir:display [ fhir:v "Insomnia" ]
+       ] [
+         fhir:code [ fhir:v "82272006" ] ;
+         fhir:display [ fhir:v "Common cold" ]
+       ] [
+         fhir:code [ fhir:v "126907002" ] ;
+         fhir:display [ fhir:v "Neoplasm of female genital organ" ]
+       ] [
+         fhir:code [ fhir:v "63650001" ] ;
+         fhir:display [ fhir:v "Cholera" ]
+       ] [
+         fhir:code [ fhir:v "127277000" ] ;
+         fhir:display [ fhir:v "Injury of female genital system" ]
+       ] [
+         fhir:code [ fhir:v "58750007" ] ;
+         fhir:display [ fhir:v "Plague" ]
+       ] [
+         fhir:code [ fhir:v "20927009" ] ;
+         fhir:display [ fhir:v "Dengue hemorrhagic fever" ]
+       ] [
+         fhir:code [ fhir:v "18973006" ] ;
+         fhir:display [ fhir:v "Uterovaginal prolapse" ]
+       ] [
+         fhir:code [ fhir:v "27431007" ] ;
+         fhir:display [ fhir:v "Fibrocystic disease of breast" ]
+       ] [
+         fhir:code [ fhir:v "397430003" ] ;
+         fhir:display [ fhir:v "Diphtheria due to Corynebacterium diphtheriae" ]
+       ] [
+         fhir:code [ fhir:v "82639001" ] ;
+         fhir:display [ fhir:v "Premenstrual tension syndrome" ]
+       ] [
+         fhir:code [ fhir:v "46799006" ] ;
+         fhir:display [ fhir:v "Dysenteric diarrhea" ]
+       ] [
+         fhir:code [ fhir:v "33839006" ] ;
+         fhir:display [ fhir:v "Genital herpes simplex" ]
+       ] [
+         fhir:code [ fhir:v "45170000" ] ;
+         fhir:display [ fhir:v "Encephalitis" ]
+       ] [
+         fhir:code [ fhir:v "240542006" ] ;
+         fhir:display [ fhir:v "Condyloma acuminatum of the anogenital region" ]
+       ] [
+         fhir:code [ fhir:v "399907009" ] ;
+         fhir:display [ fhir:v "Animal bite wound" ]
+       ] [
+         fhir:code [ fhir:v "105629000" ] ;
+         fhir:display [ fhir:v "Chlamydial infection" ]
+       ] [
+         fhir:code [ fhir:v "398508004" ] ;
+         fhir:display [ fhir:v "Salmonella enterica subsp. enterica" ]
+       ] [
+         fhir:code [ fhir:v "312196000" ] ;
+         fhir:display [ fhir:v "Female genital infection" ]
+       ] [
+         fhir:code [ fhir:v "75258004" ] ;
+         fhir:display [ fhir:v "Food poisoning" ]
+       ] [
+         fhir:code [ fhir:v "285375003" ] ;
+         fhir:display [ fhir:v "Pain in penis" ]
+       ] [
+         fhir:code [ fhir:v "14168008" ] ;
+         fhir:display [ fhir:v "Rabies" ]
+       ] [
+         fhir:code [ fhir:v "63901009" ] ;
+         fhir:display [ fhir:v "Pain in testicle" ]
+       ] [
+         fhir:code [ fhir:v "77377001" ] ;
+         fhir:display [ fhir:v "Leptospirosis" ]
+       ] [
+         fhir:code [ fhir:v "9957009" ] ;
+         fhir:display [ fhir:v "Urethral discharge" ]
+       ] [
+         fhir:code [ fhir:v "704425001" ] ;
+         fhir:display [ fhir:v "Chronic fever" ]
+       ] [
+         fhir:code [ fhir:v "43424001" ] ;
+         fhir:display [ fhir:v "Tetanus neonatorum" ]
+       ] [
+         fhir:code [ fhir:v "118238000" ] ;
+         fhir:display [ fhir:v "Urogenital finding" ]
+       ] [
+         fhir:code [ fhir:v "303497001" ] ;
+         fhir:display [ fhir:v "Urogenital implant" ]
+       ] [
+         fhir:code [ fhir:v "4834000" ] ;
+         fhir:display [ fhir:v "Typhoid fever" ]
+       ] [
+         fhir:code [ fhir:v "840544004" ] ;
+         fhir:display [ fhir:v "Suspected COVID-19" ]
+       ] [
+         fhir:code [ fhir:v "11441004" ] ;
+         fhir:display [ fhir:v "Prostatism" ]
+       ] [
+         fhir:code [ fhir:v "1119302008" ] ;
+         fhir:display [ fhir:v "Acute COVID-19" ]
+       ] [
+         fhir:code [ fhir:v "860914002" ] ;
+         fhir:display [ fhir:v "Erectile dysfunction" ]
+       ] [
+         fhir:code [ fhir:v "840539006" ] ;
+         fhir:display [ fhir:v "COVID-19" ]
+       ] [
+         fhir:code [ fhir:v "162206003" ] ;
+         fhir:display [ fhir:v "Sexual symptom" ]
+       ] [
+         fhir:code [ fhir:v "161587009" ] ;
+         fhir:display [ fhir:v "H/O: head injury" ]
+       ] [
+         fhir:code [ fhir:v "2904007" ] ;
+         fhir:display [ fhir:v "Male infertility" ]
+       ] [
+         fhir:code [ fhir:v "32485007" ] ;
+         fhir:display [ fhir:v "Hospital admission" ]
+       ] [
+         fhir:code [ fhir:v "22523008" ] ;
+         fhir:display [ fhir:v "Vasectomy" ]
+       ] [
+         fhir:code [ fhir:v "302497006" ] ;
+         fhir:display [ fhir:v "Hemodialysis" ]
+       ] [
+         fhir:code [ fhir:v "389095005" ] ;
+         fhir:display [ fhir:v "Contraception care" ]
+       ] [
+         fhir:code [ fhir:v "441662001" ] ;
+         fhir:display [ fhir:v "Diagnostic imaging department" ]
+       ] [
+         fhir:code [ fhir:v "290085007" ] ;
+         fhir:display [ fhir:v "Breast problem" ]
+       ] [
+         fhir:code [ fhir:v "724452000" ] ;
+         fhir:display [ fhir:v "Fear of sexual dysfunction" ]
+       ] [
+         fhir:code [ fhir:v "212962007" ] ;
+         fhir:display [ fhir:v "Drowning and non-fatal immersion" ]
+       ] [
+         fhir:code [ fhir:v "247868009" ] ;
+         fhir:display [ fhir:v "Fear of contracting sexually transmitted disease" ]
+       ] [
+         fhir:code [ fhir:v "473011001" ] ;
+         fhir:display [ fhir:v "Allergic condition" ]
+       ] [
+         fhir:code [ fhir:v "724450008" ] ;
+         fhir:display [ fhir:v "Fear of genital cancer" ]
+       ] [
+         fhir:code [ fhir:v "75478009" ] ;
+         fhir:display [ fhir:v "Poisoning" ]
+       ] [
+         fhir:code [ fhir:v "724448000" ] ;
+         fhir:display [ fhir:v "Fear of genital disease" ]
+       ] [
+         fhir:code [ fhir:v "23697004" ] ;
+         fhir:display [ fhir:v "Crush syndrome" ]
+       ] [
+         fhir:code [ fhir:v "218164000" ] ;
+         fhir:display [ fhir:v "Accident caused by electric current" ]
+       ] [
+         fhir:code [ fhir:v "76272004" ] ;
+         fhir:display [ fhir:v "Syphilis" ]
+       ] [
+         fhir:code [ fhir:v "68704007" ] ;
+         fhir:display [ fhir:v "Neisseria gonorrhoeae" ]
+       ] [
+         fhir:code [ fhir:v "9713002" ] ;
+         fhir:display [ fhir:v "Prostatitis" ]
+       ] [
+         fhir:code [ fhir:v "197983000" ] ;
+         fhir:display [ fhir:v "Orchitis and epididymitis" ]
+       ] [
+         fhir:code [ fhir:v "44882003" ] ;
+         fhir:display [ fhir:v "Balanitis" ]
+       ] [
+         fhir:code [ fhir:v "214031005" ] ;
+         fhir:display [ fhir:v "Motor vehicle traffic accident" ]
+       ] [
+         fhir:code [ fhir:v "219346009" ] ;
+         fhir:display [ fhir:v "Injury of unknown intent due to fall from height" ]
+       ] [
+         fhir:code [ fhir:v "427849003" ] ;
+         fhir:display [ fhir:v "Fall on hard surface" ]
+       ] [
+         fhir:code [ fhir:v "363515000" ] ;
+         fhir:display [ fhir:v "Malignant tumor of male genital organ" ]
+       ] [
+         fhir:code [ fhir:v "312608009" ] ;
+         fhir:display [ fhir:v "Laceration - injury" ]
+       ] [
+         fhir:code [ fhir:v "92207002" ] ;
+         fhir:display [ fhir:v "Benign neoplasm of male genital organ" ]
+       ] [
+         fhir:code [ fhir:v "262917005" ] ;
+         fhir:display [ fhir:v "Injury of male genital organ" ]
+       ] [
+         fhir:code [ fhir:v "449826002" ] ;
+         fhir:display [ fhir:v "Phimosis" ]
+       ] [
+         fhir:code [ fhir:v "242869008" ] ;
+         fhir:display [ fhir:v "Assault by firearms" ]
+       ] [
+         fhir:code [ fhir:v "416010008" ] ;
+         fhir:display [ fhir:v "Hypospadias" ]
+       ] [
+         fhir:code [ fhir:v "425359009" ] ;
+         fhir:display [ fhir:v "Blunt injury" ]
+       ] [
+         fhir:code [ fhir:v "204878001" ] ;
+         fhir:display [ fhir:v "Undescended testicle" ]
+       ] [
+         fhir:code [ fhir:v "312609001" ] ;
+         fhir:display [ fhir:v "Puncture wound - injury" ]
+       ] [
+         fhir:code [ fhir:v "4406004" ] ;
+         fhir:display [ fhir:v "Congenital anomaly of male genital system" ]
+       ] [
+         fhir:code [ fhir:v "276853009" ] ;
+         fhir:display [ fhir:v "Self inflicted injury" ]
+       ] [
+         fhir:code [ fhir:v "266569009" ] ;
+         fhir:display [ fhir:v "Benign prostatic hyperplasia" ]
+       ] [
+         fhir:code [ fhir:v "26614003" ] ;
+         fhir:display [ fhir:v "Hydrocele of testis" ]
+       ] [
+         fhir:code [ fhir:v "64557000" ] ;
+         fhir:display [ fhir:v "Disorder of male genital organ" ]
+       ] [
+         fhir:code [ fhir:v "82271004" ] ;
+         fhir:display [ fhir:v "Injury of head" ]
+       ] [
+         fhir:code [ fhir:v "160932005" ] ;
+         fhir:display [ fhir:v "Financial problem" ]
+       ] [
+         fhir:code [ fhir:v "1078229009" ] ;
+         fhir:display [ fhir:v "Food security" ]
+       ] [
+         fhir:code [ fhir:v "105531004" ] ;
+         fhir:display [ fhir:v "Housing problem" ]
+       ] [
+         fhir:code [ fhir:v "125665001" ] ;
+         fhir:display [ fhir:v "Crushing injury" ]
+       ] [
+         fhir:code [ fhir:v "75148009" ] ;
+         fhir:display [ fhir:v "Employment problem" ]
+       ] [
+         fhir:code [ fhir:v "418908004" ] ;
+         fhir:display [ fhir:v "Exposure to electric current" ]
+       ] [
+         fhir:code [ fhir:v "58532003" ] ;
+         fhir:display [ fhir:v "Unwanted pregnancy" ]
+       ] [
+         fhir:code [ fhir:v "723118001" ] ;
+         fhir:display [ fhir:v "Fear of musculoskeletal cancer" ]
+       ] [
+         fhir:code [ fhir:v "34801009" ] ;
+         fhir:display [ fhir:v "Ectopic pregnancy" ]
+       ] [
+         fhir:code [ fhir:v "398254007" ] ;
+         fhir:display [ fhir:v "Pre-eclampsia" ]
+       ] [
+         fhir:code [ fhir:v "17369002" ] ;
+         fhir:display [ fhir:v "Miscarriage" ]
+       ] [
+         fhir:code [ fhir:v "129890008" ] ;
+         fhir:display [ fhir:v "Musculoskeletal alteration" ]
+       ] [
+         fhir:code [ fhir:v "75857000" ] ;
+         fhir:display [ fhir:v "Fracture of radius AND ulna" ]
+       ] [
+         fhir:code [ fhir:v "237364002" ] ;
+         fhir:display [ fhir:v "Stillbirth" ]
+       ] [
+         fhir:code [ fhir:v "414293001" ] ;
+         fhir:display [ fhir:v "Fracture of tibia AND fibula" ]
+       ] [
+         fhir:code [ fhir:v "45757002" ] ;
+         fhir:display [ fhir:v "Labor problem" ]
+       ] [
+         fhir:code [ fhir:v "15574005" ] ;
+         fhir:display [ fhir:v "Fracture of foot" ]
+       ] [
+         fhir:code [ fhir:v "71620000" ] ;
+         fhir:display [ fhir:v "Fracture of femur" ]
+       ] [
+         fhir:code [ fhir:v "47200007" ] ;
+         fhir:display [ fhir:v "High risk pregnancy" ]
+       ] [
+         fhir:code [ fhir:v "267004000" ] ;
+         fhir:display [ fhir:v "H/O: musculoskeletal disease" ]
+       ] [
+         fhir:code [ fhir:v "11687002" ] ;
+         fhir:display [ fhir:v "Gestational diabetes mellitus" ]
+       ] [
+         fhir:code [ fhir:v "428281000" ] ;
+         fhir:display [ fhir:v "Malignant neoplasm of bone" ]
+       ] [
+         fhir:code [ fhir:v "35874009" ] ;
+         fhir:display [ fhir:v "Normal labor" ]
+       ] [
+         fhir:code [ fhir:v "700038005" ] ;
+         fhir:display [ fhir:v "Mastitis associated with lactation" ]
+       ] [
+         fhir:code [ fhir:v "125605004" ] ;
+         fhir:display [ fhir:v "Fracture of bone" ]
+       ] [
+         fhir:code [ fhir:v "79604008" ] ;
+         fhir:display [ fhir:v "Disorder of breast" ]
+       ] [
+         fhir:code [ fhir:v "44465007" ] ;
+         fhir:display [ fhir:v "Sprain of ankle" ]
+       ] [
+         fhir:code [ fhir:v "54888009" ] ;
+         fhir:display [ fhir:v "Sprain of knee" ]
+       ] [
+         fhir:code [ fhir:v "80113008" ] ;
+         fhir:display [ fhir:v "Complication of the puerperium" ]
+       ] [
+         fhir:code [ fhir:v "198609003" ] ;
+         fhir:display [ fhir:v "Complication of pregnancy, childbirth and/or puerperium" ]
+       ] [
+         fhir:code [ fhir:v "105611005" ] ;
+         fhir:display [ fhir:v "Sprain of joint" ]
+       ] [
+         fhir:code [ fhir:v "108367008" ] ;
+         fhir:display [ fhir:v "Dislocation of joint" ]
+       ] [
+         fhir:code [ fhir:v "105606008" ] ;
+         fhir:display [ fhir:v "Injury of musculoskeletal system" ]
+       ] [
+         fhir:code [ fhir:v "266599000" ] ;
+         fhir:display [ fhir:v "Dysmenorrhea" ]
+       ] [
+         fhir:code [ fhir:v "118939000" ] ;
+         fhir:display [ fhir:v "Disorder of neck" ]
+       ] [
+         fhir:code [ fhir:v "71315007" ] ;
+         fhir:display [ fhir:v "Dyspareunia" ]
+       ] [
+         fhir:code [ fhir:v "278860009" ] ;
+         fhir:display [ fhir:v "Chronic low back pain" ]
+       ] [
+         fhir:code [ fhir:v "64996003" ] ;
+         fhir:display [ fhir:v "Irregular intermenstrual bleeding" ]
+       ] [
+         fhir:code [ fhir:v "405773007" ] ;
+         fhir:display [ fhir:v "Kyphoscoliosis deformity of spine" ]
+       ] [
+         fhir:code [ fhir:v "364306002" ] ;
+         fhir:display [ fhir:v "Frequency of menstruation" ]
+       ] [
+         fhir:code [ fhir:v "84017003" ] ;
+         fhir:display [ fhir:v "Bursitis" ]
+       ] [
+         fhir:code [ fhir:v "237132003" ] ;
+         fhir:display [ fhir:v "Intermenstrual bleeding - regular" ]
+       ] [
+         fhir:code [ fhir:v "239791005" ] ;
+         fhir:display [ fhir:v "Seropositive rheumatoid arthritis" ]
+       ] [
+         fhir:code [ fhir:v "10885003" ] ;
+         fhir:display [ fhir:v "Premenstrual symptom" ]
+       ] [
+         fhir:code [ fhir:v "239872002" ] ;
+         fhir:display [ fhir:v "Osteoarthritis of hip" ]
+       ] [
+         fhir:code [ fhir:v "161718009" ] ;
+         fhir:display [ fhir:v "Menstruation postponed" ]
+       ] [
+         fhir:code [ fhir:v "21801002" ] ;
+         fhir:display [ fhir:v "Menopausal symptom" ]
+       ] [
+         fhir:code [ fhir:v "76742009" ] ;
+         fhir:display [ fhir:v "Postmenopausal bleeding" ]
+       ] [
+         fhir:code [ fhir:v "274139008" ] ;
+         fhir:display [ fhir:v "Shoulder syndrome" ]
+       ] [
+         fhir:code [ fhir:v "48880000" ] ;
+         fhir:display [ fhir:v "Postcoital bleeding" ]
+       ] [
+         fhir:code [ fhir:v "202855006" ] ;
+         fhir:display [ fhir:v "Lateral epicondylitis" ]
+       ] [
+         fhir:code [ fhir:v "271939006" ] ;
+         fhir:display [ fhir:v "Vaginal discharge" ]
+       ] [
+         fhir:code [ fhir:v "64859006" ] ;
+         fhir:display [ fhir:v "Osteoporosis" ]
+       ] [
+         fhir:code [ fhir:v "299328006" ] ;
+         fhir:display [ fhir:v "Deformity of knee joint" ]
+       ] [
+         fhir:code [ fhir:v "363229000" ] ;
+         fhir:display [ fhir:v "Neoplasm of musculoskeletal system" ]
+       ] [
+         fhir:code [ fhir:v "53430007" ] ;
+         fhir:display [ fhir:v "Pain of breast" ]
+       ] [
+         fhir:code [ fhir:v "88562000" ] ;
+         fhir:display [ fhir:v "Acquired deformity of ankle AND/OR foot" ]
+       ] [
+         fhir:code [ fhir:v "89164003" ] ;
+         fhir:display [ fhir:v "Breast lump" ]
+       ] [
+         fhir:code [ fhir:v "290119008" ] ;
+         fhir:display [ fhir:v "Nipple problem" ]
+       ] [
+         fhir:code [ fhir:v "724451007" ] ;
+         fhir:display [ fhir:v "Fear of breast cancer" ]
+       ] [
+         fhir:code [ fhir:v "724449008" ] ;
+         fhir:display [ fhir:v "Fear of breast disease" ]
+       ] [
+         fhir:code [ fhir:v "386661006" ] ;
+         fhir:display [ fhir:v "Fever" ]
+       ] [
+         fhir:code [ fhir:v "35089004" ] ;
+         fhir:display [ fhir:v "Urogenital infection by Trichomonas vaginalis" ]
+       ] [
+         fhir:code [ fhir:v "200767005" ] ;
+         fhir:display [ fhir:v "Pityriasis simplex" ]
+       ] [
+         fhir:code [ fhir:v "34630004" ] ;
+         fhir:display [ fhir:v "Pityriasis" ]
+       ] [
+         fhir:code [ fhir:v "198130006" ] ;
+         fhir:display [ fhir:v "Female pelvic inflammatory disease" ]
+       ] [
+         fhir:code [ fhir:v "405729008" ] ;
+         fhir:display [ fhir:v "Hematochezia" ]
+       ] [
+         fhir:code [ fhir:v "363354003" ] ;
+         fhir:display [ fhir:v "Malignant tumor of cervix" ]
+       ] [
+         fhir:code [ fhir:v "10601006" ] ;
+         fhir:display [ fhir:v "Pain in lower limb" ]
+       ] [
+         fhir:code [ fhir:v "372064008" ] ;
+         fhir:display [ fhir:v "Malignant neoplasm of female breast" ]
+       ] [
+         fhir:code [ fhir:v "28442001" ] ;
+         fhir:display [ fhir:v "Polyuria" ]
+       ] [
+         fhir:code [ fhir:v "95315005" ] ;
+         fhir:display [ fhir:v "Uterine leiomyoma" ]
+       ] [
+         fhir:code [ fhir:v "202882003" ] ;
+         fhir:display [ fhir:v "Plantar fasciitis" ]
+       ] [
+         fhir:code [ fhir:v "92102001" ] ;
+         fhir:display [ fhir:v "Benign neoplasm of female breast" ]
+       ] [
+         fhir:code [ fhir:v "70076002" ] ;
+         fhir:display [ fhir:v "Rhinitis" ]
+       ] [
+         fhir:code [ fhir:v "92103006" ] ;
+         fhir:display [ fhir:v "Benign neoplasm of female genital organ" ]
+       ] [
+         fhir:code [ fhir:v "264287008" ] ;
+         fhir:display [ fhir:v "Animal dander" ]
+       ] [
+         fhir:code [ fhir:v "44054006" ] ;
+         fhir:display [ fhir:v "Type 2 diabetes mellitus" ]
+       ] [
+         fhir:code [ fhir:v "80313002" ] ;
+         fhir:display [ fhir:v "Palpitations" ]
+       ] [
+         fhir:code [ fhir:v "47563007" ] ;
+         fhir:display [ fhir:v "Nutritional deficiency state" ]
+       ] [
+         fhir:code [ fhir:v "171224000" ] ;
+         fhir:display [ fhir:v "Risk factors present at heart disease screening" ]
+       ] [
+         fhir:code [ fhir:v "49650001" ] ;
+         fhir:display [ fhir:v "Dysuria" ]
+       ] [
+         fhir:code [ fhir:v "34436003" ] ;
+         fhir:display [ fhir:v "Blood in urine" ]
+       ] [
+         fhir:code [ fhir:v "249274008" ] ;
+         fhir:display [ fhir:v "Urinary symptoms" ]
+       ] [
+         fhir:code [ fhir:v "162116003" ] ;
+         fhir:display [ fhir:v "Increased frequency of urination" ]
+       ] [
+         fhir:code [ fhir:v "723086009" ] ;
+         fhir:display [ fhir:v "Fear of heart disease" ]
+       ] [
+         fhir:code [ fhir:v "165232002" ] ;
+         fhir:display [ fhir:v "Urinary incontinence" ]
+       ] [
+         fhir:code [ fhir:v "102932008" ] ;
+         fhir:display [ fhir:v "Fear of hypertension" ]
+       ] [
+         fhir:code [ fhir:v "723087000" ] ;
+         fhir:display [ fhir:v "Fear of cardiovascular disease" ]
+       ] [
+         fhir:code [ fhir:v "197941005" ] ;
+         fhir:display [ fhir:v "Frank hematuria" ]
+       ] [
+         fhir:code [ fhir:v "42030000" ] ;
+         fhir:display [ fhir:v "Disorder of the genitourinary system" ]
+       ] [
+         fhir:code [ fhir:v "49601007" ] ;
+         fhir:display [ fhir:v "Disorder of cardiovascular system" ]
+       ] [
+         fhir:code [ fhir:v "236648008" ] ;
+         fhir:display [ fhir:v "Acute retention of urine" ]
+       ] [
+         fhir:code [ fhir:v "42643001" ] ;
+         fhir:display [ fhir:v "Disorder of bladder" ]
+       ] [
+         fhir:code [ fhir:v "23685000" ] ;
+         fhir:display [ fhir:v "Rheumatic heart disease" ]
+       ] [
+         fhir:code [ fhir:v "387842002" ] ;
+         fhir:display [ fhir:v "Neoplasm of heart" ]
+       ] [
+         fhir:code [ fhir:v "9904008" ] ;
+         fhir:display [ fhir:v "Congenital anomaly of cardiovascular system" ]
+       ] [
+         fhir:code [ fhir:v "735688001" ] ;
+         fhir:display [ fhir:v "Fear of urinary disease" ]
+       ] [
+         fhir:code [ fhir:v "414545008" ] ;
+         fhir:display [ fhir:v "Ischemic heart disease" ]
+       ] [
+         fhir:code [ fhir:v "45816000" ] ;
+         fhir:display [ fhir:v "Pyelonephritis" ]
+       ] [
+         fhir:code [ fhir:v "84114007" ] ;
+         fhir:display [ fhir:v "Heart failure" ]
+       ] [
+         fhir:code [ fhir:v "38822007" ] ;
+         fhir:display [ fhir:v "Cystitis" ]
+       ] [
+         fhir:code [ fhir:v "49436004" ] ;
+         fhir:display [ fhir:v "Atrial fibrillation" ]
+       ] [
+         fhir:code [ fhir:v "12026006" ] ;
+         fhir:display [ fhir:v "Paroxysmal tachycardia" ]
+       ] [
+         fhir:code [ fhir:v "31822004" ] ;
+         fhir:display [ fhir:v "Urethritis" ]
+       ] [
+         fhir:code [ fhir:v "363518003" ] ;
+         fhir:display [ fhir:v "Malignant tumor of kidney" ]
+       ] [
+         fhir:code [ fhir:v "698247007" ] ;
+         fhir:display [ fhir:v "Cardiac arrhythmia" ]
+       ] [
+         fhir:code [ fhir:v "399326009" ] ;
+         fhir:display [ fhir:v "Malignant tumor of urinary bladder" ]
+       ] [
+         fhir:code [ fhir:v "88610006" ] ;
+         fhir:display [ fhir:v "Heart murmur" ]
+       ] [
+         fhir:code [ fhir:v "419052002" ] ;
+         fhir:display [ fhir:v "Malignant tumor of urinary system" ]
+       ] [
+         fhir:code [ fhir:v "70995007" ] ;
+         fhir:display [ fhir:v "Pulmonary hypertension" ]
+       ] [
+         fhir:code [ fhir:v "92468007" ] ;
+         fhir:display [ fhir:v "Benign neoplasm of urinary system" ]
+       ] [
+         fhir:code [ fhir:v "368009" ] ;
+         fhir:display [ fhir:v "Heart valve disorder" ]
+       ] [
+         fhir:code [ fhir:v "254913005" ] ;
+         fhir:display [ fhir:v "Neoplasm of urinary tract proper" ]
+       ] [
+         fhir:code [ fhir:v "56265001" ] ;
+         fhir:display [ fhir:v "Heart disease" ]
+       ] [
+         fhir:code [ fhir:v "262890007" ] ;
+         fhir:display [ fhir:v "Injury of urinary tract" ]
+       ] [
+         fhir:code [ fhir:v "24184005" ] ;
+         fhir:display [ fhir:v "Elevated blood pressure" ]
+       ] [
+         fhir:code [ fhir:v "118642009" ] ;
+         fhir:display [ fhir:v "Congenital anomaly of the urinary tract proper" ]
+       ] [
+         fhir:code [ fhir:v "194767001" ] ;
+         fhir:display [ fhir:v "Benign hypertensive heart disease with congestive cardiac failure" ]
+       ] [
+         fhir:code [ fhir:v "10725009" ] ;
+         fhir:display [ fhir:v "Benign hypertension" ]
+       ] [
+         fhir:code [ fhir:v "36171008" ] ;
+         fhir:display [ fhir:v "Glomerulonephritis" ]
+       ] [
+         fhir:code [ fhir:v "32482005" ] ;
+         fhir:display [ fhir:v "Orthostatic proteinuria" ]
+       ] [
+         fhir:code [ fhir:v "28651003" ] ;
+         fhir:display [ fhir:v "Orthostatic hypotension" ]
+       ] [
+         fhir:code [ fhir:v "20342001" ] ;
+         fhir:display [ fhir:v "Calculus in urethra" ]
+       ] [
+         fhir:code [ fhir:v "266257000" ] ;
+         fhir:display [ fhir:v "Transient cerebral ischemia" ]
+       ] [
+         fhir:code [ fhir:v "171251002" ] ;
+         fhir:display [ fhir:v "Urine screening abnormal" ]
+       ] [
+         fhir:code [ fhir:v "230690007" ] ;
+         fhir:display [ fhir:v "Cerebrovascular accident" ]
+       ] [
+         fhir:code [ fhir:v "431309003" ] ;
+         fhir:display [ fhir:v "Acute urinary tract infection" ]
+       ] [
+         fhir:code [ fhir:v "62914000" ] ;
+         fhir:display [ fhir:v "Cerebrovascular disease" ]
+       ] [
+         fhir:code [ fhir:v "51274000" ] ;
+         fhir:display [ fhir:v "Atherosclerosis of arteries of the extremities" ]
+       ] [
+         fhir:code [ fhir:v "191733007" ] ;
+         fhir:display [ fhir:v "Fear of pregnancy" ]
+       ] [
+         fhir:code [ fhir:v "59282003" ] ;
+         fhir:display [ fhir:v "Pulmonary embolism" ]
+       ] [
+         fhir:code [ fhir:v "34842007" ] ;
+         fhir:display [ fhir:v "Antepartum hemorrhage" ]
+       ] [
+         fhir:code [ fhir:v "64156001" ] ;
+         fhir:display [ fhir:v "Thrombophlebitis" ]
+       ] [
+         fhir:code [ fhir:v "90325002" ] ;
+         fhir:display [ fhir:v "Vomiting of pregnancy" ]
+       ] [
+         fhir:code [ fhir:v "72866009" ] ;
+         fhir:display [ fhir:v "Varicose veins of lower extremity" ]
+       ] [
+         fhir:code [ fhir:v "275813002" ] ;
+         fhir:display [ fhir:v "Emergency contraception" ]
+       ] [
+         fhir:code [ fhir:v "70153002" ] ;
+         fhir:display [ fhir:v "Hemorrhoids" ]
+       ] [
+         fhir:code [ fhir:v "5935008" ] ;
+         fhir:display [ fhir:v "Uses oral contraception" ]
+       ] [
+         fhir:code [ fhir:v "266995000" ] ;
+         fhir:display [ fhir:v "H/O: cardiovascular disease" ]
+       ] [
+         fhir:code [ fhir:v "312079003" ] ;
+         fhir:display [ fhir:v "Uses intrauterine contraception" ]
+       ] [
+         fhir:code [ fhir:v "81680005" ] ;
+         fhir:display [ fhir:v "Neck pain" ]
+       ] [
+         fhir:code [ fhir:v "60890002" ] ;
+         fhir:display [ fhir:v "Female sterilization" ]
+       ] [
+         fhir:code [ fhir:v "302258001" ] ;
+         fhir:display [ fhir:v "Back problem" ]
+       ] [
+         fhir:code [ fhir:v "161798008" ] ;
+         fhir:display [ fhir:v "H/O: infertility - female" ]
+       ] [
+         fhir:code [ fhir:v "161920001" ] ;
+         fhir:display [ fhir:v "Respiratory symptom" ]
+       ] [
+         fhir:code [ fhir:v "47821001" ] ;
+         fhir:display [ fhir:v "Postpartum hemorrhage" ]
+       ] [
+         fhir:code [ fhir:v "274667000" ] ;
+         fhir:display [ fhir:v "Jaw pain" ]
+       ] [
+         fhir:code [ fhir:v "58219009" ] ;
+         fhir:display [ fhir:v "Lactation problem" ]
+       ] [
+         fhir:code [ fhir:v "45326000" ] ;
+         fhir:display [ fhir:v "Shoulder pain" ]
+       ] [
+         fhir:code [ fhir:v "443732006" ] ;
+         fhir:display [ fhir:v "Dissatisfaction with body image" ]
+       ] [
+         fhir:code [ fhir:v "717696001" ] ;
+         fhir:display [ fhir:v "Fear of complications of pregnancy" ]
+       ] [
+         fhir:code [ fhir:v "202480001" ] ;
+         fhir:display [ fhir:v "Elbow joint pain" ]
+       ] [
+         fhir:code [ fhir:v "202482009" ] ;
+         fhir:display [ fhir:v "Wrist joint pain" ]
+       ] [
+         fhir:code [ fhir:v "118185001" ] ;
+         fhir:display [ fhir:v "Finding related to pregnancy" ]
+       ] [
+         fhir:code [ fhir:v "53057004" ] ;
+         fhir:display [ fhir:v "Hand pain" ]
+       ] [
+         fhir:code [ fhir:v "49218002" ] ;
+         fhir:display [ fhir:v "Hip pain" ]
+       ] [
+         fhir:code [ fhir:v "2858002" ] ;
+         fhir:display [ fhir:v "Puerperal sepsis" ]
+       ] [
+         fhir:code [ fhir:v "78514002" ] ;
+         fhir:display [ fhir:v "Thigh pain" ]
+       ] [
+         fhir:code [ fhir:v "1003721002" ] ;
+         fhir:display [ fhir:v "Pain of joint of knee" ]
+       ] [
+         fhir:code [ fhir:v "202490009" ] ;
+         fhir:display [ fhir:v "Ankle joint pain" ]
+       ] [
+         fhir:code [ fhir:v "426997005" ] ;
+         fhir:display [ fhir:v "Traumatic injury during pregnancy" ]
+       ] [
+         fhir:code [ fhir:v "68962001" ] ;
+         fhir:display [ fhir:v "Muscle pain" ]
+       ] [
+         fhir:code [ fhir:v "77386006" ] ;
+         fhir:display [ fhir:v "Pregnancy" ]
+       ] [
+         fhir:code [ fhir:v "57676002" ] ;
+         fhir:display [ fhir:v "Joint pain" ]
+       ] [
+         fhir:code [ fhir:v "308926009" ] ;
+         fhir:display [ fhir:v "Skin symptom" ]
+       ] [
+         fhir:code [ fhir:v "443182008" ] ;
+         fhir:display [ fhir:v "Disorder of cornea associated with contact lens" ]
+       ] [
+         fhir:code [ fhir:v "4740000" ] ;
+         fhir:display [ fhir:v "Herpes zoster" ]
+       ] [
+         fhir:code [ fhir:v "88594005" ] ;
+         fhir:display [ fhir:v "Herpes simplex" ]
+       ] [
+         fhir:code [ fhir:v "726403001" ] ;
+         fhir:display [ fhir:v "Fear of eye disease" ]
+       ] [
+         fhir:code [ fhir:v "187214007" ] ;
+         fhir:display [ fhir:v "Acariasis" ]
+       ] [
+         fhir:code [ fhir:v "81000006" ] ;
+         fhir:display [ fhir:v "Pediculosis capitis" ]
+       ] [
+         fhir:code [ fhir:v "308923001" ] ;
+         fhir:display [ fhir:v "Eye symptom" ]
+       ] [
+         fhir:code [ fhir:v "47382004" ] ;
+         fhir:display [ fhir:v "Dermatophytosis" ]
+       ] [
+         fhir:code [ fhir:v "299699004" ] ;
+         fhir:display [ fhir:v "Infective conjunctivitis" ]
+       ] [
+         fhir:code [ fhir:v "49883006" ] ;
+         fhir:display [ fhir:v "Candidiasis of skin" ]
+       ] [
+         fhir:code [ fhir:v "473460002" ] ;
+         fhir:display [ fhir:v "Allergic conjunctivitis" ]
+       ] [
+         fhir:code [ fhir:v "108365000" ] ;
+         fhir:display [ fhir:v "Infection of skin" ]
+       ] [
+         fhir:code [ fhir:v "41446000" ] ;
+         fhir:display [ fhir:v "Blepharitis" ]
+       ] [
+         fhir:code [ fhir:v "372130007" ] ;
+         fhir:display [ fhir:v "Malignant neoplasm of skin" ]
+       ] [
+         fhir:code [ fhir:v "128351009" ] ;
+         fhir:display [ fhir:v "Eye infection" ]
+       ] [
+         fhir:code [ fhir:v "93163002" ] ;
+         fhir:display [ fhir:v "Lipoma" ]
+       ] [
+         fhir:code [ fhir:v "371481006" ] ;
+         fhir:display [ fhir:v "Neoplasm of eye region" ]
+       ] [
+         fhir:code [ fhir:v "92384009" ] ;
+         fhir:display [ fhir:v "Benign neoplasm of skin" ]
+       ] [
+         fhir:code [ fhir:v "367423000" ] ;
+         fhir:display [ fhir:v "Contusion of eye" ]
+       ] [
+         fhir:code [ fhir:v "218201004" ] ;
+         fhir:display [ fhir:v "Overexposure to sun rays" ]
+       ] [
+         fhir:code [ fhir:v "82576008" ] ;
+         fhir:display [ fhir:v "Retained foreign body in eye" ]
+       ] [
+         fhir:code [ fhir:v "400210000" ] ;
+         fhir:display [ fhir:v "Hemangioma" ]
+       ] [
+         fhir:code [ fhir:v "282752000" ] ;
+         fhir:display [ fhir:v "Injury of eye region" ]
+       ] [
+         fhir:code [ fhir:v "239107007" ] ;
+         fhir:display [ fhir:v "Epidermal nevus" ]
+       ] [
+         fhir:code [ fhir:v "416920000" ] ;
+         fhir:display [ fhir:v "Obstruction of lacrimal canaliculus" ]
+       ] [
+         fhir:code [ fhir:v "199879009" ] ;
+         fhir:display [ fhir:v "Congenital anomaly of skin" ]
+       ] [
+         fhir:code [ fhir:v "19416009" ] ;
+         fhir:display [ fhir:v "Congenital anomaly of eye" ]
+       ] [
+         fhir:code [ fhir:v "48277006" ] ;
+         fhir:display [ fhir:v "Impetigo" ]
+       ] [
+         fhir:code [ fhir:v "42059000" ] ;
+         fhir:display [ fhir:v "Retinal detachment" ]
+       ] [
+         fhir:code [ fhir:v "47639008" ] ;
+         fhir:display [ fhir:v "Pilonidal cyst" ]
+       ] [
+         fhir:code [ fhir:v "50563003" ] ;
+         fhir:display [ fhir:v "Seborrheic dermatitis" ]
+       ] [
+         fhir:code [ fhir:v "267718000" ] ;
+         fhir:display [ fhir:v "Age related macular degeneration" ]
+       ] [
+         fhir:code [ fhir:v "24079001" ] ;
+         fhir:display [ fhir:v "Atopic dermatitis" ]
+       ] [
+         fhir:code [ fhir:v "91514001" ] ;
+         fhir:display [ fhir:v "Corneal ulcer" ]
+       ] [
+         fhir:code [ fhir:v "40275004" ] ;
+         fhir:display [ fhir:v "Contact dermatitis" ]
+       ] [
+         fhir:code [ fhir:v "2576002" ] ;
+         fhir:display [ fhir:v "Trachoma" ]
+       ] [
+         fhir:code [ fhir:v "91487003" ] ;
+         fhir:display [ fhir:v "Diaper rash" ]
+       ] [
+         fhir:code [ fhir:v "90927000" ] ;
+         fhir:display [ fhir:v "Refractive amblyopia" ]
+       ] [
+         fhir:code [ fhir:v "77252004" ] ;
+         fhir:display [ fhir:v "Pityriasis rosea" ]
+       ] [
+         fhir:code [ fhir:v "193570009" ] ;
+         fhir:display [ fhir:v "Cataract" ]
+       ] [
+         fhir:code [ fhir:v "9014002" ] ;
+         fhir:display [ fhir:v "Psoriasis" ]
+       ] [
+         fhir:code [ fhir:v "23986001" ] ;
+         fhir:display [ fhir:v "Glaucoma" ]
+       ] [
+         fhir:code [ fhir:v "193699007" ] ;
+         fhir:display [ fhir:v "Blindness - both eyes" ]
+       ] [
+         fhir:code [ fhir:v "238748009" ] ;
+         fhir:display [ fhir:v "Sebaceous hyperplasia" ]
+       ] [
+         fhir:code [ fhir:v "22066006" ] ;
+         fhir:display [ fhir:v "Strabismus" ]
+       ] [
+         fhir:code [ fhir:v "400097005" ] ;
+         fhir:display [ fhir:v "Ingrowing nail" ]
+       ] [
+         fhir:code [ fhir:v "40070004" ] ;
+         fhir:display [ fhir:v "Molluscum contagiosum infection" ]
+       ] [
+         fhir:code [ fhir:v "301354004" ] ;
+         fhir:display [ fhir:v "Pain of ear" ]
+       ] [
+         fhir:code [ fhir:v "11381005" ] ;
+         fhir:display [ fhir:v "Acne" ]
+       ] [
+         fhir:code [ fhir:v "300228004" ] ;
+         fhir:display [ fhir:v "Hearing problem" ]
+       ] [
+         fhir:code [ fhir:v "19429009" ] ;
+         fhir:display [ fhir:v "Chronic ulcer of skin" ]
+       ] [
+         fhir:code [ fhir:v "60862001" ] ;
+         fhir:display [ fhir:v "Tinnitus" ]
+       ] [
+         fhir:code [ fhir:v "126485001" ] ;
+         fhir:display [ fhir:v "Urticaria" ]
+       ] [
+         fhir:code [ fhir:v "300132001" ] ;
+         fhir:display [ fhir:v "Ear discharge" ]
+       ] [
+         fhir:code [ fhir:v "171237002" ] ;
+         fhir:display [ fhir:v "Skin disease screening" ]
+       ] [
+         fhir:code [ fhir:v "26322001" ] ;
+         fhir:display [ fhir:v "Bleeding from ear" ]
+       ] [
+         fhir:code [ fhir:v "17173007" ] ;
+         fhir:display [ fhir:v "Excessive thirst" ]
+       ] [
+         fhir:code [ fhir:v "315217005" ] ;
+         fhir:display [ fhir:v "Ear symptom" ]
+       ] [
+         fhir:code [ fhir:v "102608004" ] ;
+         fhir:display [ fhir:v "Excessive appetite" ]
+       ] [
+         fhir:code [ fhir:v "79890006" ] ;
+         fhir:display [ fhir:v "Loss of appetite" ]
+       ] [
+         fhir:code [ fhir:v "3135009" ] ;
+         fhir:display [ fhir:v "Otitis externa" ]
+       ] [
+         fhir:code [ fhir:v "89362005" ] ;
+         fhir:display [ fhir:v "Weight loss" ]
+       ] [
+         fhir:code [ fhir:v "3110003" ] ;
+         fhir:display [ fhir:v "Acute otitis media" ]
+       ] [
+         fhir:code [ fhir:v "248290002" ] ;
+         fhir:display [ fhir:v "Developmental delay" ]
+       ] [
+         fhir:code [ fhir:v "80327007" ] ;
+         fhir:display [ fhir:v "Serous otitis media" ]
+       ] [
+         fhir:code [ fhir:v "34095006" ] ;
+         fhir:display [ fhir:v "Dehydration" ]
+       ] [
+         fhir:code [ fhir:v "270491006" ] ;
+         fhir:display [ fhir:v "Eustachian tube salpingitis" ]
+       ] [
+         fhir:code [ fhir:v "723115003" ] ;
+         fhir:display [ fhir:v "Fear of cancer of endocrine system" ]
+       ] [
+         fhir:code [ fhir:v "21186006" ] ;
+         fhir:display [ fhir:v "Chronic otitis media" ]
+       ] [
+         fhir:code [ fhir:v "723112000" ] ;
+         fhir:display [ fhir:v "Fear of endocrine disease" ]
+       ] [
+         fhir:code [ fhir:v "363228008" ] ;
+         fhir:display [ fhir:v "Neoplasm of ear" ]
+       ] [
+         fhir:code [ fhir:v "75441006" ] ;
+         fhir:display [ fhir:v "Foreign body in ear" ]
+       ] [
+         fhir:code [ fhir:v "60442001" ] ;
+         fhir:display [ fhir:v "Perforation of tympanic membrane" ]
+       ] [
+         fhir:code [ fhir:v "362969004" ] ;
+         fhir:display [ fhir:v "Disorder of endocrine system" ]
+       ] [
+         fhir:code [ fhir:v "283026008" ] ;
+         fhir:display [ fhir:v "Superficial injury of ear region" ]
+       ] [
+         fhir:code [ fhir:v "94098005" ] ;
+         fhir:display [ fhir:v "Primary malignant neoplasm of thyroid gland" ]
+       ] [
+         fhir:code [ fhir:v "2999009" ] ;
+         fhir:display [ fhir:v "Injury of ear" ]
+       ] [
+         fhir:code [ fhir:v "92439006" ] ;
+         fhir:display [ fhir:v "Benign neoplasm of thyroid gland" ]
+       ] [
+         fhir:code [ fhir:v "387922007" ] ;
+         fhir:display [ fhir:v "Neoplasm of endocrine gland" ]
+       ] [
+         fhir:code [ fhir:v "126946000" ] ;
+         fhir:display [ fhir:v "Excessive cerumen in ear canal" ]
+       ] [
+         fhir:code [ fhir:v "39462005" ] ;
+         fhir:display [ fhir:v "Thyroglossal duct cyst" ]
+       ] [
+         fhir:code [ fhir:v "87118001" ] ;
+         fhir:display [ fhir:v "Vertiginous syndrome" ]
+       ] [
+         fhir:code [ fhir:v "11543004" ] ;
+         fhir:display [ fhir:v "Otosclerosis" ]
+       ] [
+         fhir:code [ fhir:v "3716002" ] ;
+         fhir:display [ fhir:v "Goiter" ]
+       ] [
+         fhir:code [ fhir:v "49526009" ] ;
+         fhir:display [ fhir:v "Presbycusis" ]
+       ] [
+         fhir:code [ fhir:v "414916001" ] ;
+         fhir:display [ fhir:v "Obesity" ]
+       ] [
+         fhir:code [ fhir:v "238131007" ] ;
+         fhir:display [ fhir:v "Overweight" ]
+       ] [
+         fhir:code [ fhir:v "162344009" ] ;
+         fhir:display [ fhir:v "Bilateral deafness" ]
+       ] [
+         fhir:code [ fhir:v "34486009" ] ;
+         fhir:display [ fhir:v "Hyperthyroidism" ]
+       ] [
+         fhir:code [ fhir:v "426396005" ] ;
+         fhir:display [ fhir:v "Cardiac chest pain" ]
+       ] [
+         fhir:code [ fhir:v "302866003" ] ;
+         fhir:display [ fhir:v "Hypoglycemia" ]
+       ] [
+         fhir:code [ fhir:v "23924001" ] ;
+         fhir:display [ fhir:v "Tight chest" ]
+       ] [
+         fhir:code [ fhir:v "28032008" ] ;
+         fhir:display [ fhir:v "Insulin dependent diabetes mellitus type 1B" ]
+       ] [
+         fhir:code [ fhir:v "301358001" ] ;
+         fhir:display [ fhir:v "Pain of cardiovascular structure" ]
+       ] [
+         fhir:code [ fhir:v "398032003" ] ;
+         fhir:display [ fhir:v "Loose stool" ]
+       ] [
+         fhir:code [ fhir:v "8414002" ] ;
+         fhir:display [ fhir:v "Abscess of nose" ]
+       ] [
+         fhir:code [ fhir:v "129851009" ] ;
+         fhir:display [ fhir:v "Alteration in bowel elimination" ]
+       ] [
+         fhir:code [ fhir:v "54398005" ] ;
+         fhir:display [ fhir:v "Acute upper respiratory infection" ]
+       ] [
+         fhir:code [ fhir:v "105995000" ] ;
+         fhir:display [ fhir:v "Disorder of teeth AND/OR supporting structures" ]
+       ] [
+         fhir:code [ fhir:v "36971009" ] ;
+         fhir:display [ fhir:v "Sinusitis" ]
+       ] [
+         fhir:code [ fhir:v "162009001" ] ;
+         fhir:display [ fhir:v "Mouth symptoms" ]
+       ] [
+         fhir:code [ fhir:v "17741008" ] ;
+         fhir:display [ fhir:v "Acute tonsillitis" ]
+       ] [
+         fhir:code [ fhir:v "45913009" ] ;
+         fhir:display [ fhir:v "Laryngitis" ]
+       ] [
+         fhir:code [ fhir:v "399122003" ] ;
+         fhir:display [ fhir:v "Swallowing problem" ]
+       ] [
+         fhir:code [ fhir:v "80515008" ] ;
+         fhir:display [ fhir:v "Large liver" ]
+       ] [
+         fhir:code [ fhir:v "271860004" ] ;
+         fhir:display [ fhir:v "Abdominal mass" ]
+       ] [
+         fhir:code [ fhir:v "63480004" ] ;
+         fhir:display [ fhir:v "Chronic bronchitis" ]
+       ] [
+         fhir:code [ fhir:v "271835004" ] ;
+         fhir:display [ fhir:v "Abdominal distension, gaseous" ]
+       ] [
+         fhir:code [ fhir:v "6142004" ] ;
+         fhir:display [ fhir:v "Influenza" ]
+       ] [
+         fhir:code [ fhir:v "722843001" ] ;
+         fhir:display [ fhir:v "Fear of having cancer of digestive system" ]
+       ] [
+         fhir:code [ fhir:v "233604007" ] ;
+         fhir:display [ fhir:v "Pneumonia" ]
+       ] [
+         fhir:code [ fhir:v "722842006" ] ;
+         fhir:display [ fhir:v "Fear of having digestive disease" ]
+       ] [
+         fhir:code [ fhir:v "276433004" ] ;
+         fhir:display [ fhir:v "Insect bite - wound" ]
+       ] [
+         fhir:code [ fhir:v "64766004" ] ;
+         fhir:display [ fhir:v "Ulcerative colitis" ]
+       ] [
+         fhir:code [ fhir:v "262555007" ] ;
+         fhir:display [ fhir:v "Human bite - wound" ]
+       ] [
+         fhir:code [ fhir:v "30037006" ] ;
+         fhir:display [ fhir:v "Anal fissure" ]
+       ] [
+         fhir:code [ fhir:v "225358003" ] ;
+         fhir:display [ fhir:v "Wound care" ]
+       ] [
+         fhir:code [ fhir:v "60046008" ] ;
+         fhir:display [ fhir:v "Pleural effusion" ]
+       ] [
+         fhir:code [ fhir:v "196075003" ] ;
+         fhir:display [ fhir:v "Pleurisy" ]
+       ] [
+         fhir:code [ fhir:v "275498002" ] ;
+         fhir:display [ fhir:v "Respiratory tract infection" ]
+       ] [
+         fhir:code [ fhir:v "308925008" ] ;
+         fhir:display [ fhir:v "Digestive symptom" ]
+       ] [
+         fhir:code [ fhir:v "363493006" ] ;
+         fhir:display [ fhir:v "Malignant tumor of bronchus" ]
+       ] [
+         fhir:code [ fhir:v "715852004" ] ;
+         fhir:display [ fhir:v "Gastrointestinal infection" ]
+       ] [
+         fhir:code [ fhir:v "449096009" ] ;
+         fhir:display [ fhir:v "Malignant neoplasm of respiratory system" ]
+       ] [
+         fhir:code [ fhir:v "36989005" ] ;
+         fhir:display [ fhir:v "Mumps" ]
+       ] [
+         fhir:code [ fhir:v "255166003" ] ;
+         fhir:display [ fhir:v "Benign neoplasm of respiratory system" ]
+       ] [
+         fhir:code [ fhir:v "3738000" ] ;
+         fhir:display [ fhir:v "Viral hepatitis" ]
+       ] [
+         fhir:code [ fhir:v "262599003" ] ;
+         fhir:display [ fhir:v "Foreign body in respiratory tract" ]
+       ] [
+         fhir:code [ fhir:v "25374005" ] ;
+         fhir:display [ fhir:v "Gastroenteritis" ]
+       ] [
+         fhir:code [ fhir:v "127275008" ] ;
+         fhir:display [ fhir:v "Injury of respiratory system" ]
+       ] [
+         fhir:code [ fhir:v "363349007" ] ;
+         fhir:display [ fhir:v "Malignant tumor of stomach" ]
+       ] [
+         fhir:code [ fhir:v "47147007" ] ;
+         fhir:display [ fhir:v "Congenital anomaly of lung" ]
+       ] [
+         fhir:code [ fhir:v "14532008" ] ;
+         fhir:display [ fhir:v "Congenital anomaly of trachea" ]
+       ] [
+         fhir:code [ fhir:v "11223009" ] ;
+         fhir:display [ fhir:v "Congenital anomaly of pharynx" ]
+       ] [
+         fhir:code [ fhir:v "363351006" ] ;
+         fhir:display [ fhir:v "Malignant tumor of rectum" ]
+       ] [
+         fhir:code [ fhir:v "46689006" ] ;
+         fhir:display [ fhir:v "Hypertrophy of tonsils" ]
+       ] [
+         fhir:code [ fhir:v "363418001" ] ;
+         fhir:display [ fhir:v "Malignant tumor of pancreas" ]
+       ] [
+         fhir:code [ fhir:v "255077007" ] ;
+         fhir:display [ fhir:v "Malignant tumor of digestive organ" ]
+       ] [
+         fhir:code [ fhir:v "13645005" ] ;
+         fhir:display [ fhir:v "Chronic obstructive lung disease" ]
+       ] [
+         fhir:code [ fhir:v "128348002" ] ;
+         fhir:display [ fhir:v "Neoplasm of digestive system" ]
+       ] [
+         fhir:code [ fhir:v "195967001" ] ;
+         fhir:display [ fhir:v "Asthma" ]
+       ] [
+         fhir:code [ fhir:v "33334006" ] ;
+         fhir:display [ fhir:v "Foreign body in digestive tract" ]
+       ] [
+         fhir:code [ fhir:v "61582004" ] ;
+         fhir:display [ fhir:v "Allergic rhinitis" ]
+       ] [
+         fhir:code [ fhir:v "68978004" ] ;
+         fhir:display [ fhir:v "Hyperventilation" ]
+       ] [
+         fhir:code [ fhir:v "50043002" ] ;
+         fhir:display [ fhir:v "Disorder of respiratory system" ]
+       ] [
+         fhir:code [ fhir:v "301364008" ] ;
+         fhir:display [ fhir:v "Pain of skin" ]
+       ] [
+         fhir:code [ fhir:v "118938008" ] ;
+         fhir:display [ fhir:v "Disease of mouth" ]
+       ] [
+         fhir:code [ fhir:v "64144002" ] ;
+         fhir:display [ fhir:v "Pruritic rash" ]
+       ] [
+         fhir:code [ fhir:v "37657006" ] ;
+         fhir:display [ fhir:v "Disorder of esophagus" ]
+       ] [
+         fhir:code [ fhir:v "266113007" ] ;
+         fhir:display [ fhir:v "Genital warts" ]
+       ] [
+         fhir:code [ fhir:v "34580000" ] ;
+         fhir:display [ fhir:v "Duodenal ulcer without hemorrhage, without perforation AND without obstruction" ]
+       ] [
+         fhir:code [ fhir:v "13200003" ] ;
+         fhir:display [ fhir:v "Peptic ulcer" ]
+       ] [
+         fhir:code [ fhir:v "248528002" ] ;
+         fhir:display [ fhir:v "Multiple lumps" ]
+       ] [
+         fhir:code [ fhir:v "386211005" ] ;
+         fhir:display [ fhir:v "Disorder of function of stomach" ]
+       ] [
+         fhir:code [ fhir:v "74400008" ] ;
+         fhir:display [ fhir:v "Appendicitis" ]
+       ] [
+         fhir:code [ fhir:v "396232000" ] ;
+         fhir:display [ fhir:v "Inguinal hernia" ]
+       ] [
+         fhir:code [ fhir:v "370172004" ] ;
+         fhir:display [ fhir:v "Skin pigmentation" ]
+       ] [
+         fhir:code [ fhir:v "84089009" ] ;
+         fhir:display [ fhir:v "Hiatal hernia" ]
+       ] [
+         fhir:code [ fhir:v "300950007" ] ;
+         fhir:display [ fhir:v "Infected hand" ]
+       ] [
+         fhir:code [ fhir:v "52515009" ] ;
+         fhir:display [ fhir:v "Hernia of abdominal cavity" ]
+       ] [
+         fhir:code [ fhir:v "416893007" ] ;
+         fhir:display [ fhir:v "Carbuncle" ]
+       ] [
+         fhir:code [ fhir:v "397881000" ] ;
+         fhir:display [ fhir:v "Diverticular disease" ]
+       ] [
+         fhir:code [ fhir:v "423858006" ] ;
+         fhir:display [ fhir:v "Scald of skin" ]
+       ] [
+         fhir:code [ fhir:v "87282003" ] ;
+         fhir:display [ fhir:v "Intestinal parasitism" ]
+       ] [
+         fhir:code [ fhir:v "93458008" ] ;
+         fhir:display [ fhir:v "Foreign body in skin" ]
+       ] [
+         fhir:code [ fhir:v "125667009" ] ;
+         fhir:display [ fhir:v "Contusion" ]
+       ] [
+         fhir:code [ fhir:v "235856003" ] ;
+         fhir:display [ fhir:v "Disease of liver" ]
+       ] [
+         fhir:code [ fhir:v "399963005" ] ;
+         fhir:display [ fhir:v "Abrasion" ]
+       ] [
+         fhir:code [ fhir:v "76581006" ] ;
+         fhir:display [ fhir:v "Cholecystitis" ]
+       ] [
+         fhir:code [ fhir:v "61578001" ] ;
+         fhir:display [ fhir:v "Abnormal digestive tract function" ]
+       ] [
+         fhir:code [ fhir:v "274165007" ] ;
+         fhir:display [ fhir:v "Laceration of skin" ]
+       ] [
+         fhir:code [ fhir:v "41652007" ] ;
+         fhir:display [ fhir:v "Pain in eye" ]
+       ] [
+         fhir:code [ fhir:v "703630003" ] ;
+         fhir:display [ fhir:v "Red eye" ]
+       ] [
+         fhir:code [ fhir:v "412357001" ] ;
+         fhir:display [ fhir:v "Corn" ]
+       ] [
+         fhir:code [ fhir:v "246679005" ] ;
+         fhir:display [ fhir:v "Discharge from eye" ]
+       ] [
+         fhir:code [ fhir:v "274672009" ] ;
+         fhir:display [ fhir:v "Changes in skin texture" ]
+       ] [
+         fhir:code [ fhir:v "297989000" ] ;
+         fhir:display [ fhir:v "Nail problem" ]
+       ] [
+         fhir:code [ fhir:v "15013002" ] ;
+         fhir:display [ fhir:v "Vitreous floaters" ]
+       ] [
+         fhir:code [ fhir:v "278040002" ] ;
+         fhir:display [ fhir:v "Loss of hair" ]
+       ] [
+         fhir:code [ fhir:v "63102001" ] ;
+         fhir:display [ fhir:v "Visual disturbance" ]
+       ] [
+         fhir:code [ fhir:v "2070002" ] ;
+         fhir:display [ fhir:v "Burning sensation in eye" ]
+       ] [
+         fhir:code [ fhir:v "403593004" ] ;
+         fhir:display [ fhir:v "Phobic fear of skin cancer" ]
+       ] [
+         fhir:code [ fhir:v "563001" ] ;
+         fhir:display [ fhir:v "Nystagmus" ]
+       ] [
+         fhir:code [ fhir:v "724879005" ] ;
+         fhir:display [ fhir:v "Fear of skin disease" ]
+       ] [
+         fhir:code [ fhir:v "60113004" ] ;
+         fhir:display [ fhir:v "Disorder of eyelid" ]
+       ] [
+         fhir:code [ fhir:v "50121007" ] ;
+         fhir:display [ fhir:v "Eyeglasses" ]
+       ] [
+         fhir:code [ fhir:v "395496008" ] ;
+         fhir:display [ fhir:v "Throat symptom" ]
+       ] [
+         fhir:code [ fhir:v "3696007" ] ;
+         fhir:display [ fhir:v "Nonulcer dyspepsia" ]
+       ] [
+         fhir:code [ fhir:v "38160000" ] ;
+         fhir:display [ fhir:v "Abnormal voice" ]
+       ] [
+         fhir:code [ fhir:v "271832001" ] ;
+         fhir:display [ fhir:v "Flatulence, eructation and gas pain" ]
+       ] [
+         fhir:code [ fhir:v "66857006" ] ;
+         fhir:display [ fhir:v "Hemoptysis" ]
+       ] [
+         fhir:code [ fhir:v "422587007" ] ;
+         fhir:display [ fhir:v "Nausea" ]
+       ] [
+         fhir:code [ fhir:v "248596009" ] ;
+         fhir:display [ fhir:v "Sputum - symptom" ]
+       ] [
+         fhir:code [ fhir:v "422400008" ] ;
+         fhir:display [ fhir:v "Vomiting" ]
+       ] [
+         fhir:code [ fhir:v "723093008" ] ;
+         fhir:display [ fhir:v "Fear of cancer of respiratory system" ]
+       ] [
+         fhir:code [ fhir:v "62315008" ] ;
+         fhir:display [ fhir:v "Diarrhea" ]
+       ] [
+         fhir:code [ fhir:v "14760008" ] ;
+         fhir:display [ fhir:v "Constipation" ]
+       ] [
+         fhir:code [ fhir:v "723092003" ] ;
+         fhir:display [ fhir:v "Fear of respiratory disease" ]
+       ] [
+         fhir:code [ fhir:v "18165001" ] ;
+         fhir:display [ fhir:v "Jaundice" ]
+       ] [
+         fhir:code [ fhir:v "8765009" ] ;
+         fhir:display [ fhir:v "Hematemesis" ]
+       ] [
+         fhir:code [ fhir:v "2901004" ] ;
+         fhir:display [ fhir:v "Melena" ]
+       ] [
+         fhir:code [ fhir:v "27836007" ] ;
+         fhir:display [ fhir:v "Pertussis" ]
+       ] [
+         fhir:code [ fhir:v "12063002" ] ;
+         fhir:display [ fhir:v "Rectal hemorrhage" ]
+       ] [
+         fhir:code [ fhir:v "195658003" ] ;
+         fhir:display [ fhir:v "Acute bacterial pharyngitis" ]
+       ] [
+         fhir:code [ fhir:v "72042002" ] ;
+         fhir:display [ fhir:v "Incontinence of feces" ]
+       ] [
+         fhir:code [ fhir:v "10743008" ] ;
+         fhir:display [ fhir:v "Irritable bowel syndrome" ]
+       ] [
+         fhir:code [ fhir:v "37796009" ] ;
+         fhir:display [ fhir:v "Migraine" ]
+       ] [
+         fhir:code [ fhir:v "14189004" ] ;
+         fhir:display [ fhir:v "Measles" ]
+       ] [
+         fhir:code [ fhir:v "193031009" ] ;
+         fhir:display [ fhir:v "Cluster headache" ]
+       ] [
+         fhir:code [ fhir:v "309465005" ] ;
+         fhir:display [ fhir:v "Varicella-zoster virus infection" ]
+       ] [
+         fhir:code [ fhir:v "193093009" ] ;
+         fhir:display [ fhir:v "Bell's palsy" ]
+       ] [
+         fhir:code [ fhir:v "61462000" ] ;
+         fhir:display [ fhir:v "Malaria" ]
+       ] [
+         fhir:code [ fhir:v "31681005" ] ;
+         fhir:display [ fhir:v "Trigeminal neuralgia" ]
+       ] [
+         fhir:code [ fhir:v "36653000" ] ;
+         fhir:display [ fhir:v "Rubella" ]
+       ] [
+         fhir:code [ fhir:v "22722001" ] ;
+         fhir:display [ fhir:v "Idiopathic peripheral neuropathy" ]
+       ] [
+         fhir:code [ fhir:v "271558008" ] ;
+         fhir:display [ fhir:v "Infectious mononucleosis" ]
+       ] [
+         fhir:code [ fhir:v "49882001" ] ;
+         fhir:display [ fhir:v "Viral exanthem" ]
+       ] [
+         fhir:code [ fhir:v "398057008" ] ;
+         fhir:display [ fhir:v "Tension-type headache" ]
+       ] [
+         fhir:code [ fhir:v "34014006" ] ;
+         fhir:display [ fhir:v "Viral disease" ]
+       ] [
+         fhir:code [ fhir:v "118940003" ] ;
+         fhir:display [ fhir:v "Disorder of nervous system" ]
+       ] [
+         fhir:code [ fhir:v "40733004" ] ;
+         fhir:display [ fhir:v "Infectious disease" ]
+       ] [
+         fhir:code [ fhir:v "48694002" ] ;
+         fhir:display [ fhir:v "Anxiety" ]
+       ] [
+         fhir:code [ fhir:v "21594007" ] ;
+         fhir:display [ fhir:v "Malignant" ]
+       ] [
+         fhir:code [ fhir:v "67195008" ] ;
+         fhir:display [ fhir:v "Acute stress disorder" ]
+       ] [
+         fhir:code [ fhir:v "417746004" ] ;
+         fhir:display [ fhir:v "Traumatic injury" ]
+       ] [
+         fhir:code [ fhir:v "366979004" ] ;
+         fhir:display [ fhir:v "Depressed mood" ]
+       ] [
+         fhir:code [ fhir:v "262519004" ] ;
+         fhir:display [ fhir:v "Multiple injuries" ]
+       ] [
+         fhir:code [ fhir:v "274646000" ] ;
+         fhir:display [ fhir:v "Irritability and anger" ]
+       ] [
+         fhir:code [ fhir:v "39093002" ] ;
+         fhir:display [ fhir:v "Post-trauma response" ]
+       ] [
+         fhir:code [ fhir:v "26677001" ] ;
+         fhir:display [ fhir:v "Sleep pattern disturbance" ]
+       ] [
+         fhir:code [ fhir:v "270903007" ] ;
+         fhir:display [ fhir:v "Lack or loss of sexual desire" ]
+       ] [
+         fhir:code [ fhir:v "62014003" ] ;
+         fhir:display [ fhir:v "Adverse reaction to drug" ]
+       ] [
+         fhir:code [ fhir:v "248760008" ] ;
+         fhir:display [ fhir:v "Sexual intercourse unsuccessful" ]
+       ] [
+         fhir:code [ fhir:v "275390005" ] ;
+         fhir:display [ fhir:v "Toxic effect of plant" ]
+       ] [
+         fhir:code [ fhir:v "248090005" ] ;
+         fhir:display [ fhir:v "Concern about sexual orientation" ]
+       ] [
+         fhir:code [ fhir:v "39423001" ] ;
+         fhir:display [ fhir:v "Stuttering" ]
+       ] [
+         fhir:code [ fhir:v "95869003" ] ;
+         fhir:display [ fhir:v "Adverse effect of prosthetic device" ]
+       ] [
+         fhir:code [ fhir:v "102609007" ] ;
+         fhir:display [ fhir:v "Feeding problem in child" ]
+       ] [
+         fhir:code [ fhir:v "53350007" ] ;
+         fhir:display [ fhir:v "Prosthesis" ]
+       ] [
+         fhir:code [ fhir:v "386489000" ] ;
+         fhir:display [ fhir:v "Urinary incontinence care: enuresis" ]
+       ] [
+         fhir:code [ fhir:v "302690004" ] ;
+         fhir:display [ fhir:v "Encopresis" ]
+       ] [
+         fhir:code [ fhir:v "165346000" ] ;
+         fhir:display [ fhir:v "Laboratory test result abnormal" ]
+       ] [
+         fhir:code [ fhir:v "15167005" ] ;
+         fhir:display [ fhir:v "Alcohol abuse" ]
+       ] [
+         fhir:code [ fhir:v "419076005" ] ;
+         fhir:display [ fhir:v "Allergic reaction" ]
+       ] [
+         fhir:code [ fhir:v "395507008" ] ;
+         fhir:display [ fhir:v "Premature infant" ]
+       ] [
+         fhir:code [ fhir:v "110483000" ] ;
+         fhir:display [ fhir:v "Tobacco user" ]
+       ] [
+         fhir:code [ fhir:v "191939002" ] ;
+         fhir:display [ fhir:v "Misuse of prescription only drugs" ]
+       ] [
+         fhir:code [ fhir:v "276506001" ] ;
+         fhir:display [ fhir:v "Newborn death" ]
+       ] [
+         fhir:code [ fhir:v "26416006" ] ;
+         fhir:display [ fhir:v "Drug abuse" ]
+       ] [
+         fhir:code [ fhir:v "419620001" ] ;
+         fhir:display [ fhir:v "Death" ]
+       ] [
+         fhir:code [ fhir:v "386807006" ] ;
+         fhir:display [ fhir:v "Memory impairment" ]
+       ] [
+         fhir:code [ fhir:v "409036009" ] ;
+         fhir:display [ fhir:v "Child behavior alteration" ]
+       ] [
+         fhir:code [ fhir:v "24441001" ] ;
+         fhir:display [ fhir:v "Health maintenance alteration" ]
+       ] [
+         fhir:code [ fhir:v "409037000" ] ;
+         fhir:display [ fhir:v "Adolescent behavior alteration" ]
+       ] [
+         fhir:code [ fhir:v "64572001" ] ;
+         fhir:display [ fhir:v "Disease" ]
+       ] [
+         fhir:code [ fhir:v "161129001" ] ;
+         fhir:display [ fhir:v "Learning difficulties" ]
+       ] [
+         fhir:code [ fhir:v "274741002" ] ;
+         fhir:display [ fhir:v "Generalized enlarged lymph nodes" ]
+       ] [
+         fhir:code [ fhir:v "9431000" ] ;
+         fhir:display [ fhir:v "Phase of life problem" ]
+       ] [
+         fhir:code [ fhir:v "762349007" ] ;
+         fhir:display [ fhir:v "Fear of mental disorder" ]
+       ] [
+         fhir:code [ fhir:v "102920009" ] ;
+         fhir:display [ fhir:v "Fear of contracting HIV infection" ]
+       ] [
+         fhir:code [ fhir:v "723121004" ] ;
+         fhir:display [ fhir:v "Fear of hematological cancer" ]
+       ] [
+         fhir:code [ fhir:v "413307004" ] ;
+         fhir:display [ fhir:v "Mental health problem" ]
+       ] [
+         fhir:code [ fhir:v "52448006" ] ;
+         fhir:display [ fhir:v "Dementia" ]
+       ] [
+         fhir:code [ fhir:v "5510009" ] ;
+         fhir:display [ fhir:v "Organic delusional disorder" ]
+       ] [
+         fhir:code [ fhir:v "58214004" ] ;
+         fhir:display [ fhir:v "Schizophrenia" ]
+       ] [
+         fhir:code [ fhir:v "41174002" ] ;
+         fhir:display [ fhir:v "Acute lymphadenitis" ]
+       ] [
+         fhir:code [ fhir:v "441704009" ] ;
+         fhir:display [ fhir:v "Affective psychosis" ]
+       ] [
+         fhir:code [ fhir:v "32035007" ] ;
+         fhir:display [ fhir:v "Chronic lymphadenitis" ]
+       ] [
+         fhir:code [ fhir:v "197480006" ] ;
+         fhir:display [ fhir:v "Anxiety disorder" ]
+       ] [
+         fhir:code [ fhir:v "1163005009" ] ;
+         fhir:display [ fhir:v "Hodgkin lymphoma" ]
+       ] [
+         fhir:code [ fhir:v "397923000" ] ;
+         fhir:display [ fhir:v "Somatization disorder" ]
+       ] [
+         fhir:code [ fhir:v "93143009" ] ;
+         fhir:display [ fhir:v "Leukemia" ]
+       ] [
+         fhir:code [ fhir:v "35489007" ] ;
+         fhir:display [ fhir:v "Depressive disorder" ]
+       ] [
+         fhir:code [ fhir:v "44301001" ] ;
+         fhir:display [ fhir:v "Suicide" ]
+       ] [
+         fhir:code [ fhir:v "43756009" ] ;
+         fhir:display [ fhir:v "Traumatic rupture of spleen" ]
+       ] [
+         fhir:code [ fhir:v "33449004" ] ;
+         fhir:display [ fhir:v "Personality disorder" ]
+       ] [
+         fhir:code [ fhir:v "38911009" ] ;
+         fhir:display [ fhir:v "Hereditary hemolytic anemia" ]
+       ] [
+         fhir:code [ fhir:v "44548000" ] ;
+         fhir:display [ fhir:v "Hyperactive behavior" ]
+       ] [
+         fhir:code [ fhir:v "87522002" ] ;
+         fhir:display [ fhir:v "Iron deficiency anemia" ]
+       ] [
+         fhir:code [ fhir:v "53165003" ] ;
+         fhir:display [ fhir:v "Megaloblastic anemia" ]
+       ] [
+         fhir:code [ fhir:v "78004001" ] ;
+         fhir:display [ fhir:v "Bulimia nervosa" ]
+       ] [
+         fhir:code [ fhir:v "56882008" ] ;
+         fhir:display [ fhir:v "Anorexia nervosa" ]
+       ] [
+         fhir:code [ fhir:v "271737000" ] ;
+         fhir:display [ fhir:v "Anemia" ]
+       ] [
+         fhir:code [ fhir:v "54097007" ] ;
+         fhir:display [ fhir:v "White blood cell disorder" ]
+       ] [
+         fhir:code [ fhir:v "301355003" ] ;
+         fhir:display [ fhir:v "Pain of respiratory structure" ]
+       ] [
+         fhir:code [ fhir:v "16294009" ] ;
+         fhir:display [ fhir:v "Splenomegaly" ]
+       ] [
+         fhir:code [ fhir:v "267036007" ] ;
+         fhir:display [ fhir:v "Dyspnea" ]
+       ] [
+         fhir:code [ fhir:v "165816005" ] ;
+         fhir:display [ fhir:v "HIV detected" ]
+       ] [
+         fhir:code [ fhir:v "56018004" ] ;
+         fhir:display [ fhir:v "Wheezing" ]
+       ] [
+         fhir:code [ fhir:v "386813002" ] ;
+         fhir:display [ fhir:v "Abnormal breathing" ]
+       ] [
+         fhir:code [ fhir:v "49727002" ] ;
+         fhir:display [ fhir:v "Cough" ]
+       ] [
+         fhir:code [ fhir:v "79922009" ] ;
+         fhir:display [ fhir:v "Epigastric pain" ]
+       ] [
+         fhir:code [ fhir:v "249366005" ] ;
+         fhir:display [ fhir:v "Bleeding from nose" ]
+       ] [
+         fhir:code [ fhir:v "68235000" ] ;
+         fhir:display [ fhir:v "Nasal congestion" ]
+       ] [
+         fhir:code [ fhir:v "77880009" ] ;
+         fhir:display [ fhir:v "Rectal pain" ]
+       ] [
+         fhir:code [ fhir:v "275448003" ] ;
+         fhir:display [ fhir:v "Perianal dermatitis" ]
+       ] [
+         fhir:code [ fhir:v "162402004" ] ;
+         fhir:display [ fhir:v "Blocked sinuses" ]
+       ] [
+         fhir:code [ fhir:v "102613000" ] ;
+         fhir:display [ fhir:v "Localized abdominal pain" ]
+       ] [
+         fhir:code [ fhir:v "1144523008" ] ;
+         fhir:display [ fhir:v "Normal activity tolerance" ]
+       ] [
+         fhir:code [ fhir:v "371524004" ] ;
+         fhir:display [ fhir:v "Clinical report" ]
+       ] [
+         fhir:code [ fhir:v "225886003" ] ;
+         fhir:display [ fhir:v "Medical assessment" ]
+       ] [
+         fhir:code [ fhir:v "79206001" ] ;
+         fhir:display [ fhir:v "Specialized medical examination" ]
+       ] [
+         fhir:code [ fhir:v "135840009" ] ;
+         fhir:display [ fhir:v "Blood pressure monitoring" ]
+       ] [
+         fhir:code [ fhir:v "15220000" ] ;
+         fhir:display [ fhir:v "Laboratory test" ]
+       ] [
+         fhir:code [ fhir:v "10850741000119108" ] ;
+         fhir:display [ fhir:v "Accidental needle stick injury" ]
+       ] [
+         fhir:code [ fhir:v "167222005" ] ;
+         fhir:display [ fhir:v "Abnormal urinalysis" ]
+       ] [
+         fhir:code [ fhir:v "119339001" ] ;
+         fhir:display [ fhir:v "Stool specimen" ]
+       ] [
+         fhir:code [ fhir:v "373372005" ] ;
+         fhir:display [ fhir:v "Histological grade finding" ]
+       ] [
+         fhir:code [ fhir:v "289530006" ] ;
+         fhir:display [ fhir:v "Vaginal bleeding" ]
+       ] [
+         fhir:code [ fhir:v "423827005" ] ;
+         fhir:display [ fhir:v "Endoscopy" ]
+       ] [
+         fhir:code [ fhir:v "162051008" ] ;
+         fhir:display [ fhir:v "Right iliac fossa pain" ]
+       ] [
+         fhir:code [ fhir:v "271921002" ] ;
+         fhir:display [ fhir:v "ECG finding" ]
+       ] [
+         fhir:code [ fhir:v "103693007" ] ;
+         fhir:display [ fhir:v "Diagnostic procedure" ]
+       ] [
+         fhir:code [ fhir:v "47609003" ] ;
+         fhir:display [ fhir:v "Foreign body in esophagus" ]
+       ] [
+         fhir:code [ fhir:v "444813003" ] ;
+         fhir:display [ fhir:v "Prophylactic immunotherapy" ]
+       ] [
+         fhir:code [ fhir:v "1539003" ] ;
+         fhir:display [ fhir:v "Acquired trigger finger" ]
+       ] [
+         fhir:code [ fhir:v "410314003" ] ;
+         fhir:display [ fhir:v "Health promotion education, guidance, and counseling" ]
+       ] [
+         fhir:code [ fhir:v "11429006" ] ;
+         fhir:display [ fhir:v "Consultation" ]
+       ] [
+         fhir:code [ fhir:v "30549001" ] ;
+         fhir:display [ fhir:v "Removal of suture" ]
+       ] [
+         fhir:code [ fhir:v "309395003" ] ;
+         fhir:display [ fhir:v "Hospital specialist" ]
+       ] [
+         fhir:code [ fhir:v "185351004" ] ;
+         fhir:display [ fhir:v "Administrative reason for encounter" ]
+       ] [
+         fhir:code [ fhir:v "183515008" ] ;
+         fhir:display [ fhir:v "Referral to physician" ]
+       ] [
+         fhir:code [ fhir:v "71388002" ] ;
+         fhir:display [ fhir:v "Procedure" ]
+       ] [
+         fhir:code [ fhir:v "14766002" ] ;
+         fhir:display [ fhir:v "Aspiration" ]
+       ] [
+         fhir:code [ fhir:v "86273004" ] ;
+         fhir:display [ fhir:v "Biopsy" ]
+       ] [
+         fhir:code [ fhir:v "19923001" ] ;
+         fhir:display [ fhir:v "Catheter" ]
+       ] [
+         fhir:code [ fhir:v "386761002" ] ;
+         fhir:display [ fhir:v "Local anesthesia" ]
+       ] [
+         fhir:code [ fhir:v "22253000" ] ;
+         fhir:display [ fhir:v "Pain" ]
+       ] [
+         fhir:code [ fhir:v "129003000" ] ;
+         fhir:display [ fhir:v "Dressing" ]
+       ] [
+         fhir:code [ fhir:v "7973008" ] ;
+         fhir:display [ fhir:v "Abnormal vision" ]
+       ] [
+         fhir:code [ fhir:v "52052004" ] ;
+         fhir:display [ fhir:v "Rehabilitation therapy" ]
+       ] [
+         fhir:code [ fhir:v "201040000" ] ;
+         fhir:display [ fhir:v "Callosity" ]
+       ] [
+         fhir:code [ fhir:v "409063005" ] ;
+         fhir:display [ fhir:v "Counseling" ]
+       ] [
+         fhir:code [ fhir:v "52073004" ] ;
+         fhir:display [ fhir:v "Oligomenorrhea" ]
+       ] [
+         fhir:code [ fhir:v "184477002" ] ;
+         fhir:display [ fhir:v "Minor surgery done - excision" ]
+       ] [
+         fhir:code [ fhir:v "165355002" ] ;
+         fhir:display [ fhir:v "Patient informed - test result" ]
+       ] [
+         fhir:code [ fhir:v "309538000" ] ;
+         fhir:display [ fhir:v "Numbness of foot" ]
+       ] [
+         fhir:code [ fhir:v "14734007" ] ;
+         fhir:display [ fhir:v "Administrative procedure" ]
+       ] [
+         fhir:code [ fhir:v "25064002" ] ;
+         fhir:display [ fhir:v "Headache" ]
+       ] [
+         fhir:code [ fhir:v "95668009" ] ;
+         fhir:display [ fhir:v "Pain in face" ]
+       ] [
+         fhir:code [ fhir:v "32914008" ] ;
+         fhir:display [ fhir:v "Restless legs" ]
+       ] [
+         fhir:code [ fhir:v "429783005" ] ;
+         fhir:display [ fhir:v "Paresthesia of lower extremity" ]
+       ] [
+         fhir:code [ fhir:v "310449005" ] ;
+         fhir:display [ fhir:v "Referral to hospital" ]
+       ] [
+         fhir:code [ fhir:v "398026008" ] ;
+         fhir:display [ fhir:v "Reduced sensation of skin" ]
+       ] [
+         fhir:code [ fhir:v "91175000" ] ;
+         fhir:display [ fhir:v "Seizure" ]
+       ] [
+         fhir:code [ fhir:v "260912008" ] ;
+         fhir:display [ fhir:v "Abnormal involuntary movement" ]
+       ] [
+         fhir:code [ fhir:v "112105008" ] ;
+         fhir:display [ fhir:v "Sense of smell altered" ]
+       ] [
+         fhir:code [ fhir:v "274640006" ] ;
+         fhir:display [ fhir:v "Fever with chills" ]
+       ] [
+         fhir:code [ fhir:v "44695005" ] ;
+         fhir:display [ fhir:v "Paralysis" ]
+       ] [
+         fhir:code [ fhir:v "271795006" ] ;
+         fhir:display [ fhir:v "Malaise and fatigue" ]
+       ] [
+         fhir:code [ fhir:v "231543005" ] ;
+         fhir:display [ fhir:v "Speech and language disorder" ]
+       ] [
+         fhir:code [ fhir:v "271594007" ] ;
+         fhir:display [ fhir:v "Syncope" ]
+       ] [
+         fhir:code [ fhir:v "724824002" ] ;
+         fhir:display [ fhir:v "Fear of neurological disease" ]
+       ] [
+         fhir:code [ fhir:v "371632003" ] ;
+         fhir:display [ fhir:v "Coma" ]
+       ] [
+         fhir:code [ fhir:v "52526003" ] ;
+         fhir:display [ fhir:v "Sweating problem" ]
+       ] [
+         fhir:code [ fhir:v "398102009" ] ;
+         fhir:display [ fhir:v "Acute poliomyelitis" ]
+       ] [
+         fhir:code [ fhir:v "131148009" ] ;
+         fhir:display [ fhir:v "Bleeding" ]
+       ] [
+         fhir:code [ fhir:v "7180009" ] ;
+         fhir:display [ fhir:v "Meningitis" ]
+       ] [
+         fhir:code [ fhir:v "29857009" ] ;
+         fhir:display [ fhir:v "Chest pain" ]
+       ] [
+         fhir:code [ fhir:v "76902006" ] ;
+         fhir:display [ fhir:v "Tetanus" ]
+       ] [
+         fhir:code [ fhir:v "699389008" ] ;
+         fhir:display [ fhir:v "Fear of medical treatment" ]
+       ] [
+         fhir:code [ fhir:v "444951002" ] ;
+         fhir:display [ fhir:v "Unsettled infant" ]
+       ] [
+         fhir:code [ fhir:v "372063002" ] ;
+         fhir:display [ fhir:v "Malignant neoplasm of nervous system" ]
+       ] [
+         fhir:code [ fhir:v "92247009" ] ;
+         fhir:display [ fhir:v "Benign neoplasm of nervous system" ]
+       ] [
+         fhir:code [ fhir:v "225871009" ] ;
+         fhir:display [ fhir:v "Requests euthanasia" ]
+       ] [
+         fhir:code [ fhir:v "126950007" ] ;
+         fhir:display [ fhir:v "Neoplasm of nervous system" ]
+       ] [
+         fhir:code [ fhir:v "110030002" ] ;
+         fhir:display [ fhir:v "Concussion injury of brain" ]
+       ] [
+         fhir:code [ fhir:v "282749008" ] ;
+         fhir:display [ fhir:v "Head and neck injury" ]
+       ] [
+         fhir:code [ fhir:v "102912007" ] ;
+         fhir:display [ fhir:v "Fear of death" ]
+       ] [
+         fhir:code [ fhir:v "128239009" ] ;
+         fhir:display [ fhir:v "Injury of nervous system" ]
+       ] [
+         fhir:code [ fhir:v "57148006" ] ;
+         fhir:display [ fhir:v "Congenital anomaly of brain" ]
+       ] [
+         fhir:code [ fhir:v "247866008" ] ;
+         fhir:display [ fhir:v "Fear of contracting disease" ]
+       ] [
+         fhir:code [ fhir:v "24700007" ] ;
+         fhir:display [ fhir:v "Multiple sclerosis" ]
+       ] [
+         fhir:code [ fhir:v "32798002" ] ;
+         fhir:display [ fhir:v "Parkinsonism" ]
+       ] [
+         fhir:code [ fhir:v "84757009" ] ;
+         fhir:display [ fhir:v "Epilepsy" ]
+       ] [
+         fhir:code [ fhir:v "267022002" ] ;
+         fhir:display [ fhir:v "General symptom" ]
+       ] [
+         fhir:code [ fhir:v "56717001" ] ;
+         fhir:display [ fhir:v "Tuberculosis" ]
+       ] )
+     ] )
+  ] . # 
+
+# -------------------------------------------------------------------------------------
+

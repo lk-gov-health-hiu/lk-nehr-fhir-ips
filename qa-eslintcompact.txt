@@ -1,0 +1,23 @@
+SriLankaIPS
+=========================================
+
+Generic: line 0, col 0, Error - The link 'http://terminology.hl7.org/5.3.0/CodeSystem-condition-ver-status.html' for "ConditionVerificationStatus" cannot be resolved (NOTFOUND)
+/github/workspace/fsh-generated/resources/Bundle-HHIMSIPSBundleExampleWithMedicalHistory.json: line 565, col 12, Info - Reference to draft CodeSystem http://terminology.hl7.org/CodeSystem/condition-category|1.0.0 (BUSINESSRULE)
+/github/workspace/fsh-generated/resources/Bundle-HHIMSTransactionalBundleExampleWithMedicalHistory.json: line 281, col 12, Info - Reference to draft CodeSystem http://terminology.hl7.org/CodeSystem/condition-category|1.0.0 (BUSINESSRULE)
+/github/workspace/fsh-generated/resources/Bundle-HHIMSTransactionalBundleExampleWithMedicalHistory.json: line 281, col 12, Info - Reference to draft CodeSystem http://terminology.hl7.org/CodeSystem/condition-category|1.0.0 (BUSINESSRULE)
+/github/workspace/fsh-generated/resources/Bundle-HIMSIPSBundleExample.json: line 554, col 12, Info - Reference to draft CodeSystem http://terminology.hl7.org/CodeSystem/condition-category|1.0.0 (BUSINESSRULE)
+/github/workspace/fsh-generated/resources/Bundle-HIMSTransactionalBundleExample.json: line 281, col 12, Info - Reference to draft CodeSystem http://terminology.hl7.org/CodeSystem/condition-category|1.0.0 (BUSINESSRULE)
+/github/workspace/fsh-generated/resources/Bundle-HIMSTransactionalBundleExample.json: line 281, col 12, Info - Reference to draft CodeSystem http://terminology.hl7.org/CodeSystem/condition-category|1.0.0 (BUSINESSRULE)
+/github/workspace/fsh-generated/resources/Condition-MedicalHistoryExample.json: line 26, col 6, Info - Reference to draft CodeSystem http://terminology.hl7.org/CodeSystem/condition-category|1.0.0 (BUSINESSRULE)
+/github/workspace/fsh-generated/resources/StructureDefinition-drug-dispensation.json: line 1, col 67078, Info - The string value contains text that looks like embedded HTML tags. If this content is rendered to HTML without appropriate post-processing, it may be a security risk (INVALID)
+/github/workspace/fsh-generated/resources/StructureDefinition-fasting-blood-sugar.json: line 1, col 85053, Info - Reference to draft CodeSystem http://terminology.hl7.org/CodeSystem/observation-category|1.0.0 (BUSINESSRULE)
+/github/workspace/fsh-generated/resources/StructureDefinition-hhims-composition.json: line 1, col 176125, Info - The extension http://hl7.org/fhir/StructureDefinition/composition-clinicaldocument-versionNumber|5.1.0 is deprecated (BUSINESSRULE)
+/github/workspace/fsh-generated/resources/StructureDefinition-no-allergy-intolerance.json: line 1, col 46672, Info - Reference to draft CodeSystem http://terminology.hl7.org/CodeSystem/allergyintolerance-clinical|1.0.0 (BUSINESSRULE)
+/github/workspace/fsh-generated/resources/StructureDefinition-no-allergy-intolerance.json: line 1, col 96744, Info - Reference to draft CodeSystem http://terminology.hl7.org/CodeSystem/allergyintolerance-clinical|1.0.0 (BUSINESSRULE)
+/github/workspace/fsh-generated/resources/StructureDefinition-random-blood-sugar.json: line 1, col 84812, Info - Reference to draft CodeSystem http://terminology.hl7.org/CodeSystem/observation-category|1.0.0 (BUSINESSRULE)
+/github/workspace/fsh-generated/resources/StructureDefinition-total-cholesterol.json: line 1, col 84809, Info - Reference to draft CodeSystem http://terminology.hl7.org/CodeSystem/observation-category|1.0.0 (BUSINESSRULE)
+/github/workspace/fsh-generated/resources/ValueSet-vs-medical-conditions-additional.json: line 0, col 0, Info - The value set expansion is too large, and only a subset has been displayed (INFORMATIONAL)
+/github/workspace/fsh-generated/resources/ValueSet-vs-medication-name-msd.json: line 0, col 0, Info - The value set expansion is too large, and only a subset has been displayed (INFORMATIONAL)
+
+err = 0, warn = 0, info = 16
+IG Publisher Version: 1.6.8

@@ -1,0 +1,48 @@
+{
+  "resourceType" : "ImagingStudy",
+  "id" : "ImagingExample",
+  "meta" : {
+    "profile" : ["http://fhir.health.gov.lk/ips/StructureDefinition/imaging-study"]
+  },
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: ImagingStudy</b><a name=\"ImagingExample\"> </a><a name=\"hcImagingExample\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource ImagingStudy &quot;ImagingExample&quot; </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-imaging-study.html\">Imaging Study</a></p></div><p><b>status</b>: registered</p><p><b>subject</b>: <a href=\"Patient-PatientExample.html\">Patient/PatientExample</a> &quot; SMITH&quot;</p><p><b>encounter</b>: <a href=\"Encounter-TargetFacilityEncounterExample.html\">Encounter/TargetFacilityEncounterExample</a></p><p><b>started</b>: 2023-10-06 13:28:17-0500</p><p><b>basedOn</b>: <a href=\"ServiceRequest-ImagingServiceRequestExample.html\">ServiceRequest/ImagingServiceRequestExample</a></p><p><b>referrer</b>: <a href=\"Practitioner-GeneralPractitionerExample.html\">Practitioner/GeneralPractitionerExample</a> &quot; SMITH&quot;</p><p><b>location</b>: <a href=\"Location-ProvidersLocationExample.html\">Location/ProvidersLocationExample</a> &quot;Name for the location&quot;</p><p><b>description</b>: Imaging Description</p><blockquote><p><b>series</b></p><p><b>uid</b>: 2.16.124.113543.6003.1154777499.30246.19789.3503430045.1</p><p><b>modality</b>: Digital Radiography (Details: DICOM code DX = 'Digital Radiography', stated as 'null')</p><h3>Performers</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Actor</b></td></tr><tr><td style=\"display: none\">*</td><td><a href=\"Practitioner-GeneralPractitionerExample.html\">Practitioner/GeneralPractitionerExample</a> &quot; SMITH&quot;</td></tr></table><h3>Instances</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Uid</b></td><td><b>SopClass</b></td></tr><tr><td style=\"display: none\">*</td><td>2.16.124.113543.6003.1154777499.30246.19789.3503430045.1.1</td><td>urn:oid:1.2.840.10008.5.1.4.1.1.2 (Details: urn:ietf:rfc:3986 code urn:oid:1.2.840.10008.5.1.4.1.1.2 = 'urn:oid:1.2.840.10008.5.1.4.1.1.2', stated as 'null')</td></tr></table></blockquote></div>"
+  },
+  "status" : "registered",
+  "subject" : {
+    "reference" : "Patient/PatientExample"
+  },
+  "encounter" : {
+    "reference" : "Encounter/TargetFacilityEncounterExample"
+  },
+  "started" : "2023-10-06T13:28:17-05:00",
+  "basedOn" : [{
+    "reference" : "ServiceRequest/ImagingServiceRequestExample"
+  }],
+  "referrer" : {
+    "reference" : "Practitioner/GeneralPractitionerExample"
+  },
+  "location" : {
+    "reference" : "Location/ProvidersLocationExample"
+  },
+  "description" : "Imaging Description",
+  "series" : [{
+    "uid" : "2.16.124.113543.6003.1154777499.30246.19789.3503430045.1",
+    "modality" : {
+      "system" : "http://dicom.nema.org/resources/ontology/DCM",
+      "code" : "DX"
+    },
+    "performer" : [{
+      "actor" : {
+        "reference" : "Practitioner/GeneralPractitionerExample"
+      }
+    }],
+    "instance" : [{
+      "uid" : "2.16.124.113543.6003.1154777499.30246.19789.3503430045.1.1",
+      "sopClass" : {
+        "system" : "urn:ietf:rfc:3986",
+        "code" : "urn:oid:1.2.840.10008.5.1.4.1.1.2"
+      }
+    }]
+  }]
+}

@@ -1,0 +1,2094 @@
+{
+  "resourceType" : "ImplementationGuide",
+  "id" : "lk-nehr-fhir-ips",
+  "text" : {
+    "status" : "extensions",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>SriLankaIPS</h2><p>The official URL for this implementation guide is: </p><pre>http://fhir.health.gov.lk/ips/ImplementationGuide/lk-nehr-fhir-ips</pre><div><p>A FHIR Implementation Guide - Sri Lanka IPS</p>\n</div></div>"
+  },
+  "url" : "http://fhir.health.gov.lk/ips/ImplementationGuide/lk-nehr-fhir-ips",
+  "version" : "0.1.0",
+  "name" : "SriLankaIPS",
+  "title" : "LK NEHR Sri Lanka Patient Summary (IPS based) Implementation Guide",
+  "status" : "active",
+  "date" : "2024-03-01",
+  "publisher" : "Ministry of Health, Sri Lanka",
+  "contact" : [{
+    "name" : "Ministry of Health, Sri Lanka",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://www.health.gov.lk/"
+    },
+    {
+      "system" : "email",
+      "value" : "digitalhealth@health.gov.lk"
+    }]
+  },
+  {
+    "name" : "Director, Health Information",
+    "telecom" : [{
+      "system" : "email",
+      "value" : "digitalhealth@health.gov.lk",
+      "use" : "work"
+    }]
+  }],
+  "description" : "A FHIR Implementation Guide - Sri Lanka IPS",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "http://unstats.un.org/unsd/methods/m49/m49.htm",
+      "code" : "001",
+      "display" : "World"
+    }]
+  }],
+  "packageId" : "lk-nehr-fhir-ips",
+  "license" : "CC0-1.0",
+  "fhirVersion" : ["4.0.1"],
+  "dependsOn" : [{
+    "id" : "hl7tx",
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/implementationguide-dependency-comment",
+      "valueMarkdown" : "Automatically added as a dependency - all IGs depend on HL7 Terminology"
+    }],
+    "uri" : "http://terminology.hl7.org/ImplementationGuide/hl7.terminology",
+    "packageId" : "hl7.terminology.r4",
+    "version" : "5.3.0"
+  },
+  {
+    "id" : "hl7ext",
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/implementationguide-dependency-comment",
+      "valueMarkdown" : "Automatically added as a dependency - all IGs depend on the HL7 Extension Pack"
+    }],
+    "uri" : "http://hl7.org/fhir/extensions/ImplementationGuide/hl7.fhir.uv.extensions",
+    "packageId" : "hl7.fhir.uv.extensions.r4",
+    "version" : "1.0.0"
+  },
+  {
+    "id" : "InternationalPatientSummaryIG",
+    "uri" : "http://hl7.org/fhir/uv/ips/ImplementationGuide/hl7.fhir.uv.ips",
+    "packageId" : "hl7.fhir.uv.ips",
+    "version" : "1.1.0"
+  }],
+  "definition" : {
+    "extension" : [{
+      "extension" : [{
+        "url" : "code",
+        "valueString" : "copyrightyear"
+      },
+      {
+        "url" : "value",
+        "valueString" : "2021+"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueString" : "releaselabel"
+      },
+      {
+        "url" : "value",
+        "valueString" : "STU1"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueString" : "autoload-resources"
+      },
+      {
+        "url" : "value",
+        "valueString" : "true"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueString" : "path-liquid"
+      },
+      {
+        "url" : "value",
+        "valueString" : "template/liquid"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueString" : "path-liquid"
+      },
+      {
+        "url" : "value",
+        "valueString" : "input/liquid"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueString" : "path-qa"
+      },
+      {
+        "url" : "value",
+        "valueString" : "temp/qa"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueString" : "path-temp"
+      },
+      {
+        "url" : "value",
+        "valueString" : "temp/pages"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueString" : "path-output"
+      },
+      {
+        "url" : "value",
+        "valueString" : "output"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueString" : "path-suppressed-warnings"
+      },
+      {
+        "url" : "value",
+        "valueString" : "input/ignoreWarnings.txt"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueString" : "path-history"
+      },
+      {
+        "url" : "value",
+        "valueString" : "http://fhir.health.gov.lk/ips/history.html"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueString" : "template-html"
+      },
+      {
+        "url" : "value",
+        "valueString" : "template-page.html"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueString" : "template-md"
+      },
+      {
+        "url" : "value",
+        "valueString" : "template-page-md.html"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueString" : "apply-contact"
+      },
+      {
+        "url" : "value",
+        "valueString" : "true"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueString" : "apply-context"
+      },
+      {
+        "url" : "value",
+        "valueString" : "true"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueString" : "apply-copyright"
+      },
+      {
+        "url" : "value",
+        "valueString" : "true"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueString" : "apply-jurisdiction"
+      },
+      {
+        "url" : "value",
+        "valueString" : "true"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueString" : "apply-license"
+      },
+      {
+        "url" : "value",
+        "valueString" : "true"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueString" : "apply-publisher"
+      },
+      {
+        "url" : "value",
+        "valueString" : "true"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueString" : "apply-version"
+      },
+      {
+        "url" : "value",
+        "valueString" : "true"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueString" : "apply-wg"
+      },
+      {
+        "url" : "value",
+        "valueString" : "true"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueString" : "active-tables"
+      },
+      {
+        "url" : "value",
+        "valueString" : "true"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueString" : "fmm-definition"
+      },
+      {
+        "url" : "value",
+        "valueString" : "http://hl7.org/fhir/versions.html#maturity"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueString" : "propagate-status"
+      },
+      {
+        "url" : "value",
+        "valueString" : "true"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueString" : "excludelogbinaryformat"
+      },
+      {
+        "url" : "value",
+        "valueString" : "true"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueString" : "tabbed-snapshots"
+      },
+      {
+        "url" : "value",
+        "valueString" : "true"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-internal-dependency",
+      "valueCode" : "hl7.fhir.uv.tools#0.1.0"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueCode" : "copyrightyear"
+      },
+      {
+        "url" : "value",
+        "valueString" : "2021+"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueCode" : "releaselabel"
+      },
+      {
+        "url" : "value",
+        "valueString" : "STU1"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueCode" : "autoload-resources"
+      },
+      {
+        "url" : "value",
+        "valueString" : "true"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueCode" : "path-liquid"
+      },
+      {
+        "url" : "value",
+        "valueString" : "template/liquid"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueCode" : "path-liquid"
+      },
+      {
+        "url" : "value",
+        "valueString" : "input/liquid"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueCode" : "path-qa"
+      },
+      {
+        "url" : "value",
+        "valueString" : "temp/qa"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueCode" : "path-temp"
+      },
+      {
+        "url" : "value",
+        "valueString" : "temp/pages"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueCode" : "path-output"
+      },
+      {
+        "url" : "value",
+        "valueString" : "output"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueCode" : "path-suppressed-warnings"
+      },
+      {
+        "url" : "value",
+        "valueString" : "input/ignoreWarnings.txt"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueCode" : "path-history"
+      },
+      {
+        "url" : "value",
+        "valueString" : "http://fhir.health.gov.lk/ips/history.html"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueCode" : "template-html"
+      },
+      {
+        "url" : "value",
+        "valueString" : "template-page.html"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueCode" : "template-md"
+      },
+      {
+        "url" : "value",
+        "valueString" : "template-page-md.html"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueCode" : "apply-contact"
+      },
+      {
+        "url" : "value",
+        "valueString" : "true"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueCode" : "apply-context"
+      },
+      {
+        "url" : "value",
+        "valueString" : "true"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueCode" : "apply-copyright"
+      },
+      {
+        "url" : "value",
+        "valueString" : "true"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueCode" : "apply-jurisdiction"
+      },
+      {
+        "url" : "value",
+        "valueString" : "true"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueCode" : "apply-license"
+      },
+      {
+        "url" : "value",
+        "valueString" : "true"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueCode" : "apply-publisher"
+      },
+      {
+        "url" : "value",
+        "valueString" : "true"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueCode" : "apply-version"
+      },
+      {
+        "url" : "value",
+        "valueString" : "true"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueCode" : "apply-wg"
+      },
+      {
+        "url" : "value",
+        "valueString" : "true"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueCode" : "active-tables"
+      },
+      {
+        "url" : "value",
+        "valueString" : "true"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueCode" : "fmm-definition"
+      },
+      {
+        "url" : "value",
+        "valueString" : "http://hl7.org/fhir/versions.html#maturity"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueCode" : "propagate-status"
+      },
+      {
+        "url" : "value",
+        "valueString" : "true"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueCode" : "excludelogbinaryformat"
+      },
+      {
+        "url" : "value",
+        "valueString" : "true"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueCode" : "tabbed-snapshots"
+      },
+      {
+        "url" : "value",
+        "valueString" : "true"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    }],
+    "resource" : [{
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:resource"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/hhims-allergy-intolerance"
+      },
+      "name" : "Allergy Intolerance",
+      "description" : "Used to represent the HHIMS patient's allergies.",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:resource"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/hims-allergy-intolerance"
+      },
+      "name" : "Allergy Intolerance",
+      "description" : "Used to represent the HIMS patient's allergies.",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "AllergyIntolerance"
+      }],
+      "reference" : {
+        "reference" : "AllergyIntolerance/AllergiesExample"
+      },
+      "name" : "Allergy Intolerance",
+      "description" : "Example where a code is used to represent an allergy",
+      "exampleCanonical" : "http://fhir.health.gov.lk/ips/StructureDefinition/hhims-allergy-intolerance"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:resource"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/blood-pressure"
+      },
+      "name" : "Blood Pressure Observation",
+      "description" : "Represents the patient's blood pressure.",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Observation"
+      }],
+      "reference" : {
+        "reference" : "Observation/BloodPressureExample"
+      },
+      "name" : "Blood Pressure Observation",
+      "description" : "Represents the Systolic and Diastolic blood pressure for the patient.",
+      "exampleCanonical" : "http://fhir.health.gov.lk/ips/StructureDefinition/blood-pressure"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:resource"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/cvd-risk-category"
+      },
+      "name" : "Cardiovascular Risk Assessment",
+      "description" : "Represents the patient's CVD risk score.",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "RiskAssessment"
+      }],
+      "reference" : {
+        "reference" : "RiskAssessment/CVDRiskCategoryExample"
+      },
+      "name" : "Cardiovascular Risk Assessment",
+      "description" : "Represents the patient's CVD risk score.",
+      "exampleCanonical" : "http://fhir.health.gov.lk/ips/StructureDefinition/cvd-risk-category"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ValueSet"
+      }],
+      "reference" : {
+        "reference" : "ValueSet/vs-cvd-risk-category"
+      },
+      "name" : "Cardiovascular Risk Categories",
+      "description" : "Cardiovascular risk is expressed as a percentage",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "CodeSystem"
+      }],
+      "reference" : {
+        "reference" : "CodeSystem/cs-cvd-risk-category"
+      },
+      "name" : "Cardiovascular Risk Categories",
+      "description" : "Cardiovascular risk is expressed as a percentage",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ValueSet"
+      }],
+      "reference" : {
+        "reference" : "ValueSet/vs-medical-conditions"
+      },
+      "name" : "Conditions",
+      "description" : "Represents previous, pre-existing and new conditions.",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:resource"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/drug-dispensation"
+      },
+      "name" : "Drug Dispensation",
+      "description" : "Used to represent dispensed medication for a patient.",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "MedicationDispense"
+      }],
+      "reference" : {
+        "reference" : "MedicationDispense/DrugDispensationExample"
+      },
+      "name" : "Drug Dispensation",
+      "description" : "Used to represent dispensed medication for a patient.",
+      "exampleCanonical" : "http://fhir.health.gov.lk/ips/StructureDefinition/drug-dispensation"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:resource"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/fasting-blood-sugar"
+      },
+      "name" : "Fasting Blood Sugar Observation",
+      "description" : "Represents the patient's FBS results.",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Observation"
+      }],
+      "reference" : {
+        "reference" : "Observation/FastingBloodSugarExample"
+      },
+      "name" : "Fasting Blood Sugar Observation",
+      "description" : "Represents the patient's FBS results.",
+      "exampleCanonical" : "http://fhir.health.gov.lk/ips/StructureDefinition/fasting-blood-sugar"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ValueSet"
+      }],
+      "reference" : {
+        "reference" : "ValueSet/vs-follow-up-reasons"
+      },
+      "name" : "Follow up at HLC",
+      "description" : "Follow up at Healthy Lifestyle Center",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "CodeSystem"
+      }],
+      "reference" : {
+        "reference" : "CodeSystem/cs-follow-up-reasons"
+      },
+      "name" : "Follow up at HLC",
+      "description" : "Follow up at Healthy Lifestyle Center",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:resource"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/follow-up-at-hlc"
+      },
+      "name" : "Follow-up at HLC",
+      "description" : "Used to record the follow-up event for the patient at HLC.",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "CarePlan"
+      }],
+      "reference" : {
+        "reference" : "CarePlan/FollowUpAtHLCExample"
+      },
+      "name" : "Follow-up at HLC",
+      "description" : "Used to record the follow-up event for the patient at HLC.",
+      "exampleCanonical" : "http://fhir.health.gov.lk/ips/StructureDefinition/follow-up-at-hlc"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ValueSet"
+      }],
+      "reference" : {
+        "reference" : "ValueSet/vs-follow-up-plan"
+      },
+      "name" : "Follow-up plan",
+      "description" : "Follow-up plan",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:resource"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/general-referral-request"
+      },
+      "name" : "General Referral Request",
+      "description" : "Used to initiate a request for a referral.",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ServiceRequest"
+      }],
+      "reference" : {
+        "reference" : "ServiceRequest/GeneralReferralServiceRequestExample"
+      },
+      "name" : "General Referral Request",
+      "description" : "Used to initiate a request for a referral.",
+      "exampleCanonical" : "http://fhir.health.gov.lk/ips/StructureDefinition/general-referral-request"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:resource"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/generic-allergy-intolerance"
+      },
+      "name" : "Generic Allergy Intolerance",
+      "description" : "Used to represent the patient's allergies.",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "AllergyIntolerance"
+      }],
+      "reference" : {
+        "reference" : "AllergyIntolerance/GenericAllergiesExample"
+      },
+      "name" : "Generic Allergy Intolerance",
+      "description" : "Example where a code is used to represent an allergy",
+      "exampleCanonical" : "http://fhir.health.gov.lk/ips/StructureDefinition/generic-allergy-intolerance"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:resource"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/generic-observation"
+      },
+      "name" : "Generic Observation",
+      "description" : "Base Observation elements that are inherited by other Observations resources.",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Observation"
+      }],
+      "reference" : {
+        "reference" : "Observation/GenericObservationExample"
+      },
+      "name" : "Generic Observation",
+      "description" : "Base Observation elements that are inherited by other Observations resources.",
+      "exampleCanonical" : "http://fhir.health.gov.lk/ips/StructureDefinition/generic-observation"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:resource"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/generic-weight"
+      },
+      "name" : "Generic Patient Weight Observation",
+      "description" : "Represents the patient's weight.",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Observation"
+      }],
+      "reference" : {
+        "reference" : "Observation/GenericWeightExample"
+      },
+      "name" : "Generic Patient Weight Observation",
+      "description" : "Represents the patient's weight.",
+      "exampleCanonical" : "http://fhir.health.gov.lk/ips/StructureDefinition/generic-weight"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:resource"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/generic-service-request"
+      },
+      "name" : "Generic Service Request",
+      "description" : "Base ServiceRequest elements that are inherited by other ServiceRequest resources.",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ServiceRequest"
+      }],
+      "reference" : {
+        "reference" : "ServiceRequest/GenericServiceRequestExample"
+      },
+      "name" : "Generic Service Request",
+      "description" : "Base ServiceRequest elements that are inherited by other ServiceRequest resources.",
+      "exampleCanonical" : "http://fhir.health.gov.lk/ips/StructureDefinition/generic-service-request"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:resource"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/generic-target-facility-encounter"
+      },
+      "name" : "Generic Target Facility Encounter",
+      "description" : "Represents the current facility at which the patient is receiving health services.",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Encounter"
+      }],
+      "reference" : {
+        "reference" : "Encounter/GenericTargetFacilityEncounterExample"
+      },
+      "name" : "Generic Target Facility Encounter",
+      "description" : "Represents the current facility at which the patient is receiving health services.",
+      "exampleCanonical" : "http://fhir.health.gov.lk/ips/StructureDefinition/generic-target-facility-encounter"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:resource"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/generic-task"
+      },
+      "name" : "Generic Task",
+      "description" : "Base Task elements that are inherited by other Task resources.",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Task"
+      }],
+      "reference" : {
+        "reference" : "Task/GenericTaskExample"
+      },
+      "name" : "Generic Task",
+      "description" : "Base Task elements that are inherited by other Task resources.",
+      "exampleCanonical" : "http://fhir.health.gov.lk/ips/StructureDefinition/generic-task"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:resource"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/hhims-composition"
+      },
+      "name" : "HHIMS Composition",
+      "description" : "Clinical document used to represent the International Patient Summary (IPS) data set for HHIMS",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Composition"
+      }],
+      "reference" : {
+        "reference" : "Composition/HHIMSCompositionExample"
+      },
+      "name" : "HHIMS Composition",
+      "description" : "Clinical document used to represent the International Patient Summary (IPS) data set for HHIMS",
+      "exampleCanonical" : "http://fhir.health.gov.lk/ips/StructureDefinition/hhims-composition"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:resource"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/hhims-ips-bundle"
+      },
+      "name" : "HHIMS IPS Bundle",
+      "description" : "This bundle contains all of the HHIMS resources for IPS.",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Bundle"
+      }],
+      "reference" : {
+        "reference" : "Bundle/HHIMSIPSBundleExample"
+      },
+      "name" : "HHIMS IPS Bundle",
+      "description" : "HHIMS IPS Bundle",
+      "exampleCanonical" : "http://fhir.health.gov.lk/ips/StructureDefinition/hhims-ips-bundle"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:resource"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/hhims-patient"
+      },
+      "name" : "HHIMS Patient",
+      "description" : "Is used to document demographics and other administrative information about an HHIMS individual receiving care or other health-related services.",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Patient"
+      }],
+      "reference" : {
+        "reference" : "Patient/HHIMSPatientExample"
+      },
+      "name" : "HHIMS Patient",
+      "description" : "Is used to document demographics and other administrative information about an HHIMS individual receiving care or other health-related services.",
+      "exampleCanonical" : "http://fhir.health.gov.lk/ips/StructureDefinition/hhims-patient"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:resource"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/hhims-weight"
+      },
+      "name" : "HHIMS Patient Weight Observation",
+      "description" : "Represents the HHIMS patient's weight.",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Observation"
+      }],
+      "reference" : {
+        "reference" : "Observation/HHIMSWeightExample"
+      },
+      "name" : "HHIMS Patient Weight Observation",
+      "description" : "Represents the patient's weight.",
+      "exampleCanonical" : "http://fhir.health.gov.lk/ips/StructureDefinition/hhims-weight"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:resource"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/hhims-target-facility-encounter"
+      },
+      "name" : "HHIMS Target Facility Encounter",
+      "description" : "Represents the current facility at which the HHIMS patient is receiving health services.",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:resource"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/hhims-transactional-bundle"
+      },
+      "name" : "HHIMS Transactional Bundle",
+      "description" : "This bundle contains all of the HHIMS resources for transactional requests.",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Bundle"
+      }],
+      "reference" : {
+        "reference" : "Bundle/HHIMSTransactionalBundleExample"
+      },
+      "name" : "HHIMS Transactional Bundle",
+      "description" : "This bundle contains all of the HHIMS resources for transactional requests.",
+      "exampleCanonical" : "http://fhir.health.gov.lk/ips/StructureDefinition/hhims-transactional-bundle"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:resource"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/hims-composition"
+      },
+      "name" : "HIMS Composition",
+      "description" : "Clinical document used to represent the International Patient Summary (IPS) data set for HIMS",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Composition"
+      }],
+      "reference" : {
+        "reference" : "Composition/HIMSCompositionExample"
+      },
+      "name" : "HIMS Composition",
+      "description" : "Clinical document used to represent the International Patient Summary (IPS) data set for HIMS.",
+      "exampleCanonical" : "http://fhir.health.gov.lk/ips/StructureDefinition/hims-composition"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:resource"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/hims-ips-bundle"
+      },
+      "name" : "HIMS IPS Bundle",
+      "description" : "This bundle contains all of the HIMS resources for IPS.",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Bundle"
+      }],
+      "reference" : {
+        "reference" : "Bundle/HIMSIPSBundleExample"
+      },
+      "name" : "HIMS IPS Bundle",
+      "description" : "HIMS IPS Bundle",
+      "exampleCanonical" : "http://fhir.health.gov.lk/ips/StructureDefinition/hims-ips-bundle"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:resource"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/hims-patient"
+      },
+      "name" : "HIMS Patient",
+      "description" : "Is used to document demographics and other administrative information about an individual receiving care or other health-related services. \n    In addition to the profiled data elements, this profile includes all data elements from the HHIMS Patient profile.",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Patient"
+      }],
+      "reference" : {
+        "reference" : "Patient/HIMSPatientExample"
+      },
+      "name" : "HIMS Patient",
+      "description" : "Is used to document demographics and other administrative information about an individual receiving care or other health-related services. In addition to the profiled data elements, this profile includes all data elements from the HHIMS Patient profile.",
+      "exampleCanonical" : "http://fhir.health.gov.lk/ips/StructureDefinition/hims-patient"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:resource"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/hims-weight"
+      },
+      "name" : "HIMS Patient Weight Observation",
+      "description" : "Represents the HIMS patient's weight.",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Observation"
+      }],
+      "reference" : {
+        "reference" : "Observation/HIMSWeightExample"
+      },
+      "name" : "HIMS Patient Weight Observation",
+      "description" : "Represents the patient's weight.",
+      "exampleCanonical" : "http://fhir.health.gov.lk/ips/StructureDefinition/hims-weight"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:resource"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/hims-target-facility-encounter"
+      },
+      "name" : "HIMS Target Facility Encounter",
+      "description" : "Represents the current facility at which the HIMS patient is receiving health services.",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:resource"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/hims-transactional-bundle"
+      },
+      "name" : "HIMS Transactional Bundle",
+      "description" : "This bundle contains all of the HIMS resources for transactional requests.",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Bundle"
+      }],
+      "reference" : {
+        "reference" : "Bundle/HIMSTransactionalBundleExample"
+      },
+      "name" : "HIMS Transactional Bundle",
+      "description" : "This bundle contains all of the HIMS resources for transactional requests.",
+      "exampleCanonical" : "http://fhir.health.gov.lk/ips/StructureDefinition/hims-transactional-bundle"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:resource"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/imaging-request"
+      },
+      "name" : "Imaging Request",
+      "description" : "Used to initiate the request for imaging to be done.",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ServiceRequest"
+      }],
+      "reference" : {
+        "reference" : "ServiceRequest/ImagingServiceRequestExample"
+      },
+      "name" : "Imaging Request",
+      "description" : "Used to initiate the request for imaging to be done.",
+      "exampleCanonical" : "http://fhir.health.gov.lk/ips/StructureDefinition/imaging-request"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:resource"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/imaging-study"
+      },
+      "name" : "Imaging Study",
+      "description" : "Used to represent the content or results of a imaging study.",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ImagingStudy"
+      }],
+      "reference" : {
+        "reference" : "ImagingStudy/ImagingExample"
+      },
+      "name" : "Imaging Study",
+      "description" : "Used to represent the content or results of a imaging study.",
+      "exampleCanonical" : "http://fhir.health.gov.lk/ips/StructureDefinition/imaging-study"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:resource"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/imaging-task"
+      },
+      "name" : "Imaging Task",
+      "description" : "Is primarily used to track the progress of an imaging request.",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Task"
+      }],
+      "reference" : {
+        "reference" : "Task/ImagingTaskExample"
+      },
+      "name" : "Imaging Task",
+      "description" : "Is primarily used to track the progress of an imaging request.",
+      "exampleCanonical" : "http://fhir.health.gov.lk/ips/StructureDefinition/imaging-task"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ValueSet"
+      }],
+      "reference" : {
+        "reference" : "ValueSet/vs-investigation"
+      },
+      "name" : "Investigations",
+      "description" : "Investigations",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "CodeSystem"
+      }],
+      "reference" : {
+        "reference" : "CodeSystem/cs-investigation"
+      },
+      "name" : "Investigations",
+      "description" : "Investigations",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:resource"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/investigations-request"
+      },
+      "name" : "Investigations Request",
+      "description" : "Used to initiate a request for an investigation.",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ServiceRequest"
+      }],
+      "reference" : {
+        "reference" : "ServiceRequest/InvestigationsServiceRequestExample"
+      },
+      "name" : "Investigations Request",
+      "description" : "Used to initiate a request for an investigation.",
+      "exampleCanonical" : "http://fhir.health.gov.lk/ips/StructureDefinition/investigations-request"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:resource"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/investigations-task"
+      },
+      "name" : "Investigations Task",
+      "description" : "Is primarily used to track the progress of an investigations request.",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Task"
+      }],
+      "reference" : {
+        "reference" : "Task/InvestigationsTaskExample"
+      },
+      "name" : "Investigations Task",
+      "description" : "Is primarily used to track the progress of an investigations request.",
+      "exampleCanonical" : "http://fhir.health.gov.lk/ips/StructureDefinition/investigations-task"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:resource"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/medical-history-hims"
+      },
+      "name" : "Medical History",
+      "description" : "Represents previous, pre-existing and new conditions for the HIMS patient.",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:resource"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/medical-history-hhims"
+      },
+      "name" : "Medical History",
+      "description" : "Indicates that there is no information available about the subject's health problems or disabilities.",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Condition"
+      }],
+      "reference" : {
+        "reference" : "Condition/HHIMSMedicalHistoryExample"
+      },
+      "name" : "Medical History",
+      "description" : "Indicates that there is no information available about the subject's health problems or disabilities.",
+      "exampleCanonical" : "http://fhir.health.gov.lk/ips/StructureDefinition/medical-history-hhims"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Condition"
+      }],
+      "reference" : {
+        "reference" : "Condition/HIMSMedicalHistoryExample"
+      },
+      "name" : "Medical History",
+      "description" : "Represents previous, pre-existing and new conditions for the HIMS patient.",
+      "exampleCanonical" : "http://fhir.health.gov.lk/ips/StructureDefinition/medical-history-hims"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ValueSet"
+      }],
+      "reference" : {
+        "reference" : "ValueSet/vs-medication-name"
+      },
+      "name" : "Medication Names",
+      "description" : "Medication Names",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "CodeSystem"
+      }],
+      "reference" : {
+        "reference" : "CodeSystem/cs-medication-name"
+      },
+      "name" : "Medication Names",
+      "description" : "Medication Names",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "AllergyIntolerance"
+      }],
+      "reference" : {
+        "reference" : "AllergyIntolerance/NoAllergiesExample"
+      },
+      "name" : "No Allergy Information",
+      "description" : "This is to indicate that there is no information avaible for allergies.",
+      "exampleCanonical" : "http://fhir.health.gov.lk/ips/StructureDefinition/hims-allergy-intolerance"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:resource"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/notifiable-diseases-notified"
+      },
+      "name" : "Notifiable Diseases Notified",
+      "description" : "Represents a message communicated to the practitioner about a patient's encounter.",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Communication"
+      }],
+      "reference" : {
+        "reference" : "Communication/NotifiableDiseasesNotifiedExample"
+      },
+      "name" : "Notifiable Diseases Notified",
+      "description" : "Represents a message communicated to the practitioner about a patient's encounter.",
+      "exampleCanonical" : "http://fhir.health.gov.lk/ips/StructureDefinition/notifiable-diseases-notified"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:resource"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/organization"
+      },
+      "name" : "Organization",
+      "description" : "Organization providing health related services.",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Organization"
+      }],
+      "reference" : {
+        "reference" : "Organization/OrganizationExample"
+      },
+      "name" : "Organization",
+      "description" : "Organization providing health related services.",
+      "exampleCanonical" : "http://fhir.health.gov.lk/ips/StructureDefinition/organization"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:resource"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/bmi"
+      },
+      "name" : "Patient BMI Observation",
+      "description" : "Represents the patient's BMI.",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Observation"
+      }],
+      "reference" : {
+        "reference" : "Observation/BMIExample"
+      },
+      "name" : "Patient BMI Observation",
+      "description" : "Represents the patient's BMI.",
+      "exampleCanonical" : "http://fhir.health.gov.lk/ips/StructureDefinition/bmi"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ValueSet"
+      }],
+      "reference" : {
+        "reference" : "ValueSet/vs-identifier-types"
+      },
+      "name" : "Patient Business Identifier Types",
+      "description" : "Patient Business Identifier Types",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "CodeSystem"
+      }],
+      "reference" : {
+        "reference" : "CodeSystem/cs-identifier-types"
+      },
+      "name" : "Patient Business Identifier Types",
+      "description" : "Patient Business Identifier Types",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:resource"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/height"
+      },
+      "name" : "Patient Height Observation",
+      "description" : "Represents the patient's height.",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Observation"
+      }],
+      "reference" : {
+        "reference" : "Observation/HeightExample"
+      },
+      "name" : "Patient Height Observation",
+      "description" : "Represents the patient's height.",
+      "exampleCanonical" : "http://fhir.health.gov.lk/ips/StructureDefinition/height"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ValueSet"
+      }],
+      "reference" : {
+        "reference" : "ValueSet/vs-risk-behaviour-physical-activity"
+      },
+      "name" : "Physical Activity",
+      "description" : "Physical Activity Status",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:resource"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/risk-behaviour-physical-activity"
+      },
+      "name" : "Physical Activity Status Observation",
+      "description" : "Represents the physical status of the patient.",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Observation"
+      }],
+      "reference" : {
+        "reference" : "Observation/RiskBehaviourPhysicalActivityExample"
+      },
+      "name" : "Physical Activity Status Observation",
+      "description" : "Represents the physical status of the patient.",
+      "exampleCanonical" : "http://fhir.health.gov.lk/ips/StructureDefinition/risk-behaviour-physical-activity"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:resource"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/practitioner"
+      },
+      "name" : "Practitioner",
+      "description" : "Represents the practitioners who participated in the observation.",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Practitioner"
+      }],
+      "reference" : {
+        "reference" : "Practitioner/GeneralPractitionerExample"
+      },
+      "name" : "Practitioner",
+      "description" : "Represents the practitioners who participated in the observation.",
+      "exampleCanonical" : "http://fhir.health.gov.lk/ips/StructureDefinition/practitioner"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:resource"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/no-medication-requested"
+      },
+      "name" : "Prescription Not Available",
+      "description" : "This is to indicate that the patient has not received any prescriptions for drugs.",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "MedicationRequest"
+      }],
+      "reference" : {
+        "reference" : "MedicationRequest/NoPrescriptionsExample"
+      },
+      "name" : "Prescription Not Available",
+      "description" : "This is to indicate that the patient has not received any prescriptions for drugs.",
+      "exampleCanonical" : "http://fhir.health.gov.lk/ips/StructureDefinition/no-medication-requested"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:resource"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/medication-request"
+      },
+      "name" : "Prescription Request",
+      "description" : "This is to record a patient's medication prescription request",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "MedicationRequest"
+      }],
+      "reference" : {
+        "reference" : "MedicationRequest/PrescriptionsExample"
+      },
+      "name" : "Prescription Request",
+      "description" : "This is to record a patient's medication prescription request",
+      "exampleCanonical" : "http://fhir.health.gov.lk/ips/StructureDefinition/medication-request"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:resource"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/procedure"
+      },
+      "name" : "Procedures",
+      "description" : "This represents the procedure that was performed on a patient.",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ValueSet"
+      }],
+      "reference" : {
+        "reference" : "ValueSet/vs-procedure"
+      },
+      "name" : "Procedures",
+      "description" : "Other Procedures",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ValueSet"
+      }],
+      "reference" : {
+        "reference" : "ValueSet/vs-procedure-imaging"
+      },
+      "name" : "Procedures",
+      "description" : "Imaging Procedures",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "CodeSystem"
+      }],
+      "reference" : {
+        "reference" : "CodeSystem/cs-procedure"
+      },
+      "name" : "Procedures",
+      "description" : "Other Procedures",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "CodeSystem"
+      }],
+      "reference" : {
+        "reference" : "CodeSystem/cs-procedure-imaging"
+      },
+      "name" : "Procedures",
+      "description" : "Imaging Procedures",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Procedure"
+      }],
+      "reference" : {
+        "reference" : "Procedure/ProceduresExample"
+      },
+      "name" : "Procedures",
+      "description" : "This represents the procedure that was performed on a patient.",
+      "exampleCanonical" : "http://fhir.health.gov.lk/ips/StructureDefinition/procedure"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:resource"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/providers-location"
+      },
+      "name" : "Providers Location",
+      "description" : "Represents the physical location of the provider.",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Location"
+      }],
+      "reference" : {
+        "reference" : "Location/ProvidersLocationExample"
+      },
+      "name" : "Providers Location",
+      "description" : "Represents the physical location of the provider.",
+      "exampleCanonical" : "http://fhir.health.gov.lk/ips/StructureDefinition/providers-location"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:resource"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/random-blood-sugar"
+      },
+      "name" : "Random Blood Sugar Observation",
+      "description" : "Represents the patient's RBS results.",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Observation"
+      }],
+      "reference" : {
+        "reference" : "Observation/RandomBloodSugarExample"
+      },
+      "name" : "Random Blood Sugar Observation",
+      "description" : "Represents the patient's RBS results.",
+      "exampleCanonical" : "http://fhir.health.gov.lk/ips/StructureDefinition/random-blood-sugar"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ValueSet"
+      }],
+      "reference" : {
+        "reference" : "ValueSet/vs-reason-for-encounter"
+      },
+      "name" : "Reason For Encounter",
+      "description" : "Encounter reasons.",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "CodeSystem"
+      }],
+      "reference" : {
+        "reference" : "CodeSystem/cs-reason-for-encounter"
+      },
+      "name" : "Reason For Encounter",
+      "description" : "Encounter reasons.",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:resource"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/follow-up-plan"
+      },
+      "name" : "Referral Request For Follow-up Plan",
+      "description" : "Used to initiate a referral request for a Follow-up Plan.",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ServiceRequest"
+      }],
+      "reference" : {
+        "reference" : "ServiceRequest/FollowUpPlanServiceRequestExample"
+      },
+      "name" : "Referral Request For Follow-up Plan",
+      "description" : "Used to initiate a referral request for a Follow-up Plan.",
+      "exampleCanonical" : "http://fhir.health.gov.lk/ips/StructureDefinition/follow-up-plan"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:resource"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/referral-task"
+      },
+      "name" : "Referral Task",
+      "description" : "Is primarily used to track the progress of a patient's referral.",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Task"
+      }],
+      "reference" : {
+        "reference" : "Task/HHIMSReferralTaskExample"
+      },
+      "name" : "Referral Task",
+      "description" : "Is primarily used to track the progress of a patient's referral.",
+      "exampleCanonical" : "http://fhir.health.gov.lk/ips/StructureDefinition/referral-task"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Encounter"
+      }],
+      "reference" : {
+        "reference" : "Encounter/HHIMSTargetFacilityEncounterExample"
+      },
+      "name" : "Target Facility Encounter for HHIMS Patient",
+      "description" : "Represents the current facility at which the patient is receiving health services.",
+      "exampleCanonical" : "http://fhir.health.gov.lk/ips/StructureDefinition/hhims-target-facility-encounter"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Encounter"
+      }],
+      "reference" : {
+        "reference" : "Encounter/HIMSTargetFacilityEncounterExample"
+      },
+      "name" : "Target Facility Encounter for HIMS Patient",
+      "description" : "Represents the current facility at which the patient is receiving health services.",
+      "exampleCanonical" : "http://fhir.health.gov.lk/ips/StructureDefinition/hims-target-facility-encounter"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:resource"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/risk-behaviour-tobacco-smoker"
+      },
+      "name" : "Tobacco Smoker Observation",
+      "description" : "Represents the tobacco smoking status of the patient.",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Observation"
+      }],
+      "reference" : {
+        "reference" : "Observation/RiskBehaviourTobaccoSmokerExample"
+      },
+      "name" : "Tobacco Smoker Observation",
+      "description" : "Represents the tobacco smoking status of the patient.",
+      "exampleCanonical" : "http://fhir.health.gov.lk/ips/StructureDefinition/risk-behaviour-tobacco-smoker"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:resource"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/total-cholesterol"
+      },
+      "name" : "Total Cholesterol Observation",
+      "description" : "Represents the patient's total cholesterol results.",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Observation"
+      }],
+      "reference" : {
+        "reference" : "Observation/TotalCholesterolExample"
+      },
+      "name" : "Total Cholesterol Observation",
+      "description" : "Represents the patient's total cholesterol results.",
+      "exampleCanonical" : "http://fhir.health.gov.lk/ips/StructureDefinition/total-cholesterol"
+    }],
+    "page" : {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
+        "valueUrl" : "toc.html"
+      }],
+      "nameUrl" : "toc.html",
+      "title" : "Table of Contents",
+      "generation" : "html",
+      "page" : [{
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
+          "valueUrl" : "index.html"
+        }],
+        "nameUrl" : "index.html",
+        "title" : "Home",
+        "generation" : "html"
+      },
+      {
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
+          "valueUrl" : "changes.html"
+        }],
+        "nameUrl" : "changes.html",
+        "title" : "Changes",
+        "generation" : "html"
+      }]
+    },
+    "parameter" : [{
+      "code" : "path-resource",
+      "value" : "input/capabilities"
+    },
+    {
+      "code" : "path-resource",
+      "value" : "input/examples"
+    },
+    {
+      "code" : "path-resource",
+      "value" : "input/extensions"
+    },
+    {
+      "code" : "path-resource",
+      "value" : "input/models"
+    },
+    {
+      "code" : "path-resource",
+      "value" : "input/operations"
+    },
+    {
+      "code" : "path-resource",
+      "value" : "input/profiles"
+    },
+    {
+      "code" : "path-resource",
+      "value" : "input/resources"
+    },
+    {
+      "code" : "path-resource",
+      "value" : "input/vocabulary"
+    },
+    {
+      "code" : "path-resource",
+      "value" : "input/maps"
+    },
+    {
+      "code" : "path-resource",
+      "value" : "input/testing"
+    },
+    {
+      "code" : "path-resource",
+      "value" : "input/history"
+    },
+    {
+      "code" : "path-resource",
+      "value" : "fsh-generated/resources"
+    },
+    {
+      "code" : "path-pages",
+      "value" : "template/config"
+    },
+    {
+      "code" : "path-pages",
+      "value" : "input/images"
+    },
+    {
+      "code" : "path-tx-cache",
+      "value" : "input-cache/txcache"
+    }]
+  }
+}

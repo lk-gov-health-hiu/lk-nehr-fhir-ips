@@ -1,0 +1,897 @@
+
+
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE HTML>
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
+    <title>Investigations - XML Representation - LK NEHR Sri Lanka Patient Summary (IPS based) Implementation Guide v0.1.0</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="author" content="http://hl7.org/fhir"/>
+
+    <link href="fhir.css" rel="stylesheet"/>
+
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap-fhir.css" rel="stylesheet"/>
+
+    <!-- Project extras -->
+    <link href="assets/css/project.css" rel="stylesheet"/>
+    <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
+    <link href="assets/css/jquery-ui.css" rel="stylesheet"/>
+  	<link href="assets/css/prism.css" rel="stylesheet" />
+    <!-- Placeholder for child template CSS declarations -->
+<link href="assets/css/openhie.css" rel="stylesheet"/>
+<link href="assets/css/lforms.min.css" rel="stylesheet"/>
+
+
+    <script type="text/javascript" src="fhir-table-scripts.js"> </script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="assets/js/html5shiv.js"></script>
+    <script src="assets/js/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Favicons -->
+    <link rel="fhir-logo" sizes="144x144" href="assets/ico/icon-fhir-144.png"/>
+    <link rel="fhir-logo" sizes="114x114" href="assets/ico/icon-fhir-114.png"/>
+    <link rel="fhir-logo" sizes="72x72" href="assets/ico/icon-fhir-72.png"/>
+    <link rel="fhir-logo" href="assets/ico/icon-fhir-57.png"/>
+    <link rel="shortcut icon" href="assets/ico/favicon.png"/>
+  </head>
+  <body onload="document.body.style.opacity='1'">
+
+	  <script src="assets/js/prism.js"></script>
+
+    <style type="text/css">h2{--heading-prefix:"4.61"}
+    h3,h4,h5,h6{--heading-prefix:"4.61"}</style>
+    <div id="segment-header" class="segment">  <!-- segment-header -->
+      <div class="container">  <!-- container -->
+        <!-- Placeholder for child template header declarations -->
+
+<!-- Left logo - typically the publisher's logo - project or affiliate -->
+        <div id="project-nav">
+          <a id="project-logo" no-external="true" href="https://ohie.org/">
+            <img height="71" alt="Project home" src="assets/images/home.png"/>
+          </a>
+        </div>
+
+<!-- Right logo - for example the FHIR logo -->
+<!-- Make sure you have authorization to use the FHIR logo -->
+        <div id="family-nav">
+          <a id="family-logo" no-external="true" href="http://hl7.org/fhir"><img height="70" alt="FHIR website" src="assets/images/fire.png"/> </a>
+        </div>
+
+<!-- search icon - if you want -->
+<!--
+        <div id="hl7-search">
+          <a id="hl7-search-lnk" no-external="true" href="http://hl7.org/fhir/search.cfm"><img alt="Search FHIR" src="assets/images/search.png"/></a>
+        </div>
+-->
+
+
+        <div id="ig-status">
+          <p><span style="font-size:12pt;font-weight:bold">LK NEHR Sri Lanka Patient Summary (IPS based) Implementation Guide</span>
+            <br/>
+            <span style="display:inline-block;">0.1.0 - STU1
+
+
+
+  <img alt="International flag" src="assets/images/001.svg" height="16" title="International"/>
+
+
+            </span>
+          </p>
+        </div>
+      </div> <!-- /container -->
+    </div>  <!-- /segment-header -->
+
+    <div id="segment-navbar" class="segment">  <!-- segment-navbar -->
+      <div id="stripe"> </div>
+      <div class="container">  <!-- container -->
+        <!-- HEADER CONTENT -->
+
+        <nav class="navbar navbar-inverse">
+          <!--status-bar-->
+          <div class="container">
+            <button data-target=".navbar-inverse-collapse" class="navbar-toggle" data-toggle="collapse" type="button">
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+            </button>
+            <a class="navbar-brand hidden" href="http://hl7.org/fhir/R4/index.html">FHIR</a>
+            <div class="nav-collapse collapse navbar-inverse-collapse">
+              <ul
+	xmlns="http://www.w3.org/1999/xhtml" class="nav navbar-nav">
+	<li>
+		<a href="index.html">IG Home</a>
+	</li>
+	<li>
+		<a href="toc.html">Table of Contents</a>
+	</li>
+<!--
+	<li class="dropdown">
+		<a data-toggle="dropdown" href="#" class="dropdown-toggle">Background<b class="caret"></b>
+		</a>
+
+	</li>
+	<li class="dropdown">
+		<a data-toggle="dropdown" href="#" class="dropdown-toggle">Functional Description<b class="caret"></b>
+		</a>
+
+	</li>
+-->
+	<li class="dropdown">
+		<a data-toggle="dropdown" href="#" class="dropdown-toggle">FHIR Artifacts<b class="caret"></b>
+		</a>
+		<ul class="dropdown-menu">
+			<li>
+				<a href="library.html">Library</a>
+			</li>
+		</ul>
+	</li>
+</ul>      
+            </div>  <!-- /.nav-collapse -->
+          </div>  <!-- /.container -->
+        </nav>  <!-- /.navbar -->
+      <!-- /HEADER CONTENT -->
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-navbar -->
+    <!--status-bar-->
+
+    <div id="segment-breadcrumb" class="segment">  <!-- segment-breadcrumb -->
+      <div class="container">  <!-- container -->
+        <ul class="breadcrumb">
+          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='artifacts.html'><b>Artifacts Summary</b></a></li><li><b>Investigations</b></li>
+
+        </ul>
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-breadcrumb -->
+
+    <a name="top"> </a>
+    <div id="segment-content" class="segment">  <!-- segment-content -->
+      <div class="container">  <!-- container -->
+        <div class="row">
+          <div class="inner-wrapper">
+
+<div style="counter-reset: section 7" class="col-12">
+<!--ReleaseHeader--><p id="publish-box">LK NEHR Sri Lanka Patient Summary (IPS based) Implementation Guide, published by Ministry of Health, Sri Lanka. This guide is not an authorized publication; it is the continuous build for version 0.1.0 built by the FHIR (HL7® FHIR® Standard) CI Build. This version is based on the current content of <a href="https://github.com/lk-gov-health-hiu/lk-nehr-fhir-ips">https://github.com/lk-gov-health-hiu/lk-nehr-fhir-ips</a> and changes regularly. See the <a href="http://fhir.health.gov.lk/ips/history.html">Directory of published versions</a></p><!--EndReleaseHeader-->
+
+
+
+
+
+
+
+
+
+<ul class="nav nav-tabs">
+
+  <li>
+    <a href="CodeSystem-cs-investigation.html">Narrative Content</a>
+  </li>
+
+
+
+  
+    <li class="active">
+      <a href="#">XML</a>
+    </li>
+  
+
+
+  
+    <li>
+      <a href="CodeSystem-cs-investigation.json.html">JSON</a>
+    </li>
+  
+
+
+  
+    <li>
+      <a href="CodeSystem-cs-investigation.ttl.html">TTL</a>
+    </li>
+  
+
+
+
+</ul>
+
+
+<a name="root"> </a>
+
+
+<h2 id="root">: Investigations - XML Representation</h2>
+
+  <table class="colsi">
+    <tr>
+
+      <td colspan="2">
+        
+          Active
+          
+            as of 2024-03-13
+          
+        
+      </td>
+
+    </tr>
+  </table>
+
+
+<p><a href="CodeSystem-cs-investigation.xml" no-download="true">Raw xml</a> | <a href="CodeSystem-cs-investigation.xml" download>Download</a></p>
+
+  <!-- insert intro if present -->
+  
+
+
+
+  <pre class="xml" style="white-space: pre; text-wrap: nowrap;"><code style="white-space: pre; text-wrap: nowrap;">
+
+&lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem">CodeSystem</a> xmlns=&quot;http://hl7.org/fhir&quot;&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.id">id</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;cs-investigation&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.text">text</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.status">status</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;generated&quot;/&gt;
+    &lt;div xmlns=&quot;http://www.w3.org/1999/xhtml&quot;&gt;&lt;p&gt;This case-sensitive code system &lt;code&gt;http://fhir.health.gov.lk/ips/CodeSystem/cs-investigation&lt;/code&gt; defines the following codes:&lt;/p&gt;&lt;table class=&quot;codes&quot;&gt;&lt;tr&gt;&lt;td style=&quot;white-space:nowrap&quot;&gt;&lt;b&gt;Code&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Display&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Definition&lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;white-space:nowrap&quot;&gt;CLOTTING-PROFILE-BT&lt;a name=&quot;cs-investigation-CLOTTING-PROFILE-BT&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;CLOTTING PROFILE - BT&lt;/td&gt;&lt;td&gt;Needs definition&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;white-space:nowrap&quot;&gt;CLOTTING-PROFILE-CT&lt;a name=&quot;cs-investigation-CLOTTING-PROFILE-CT&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;CLOTTING PROFILE - CT&lt;/td&gt;&lt;td&gt;Needs definition&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;white-space:nowrap&quot;&gt;CLOTTING-PROFILE-APTT&lt;a name=&quot;cs-investigation-CLOTTING-PROFILE-APTT&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;CLOTTING PROFILE - APTT&lt;/td&gt;&lt;td&gt;Needs definition&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;white-space:nowrap&quot;&gt;CLOTTING-PROFILE-INR&lt;a name=&quot;cs-investigation-CLOTTING-PROFILE-INR&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;CLOTTING PROFILE - INR&lt;/td&gt;&lt;td&gt;Needs definition&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;white-space:nowrap&quot;&gt;UFR-Albumin&lt;a name=&quot;cs-investigation-UFR-Albumin&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;UFR - Albumin&lt;/td&gt;&lt;td&gt;Needs definition&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;white-space:nowrap&quot;&gt;UFR-Pus-cells&lt;a name=&quot;cs-investigation-UFR-Pus-cells&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;UFR - Pus cells&lt;/td&gt;&lt;td&gt;Needs definition&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;white-space:nowrap&quot;&gt;UFR-Red-cells&lt;a name=&quot;cs-investigation-UFR-Red-cells&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;UFR - Red cells&lt;/td&gt;&lt;td&gt;Needs definition&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;white-space:nowrap&quot;&gt;UFR-Cast&lt;a name=&quot;cs-investigation-UFR-Cast&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;UFR - Cast&lt;/td&gt;&lt;td&gt;Needs definition&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;white-space:nowrap&quot;&gt;UFR-Crystals&lt;a name=&quot;cs-investigation-UFR-Crystals&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;UFR - Crystals&lt;/td&gt;&lt;td&gt;Needs definition&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;white-space:nowrap&quot;&gt;UFR-Epithelial-cells&lt;a name=&quot;cs-investigation-UFR-Epithelial-cells&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;UFR - Epithelial cells&lt;/td&gt;&lt;td&gt;Needs definition&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;white-space:nowrap&quot;&gt;UFR-Yeast&lt;a name=&quot;cs-investigation-UFR-Yeast&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;UFR - Yeast&lt;/td&gt;&lt;td&gt;Needs definition&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;white-space:nowrap&quot;&gt;UFR-Organism&lt;a name=&quot;cs-investigation-UFR-Organism&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;UFR - Organism&lt;/td&gt;&lt;td&gt;Needs definition&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;white-space:nowrap&quot;&gt;Urine-Microalburin&lt;a name=&quot;cs-investigation-Urine-Microalburin&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Urine Microalburin&lt;/td&gt;&lt;td&gt;Needs definition&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;white-space:nowrap&quot;&gt;Urine-AIbumin-Creatinine-Ratio&lt;a name=&quot;cs-investigation-Urine-AIbumin-Creatinine-Ratio&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Urine AIbumin Creatinine Ratio&lt;/td&gt;&lt;td&gt;Needs definition&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;white-space:nowrap&quot;&gt;Virology-Covid-Rapid-antigen&lt;a name=&quot;cs-investigation-Virology-Covid-Rapid-antigen&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Virology - Covid Rapid antigen&lt;/td&gt;&lt;td&gt;Needs definition&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;white-space:nowrap&quot;&gt;Thyroid-Function-Test-TSH&lt;a name=&quot;cs-investigation-Thyroid-Function-Test-TSH&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Thyroid Function Test - TSH&lt;/td&gt;&lt;td&gt;Needs definition&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;white-space:nowrap&quot;&gt;Thyroid-Function-Test-FT3&lt;a name=&quot;cs-investigation-Thyroid-Function-Test-FT3&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Thyroid Function Test - FT3&lt;/td&gt;&lt;td&gt;Needs definition&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;white-space:nowrap&quot;&gt;Thyroid-Function-Test-FT4&lt;a name=&quot;cs-investigation-Thyroid-Function-Test-FT4&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Thyroid Function Test - FT4&lt;/td&gt;&lt;td&gt;Needs definition&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;white-space:nowrap&quot;&gt;Sputum-AFB-Sputum-AFB-Sample-1&lt;a name=&quot;cs-investigation-Sputum-AFB-Sputum-AFB-Sample-1&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Sputum AFB - Sputum AFB Sample 1&lt;/td&gt;&lt;td&gt;Needs definition&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;white-space:nowrap&quot;&gt;Sputum-AFB-Sputum-AFB-Sample-2&lt;a name=&quot;cs-investigation-Sputum-AFB-Sputum-AFB-Sample-2&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Sputum AFB - Sputum AFB Sample 2&lt;/td&gt;&lt;td&gt;Needs definition&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;white-space:nowrap&quot;&gt;Sputum-AFB-Sputum-AFB-Sample-3&lt;a name=&quot;cs-investigation-Sputum-AFB-Sputum-AFB-Sample-3&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Sputum AFB - Sputum AFB Sample 3&lt;/td&gt;&lt;td&gt;Needs definition&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;white-space:nowrap&quot;&gt;Serum-electrolyte-S.-Na&lt;a name=&quot;cs-investigation-Serum-electrolyte-S.46-Na&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Serum electrolyte - S. Na&lt;/td&gt;&lt;td&gt;Needs definition&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;white-space:nowrap&quot;&gt;Serum-electrolyte-S.-K&lt;a name=&quot;cs-investigation-Serum-electrolyte-S.46-K&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Serum electrolyte - S. K&lt;/td&gt;&lt;td&gt;Needs definition&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;white-space:nowrap&quot;&gt;Serum-electrolyte-Serum-Chloride&lt;a name=&quot;cs-investigation-Serum-electrolyte-Serum-Chloride&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Serum electrolyte - Serum Chloride&lt;/td&gt;&lt;td&gt;Needs definition&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;white-space:nowrap&quot;&gt;Lipid-profile-Total-Cholesterol&lt;a name=&quot;cs-investigation-Lipid-profile-Total-Cholesterol&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Lipid profile - Total Cholesterol&lt;/td&gt;&lt;td&gt;Needs definition&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;white-space:nowrap&quot;&gt;Lipid-profile-HDL-Cholesterol&lt;a name=&quot;cs-investigation-Lipid-profile-HDL-Cholesterol&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Lipid profile - HDL Cholesterol&lt;/td&gt;&lt;td&gt;Needs definition&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;white-space:nowrap&quot;&gt;Lipid-profile-LDL-Cholesterol&lt;a name=&quot;cs-investigation-Lipid-profile-LDL-Cholesterol&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Lipid profile - LDL Cholesterol&lt;/td&gt;&lt;td&gt;Needs definition&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;white-space:nowrap&quot;&gt;Lipid-profile-T.-Cho/HDL-Ratio&lt;a name=&quot;cs-investigation-Lipid-profile-T.46-Cho.47HDL-Ratio&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Lipid profile - T. Cho/HDL Ratio&lt;/td&gt;&lt;td&gt;Needs definition&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;white-space:nowrap&quot;&gt;Lipid-profile-Triglyceride&lt;a name=&quot;cs-investigation-Lipid-profile-Triglyceride&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Lipid profile - Triglyceride&lt;/td&gt;&lt;td&gt;Needs definition&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;white-space:nowrap&quot;&gt;Lipid-profile-VLDL&lt;a name=&quot;cs-investigation-Lipid-profile-VLDL&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Lipid profile - VLDL&lt;/td&gt;&lt;td&gt;Needs definition&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;white-space:nowrap&quot;&gt;Hepatitis-Screening-Hep-B-Surface-Antigen&lt;a name=&quot;cs-investigation-Hepatitis-Screening-Hep-B-Surface-Antigen&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Hepatitis Screening - Hep B Surface Antigen&lt;/td&gt;&lt;td&gt;Needs definition&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;white-space:nowrap&quot;&gt;Hepatitis-Screening-Hep-C-Antibody&lt;a name=&quot;cs-investigation-Hepatitis-Screening-Hep-C-Antibody&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Hepatitis Screening - Hep C Antibody&lt;/td&gt;&lt;td&gt;Needs definition&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;white-space:nowrap&quot;&gt;Hepatitis-Screening-Hep-A-Antibody&lt;a name=&quot;cs-investigation-Hepatitis-Screening-Hep-A-Antibody&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Hepatitis Screening - Hep A Antibody&lt;/td&gt;&lt;td&gt;Needs definition&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;white-space:nowrap&quot;&gt;HbA1c-HbA1c&lt;a name=&quot;cs-investigation-HbA1c-HbA1c&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;HbA1c - HbA1c&lt;/td&gt;&lt;td&gt;Needs definition&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;white-space:nowrap&quot;&gt;FBC-BAS%&lt;a name=&quot;cs-investigation-FBC-BAS.37&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;FBC - BAS%&lt;/td&gt;&lt;td&gt;Needs definition&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;white-space:nowrap&quot;&gt;FBC-EOS%&lt;a name=&quot;cs-investigation-FBC-EOS.37&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;FBC - EOS%&lt;/td&gt;&lt;td&gt;Needs definition&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;white-space:nowrap&quot;&gt;FBC-LYM%&lt;a name=&quot;cs-investigation-FBC-LYM.37&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;FBC - LYM%&lt;/td&gt;&lt;td&gt;Needs definition&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;white-space:nowrap&quot;&gt;FBC-MON%&lt;a name=&quot;cs-investigation-FBC-MON.37&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;FBC - MON%&lt;/td&gt;&lt;td&gt;Needs definition&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;white-space:nowrap&quot;&gt;FBC-NEU%&lt;a name=&quot;cs-investigation-FBC-NEU.37&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;FBC - NEU%&lt;/td&gt;&lt;td&gt;Needs definition&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;white-space:nowrap&quot;&gt;FBC-MCV-fl&lt;a name=&quot;cs-investigation-FBC-MCV-fl&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;FBC - MCV (fl)&lt;/td&gt;&lt;td&gt;Needs definition&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;white-space:nowrap&quot;&gt;FBC-PLT&lt;a name=&quot;cs-investigation-FBC-PLT&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;FBC - PLT&lt;/td&gt;&lt;td&gt;Needs definition&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;white-space:nowrap&quot;&gt;FBC-WBC-th/uL&lt;a name=&quot;cs-investigation-FBC-WBC-th.47uL&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;FBC - WBC (th/uL)&lt;/td&gt;&lt;td&gt;Needs definition&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;white-space:nowrap&quot;&gt;FBC-BAS#&lt;a name=&quot;cs-investigation-FBC-BAS.35&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;FBC - BAS#&lt;/td&gt;&lt;td&gt;Needs definition&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;white-space:nowrap&quot;&gt;FBC-NEU#&lt;a name=&quot;cs-investigation-FBC-NEU.35&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;FBC - NEU#&lt;/td&gt;&lt;td&gt;Needs definition&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;white-space:nowrap&quot;&gt;FBC-EOS#&lt;a name=&quot;cs-investigation-FBC-EOS.35&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;FBC - EOS#&lt;/td&gt;&lt;td&gt;Needs definition&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;white-space:nowrap&quot;&gt;FBC-LYM#&lt;a name=&quot;cs-investigation-FBC-LYM.35&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;FBC - LYM#&lt;/td&gt;&lt;td&gt;Needs definition&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;white-space:nowrap&quot;&gt;FBC-MON#&lt;a name=&quot;cs-investigation-FBC-MON.35&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;FBC - MON#&lt;/td&gt;&lt;td&gt;Needs definition&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;white-space:nowrap&quot;&gt;FBC-RBC&lt;a name=&quot;cs-investigation-FBC-RBC&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;FBC - RBC&lt;/td&gt;&lt;td&gt;Needs definition&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;white-space:nowrap&quot;&gt;Haemoglobin-HPLC-HGB&lt;a name=&quot;cs-investigation-Haemoglobin-HPLC-HGB&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Haemoglobin HPLC - HGB&lt;/td&gt;&lt;td&gt;Needs definition&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;white-space:nowrap&quot;&gt;Haemoglobin-HPLC-MCH&lt;a name=&quot;cs-investigation-Haemoglobin-HPLC-MCH&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Haemoglobin HPLC - MCH&lt;/td&gt;&lt;td&gt;Needs definition&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;white-space:nowrap&quot;&gt;Haemoglobin-HPLC-MCHC&lt;a name=&quot;cs-investigation-Haemoglobin-HPLC-MCHC&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Haemoglobin HPLC - MCHC&lt;/td&gt;&lt;td&gt;Needs definition&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;white-space:nowrap&quot;&gt;Haemoglobin-HPLC-RDW-CV&lt;a name=&quot;cs-investigation-Haemoglobin-HPLC-RDW-CV&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Haemoglobin HPLC - RDW-CV&lt;/td&gt;&lt;td&gt;Needs definition&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;white-space:nowrap&quot;&gt;Haemoglobin-HPLC-RDW-SD&lt;a name=&quot;cs-investigation-Haemoglobin-HPLC-RDW-SD&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Haemoglobin HPLC - RDW-SD&lt;/td&gt;&lt;td&gt;Needs definition&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;white-space:nowrap&quot;&gt;Haemoglobin-HPLC-HCT&lt;a name=&quot;cs-investigation-Haemoglobin-HPLC-HCT&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Haemoglobin HPLC - HCT&lt;/td&gt;&lt;td&gt;Needs definition&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;white-space:nowrap&quot;&gt;Haemoglobin-HPLC-MPV&lt;a name=&quot;cs-investigation-Haemoglobin-HPLC-MPV&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Haemoglobin HPLC - MPV&lt;/td&gt;&lt;td&gt;Needs definition&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;white-space:nowrap&quot;&gt;Haemoglobin-HPLC-PDW&lt;a name=&quot;cs-investigation-Haemoglobin-HPLC-PDW&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Haemoglobin HPLC - PDW&lt;/td&gt;&lt;td&gt;Needs definition&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;white-space:nowrap&quot;&gt;Haemoglobin-HPLC-PCT&lt;a name=&quot;cs-investigation-Haemoglobin-HPLC-PCT&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Haemoglobin HPLC - PCT&lt;/td&gt;&lt;td&gt;Needs definition&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;white-space:nowrap&quot;&gt;Haemoglobin-HPLC-PLCC&lt;a name=&quot;cs-investigation-Haemoglobin-HPLC-PLCC&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Haemoglobin HPLC - PLCC&lt;/td&gt;&lt;td&gt;Needs definition&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;white-space:nowrap&quot;&gt;Haemoglobin-HPLC-PLCR&lt;a name=&quot;cs-investigation-Haemoglobin-HPLC-PLCR&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Haemoglobin HPLC - PLCR&lt;/td&gt;&lt;td&gt;Needs definition&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;white-space:nowrap&quot;&gt;ESR-ESR-1st-Hour&lt;a name=&quot;cs-investigation-ESR-ESR-1st-Hour&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;ESR - ESR 1st Hour&lt;/td&gt;&lt;td&gt;Needs definition&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;white-space:nowrap&quot;&gt;Dengue-Test-NS1-Antigen&lt;a name=&quot;cs-investigation-Dengue-Test-NS1-Antigen&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Dengue Test - NS1 Antigen&lt;/td&gt;&lt;td&gt;Needs definition&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;white-space:nowrap&quot;&gt;Dengue-Test-Dengue-Ig-M&lt;a name=&quot;cs-investigation-Dengue-Test-Dengue-Ig-M&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Dengue Test - Dengue Ig M&lt;/td&gt;&lt;td&gt;Needs definition&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;white-space:nowrap&quot;&gt;Dengue-Test-Dengue-Ig-G&lt;a name=&quot;cs-investigation-Dengue-Test-Dengue-Ig-G&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Dengue Test - Dengue Ig G&lt;/td&gt;&lt;td&gt;Needs definition&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;white-space:nowrap&quot;&gt;Blood-Sugar-FBS&lt;a name=&quot;cs-investigation-Blood-Sugar-FBS&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Blood Sugar - FBS&lt;/td&gt;&lt;td&gt;Needs definition&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;white-space:nowrap&quot;&gt;HbA1c-HBA1C&lt;a name=&quot;cs-investigation-HbA1c-HBA1C&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;HbA1c - HBA1C&lt;/td&gt;&lt;td&gt;Needs definition&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;white-space:nowrap&quot;&gt;HbA1c-PPBS&lt;a name=&quot;cs-investigation-HbA1c-PPBS&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;HbA1c - PPBS&lt;/td&gt;&lt;td&gt;Needs definition&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;white-space:nowrap&quot;&gt;HbA1c-RBS&lt;a name=&quot;cs-investigation-HbA1c-RBS&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;HbA1c - RBS&lt;/td&gt;&lt;td&gt;Needs definition&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;white-space:nowrap&quot;&gt;HbA1c-OGTT&lt;a name=&quot;cs-investigation-HbA1c-OGTT&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;HbA1c - OGTT&lt;/td&gt;&lt;td&gt;Needs definition&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;white-space:nowrap&quot;&gt;Serum-Creatinine-S-Creatinine&lt;a name=&quot;cs-investigation-Serum-Creatinine-S-Creatinine&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Serum Creatinine - S Creatinine&lt;/td&gt;&lt;td&gt;Needs definition&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;white-space:nowrap&quot;&gt;Blood-Urea-Blood-Urea&lt;a name=&quot;cs-investigation-Blood-Urea-Blood-Urea&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Blood Urea - Blood Urea&lt;/td&gt;&lt;td&gt;Needs definition&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;white-space:nowrap&quot;&gt;S-Uric-Acid&lt;a name=&quot;cs-investigation-S-Uric-Acid&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;S Uric Acid&lt;/td&gt;&lt;td&gt;Needs definition&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;white-space:nowrap&quot;&gt;Serum-Calcium-Total&lt;a name=&quot;cs-investigation-Serum-Calcium-Total&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Serum Calcium-Total&lt;/td&gt;&lt;td&gt;Needs definition&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;white-space:nowrap&quot;&gt;Serum-Magnesium&lt;a name=&quot;cs-investigation-Serum-Magnesium&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Serum Magnesium&lt;/td&gt;&lt;td&gt;Needs definition&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;white-space:nowrap&quot;&gt;Serum-Phosphorous&lt;a name=&quot;cs-investigation-Serum-Phosphorous&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Serum Phosphorous&lt;/td&gt;&lt;td&gt;Needs definition&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;white-space:nowrap&quot;&gt;Corrected-Calcium&lt;a name=&quot;cs-investigation-Corrected-Calcium&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Corrected Calcium&lt;/td&gt;&lt;td&gt;Needs definition&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;white-space:nowrap&quot;&gt;CRP-C-Reactive-Protein&lt;a name=&quot;cs-investigation-CRP-C-Reactive-Protein&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;CRP - C Reactive Protein&lt;/td&gt;&lt;td&gt;Needs definition&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;white-space:nowrap&quot;&gt;S-LDH-LDH&lt;a name=&quot;cs-investigation-S-LDH-LDH&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;S LDH - LDH&lt;/td&gt;&lt;td&gt;Needs definition&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;white-space:nowrap&quot;&gt;Creatine-Kinase-Creatinine-Kinase&lt;a name=&quot;cs-investigation-Creatine-Kinase-Creatinine-Kinase&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Creatine Kinase - Creatinine Kinase&lt;/td&gt;&lt;td&gt;Needs definition&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;white-space:nowrap&quot;&gt;Stool-Full-Report&lt;a name=&quot;cs-investigation-Stool-Full-Report&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Stool Full Report&lt;/td&gt;&lt;td&gt;Needs definition&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;white-space:nowrap&quot;&gt;S.-Vitamin-D-Level&lt;a name=&quot;cs-investigation-S.46-Vitamin-D-Level&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;S. Vitamin D Level&lt;/td&gt;&lt;td&gt;Needs definition&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;white-space:nowrap&quot;&gt;Rheumaloid-Facior&lt;a name=&quot;cs-investigation-Rheumaloid-Facior&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Rheumaloid Facior&lt;/td&gt;&lt;td&gt;Needs definition&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;white-space:nowrap&quot;&gt;Blood-Picture&lt;a name=&quot;cs-investigation-Blood-Picture&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Blood Picture&lt;/td&gt;&lt;td&gt;Needs definition&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;white-space:nowrap&quot;&gt;S-Prostate-Specific-Antigen&lt;a name=&quot;cs-investigation-S-Prostate-Specific-Antigen&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;S Prostate Specific Antigen&lt;/td&gt;&lt;td&gt;Needs definition&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;white-space:nowrap&quot;&gt;serum-Amylase-units/L&lt;a name=&quot;cs-investigation-serum-Amylase-units.47L&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;serum Amylase (units/L)&lt;/td&gt;&lt;td&gt;Needs definition&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;white-space:nowrap&quot;&gt;Rheumatoid-Factor&lt;a name=&quot;cs-investigation-Rheumatoid-Factor&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Rheumatoid Factor&lt;/td&gt;&lt;td&gt;Needs definition&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;white-space:nowrap&quot;&gt;Iron-Studies&lt;a name=&quot;cs-investigation-Iron-Studies&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Iron Studies&lt;/td&gt;&lt;td&gt;Needs definition&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;white-space:nowrap&quot;&gt;S.-Uric-Acid&lt;a name=&quot;cs-investigation-S.46-Uric-Acid&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;S. Uric Acid&lt;/td&gt;&lt;td&gt;Needs definition&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;white-space:nowrap&quot;&gt;Liver-profile-SGOT-U/L&lt;a name=&quot;cs-investigation-Liver-profile-SGOT-U.47L&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Liver profile - SGOT U/L&lt;/td&gt;&lt;td&gt;Needs definition&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;white-space:nowrap&quot;&gt;SGOT/PT-SGPT-U/L&lt;a name=&quot;cs-investigation-SGOT.47PT-SGPT-U.47L&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;SGOT/PT - SGPT U/L&lt;/td&gt;&lt;td&gt;Needs definition&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;white-space:nowrap&quot;&gt;S-Alkaline-Phosphatasee-Alakaline-Phosphatase-IU/L&lt;a name=&quot;cs-investigation-S-Alkaline-Phosphatasee-Alakaline-Phosphatase-IU.47L&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;S Alkaline Phosphatasee - Alakaline Phosphatase IU/L&lt;/td&gt;&lt;td&gt;Needs definition&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;white-space:nowrap&quot;&gt;S.-Bilirubin-Bilirubin-Direct-mg/dl&lt;a name=&quot;cs-investigation-S.46-Bilirubin-Bilirubin-Direct-mg.47dl&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;S. Bilirubin - Bilirubin Direct mg/dl&lt;/td&gt;&lt;td&gt;Needs definition&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;white-space:nowrap&quot;&gt;S.-Bilirubin-Bilirubin-Total-mg/dl&lt;a name=&quot;cs-investigation-S.46-Bilirubin-Bilirubin-Total-mg.47dl&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;S. Bilirubin - Bilirubin Total mg/dl&lt;/td&gt;&lt;td&gt;Needs definition&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;white-space:nowrap&quot;&gt;Serum-Prolein-Total-Protein-g/dl&lt;a name=&quot;cs-investigation-Serum-Prolein-Total-Protein-g.47dl&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Serum Prolein - Total Protein g/dl&lt;/td&gt;&lt;td&gt;Needs definition&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;white-space:nowrap&quot;&gt;S.-Amilase-Bilirubin-Indirect-mg/dl&lt;a name=&quot;cs-investigation-S.46-Amilase-Bilirubin-Indirect-mg.47dl&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;S. Amilase - Bilirubin Indirect mg/dl&lt;/td&gt;&lt;td&gt;Needs definition&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;white-space:nowrap&quot;&gt;S.-ALP-Serum-albumin&lt;a name=&quot;cs-investigation-S.46-ALP-Serum-albumin&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;S. ALP - Serum albumin&lt;/td&gt;&lt;td&gt;Needs definition&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;white-space:nowrap&quot;&gt;S.-Electrolyte-Globulin&lt;a name=&quot;cs-investigation-S.46-Electrolyte-Globulin&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;S. Electrolyte - Globulin&lt;/td&gt;&lt;td&gt;Needs definition&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;white-space:nowrap&quot;&gt;Albumin-/-Globulin-Ratio&lt;a name=&quot;cs-investigation-Albumin-.47-Globulin-Ratio&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Albumin / Globulin Ratio&lt;/td&gt;&lt;td&gt;Needs definition&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;white-space:nowrap&quot;&gt;S-Gamma-GT-S-Gamma-GT&lt;a name=&quot;cs-investigation-S-Gamma-GT-S-Gamma-GT&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;S Gamma GT - S Gamma GT&lt;/td&gt;&lt;td&gt;Needs definition&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;white-space:nowrap&quot;&gt;Liver-Enzymes&lt;a name=&quot;cs-investigation-Liver-Enzymes&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Liver Enzymes&lt;/td&gt;&lt;td&gt;Needs definition&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;white-space:nowrap&quot;&gt;Alpha-fetoprotein&lt;a name=&quot;cs-investigation-Alpha-fetoprotein&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Alpha-fetoprotein&lt;/td&gt;&lt;td&gt;Needs definition&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;white-space:nowrap&quot;&gt;Hepatitis-Screening&lt;a name=&quot;cs-investigation-Hepatitis-Screening&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Hepatitis Screening&lt;/td&gt;&lt;td&gt;Needs definition&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;white-space:nowrap&quot;&gt;CSF&lt;a name=&quot;cs-investigation-CSF&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;CSF&lt;/td&gt;&lt;td&gt;Needs definition&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;white-space:nowrap&quot;&gt;Renal-Function-Tests&lt;a name=&quot;cs-investigation-Renal-Function-Tests&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Renal Function Tests&lt;/td&gt;&lt;td&gt;Needs definition&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;white-space:nowrap&quot;&gt;Stool-examination&lt;a name=&quot;cs-investigation-Stool-examination&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Stool examination&lt;/td&gt;&lt;td&gt;Needs definition&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;white-space:nowrap&quot;&gt;Urinalysis&lt;a name=&quot;cs-investigation-Urinalysis&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Urinalysis&lt;/td&gt;&lt;td&gt;Needs definition&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;white-space:nowrap&quot;&gt;Urine-for-BJP&lt;a name=&quot;cs-investigation-Urine-for-BJP&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Urine for BJP&lt;/td&gt;&lt;td&gt;Needs definition&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;white-space:nowrap&quot;&gt;Cytology&lt;a name=&quot;cs-investigation-Cytology&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Cytology&lt;/td&gt;&lt;td&gt;Needs definition&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;white-space:nowrap&quot;&gt;Antibody-testing&lt;a name=&quot;cs-investigation-Antibody-testing&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Antibody testing&lt;/td&gt;&lt;td&gt;Needs definition&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;white-space:nowrap&quot;&gt;Biochem-basic-tests&lt;a name=&quot;cs-investigation-Biochem-basic-tests&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Biochem - basic tests&lt;/td&gt;&lt;td&gt;Needs definition&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;<a name="end-xhtml"></a>
+  &lt;/text&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.url">url</a> <a href="http://hl7.org/fhir/R4/datatypes.html#uri">value</a>=&quot;http://fhir.health.gov.lk/ips/CodeSystem/cs-investigation&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.version">version</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;0.1.0&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.name">name</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;CSInvestigations&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.title">title</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Investigations&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.status">status</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;active&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.experimental">experimental</a> <a href="http://hl7.org/fhir/R4/datatypes.html#boolean">value</a>=&quot;false&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.date">date</a> <a href="http://hl7.org/fhir/R4/datatypes.html#dateTime">value</a>=&quot;2024-03-13T05:40:04+00:00&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.publisher">publisher</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Ministry of Health, Sri Lanka&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.contact">contact</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/metadatatypes.html#ContactDetail#ContactDetail.name">name</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Ministry of Health, Sri Lanka&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/metadatatypes.html#ContactDetail#ContactDetail.telecom">telecom</a>&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#ContactPoint#ContactPoint.system">system</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;url&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#ContactPoint#ContactPoint.value">value</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;https://www.health.gov.lk/&quot;/&gt;
+    &lt;/telecom&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/metadatatypes.html#ContactDetail#ContactDetail.telecom">telecom</a>&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#ContactPoint#ContactPoint.system">system</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;email&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#ContactPoint#ContactPoint.value">value</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;digitalhealth@health.gov.lk&quot;/&gt;
+    &lt;/telecom&gt;
+  &lt;/contact&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.contact">contact</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/metadatatypes.html#ContactDetail#ContactDetail.name">name</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Director, Health Information&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/metadatatypes.html#ContactDetail#ContactDetail.telecom">telecom</a>&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#ContactPoint#ContactPoint.system">system</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;email&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#ContactPoint#ContactPoint.value">value</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;digitalhealth@health.gov.lk&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#ContactPoint#ContactPoint.use">use</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;work&quot;/&gt;
+    &lt;/telecom&gt;
+  &lt;/contact&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.description">description</a> <a href="http://hl7.org/fhir/R4/datatypes.html#markdown">value</a>=&quot;Investigations&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.jurisdiction">jurisdiction</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">system</a> <a href="http://hl7.org/fhir/R4/datatypes.html#uri">value</a>=&quot;http://unstats.un.org/unsd/methods/m49/m49.htm&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">code</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;001&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.display">display</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;World&quot;/&gt;
+    &lt;/coding&gt;
+  &lt;/jurisdiction&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.caseSensitive">caseSensitive</a> <a href="http://hl7.org/fhir/R4/datatypes.html#boolean">value</a>=&quot;true&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.content">content</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;complete&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.count">count</a> <a href="http://hl7.org/fhir/R4/datatypes.html#unsignedInt">value</a>=&quot;109&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept">concept</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;CLOTTING-PROFILE-BT&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;CLOTTING PROFILE - BT&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Needs definition&quot;/&gt;
+  &lt;/concept&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept">concept</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;CLOTTING-PROFILE-CT&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;CLOTTING PROFILE - CT&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Needs definition&quot;/&gt;
+  &lt;/concept&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept">concept</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;CLOTTING-PROFILE-APTT&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;CLOTTING PROFILE - APTT&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Needs definition&quot;/&gt;
+  &lt;/concept&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept">concept</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;CLOTTING-PROFILE-INR&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;CLOTTING PROFILE - INR&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Needs definition&quot;/&gt;
+  &lt;/concept&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept">concept</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;UFR-Albumin&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;UFR - Albumin&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Needs definition&quot;/&gt;
+  &lt;/concept&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept">concept</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;UFR-Pus-cells&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;UFR - Pus cells&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Needs definition&quot;/&gt;
+  &lt;/concept&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept">concept</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;UFR-Red-cells&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;UFR - Red cells&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Needs definition&quot;/&gt;
+  &lt;/concept&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept">concept</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;UFR-Cast&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;UFR - Cast&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Needs definition&quot;/&gt;
+  &lt;/concept&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept">concept</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;UFR-Crystals&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;UFR - Crystals&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Needs definition&quot;/&gt;
+  &lt;/concept&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept">concept</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;UFR-Epithelial-cells&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;UFR - Epithelial cells&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Needs definition&quot;/&gt;
+  &lt;/concept&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept">concept</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;UFR-Yeast&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;UFR - Yeast&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Needs definition&quot;/&gt;
+  &lt;/concept&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept">concept</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;UFR-Organism&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;UFR - Organism&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Needs definition&quot;/&gt;
+  &lt;/concept&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept">concept</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;Urine-Microalburin&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Urine Microalburin&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Needs definition&quot;/&gt;
+  &lt;/concept&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept">concept</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;Urine-AIbumin-Creatinine-Ratio&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Urine AIbumin Creatinine Ratio&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Needs definition&quot;/&gt;
+  &lt;/concept&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept">concept</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;Virology-Covid-Rapid-antigen&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Virology - Covid Rapid antigen&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Needs definition&quot;/&gt;
+  &lt;/concept&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept">concept</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;Thyroid-Function-Test-TSH&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Thyroid Function Test - TSH&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Needs definition&quot;/&gt;
+  &lt;/concept&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept">concept</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;Thyroid-Function-Test-FT3&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Thyroid Function Test - FT3&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Needs definition&quot;/&gt;
+  &lt;/concept&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept">concept</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;Thyroid-Function-Test-FT4&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Thyroid Function Test - FT4&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Needs definition&quot;/&gt;
+  &lt;/concept&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept">concept</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;Sputum-AFB-Sputum-AFB-Sample-1&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Sputum AFB - Sputum AFB Sample 1&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Needs definition&quot;/&gt;
+  &lt;/concept&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept">concept</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;Sputum-AFB-Sputum-AFB-Sample-2&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Sputum AFB - Sputum AFB Sample 2&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Needs definition&quot;/&gt;
+  &lt;/concept&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept">concept</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;Sputum-AFB-Sputum-AFB-Sample-3&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Sputum AFB - Sputum AFB Sample 3&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Needs definition&quot;/&gt;
+  &lt;/concept&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept">concept</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;Serum-electrolyte-S.-Na&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Serum electrolyte - S. Na&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Needs definition&quot;/&gt;
+  &lt;/concept&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept">concept</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;Serum-electrolyte-S.-K&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Serum electrolyte - S. K&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Needs definition&quot;/&gt;
+  &lt;/concept&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept">concept</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;Serum-electrolyte-Serum-Chloride&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Serum electrolyte - Serum Chloride&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Needs definition&quot;/&gt;
+  &lt;/concept&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept">concept</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;Lipid-profile-Total-Cholesterol&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Lipid profile - Total Cholesterol&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Needs definition&quot;/&gt;
+  &lt;/concept&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept">concept</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;Lipid-profile-HDL-Cholesterol&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Lipid profile - HDL Cholesterol&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Needs definition&quot;/&gt;
+  &lt;/concept&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept">concept</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;Lipid-profile-LDL-Cholesterol&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Lipid profile - LDL Cholesterol&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Needs definition&quot;/&gt;
+  &lt;/concept&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept">concept</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;Lipid-profile-T.-Cho/HDL-Ratio&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Lipid profile - T. Cho/HDL Ratio&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Needs definition&quot;/&gt;
+  &lt;/concept&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept">concept</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;Lipid-profile-Triglyceride&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Lipid profile - Triglyceride&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Needs definition&quot;/&gt;
+  &lt;/concept&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept">concept</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;Lipid-profile-VLDL&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Lipid profile - VLDL&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Needs definition&quot;/&gt;
+  &lt;/concept&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept">concept</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;Hepatitis-Screening-Hep-B-Surface-Antigen&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Hepatitis Screening - Hep B Surface Antigen&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Needs definition&quot;/&gt;
+  &lt;/concept&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept">concept</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;Hepatitis-Screening-Hep-C-Antibody&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Hepatitis Screening - Hep C Antibody&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Needs definition&quot;/&gt;
+  &lt;/concept&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept">concept</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;Hepatitis-Screening-Hep-A-Antibody&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Hepatitis Screening - Hep A Antibody&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Needs definition&quot;/&gt;
+  &lt;/concept&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept">concept</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;HbA1c-HbA1c&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;HbA1c - HbA1c&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Needs definition&quot;/&gt;
+  &lt;/concept&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept">concept</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;FBC-BAS%&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;FBC - BAS%&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Needs definition&quot;/&gt;
+  &lt;/concept&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept">concept</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;FBC-EOS%&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;FBC - EOS%&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Needs definition&quot;/&gt;
+  &lt;/concept&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept">concept</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;FBC-LYM%&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;FBC - LYM%&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Needs definition&quot;/&gt;
+  &lt;/concept&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept">concept</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;FBC-MON%&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;FBC - MON%&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Needs definition&quot;/&gt;
+  &lt;/concept&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept">concept</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;FBC-NEU%&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;FBC - NEU%&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Needs definition&quot;/&gt;
+  &lt;/concept&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept">concept</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;FBC-MCV-fl&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;FBC - MCV (fl)&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Needs definition&quot;/&gt;
+  &lt;/concept&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept">concept</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;FBC-PLT&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;FBC - PLT&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Needs definition&quot;/&gt;
+  &lt;/concept&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept">concept</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;FBC-WBC-th/uL&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;FBC - WBC (th/uL)&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Needs definition&quot;/&gt;
+  &lt;/concept&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept">concept</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;FBC-BAS#&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;FBC - BAS#&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Needs definition&quot;/&gt;
+  &lt;/concept&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept">concept</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;FBC-NEU#&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;FBC - NEU#&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Needs definition&quot;/&gt;
+  &lt;/concept&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept">concept</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;FBC-EOS#&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;FBC - EOS#&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Needs definition&quot;/&gt;
+  &lt;/concept&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept">concept</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;FBC-LYM#&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;FBC - LYM#&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Needs definition&quot;/&gt;
+  &lt;/concept&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept">concept</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;FBC-MON#&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;FBC - MON#&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Needs definition&quot;/&gt;
+  &lt;/concept&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept">concept</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;FBC-RBC&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;FBC - RBC&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Needs definition&quot;/&gt;
+  &lt;/concept&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept">concept</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;Haemoglobin-HPLC-HGB&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Haemoglobin HPLC - HGB&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Needs definition&quot;/&gt;
+  &lt;/concept&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept">concept</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;Haemoglobin-HPLC-MCH&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Haemoglobin HPLC - MCH&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Needs definition&quot;/&gt;
+  &lt;/concept&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept">concept</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;Haemoglobin-HPLC-MCHC&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Haemoglobin HPLC - MCHC&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Needs definition&quot;/&gt;
+  &lt;/concept&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept">concept</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;Haemoglobin-HPLC-RDW-CV&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Haemoglobin HPLC - RDW-CV&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Needs definition&quot;/&gt;
+  &lt;/concept&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept">concept</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;Haemoglobin-HPLC-RDW-SD&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Haemoglobin HPLC - RDW-SD&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Needs definition&quot;/&gt;
+  &lt;/concept&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept">concept</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;Haemoglobin-HPLC-HCT&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Haemoglobin HPLC - HCT&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Needs definition&quot;/&gt;
+  &lt;/concept&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept">concept</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;Haemoglobin-HPLC-MPV&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Haemoglobin HPLC - MPV&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Needs definition&quot;/&gt;
+  &lt;/concept&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept">concept</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;Haemoglobin-HPLC-PDW&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Haemoglobin HPLC - PDW&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Needs definition&quot;/&gt;
+  &lt;/concept&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept">concept</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;Haemoglobin-HPLC-PCT&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Haemoglobin HPLC - PCT&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Needs definition&quot;/&gt;
+  &lt;/concept&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept">concept</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;Haemoglobin-HPLC-PLCC&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Haemoglobin HPLC - PLCC&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Needs definition&quot;/&gt;
+  &lt;/concept&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept">concept</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;Haemoglobin-HPLC-PLCR&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Haemoglobin HPLC - PLCR&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Needs definition&quot;/&gt;
+  &lt;/concept&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept">concept</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;ESR-ESR-1st-Hour&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;ESR - ESR 1st Hour&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Needs definition&quot;/&gt;
+  &lt;/concept&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept">concept</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;Dengue-Test-NS1-Antigen&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Dengue Test - NS1 Antigen&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Needs definition&quot;/&gt;
+  &lt;/concept&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept">concept</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;Dengue-Test-Dengue-Ig-M&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Dengue Test - Dengue Ig M&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Needs definition&quot;/&gt;
+  &lt;/concept&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept">concept</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;Dengue-Test-Dengue-Ig-G&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Dengue Test - Dengue Ig G&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Needs definition&quot;/&gt;
+  &lt;/concept&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept">concept</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;Blood-Sugar-FBS&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Blood Sugar - FBS&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Needs definition&quot;/&gt;
+  &lt;/concept&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept">concept</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;HbA1c-HBA1C&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;HbA1c - HBA1C&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Needs definition&quot;/&gt;
+  &lt;/concept&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept">concept</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;HbA1c-PPBS&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;HbA1c - PPBS&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Needs definition&quot;/&gt;
+  &lt;/concept&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept">concept</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;HbA1c-RBS&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;HbA1c - RBS&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Needs definition&quot;/&gt;
+  &lt;/concept&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept">concept</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;HbA1c-OGTT&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;HbA1c - OGTT&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Needs definition&quot;/&gt;
+  &lt;/concept&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept">concept</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;Serum-Creatinine-S-Creatinine&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Serum Creatinine - S Creatinine&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Needs definition&quot;/&gt;
+  &lt;/concept&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept">concept</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;Blood-Urea-Blood-Urea&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Blood Urea - Blood Urea&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Needs definition&quot;/&gt;
+  &lt;/concept&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept">concept</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;S-Uric-Acid&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;S Uric Acid&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Needs definition&quot;/&gt;
+  &lt;/concept&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept">concept</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;Serum-Calcium-Total&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Serum Calcium-Total&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Needs definition&quot;/&gt;
+  &lt;/concept&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept">concept</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;Serum-Magnesium&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Serum Magnesium&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Needs definition&quot;/&gt;
+  &lt;/concept&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept">concept</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;Serum-Phosphorous&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Serum Phosphorous&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Needs definition&quot;/&gt;
+  &lt;/concept&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept">concept</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;Corrected-Calcium&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Corrected Calcium&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Needs definition&quot;/&gt;
+  &lt;/concept&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept">concept</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;CRP-C-Reactive-Protein&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;CRP - C Reactive Protein&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Needs definition&quot;/&gt;
+  &lt;/concept&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept">concept</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;S-LDH-LDH&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;S LDH - LDH&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Needs definition&quot;/&gt;
+  &lt;/concept&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept">concept</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;Creatine-Kinase-Creatinine-Kinase&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Creatine Kinase - Creatinine Kinase&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Needs definition&quot;/&gt;
+  &lt;/concept&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept">concept</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;Stool-Full-Report&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Stool Full Report&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Needs definition&quot;/&gt;
+  &lt;/concept&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept">concept</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;S.-Vitamin-D-Level&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;S. Vitamin D Level&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Needs definition&quot;/&gt;
+  &lt;/concept&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept">concept</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;Rheumaloid-Facior&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Rheumaloid Facior&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Needs definition&quot;/&gt;
+  &lt;/concept&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept">concept</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;Blood-Picture&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Blood Picture&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Needs definition&quot;/&gt;
+  &lt;/concept&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept">concept</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;S-Prostate-Specific-Antigen&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;S Prostate Specific Antigen&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Needs definition&quot;/&gt;
+  &lt;/concept&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept">concept</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;serum-Amylase-units/L&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;serum Amylase (units/L)&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Needs definition&quot;/&gt;
+  &lt;/concept&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept">concept</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;Rheumatoid-Factor&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Rheumatoid Factor&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Needs definition&quot;/&gt;
+  &lt;/concept&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept">concept</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;Iron-Studies&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Iron Studies&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Needs definition&quot;/&gt;
+  &lt;/concept&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept">concept</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;S.-Uric-Acid&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;S. Uric Acid&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Needs definition&quot;/&gt;
+  &lt;/concept&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept">concept</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;Liver-profile-SGOT-U/L&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Liver profile - SGOT U/L&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Needs definition&quot;/&gt;
+  &lt;/concept&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept">concept</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;SGOT/PT-SGPT-U/L&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;SGOT/PT - SGPT U/L&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Needs definition&quot;/&gt;
+  &lt;/concept&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept">concept</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;S-Alkaline-Phosphatasee-Alakaline-Phosphatase-IU/L&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;S Alkaline Phosphatasee - Alakaline Phosphatase IU/L&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Needs definition&quot;/&gt;
+  &lt;/concept&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept">concept</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;S.-Bilirubin-Bilirubin-Direct-mg/dl&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;S. Bilirubin - Bilirubin Direct mg/dl&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Needs definition&quot;/&gt;
+  &lt;/concept&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept">concept</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;S.-Bilirubin-Bilirubin-Total-mg/dl&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;S. Bilirubin - Bilirubin Total mg/dl&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Needs definition&quot;/&gt;
+  &lt;/concept&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept">concept</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;Serum-Prolein-Total-Protein-g/dl&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Serum Prolein - Total Protein g/dl&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Needs definition&quot;/&gt;
+  &lt;/concept&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept">concept</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;S.-Amilase-Bilirubin-Indirect-mg/dl&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;S. Amilase - Bilirubin Indirect mg/dl&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Needs definition&quot;/&gt;
+  &lt;/concept&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept">concept</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;S.-ALP-Serum-albumin&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;S. ALP - Serum albumin&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Needs definition&quot;/&gt;
+  &lt;/concept&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept">concept</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;S.-Electrolyte-Globulin&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;S. Electrolyte - Globulin&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Needs definition&quot;/&gt;
+  &lt;/concept&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept">concept</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;Albumin-/-Globulin-Ratio&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Albumin / Globulin Ratio&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Needs definition&quot;/&gt;
+  &lt;/concept&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept">concept</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;S-Gamma-GT-S-Gamma-GT&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;S Gamma GT - S Gamma GT&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Needs definition&quot;/&gt;
+  &lt;/concept&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept">concept</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;Liver-Enzymes&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Liver Enzymes&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Needs definition&quot;/&gt;
+  &lt;/concept&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept">concept</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;Alpha-fetoprotein&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Alpha-fetoprotein&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Needs definition&quot;/&gt;
+  &lt;/concept&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept">concept</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;Hepatitis-Screening&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Hepatitis Screening&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Needs definition&quot;/&gt;
+  &lt;/concept&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept">concept</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;CSF&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;CSF&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Needs definition&quot;/&gt;
+  &lt;/concept&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept">concept</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;Renal-Function-Tests&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Renal Function Tests&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Needs definition&quot;/&gt;
+  &lt;/concept&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept">concept</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;Stool-examination&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Stool examination&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Needs definition&quot;/&gt;
+  &lt;/concept&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept">concept</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;Urinalysis&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Urinalysis&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Needs definition&quot;/&gt;
+  &lt;/concept&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept">concept</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;Urine-for-BJP&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Urine for BJP&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Needs definition&quot;/&gt;
+  &lt;/concept&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept">concept</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;Cytology&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Cytology&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Needs definition&quot;/&gt;
+  &lt;/concept&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept">concept</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;Antibody-testing&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Antibody testing&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Needs definition&quot;/&gt;
+  &lt;/concept&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept">concept</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;Biochem-basic-tests&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Biochem - basic tests&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Needs definition&quot;/&gt;
+  &lt;/concept&gt;
+&lt;/CodeSystem&gt;</code></pre>
+
+
+  <!-- insert notes if present -->
+  
+
+
+
+</div>
+        </div>  <!-- /inner-wrapper -->
+      </div>  <!-- /row -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-content -->
+
+  <script type="text/javascript" src="assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+  <script type="text/javascript" src="assets/js/jquery-ui.min.js"> </script>
+
+  <script type="text/javascript">
+    $(document).ready(function(){
+      if(window.location.hash != "") {
+          $('a[href="' + window.location.hash + '"]').click()
+      }
+    });
+  </script>
+  <a name="bottom"> </a>
+  <div id="segment-footer" igtool="footer" class="segment">  <!-- segment-footer -->
+    <div class="container">  <!-- container -->
+
+           
+      <div class="inner-wrapper">
+        <p>
+          IG &#169; 2021+ <a style="color: #81BEF7" href="https://www.health.gov.lk/">Ministry of Health, Sri Lanka</a>.  Package lk-nehr-fhir-ips#0.1.0 based on <a style="color: #81BEF7" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Wed, Mar 13, 2024 05:40+0000">2024-03-13</span>
+          <br/>
+          <span style="color: #FFFF77">
+                      Links: <a style="color: #81BEF7" href="toc.html">Table of Contents</a> |
+                 <a style="color: #81BEF7" href="qa.html">QA Report</a> |
+                 
+                 <a style="color: #81BEF7" target="_blank" href="http://fhir.health.gov.lk/ips/history.html">Version History</a> |
+                 <a style="color: #81BEF7" rel="license" href="http://hl7.org/fhir/R4/license.html"><img style="border-style: none;" alt="CC-BY" src="assets/images/cc-by.png" height="17"/></a> |
+                 <!--<a style="color: #81BEF7" href="todo.html">Search</a> | --> 
+
+
+          </span>
+        </p>
+      </div>  <!-- /inner-wrapper -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-footer -->
+  
+  <div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+    <div class="container">  <!-- container -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-post-footer -->
+  
+  <!-- JS and analytics only. -->
+  <!-- Bootstrap core JavaScript
+  ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script type="text/javascript" src="assets/js/bootstrap.min.js"> </script>
+  <script type="text/javascript" src="assets/js/respond.min.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard-btn.js"> </script>
+  <script>anchors.options.visible = 'hover'
+anchors.add()</script>
+  
+  <!-- feedback form - Google forms -->
+<!-- v0.1, 2021-01-09 -->
+
+
+
+<!-- / feedback form  -->
+
+  <!-- Analytics Below
+  ================================================== -->
+  </body>
+</html>
+

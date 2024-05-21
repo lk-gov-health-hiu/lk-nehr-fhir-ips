@@ -1,0 +1,84 @@
+{
+  "codeSystems" : [
+    {
+      "url" : "http://fhir.health.gov.lk/ips/CodeSystem/cs-composition-codes",
+      "version" : "0.1.0",
+      "status" : "active",
+      "name" : "SectionCompositionCodes",
+      "title" : "Composition Section Codes",
+      "description" : "A list of Composition section codes."
+    },
+    {
+      "url" : "http://fhir.health.gov.lk/ips/CodeSystem/cs-cvd-risk-category",
+      "version" : "0.1.0",
+      "status" : "active",
+      "name" : "CSCVDRiskCategory",
+      "title" : "Cardiovascular Risk Categories",
+      "description" : "Cardiovascular risk is expressed as a percentage"
+    },
+    {
+      "url" : "http://fhir.health.gov.lk/ips/CodeSystem/cs-device-classification",
+      "version" : "0.1.0",
+      "status" : "active",
+      "name" : "CSDeviceClassificationCodes",
+      "title" : "Device Classification Codes",
+      "description" : "A list of device device classification codes."
+    },
+    {
+      "url" : "http://fhir.health.gov.lk/ips/CodeSystem/cs-follow-up-reasons",
+      "version" : "0.1.0",
+      "status" : "active",
+      "name" : "CSFollowUpReasons",
+      "title" : "Follow up at HLC",
+      "description" : "Follow up at Healthy Lifestyle Center"
+    },
+    {
+      "url" : "http://fhir.health.gov.lk/ips/CodeSystem/cs-identifier-types",
+      "version" : "0.1.0",
+      "status" : "active",
+      "name" : "CSIdentifierTypes",
+      "title" : "Patient Business Identifier Types",
+      "description" : "Patient Business Identifier Types"
+    },
+    {
+      "url" : "http://fhir.health.gov.lk/ips/CodeSystem/cs-investigation",
+      "version" : "0.1.0",
+      "status" : "active",
+      "name" : "CSInvestigations",
+      "title" : "Investigations",
+      "description" : "Investigations"
+    },
+    {
+      "url" : "http://fhir.health.gov.lk/ips/CodeSystem/cs-medication-name-msd",
+      "version" : "0.1.0",
+      "status" : "active",
+      "name" : "CSMedicationNamesForMSD",
+      "title" : "Medication Names For Pharmacy",
+      "description" : "A list of typical medications that can be prescribed to the patient."
+    },
+    {
+      "url" : "http://fhir.health.gov.lk/ips/CodeSystem/cs-medication-name-non-msd",
+      "version" : "0.1.0",
+      "status" : "active",
+      "name" : "CSMedicationNamesForNonMSD",
+      "title" : "Medication Names Not For Pharmacy",
+      "description" : "A list of medications that typically are not prescribed for collection at the pharamcy a.k.a. Non-Medical Supplies."
+    },
+    {
+      "url" : "http://fhir.health.gov.lk/ips/CodeSystem/cs-procedure",
+      "version" : "0.1.0",
+      "status" : "active",
+      "name" : "CSProcedures",
+      "title" : "Procedures",
+      "description" : "Procedures"
+    },
+    {
+      "url" : "http://fhir.health.gov.lk/ips/CodeSystem/cs-procedure-imaging",
+      "version" : "0.1.0",
+      "status" : "active",
+      "name" : "CSImagingProcedures",
+      "title" : "Procedures",
+      "description" : "Imaging Procedures"
+    }
+  ]
+}

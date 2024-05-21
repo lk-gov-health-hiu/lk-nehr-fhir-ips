@@ -1,0 +1,116 @@
+{
+  "resourceType" : "CodeSystem",
+  "id" : "cs-procedure-imaging",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>This case-sensitive code system <code>http://fhir.health.gov.lk/ips/CodeSystem/cs-procedure-imaging</code> defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style=\"white-space:nowrap\">X-Ray<a name=\"cs-procedure-imaging-X-Ray\"> </a></td><td>X-Ray</td><td>Needs definition</td></tr><tr><td style=\"white-space:nowrap\">MRI<a name=\"cs-procedure-imaging-MRI\"> </a></td><td>MRI</td><td>Needs definition</td></tr><tr><td style=\"white-space:nowrap\">Ultrasound<a name=\"cs-procedure-imaging-Ultrasound\"> </a></td><td>Ultrasound</td><td>Needs definition</td></tr><tr><td style=\"white-space:nowrap\">CT<a name=\"cs-procedure-imaging-CT\"> </a></td><td>CT</td><td>Needs definition</td></tr><tr><td style=\"white-space:nowrap\">Fluoroscopy<a name=\"cs-procedure-imaging-Fluoroscopy\"> </a></td><td>Fluoroscopy</td><td>Needs definition</td></tr><tr><td style=\"white-space:nowrap\">Angiography<a name=\"cs-procedure-imaging-Angiography\"> </a></td><td>Angiography</td><td>Needs definition</td></tr><tr><td style=\"white-space:nowrap\">Mammography<a name=\"cs-procedure-imaging-Mammography\"> </a></td><td>Mammography</td><td>Needs definition</td></tr><tr><td style=\"white-space:nowrap\">Breast-Tomosynthesis<a name=\"cs-procedure-imaging-Breast-Tomosynthesis\"> </a></td><td>Breast Tomosynthesis</td><td>Needs definition</td></tr><tr><td style=\"white-space:nowrap\">PET<a name=\"cs-procedure-imaging-PET\"> </a></td><td>PET</td><td>Needs definition</td></tr><tr><td style=\"white-space:nowrap\">SPECT<a name=\"cs-procedure-imaging-SPECT\"> </a></td><td>SPECT</td><td>Needs definition</td></tr><tr><td style=\"white-space:nowrap\">Endoscopy<a name=\"cs-procedure-imaging-Endoscopy\"> </a></td><td>Endoscopy</td><td>Needs definition</td></tr><tr><td style=\"white-space:nowrap\">Microscopy<a name=\"cs-procedure-imaging-Microscopy\"> </a></td><td>Microscopy</td><td>Needs definition</td></tr><tr><td style=\"white-space:nowrap\">Whole-Slide-Imaging<a name=\"cs-procedure-imaging-Whole-Slide-Imaging\"> </a></td><td>Whole Slide Imaging</td><td>Needs definition</td></tr><tr><td style=\"white-space:nowrap\">OCT<a name=\"cs-procedure-imaging-OCT\"> </a></td><td>OCT</td><td>Needs definition</td></tr></table></div>"
+  },
+  "url" : "http://fhir.health.gov.lk/ips/CodeSystem/cs-procedure-imaging",
+  "version" : "0.1.0",
+  "name" : "CSImagingProcedures",
+  "title" : "Procedures",
+  "status" : "active",
+  "experimental" : false,
+  "date" : "2024-05-21T08:56:58+00:00",
+  "publisher" : "Ministry of Health, Sri Lanka",
+  "contact" : [{
+    "name" : "Ministry of Health, Sri Lanka",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://www.health.gov.lk/"
+    },
+    {
+      "system" : "email",
+      "value" : "digitalhealth@health.gov.lk"
+    }]
+  },
+  {
+    "name" : "Director, Health Information",
+    "telecom" : [{
+      "system" : "email",
+      "value" : "digitalhealth@health.gov.lk",
+      "use" : "work"
+    }]
+  }],
+  "description" : "Imaging Procedures",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "http://unstats.un.org/unsd/methods/m49/m49.htm",
+      "code" : "001",
+      "display" : "World"
+    }]
+  }],
+  "caseSensitive" : true,
+  "content" : "complete",
+  "count" : 14,
+  "concept" : [{
+    "code" : "X-Ray",
+    "display" : "X-Ray",
+    "definition" : "Needs definition"
+  },
+  {
+    "code" : "MRI",
+    "display" : "MRI",
+    "definition" : "Needs definition"
+  },
+  {
+    "code" : "Ultrasound",
+    "display" : "Ultrasound",
+    "definition" : "Needs definition"
+  },
+  {
+    "code" : "CT",
+    "display" : "CT",
+    "definition" : "Needs definition"
+  },
+  {
+    "code" : "Fluoroscopy",
+    "display" : "Fluoroscopy",
+    "definition" : "Needs definition"
+  },
+  {
+    "code" : "Angiography",
+    "display" : "Angiography",
+    "definition" : "Needs definition"
+  },
+  {
+    "code" : "Mammography",
+    "display" : "Mammography",
+    "definition" : "Needs definition"
+  },
+  {
+    "code" : "Breast-Tomosynthesis",
+    "display" : "Breast Tomosynthesis",
+    "definition" : "Needs definition"
+  },
+  {
+    "code" : "PET",
+    "display" : "PET",
+    "definition" : "Needs definition"
+  },
+  {
+    "code" : "SPECT",
+    "display" : "SPECT",
+    "definition" : "Needs definition"
+  },
+  {
+    "code" : "Endoscopy",
+    "display" : "Endoscopy",
+    "definition" : "Needs definition"
+  },
+  {
+    "code" : "Microscopy",
+    "display" : "Microscopy",
+    "definition" : "Needs definition"
+  },
+  {
+    "code" : "Whole-Slide-Imaging",
+    "display" : "Whole Slide Imaging",
+    "definition" : "Needs definition"
+  },
+  {
+    "code" : "OCT",
+    "display" : "OCT",
+    "definition" : "Needs definition"
+  }]
+}

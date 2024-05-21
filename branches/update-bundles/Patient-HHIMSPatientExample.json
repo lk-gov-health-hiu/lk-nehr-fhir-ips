@@ -1,0 +1,75 @@
+{
+  "resourceType" : "Patient",
+  "id" : "HHIMSPatientExample",
+  "meta" : {
+    "profile" : ["http://fhir.health.gov.lk/ips/StructureDefinition/hhims-patient"]
+  },
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p style=\"border: 1px #661aff solid; background-color: #e6e6ff; padding: 10px;\"><b>Mr. Mike John Smith (OFFICIAL)</b> male, DoB: 1983-05-22 ( Personal Health Number/personal health number)</p><hr/><table class=\"grid\"><tr><td style=\"background-color: #f3f5da\" title=\"Other Ids (see the one above)\">Other Ids:</td><td colspan=\"3\"><ul><li>National identity number/National identity number-1</li><li>National identity number/National identity number-2</li></ul></td></tr><tr><td style=\"background-color: #f3f5da\" title=\"Ways to contact the Patient\">Contact Details:</td><td colspan=\"3\"><ul><li><a href=\"tel:+27829999999\">+27829999999</a></li><li><a href=\"mailto:someone@something.com\">someone@something.com</a></li><li><a href=\"mailto:someone2@something.com\">someone2@something.com</a></li><li>177 Nawala Road Nugegoda Colombo 32350 LK </li></ul></td></tr></table></div>"
+  },
+  "identifier" : [{
+    "type" : {
+      "coding" : [{
+        "system" : "http://fhir.health.gov.lk/ips/CodeSystem/cs-identifier-types",
+        "code" : "PHN"
+      }],
+      "text" : "Personal Health Number"
+    },
+    "system" : "http://fhir.health.gov.lk/ips/identifier/phn",
+    "value" : "personal health number"
+  },
+  {
+    "type" : {
+      "coding" : [{
+        "system" : "http://fhir.health.gov.lk/ips/CodeSystem/cs-identifier-types",
+        "code" : "NIC"
+      }],
+      "text" : "National identity number"
+    },
+    "system" : "http://fhir.health.gov.lk/ips/identifier/nic",
+    "value" : "National identity number-1"
+  },
+  {
+    "type" : {
+      "coding" : [{
+        "system" : "http://fhir.health.gov.lk/ips/CodeSystem/cs-identifier-types",
+        "code" : "NIC"
+      }],
+      "text" : "National identity number"
+    },
+    "system" : "http://fhir.health.gov.lk/ips/identifier/nic",
+    "value" : "National identity number-2"
+  }],
+  "name" : [{
+    "use" : "official",
+    "family" : "Smith",
+    "given" : ["Mr.",
+    "Mike",
+    "John"]
+  }],
+  "telecom" : [{
+    "system" : "phone",
+    "value" : "+27829999999"
+  },
+  {
+    "system" : "email",
+    "value" : "someone@something.com"
+  },
+  {
+    "system" : "email",
+    "value" : "someone2@something.com"
+  }],
+  "gender" : "male",
+  "birthDate" : "1983-05-22",
+  "address" : [{
+    "type" : "postal",
+    "line" : ["177",
+    "Nawala Road"],
+    "city" : "Nugegoda",
+    "district" : "Ampara",
+    "state" : "Colombo",
+    "postalCode" : "32350",
+    "country" : "LK"
+  }]
+}

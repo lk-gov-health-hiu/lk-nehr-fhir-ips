@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ValueSet xmlns="http://hl7.org/fhir">
+  <id value="vs-follow-up-plan"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p>This value set includes codes based on the following rules:</p><ul><li>Include codes from <a href="http://www.snomed.org/"><code>http://snomed.info/sct</code></a> where concept  descends from  183851006 (Referral to clinic)</li><li>Include these codes as defined in <a href="http://www.snomed.org/"><code>http://snomed.info/sct</code></a><table class="none"><tr><td style="white-space:nowrap"><b>Code</b></td><td><b>Display</b></td></tr><tr><td><a href="http://snomed.info/id/772071006">772071006</a></td><td>Referral to dentist</td></tr><tr><td><a href="http://snomed.info/id/410321003">410321003</a></td><td>Wellness health education, guidance, and counseling</td></tr><tr><td><a href="http://snomed.info/id/306110004">306110004</a></td><td>Referral to medical service</td></tr></table></li></ul></div>
+  </text>
+  <url value="http://fhir.health.gov.lk/ips/ValueSet/vs-follow-up-plan"/>
+  <version value="0.1.0"/>
+  <name value="VSFollowUpPlan"/>
+  <title value="Follow-up plan"/>
+  <status value="active"/>
+  <experimental value="false"/>
+  <date value="2024-03-02T08:11:52+00:00"/>
+  <publisher value="Ministry of Health, Sri Lanka"/>
+  <contact>
+    <name value="Ministry of Health, Sri Lanka"/>
+    <telecom>
+      <system value="url"/>
+      <value value="https://www.health.gov.lk/"/>
+    </telecom>
+    <telecom>
+      <system value="email"/>
+      <value value="digitalhealth@health.gov.lk"/>
+    </telecom>
+  </contact>
+  <contact>
+    <name value="Director, Health Information"/>
+    <telecom>
+      <system value="email"/>
+      <value value="digitalhealth@health.gov.lk"/>
+      <use value="work"/>
+    </telecom>
+  </contact>
+  <description value="Follow-up plan"/>
+  <jurisdiction>
+    <coding>
+      <system value="http://unstats.un.org/unsd/methods/m49/m49.htm"/>
+      <code value="001"/>
+      <display value="World"/>
+    </coding>
+  </jurisdiction>
+  <compose>
+    <include>
+      <system value="http://snomed.info/sct"/>
+      <filter>
+        <property value="concept"/>
+        <op value="descendent-of"/>
+        <value value="183851006"/>
+      </filter>
+    </include>
+    <include>
+      <system value="http://snomed.info/sct"/>
+      <concept>
+        <code value="772071006"/>
+        <display value="Referral to dentist"/>
+      </concept>
+      <concept>
+        <code value="410321003"/>
+        <display value="Wellness health education, guidance, and counseling"/>
+      </concept>
+      <concept>
+        <code value="306110004"/>
+        <display value="Referral to medical service"/>
+      </concept>
+    </include>
+  </compose>
+</ValueSet>

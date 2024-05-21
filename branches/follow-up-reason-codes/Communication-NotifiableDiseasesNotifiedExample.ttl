@@ -1,0 +1,37 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://fhir.health.gov.lk/ips/Communication/NotifiableDiseasesNotifiedExample> a fhir:Communication ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "NotifiableDiseasesNotifiedExample"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://fhir.health.gov.lk/ips/StructureDefinition/notifiable-diseases-notified"^^xsd:anyURI ;
+       fhir:link <http://fhir.health.gov.lk/ips/StructureDefinition/notifiable-diseases-notified>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: Communication</b><a name=\"NotifiableDiseasesNotifiedExample\"> </a><a name=\"hcNotifiableDiseasesNotifiedExample\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource Communication &quot;NotifiableDiseasesNotifiedExample&quot; </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-notifiable-diseases-notified.html\">Notifiable Diseases Notified</a></p></div><p><b>status</b>: completed</p><p><b>subject</b>: <a href=\"Patient-PatientExample.html\">Patient/PatientExample</a> &quot; SMITH&quot;</p><p><b>encounter</b>: <a href=\"Encounter-TargetFacilityEncounterExample.html\">Encounter/TargetFacilityEncounterExample</a></p><p><b>sent</b>: 2023-10-06 13:28:17-0500</p><p><b>sender</b>: <a href=\"Device-DeviceInformationExample.html\">Device/DeviceInformationExample</a></p></div>"
+  ] ; # 
+  fhir:status [ fhir:v "completed"] ; # 
+  fhir:subject [
+     fhir:link <http://fhir.health.gov.lk/ips/Patient/PatientExample> ;
+     fhir:reference [ fhir:v "Patient/PatientExample" ]
+  ] ; # 
+  fhir:encounter [
+     fhir:link <http://fhir.health.gov.lk/ips/Encounter/TargetFacilityEncounterExample> ;
+     fhir:reference [ fhir:v "Encounter/TargetFacilityEncounterExample" ]
+  ] ; # 
+  fhir:sent [ fhir:v "2023-10-06T13:28:17-05:00"^^xsd:dateTime] ; # 
+  fhir:sender [
+     fhir:link <http://fhir.health.gov.lk/ips/Device/DeviceInformationExample> ;
+     fhir:reference [ fhir:v "Device/DeviceInformationExample" ]
+  ] . # 
+
+# -------------------------------------------------------------------------------------
+

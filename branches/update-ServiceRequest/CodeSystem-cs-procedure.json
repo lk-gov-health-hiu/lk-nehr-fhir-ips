@@ -1,0 +1,56 @@
+{
+  "resourceType" : "CodeSystem",
+  "id" : "cs-procedure",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>This case-sensitive code system <code>http://fhir.health.gov.lk/ips/CodeSystem/cs-procedure</code> defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style=\"white-space:nowrap\">Cleaning-and-Dressing<a name=\"cs-procedure-Cleaning-and-Dressing\"> </a></td><td>Cleaning and Dressing</td><td>Needs definition</td></tr><tr><td style=\"white-space:nowrap\">Health-Education<a name=\"cs-procedure-Health-Education\"> </a></td><td>Health Education</td><td>Needs definition</td></tr></table></div>"
+  },
+  "url" : "http://fhir.health.gov.lk/ips/CodeSystem/cs-procedure",
+  "version" : "0.1.0",
+  "name" : "CSProcedures",
+  "title" : "Procedures",
+  "status" : "active",
+  "experimental" : false,
+  "date" : "2024-03-19T12:16:08+00:00",
+  "publisher" : "Ministry of Health, Sri Lanka",
+  "contact" : [{
+    "name" : "Ministry of Health, Sri Lanka",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://www.health.gov.lk/"
+    },
+    {
+      "system" : "email",
+      "value" : "digitalhealth@health.gov.lk"
+    }]
+  },
+  {
+    "name" : "Director, Health Information",
+    "telecom" : [{
+      "system" : "email",
+      "value" : "digitalhealth@health.gov.lk",
+      "use" : "work"
+    }]
+  }],
+  "description" : "Procedures",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "http://unstats.un.org/unsd/methods/m49/m49.htm",
+      "code" : "001",
+      "display" : "World"
+    }]
+  }],
+  "caseSensitive" : true,
+  "content" : "complete",
+  "count" : 2,
+  "concept" : [{
+    "code" : "Cleaning-and-Dressing",
+    "display" : "Cleaning and Dressing",
+    "definition" : "Needs definition"
+  },
+  {
+    "code" : "Health-Education",
+    "display" : "Health Education",
+    "definition" : "Needs definition"
+  }]
+}

@@ -1,0 +1,58 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sct: <http://snomed.info/id/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://fhir.health.gov.lk/ips/AllergyIntolerance/AllergiesExample> a fhir:AllergyIntolerance ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "AllergiesExample"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://fhir.health.gov.lk/ips/StructureDefinition/allergy-intolerance"^^xsd:anyURI ;
+       fhir:link <http://fhir.health.gov.lk/ips/StructureDefinition/allergy-intolerance>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: AllergyIntolerance</b><a name=\"AllergiesExample\"> </a><a name=\"hcAllergiesExample\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource AllergyIntolerance &quot;AllergiesExample&quot; </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-allergy-intolerance.html\">Allergy Intolerance</a></p></div><p><b>clinicalStatus</b>: Active <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"http://terminology.hl7.org/5.0.0/CodeSystem-allergyintolerance-clinical.html\">AllergyIntolerance Clinical Status Codes</a>#active)</span></p><p><b>verificationStatus</b>: Confirmed <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"http://terminology.hl7.org/5.0.0/CodeSystem-allergyintolerance-verification.html\">AllergyIntolerance Verification Status</a>#confirmed)</span></p><p><b>type</b>: allergy</p><p><b>code</b>: Allergy to food <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"https://browser.ihtsdotools.org/\">SNOMED CT</a>#414285001)</span></p><p><b>patient</b>: <a href=\"Patient-PatientExample.html\">Patient/PatientExample</a> &quot; SMITH&quot;</p><p><b>encounter</b>: <a href=\"Encounter-TargetFacilityEncounterExample.html\">Encounter/TargetFacilityEncounterExample</a></p><p><b>onset</b>: 2023-10-11 17:21:33-0800</p><p><b>recorder</b>: <a href=\"Practitioner-GeneralPractitionerExample.html\">Practitioner/GeneralPractitionerExample</a> &quot; SMITH&quot;</p></div>"
+  ] ; # 
+  fhir:clinicalStatus [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/allergyintolerance-clinical"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "active" ]
+     ] )
+  ] ; # 
+  fhir:verificationStatus [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/allergyintolerance-verification"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "confirmed" ]
+     ] )
+  ] ; # 
+  fhir:type [ fhir:v "allergy"] ; # 
+  fhir:code [
+     fhir:coding ( [
+       a sct:414285001 ;
+       fhir:system [ fhir:v "http://snomed.info/sct"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "414285001" ]
+     ] ) ;
+     fhir:text [ fhir:v "Allergy to food" ]
+  ] ; # 
+  fhir:patient [
+     fhir:link <http://fhir.health.gov.lk/ips/Patient/PatientExample> ;
+     fhir:reference [ fhir:v "Patient/PatientExample" ]
+  ] ; # 
+  fhir:encounter [
+     fhir:link <http://fhir.health.gov.lk/ips/Encounter/TargetFacilityEncounterExample> ;
+     fhir:reference [ fhir:v "Encounter/TargetFacilityEncounterExample" ]
+  ] ; # 
+  fhir:onset [ fhir:v "2023-10-11T17:21:33-08:00"^^xsd:dateTime] ; # 
+  fhir:recorder [
+     fhir:link <http://fhir.health.gov.lk/ips/Practitioner/GeneralPractitionerExample> ;
+     fhir:reference [ fhir:v "Practitioner/GeneralPractitionerExample" ]
+  ] . # 
+
+# -------------------------------------------------------------------------------------
+

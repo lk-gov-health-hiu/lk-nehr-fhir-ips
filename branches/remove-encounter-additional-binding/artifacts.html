@@ -1,0 +1,1341 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE HTML>
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
+    <title>Artifacts Summary - LK NEHR Sri Lanka Patient Summary (IPS based) Implementation Guide v0.1.0</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="author" content="http://hl7.org/fhir"/>
+
+    <link href="fhir.css" rel="stylesheet"/>
+
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap-fhir.css" rel="stylesheet"/>
+
+    <!-- Project extras -->
+    <link href="assets/css/project.css" rel="stylesheet"/>
+    <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
+    <link href="assets/css/jquery-ui.css" rel="stylesheet"/>
+  	<link href="assets/css/prism.css" rel="stylesheet" />
+    <!-- Placeholder for child template CSS declarations -->
+<link href="assets/css/openhie.css" rel="stylesheet"/>
+<link href="assets/css/lforms.min.css" rel="stylesheet"/>
+
+
+    <script type="text/javascript" src="fhir-table-scripts.js"> </script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="assets/js/html5shiv.js"></script>
+    <script src="assets/js/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Favicons -->
+    <link rel="fhir-logo" sizes="144x144" href="assets/ico/icon-fhir-144.png"/>
+    <link rel="fhir-logo" sizes="114x114" href="assets/ico/icon-fhir-114.png"/>
+    <link rel="fhir-logo" sizes="72x72" href="assets/ico/icon-fhir-72.png"/>
+    <link rel="fhir-logo" href="assets/ico/icon-fhir-57.png"/>
+    <link rel="shortcut icon" href="assets/ico/favicon.png"/>
+  </head>
+  <body onload="document.body.style.opacity='1'">
+
+	  <script src="assets/js/prism.js"></script>
+
+    <style type="text/css">h2{--heading-prefix:"4"}
+    h3,h4,h5,h6{--heading-prefix:"4.0"}</style>
+    <div id="segment-header" class="segment">  <!-- segment-header -->
+      <div class="container">  <!-- container -->
+        <!-- Placeholder for child template header declarations -->
+
+<!-- Left logo - typically the publisher's logo - project or affiliate -->
+        <div id="project-nav">
+          <a id="project-logo" no-external="true" href="https://ohie.org/">
+            <img height="71" alt="Project home" src="assets/images/home.png"/>
+          </a>
+        </div>
+
+<!-- Right logo - for example the FHIR logo -->
+<!-- Make sure you have authorization to use the FHIR logo -->
+        <div id="family-nav">
+          <a id="family-logo" no-external="true" href="http://hl7.org/fhir"><img height="70" alt="FHIR website" src="assets/images/fire.png"/> </a>
+        </div>
+
+<!-- search icon - if you want -->
+<!--
+        <div id="hl7-search">
+          <a id="hl7-search-lnk" no-external="true" href="http://hl7.org/fhir/search.cfm"><img alt="Search FHIR" src="assets/images/search.png"/></a>
+        </div>
+-->
+
+
+        <div id="ig-status">
+          <p><span style="font-size:12pt;font-weight:bold">LK NEHR Sri Lanka Patient Summary (IPS based) Implementation Guide</span>
+            <br/>
+            <span style="display:inline-block;">0.1.0 - STU1
+
+
+
+  <img alt="International flag" src="assets/images/001.svg" height="16" title="International"/>
+
+
+            </span>
+          </p>
+        </div>
+      </div> <!-- /container -->
+    </div>  <!-- /segment-header -->
+
+    <div id="segment-navbar" class="segment">  <!-- segment-navbar -->
+      <div id="stripe"> </div>
+      <div class="container">  <!-- container -->
+        <!-- HEADER CONTENT -->
+
+        <nav class="navbar navbar-inverse">
+          <!--status-bar-->
+          <div class="container">
+            <button data-target=".navbar-inverse-collapse" class="navbar-toggle" data-toggle="collapse" type="button">
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+            </button>
+            <a class="navbar-brand hidden" href="http://hl7.org/fhir/R4/index.html">FHIR</a>
+            <div class="nav-collapse collapse navbar-inverse-collapse">
+              <ul
+	xmlns="http://www.w3.org/1999/xhtml" class="nav navbar-nav">
+	<li>
+		<a href="index.html">IG Home</a>
+	</li>
+	<li>
+		<a href="toc.html">Table of Contents</a>
+	</li>
+<!--
+	<li class="dropdown">
+		<a data-toggle="dropdown" href="#" class="dropdown-toggle">Background<b class="caret"></b>
+		</a>
+
+	</li>
+	<li class="dropdown">
+		<a data-toggle="dropdown" href="#" class="dropdown-toggle">Functional Description<b class="caret"></b>
+		</a>
+
+	</li>
+-->
+	<li class="dropdown">
+		<a data-toggle="dropdown" href="#" class="dropdown-toggle">FHIR Artifacts<b class="caret"></b>
+		</a>
+		<ul class="dropdown-menu">
+			<li>
+				<a href="library.html">Library</a>
+			</li>
+		</ul>
+	</li>
+</ul>      
+            </div>  <!-- /.nav-collapse -->
+          </div>  <!-- /.container -->
+        </nav>  <!-- /.navbar -->
+      <!-- /HEADER CONTENT -->
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-navbar -->
+    <!--status-bar-->
+
+    <div id="segment-breadcrumb" class="segment">  <!-- segment-breadcrumb -->
+      <div class="container">  <!-- container -->
+        <ul class="breadcrumb">
+          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><b>Artifacts Summary</b></li>
+
+        </ul>
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-breadcrumb -->
+
+    <a name="top"> </a>
+    <div id="segment-content" class="segment">  <!-- segment-content -->
+      <div class="container">  <!-- container -->
+        <div class="row">
+          <div class="inner-wrapper">
+
+<style type="text/css">
+h2:before{color:silver;counter-increment:section;content:var(--heading-prefix) " ";}
+h3:before{color:silver;counter-increment:sub-section;content:var(--heading-prefix) "." counter(sub-section) " ";}
+h4:before{color:silver;counter-increment:composite;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) " ";}
+h5:before{color:silver;counter-increment:detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) " ";}
+h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) "." counter(more-detail)" ";}
+</style>
+<div class="col-12">
+  <!--ReleaseHeader--><p id="publish-box">LK NEHR Sri Lanka Patient Summary (IPS based) Implementation Guide, published by Ministry of Health, Sri Lanka. This guide is not an authorized publication; it is the continuous build for version 0.1.0 built by the FHIR (HL7® FHIR® Standard) CI Build. This version is based on the current content of <a href="https://github.com/lk-gov-health-hiu/lk-nehr-fhir-ips">https://github.com/lk-gov-health-hiu/lk-nehr-fhir-ips</a> and changes regularly. See the <a href="http://fhir.health.gov.lk/ips/history.html">Directory of published versions</a></p><!--EndReleaseHeader-->
+  <h2>Artifacts Summary</h2>
+  
+  
+  
+  <!--DO NOT EDIT THIS FILE - It is generated by https://github.com/HL7/ig-template-base/blob/master/scripts/createArtifactSummary.xslt and any changes made will be overwritten--><div xmlns:html="http://www.w3.org/1999/xhtml"
+     xmlns="http://www.w3.org/1999/xhtml"
+     xmlns:f="http://hl7.org/fhir"
+     class="markdown-toc">
+   <p>Contents:</p>
+   <ul>
+      <li>
+         <a href="#1">Structures: Resource Profiles</a>
+      </li>
+      <li>
+         <a href="#2">Structures: Extension Definitions</a>
+      </li>
+      <li>
+         <a href="#3">Terminology: Value Sets</a>
+      </li>
+      <li>
+         <a href="#4">Terminology: Code Systems</a>
+      </li>
+      <li>
+         <a href="#5">Example: Example Instances</a>
+      </li>
+   </ul>
+</div>
+<div xmlns:html="http://www.w3.org/1999/xhtml"
+     xmlns="http://www.w3.org/1999/xhtml"
+     xmlns:f="http://hl7.org/fhir">
+   <p>This page provides a list of the FHIR artifacts defined as part of this implementation guide.</p>
+   <a name="1"> </a>
+   <h3>Structures: Resource Profiles </h3>
+    <p>These define constraints on FHIR resources for systems conforming to this implementation guide.</p>
+<table class="grid">
+      <col style="width:20%"/>
+      <tbody>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-allergy-intolerance.html"
+                  title="StructureDefinition/allergy-intolerance">Allergy Intolerance</a>
+            </td>
+            <td>
+<p>Used to represent the patient’s allergies.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-no-allergy-intolerance.html"
+                  title="StructureDefinition/no-allergy-intolerance">Allergy Intolerance</a>
+            </td>
+            <td>
+<p>This is to indicate that there is no information avaible for allergies.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-blood-pressure.html"
+                  title="StructureDefinition/blood-pressure">Blood Pressure Observation</a>
+            </td>
+            <td>
+<p>Represents the patient’s blood pressure.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-cvd-risk-category.html"
+                  title="StructureDefinition/cvd-risk-category">Cardiovascular Risk Assessment</a>
+            </td>
+            <td>
+<p>Represents the patient’s CVD risk score.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-device-information.html"
+                  title="StructureDefinition/device-information">Device Information</a>
+            </td>
+            <td>
+<p>Is used to record key information about the system that contributed to the patient’s record.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-drug-dispensation.html"
+                  title="StructureDefinition/drug-dispensation">Drug Dispensation</a>
+            </td>
+            <td>
+<p>Used to represent dispensed medication for a patient.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-fasting-blood-sugar.html"
+                  title="StructureDefinition/fasting-blood-sugar">Fasting Blood Sugar Observation</a>
+            </td>
+            <td>
+<p>Represents the patient’s FBS results.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-follow-up-at-hlc.html"
+                  title="StructureDefinition/follow-up-at-hlc">Follow-up at HLC</a>
+            </td>
+            <td>
+<p>Used to record the follow-up event for the patient at HLC.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-general-referral-request.html"
+                  title="StructureDefinition/general-referral-request">General Referral Request</a>
+            </td>
+            <td>
+<p>Used to initiate a request for a referral.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-generic-observation.html"
+                  title="StructureDefinition/generic-observation">Generic Observation</a>
+            </td>
+            <td>
+<p>Base Observation elements that are inherited by other Observations resources.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-generic-service-request.html"
+                  title="StructureDefinition/generic-service-request">Generic Service Request</a>
+            </td>
+            <td>
+<p>Base ServiceRequest elements that are inherited by other ServiceRequest resources.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-generic-task.html"
+                  title="StructureDefinition/generic-task">Generic Task</a>
+            </td>
+            <td>
+<p>Base Task elements that are inherited by other Task resources.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-hhims-composition.html"
+                  title="StructureDefinition/hhims-composition">HHIMS Composition</a>
+            </td>
+            <td>
+<p>Clinical document used to represent the International Patient Summary (IPS) data set for HHIMS</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-hhims-ips-bundle.html"
+                  title="StructureDefinition/hhims-ips-bundle">HHIMS IPS Bundle</a>
+            </td>
+            <td>
+<p>This bundle contains all of the HHIMS resources for IPS.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-hhims-transactional-bundle.html"
+                  title="StructureDefinition/hhims-transactional-bundle">HHIMS Transactional Bundle</a>
+            </td>
+            <td>
+<p>This bundle contains all of the HHIMS resources for transactional requests.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-hims-composition.html"
+                  title="StructureDefinition/hims-composition">HIMS Composition</a>
+            </td>
+            <td>
+<p>Clinical document used to represent the International Patient Summary (IPS) data set for HIMS</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-hims-ips-bundle.html"
+                  title="StructureDefinition/hims-ips-bundle">HIMS IPS Bundle</a>
+            </td>
+            <td>
+<p>This bundle contains all of the HIMS resources for IPS.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-hims-transactional-bundle.html"
+                  title="StructureDefinition/hims-transactional-bundle">HIMS Transactional Bundle</a>
+            </td>
+            <td>
+<p>This bundle contains all of the HIMS resources for transactional requests.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-imaging-request.html"
+                  title="StructureDefinition/imaging-request">Imaging Request</a>
+            </td>
+            <td>
+<p>Used to initiate the request for imaging to be done.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-imaging-study.html"
+                  title="StructureDefinition/imaging-study">Imaging Study</a>
+            </td>
+            <td>
+<p>Used to represent the content or results of a imaging study.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-investigations-request.html"
+                  title="StructureDefinition/investigations-request">Investigations Request</a>
+            </td>
+            <td>
+<p>Used to initiate a request for an investigation.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-medical-history.html"
+                  title="StructureDefinition/medical-history">Medical History</a>
+            </td>
+            <td>
+<p>Represents previous, pre-existing and new conditions for the patient.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-no-medical-history.html"
+                  title="StructureDefinition/no-medical-history">Medical History</a>
+            </td>
+            <td>
+<p>Indicates that there is no information available about the subject’s health problems or disabilities.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-medication-request.html"
+                  title="StructureDefinition/medication-request">Medication Request</a>
+            </td>
+            <td>
+<p>This is to record requests for medication that are prescribed to a patient or for Non-MDS medicines.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-no-medication-requested.html"
+                  title="StructureDefinition/no-medication-requested">Medication Request</a>
+            </td>
+            <td>
+<p>This is to indicate that the patient has not received any prescriptions for drugs.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-notifiable-diseases-notified.html"
+                  title="StructureDefinition/notifiable-diseases-notified">Notifiable Diseases Notified</a>
+            </td>
+            <td>
+<p>Represents a message communicated to the practitioner about a patient’s encounter.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-organization.html"
+                  title="StructureDefinition/organization">Organization</a>
+            </td>
+            <td>
+<p>Organization providing health related services.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-ips-patient.html"
+                  title="StructureDefinition/ips-patient">Patient</a>
+            </td>
+            <td>
+<p>Is used to document demographics and other administrative information about an HIMS or HHIMS individual receiving care or other health-related services.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-bmi.html" title="StructureDefinition/bmi">Patient BMI Observation</a>
+            </td>
+            <td>
+<p>Represents the patient’s BMI.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-height.html"
+                  title="StructureDefinition/height">Patient Height Observation</a>
+            </td>
+            <td>
+<p>Represents the patient’s height.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-patient-identity-cross-reference.html"
+                  title="StructureDefinition/patient-identity-cross-reference">Patient Identity Cross Reference</a>
+            </td>
+            <td>
+<p>Is used by the Client Register (CR) to re-identify the patient with his/her corresponding longitudinal clinical record</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-weight.html"
+                  title="StructureDefinition/weight">Patient Weight Observation</a>
+            </td>
+            <td>
+<p>Represents the patient’s weight.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-risk-behaviour-physical-activity.html"
+                  title="StructureDefinition/risk-behaviour-physical-activity">Physical Activity Status Observation</a>
+            </td>
+            <td>
+<p>Represents the physical status of the patient.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-practitioner.html"
+                  title="StructureDefinition/practitioner">Practitioner</a>
+            </td>
+            <td>
+<p>Represents the practitioners who participated in the observation.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-procedures-request.html"
+                  title="StructureDefinition/procedures-request">Procedure Request</a>
+            </td>
+            <td>
+<p>Used to initiate the request for a procedure.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-providers-location.html"
+                  title="StructureDefinition/providers-location">Providers Location</a>
+            </td>
+            <td>
+<p>Represents the physical location of the provider.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-random-blood-sugar.html"
+                  title="StructureDefinition/random-blood-sugar">Random Blood Sugar Observation</a>
+            </td>
+            <td>
+<p>Represents the patient’s RBS results.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-follow-up-plan.html"
+                  title="StructureDefinition/follow-up-plan">Referral Request For Follow-up Plan</a>
+            </td>
+            <td>
+<p>Used to initiate a referral request for a Follow-up Plan.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-referral-task.html"
+                  title="StructureDefinition/referral-task">Referral Task</a>
+            </td>
+            <td>
+<p>Is primarily used to track the progress of a patient’s referral.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-target-facility-encounter.html"
+                  title="StructureDefinition/target-facility-encounter">Target Facility Encounter</a>
+            </td>
+            <td>
+<p>Represents the current facility at which the patient is receiving health services.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-risk-behaviour-tobacco-smoker.html"
+                  title="StructureDefinition/risk-behaviour-tobacco-smoker">Tobacco Smoker Observation</a>
+            </td>
+            <td>
+<p>Represents the tobacco smoking status of the patient.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-total-cholesterol.html"
+                  title="StructureDefinition/total-cholesterol">Total Cholesterol Observation</a>
+            </td>
+            <td>
+<p>Represents the patient’s total cholesterol results.</p>
+</td>
+         </tr>
+      </tbody>
+   </table>
+   <a name="2"> </a>
+   <h3>Structures: Extension Definitions </h3>
+    <p>These define constraints on FHIR data types for systems conforming to this implementation guide.</p>
+<table class="grid">
+      <col style="width:20%"/>
+      <tbody>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-patient-registration-system.html"
+                  title="StructureDefinition/patient-registration-system">Patient Registration System Information</a>
+            </td>
+            <td>
+<p>Captures the information of the system that was used to register the patient.</p>
+</td>
+         </tr>
+      </tbody>
+   </table>
+   <a name="3"> </a>
+   <h3>Terminology: Value Sets </h3>
+    <p>These define sets of codes used by systems conforming to this implementation guide.</p>
+<table class="grid">
+      <col style="width:20%"/>
+      <tbody>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-vs-medical-conditions-additional.html"
+                  title="ValueSet/vs-medical-conditions-additional">Additional Conditions</a>
+            </td>
+            <td>
+<p>Represents previous, pre-existing and new conditions.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-vs-cvd-risk-category.html"
+                  title="ValueSet/vs-cvd-risk-category">Cardiovascular Risk Categories</a>
+            </td>
+            <td>
+<p>Cardiovascular risk is expressed as a percentage</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-vs-medical-conditions.html"
+                  title="ValueSet/vs-medical-conditions">Conditions</a>
+            </td>
+            <td>
+<p>Represents previous, pre-existing and new conditions.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-vs-device-classification.html"
+                  title="ValueSet/vs-device-classification">Device Classification Codes</a>
+            </td>
+            <td>
+<p>A list of device classification codes.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-vs-drug-frequency.html"
+                  title="ValueSet/vs-drug-frequency">Drug Frequency Codes</a>
+            </td>
+            <td>
+<p>A list of drug frequency code for medication requests.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-vs-follow-up-reasons.html"
+                  title="ValueSet/vs-follow-up-reasons">Follow up at HLC</a>
+            </td>
+            <td>
+<p>Follow up at Healthy Lifestyle Center</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-vs-follow-up-plan.html"
+                  title="ValueSet/vs-follow-up-plan">Follow-up plan</a>
+            </td>
+            <td>
+<p>Follow-up plan</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-vs-investigation.html" title="ValueSet/vs-investigation">Investigations</a>
+            </td>
+            <td>
+<p>Investigations</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-vs-medication-name-msd.html"
+                  title="ValueSet/vs-medication-name-msd">Medication Names For Pharmacy</a>
+            </td>
+            <td>
+<p>A list of typical medications that can be prescribed to the patient.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-vs-medication-name-non-msd.html"
+                  title="ValueSet/vs-medication-name-non-msd">Medication Names Not For Pharmacy</a>
+            </td>
+            <td>
+<p>A list of medications that typically are not prescribed for collection at the pharamcy a.k.a. Non-Medical Supplies.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-vs-identifier-types.html"
+                  title="ValueSet/vs-identifier-types">Patient Business Identifier Types</a>
+            </td>
+            <td>
+<p>Patient Business Identifier Types</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-vs-risk-behaviour-physical-activity.html"
+                  title="ValueSet/vs-risk-behaviour-physical-activity">Physical Activity</a>
+            </td>
+            <td>
+<p>Physical Activity Status</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-vs-procedure.html" title="ValueSet/vs-procedure">Procedures</a>
+            </td>
+            <td>
+<p>Procedures</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-vs-procedure-imaging.html"
+                  title="ValueSet/vs-procedure-imaging">Procedures</a>
+            </td>
+            <td>
+<p>Imaging Procedures</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-vs-reason-for-encounter.html"
+                  title="ValueSet/vs-reason-for-encounter">Reason For Encounter</a>
+            </td>
+            <td>
+<p>Encounter reasons.</p>
+</td>
+         </tr>
+      </tbody>
+   </table>
+   <a name="4"> </a>
+   <h3>Terminology: Code Systems </h3>
+    <p>These define new code systems used by systems conforming to this implementation guide.</p>
+<table class="grid">
+      <col style="width:20%"/>
+      <tbody>
+         <tr>
+            <td style="column-width:30%">
+               <a href="CodeSystem-cs-medical-conditions-additional.html"
+                  title="CodeSystem/cs-medical-conditions-additional">Additional Conditions</a>
+            </td>
+            <td>
+<p>Represents previous, pre-existing and new conditions.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="CodeSystem-cs-cvd-risk-category.html"
+                  title="CodeSystem/cs-cvd-risk-category">Cardiovascular Risk Categories</a>
+            </td>
+            <td>
+<p>Cardiovascular risk is expressed as a percentage</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="CodeSystem-cs-composition-codes.html"
+                  title="CodeSystem/cs-composition-codes">Composition Section Codes</a>
+            </td>
+            <td>
+<p>A list of Composition section codes.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="CodeSystem-cs-device-classification.html"
+                  title="CodeSystem/cs-device-classification">Device Classification Codes</a>
+            </td>
+            <td>
+<p>A list of device classification codes.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="CodeSystem-cs-drug-frequency.html"
+                  title="CodeSystem/cs-drug-frequency">Drug Frequency Codes</a>
+            </td>
+            <td>
+<p>A list of drug frequency code for medication requests.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="CodeSystem-cs-follow-up-reasons.html"
+                  title="CodeSystem/cs-follow-up-reasons">Follow up at HLC</a>
+            </td>
+            <td>
+<p>Follow up at Healthy Lifestyle Center</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="CodeSystem-cs-investigation.html"
+                  title="CodeSystem/cs-investigation">Investigations</a>
+            </td>
+            <td>
+<p>Investigations</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="CodeSystem-cs-medication-name-msd.html"
+                  title="CodeSystem/cs-medication-name-msd">Medication Names For Pharmacy</a>
+            </td>
+            <td>
+<p>A list of typical medications that can be prescribed to the patient.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="CodeSystem-cs-medication-name-non-msd.html"
+                  title="CodeSystem/cs-medication-name-non-msd">Medication Names Not For Pharmacy</a>
+            </td>
+            <td>
+<p>A list of medications that typically are not prescribed for collection at the pharamcy a.k.a. Non-Medical Supplies.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="CodeSystem-cs-identifier-types.html"
+                  title="CodeSystem/cs-identifier-types">Patient Business Identifier Types</a>
+            </td>
+            <td>
+<p>Patient Business Identifier Types</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="CodeSystem-cs-procedure.html" title="CodeSystem/cs-procedure">Procedures</a>
+            </td>
+            <td>
+<p>Procedures</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="CodeSystem-cs-procedure-imaging.html"
+                  title="CodeSystem/cs-procedure-imaging">Procedures</a>
+            </td>
+            <td>
+<p>Imaging Procedures</p>
+</td>
+         </tr>
+      </tbody>
+   </table>
+   <a name="5"> </a>
+   <h3>Example: Example Instances </h3>
+    <p>These are example instances that show what data produced and consumed by systems conforming with this implementation guide might look like.</p>
+<table class="grid">
+      <col style="width:20%"/>
+      <tbody>
+         <tr>
+            <td style="column-width:30%">
+               <a href="AllergyIntolerance-AllergiesExample.html"
+                  title="AllergyIntolerance/AllergiesExample">Allergy Intolerance</a>
+            </td>
+            <td>
+<p>This is to record allergy information available for the patient.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="AllergyIntolerance-NoAllergiesExample.html"
+                  title="AllergyIntolerance/NoAllergiesExample">Allergy Intolerance</a>
+            </td>
+            <td>
+<p>This is to indicate that there is no information avaible for allergies.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Observation-BloodPressureExample.html"
+                  title="Observation/BloodPressureExample">Blood Pressure Observation</a>
+            </td>
+            <td>
+<p>Represents the Systolic and Diastolic blood pressure for the patient.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="RiskAssessment-CVDRiskCategoryExample.html"
+                  title="RiskAssessment/CVDRiskCategoryExample">Cardiovascular Risk Assessment</a>
+            </td>
+            <td>
+<p>Represents the patient’s CVD risk score.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Device-DeviceInformationExample.html"
+                  title="Device/DeviceInformationExample">Device Information</a>
+            </td>
+            <td>
+<p>Is used to record key information about the system that contributed to the patient’s record.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="MedicationDispense-DrugDispensationExample.html"
+                  title="MedicationDispense/DrugDispensationExample">Drug Dispensation</a>
+            </td>
+            <td>
+<p>Used to represent dispensed medication for a patient.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Observation-FastingBloodSugarExample.html"
+                  title="Observation/FastingBloodSugarExample">Fasting Blood Sugar Observation</a>
+            </td>
+            <td>
+<p>Represents the patient’s FBS results.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="CarePlan-FollowUpAtHLCExample.html"
+                  title="CarePlan/FollowUpAtHLCExample">Follow-up at HLC</a>
+            </td>
+            <td>
+<p>Used to record the follow-up event for the patient at HLC.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ServiceRequest-GeneralReferralServiceRequestExample.html"
+                  title="ServiceRequest/GeneralReferralServiceRequestExample">General Referral Request</a>
+            </td>
+            <td>
+<p>Used to initiate a request for a referral.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Observation-GenericObservationExample.html"
+                  title="Observation/GenericObservationExample">Generic Observation</a>
+            </td>
+            <td>
+<p>Base Observation elements that are inherited by other Observations resources.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ServiceRequest-GenericServiceRequestExample.html"
+                  title="ServiceRequest/GenericServiceRequestExample">Generic Service Request</a>
+            </td>
+            <td>
+<p>Base ServiceRequest elements that are inherited by other ServiceRequest resources.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Task-GenericTaskExample.html" title="Task/GenericTaskExample">Generic Task</a>
+            </td>
+            <td>
+<p>Base Task elements that are inherited by other Task resources.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Composition-HHIMSCompositionExampleNoMedicalHistory.html"
+                  title="Composition/HHIMSCompositionExampleNoMedicalHistory">HHIMS Composition</a>
+            </td>
+            <td>
+<p>Clinical document used to represent the International Patient Summary (IPS) data set for a HHIMS patient with no medical history</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Composition-HHIMSCompositionExampleWithMedicalHistory.html"
+                  title="Composition/HHIMSCompositionExampleWithMedicalHistory">HHIMS Composition</a>
+            </td>
+            <td>
+<p>Clinical document used to represent the International Patient Summary (IPS) data set for a HHIMS patient with a medical history</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Bundle-HHIMSIPSBundleExampleWithMedicalHistory.html"
+                  title="Bundle/HHIMSIPSBundleExampleWithMedicalHistory">HHIMS IPS Bundle with medical history</a>
+            </td>
+            <td>
+<p>A full IPS derived bundle containing a medical history for the HHIMS patient.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Bundle-HHIMSIPSBundleExampleNoMedicalHistory.html"
+                  title="Bundle/HHIMSIPSBundleExampleNoMedicalHistory">HHIMS IPS Bundle with no medical history</a>
+            </td>
+            <td>
+<p>A full IPS derived bundle containing no medical history for the HHIMS patient.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Bundle-HHIMSTransactionalBundleExampleWithMedicalHistory.html"
+                  title="Bundle/HHIMSTransactionalBundleExampleWithMedicalHistory">HHIMS Transactional Bundle with medical history</a>
+            </td>
+            <td>
+<p>A full transactional bundle containing a medical history for the HHIMS patient.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Bundle-HHIMSTransactionalBundleExampleNoMedicalHistory.html"
+                  title="Bundle/HHIMSTransactionalBundleExampleNoMedicalHistory">HHIMS Transactional Bundle with no medical history</a>
+            </td>
+            <td>
+<p>A full transactional bundle containing no medical history for the HHIMS patient.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Composition-HIMSCompositionExample.html"
+                  title="Composition/HIMSCompositionExample">HIMS Composition</a>
+            </td>
+            <td>
+<p>Clinical document used to represent the International Patient Summary (IPS) data set for HIMS.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Bundle-HIMSIPSBundleExample.html"
+                  title="Bundle/HIMSIPSBundleExample">HIMS IPS Bundle</a>
+            </td>
+            <td>
+<p>HIMS IPS Bundle</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Bundle-HIMSTransactionalBundleExample.html"
+                  title="Bundle/HIMSTransactionalBundleExample">HIMS Transactional Bundle</a>
+            </td>
+            <td>
+<p>This bundle contains all of the HIMS resources for transactional requests.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ServiceRequest-ImagingServiceRequestExample.html"
+                  title="ServiceRequest/ImagingServiceRequestExample">Imaging Request</a>
+            </td>
+            <td>
+<p>Used to initiate the request for imaging to be done.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ImagingStudy-ImagingExample.html"
+                  title="ImagingStudy/ImagingExample">Imaging Study</a>
+            </td>
+            <td>
+<p>Used to represent the content or results of a imaging study.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ServiceRequest-InvestigationsServiceRequestExample.html"
+                  title="ServiceRequest/InvestigationsServiceRequestExample">Investigations Request</a>
+            </td>
+            <td>
+<p>Used to initiate a request for an investigation.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Condition-MedicalHistoryExample.html"
+                  title="Condition/MedicalHistoryExample">Medical History</a>
+            </td>
+            <td>
+<p>Represents previous, pre-existing and new conditions for the patient.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Condition-NoMedicalHistoryExample.html"
+                  title="Condition/NoMedicalHistoryExample">Medical History</a>
+            </td>
+            <td>
+<p>Indicates that there is no information available about the subject’s health problems or disabilities.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="MedicationRequest-MedicationRequestsWithCodedFrequencyExample.html"
+                  title="MedicationRequest/MedicationRequestsWithCodedFrequencyExample">Medication Request (Frequency is coded)</a>
+            </td>
+            <td>
+<p>This is to record requests for medication that are prescribed to a patient or for Non-MDS medicines.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="MedicationRequest-MedicationRequestsExample.html"
+                  title="MedicationRequest/MedicationRequestsExample">Medication Request (Frequency is specified as a value)</a>
+            </td>
+            <td>
+<p>This is to record requests for medication that are prescribed to a patient or for Non-MDS medicines.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="MedicationRequest-NoPrescriptionsExample.html"
+                  title="MedicationRequest/NoPrescriptionsExample">Medication Request - No Prescriptions</a>
+            </td>
+            <td>
+<p>This is to indicate that the patient has not received any prescriptions for drugs.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Communication-NotifiableDiseasesNotifiedExample.html"
+                  title="Communication/NotifiableDiseasesNotifiedExample">Notifiable Diseases Notified</a>
+            </td>
+            <td>
+<p>Represents a message communicated to the practitioner about a patient’s encounter.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Organization-OrganizationExample.html"
+                  title="Organization/OrganizationExample">Organization</a>
+            </td>
+            <td>
+<p>Organization providing health related services.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Patient-PatientExample.html" title="Patient/PatientExample">Patient</a>
+            </td>
+            <td>
+<p>Is used to document demographics and other administrative information about an HIMS or HHIMS individual receiving care or other health-related services.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Observation-BMIExample.html" title="Observation/BMIExample">Patient BMI Observation</a>
+            </td>
+            <td>
+<p>Represents the patient’s BMI.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Observation-HeightExample.html" title="Observation/HeightExample">Patient Height Observation</a>
+            </td>
+            <td>
+<p>Represents the patient’s height.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Patient-RestrictedPatientExample.html"
+                  title="Patient/RestrictedPatientExample">Patient Identity Cross Reference</a>
+            </td>
+            <td>
+<p>Is used by the Client Register (CR) to re-identify the patient with his/her corresponding longitudinal clinical record</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Observation-WeightExample.html" title="Observation/WeightExample">Patient Weight Observation</a>
+            </td>
+            <td>
+<p>Represents the patient’s weight.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Observation-RiskBehaviourPhysicalActivityExample.html"
+                  title="Observation/RiskBehaviourPhysicalActivityExample">Physical Activity Status Observation</a>
+            </td>
+            <td>
+<p>Represents the physical status of the patient.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Practitioner-GeneralPractitionerExample.html"
+                  title="Practitioner/GeneralPractitionerExample">Practitioner</a>
+            </td>
+            <td>
+<p>Represents the practitioners who participated in the observation.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ServiceRequest-ProcedureServiceRequestExample.html"
+                  title="ServiceRequest/ProcedureServiceRequestExample">Procedure Request</a>
+            </td>
+            <td>
+<p>Used to initiate the request for a procedure.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Location-ProvidersLocationExample.html"
+                  title="Location/ProvidersLocationExample">Providers Location</a>
+            </td>
+            <td>
+<p>Represents the physical location of the provider.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Observation-RandomBloodSugarExample.html"
+                  title="Observation/RandomBloodSugarExample">Random Blood Sugar Observation</a>
+            </td>
+            <td>
+<p>Represents the patient’s RBS results.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ServiceRequest-FollowUpPlanServiceRequestExample.html"
+                  title="ServiceRequest/FollowUpPlanServiceRequestExample">Referral Request For Follow-up Plan</a>
+            </td>
+            <td>
+<p>Used to initiate a referral request for a Follow-up Plan.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Task-HHIMSReferralTaskExample.html"
+                  title="Task/HHIMSReferralTaskExample">Referral Task</a>
+            </td>
+            <td>
+<p>Is primarily used to track the progress of a patient’s referral.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Encounter-TargetFacilityEncounterExample.html"
+                  title="Encounter/TargetFacilityEncounterExample">Target Facility Encounter</a>
+            </td>
+            <td>
+<p>Represents the current facility at which the patient is receiving health services.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Observation-RiskBehaviourTobaccoSmokerExample.html"
+                  title="Observation/RiskBehaviourTobaccoSmokerExample">Tobacco Smoker Observation</a>
+            </td>
+            <td>
+<p>Represents the tobacco smoking status of the patient.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Observation-TotalCholesterolExample.html"
+                  title="Observation/TotalCholesterolExample">Total Cholesterol Observation</a>
+            </td>
+            <td>
+<p>Represents the patient’s total cholesterol results.</p>
+</td>
+         </tr>
+      </tbody>
+   </table>
+</div>
+
+</div>
+        </div>  <!-- /inner-wrapper -->
+      </div>  <!-- /row -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-content -->
+
+  <script type="text/javascript" src="assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+  <script type="text/javascript" src="assets/js/jquery-ui.min.js"> </script>
+
+  <script type="text/javascript">
+    $(document).ready(function(){
+      if(window.location.hash != "") {
+          $('a[href="' + window.location.hash + '"]').click()
+      }
+    });
+  </script>
+  <a name="bottom"> </a>
+  <div id="segment-footer" igtool="footer" class="segment">  <!-- segment-footer -->
+    <div class="container">  <!-- container -->
+
+           
+      <div class="inner-wrapper">
+        <p>
+          IG &#169; 2021+ <a style="color: #81BEF7" href="https://www.health.gov.lk/">Ministry of Health, Sri Lanka</a>.  Package lk-nehr-fhir-ips#0.1.0 based on <a style="color: #81BEF7" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Fri, Mar 15, 2024 06:39+0000">2024-03-15</span>
+          <br/>
+          <span style="color: #FFFF77">
+                      Links: <a style="color: #81BEF7" href="toc.html">Table of Contents</a> |
+                 <a style="color: #81BEF7" href="qa.html">QA Report</a> |
+                 
+                 <a style="color: #81BEF7" target="_blank" href="http://fhir.health.gov.lk/ips/history.html">Version History</a> |
+                 <a style="color: #81BEF7" rel="license" href="http://hl7.org/fhir/R4/license.html"><img style="border-style: none;" alt="CC-BY" src="assets/images/cc-by.png" height="17"/></a> |
+                 <!--<a style="color: #81BEF7" href="todo.html">Search</a> | --> 
+
+
+          </span>
+        </p>
+      </div>  <!-- /inner-wrapper -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-footer -->
+  
+  <div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+    <div class="container">  <!-- container -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-post-footer -->
+  
+  <!-- JS and analytics only. -->
+  <!-- Bootstrap core JavaScript
+  ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script type="text/javascript" src="assets/js/bootstrap.min.js"> </script>
+  <script type="text/javascript" src="assets/js/respond.min.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard-btn.js"> </script>
+  <script>anchors.options.visible = 'hover'
+anchors.add()</script>
+  
+  <!-- feedback form - Google forms -->
+<!-- v0.1, 2021-01-09 -->
+
+
+
+<!-- / feedback form  -->
+
+  <!-- Analytics Below
+  ================================================== -->
+  </body>
+</html>
+

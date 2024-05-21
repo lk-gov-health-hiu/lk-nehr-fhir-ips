@@ -1,0 +1,1110 @@
+{
+  "resourceType" : "Bundle",
+  "id" : "HHIMSIPSBundleExampleNoMedicalHistory",
+  "meta" : {
+    "profile" : ["http://fhir.health.gov.lk/ips/StructureDefinition/hhims-ips-bundle"]
+  },
+  "identifier" : {
+    "system" : "http://fhir.health.gov.lk/ips/identifier/hhims-ips",
+    "value" : "IPS-Summary-1"
+  },
+  "type" : "document",
+  "timestamp" : "2024-02-18T09:30:00+02:00",
+  "entry" : [{
+    "fullUrl" : "http://hapi-fhir:8080/fhir/Composition/HHIMSCompositionExampleNoMedicalHistory",
+    "resource" : {
+      "resourceType" : "Composition",
+      "id" : "HHIMSCompositionExampleNoMedicalHistory",
+      "meta" : {
+        "profile" : ["http://fhir.health.gov.lk/ips/StructureDefinition/hhims-composition"]
+      },
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Composition_HHIMSCompositionExampleNoMedicalHistory\"> </a><p><b>Generated Narrative: Composition </b><a name=\"HHIMSCompositionExampleNoMedicalHistory\"> </a><a name=\"hcHHIMSCompositionExampleNoMedicalHistory\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">ResourceComposition &quot;HHIMSCompositionExampleNoMedicalHistory&quot; </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-hhims-composition.html\">HHIMS Composition</a></p></div><p><b>identifier</b>: <code>http://fhir.health.gov.lk/ips/identifier/hhims-ips-document</code>/PAT0001-v1</p><p><b>status</b>: final</p><p><b>type</b>: Patient summary Document <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"https://loinc.org/\">LOINC</a>#60591-5)</span></p><p><b>encounter</b>: See on this page: Encounter/TargetFacilityEncounterExample</p><p><b>date</b>: 2024-02-20</p><p><b>author</b>: </p><ul><li>See on this page: Practitioner/GeneralPractitionerExample</li><li>See on this page: Organization/OrganizationExample</li></ul><p><b>title</b>: LK NEHR Sri Lanka Patient Summary for HHIMS</p></div>"
+      },
+      "identifier" : {
+        "system" : "http://fhir.health.gov.lk/ips/identifier/hhims-ips-document",
+        "value" : "PAT0001-v1"
+      },
+      "status" : "final",
+      "type" : {
+        "coding" : [{
+          "system" : "http://loinc.org",
+          "code" : "60591-5"
+        }]
+      },
+      "subject" : {
+        "reference" : "Patient/PatientExample"
+      },
+      "encounter" : {
+        "reference" : "Encounter/TargetFacilityEncounterExample"
+      },
+      "date" : "2024-02-20",
+      "author" : [{
+        "reference" : "Practitioner/GeneralPractitionerExample"
+      },
+      {
+        "reference" : "Organization/OrganizationExample"
+      }],
+      "title" : "LK NEHR Sri Lanka Patient Summary for HHIMS",
+      "section" : [{
+        "title" : "Medication Summary section",
+        "code" : {
+          "coding" : [{
+            "system" : "http://loinc.org",
+            "code" : "10160-0"
+          }]
+        },
+        "text" : {
+          "status" : "generated",
+          "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: MedicationRequest</b><a name=\"PrescriptionsExample\"></a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource MedicationRequest &quot;PrescriptionsExample&quot;</p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-medication-request.html\">Prescription Request</a></p></div><p><b>identifier</b>: Prescription identifier/prescription-12345</p><p><b>status</b>: completed</p><p><b>intent</b>: order</p><p><b>medication</b>: Medication <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\">(<a href=\"CodeSystem-cs-medication-name-msd.html\">Medication Names</a>#Vitamin-A-&amp;-D)</span></p><p><b>subject</b>: See (https://lk-gov-health-hiu.github.io/lk-nehr-fhir-ips/Patient-PatientExample)</p><p><b>encounter</b>: See (https://lk-gov-health-hiu.github.io/lk-nehr-fhir-ips/Encounter-TargetFacilityEncounter)</p><p><b>authoredOn</b>: 2023-10-11 17:21:33-0800</p><p><b>requester</b>: See (https://lk-gov-health-hiu.github.io/lk-nehr-fhir-ips/Practitioner-GeneralPractitionerExample)</p><p><b>performer</b>: See (https://lk-gov-health-hiu.github.io/lk-nehr-fhir-ips/Practitioner-GeneralPractitionerExample)</p><p><b>recorder</b>: See (https://lk-gov-health-hiu.github.io/lk-nehr-fhir-ips/Practitioner-GeneralPractitionerExample)</p><p><b>note</b>: Additional information regarding the patient's medication prescription (By Organization-OrganizationExample @Oct 12, 2023, 1:21:33)</p><blockquote><p><b>dosageInstruction</b></p><p><b>timing</b>: Code: LK-DF-04, Count 2 times, Duration 2days, 2 per 3 days</p><blockquote><p><b>doseAndRate</b></p></blockquote></blockquote><h3>DispenseRequests</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Quantity</b></td></tr><tr><td style=\"display: none\">*</td><td>5</td></tr></table><br/><p><b>Generated Narrative: MedicationDispense</b><a name=\"DrugDispensationExample\"></a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource MedicationDispense &quot;DrugDispensationExample&quot;</p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-drug-dispensation.html\">Drug Dispensation</a></p></div><p><b>status</b>: completed</p><p><b>medication</b>: Medication <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\">(<a href=\"CodeSystem-cs-medication-name-msd.html\">Medication Names</a>#Vitamin-A-&amp;-D)</span></p><p><b>subject</b>: See (https://lk-gov-health-hiu.github.io/lk-nehr-fhir-ips/Patient-PatientExample)</p><p><b>context</b>: See (https://lk-gov-health-hiu.github.io/lk-nehr-fhir-ips/Encounter-TargetFacilityEncounter)</p><h3>Performers</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Actor</b></td></tr><tr><td style=\"display: none\">*</td><td>See (https://lk-gov-health-hiu.github.io/lk-nehr-fhir-ips/Practitioner-GeneralPractitionerExample)</td></tr></table><p><b>location</b>: See (https://lk-gov-health-hiu.github.io/lk-nehr-fhir-ips/Location/ProvidersLocationExample)</p><p><b>authorizingPrescription</b>: See (https://lk-gov-health-hiu.github.io/lk-nehr-fhir-ips/MedicationRequest/PrescriptionsExample)</p><p><b>whenHandedOver</b>: 2023-10-11 17:21:33-0800</p><p><b>receiver</b>: See (https://lk-gov-health-hiu.github.io/lk-nehr-fhir-ips/Patient-PatientExample)</p></div>"
+        },
+        "entry" : [{
+          "reference" : "MedicationRequest/MedicationRequestsExample"
+        },
+        {
+          "reference" : "MedicationDispense/DrugDispensationExample"
+        }]
+      },
+      {
+        "title" : "IPS Allergies and Intolerances Section",
+        "code" : {
+          "coding" : [{
+            "system" : "http://loinc.org",
+            "code" : "48765-2"
+          }]
+        },
+        "text" : {
+          "status" : "generated",
+          "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: AllergyIntolerance</b><a name=\"AllergiesExample\"></a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource AllergyIntolerance &quot;AllergiesExample&quot;</p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-allergy-intolerance.html\">Allergy Intolerance</a></p></div><p><b>clinicalStatus</b>: Active <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\">(<a href=\"http://terminology.hl7.org/5.0.0/CodeSystem-allergyintolerance-clinical.html\">AllergyIntolerance Clinical Status Codes</a>#active)</span></p><p><b>verificationStatus</b>: Confirmed <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\">(<a href=\"http://terminology.hl7.org/5.0.0/CodeSystem-allergyintolerance-verification.html\">AllergyIntolerance Verification Status</a>#confirmed)</span></p><p><b>type</b>: allergy</p><p><b>code</b>: Allergy to food <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\">(<a href=\"https://browser.ihtsdotools.org/\">SNOMED CT</a>#414285001)</span></p><p><b>patient</b>: See (https://lk-gov-health-hiu.github.io/lk-nehr-fhir-ips/Patient-PatientExample)</p><p><b>encounter</b>: See (https://lk-gov-health-hiu.github.io/lk-nehr-fhir-ips/Encounter-TargetFacilityEncounter)</p><p><b>onset</b>: 2023-10-11 17:21:33-0800</p><p><b>recorder</b>: See (https://lk-gov-health-hiu.github.io/lk-nehr-fhir-ips/Practitioner-GeneralPractitionerExample)</p></div>"
+        },
+        "entry" : [{
+          "reference" : "AllergyIntolerance/AllergiesExample"
+        }]
+      },
+      {
+        "title" : "IPS Problems Section",
+        "code" : {
+          "coding" : [{
+            "system" : "http://loinc.org",
+            "code" : "11450-4"
+          }]
+        },
+        "text" : {
+          "status" : "generated",
+          "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: Condition</b><a name=\"NoMedicalHistoryExample\"></a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource Condition &quot;NoMedicalHistoryExample&quot;</p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-no-medical-history.html\">Medical History</a></p></div><p><b>clinicalStatus</b>: Inactive <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\">(<a href=\"http://terminology.hl7.org/5.0.0/CodeSystem-condition-clinical.html\">Condition Clinical Status Codes</a>#inactive)</span></p><p><b>code</b>: No information about problems <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\">(<a href=\"http://hl7.org/fhir/uv/ips/STU1.1/CodeSystem-absent-unknown-uv-ips.html\">Absent and Unknown Data - IPS</a>#no-problem-info)</span></p><p><b>subject</b>: See (https://lk-gov-health-hiu.github.io/lk-nehr-fhir-ips/Patient-PatientExample)</p><p><b>encounter</b>: See (https://lk-gov-health-hiu.github.io/lk-nehr-fhir-ips/Encounter-TargetFacilityEncounter)</p><p><b>recordedDate</b>: 2023-10-06 13:28:17-0500</p></div>"
+        },
+        "entry" : [{
+          "reference" : "Condition/NoMedicalHistoryExample"
+        }]
+      },
+      {
+        "title" : "IPS Vital Signs Section",
+        "code" : {
+          "coding" : [{
+            "system" : "http://loinc.org",
+            "code" : "8716-3"
+          }]
+        },
+        "text" : {
+          "status" : "generated",
+          "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: Observation</b><a name=\"WeightExample\"></a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource Observation &quot;WeightExample&quot;</p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-weight.html\">Patient Weight Observation</a></p></div><p><b>status</b>: final</p><p><b>category</b>: Vital Signs <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\">(<a href=\"http://terminology.hl7.org/5.0.0/CodeSystem-observation-category.html\">Observation Category Codes</a>#vital-signs)</span></p><p><b>code</b>: Body Weight <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\">(<a href=\"https://loinc.org/\">LOINC</a>#29463-7)</span></p><p><b>subject</b>: See (https://lk-gov-health-hiu.github.io/lk-nehr-fhir-ips/Patient-PatientExample)</p><p><b>encounter</b>: See (https://lk-gov-health-hiu.github.io/lk-nehr-fhir-ips/Encounter-TargetFacilityEncounter)</p><p><b>effective</b>: 2022-11-30</p><p><b>performer</b>:</p><ul><li>See (https://lk-gov-health-hiu.github.io/lk-nehr-fhir-ips/Organization-OrganizationExample)</li><li>See (https://lk-gov-health-hiu.github.io/lk-nehr-fhir-ips/Practitioner-GeneralPractitionerExample)</li></ul><p><b>value</b>: 110 kg<span style=\"background: LightGoldenRodYellow\"> (Details: UCUM code kg = 'kg')</span></p></div>"
+        },
+        "entry" : [{
+          "reference" : "Observation/WeightExample"
+        }]
+      },
+      {
+        "title" : "Procedures Summary Section",
+        "code" : {
+          "coding" : [{
+            "system" : "http://fhir.health.gov.lk/ips/CodeSystem/cs-composition-codes",
+            "code" : "Procedures-History"
+          }]
+        },
+        "text" : {
+          "status" : "generated",
+          "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: ServiceRequest</b><a name=\"ProcedureServiceRequestExample\"></a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource ServiceRequest &quot;ProcedureServiceRequestExample&quot;</p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-procedures-request.html\">Procedure Request</a></p></div><p><b>status</b>: completed</p><p><b>intent</b>: order</p><p><b>code</b>: Cleaning and Dressing <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\">(<a href=\"CodeSystem-cs-procedure.html\">Procedures</a>#Cleaning-and-Dressing)</span></p><p><b>subject</b>: See (https://lk-gov-health-hiu.github.io/lk-nehr-fhir-ips/Patient/PatientExample)</p><p><b>encounter</b>: See (https://lk-gov-health-hiu.github.io/lk-nehr-fhir-ips/Encounter/TargetFacilityEncounter)</p><p><b>occurrence</b>: 2023-10-06 13:28:17-0500</p><p><b>requester</b>: See (https://lk-gov-health-hiu.github.io/lk-nehr-fhir-ips/Practitioner/GeneralPractitionerExample)</p><p><b>locationReference</b>: See (https://lk-gov-health-hiu.github.io/lk-nehr-fhir-ips/Location/ProvidersLocationExample)</p></div>"
+        },
+        "entry" : [{
+          "reference" : "ServiceRequest/ProcedureServiceRequestExample"
+        }]
+      },
+      {
+        "title" : "Imaging Summary section",
+        "code" : {
+          "coding" : [{
+            "system" : "http://loinc.org",
+            "code" : "97684-5"
+          }]
+        },
+        "text" : {
+          "status" : "generated",
+          "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: ImagingStudy</b> <a name=\"ImagingExample\"></a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource ImagingStudy &quot;ImagingExample&quot;</p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-imaging-study.html\">Imaging Study</a></p></div><p><b>status</b>: registered</p><p><b>subject</b>: See (https://lk-gov-health-hiu.github.io/lk-nehr-fhir-ips/Patient-PatientExample)</p><p><b>encounter</b>: See (https://lk-gov-health-hiu.github.io/lk-nehr-fhir-ips/Encounter-TargetFacilityEncounter)</p><p><b>started</b>: 2023-10-06 13:28:17-0500</p><p><b>basedOn</b>: See (https://lk-gov-health-hiu.github.io/lk-nehr-fhir-ips/ServiceRequest/ImagingServiceRequestExample)</p><p><b>referrer</b>: See (https://lk-gov-health-hiu.github.io/lk-nehr-fhir-ips/Practitioner-GeneralPractitionerExample)</p><p><b>location</b>: See (https://lk-gov-health-hiu.github.io/lk-nehr-fhir-ips/Location/ProvidersLocationExample)</p><p><b>description</b>: Imaging Description</p><blockquote><p><b>series</b></p><p><b>uid</b>: 89c0c298-6c30-11ee-b962-0242ac120002</p><p><b>modality</b>: X-Ray Angiography (Details: DICOM code XA = 'X-Ray Angiography', stated as 'null')</p><h3>Performers</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Actor</b></td></tr><tr><td style=\"display: none\">*</td><td>See (https://lk-gov-health-hiu.github.io/lk-nehr-fhir-ips/Practitioner-GeneralPractitionerExample)</td></tr></table></blockquote><br/><p><b>Generated Narrative: ServiceRequest</b> <a name=\"ImagingServiceRequestExample\"></a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource ServiceRequest &quot;ImagingServiceRequestExample&quot;</p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-imaging-request.html\">Imaging Request</a></p></div><p><b>status</b>: completed</p><p><b>intent</b>: order</p><p><b>code</b>: Imaging requested <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\">( <a href=\"CodeSystem-cs-procedure-imaging.html\">Procedures</a>#X-Ray)</span></p><p><b>subject</b>: See (https://lk-gov-health-hiu.github.io/lk-nehr-fhir-ips/Patient-PatientExample)</p><p><b>encounter</b>: See (https://lk-gov-health-hiu.github.io/lk-nehr-fhir-ips/Encounter-TargetFacilityEncounter)</p><p><b>occurrence</b>: 2023-10-06 13:28:17-0500</p><p><b>requester</b>: See (https://lk-gov-health-hiu.github.io/lk-nehr-fhir-ips/Practitioner-GeneralPractitionerExample)</p><p><b>locationReference</b>: See (https://lk-gov-health-hiu.github.io/lk-nehr-fhir-ips/Location/ProvidersLocationExample)</p></div>"
+        },
+        "entry" : [{
+          "reference" : "ImagingStudy/ImagingExample"
+        },
+        {
+          "reference" : "ServiceRequest/ImagingServiceRequestExample"
+        }]
+      },
+      {
+        "title" : "Laboratory Investigations Summary section",
+        "code" : {
+          "coding" : [{
+            "system" : "http://loinc.org",
+            "code" : "77597-3"
+          }]
+        },
+        "text" : {
+          "status" : "generated",
+          "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: ServiceRequest</b> <a name=\"InvestigationsServiceRequestExample\"></a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource ServiceRequest &quot;InvestigationsServiceRequestExample&quot;</p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-investigations-request.html\">Investigations Request</a></p></div><p><b>status</b>: completed</p><p><b>intent</b>: order</p><p><b>code</b>: Investigation requested <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\">( <a href=\"CodeSystem-cs-investigation.html\">Investigations</a>#FBC-WBC-th/uL)</span></p><p><b>subject</b>: See (https://lk-gov-health-hiu.github.io/lk-nehr-fhir-ips/Patient-PatientExample)</p><p><b>encounter</b>: See (https://lk-gov-health-hiu.github.io/lk-nehr-fhir-ips/Encounter-TargetFacilityEncounter)</p><p><b>occurrence</b>: 2023-10-06 13:28:17-0500</p><p><b>requester</b>: See (https://lk-gov-health-hiu.github.io/lk-nehr-fhir-ips/Practitioner-GeneralPractitionerExample)</p><p><b>locationReference</b>: See (https://lk-gov-health-hiu.github.io/lk-nehr-fhir-ips/Location/ProvidersLocationExample)</p></div>"
+        },
+        "entry" : [{
+          "reference" : "ServiceRequest/InvestigationsServiceRequestExample"
+        }]
+      },
+      {
+        "title" : "Referrals Summary section",
+        "code" : {
+          "coding" : [{
+            "system" : "http://loinc.org",
+            "code" : "57133-1"
+          }]
+        },
+        "text" : {
+          "status" : "generated",
+          "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: Task</b><a name=\"HHIMSReferralTaskExample\"></a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource Task &quot;HHIMSReferralTaskExample&quot;</p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-referral-task.html\">Referral Task</a></p></div><p><b>status</b>: completed</p><p><b>intent</b>: order</p><p><b>priority</b>: routine</p><p><b>description</b>: some information regarding the need for the referral request, if any.</p><p><b>focus</b>: See (https://lk-gov-health-hiu.github.io/lk-nehr-fhir-ips/ServiceRequest/GeneralReferralServiceRequestExample)</p><p><b>for</b>: See (https://lk-gov-health-hiu.github.io/lk-nehr-fhir-ips/Patient-PatientExample)</p><p><b>encounter</b>: See (https://lk-gov-health-hiu.github.io/lk-nehr-fhir-ips/Encounter-TargetFacilityEncounter)</p><p><b>authoredOn</b>: 2023-10-06 13:28:17-0500</p><p><b>requester</b>: See (https://lk-gov-health-hiu.github.io/lk-nehr-fhir-ips/Practitioner-GeneralPractitionerExample)</p><p><b>location</b>: See (https://lk-gov-health-hiu.github.io/lk-nehr-fhir-ips/Location/ProvidersLocationExample)</p></div>"
+        },
+        "entry" : [{
+          "reference" : "Task/HHIMSReferralTaskExample"
+        },
+        {
+          "reference" : "ServiceRequest/GeneralReferralServiceRequestExample"
+        }]
+      },
+      {
+        "title" : "Notifiable Conditions Summary section",
+        "code" : {
+          "coding" : [{
+            "system" : "http://loinc.org",
+            "code" : "LL625-5"
+          }]
+        },
+        "text" : {
+          "status" : "generated",
+          "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: Communication</b><a name=\"NotifiableDiseasesNotifiedExample\"></a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource Communication &quot;NotifiableDiseasesNotifiedExample&quot;</p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-notifiable-diseases-notified.html\">Notifiable Diseases Notified</a></p></div><p><b>status</b>: completed</p><p><b>subject</b>: See (https://lk-gov-health-hiu.github.io/lk-nehr-fhir-ips/Patient-PatientExample)</p><p><b>encounter</b>: See (https://lk-gov-health-hiu.github.io/lk-nehr-fhir-ips/Encounter-TargetFacilityEncounter)</p><p><b>sent</b>: 2023-10-06 13:28:17-0500</p></div>"
+        },
+        "entry" : [{
+          "reference" : "Communication/NotifiableDiseasesNotifiedExample"
+        }]
+      },
+      {
+        "title" : "List of Encounter Locations section",
+        "code" : {
+          "coding" : [{
+            "system" : "http://loinc.org",
+            "code" : "80412-0"
+          }]
+        },
+        "text" : {
+          "status" : "generated",
+          "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: Location</b><a name=\"ProvidersLocationExample\"></a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource Location &quot;ProvidersLocationExample&quot;</p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-providers-location.html\">Providers Location</a></p></div><p><b>identifier</b>: Provider location identifier/Location-ID-1, Provider location identifier/Location-ID-2</p><p><b>status</b>: active</p><p><b>name</b>: Name for the location</p><p><b>telecom</b>: <a href=\"tel:+27829999999\">+27829999999</a>, <a href=\"mailto:someone@something.com\">someone@something.com</a>, <a href=\"mailto:someone2@something.com\">someone2@something.com</a></p><p><b>address</b>: 177 Nawala Road Nugegoda Colombo 32350 LK</p><p><b>managingOrganization</b>: See (https://lk-gov-health-hiu.github.io/lk-nehr-fhir-ips/Organization-OrganizationExample)</p></div>"
+        },
+        "entry" : [{
+          "reference" : "Location/ProvidersLocationExample"
+        }]
+      },
+      {
+        "title" : "List of Practitioners section",
+        "code" : {
+          "coding" : [{
+            "system" : "http://loinc.org",
+            "code" : "LA9327-3"
+          }]
+        },
+        "text" : {
+          "status" : "generated",
+          "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: Practitioner</b><a name=\"GeneralPractitionerExample\"></a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource Practitioner &quot;GeneralPractitionerExample&quot;</p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-practitioner.html\">Practitioner</a></p></div><p><b>name</b>: Tom Junes Smith</p><p><b>telecom</b>: ph: 27537652509(WORK), <a href=\"mailto:someone@something.org\">someone@something.org</a></p></div>"
+        },
+        "entry" : [{
+          "reference" : "Practitioner/GeneralPractitionerExample"
+        }]
+      },
+      {
+        "title" : "List of Used Devices section",
+        "code" : {
+          "coding" : [{
+            "system" : "http://fhir.health.gov.lk/ips/CodeSystem/cs-composition-codes",
+            "code" : "Device-Information"
+          }]
+        },
+        "text" : {
+          "status" : "generated",
+          "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: Device</b><a name=\"DeviceInformationExample\"> </a><a name=\"hcDeviceInformationExample\"></a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource Device &quot;DeviceInformationExample&quot;</p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-device-information.html\">Device Information</a></p></div><p><b>identifier</b>: <code>http://fhir.health.gov.lk/ips/identifier/system-id</code>/OpenMRS-1234-1</p><p><b>status</b>: active</p><p><b>type</b>: Medical record <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\">(<a href=\"https://browser.ihtsdotools.org/\">SNOMED CT</a>#129465004)</span></p><h3>Versions</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Type</b></td><td><b>Value</b></td></tr><tr><td style=\"display: none\">*</td><td>OpenMRS <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\">(<a href=\"CodeSystem-cs-device-classification.html\">Device Classification Codes</a>#OpenMRS)</span></td><td>2.5.0</td></tr></table><p><b>owner</b>: <a href=\"Organization-OrganizationExample.html\">Organization/OrganizationExample</a> &quot;Some Health Facility&quot;</p><p><b>location</b>: <a href=\"Location-ProvidersLocationExample.html\">Location/ProvidersLocationExample</a> &quot;Name for the location&quot;</p></div>"
+        },
+        "entry" : [{
+          "reference" : "Device/DeviceInformationExample"
+        }]
+      }]
+    }
+  },
+  {
+    "fullUrl" : "http://hapi-fhir:8080/fhir/Patient/PatientExample",
+    "resource" : {
+      "resourceType" : "Patient",
+      "id" : "PatientExample",
+      "meta" : {
+        "profile" : ["http://fhir.health.gov.lk/ips/StructureDefinition/ips-patient"]
+      },
+      "text" : {
+        "status" : "extensions",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Patient_PatientExample\"> </a><p><b>Generated Narrative: Patient </b><a name=\"PatientExample\"> </a><a name=\"hcPatientExample\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">ResourcePatient &quot;PatientExample&quot; </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-ips-patient.html\">Patient</a></p></div><p><b>Patient Registration System Information</b>: See on this page: Device/DeviceInformationExample</p><p><b>identifier</b>: Personal Health Number/personal health number, Passport number/Passport-1, Passport number/Passport-2, Driver's license number/Drivers license-1, Driver's license number/Drivers license-2, National identity number/National identity number-1, National identity number/National identity number-2, Senior Citizen Number/Senior citizen number-1, Senior Citizen Number/Senior citizen number-2</p><p><b>name</b>: Mike John Smith (Official)</p><p><b>telecom</b>: <a href=\"tel:+27829999999\">+27829999999</a>, <a href=\"mailto:someone@something.com\">someone@something.com</a>, <a href=\"mailto:someone2@something.com\">someone2@something.com</a></p><p><b>gender</b>: male</p><p><b>birthDate</b>: 1983-05-22</p><p><b>address</b>: 177 Nawala Road Nugegoda Colombo 32350 LK </p></div>"
+      },
+      "extension" : [{
+        "url" : "http://fhir.health.gov.lk/ips/StructureDefinition/patient-registration-system",
+        "valueReference" : {
+          "reference" : "Device/DeviceInformationExample"
+        }
+      }],
+      "identifier" : [{
+        "type" : {
+          "coding" : [{
+            "system" : "http://fhir.health.gov.lk/ips/CodeSystem/cs-identifier-types",
+            "code" : "PHN"
+          }],
+          "text" : "Personal Health Number"
+        },
+        "system" : "http://fhir.health.gov.lk/ips/identifier/phn",
+        "value" : "personal health number"
+      },
+      {
+        "type" : {
+          "coding" : [{
+            "system" : "http://terminology.hl7.org/CodeSystem/v2-0203",
+            "code" : "PPN"
+          }],
+          "text" : "Passport number"
+        },
+        "system" : "http://fhir.health.gov.lk/ips/identifier/passport",
+        "value" : "Passport-1"
+      },
+      {
+        "type" : {
+          "coding" : [{
+            "system" : "http://terminology.hl7.org/CodeSystem/v2-0203",
+            "code" : "PPN"
+          }],
+          "text" : "Passport number"
+        },
+        "system" : "http://fhir.health.gov.lk/ips/identifier/passport",
+        "value" : "Passport-2"
+      },
+      {
+        "type" : {
+          "coding" : [{
+            "system" : "http://terminology.hl7.org/CodeSystem/v2-0203",
+            "code" : "DL"
+          }],
+          "text" : "Driver's license number"
+        },
+        "system" : "http://fhir.health.gov.lk/ips/identifier/drivers",
+        "value" : "Drivers license-1"
+      },
+      {
+        "type" : {
+          "coding" : [{
+            "system" : "http://terminology.hl7.org/CodeSystem/v2-0203",
+            "code" : "DL"
+          }],
+          "text" : "Driver's license number"
+        },
+        "system" : "http://fhir.health.gov.lk/ips/identifier/drivers",
+        "value" : "Drivers license-2"
+      },
+      {
+        "type" : {
+          "coding" : [{
+            "system" : "http://fhir.health.gov.lk/ips/CodeSystem/cs-identifier-types",
+            "code" : "NIC"
+          }],
+          "text" : "National identity number"
+        },
+        "system" : "http://fhir.health.gov.lk/ips/identifier/nic",
+        "value" : "National identity number-1"
+      },
+      {
+        "type" : {
+          "coding" : [{
+            "system" : "http://fhir.health.gov.lk/ips/CodeSystem/cs-identifier-types",
+            "code" : "NIC"
+          }],
+          "text" : "National identity number"
+        },
+        "system" : "http://fhir.health.gov.lk/ips/identifier/nic",
+        "value" : "National identity number-2"
+      },
+      {
+        "type" : {
+          "coding" : [{
+            "system" : "http://fhir.health.gov.lk/ips/CodeSystem/cs-identifier-types",
+            "code" : "SCN"
+          }],
+          "text" : "Senior Citizen Number"
+        },
+        "system" : "http://fhir.health.gov.lk/ips/identifier/scn",
+        "value" : "Senior citizen number-1"
+      },
+      {
+        "type" : {
+          "coding" : [{
+            "system" : "http://fhir.health.gov.lk/ips/CodeSystem/cs-identifier-types",
+            "code" : "SCN"
+          }],
+          "text" : "Senior Citizen Number"
+        },
+        "system" : "http://fhir.health.gov.lk/ips/identifier/scn",
+        "value" : "Senior citizen number-2"
+      }],
+      "name" : [{
+        "use" : "official",
+        "family" : "Smith",
+        "given" : ["Mike",
+        "John"],
+        "prefix" : ["Mr."]
+      }],
+      "telecom" : [{
+        "system" : "phone",
+        "value" : "+27829999999"
+      },
+      {
+        "system" : "email",
+        "value" : "someone@something.com"
+      },
+      {
+        "system" : "email",
+        "value" : "someone2@something.com"
+      }],
+      "gender" : "male",
+      "birthDate" : "1983-05-22",
+      "address" : [{
+        "type" : "postal",
+        "line" : ["177",
+        "Nawala Road"],
+        "city" : "Nugegoda",
+        "district" : "Ampara",
+        "state" : "Colombo",
+        "postalCode" : "32350",
+        "country" : "LK"
+      }]
+    }
+  },
+  {
+    "fullUrl" : "http://hapi-fhir:8080/fhir/Encounter/TargetFacilityEncounterExample",
+    "resource" : {
+      "resourceType" : "Encounter",
+      "id" : "TargetFacilityEncounterExample",
+      "meta" : {
+        "profile" : ["http://fhir.health.gov.lk/ips/StructureDefinition/target-facility-encounter"]
+      },
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Encounter_TargetFacilityEncounterExample\"> </a><p><b>Generated Narrative: Encounter </b><a name=\"TargetFacilityEncounterExample\"> </a><a name=\"hcTargetFacilityEncounterExample\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">ResourceEncounter &quot;TargetFacilityEncounterExample&quot; </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-target-facility-encounter.html\">Target Facility Encounter</a></p></div><p><b>status</b>: finished</p><p><b>class</b>: ambulatory (Details: ActCode code AMB  = ' ambulatory , stated as  null ')</p><p><b>subject</b>: See on this page: Patient/PatientExample</p><h3>Participants</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Individual</b></td></tr><tr><td style=\"display: none\">*</td><td>See on this page: Practitioner/GeneralPractitionerExample</td></tr></table><p><b>period</b>: 2022-12-01 --&gt; 2023-01-20</p><p><b>reasonCode</b>: Myalgia <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"https://browser.ihtsdotools.org/\">SNOMED CT</a>#68962001)</span></p><h3>Locations</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Location</b></td></tr><tr><td style=\"display: none\">*</td><td>See on this page: Location/ProvidersLocationExample</td></tr></table></div>"
+      },
+      "status" : "finished",
+      "class" : {
+        "system" : "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+        "code" : "AMB"
+      },
+      "subject" : {
+        "reference" : "Patient/PatientExample"
+      },
+      "participant" : [{
+        "individual" : {
+          "reference" : "Practitioner/GeneralPractitionerExample"
+        }
+      }],
+      "period" : {
+        "start" : "2022-12-01",
+        "end" : "2023-01-20"
+      },
+      "reasonCode" : [{
+        "coding" : [{
+          "system" : "http://snomed.info/sct",
+          "code" : "68962001"
+        }]
+      }],
+      "location" : [{
+        "location" : {
+          "reference" : "Location/ProvidersLocationExample"
+        }
+      }]
+    }
+  },
+  {
+    "fullUrl" : "http://hapi-fhir:8080/fhir/Condition/NoMedicalHistoryExample",
+    "resource" : {
+      "resourceType" : "Condition",
+      "id" : "NoMedicalHistoryExample",
+      "meta" : {
+        "profile" : ["http://fhir.health.gov.lk/ips/StructureDefinition/no-medical-history"]
+      },
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Condition_NoMedicalHistoryExample\"> </a><p><b>Generated Narrative: Condition </b><a name=\"NoMedicalHistoryExample\"> </a><a name=\"hcNoMedicalHistoryExample\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">ResourceCondition &quot;NoMedicalHistoryExample&quot; </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-no-medical-history.html\">Medical History</a></p></div><p><b>clinicalStatus</b>: Inactive <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"http://terminology.hl7.org/5.5.0/CodeSystem-condition-clinical.html\">Condition Clinical Status Codes</a>#inactive)</span></p><p><b>code</b>: No information about problems <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"http://hl7.org/fhir/uv/ips/STU1.1/CodeSystem-absent-unknown-uv-ips.html\">Absent and Unknown Data - IPS</a>#no-problem-info)</span></p><p><b>subject</b>: See on this page: Patient/PatientExample</p><p><b>encounter</b>: See on this page: Encounter/TargetFacilityEncounterExample</p><p><b>recordedDate</b>: 2023-10-06 13:28:17-0500</p></div>"
+      },
+      "clinicalStatus" : {
+        "coding" : [{
+          "system" : "http://terminology.hl7.org/CodeSystem/condition-clinical",
+          "code" : "inactive"
+        }]
+      },
+      "code" : {
+        "coding" : [{
+          "system" : "http://hl7.org/fhir/uv/ips/CodeSystem/absent-unknown-uv-ips",
+          "code" : "no-problem-info"
+        }]
+      },
+      "subject" : {
+        "reference" : "Patient/PatientExample"
+      },
+      "encounter" : {
+        "reference" : "Encounter/TargetFacilityEncounterExample"
+      },
+      "recordedDate" : "2023-10-06T13:28:17-05:00"
+    }
+  },
+  {
+    "fullUrl" : "http://hapi-fhir:8080/fhir/Communication/NotifiableDiseasesNotifiedExample",
+    "resource" : {
+      "resourceType" : "Communication",
+      "id" : "NotifiableDiseasesNotifiedExample",
+      "meta" : {
+        "profile" : ["http://fhir.health.gov.lk/ips/StructureDefinition/notifiable-diseases-notified"]
+      },
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Communication_NotifiableDiseasesNotifiedExample\"> </a><p><b>Generated Narrative: Communication </b><a name=\"NotifiableDiseasesNotifiedExample\"> </a><a name=\"hcNotifiableDiseasesNotifiedExample\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">ResourceCommunication &quot;NotifiableDiseasesNotifiedExample&quot; </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-notifiable-diseases-notified.html\">Notifiable Diseases Notified</a></p></div><p><b>status</b>: completed</p><p><b>subject</b>: See on this page: Patient/PatientExample</p><p><b>encounter</b>: See on this page: Encounter/TargetFacilityEncounterExample</p><p><b>sent</b>: 2023-10-06 13:28:17-0500</p><p><b>sender</b>: See on this page: Device/DeviceInformationExample</p></div>"
+      },
+      "status" : "completed",
+      "subject" : {
+        "reference" : "Patient/PatientExample"
+      },
+      "encounter" : {
+        "reference" : "Encounter/TargetFacilityEncounterExample"
+      },
+      "sent" : "2023-10-06T13:28:17-05:00",
+      "sender" : {
+        "reference" : "Device/DeviceInformationExample"
+      }
+    }
+  },
+  {
+    "fullUrl" : "http://hapi-fhir:8080/fhir/Observation/WeightExample",
+    "resource" : {
+      "resourceType" : "Observation",
+      "id" : "WeightExample",
+      "meta" : {
+        "profile" : ["http://fhir.health.gov.lk/ips/StructureDefinition/weight"]
+      },
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Observation_WeightExample\"> </a><p><b>Generated Narrative: Observation </b><a name=\"WeightExample\"> </a><a name=\"hcWeightExample\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">ResourceObservation &quot;WeightExample&quot; </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-weight.html\">Patient Weight Observation</a></p></div><p><b>status</b>: final</p><p><b>category</b>: Vital Signs <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"http://terminology.hl7.org/5.5.0/CodeSystem-observation-category.html\">Observation Category Codes</a>#vital-signs)</span></p><p><b>code</b>: Body Weight <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"https://loinc.org/\">LOINC</a>#29463-7)</span></p><p><b>subject</b>: See on this page: Patient/PatientExample</p><p><b>encounter</b>: See on this page: Encounter/TargetFacilityEncounterExample</p><p><b>effective</b>: 2022-11-30</p><p><b>performer</b>: </p><ul><li>See on this page: Organization/OrganizationExample</li><li>See on this page: Practitioner/GeneralPractitionerExample</li></ul><p><b>value</b>: 110 kg<span style=\"background: LightGoldenRodYellow\"> (Details: UCUM  codekg = 'kg')</span></p><p><b>device</b>: See on this page: Device/DeviceInformationExample</p></div>"
+      },
+      "status" : "final",
+      "category" : [{
+        "coding" : [{
+          "system" : "http://terminology.hl7.org/CodeSystem/observation-category",
+          "code" : "vital-signs"
+        }]
+      }],
+      "code" : {
+        "coding" : [{
+          "system" : "http://loinc.org",
+          "code" : "29463-7"
+        }],
+        "text" : "Body Weight"
+      },
+      "subject" : {
+        "reference" : "Patient/PatientExample"
+      },
+      "encounter" : {
+        "reference" : "Encounter/TargetFacilityEncounterExample"
+      },
+      "effectiveDateTime" : "2022-11-30",
+      "performer" : [{
+        "reference" : "Organization/OrganizationExample"
+      },
+      {
+        "reference" : "Practitioner/GeneralPractitionerExample"
+      }],
+      "valueQuantity" : {
+        "value" : 110,
+        "unit" : "kg",
+        "system" : "http://unitsofmeasure.org",
+        "code" : "kg"
+      },
+      "device" : {
+        "reference" : "Device/DeviceInformationExample"
+      }
+    }
+  },
+  {
+    "fullUrl" : "http://hapi-fhir:8080/fhir/AllergyIntolerance/AllergiesExample",
+    "resource" : {
+      "resourceType" : "AllergyIntolerance",
+      "id" : "AllergiesExample",
+      "meta" : {
+        "profile" : ["http://fhir.health.gov.lk/ips/StructureDefinition/allergy-intolerance"]
+      },
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"AllergyIntolerance_AllergiesExample\"> </a><p><b>Generated Narrative: AllergyIntolerance </b><a name=\"AllergiesExample\"> </a><a name=\"hcAllergiesExample\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">ResourceAllergyIntolerance &quot;AllergiesExample&quot; </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-allergy-intolerance.html\">Allergy Intolerance</a></p></div><p><b>clinicalStatus</b>: Active <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"http://terminology.hl7.org/5.5.0/CodeSystem-allergyintolerance-clinical.html\">AllergyIntolerance Clinical Status Codes</a>#active)</span></p><p><b>verificationStatus</b>: Confirmed <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"http://terminology.hl7.org/5.5.0/CodeSystem-allergyintolerance-verification.html\">AllergyIntolerance Verification Status</a>#confirmed)</span></p><p><b>type</b>: allergy</p><p><b>code</b>: Allergy to food <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"https://browser.ihtsdotools.org/\">SNOMED CT</a>#414285001)</span></p><p><b>patient</b>: See on this page: Patient/PatientExample</p><p><b>encounter</b>: See on this page: Encounter/TargetFacilityEncounterExample</p><p><b>onset</b>: 2023-10-11 17:21:33-0800</p><p><b>recorder</b>: See on this page: Practitioner/GeneralPractitionerExample</p></div>"
+      },
+      "clinicalStatus" : {
+        "coding" : [{
+          "system" : "http://terminology.hl7.org/CodeSystem/allergyintolerance-clinical",
+          "code" : "active"
+        }]
+      },
+      "verificationStatus" : {
+        "coding" : [{
+          "system" : "http://terminology.hl7.org/CodeSystem/allergyintolerance-verification",
+          "code" : "confirmed"
+        }]
+      },
+      "type" : "allergy",
+      "code" : {
+        "coding" : [{
+          "system" : "http://snomed.info/sct",
+          "code" : "414285001"
+        }],
+        "text" : "Allergy to food"
+      },
+      "patient" : {
+        "reference" : "Patient/PatientExample"
+      },
+      "encounter" : {
+        "reference" : "Encounter/TargetFacilityEncounterExample"
+      },
+      "onsetDateTime" : "2023-10-11T17:21:33-08:00",
+      "recorder" : {
+        "reference" : "Practitioner/GeneralPractitionerExample"
+      }
+    }
+  },
+  {
+    "fullUrl" : "http://hapi-fhir:8080/fhir/MedicationRequest/MedicationRequestsExample",
+    "resource" : {
+      "resourceType" : "MedicationRequest",
+      "id" : "MedicationRequestsExample",
+      "meta" : {
+        "profile" : ["http://fhir.health.gov.lk/ips/StructureDefinition/medication-request"]
+      },
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"MedicationRequest_MedicationRequestsExample\"> </a><p><b>Generated Narrative: MedicationRequest </b><a name=\"MedicationRequestsExample\"> </a><a name=\"hcMedicationRequestsExample\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">ResourceMedicationRequest &quot;MedicationRequestsExample&quot; </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-medication-request.html\">Medication Request</a></p></div><p><b>identifier</b>: Prescription identifier/prescription-12345</p><p><b>status</b>: completed</p><p><b>intent</b>: order</p><p><b>medication</b>: Medication <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"CodeSystem-cs-medication-name-msd.html\">Medication Names For Pharmacy</a>#01403501)</span></p><p><b>subject</b>: See on this page: Patient/PatientExample</p><p><b>encounter</b>: See on this page: Encounter/TargetFacilityEncounterExample</p><p><b>authoredOn</b>: 2023-10-11 17:21:33-0800</p><p><b>requester</b>: See on this page: Practitioner/GeneralPractitionerExample</p><p><b>performer</b>: See on this page: Practitioner/GeneralPractitionerExample</p><p><b>recorder</b>: See on this page: Practitioner/GeneralPractitionerExample</p><p><b>note</b>: Additional information regarding the patient's medication prescription (By Organization/OrganizationExample @Oct 12, 2023, 1:21:33\u202fAM)</p><blockquote><p><b>dosageInstruction</b></p><p><b>timing</b>: Count 2  times, Duration 2days , 2 per3 days</p><blockquote><p><b>doseAndRate</b></p></blockquote></blockquote><h3>DispenseRequests</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Quantity</b></td></tr><tr><td style=\"display: none\">*</td><td>5</td></tr></table></div>"
+      },
+      "identifier" : [{
+        "type" : {
+          "coding" : [{
+            "system" : "http://terminology.hl7.org/CodeSystem/v2-0203",
+            "code" : "FILL",
+            "display" : "Filler Identifier"
+          }],
+          "text" : "Prescription identifier"
+        },
+        "system" : "http://fhir.health.gov.lk/ips/identifier/medication",
+        "value" : "prescription-12345"
+      }],
+      "status" : "completed",
+      "intent" : "order",
+      "medicationCodeableConcept" : {
+        "coding" : [{
+          "system" : "http://fhir.health.gov.lk/ips/CodeSystem/cs-medication-name-msd",
+          "code" : "01403501"
+        }],
+        "text" : "Medication"
+      },
+      "subject" : {
+        "reference" : "Patient/PatientExample"
+      },
+      "encounter" : {
+        "reference" : "Encounter/TargetFacilityEncounterExample"
+      },
+      "authoredOn" : "2023-10-11T17:21:33-08:00",
+      "requester" : {
+        "reference" : "Practitioner/GeneralPractitionerExample"
+      },
+      "performer" : {
+        "reference" : "Practitioner/GeneralPractitionerExample"
+      },
+      "recorder" : {
+        "reference" : "Practitioner/GeneralPractitionerExample"
+      },
+      "note" : [{
+        "authorReference" : {
+          "reference" : "Organization/OrganizationExample"
+        },
+        "time" : "2023-10-11T17:21:33-08:00",
+        "text" : "Additional information regarding the patient's medication prescription"
+      }],
+      "dosageInstruction" : [{
+        "timing" : {
+          "repeat" : {
+            "count" : 2,
+            "duration" : 2,
+            "durationUnit" : "d",
+            "frequency" : 2,
+            "period" : 3,
+            "periodUnit" : "d"
+          }
+        },
+        "doseAndRate" : [{
+          "doseQuantity" : {
+            "value" : 3
+          }
+        }]
+      }],
+      "dispenseRequest" : {
+        "quantity" : {
+          "value" : 5
+        }
+      }
+    }
+  },
+  {
+    "fullUrl" : "http://hapi-fhir:8080/fhir/MedicationDispense/DrugDispensationExample",
+    "resource" : {
+      "resourceType" : "MedicationDispense",
+      "id" : "DrugDispensationExample",
+      "meta" : {
+        "profile" : ["http://fhir.health.gov.lk/ips/StructureDefinition/drug-dispensation"]
+      },
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"MedicationDispense_DrugDispensationExample\"> </a><p><b>Generated Narrative: MedicationDispense </b><a name=\"DrugDispensationExample\"> </a><a name=\"hcDrugDispensationExample\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">ResourceMedicationDispense &quot;DrugDispensationExample&quot; </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-drug-dispensation.html\">Drug Dispensation</a></p></div><p><b>status</b>: completed</p><p><b>medication</b>: Medication <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"CodeSystem-cs-medication-name-msd.html\">Medication Names For Pharmacy</a>#01403501)</span></p><p><b>subject</b>: See on this page: Patient/PatientExample</p><p><b>context</b>: See on this page: Encounter/TargetFacilityEncounterExample</p><h3>Performers</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Actor</b></td></tr><tr><td style=\"display: none\">*</td><td>See on this page: Practitioner/GeneralPractitionerExample</td></tr></table><p><b>location</b>: See on this page: Location/ProvidersLocationExample</p><p><b>authorizingPrescription</b>: See on this page: MedicationRequest/MedicationRequestsExample</p><p><b>whenHandedOver</b>: 2023-10-11 17:21:33-0800</p><p><b>receiver</b>: See on this page: Patient/PatientExample</p></div>"
+      },
+      "status" : "completed",
+      "medicationCodeableConcept" : {
+        "coding" : [{
+          "system" : "http://fhir.health.gov.lk/ips/CodeSystem/cs-medication-name-msd",
+          "code" : "01403501"
+        }],
+        "text" : "Medication"
+      },
+      "subject" : {
+        "reference" : "Patient/PatientExample"
+      },
+      "context" : {
+        "reference" : "Encounter/TargetFacilityEncounterExample"
+      },
+      "performer" : [{
+        "actor" : {
+          "reference" : "Practitioner/GeneralPractitionerExample"
+        }
+      }],
+      "location" : {
+        "reference" : "Location/ProvidersLocationExample"
+      },
+      "authorizingPrescription" : [{
+        "reference" : "MedicationRequest/MedicationRequestsExample"
+      }],
+      "whenHandedOver" : "2023-10-11T17:21:33-08:00",
+      "receiver" : [{
+        "reference" : "Patient/PatientExample"
+      }]
+    }
+  },
+  {
+    "fullUrl" : "http://hapi-fhir:8080/fhir/ImagingStudy/ImagingExample",
+    "resource" : {
+      "resourceType" : "ImagingStudy",
+      "id" : "ImagingExample",
+      "meta" : {
+        "profile" : ["http://fhir.health.gov.lk/ips/StructureDefinition/imaging-study"]
+      },
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"ImagingStudy_ImagingExample\"> </a><p><b>Generated Narrative: ImagingStudy </b><a name=\"ImagingExample\"> </a><a name=\"hcImagingExample\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">ResourceImagingStudy &quot;ImagingExample&quot; </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-imaging-study.html\">Imaging Study</a></p></div><p><b>status</b>: registered</p><p><b>subject</b>: See on this page: Patient/PatientExample</p><p><b>encounter</b>: See on this page: Encounter/TargetFacilityEncounterExample</p><p><b>started</b>: 2023-10-06 13:28:17-0500</p><p><b>basedOn</b>: See on this page: ServiceRequest/ImagingServiceRequestExample</p><p><b>referrer</b>: See on this page: Practitioner/GeneralPractitionerExample</p><p><b>location</b>: See on this page: Location/ProvidersLocationExample</p><p><b>description</b>: Imaging Description</p><blockquote><p><b>series</b></p><p><b>uid</b>: 2.16.124.113543.6003.1154777499.30246.19789.3503430045.1</p><p><b>modality</b>: Digital Radiography (Details: DICOM code DX  = ' Digital Radiography , stated as  null ')</p><h3>Performers</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Actor</b></td></tr><tr><td style=\"display: none\">*</td><td>See on this page: Practitioner/GeneralPractitionerExample</td></tr></table><h3>Instances</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Uid</b></td><td><b>SopClass</b></td></tr><tr><td style=\"display: none\">*</td><td>2.16.124.113543.6003.1154777499.30246.19789.3503430045.1.1</td><td>urn:oid:1.2.840.10008.5.1.4.1.1.2 (Details: unknown code urn:oid:1.2.840.10008.5.1.4.1.1.2  = ' urn:oid:1.2.840.10008.5.1.4.1.1.2 , stated as  null ')</td></tr></table></blockquote></div>"
+      },
+      "status" : "registered",
+      "subject" : {
+        "reference" : "Patient/PatientExample"
+      },
+      "encounter" : {
+        "reference" : "Encounter/TargetFacilityEncounterExample"
+      },
+      "started" : "2023-10-06T13:28:17-05:00",
+      "basedOn" : [{
+        "reference" : "ServiceRequest/ImagingServiceRequestExample"
+      }],
+      "referrer" : {
+        "reference" : "Practitioner/GeneralPractitionerExample"
+      },
+      "location" : {
+        "reference" : "Location/ProvidersLocationExample"
+      },
+      "description" : "Imaging Description",
+      "series" : [{
+        "uid" : "2.16.124.113543.6003.1154777499.30246.19789.3503430045.1",
+        "modality" : {
+          "system" : "http://dicom.nema.org/resources/ontology/DCM",
+          "code" : "DX"
+        },
+        "performer" : [{
+          "actor" : {
+            "reference" : "Practitioner/GeneralPractitionerExample"
+          }
+        }],
+        "instance" : [{
+          "uid" : "2.16.124.113543.6003.1154777499.30246.19789.3503430045.1.1",
+          "sopClass" : {
+            "system" : "urn:ietf:rfc:3986",
+            "code" : "urn:oid:1.2.840.10008.5.1.4.1.1.2"
+          }
+        }]
+      }]
+    }
+  },
+  {
+    "fullUrl" : "http://hapi-fhir:8080/fhir/ServiceRequest/GeneralReferralServiceRequestExample",
+    "resource" : {
+      "resourceType" : "ServiceRequest",
+      "id" : "GeneralReferralServiceRequestExample",
+      "meta" : {
+        "profile" : ["http://fhir.health.gov.lk/ips/StructureDefinition/general-referral-request"]
+      },
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"ServiceRequest_GeneralReferralServiceRequestExample\"> </a><p><b>Generated Narrative: ServiceRequest </b><a name=\"GeneralReferralServiceRequestExample\"> </a><a name=\"hcGeneralReferralServiceRequestExample\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">ResourceServiceRequest &quot;GeneralReferralServiceRequestExample&quot; </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-general-referral-request.html\">General Referral Request</a></p></div><p><b>status</b>: completed</p><p><b>intent</b>: order</p><p><b>code</b>: Patient referral <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"https://browser.ihtsdotools.org/\">SNOMED CT</a>#3457005)</span></p><p><b>subject</b>: See on this page: Patient/PatientExample</p><p><b>encounter</b>: See on this page: Encounter/TargetFacilityEncounterExample</p><p><b>occurrence</b>: 2023-10-06 13:28:17-0500</p><p><b>requester</b>: See on this page: Practitioner/GeneralPractitionerExample</p><p><b>locationReference</b>: See on this page: Location/ProvidersLocationExample</p></div>"
+      },
+      "status" : "completed",
+      "intent" : "order",
+      "code" : {
+        "coding" : [{
+          "system" : "http://snomed.info/sct",
+          "code" : "3457005"
+        }],
+        "text" : "Patient referral"
+      },
+      "subject" : {
+        "reference" : "Patient/PatientExample"
+      },
+      "encounter" : {
+        "reference" : "Encounter/TargetFacilityEncounterExample"
+      },
+      "occurrenceDateTime" : "2023-10-06T13:28:17-05:00",
+      "requester" : {
+        "reference" : "Practitioner/GeneralPractitionerExample"
+      },
+      "locationReference" : [{
+        "reference" : "Location/ProvidersLocationExample"
+      }]
+    }
+  },
+  {
+    "fullUrl" : "http://hapi-fhir:8080/fhir/ServiceRequest/InvestigationsServiceRequestExample",
+    "resource" : {
+      "resourceType" : "ServiceRequest",
+      "id" : "InvestigationsServiceRequestExample",
+      "meta" : {
+        "profile" : ["http://fhir.health.gov.lk/ips/StructureDefinition/investigations-request"]
+      },
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"ServiceRequest_InvestigationsServiceRequestExample\"> </a><p><b>Generated Narrative: ServiceRequest </b><a name=\"InvestigationsServiceRequestExample\"> </a><a name=\"hcInvestigationsServiceRequestExample\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">ResourceServiceRequest &quot;InvestigationsServiceRequestExample&quot; </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-investigations-request.html\">Investigations Request</a></p></div><p><b>status</b>: completed</p><p><b>intent</b>: order</p><p><b>code</b>: Investigation requested <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"CodeSystem-cs-investigation.html\">Investigations</a>#FBC-WBC-th/uL)</span></p><p><b>subject</b>: See on this page: Patient/PatientExample</p><p><b>encounter</b>: See on this page: Encounter/TargetFacilityEncounterExample</p><p><b>occurrence</b>: 2023-10-06 13:28:17-0500</p><p><b>authoredOn</b>: 2023-10-06 13:28:17-0500</p><p><b>requester</b>: See on this page: Practitioner/GeneralPractitionerExample</p><p><b>locationReference</b>: See on this page: Location/ProvidersLocationExample</p></div>"
+      },
+      "status" : "completed",
+      "intent" : "order",
+      "code" : {
+        "coding" : [{
+          "system" : "http://fhir.health.gov.lk/ips/CodeSystem/cs-investigation",
+          "code" : "FBC-WBC-th/uL"
+        }],
+        "text" : "Investigation requested"
+      },
+      "subject" : {
+        "reference" : "Patient/PatientExample"
+      },
+      "encounter" : {
+        "reference" : "Encounter/TargetFacilityEncounterExample"
+      },
+      "occurrenceDateTime" : "2023-10-06T13:28:17-05:00",
+      "authoredOn" : "2023-10-06T13:28:17-05:00",
+      "requester" : {
+        "reference" : "Practitioner/GeneralPractitionerExample"
+      },
+      "locationReference" : [{
+        "reference" : "Location/ProvidersLocationExample"
+      }]
+    }
+  },
+  {
+    "fullUrl" : "http://hapi-fhir:8080/fhir/ServiceRequest/ImagingServiceRequestExample",
+    "resource" : {
+      "resourceType" : "ServiceRequest",
+      "id" : "ImagingServiceRequestExample",
+      "meta" : {
+        "profile" : ["http://fhir.health.gov.lk/ips/StructureDefinition/imaging-request"]
+      },
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"ServiceRequest_ImagingServiceRequestExample\"> </a><p><b>Generated Narrative: ServiceRequest </b><a name=\"ImagingServiceRequestExample\"> </a><a name=\"hcImagingServiceRequestExample\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">ResourceServiceRequest &quot;ImagingServiceRequestExample&quot; </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-imaging-request.html\">Imaging Request</a></p></div><p><b>status</b>: completed</p><p><b>intent</b>: order</p><p><b>code</b>: Imaging requested <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"CodeSystem-cs-procedure-imaging.html\">Procedures</a>#X-Ray)</span></p><p><b>subject</b>: See on this page: Patient/PatientExample</p><p><b>encounter</b>: See on this page: Encounter/TargetFacilityEncounterExample</p><p><b>occurrence</b>: 2023-10-06 13:28:17-0500</p><p><b>authoredOn</b>: 2023-10-06 13:28:17-0500</p><p><b>requester</b>: See on this page: Practitioner/GeneralPractitionerExample</p><p><b>locationReference</b>: See on this page: Location/ProvidersLocationExample</p></div>"
+      },
+      "status" : "completed",
+      "intent" : "order",
+      "code" : {
+        "coding" : [{
+          "system" : "http://fhir.health.gov.lk/ips/CodeSystem/cs-procedure-imaging",
+          "code" : "X-Ray"
+        }],
+        "text" : "Imaging requested"
+      },
+      "subject" : {
+        "reference" : "Patient/PatientExample"
+      },
+      "encounter" : {
+        "reference" : "Encounter/TargetFacilityEncounterExample"
+      },
+      "occurrenceDateTime" : "2023-10-06T13:28:17-05:00",
+      "authoredOn" : "2023-10-06T13:28:17-05:00",
+      "requester" : {
+        "reference" : "Practitioner/GeneralPractitionerExample"
+      },
+      "locationReference" : [{
+        "reference" : "Location/ProvidersLocationExample"
+      }]
+    }
+  },
+  {
+    "fullUrl" : "http://hapi-fhir:8080/fhir/ServiceRequest/ProcedureServiceRequestExample",
+    "resource" : {
+      "resourceType" : "ServiceRequest",
+      "id" : "ProcedureServiceRequestExample",
+      "meta" : {
+        "profile" : ["http://fhir.health.gov.lk/ips/StructureDefinition/procedures-request"]
+      },
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"ServiceRequest_ProcedureServiceRequestExample\"> </a><p><b>Generated Narrative: ServiceRequest </b><a name=\"ProcedureServiceRequestExample\"> </a><a name=\"hcProcedureServiceRequestExample\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">ResourceServiceRequest &quot;ProcedureServiceRequestExample&quot; </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-procedures-request.html\">Procedure Request</a></p></div><p><b>status</b>: completed</p><p><b>intent</b>: order</p><p><b>code</b>: Cleaning and Dressing <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"CodeSystem-cs-procedure.html\">Procedures</a>#Cleaning-and-Dressing)</span></p><p><b>subject</b>: See on this page: Patient/PatientExample</p><p><b>encounter</b>: See on this page: Encounter/TargetFacilityEncounterExample</p><p><b>occurrence</b>: 2023-10-06 13:28:17-0500</p><p><b>requester</b>: See on this page: Practitioner/GeneralPractitionerExample</p><p><b>locationReference</b>: See on this page: Location/ProvidersLocationExample</p></div>"
+      },
+      "status" : "completed",
+      "intent" : "order",
+      "code" : {
+        "coding" : [{
+          "system" : "http://fhir.health.gov.lk/ips/CodeSystem/cs-procedure",
+          "code" : "Cleaning-and-Dressing"
+        }],
+        "text" : "Cleaning and Dressing"
+      },
+      "subject" : {
+        "reference" : "Patient/PatientExample"
+      },
+      "encounter" : {
+        "reference" : "Encounter/TargetFacilityEncounterExample"
+      },
+      "occurrenceDateTime" : "2023-10-06T13:28:17-05:00",
+      "requester" : {
+        "reference" : "Practitioner/GeneralPractitionerExample"
+      },
+      "locationReference" : [{
+        "reference" : "Location/ProvidersLocationExample"
+      }]
+    }
+  },
+  {
+    "fullUrl" : "http://hapi-fhir:8080/fhir/Task/HHIMSReferralTaskExample",
+    "resource" : {
+      "resourceType" : "Task",
+      "id" : "HHIMSReferralTaskExample",
+      "meta" : {
+        "profile" : ["http://fhir.health.gov.lk/ips/StructureDefinition/referral-task"]
+      },
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Task_HHIMSReferralTaskExample\"> </a><p><b>Generated Narrative: Task </b><a name=\"HHIMSReferralTaskExample\"> </a><a name=\"hcHHIMSReferralTaskExample\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">ResourceTask &quot;HHIMSReferralTaskExample&quot; </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-referral-task.html\">Referral Task</a></p></div><p><b>status</b>: completed</p><p><b>intent</b>: order</p><p><b>priority</b>: routine</p><p><b>description</b>: some information regarding the need for the referral request, if any.</p><p><b>focus</b>: See on this page: ServiceRequest/GeneralReferralServiceRequestExample</p><p><b>for</b>: See on this page: Patient/PatientExample</p><p><b>encounter</b>: See on this page: Encounter/TargetFacilityEncounterExample</p><p><b>authoredOn</b>: 2023-10-06 13:28:17-0500</p><p><b>requester</b>: See on this page: Practitioner/GeneralPractitionerExample</p><p><b>location</b>: See on this page: Location/ProvidersLocationExample</p></div>"
+      },
+      "status" : "completed",
+      "intent" : "order",
+      "priority" : "routine",
+      "description" : "some information regarding the need for the referral request, if any.",
+      "focus" : {
+        "reference" : "ServiceRequest/GeneralReferralServiceRequestExample"
+      },
+      "for" : {
+        "reference" : "Patient/PatientExample"
+      },
+      "encounter" : {
+        "reference" : "Encounter/TargetFacilityEncounterExample"
+      },
+      "authoredOn" : "2023-10-06T13:28:17-05:00",
+      "requester" : {
+        "reference" : "Practitioner/GeneralPractitionerExample"
+      },
+      "location" : {
+        "reference" : "Location/ProvidersLocationExample"
+      }
+    }
+  },
+  {
+    "fullUrl" : "http://hapi-fhir:8080/fhir/Practitioner/GeneralPractitionerExample",
+    "resource" : {
+      "resourceType" : "Practitioner",
+      "id" : "GeneralPractitionerExample",
+      "meta" : {
+        "profile" : ["http://fhir.health.gov.lk/ips/StructureDefinition/practitioner"]
+      },
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Practitioner_GeneralPractitionerExample\"> </a><p><b>Generated Narrative: Practitioner </b><a name=\"GeneralPractitionerExample\"> </a><a name=\"hcGeneralPractitionerExample\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">ResourcePractitioner &quot;GeneralPractitionerExample&quot; </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-practitioner.html\">Practitioner</a></p></div><p><b>name</b>: Tom Junes Smith </p><p><b>telecom</b>: ph: 27537652509(WORK), <a href=\"mailto:someone@something.org\">someone@something.org</a></p></div>"
+      },
+      "name" : [{
+        "family" : "Smith",
+        "given" : ["Tom",
+        "Junes"],
+        "prefix" : ["Dr"]
+      }],
+      "telecom" : [{
+        "system" : "phone",
+        "value" : "27537652509",
+        "use" : "work"
+      },
+      {
+        "system" : "email",
+        "value" : "someone@something.org",
+        "use" : "home"
+      }]
+    }
+  },
+  {
+    "fullUrl" : "http://hapi-fhir:8080/fhir/Location/ProvidersLocationExample",
+    "resource" : {
+      "resourceType" : "Location",
+      "id" : "ProvidersLocationExample",
+      "meta" : {
+        "profile" : ["http://fhir.health.gov.lk/ips/StructureDefinition/providers-location"]
+      },
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Location_ProvidersLocationExample\"> </a><p><b>Generated Narrative: Location </b><a name=\"ProvidersLocationExample\"> </a><a name=\"hcProvidersLocationExample\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">ResourceLocation &quot;ProvidersLocationExample&quot; </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-providers-location.html\">Providers Location</a></p></div><p><b>identifier</b>: Provider location identifier/Location-ID-1, Provider location identifier/Location-ID-2</p><p><b>status</b>: active</p><p><b>name</b>: Name for the location</p><p><b>telecom</b>: <a href=\"tel:+27829999999\">+27829999999</a>, <a href=\"mailto:someone@something.com\">someone@something.com</a>, <a href=\"mailto:someone2@something.com\">someone2@something.com</a></p><p><b>address</b>: 177 Nawala Road Nugegoda Colombo 32350 LK </p><p><b>managingOrganization</b>: See on this page: Organization/OrganizationExample</p></div>"
+      },
+      "identifier" : [{
+        "type" : {
+          "coding" : [{
+            "system" : "http://fhir.health.gov.lk/ips/CodeSystem/cs-identifier-types",
+            "code" : "PLOC"
+          }],
+          "text" : "Provider location identifier"
+        },
+        "system" : "http://fhir.health.gov.lk/ips/identifier/provider-location",
+        "value" : "Location-ID-1"
+      },
+      {
+        "type" : {
+          "coding" : [{
+            "system" : "http://fhir.health.gov.lk/ips/CodeSystem/cs-identifier-types",
+            "code" : "PLOC"
+          }],
+          "text" : "Provider location identifier"
+        },
+        "system" : "http://fhir.health.gov.lk/ips/identifier/provider-location",
+        "value" : "Location-ID-2"
+      }],
+      "status" : "active",
+      "name" : "Name for the location",
+      "telecom" : [{
+        "system" : "phone",
+        "value" : "+27829999999"
+      },
+      {
+        "system" : "email",
+        "value" : "someone@something.com"
+      },
+      {
+        "system" : "email",
+        "value" : "someone2@something.com"
+      }],
+      "address" : {
+        "type" : "postal",
+        "line" : ["177",
+        "Nawala Road"],
+        "city" : "Nugegoda",
+        "district" : "Ampara",
+        "state" : "Colombo",
+        "postalCode" : "32350",
+        "country" : "LK"
+      },
+      "managingOrganization" : {
+        "reference" : "Organization/OrganizationExample"
+      }
+    }
+  },
+  {
+    "fullUrl" : "http://hapi-fhir:8080/fhir/Organization/OrganizationExample",
+    "resource" : {
+      "resourceType" : "Organization",
+      "id" : "OrganizationExample",
+      "meta" : {
+        "profile" : ["http://fhir.health.gov.lk/ips/StructureDefinition/organization"]
+      },
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Organization_OrganizationExample\"> </a><p><b>Generated Narrative: Organization </b><a name=\"OrganizationExample\"> </a><a name=\"hcOrganizationExample\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">ResourceOrganization &quot;OrganizationExample&quot; </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-organization.html\">Organization</a></p></div><p><b>identifier</b>: Organization identifier/facility1</p><p><b>name</b>: Some Health Facility</p></div>"
+      },
+      "identifier" : [{
+        "type" : {
+          "coding" : [{
+            "system" : "http://terminology.hl7.org/CodeSystem/v2-0203",
+            "code" : "XX"
+          }],
+          "text" : "Organization identifier"
+        },
+        "system" : "http://fhir.health.gov.lk/ips/identifier/hin",
+        "value" : "facility1"
+      }],
+      "name" : "Some Health Facility"
+    }
+  },
+  {
+    "fullUrl" : "http://hapi-fhir:8080/fhir/Device/DeviceInformationExample",
+    "resource" : {
+      "resourceType" : "Device",
+      "id" : "DeviceInformationExample",
+      "meta" : {
+        "profile" : ["http://fhir.health.gov.lk/ips/StructureDefinition/device-information"]
+      },
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Device_DeviceInformationExample\"> </a><p><b>Generated Narrative: Device </b><a name=\"DeviceInformationExample\"> </a><a name=\"hcDeviceInformationExample\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">ResourceDevice &quot;DeviceInformationExample&quot; </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-device-information.html\">Device Information</a></p></div><p><b>identifier</b>: <code>http://fhir.health.gov.lk/ips/identifier/system-id</code>/OpenMRS-1234-1</p><p><b>status</b>: active</p><p><b>type</b>: Medical record <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"https://browser.ihtsdotools.org/\">SNOMED CT</a>#129465004)</span></p><h3>Versions</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Type</b></td><td><b>Value</b></td></tr><tr><td style=\"display: none\">*</td><td>OpenMRS <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"CodeSystem-cs-device-classification.html\">Device Classification Codes</a>#OpenMRS)</span></td><td>2.5.0</td></tr></table><p><b>owner</b>: See on this page: Organization/OrganizationExample</p><p><b>location</b>: See on this page: Location/ProvidersLocationExample</p></div>"
+      },
+      "identifier" : [{
+        "system" : "http://fhir.health.gov.lk/ips/identifier/system-id",
+        "value" : "OpenMRS-1234-1"
+      }],
+      "status" : "active",
+      "type" : {
+        "coding" : [{
+          "system" : "http://snomed.info/sct",
+          "code" : "129465004"
+        }]
+      },
+      "version" : [{
+        "type" : {
+          "coding" : [{
+            "system" : "http://fhir.health.gov.lk/ips/CodeSystem/cs-device-classification",
+            "code" : "OpenMRS"
+          }]
+        },
+        "value" : "2.5.0"
+      }],
+      "owner" : {
+        "reference" : "Organization/OrganizationExample"
+      },
+      "location" : {
+        "reference" : "Location/ProvidersLocationExample"
+      }
+    }
+  }]
+}

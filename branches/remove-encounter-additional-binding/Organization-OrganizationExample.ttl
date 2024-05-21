@@ -1,0 +1,35 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://fhir.health.gov.lk/ips/Organization/OrganizationExample> a fhir:Organization ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "OrganizationExample"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://fhir.health.gov.lk/ips/StructureDefinition/organization"^^xsd:anyURI ;
+       fhir:link <http://fhir.health.gov.lk/ips/StructureDefinition/organization>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: Organization</b><a name=\"OrganizationExample\"> </a><a name=\"hcOrganizationExample\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource Organization &quot;OrganizationExample&quot; </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-organization.html\">Organization</a></p></div><p><b>identifier</b>: Organization identifier/facility1</p><p><b>name</b>: Some Health Facility</p></div>"
+  ] ; # 
+  fhir:identifier ( [
+     fhir:type [
+       fhir:coding ( [
+         fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/v2-0203"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "XX" ]
+       ] ) ;
+       fhir:text [ fhir:v "Organization identifier" ]
+     ] ;
+     fhir:system [ fhir:v "http://fhir.health.gov.lk/ips/identifier/hin"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "facility1" ]
+  ] ) ; # 
+  fhir:name [ fhir:v "Some Health Facility"] . # 
+
+# -------------------------------------------------------------------------------------
+

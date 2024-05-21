@@ -1,0 +1,1207 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Bundle xmlns="http://hl7.org/fhir">
+  <id value="HIMSTransactionalBundleExample"/>
+  <meta>
+    <profile value="http://fhir.health.gov.lk/ips/StructureDefinition/hims-transactional-bundle"/>
+  </meta>
+  <identifier>
+    <system value="http://fhir.health.gov.lk/ips/identifier/hims-transactional"/>
+    <value value="transactional-id-1234"/>
+  </identifier>
+  <type value="transaction"/>
+  <timestamp value="2024-02-18T09:30:00+02:00"/>
+  <entry>
+    <fullUrl value="http://hapi-fhir:8080/fhir/Patient/HIMSPatientExample"/>
+    <resource>
+      <Patient>
+        <id value="HIMSPatientExample"/>
+        <meta>
+          <profile value="http://fhir.health.gov.lk/ips/StructureDefinition/hims-patient"/>
+        </meta>
+        <text>
+          <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><a name="Patient_HIMSPatientExample"> </a><p><b>Generated Narrative: Patient</b><a name="HIMSPatientExample"> </a></p><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Resource Patient &quot;HIMSPatientExample&quot; </p><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-hims-patient.html">HIMS Patient</a></p></div><p><b>identifier</b>: Personal Health Number/personal health number, Passport number/Passport-1, Passport number/Passport-2, Driver's license number/Drivers license-1, Driver's license number/Drivers license-2, National identity number/National identity number-1, National identity number/National identity number-2, Senior Citizen Number/Senior citizen number-1, Senior Citizen Number/Senior citizen number-2</p><p><b>name</b>: Mr. Mike John Smith (OFFICIAL)</p><p><b>telecom</b>: <a href="tel:+27829999999">+27829999999</a>, <a href="mailto:someone@something.com">someone@something.com</a>, <a href="mailto:someone2@something.com">someone2@something.com</a></p><p><b>gender</b>: male</p><p><b>birthDate</b>: 1983-05-22</p><p><b>address</b>: 177 Nawala Road Nugegoda Colombo 32350 LK </p></div>
+        </text>
+        <identifier>
+          <type>
+            <coding>
+              <system value="http://fhir.health.gov.lk/ips/CodeSystem/cs-identifier-types"/>
+              <code value="PHN"/>
+            </coding>
+            <text value="Personal Health Number"/>
+          </type>
+          <system value="http://fhir.health.gov.lk/ips/identifier/phn"/>
+          <value value="personal health number"/>
+        </identifier>
+        <identifier>
+          <type>
+            <coding>
+              <system value="http://terminology.hl7.org/CodeSystem/v2-0203"/>
+              <code value="PPN"/>
+            </coding>
+            <text value="Passport number"/>
+          </type>
+          <system value="http://fhir.health.gov.lk/ips/identifier/passport"/>
+          <value value="Passport-1"/>
+        </identifier>
+        <identifier>
+          <type>
+            <coding>
+              <system value="http://terminology.hl7.org/CodeSystem/v2-0203"/>
+              <code value="PPN"/>
+            </coding>
+            <text value="Passport number"/>
+          </type>
+          <system value="http://fhir.health.gov.lk/ips/identifier/passport"/>
+          <value value="Passport-2"/>
+        </identifier>
+        <identifier>
+          <type>
+            <coding>
+              <system value="http://terminology.hl7.org/CodeSystem/v2-0203"/>
+              <code value="DL"/>
+            </coding>
+            <text value="Driver's license number"/>
+          </type>
+          <system value="http://fhir.health.gov.lk/ips/identifier/drivers"/>
+          <value value="Drivers license-1"/>
+        </identifier>
+        <identifier>
+          <type>
+            <coding>
+              <system value="http://terminology.hl7.org/CodeSystem/v2-0203"/>
+              <code value="DL"/>
+            </coding>
+            <text value="Driver's license number"/>
+          </type>
+          <system value="http://fhir.health.gov.lk/ips/identifier/drivers"/>
+          <value value="Drivers license-2"/>
+        </identifier>
+        <identifier>
+          <type>
+            <coding>
+              <system value="http://fhir.health.gov.lk/ips/CodeSystem/cs-identifier-types"/>
+              <code value="NIC"/>
+            </coding>
+            <text value="National identity number"/>
+          </type>
+          <system value="http://fhir.health.gov.lk/ips/identifier/nic"/>
+          <value value="National identity number-1"/>
+        </identifier>
+        <identifier>
+          <type>
+            <coding>
+              <system value="http://fhir.health.gov.lk/ips/CodeSystem/cs-identifier-types"/>
+              <code value="NIC"/>
+            </coding>
+            <text value="National identity number"/>
+          </type>
+          <system value="http://fhir.health.gov.lk/ips/identifier/nic"/>
+          <value value="National identity number-2"/>
+        </identifier>
+        <identifier>
+          <type>
+            <coding>
+              <system value="http://fhir.health.gov.lk/ips/CodeSystem/cs-identifier-types"/>
+              <code value="SCN"/>
+            </coding>
+            <text value="Senior Citizen Number"/>
+          </type>
+          <system value="http://fhir.health.gov.lk/ips/identifier/scn"/>
+          <value value="Senior citizen number-1"/>
+        </identifier>
+        <identifier>
+          <type>
+            <coding>
+              <system value="http://fhir.health.gov.lk/ips/CodeSystem/cs-identifier-types"/>
+              <code value="SCN"/>
+            </coding>
+            <text value="Senior Citizen Number"/>
+          </type>
+          <system value="http://fhir.health.gov.lk/ips/identifier/scn"/>
+          <value value="Senior citizen number-2"/>
+        </identifier>
+        <name>
+          <use value="official"/>
+          <family value="Smith"/>
+          <given value="Mr."/>
+          <given value="Mike"/>
+          <given value="John"/>
+        </name>
+        <telecom>
+          <system value="phone"/>
+          <value value="+27829999999"/>
+        </telecom>
+        <telecom>
+          <system value="email"/>
+          <value value="someone@something.com"/>
+        </telecom>
+        <telecom>
+          <system value="email"/>
+          <value value="someone2@something.com"/>
+        </telecom>
+        <gender value="male"/>
+        <birthDate value="1983-05-22"/>
+        <address>
+          <type value="postal"/>
+          <line value="177"/>
+          <line value="Nawala Road"/>
+          <city value="Nugegoda"/>
+          <district value="Ampara"/>
+          <state value="Colombo"/>
+          <postalCode value="32350"/>
+          <country value="LK"/>
+        </address>
+      </Patient>
+    </resource>
+    <request>
+      <method value="PUT"/>
+      <url value="Patient/HIMSPatientExample"/>
+    </request>
+  </entry>
+  <entry>
+    <fullUrl value="http://hapi-fhir:8080/fhir/Encounter/HIMSTargetFacilityEncounterExample"/>
+    <resource>
+      <Encounter>
+        <id value="HIMSTargetFacilityEncounterExample"/>
+        <meta>
+          <profile value="http://fhir.health.gov.lk/ips/StructureDefinition/hims-target-facility-encounter"/>
+        </meta>
+        <text>
+          <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><a name="Encounter_HIMSTargetFacilityEncounterExample"> </a><p><b>Generated Narrative: Encounter</b><a name="HIMSTargetFacilityEncounterExample"> </a></p><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Resource Encounter &quot;HIMSTargetFacilityEncounterExample&quot; </p><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-hims-target-facility-encounter.html">HIMS Target Facility Encounter</a></p></div><p><b>status</b>: finished</p><p><b>class</b>: ambulatory (Details: http://terminology.hl7.org/CodeSystem/v3-ActCode code AMB = 'ambulatory', stated as 'null')</p><p><b>subject</b>: <a href="#Patient_HIMSPatientExample">See above (Patient/HIMSPatientExample)</a></p><h3>Participants</h3><table class="grid"><tr><td style="display: none">-</td><td><b>Individual</b></td></tr><tr><td style="display: none">*</td><td><a href="#Practitioner_GeneralPractitionerExample">See above (Practitioner/GeneralPractitionerExample)</a></td></tr></table><p><b>period</b>: 2022-12-01 --&gt; 2023-01-20</p><p><b>reasonCode</b>: Chronic pharyngitis <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="https://browser.ihtsdotools.org/">SNOMED CT</a>#140004)</span></p><h3>Locations</h3><table class="grid"><tr><td style="display: none">-</td><td><b>Location</b></td></tr><tr><td style="display: none">*</td><td><a href="#Location_ProvidersLocationExample">See above (Location/ProvidersLocationExample)</a></td></tr></table></div>
+        </text>
+        <status value="finished"/>
+        <class>
+          <system value="http://terminology.hl7.org/CodeSystem/v3-ActCode"/>
+          <code value="AMB"/>
+        </class>
+        <subject>
+          <reference value="Patient/HIMSPatientExample"/>
+        </subject>
+        <participant>
+          <individual>
+            <reference value="Practitioner/GeneralPractitionerExample"/>
+          </individual>
+        </participant>
+        <period>
+          <start value="2022-12-01"/>
+          <end value="2023-01-20"/>
+        </period>
+        <reasonCode>
+          <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="140004"/>
+          </coding>
+        </reasonCode>
+        <location>
+          <location>
+            <reference value="Location/ProvidersLocationExample"/>
+          </location>
+        </location>
+      </Encounter>
+    </resource>
+    <request>
+      <method value="PUT"/>
+      <url value="Encounter/HIMSTargetFacilityEncounterExample"/>
+    </request>
+  </entry>
+  <entry>
+    <fullUrl value="http://hapi-fhir:8080/fhir/Condition/HIMSMedicalHistoryExample"/>
+    <resource>
+      <Condition>
+        <id value="HIMSMedicalHistoryExample"/>
+        <meta>
+          <profile value="http://fhir.health.gov.lk/ips/StructureDefinition/medical-history-hims"/>
+        </meta>
+        <text>
+          <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><a name="Condition_HIMSMedicalHistoryExample"> </a><p><b>Generated Narrative: Condition</b><a name="HIMSMedicalHistoryExample"> </a></p><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Resource Condition &quot;HIMSMedicalHistoryExample&quot; </p><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-medical-history-hims.html">Medical History</a></p></div><p><b>clinicalStatus</b>: Active <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="http://terminology.hl7.org/5.0.0/CodeSystem-condition-clinical.html">Condition Clinical Status Codes</a>#active)</span></p><p><b>verificationStatus</b>: Confirmed <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="http://terminology.hl7.org/5.3.0/CodeSystem-condition-ver-status.html">ConditionVerificationStatus</a>#confirmed)</span></p><p><b>category</b>: Problem List Item <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="http://terminology.hl7.org/5.0.0/CodeSystem-condition-category.html">Condition Category Codes</a>#problem-list-item)</span></p><p><b>code</b>: Type I diabetes mellitus without complication <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="https://browser.ihtsdotools.org/">SNOMED CT</a>#313435000)</span></p><p><b>subject</b>: <a href="#Patient_HIMSPatientExample">See above (Patient/HIMSPatientExample)</a></p><p><b>encounter</b>: <a href="#Encounter_HIMSTargetFacilityEncounterExample">See above (Encounter/HIMSTargetFacilityEncounterExample)</a></p><p><b>recordedDate</b>: 2023-10-06 13:28:17-0500</p><p><b>recorder</b>: <a href="#Practitioner_GeneralPractitionerExample">See above (Practitioner/GeneralPractitionerExample)</a></p><p><b>asserter</b>: <a href="#Practitioner_GeneralPractitionerExample">See above (Practitioner/GeneralPractitionerExample)</a></p></div>
+        </text>
+        <clinicalStatus>
+          <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/condition-clinical"/>
+            <code value="active"/>
+          </coding>
+        </clinicalStatus>
+        <verificationStatus>
+          <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/condition-ver-status"/>
+            <code value="confirmed"/>
+          </coding>
+        </verificationStatus>
+        <category>
+          <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/condition-category"/>
+            <code value="problem-list-item"/>
+          </coding>
+        </category>
+        <code>
+          <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="313435000"/>
+          </coding>
+        </code>
+        <subject>
+          <reference value="Patient/HIMSPatientExample"/>
+        </subject>
+        <encounter>
+          <reference value="Encounter/HIMSTargetFacilityEncounterExample"/>
+        </encounter>
+        <recordedDate value="2023-10-06T13:28:17-05:00"/>
+        <recorder>
+          <reference value="Practitioner/GeneralPractitionerExample"/>
+        </recorder>
+        <asserter>
+          <reference value="Practitioner/GeneralPractitionerExample"/>
+        </asserter>
+      </Condition>
+    </resource>
+    <request>
+      <method value="PUT"/>
+      <url value="Condition/HIMSMedicalHistoryExample"/>
+    </request>
+  </entry>
+  <entry>
+    <fullUrl value="http://hapi-fhir:8080/fhir/Observation/HIMSWeightExample"/>
+    <resource>
+      <Observation>
+        <id value="HIMSWeightExample"/>
+        <meta>
+          <profile value="http://fhir.health.gov.lk/ips/StructureDefinition/hims-weight"/>
+        </meta>
+        <text>
+          <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><a name="Observation_HIMSWeightExample"> </a><p><b>Generated Narrative: Observation</b><a name="HIMSWeightExample"> </a></p><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Resource Observation &quot;HIMSWeightExample&quot; </p><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-hims-weight.html">HIMS Patient Weight Observation</a></p></div><p><b>status</b>: final</p><p><b>category</b>: Vital Signs <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="http://terminology.hl7.org/5.0.0/CodeSystem-observation-category.html">Observation Category Codes</a>#vital-signs)</span></p><p><b>code</b>: Body Weight <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="https://loinc.org/">LOINC</a>#29463-7)</span></p><p><b>subject</b>: <a href="#Patient_HIMSPatientExample">See above (Patient/HIMSPatientExample)</a></p><p><b>encounter</b>: <a href="#Encounter_HIMSTargetFacilityEncounterExample">See above (Encounter/HIMSTargetFacilityEncounterExample)</a></p><p><b>effective</b>: 2022-11-30</p><p><b>performer</b>: </p><ul><li><a href="#Organization_OrganizationExample">See above (Organization/OrganizationExample)</a></li><li><a href="#Practitioner_GeneralPractitionerExample">See above (Practitioner/GeneralPractitionerExample)</a></li></ul><p><b>value</b>: 110 kg<span style="background: LightGoldenRodYellow"> (Details: UCUM code kg = 'kg')</span></p></div>
+        </text>
+        <status value="final"/>
+        <category>
+          <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/observation-category"/>
+            <code value="vital-signs"/>
+          </coding>
+        </category>
+        <code>
+          <coding>
+            <system value="http://loinc.org"/>
+            <code value="29463-7"/>
+          </coding>
+          <text value="Body Weight"/>
+        </code>
+        <subject>
+          <reference value="Patient/HIMSPatientExample"/>
+        </subject>
+        <encounter>
+          <reference value="Encounter/HIMSTargetFacilityEncounterExample"/>
+        </encounter>
+        <effectiveDateTime value="2022-11-30"/>
+        <performer>
+          <reference value="Organization/OrganizationExample"/>
+        </performer>
+        <performer>
+          <reference value="Practitioner/GeneralPractitionerExample"/>
+        </performer>
+        <valueQuantity>
+          <value value="110"/>
+          <unit value="kg"/>
+          <system value="http://unitsofmeasure.org"/>
+          <code value="kg"/>
+        </valueQuantity>
+      </Observation>
+    </resource>
+    <request>
+      <method value="PUT"/>
+      <url value="Observation/HIMSWeightExample"/>
+    </request>
+  </entry>
+  <entry>
+    <fullUrl value="http://hapi-fhir:8080/fhir/Observation/RiskBehaviourTobaccoSmokerExample"/>
+    <resource>
+      <Observation>
+        <id value="RiskBehaviourTobaccoSmokerExample"/>
+        <meta>
+          <profile value="http://fhir.health.gov.lk/ips/StructureDefinition/risk-behaviour-tobacco-smoker"/>
+        </meta>
+        <text>
+          <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><a name="Observation_RiskBehaviourTobaccoSmokerExample"> </a><p><b>Generated Narrative: Observation</b><a name="RiskBehaviourTobaccoSmokerExample"> </a></p><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Resource Observation &quot;RiskBehaviourTobaccoSmokerExample&quot; </p><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-risk-behaviour-tobacco-smoker.html">Tobacco Smoker Observation</a></p></div><p><b>status</b>: final</p><p><b>category</b>: Social History <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="http://terminology.hl7.org/5.0.0/CodeSystem-observation-category.html">Observation Category Codes</a>#social-history)</span></p><p><b>code</b>: Tobacco smoking status for tobacco smoker <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="https://loinc.org/">LOINC</a>#81229-7)</span></p><p><b>subject</b>: <a href="#Patient_HIMSPatientExample">See above (Patient/HIMSPatientExample)</a></p><p><b>encounter</b>: <a href="#Encounter_HIMSTargetFacilityEncounterExample">See above (Encounter/HIMSTargetFacilityEncounterExample)</a></p><p><b>effective</b>: 2022-11-30</p><p><b>performer</b>: </p><ul><li><a href="#Organization_OrganizationExample">See above (Organization/OrganizationExample)</a></li><li><a href="#Practitioner_GeneralPractitionerExample">See above (Practitioner/GeneralPractitionerExample)</a></li></ul><p><b>value</b>: Light tobacco smoker <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="https://loinc.org/">LOINC</a>#LA18982-1)</span></p></div>
+        </text>
+        <status value="final"/>
+        <category>
+          <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/observation-category"/>
+            <code value="social-history"/>
+          </coding>
+        </category>
+        <code>
+          <coding>
+            <system value="http://loinc.org"/>
+            <code value="81229-7"/>
+          </coding>
+          <text value="Tobacco smoking status for tobacco smoker"/>
+        </code>
+        <subject>
+          <reference value="Patient/HIMSPatientExample"/>
+        </subject>
+        <encounter>
+          <reference value="Encounter/HIMSTargetFacilityEncounterExample"/>
+        </encounter>
+        <effectiveDateTime value="2022-11-30"/>
+        <performer>
+          <reference value="Organization/OrganizationExample"/>
+        </performer>
+        <performer>
+          <reference value="Practitioner/GeneralPractitionerExample"/>
+        </performer>
+        <valueCodeableConcept>
+          <coding>
+            <system value="http://loinc.org"/>
+            <code value="LA18982-1"/>
+          </coding>
+          <text value="Light tobacco smoker"/>
+        </valueCodeableConcept>
+      </Observation>
+    </resource>
+    <request>
+      <method value="PUT"/>
+      <url value="Observation/RiskBehaviourTobaccoSmokerExample"/>
+    </request>
+  </entry>
+  <entry>
+    <fullUrl value="http://hapi-fhir:8080/fhir/Observation/RiskBehaviourPhysicalActivityExample"/>
+    <resource>
+      <Observation>
+        <id value="RiskBehaviourPhysicalActivityExample"/>
+        <meta>
+          <profile value="http://fhir.health.gov.lk/ips/StructureDefinition/risk-behaviour-physical-activity"/>
+        </meta>
+        <text>
+          <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><a name="Observation_RiskBehaviourPhysicalActivityExample"> </a><p><b>Generated Narrative: Observation</b><a name="RiskBehaviourPhysicalActivityExample"> </a></p><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Resource Observation &quot;RiskBehaviourPhysicalActivityExample&quot; </p><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-risk-behaviour-physical-activity.html">Physical Activity Status Observation</a></p></div><p><b>status</b>: final</p><p><b>category</b>: Activity <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="http://terminology.hl7.org/5.0.0/CodeSystem-observation-category.html">Observation Category Codes</a>#activity)</span></p><p><b>code</b>: Physical Activity <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="https://browser.ihtsdotools.org/">SNOMED CT</a>#106020009)</span></p><p><b>subject</b>: <a href="#Patient_HIMSPatientExample">See above (Patient/HIMSPatientExample)</a></p><p><b>encounter</b>: <a href="#Encounter_HIMSTargetFacilityEncounterExample">See above (Encounter/HIMSTargetFacilityEncounterExample)</a></p><p><b>effective</b>: 2022-11-30</p><p><b>performer</b>: </p><ul><li><a href="#Organization_OrganizationExample">See above (Organization/OrganizationExample)</a></li><li><a href="#Practitioner_GeneralPractitionerExample">See above (Practitioner/GeneralPractitionerExample)</a></li></ul><p><b>value</b>: Physically not active <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="https://browser.ihtsdotools.org/">SNOMED CT</a>#9011000175102)</span></p></div>
+        </text>
+        <status value="final"/>
+        <category>
+          <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/observation-category"/>
+            <code value="activity"/>
+          </coding>
+        </category>
+        <code>
+          <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="106020009"/>
+          </coding>
+          <text value="Physical Activity"/>
+        </code>
+        <subject>
+          <reference value="Patient/HIMSPatientExample"/>
+        </subject>
+        <encounter>
+          <reference value="Encounter/HIMSTargetFacilityEncounterExample"/>
+        </encounter>
+        <effectiveDateTime value="2022-11-30"/>
+        <performer>
+          <reference value="Organization/OrganizationExample"/>
+        </performer>
+        <performer>
+          <reference value="Practitioner/GeneralPractitionerExample"/>
+        </performer>
+        <valueCodeableConcept>
+          <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="9011000175102"/>
+          </coding>
+          <text value="Physically not active"/>
+        </valueCodeableConcept>
+      </Observation>
+    </resource>
+    <request>
+      <method value="PUT"/>
+      <url value="Observation/RiskBehaviourPhysicalActivityExample"/>
+    </request>
+  </entry>
+  <entry>
+    <fullUrl value="http://hapi-fhir:8080/fhir/Observation/BloodPressureExample"/>
+    <resource>
+      <Observation>
+        <id value="BloodPressureExample"/>
+        <meta>
+          <profile value="http://fhir.health.gov.lk/ips/StructureDefinition/blood-pressure"/>
+        </meta>
+        <text>
+          <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><a name="Observation_BloodPressureExample"> </a><p><b>Generated Narrative: Observation</b><a name="BloodPressureExample"> </a></p><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Resource Observation &quot;BloodPressureExample&quot; </p><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-blood-pressure.html">Blood Pressure Observation</a></p></div><p><b>status</b>: final</p><p><b>category</b>: Vital Signs <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="http://terminology.hl7.org/5.0.0/CodeSystem-observation-category.html">Observation Category Codes</a>#vital-signs)</span></p><p><b>code</b>: Blood Pressure <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="https://loinc.org/">LOINC</a>#85354-9)</span></p><p><b>subject</b>: <a href="#Patient_HIMSPatientExample">See above (Patient/HIMSPatientExample)</a></p><p><b>encounter</b>: <a href="#Encounter_HIMSTargetFacilityEncounterExample">See above (Encounter/HIMSTargetFacilityEncounterExample)</a></p><p><b>effective</b>: 2022-11-30</p><p><b>performer</b>: </p><ul><li><a href="#Organization_OrganizationExample">See above (Organization/OrganizationExample)</a></li><li><a href="#Practitioner_GeneralPractitionerExample">See above (Practitioner/GeneralPractitionerExample)</a></li></ul><blockquote><p><b>component</b></p><p><b>code</b>: BP sys <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="https://loinc.org/">LOINC</a>#8480-6)</span></p><p><b>value</b>: 106 mmHg<span style="background: LightGoldenRodYellow"> (Details: UCUM code mm[Hg] = 'mm[Hg]')</span></p></blockquote><blockquote><p><b>component</b></p><p><b>code</b>: BP dias <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="https://loinc.org/">LOINC</a>#8462-4)</span></p><p><b>value</b>: 60 mmHg<span style="background: LightGoldenRodYellow"> (Details: UCUM code mm[Hg] = 'mm[Hg]')</span></p></blockquote></div>
+        </text>
+        <status value="final"/>
+        <category>
+          <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/observation-category"/>
+            <code value="vital-signs"/>
+          </coding>
+        </category>
+        <code>
+          <coding>
+            <system value="http://loinc.org"/>
+            <code value="85354-9"/>
+          </coding>
+          <text value="Blood Pressure"/>
+        </code>
+        <subject>
+          <reference value="Patient/HIMSPatientExample"/>
+        </subject>
+        <encounter>
+          <reference value="Encounter/HIMSTargetFacilityEncounterExample"/>
+        </encounter>
+        <effectiveDateTime value="2022-11-30"/>
+        <performer>
+          <reference value="Organization/OrganizationExample"/>
+        </performer>
+        <performer>
+          <reference value="Practitioner/GeneralPractitionerExample"/>
+        </performer>
+        <component>
+          <code>
+            <coding>
+              <system value="http://loinc.org"/>
+              <code value="8480-6"/>
+            </coding>
+          </code>
+          <valueQuantity>
+            <value value="106"/>
+            <unit value="mmHg"/>
+            <system value="http://unitsofmeasure.org"/>
+            <code value="mm[Hg]"/>
+          </valueQuantity>
+        </component>
+        <component>
+          <code>
+            <coding>
+              <system value="http://loinc.org"/>
+              <code value="8462-4"/>
+            </coding>
+          </code>
+          <valueQuantity>
+            <value value="60"/>
+            <unit value="mmHg"/>
+            <system value="http://unitsofmeasure.org"/>
+            <code value="mm[Hg]"/>
+          </valueQuantity>
+        </component>
+      </Observation>
+    </resource>
+    <request>
+      <method value="PUT"/>
+      <url value="Observation/BloodPressureExample"/>
+    </request>
+  </entry>
+  <entry>
+    <fullUrl value="http://hapi-fhir:8080/fhir/Observation/HeightExample"/>
+    <resource>
+      <Observation>
+        <id value="HeightExample"/>
+        <meta>
+          <profile value="http://fhir.health.gov.lk/ips/StructureDefinition/height"/>
+        </meta>
+        <text>
+          <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><a name="Observation_HeightExample"> </a><p><b>Generated Narrative: Observation</b><a name="HeightExample"> </a></p><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Resource Observation &quot;HeightExample&quot; </p><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-height.html">Patient Height Observation</a></p></div><p><b>status</b>: final</p><p><b>category</b>: Vital Signs <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="http://terminology.hl7.org/5.0.0/CodeSystem-observation-category.html">Observation Category Codes</a>#vital-signs)</span></p><p><b>code</b>: Body Height <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="https://loinc.org/">LOINC</a>#8302-2)</span></p><p><b>subject</b>: <a href="#Patient_HIMSPatientExample">See above (Patient/HIMSPatientExample)</a></p><p><b>encounter</b>: <a href="#Encounter_HIMSTargetFacilityEncounterExample">See above (Encounter/HIMSTargetFacilityEncounterExample)</a></p><p><b>effective</b>: 2022-11-30</p><p><b>performer</b>: </p><ul><li><a href="#Organization_OrganizationExample">See above (Organization/OrganizationExample)</a></li><li><a href="#Practitioner_GeneralPractitionerExample">See above (Practitioner/GeneralPractitionerExample)</a></li></ul><p><b>value</b>: 185 cm<span style="background: LightGoldenRodYellow"> (Details: UCUM code cm = 'cm')</span></p></div>
+        </text>
+        <status value="final"/>
+        <category>
+          <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/observation-category"/>
+            <code value="vital-signs"/>
+          </coding>
+        </category>
+        <code>
+          <coding>
+            <system value="http://loinc.org"/>
+            <code value="8302-2"/>
+          </coding>
+          <text value="Body Height"/>
+        </code>
+        <subject>
+          <reference value="Patient/HIMSPatientExample"/>
+        </subject>
+        <encounter>
+          <reference value="Encounter/HIMSTargetFacilityEncounterExample"/>
+        </encounter>
+        <effectiveDateTime value="2022-11-30"/>
+        <performer>
+          <reference value="Organization/OrganizationExample"/>
+        </performer>
+        <performer>
+          <reference value="Practitioner/GeneralPractitionerExample"/>
+        </performer>
+        <valueQuantity>
+          <value value="185"/>
+          <unit value="cm"/>
+          <system value="http://unitsofmeasure.org"/>
+          <code value="cm"/>
+        </valueQuantity>
+      </Observation>
+    </resource>
+    <request>
+      <method value="PUT"/>
+      <url value="Observation/HeightExample"/>
+    </request>
+  </entry>
+  <entry>
+    <fullUrl value="http://hapi-fhir:8080/fhir/Observation/BMIExample"/>
+    <resource>
+      <Observation>
+        <id value="BMIExample"/>
+        <meta>
+          <profile value="http://fhir.health.gov.lk/ips/StructureDefinition/bmi"/>
+        </meta>
+        <text>
+          <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><a name="Observation_BMIExample"> </a><p><b>Generated Narrative: Observation</b><a name="BMIExample"> </a></p><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Resource Observation &quot;BMIExample&quot; </p><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-bmi.html">Patient BMI Observation</a></p></div><p><b>status</b>: final</p><p><b>category</b>: Vital Signs <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="http://terminology.hl7.org/5.0.0/CodeSystem-observation-category.html">Observation Category Codes</a>#vital-signs)</span></p><p><b>code</b>: Body mass index (BMI) <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="https://loinc.org/">LOINC</a>#39156-5)</span></p><p><b>subject</b>: <a href="#Patient_HIMSPatientExample">See above (Patient/HIMSPatientExample)</a></p><p><b>encounter</b>: <a href="#Encounter_HIMSTargetFacilityEncounterExample">See above (Encounter/HIMSTargetFacilityEncounterExample)</a></p><p><b>effective</b>: 2022-11-30</p><p><b>performer</b>: </p><ul><li><a href="#Organization_OrganizationExample">See above (Organization/OrganizationExample)</a></li><li><a href="#Practitioner_GeneralPractitionerExample">See above (Practitioner/GeneralPractitionerExample)</a></li></ul><p><b>value</b>: 16.2 kg/m2<span style="background: LightGoldenRodYellow"> (Details: UCUM code kg/m2 = 'kg/m2')</span></p><p><b>derivedFrom</b>: </p><ul><li><a href="#Observation_HIMSWeightExample">See above (Observation/HIMSWeightExample)</a></li><li><a href="#Observation_HeightExample">See above (Observation/HeightExample)</a></li></ul></div>
+        </text>
+        <status value="final"/>
+        <category>
+          <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/observation-category"/>
+            <code value="vital-signs"/>
+          </coding>
+        </category>
+        <code>
+          <coding>
+            <system value="http://loinc.org"/>
+            <code value="39156-5"/>
+          </coding>
+          <text value="Body mass index (BMI)"/>
+        </code>
+        <subject>
+          <reference value="Patient/HIMSPatientExample"/>
+        </subject>
+        <encounter>
+          <reference value="Encounter/HIMSTargetFacilityEncounterExample"/>
+        </encounter>
+        <effectiveDateTime value="2022-11-30"/>
+        <performer>
+          <reference value="Organization/OrganizationExample"/>
+        </performer>
+        <performer>
+          <reference value="Practitioner/GeneralPractitionerExample"/>
+        </performer>
+        <valueQuantity>
+          <value value="16.2"/>
+          <unit value="kg/m2"/>
+          <system value="http://unitsofmeasure.org"/>
+          <code value="kg/m2"/>
+        </valueQuantity>
+        <derivedFrom>
+          <reference value="Observation/HIMSWeightExample"/>
+        </derivedFrom>
+        <derivedFrom>
+          <reference value="Observation/HeightExample"/>
+        </derivedFrom>
+      </Observation>
+    </resource>
+    <request>
+      <method value="PUT"/>
+      <url value="Observation/BMIExample"/>
+    </request>
+  </entry>
+  <entry>
+    <fullUrl value="http://hapi-fhir:8080/fhir/Observation/RandomBloodSugarExample"/>
+    <resource>
+      <Observation>
+        <id value="RandomBloodSugarExample"/>
+        <meta>
+          <profile value="http://fhir.health.gov.lk/ips/StructureDefinition/random-blood-sugar"/>
+        </meta>
+        <text>
+          <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><a name="Observation_RandomBloodSugarExample"> </a><p><b>Generated Narrative: Observation</b><a name="RandomBloodSugarExample"> </a></p><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Resource Observation &quot;RandomBloodSugarExample&quot; </p><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-random-blood-sugar.html">Random Blood Sugar Observation</a></p></div><p><b>status</b>: final</p><p><b>category</b>: Laboratory <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="http://terminology.hl7.org/5.0.0/CodeSystem-observation-category.html">Observation Category Codes</a>#laboratory)</span></p><p><b>code</b>: Glucose <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="https://loinc.org/">LOINC</a>#15074-8)</span></p><p><b>subject</b>: <a href="#Patient_HIMSPatientExample">See above (Patient/HIMSPatientExample)</a></p><p><b>encounter</b>: <a href="#Encounter_HIMSTargetFacilityEncounterExample">See above (Encounter/HIMSTargetFacilityEncounterExample)</a></p><p><b>effective</b>: 2022-11-30</p><p><b>performer</b>: </p><ul><li><a href="#Organization_OrganizationExample">See above (Organization/OrganizationExample)</a></li><li><a href="#Practitioner_GeneralPractitionerExample">See above (Practitioner/GeneralPractitionerExample)</a></li></ul><p><b>value</b>: 6.3 mmol/L<span style="background: LightGoldenRodYellow"> (Details: UCUM code mmol/L = 'mmol/L')</span></p><p><b>interpretation</b>: High <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="http://terminology.hl7.org/5.0.0/CodeSystem-v3-ObservationInterpretation.html">ObservationInterpretation</a>#H)</span></p><h3>ReferenceRanges</h3><table class="grid"><tr><td style="display: none">-</td><td><b>Low</b></td><td><b>High</b></td><td><b>Type</b></td></tr><tr><td style="display: none">*</td><td>3.1 mmol/L<span style="background: LightGoldenRodYellow"> (Details: UCUM code mmol/L = 'mmol/L')</span></td><td>6.2 mmol/L<span style="background: LightGoldenRodYellow"> (Details: UCUM code mmol/L = 'mmol/L')</span></td><td>Type <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="http://terminology.hl7.org/5.0.0/CodeSystem-referencerange-meaning.html">Observation Reference Range Meaning Codes</a>#type)</span></td></tr></table></div>
+        </text>
+        <status value="final"/>
+        <category>
+          <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/observation-category"/>
+            <code value="laboratory"/>
+          </coding>
+        </category>
+        <code>
+          <coding>
+            <system value="http://loinc.org"/>
+            <code value="15074-8"/>
+          </coding>
+          <text value="Glucose"/>
+        </code>
+        <subject>
+          <reference value="Patient/HIMSPatientExample"/>
+        </subject>
+        <encounter>
+          <reference value="Encounter/HIMSTargetFacilityEncounterExample"/>
+        </encounter>
+        <effectiveDateTime value="2022-11-30"/>
+        <performer>
+          <reference value="Organization/OrganizationExample"/>
+        </performer>
+        <performer>
+          <reference value="Practitioner/GeneralPractitionerExample"/>
+        </performer>
+        <valueQuantity>
+          <value value="6.3"/>
+          <unit value="mmol/L"/>
+          <system value="http://unitsofmeasure.org"/>
+          <code value="mmol/L"/>
+        </valueQuantity>
+        <interpretation>
+          <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation"/>
+            <code value="H"/>
+          </coding>
+        </interpretation>
+        <referenceRange>
+          <low>
+            <value value="3.1"/>
+            <unit value="mmol/L"/>
+            <system value="http://unitsofmeasure.org"/>
+            <code value="mmol/L"/>
+          </low>
+          <high>
+            <value value="6.2"/>
+            <unit value="mmol/L"/>
+            <system value="http://unitsofmeasure.org"/>
+            <code value="mmol/L"/>
+          </high>
+          <type>
+            <coding>
+              <system value="http://terminology.hl7.org/CodeSystem/referencerange-meaning"/>
+              <code value="type"/>
+            </coding>
+          </type>
+        </referenceRange>
+      </Observation>
+    </resource>
+    <request>
+      <method value="PUT"/>
+      <url value="Observation/RandomBloodSugarExample"/>
+    </request>
+  </entry>
+  <entry>
+    <fullUrl value="http://hapi-fhir:8080/fhir/Observation/FastingBloodSugarExample"/>
+    <resource>
+      <Observation>
+        <id value="FastingBloodSugarExample"/>
+        <meta>
+          <profile value="http://fhir.health.gov.lk/ips/StructureDefinition/fasting-blood-sugar"/>
+        </meta>
+        <text>
+          <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><a name="Observation_FastingBloodSugarExample"> </a><p><b>Generated Narrative: Observation</b><a name="FastingBloodSugarExample"> </a></p><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Resource Observation &quot;FastingBloodSugarExample&quot; </p><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-fasting-blood-sugar.html">Fasting Blood Sugar Observation</a></p></div><p><b>status</b>: final</p><p><b>category</b>: Laboratory <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="http://terminology.hl7.org/5.0.0/CodeSystem-observation-category.html">Observation Category Codes</a>#laboratory)</span></p><p><b>code</b>: Fasting glucose <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="https://loinc.org/">LOINC</a>#76629-5)</span></p><p><b>subject</b>: <a href="#Patient_HIMSPatientExample">See above (Patient/HIMSPatientExample)</a></p><p><b>encounter</b>: <a href="#Encounter_HIMSTargetFacilityEncounterExample">See above (Encounter/HIMSTargetFacilityEncounterExample)</a></p><p><b>effective</b>: 2022-11-30</p><p><b>performer</b>: </p><ul><li><a href="#Organization_OrganizationExample">See above (Organization/OrganizationExample)</a></li><li><a href="#Practitioner_GeneralPractitionerExample">See above (Practitioner/GeneralPractitionerExample)</a></li></ul><p><b>value</b>: 5.4 mmol/L<span style="background: LightGoldenRodYellow"> (Details: UCUM code mmol/L = 'mmol/L')</span></p><p><b>interpretation</b>: Normal <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="http://terminology.hl7.org/5.0.0/CodeSystem-v3-ObservationInterpretation.html">ObservationInterpretation</a>#N)</span></p><h3>ReferenceRanges</h3><table class="grid"><tr><td style="display: none">-</td><td><b>Low</b></td><td><b>High</b></td><td><b>Type</b></td></tr><tr><td style="display: none">*</td><td>3.9 mmol/L<span style="background: LightGoldenRodYellow"> (Details: UCUM code mmol/L = 'mmol/L')</span></td><td>5.6 mmol/L<span style="background: LightGoldenRodYellow"> (Details: UCUM code mmol/L = 'mmol/L')</span></td><td>Type <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="http://terminology.hl7.org/5.0.0/CodeSystem-referencerange-meaning.html">Observation Reference Range Meaning Codes</a>#type)</span></td></tr></table></div>
+        </text>
+        <status value="final"/>
+        <category>
+          <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/observation-category"/>
+            <code value="laboratory"/>
+          </coding>
+        </category>
+        <code>
+          <coding>
+            <system value="http://loinc.org"/>
+            <code value="76629-5"/>
+          </coding>
+          <text value="Fasting glucose"/>
+        </code>
+        <subject>
+          <reference value="Patient/HIMSPatientExample"/>
+        </subject>
+        <encounter>
+          <reference value="Encounter/HIMSTargetFacilityEncounterExample"/>
+        </encounter>
+        <effectiveDateTime value="2022-11-30"/>
+        <performer>
+          <reference value="Organization/OrganizationExample"/>
+        </performer>
+        <performer>
+          <reference value="Practitioner/GeneralPractitionerExample"/>
+        </performer>
+        <valueQuantity>
+          <value value="5.4"/>
+          <unit value="mmol/L"/>
+          <system value="http://unitsofmeasure.org"/>
+          <code value="mmol/L"/>
+        </valueQuantity>
+        <interpretation>
+          <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation"/>
+            <code value="N"/>
+          </coding>
+        </interpretation>
+        <referenceRange>
+          <low>
+            <value value="3.9"/>
+            <unit value="mmol/L"/>
+            <system value="http://unitsofmeasure.org"/>
+            <code value="mmol/L"/>
+          </low>
+          <high>
+            <value value="5.6"/>
+            <unit value="mmol/L"/>
+            <system value="http://unitsofmeasure.org"/>
+            <code value="mmol/L"/>
+          </high>
+          <type>
+            <coding>
+              <system value="http://terminology.hl7.org/CodeSystem/referencerange-meaning"/>
+              <code value="type"/>
+            </coding>
+          </type>
+        </referenceRange>
+      </Observation>
+    </resource>
+    <request>
+      <method value="PUT"/>
+      <url value="Observation/FastingBloodSugarExample"/>
+    </request>
+  </entry>
+  <entry>
+    <fullUrl value="http://hapi-fhir:8080/fhir/Observation/TotalCholesterolExample"/>
+    <resource>
+      <Observation>
+        <id value="TotalCholesterolExample"/>
+        <meta>
+          <profile value="http://fhir.health.gov.lk/ips/StructureDefinition/total-cholesterol"/>
+        </meta>
+        <text>
+          <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><a name="Observation_TotalCholesterolExample"> </a><p><b>Generated Narrative: Observation</b><a name="TotalCholesterolExample"> </a></p><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Resource Observation &quot;TotalCholesterolExample&quot; </p><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-total-cholesterol.html">Total Cholesterol Observation</a></p></div><p><b>status</b>: final</p><p><b>category</b>: Laboratory <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="http://terminology.hl7.org/5.0.0/CodeSystem-observation-category.html">Observation Category Codes</a>#laboratory)</span></p><p><b>code</b>: Cholesterol <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="https://loinc.org/">LOINC</a>#2093-3)</span></p><p><b>subject</b>: <a href="#Patient_HIMSPatientExample">See above (Patient/HIMSPatientExample)</a></p><p><b>encounter</b>: <a href="#Encounter_HIMSTargetFacilityEncounterExample">See above (Encounter/HIMSTargetFacilityEncounterExample)</a></p><p><b>effective</b>: 2022-11-30</p><p><b>performer</b>: </p><ul><li><a href="#Organization_OrganizationExample">See above (Organization/OrganizationExample)</a></li><li><a href="#Practitioner_GeneralPractitionerExample">See above (Practitioner/GeneralPractitionerExample)</a></li></ul><p><b>value</b>: 6.3 mmol/L<span style="background: LightGoldenRodYellow"> (Details: UCUM code mmol/L = 'mmol/L')</span></p><p><b>interpretation</b>: High <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="http://terminology.hl7.org/5.0.0/CodeSystem-v3-ObservationInterpretation.html">ObservationInterpretation</a>#H)</span></p><h3>ReferenceRanges</h3><table class="grid"><tr><td style="display: none">-</td><td><b>High</b></td><td><b>Type</b></td></tr><tr><td style="display: none">*</td><td>5 mmol/L<span style="background: LightGoldenRodYellow"> (Details: UCUM code mmol/L = 'mmol/L')</span></td><td>Type <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="http://terminology.hl7.org/5.0.0/CodeSystem-referencerange-meaning.html">Observation Reference Range Meaning Codes</a>#type)</span></td></tr></table></div>
+        </text>
+        <status value="final"/>
+        <category>
+          <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/observation-category"/>
+            <code value="laboratory"/>
+          </coding>
+        </category>
+        <code>
+          <coding>
+            <system value="http://loinc.org"/>
+            <code value="2093-3"/>
+          </coding>
+          <text value="Cholesterol"/>
+        </code>
+        <subject>
+          <reference value="Patient/HIMSPatientExample"/>
+        </subject>
+        <encounter>
+          <reference value="Encounter/HIMSTargetFacilityEncounterExample"/>
+        </encounter>
+        <effectiveDateTime value="2022-11-30"/>
+        <performer>
+          <reference value="Organization/OrganizationExample"/>
+        </performer>
+        <performer>
+          <reference value="Practitioner/GeneralPractitionerExample"/>
+        </performer>
+        <valueQuantity>
+          <value value="6.3"/>
+          <unit value="mmol/L"/>
+          <system value="http://unitsofmeasure.org"/>
+          <code value="mmol/L"/>
+        </valueQuantity>
+        <interpretation>
+          <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation"/>
+            <code value="H"/>
+          </coding>
+        </interpretation>
+        <referenceRange>
+          <high>
+            <value value="5"/>
+            <unit value="mmol/L"/>
+            <system value="http://unitsofmeasure.org"/>
+            <code value="mmol/L"/>
+          </high>
+          <type>
+            <coding>
+              <system value="http://terminology.hl7.org/CodeSystem/referencerange-meaning"/>
+              <code value="type"/>
+            </coding>
+          </type>
+        </referenceRange>
+      </Observation>
+    </resource>
+    <request>
+      <method value="PUT"/>
+      <url value="Observation/TotalCholesterolExample"/>
+    </request>
+  </entry>
+  <entry>
+    <fullUrl value="http://hapi-fhir:8080/fhir/AllergyIntolerance/NoAllergiesExample"/>
+    <resource>
+      <AllergyIntolerance>
+        <id value="NoAllergiesExample"/>
+        <meta>
+          <profile value="http://fhir.health.gov.lk/ips/StructureDefinition/hims-allergy-intolerance"/>
+        </meta>
+        <text>
+          <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><a name="AllergyIntolerance_NoAllergiesExample"> </a><p><b>Generated Narrative: AllergyIntolerance</b><a name="NoAllergiesExample"> </a></p><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Resource AllergyIntolerance &quot;NoAllergiesExample&quot; </p><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-hims-allergy-intolerance.html">Allergy Intolerance</a></p></div><p><b>clinicalStatus</b>: Inactive <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="http://terminology.hl7.org/5.0.0/CodeSystem-allergyintolerance-clinical.html">AllergyIntolerance Clinical Status Codes</a>#inactive)</span></p><p><b>type</b>: allergy</p><p><b>code</b>: No information about allergies <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="http://hl7.org/fhir/uv/ips/STU1.1/CodeSystem-absent-unknown-uv-ips.html">Absent and Unknown Data - IPS</a>#no-allergy-info)</span></p><p><b>patient</b>: <a href="#Patient_HIMSPatientExample">See above (Patient/HIMSPatientExample)</a></p><p><b>encounter</b>: <a href="#Encounter_HIMSTargetFacilityEncounterExample">See above (Encounter/HIMSTargetFacilityEncounterExample)</a></p></div>
+        </text>
+        <clinicalStatus>
+          <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/allergyintolerance-clinical"/>
+            <code value="inactive"/>
+          </coding>
+        </clinicalStatus>
+        <type value="allergy"/>
+        <code>
+          <coding>
+            <system value="http://hl7.org/fhir/uv/ips/CodeSystem/absent-unknown-uv-ips"/>
+            <code value="no-allergy-info"/>
+          </coding>
+          <text value="No information about allergies"/>
+        </code>
+        <patient>
+          <reference value="Patient/HIMSPatientExample"/>
+        </patient>
+        <encounter>
+          <reference value="Encounter/HIMSTargetFacilityEncounterExample"/>
+        </encounter>
+      </AllergyIntolerance>
+    </resource>
+    <request>
+      <method value="PUT"/>
+      <url value="AllergyIntolerance/NoAllergiesExample"/>
+    </request>
+  </entry>
+  <entry>
+    <fullUrl value="http://hapi-fhir:8080/fhir/MedicationRequest/NoPrescriptionsExample"/>
+    <resource>
+      <MedicationRequest>
+        <id value="NoPrescriptionsExample"/>
+        <meta>
+          <profile value="http://fhir.health.gov.lk/ips/StructureDefinition/no-medication-requested"/>
+        </meta>
+        <text>
+          <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><a name="MedicationRequest_NoPrescriptionsExample"> </a><p><b>Generated Narrative: MedicationRequest</b><a name="NoPrescriptionsExample"> </a></p><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Resource MedicationRequest &quot;NoPrescriptionsExample&quot; </p><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-no-medication-requested.html">Prescription Not Available</a></p></div><p><b>status</b>: completed</p><p><b>intent</b>: order</p><p><b>medication</b>: No information about medications <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="http://hl7.org/fhir/uv/ips/STU1.1/CodeSystem-absent-unknown-uv-ips.html">Absent and Unknown Data - IPS</a>#no-medication-info)</span></p><p><b>subject</b>: <a href="#Patient_HIMSPatientExample">See above (Patient/HIMSPatientExample)</a></p><p><b>encounter</b>: <a href="#Encounter_HIMSTargetFacilityEncounterExample">See above (Encounter/HIMSTargetFacilityEncounterExample)</a></p><p><b>note</b>: Additional information (By Organization/OrganizationExample @Oct 12, 2023, 1:21:33 AM)</p></div>
+        </text>
+        <status value="completed"/>
+        <intent value="order"/>
+        <medicationCodeableConcept>
+          <coding>
+            <system value="http://hl7.org/fhir/uv/ips/CodeSystem/absent-unknown-uv-ips"/>
+            <code value="no-medication-info"/>
+          </coding>
+        </medicationCodeableConcept>
+        <subject>
+          <reference value="Patient/HIMSPatientExample"/>
+        </subject>
+        <encounter>
+          <reference value="Encounter/HIMSTargetFacilityEncounterExample"/>
+        </encounter>
+        <note>
+          <authorReference>
+            <reference value="Organization/OrganizationExample"/>
+          </authorReference>
+          <time value="2023-10-11T17:21:33-08:00"/>
+          <text value="Additional information"/>
+        </note>
+      </MedicationRequest>
+    </resource>
+    <request>
+      <method value="PUT"/>
+      <url value="MedicationRequest/NoPrescriptionsExample"/>
+    </request>
+  </entry>
+  <entry>
+    <fullUrl value="http://hapi-fhir:8080/fhir/RiskAssessment/CVDRiskCategoryExample"/>
+    <resource>
+      <RiskAssessment>
+        <id value="CVDRiskCategoryExample"/>
+        <meta>
+          <profile value="http://fhir.health.gov.lk/ips/StructureDefinition/cvd-risk-category"/>
+        </meta>
+        <text>
+          <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><a name="RiskAssessment_CVDRiskCategoryExample"> </a><p><b>Generated Narrative: RiskAssessment</b><a name="CVDRiskCategoryExample"> </a></p><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Resource RiskAssessment &quot;CVDRiskCategoryExample&quot; </p><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-cvd-risk-category.html">Cardiovascular Risk Assessment</a></p></div><p><b>status</b>: final</p><p><b>code</b>: Assessment for risk of cardiovascular disease <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="https://browser.ihtsdotools.org/">SNOMED CT</a>#441829007)</span></p><p><b>subject</b>: <a href="#Patient_HIMSPatientExample">See above (Patient/HIMSPatientExample)</a></p><p><b>encounter</b>: <a href="#Encounter_HIMSTargetFacilityEncounterExample">See above (Encounter/HIMSTargetFacilityEncounterExample)</a></p><p><b>occurrence</b>: 2023-10-06 13:28:17-0500</p><p><b>performer</b>: <a href="#Practitioner_GeneralPractitionerExample">See above (Practitioner/GeneralPractitionerExample)</a></p><p><b>basis</b>: </p><ul><li><a href="#Patient_HIMSPatientExample">See above (Patient/HIMSPatientExample)</a></li><li><a href="#Observation_RiskBehaviourTobaccoSmokerExample">See above (Observation/RiskBehaviourTobaccoSmokerExample)</a></li><li><a href="#Observation_TotalCholesterolExample">See above (Observation/TotalCholesterolExample)</a></li><li><a href="#Observation_BloodPressureExample">See above (Observation/BloodPressureExample)</a></li><li><a href="#Observation_RandomBloodSugarExample">See above (Observation/RandomBloodSugarExample)</a></li><li><a href="#Observation_FastingBloodSugarExample">See above (Observation/FastingBloodSugarExample)</a></li></ul><h3>Predictions</h3><table class="grid"><tr><td style="display: none">-</td><td><b>Outcome</b></td><td><b>Probability[x]</b></td><td><b>QualitativeRisk</b></td><td><b>When[x]</b></td></tr><tr><td style="display: none">*</td><td>Risk of heart attack <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="https://browser.ihtsdotools.org/">SNOMED CT</a>#395112001)</span></td><td>0.02</td><td>Risk Category <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="CodeSystem-cs-cvd-risk-category.html">Cardiovascular Risk Categories</a>#Critical)</span></td><td>39-49 years</td></tr></table></div>
+        </text>
+        <status value="final"/>
+        <code>
+          <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="441829007"/>
+          </coding>
+          <text value="Assessment for risk of cardiovascular disease"/>
+        </code>
+        <subject>
+          <reference value="Patient/HIMSPatientExample"/>
+        </subject>
+        <encounter>
+          <reference value="Encounter/HIMSTargetFacilityEncounterExample"/>
+        </encounter>
+        <occurrenceDateTime value="2023-10-06T13:28:17-05:00"/>
+        <performer>
+          <reference value="Practitioner/GeneralPractitionerExample"/>
+        </performer>
+        <basis>
+          <reference value="Patient/HIMSPatientExample"/>
+        </basis>
+        <basis>
+          <reference value="Observation/RiskBehaviourTobaccoSmokerExample"/>
+        </basis>
+        <basis>
+          <reference value="Observation/TotalCholesterolExample"/>
+        </basis>
+        <basis>
+          <reference value="Observation/BloodPressureExample"/>
+        </basis>
+        <basis>
+          <reference value="Observation/RandomBloodSugarExample"/>
+        </basis>
+        <basis>
+          <reference value="Observation/FastingBloodSugarExample"/>
+        </basis>
+        <prediction>
+          <outcome>
+            <coding>
+              <system value="http://snomed.info/sct"/>
+              <code value="395112001"/>
+            </coding>
+            <text value="Risk of heart attack"/>
+          </outcome>
+          <probabilityDecimal value="0.02"/>
+          <qualitativeRisk>
+            <coding>
+              <system value="http://fhir.health.gov.lk/ips/CodeSystem/cs-cvd-risk-category"/>
+              <code value="Critical"/>
+            </coding>
+            <text value="Risk Category"/>
+          </qualitativeRisk>
+          <whenRange>
+            <low>
+              <value value="39"/>
+              <unit value="years"/>
+              <system value="http://unitsofmeasure.org"/>
+              <code value="a"/>
+            </low>
+            <high>
+              <value value="49"/>
+              <unit value="years"/>
+              <system value="http://unitsofmeasure.org"/>
+              <code value="a"/>
+            </high>
+          </whenRange>
+        </prediction>
+      </RiskAssessment>
+    </resource>
+    <request>
+      <method value="PUT"/>
+      <url value="RiskAssessment/CVDRiskCategoryExample"/>
+    </request>
+  </entry>
+  <entry>
+    <fullUrl value="http://hapi-fhir:8080/fhir/CarePlan/FollowUpAtHLCExample"/>
+    <resource>
+      <CarePlan>
+        <id value="FollowUpAtHLCExample"/>
+        <meta>
+          <profile value="http://fhir.health.gov.lk/ips/StructureDefinition/follow-up-at-hlc"/>
+        </meta>
+        <text>
+          <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><a name="CarePlan_FollowUpAtHLCExample"> </a><p><b>Generated Narrative: CarePlan</b><a name="FollowUpAtHLCExample"> </a></p><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Resource CarePlan &quot;FollowUpAtHLCExample&quot; </p><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-follow-up-at-hlc.html">Follow-up at HLC</a></p></div><p><b>status</b>: active</p><p><b>intent</b>: order</p><p><b>subject</b>: <a href="#Patient_HIMSPatientExample">See above (Patient/HIMSPatientExample)</a></p><p><b>encounter</b>: <a href="#Encounter_HIMSTargetFacilityEncounterExample">See above (Encounter/HIMSTargetFacilityEncounterExample)</a></p><p><b>period</b>: 2022-12-01 --&gt; (ongoing)</p><p><b>contributor</b>: <a href="#Organization_OrganizationExample">See above (Organization/OrganizationExample)</a></p><h3>Activities</h3><table class="grid"><tr><td style="display: none">-</td><td><b>Reference</b></td></tr><tr><td style="display: none">*</td><td><a href="#ServiceRequest_FollowUpPlanServiceRequestExample">See above (ServiceRequest/FollowUpPlanServiceRequestExample)</a></td></tr></table></div>
+        </text>
+        <status value="active"/>
+        <intent value="order"/>
+        <subject>
+          <reference value="Patient/HIMSPatientExample"/>
+        </subject>
+        <encounter>
+          <reference value="Encounter/HIMSTargetFacilityEncounterExample"/>
+        </encounter>
+        <period>
+          <start value="2022-12-01"/>
+        </period>
+        <contributor>
+          <reference value="Organization/OrganizationExample"/>
+        </contributor>
+        <activity>
+          <reference>
+            <reference value="ServiceRequest/FollowUpPlanServiceRequestExample"/>
+          </reference>
+        </activity>
+      </CarePlan>
+    </resource>
+    <request>
+      <method value="PUT"/>
+      <url value="CarePlan/FollowUpAtHLCExample"/>
+    </request>
+  </entry>
+  <entry>
+    <fullUrl value="http://hapi-fhir:8080/fhir/ServiceRequest/FollowUpPlanServiceRequestExample"/>
+    <resource>
+      <ServiceRequest>
+        <id value="FollowUpPlanServiceRequestExample"/>
+        <meta>
+          <profile value="http://fhir.health.gov.lk/ips/StructureDefinition/follow-up-plan"/>
+        </meta>
+        <text>
+          <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><a name="ServiceRequest_FollowUpPlanServiceRequestExample"> </a><p><b>Generated Narrative: ServiceRequest</b><a name="FollowUpPlanServiceRequestExample"> </a></p><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Resource ServiceRequest &quot;FollowUpPlanServiceRequestExample&quot; </p><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-follow-up-plan.html">Referral Request For Follow-up Plan</a></p></div><p><b>status</b>: completed</p><p><b>intent</b>: order</p><p><b>code</b>: Follow up at HLC <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="https://browser.ihtsdotools.org/">SNOMED CT</a>#410321003)</span></p><p><b>subject</b>: <a href="#Patient_HIMSPatientExample">See above (Patient/HIMSPatientExample)</a></p><p><b>encounter</b>: <a href="#Encounter_HIMSTargetFacilityEncounterExample">See above (Encounter/HIMSTargetFacilityEncounterExample)</a></p><p><b>occurrence</b>: Count 1 times, Duration 3?ngen-7?, Once</p><p><b>requester</b>: <a href="#Practitioner_GeneralPractitionerExample">See above (Practitioner/GeneralPractitionerExample)</a></p><p><b>locationReference</b>: <a href="#Location_ProvidersLocationExample">See above (Location/ProvidersLocationExample)</a></p><p><b>reasonCode</b>: Followed in 6 months at HLC <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="CodeSystem-cs-follow-up-reasons.html">Follow up at HLC</a>#Followed-in-3-years-at-hlc)</span></p></div>
+        </text>
+        <status value="completed"/>
+        <intent value="order"/>
+        <code>
+          <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="410321003"/>
+          </coding>
+          <text value="Follow up at HLC"/>
+        </code>
+        <subject>
+          <reference value="Patient/HIMSPatientExample"/>
+        </subject>
+        <encounter>
+          <reference value="Encounter/HIMSTargetFacilityEncounterExample"/>
+        </encounter>
+        <occurrenceTiming>
+          <repeat>
+            <count value="1"/>
+            <duration value="3"/>
+            <durationUnit value="mo"/>
+          </repeat>
+        </occurrenceTiming>
+        <requester>
+          <reference value="Practitioner/GeneralPractitionerExample"/>
+        </requester>
+        <locationReference>
+          <reference value="Location/ProvidersLocationExample"/>
+        </locationReference>
+        <reasonCode>
+          <coding>
+            <system value="http://fhir.health.gov.lk/ips/CodeSystem/cs-follow-up-reasons"/>
+            <code value="Followed-in-3-years-at-hlc"/>
+          </coding>
+          <text value="Followed in 6 months at HLC"/>
+        </reasonCode>
+      </ServiceRequest>
+    </resource>
+    <request>
+      <method value="PUT"/>
+      <url value="ServiceRequest/FollowUpPlanServiceRequestExample"/>
+    </request>
+  </entry>
+  <entry>
+    <fullUrl value="http://hapi-fhir:8080/fhir/Practitioner/GeneralPractitionerExample"/>
+    <resource>
+      <Practitioner>
+        <id value="GeneralPractitionerExample"/>
+        <meta>
+          <profile value="http://fhir.health.gov.lk/ips/StructureDefinition/practitioner"/>
+        </meta>
+        <text>
+          <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><a name="Practitioner_GeneralPractitionerExample"> </a><p><b>Generated Narrative: Practitioner</b><a name="GeneralPractitionerExample"> </a></p><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Resource Practitioner &quot;GeneralPractitionerExample&quot; </p><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-practitioner.html">Practitioner</a></p></div><p><b>name</b>: Tom Junes Smith </p><p><b>telecom</b>: ph: 27537652509(WORK), <a href="mailto:someone@something.org">someone@something.org</a></p></div>
+        </text>
+        <name>
+          <family value="Smith"/>
+          <given value="Tom"/>
+          <given value="Junes"/>
+          <prefix value="Dr"/>
+        </name>
+        <telecom>
+          <system value="phone"/>
+          <value value="27537652509"/>
+          <use value="work"/>
+        </telecom>
+        <telecom>
+          <system value="email"/>
+          <value value="someone@something.org"/>
+          <use value="home"/>
+        </telecom>
+      </Practitioner>
+    </resource>
+    <request>
+      <method value="PUT"/>
+      <url value="Practitioner/GeneralPractitionerExample"/>
+    </request>
+  </entry>
+  <entry>
+    <fullUrl value="http://hapi-fhir:8080/fhir/Location/ProvidersLocationExample"/>
+    <resource>
+      <Location>
+        <id value="ProvidersLocationExample"/>
+        <meta>
+          <profile value="http://fhir.health.gov.lk/ips/StructureDefinition/providers-location"/>
+        </meta>
+        <text>
+          <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><a name="Location_ProvidersLocationExample"> </a><p><b>Generated Narrative: Location</b><a name="ProvidersLocationExample"> </a></p><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Resource Location &quot;ProvidersLocationExample&quot; </p><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-providers-location.html">Providers Location</a></p></div><p><b>identifier</b>: Provider location identifier/Location-ID-1, Provider location identifier/Location-ID-2</p><p><b>status</b>: active</p><p><b>name</b>: Name for the location</p><p><b>telecom</b>: <a href="tel:+27829999999">+27829999999</a>, <a href="mailto:someone@something.com">someone@something.com</a>, <a href="mailto:someone2@something.com">someone2@something.com</a></p><p><b>address</b>: 177 Nawala Road Nugegoda Colombo 32350 LK </p><p><b>managingOrganization</b>: <a href="#Organization_OrganizationExample">See above (Organization/OrganizationExample)</a></p></div>
+        </text>
+        <identifier>
+          <type>
+            <coding>
+              <system value="http://fhir.health.gov.lk/ips/CodeSystem/cs-identifier-types"/>
+              <code value="PLOC"/>
+            </coding>
+            <text value="Provider location identifier"/>
+          </type>
+          <system value="http://fhir.health.gov.lk/ips/identifier/provider-location"/>
+          <value value="Location-ID-1"/>
+        </identifier>
+        <identifier>
+          <type>
+            <coding>
+              <system value="http://fhir.health.gov.lk/ips/CodeSystem/cs-identifier-types"/>
+              <code value="PLOC"/>
+            </coding>
+            <text value="Provider location identifier"/>
+          </type>
+          <system value="http://fhir.health.gov.lk/ips/identifier/provider-location"/>
+          <value value="Location-ID-2"/>
+        </identifier>
+        <status value="active"/>
+        <name value="Name for the location"/>
+        <telecom>
+          <system value="phone"/>
+          <value value="+27829999999"/>
+        </telecom>
+        <telecom>
+          <system value="email"/>
+          <value value="someone@something.com"/>
+        </telecom>
+        <telecom>
+          <system value="email"/>
+          <value value="someone2@something.com"/>
+        </telecom>
+        <address>
+          <type value="postal"/>
+          <line value="177"/>
+          <line value="Nawala Road"/>
+          <city value="Nugegoda"/>
+          <district value="Ampara"/>
+          <state value="Colombo"/>
+          <postalCode value="32350"/>
+          <country value="LK"/>
+        </address>
+        <managingOrganization>
+          <reference value="Organization/OrganizationExample"/>
+        </managingOrganization>
+      </Location>
+    </resource>
+    <request>
+      <method value="PUT"/>
+      <url value="Location/ProvidersLocationExample"/>
+    </request>
+  </entry>
+  <entry>
+    <fullUrl value="http://hapi-fhir:8080/fhir/Organization/OrganizationExample"/>
+    <resource>
+      <Organization>
+        <id value="OrganizationExample"/>
+        <meta>
+          <profile value="http://fhir.health.gov.lk/ips/StructureDefinition/organization"/>
+        </meta>
+        <text>
+          <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><a name="Organization_OrganizationExample"> </a><p><b>Generated Narrative: Organization</b><a name="OrganizationExample"> </a></p><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Resource Organization &quot;OrganizationExample&quot; </p><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-organization.html">Organization</a></p></div><p><b>identifier</b>: Organization identifier/facility1</p><p><b>name</b>: Some Health Facility</p></div>
+        </text>
+        <identifier>
+          <type>
+            <coding>
+              <system value="http://terminology.hl7.org/CodeSystem/v2-0203"/>
+              <code value="XX"/>
+            </coding>
+            <text value="Organization identifier"/>
+          </type>
+          <system value="http://fhir.health.gov.lk/ips/identifier/organization"/>
+          <value value="facility1"/>
+        </identifier>
+        <name value="Some Health Facility"/>
+      </Organization>
+    </resource>
+    <request>
+      <method value="PUT"/>
+      <url value="Organization/OrganizationExample"/>
+    </request>
+  </entry>
+</Bundle>

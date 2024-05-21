@@ -1,0 +1,13 @@
+URL,Version,Status,OIDs,Name,Title,Descriptino,Used
+http://fhir.health.gov.lk/ips/CodeSystem/cs-composition-codes,0.1.0,active,,SectionCompositionCodes,Composition Section Codes,"A list of Composition section codes.",
+http://fhir.health.gov.lk/ips/CodeSystem/cs-cvd-risk-category,0.1.0,active,,CSCVDRiskCategory,Cardiovascular Risk Categories,"Cardiovascular risk is expressed as a percentage",
+http://fhir.health.gov.lk/ips/CodeSystem/cs-device-classification,0.1.0,active,,CSDeviceClassificationCodes,Device Classification Codes,"A list of device classification codes.",
+http://fhir.health.gov.lk/ips/CodeSystem/cs-drug-frequency,0.1.0,active,,CSDrugFrequency,Drug Frequency Codes,"A list of drug frequency code for medication requests.",
+http://fhir.health.gov.lk/ips/CodeSystem/cs-follow-up-reasons,0.1.0,active,,CSFollowUpReasons,Follow up at HLC,"Follow up at Healthy Lifestyle Center",
+http://fhir.health.gov.lk/ips/CodeSystem/cs-identifier-types,0.1.0,active,,CSIdentifierTypes,Patient Business Identifier Types,"Patient Business Identifier Types",
+http://fhir.health.gov.lk/ips/CodeSystem/cs-investigation,0.1.0,active,,CSInvestigations,Investigations,"Investigations",
+http://fhir.health.gov.lk/ips/CodeSystem/cs-medical-conditions-additional,0.1.0,active,,CSMedicalConditionAdditional,Additional Conditions,"Represents previous, pre-existing and new conditions.",
+http://fhir.health.gov.lk/ips/CodeSystem/cs-medication-name-msd,0.1.0,active,,CSMedicationNamesForMSD,Medication Names For Pharmacy,"A list of typical medications that can be prescribed to the patient.",
+http://fhir.health.gov.lk/ips/CodeSystem/cs-medication-name-non-msd,0.1.0,active,,CSMedicationNamesForNonMSD,Medication Names Not For Pharmacy,"A list of medications that typically are not prescribed for collection at the pharamcy a.k.a. Non-Medical Supplies.",
+http://fhir.health.gov.lk/ips/CodeSystem/cs-procedure,0.1.0,active,,CSProcedures,Procedures,"Procedures",
+http://fhir.health.gov.lk/ips/CodeSystem/cs-procedure-imaging,0.1.0,active,,CSImagingProcedures,Procedures,"Imaging Procedures",

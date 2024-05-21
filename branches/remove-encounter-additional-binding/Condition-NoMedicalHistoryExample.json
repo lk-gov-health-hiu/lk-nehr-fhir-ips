@@ -1,0 +1,30 @@
+{
+  "resourceType" : "Condition",
+  "id" : "NoMedicalHistoryExample",
+  "meta" : {
+    "profile" : ["http://fhir.health.gov.lk/ips/StructureDefinition/no-medical-history"]
+  },
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: Condition</b><a name=\"NoMedicalHistoryExample\"> </a><a name=\"hcNoMedicalHistoryExample\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource Condition &quot;NoMedicalHistoryExample&quot; </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-no-medical-history.html\">Medical History</a></p></div><p><b>clinicalStatus</b>: Inactive <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"http://terminology.hl7.org/5.0.0/CodeSystem-condition-clinical.html\">Condition Clinical Status Codes</a>#inactive)</span></p><p><b>code</b>: No information about problems <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"http://hl7.org/fhir/uv/ips/STU1.1/CodeSystem-absent-unknown-uv-ips.html\">Absent and Unknown Data - IPS</a>#no-problem-info)</span></p><p><b>subject</b>: <a href=\"Patient-PatientExample.html\">Patient/PatientExample</a> &quot; SMITH&quot;</p><p><b>encounter</b>: <a href=\"Encounter-TargetFacilityEncounterExample.html\">Encounter/TargetFacilityEncounterExample</a></p><p><b>recordedDate</b>: 2023-10-06 13:28:17-0500</p></div>"
+  },
+  "clinicalStatus" : {
+    "coding" : [{
+      "system" : "http://terminology.hl7.org/CodeSystem/condition-clinical",
+      "code" : "inactive"
+    }]
+  },
+  "code" : {
+    "coding" : [{
+      "system" : "http://hl7.org/fhir/uv/ips/CodeSystem/absent-unknown-uv-ips",
+      "code" : "no-problem-info"
+    }]
+  },
+  "subject" : {
+    "reference" : "Patient/PatientExample"
+  },
+  "encounter" : {
+    "reference" : "Encounter/TargetFacilityEncounterExample"
+  },
+  "recordedDate" : "2023-10-06T13:28:17-05:00"
+}

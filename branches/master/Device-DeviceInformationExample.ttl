@@ -1,0 +1,53 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sct: <http://snomed.info/id/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://fhir.health.gov.lk/ips/Device/DeviceInformationExample> a fhir:Device ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "DeviceInformationExample"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://fhir.health.gov.lk/ips/StructureDefinition/device-information"^^xsd:anyURI ;
+       fhir:link <http://fhir.health.gov.lk/ips/StructureDefinition/device-information>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: Device </b><a name=\"DeviceInformationExample\"> </a><a name=\"hcDeviceInformationExample\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">ResourceDevice &quot;DeviceInformationExample&quot; </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-device-information.html\">Device Information</a></p></div><p><b>identifier</b>: <code>http://fhir.health.gov.lk/ips/identifier/system-id</code>/OpenMRS-1234-1</p><p><b>status</b>: active</p><p><b>type</b>: Medical record <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"https://browser.ihtsdotools.org/\">SNOMED CT</a>#129465004)</span></p><h3>Versions</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Type</b></td><td><b>Value</b></td></tr><tr><td style=\"display: none\">*</td><td>OpenMRS <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"CodeSystem-cs-device-classification.html\">Device Classification Codes</a>#OpenMRS)</span></td><td>2.5.0</td></tr></table><p><b>owner</b>: <a href=\"Organization-OrganizationExample.html\">Organization/OrganizationExample</a> &quot;Some Health Facility&quot;</p><p><b>location</b>: <a href=\"Location-ProvidersLocationExample.html\">Location/ProvidersLocationExample</a> &quot;Name for the location&quot;</p></div>"
+  ] ; # 
+  fhir:identifier ( [
+     fhir:system [ fhir:v "http://fhir.health.gov.lk/ips/identifier/system-id"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "OpenMRS-1234-1" ]
+  ] ) ; # 
+  fhir:status [ fhir:v "active"] ; # 
+  fhir:type [
+     fhir:coding ( [
+       a sct:129465004 ;
+       fhir:system [ fhir:v "http://snomed.info/sct"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "129465004" ]
+     ] )
+  ] ; # 
+  fhir:version ( [
+     fhir:type [
+       fhir:coding ( [
+         fhir:system [ fhir:v "http://fhir.health.gov.lk/ips/CodeSystem/cs-device-classification"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "OpenMRS" ]
+       ] )
+     ] ;
+     fhir:value [ fhir:v "2.5.0" ]
+  ] ) ; # 
+  fhir:owner [
+     fhir:link <http://fhir.health.gov.lk/ips/Organization/OrganizationExample> ;
+     fhir:reference [ fhir:v "Organization/OrganizationExample" ]
+  ] ; # 
+  fhir:location [
+     fhir:link <http://fhir.health.gov.lk/ips/Location/ProvidersLocationExample> ;
+     fhir:reference [ fhir:v "Location/ProvidersLocationExample" ]
+  ] . # 
+
+# -------------------------------------------------------------------------------------
+

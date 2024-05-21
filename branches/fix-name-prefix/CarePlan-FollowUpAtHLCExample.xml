@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<CarePlan xmlns="http://hl7.org/fhir">
+  <id value="FollowUpAtHLCExample"/>
+  <meta>
+    <profile value="http://fhir.health.gov.lk/ips/StructureDefinition/follow-up-at-hlc"/>
+  </meta>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative: CarePlan</b><a name="FollowUpAtHLCExample"> </a></p><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Resource CarePlan &quot;FollowUpAtHLCExample&quot; </p><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-follow-up-at-hlc.html">Follow-up at HLC</a></p></div><p><b>status</b>: active</p><p><b>intent</b>: order</p><p><b>subject</b>: <a href="Patient-HIMSPatientExample.html">Patient/HIMSPatientExample</a> &quot; SMITH&quot;</p><p><b>encounter</b>: <a href="Encounter-HIMSTargetFacilityEncounterExample.html">Encounter/HIMSTargetFacilityEncounterExample</a></p><p><b>period</b>: 2022-12-01 --&gt; (ongoing)</p><p><b>contributor</b>: <a href="Organization-OrganizationExample.html">Organization/OrganizationExample</a> &quot;Some Health Facility&quot;</p><h3>Activities</h3><table class="grid"><tr><td style="display: none">-</td><td><b>Reference</b></td></tr><tr><td style="display: none">*</td><td><a href="ServiceRequest-FollowUpPlanServiceRequestExample.html">ServiceRequest/FollowUpPlanServiceRequestExample</a></td></tr></table></div>
+  </text>
+  <status value="active"/>
+  <intent value="order"/>
+  <subject>
+    <reference value="Patient/HIMSPatientExample"/>
+  </subject>
+  <encounter>
+    <reference value="Encounter/HIMSTargetFacilityEncounterExample"/>
+  </encounter>
+  <period>
+    <start value="2022-12-01"/>
+  </period>
+  <contributor>
+    <reference value="Organization/OrganizationExample"/>
+  </contributor>
+  <activity>
+    <reference>
+      <reference value="ServiceRequest/FollowUpPlanServiceRequestExample"/>
+    </reference>
+  </activity>
+</CarePlan>

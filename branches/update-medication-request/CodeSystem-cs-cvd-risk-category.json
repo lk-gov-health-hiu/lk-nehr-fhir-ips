@@ -1,0 +1,71 @@
+{
+  "resourceType" : "CodeSystem",
+  "id" : "cs-cvd-risk-category",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>This case-sensitive code system <code>http://fhir.health.gov.lk/ips/CodeSystem/cs-cvd-risk-category</code> defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style=\"white-space:nowrap\">Low<a name=\"cs-cvd-risk-category-Low\"> </a></td><td>Less than 5%</td><td>Needs definition</td></tr><tr><td style=\"white-space:nowrap\">Moderate<a name=\"cs-cvd-risk-category-Moderate\"> </a></td><td>5% to less than 10%</td><td>Needs definition</td></tr><tr><td style=\"white-space:nowrap\">High<a name=\"cs-cvd-risk-category-High\"> </a></td><td>10% to less than 20%</td><td>Needs definition</td></tr><tr><td style=\"white-space:nowrap\">Very-High<a name=\"cs-cvd-risk-category-Very-High\"> </a></td><td>20% to less than 30%</td><td>Needs definition</td></tr><tr><td style=\"white-space:nowrap\">Critical<a name=\"cs-cvd-risk-category-Critical\"> </a></td><td>Equal or more than 30%</td><td>Needs definition</td></tr></table></div>"
+  },
+  "url" : "http://fhir.health.gov.lk/ips/CodeSystem/cs-cvd-risk-category",
+  "version" : "0.1.0",
+  "name" : "CSCVDRiskCategory",
+  "title" : "Cardiovascular Risk Categories",
+  "status" : "active",
+  "experimental" : false,
+  "date" : "2024-03-14T09:29:40+00:00",
+  "publisher" : "Ministry of Health, Sri Lanka",
+  "contact" : [{
+    "name" : "Ministry of Health, Sri Lanka",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://www.health.gov.lk/"
+    },
+    {
+      "system" : "email",
+      "value" : "digitalhealth@health.gov.lk"
+    }]
+  },
+  {
+    "name" : "Director, Health Information",
+    "telecom" : [{
+      "system" : "email",
+      "value" : "digitalhealth@health.gov.lk",
+      "use" : "work"
+    }]
+  }],
+  "description" : "Cardiovascular risk is expressed as a percentage",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "http://unstats.un.org/unsd/methods/m49/m49.htm",
+      "code" : "001",
+      "display" : "World"
+    }]
+  }],
+  "caseSensitive" : true,
+  "content" : "complete",
+  "count" : 5,
+  "concept" : [{
+    "code" : "Low",
+    "display" : "Less than 5%",
+    "definition" : "Needs definition"
+  },
+  {
+    "code" : "Moderate",
+    "display" : "5% to less than 10%",
+    "definition" : "Needs definition"
+  },
+  {
+    "code" : "High",
+    "display" : "10% to less than 20%",
+    "definition" : "Needs definition"
+  },
+  {
+    "code" : "Very-High",
+    "display" : "20% to less than 30%",
+    "definition" : "Needs definition"
+  },
+  {
+    "code" : "Critical",
+    "display" : "Equal or more than 30%",
+    "definition" : "Needs definition"
+  }]
+}

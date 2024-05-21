@@ -1,0 +1,52 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://fhir.health.gov.lk/ips/Task/InvestigationsTaskExample> a fhir:Task ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "InvestigationsTaskExample"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://fhir.health.gov.lk/ips/StructureDefinition/investigations-task"^^xsd:anyURI ;
+       fhir:link <http://fhir.health.gov.lk/ips/StructureDefinition/investigations-task>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: Task</b><a name=\"InvestigationsTaskExample\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource Task &quot;InvestigationsTaskExample&quot; </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-investigations-task.html\">Investigations Task</a></p></div><p><b>basedOn</b>: <a href=\"ServiceRequest-InvestigationsServiceRequestExample.html\">ServiceRequest/InvestigationsServiceRequestExample</a></p><p><b>status</b>: completed</p><p><b>intent</b>: order</p><p><b>priority</b>: routine</p><p><b>description</b>: some information regarding the need for the investigations request, if any.</p><p><b>for</b>: <a href=\"Patient-HHIMSPatientExample.html\">Patient/HHIMSPatientExample</a> &quot; SMITH&quot;</p><p><b>encounter</b>: <a href=\"Encounter-HHIMSTargetFacilityEncounterExample.html\">Encounter/HHIMSTargetFacilityEncounterExample</a></p><p><b>executionPeriod</b>: 2023-10-06 13:28:17-0500 --&gt; 2023-10-09 16:28:17-0500</p><p><b>authoredOn</b>: 2023-10-06 13:28:17-0500</p><p><b>requester</b>: <a href=\"Practitioner-GeneralPractitionerExample.html\">Practitioner/GeneralPractitionerExample</a> &quot; SMITH&quot;</p><p><b>location</b>: <a href=\"Location-ProvidersLocationExample.html\">Location/ProvidersLocationExample</a> &quot;Name for the location&quot;</p></div>"
+  ] ; # 
+  fhir:basedOn ( [
+     fhir:link <http://fhir.health.gov.lk/ips/ServiceRequest/InvestigationsServiceRequestExample> ;
+     fhir:reference [ fhir:v "ServiceRequest/InvestigationsServiceRequestExample" ]
+  ] ) ; # 
+  fhir:status [ fhir:v "completed"] ; # 
+  fhir:intent [ fhir:v "order"] ; # 
+  fhir:priority [ fhir:v "routine"] ; # 
+  fhir:description [ fhir:v "some information regarding the need for the investigations request, if any."] ; # 
+  fhir:for [
+     fhir:link <http://fhir.health.gov.lk/ips/Patient/HHIMSPatientExample> ;
+     fhir:reference [ fhir:v "Patient/HHIMSPatientExample" ]
+  ] ; # 
+  fhir:encounter [
+     fhir:link <http://fhir.health.gov.lk/ips/Encounter/HHIMSTargetFacilityEncounterExample> ;
+     fhir:reference [ fhir:v "Encounter/HHIMSTargetFacilityEncounterExample" ]
+  ] ; # 
+  fhir:executionPeriod [
+     fhir:start [ fhir:v "2023-10-06T13:28:17-05:00"^^xsd:dateTime ] ;
+     fhir:end [ fhir:v "2023-10-09T16:28:17-05:00"^^xsd:dateTime ]
+  ] ; # 
+  fhir:authoredOn [ fhir:v "2023-10-06T13:28:17-05:00"^^xsd:dateTime] ; # 
+  fhir:requester [
+     fhir:link <http://fhir.health.gov.lk/ips/Practitioner/GeneralPractitionerExample> ;
+     fhir:reference [ fhir:v "Practitioner/GeneralPractitionerExample" ]
+  ] ; # 
+  fhir:location [
+     fhir:link <http://fhir.health.gov.lk/ips/Location/ProvidersLocationExample> ;
+     fhir:reference [ fhir:v "Location/ProvidersLocationExample" ]
+  ] . # 
+
+# -------------------------------------------------------------------------------------
+

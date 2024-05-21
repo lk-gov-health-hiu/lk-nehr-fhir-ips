@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<CodeSystem xmlns="http://hl7.org/fhir">
+  <id value="cs-identifier-types"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p>This case-sensitive code system <code>http://fhir.health.gov.lk/ips/CodeSystem/cs-identifier-types</code> defines the following codes:</p><table class="codes"><tr><td style="white-space:nowrap"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style="white-space:nowrap">SCN<a name="cs-identifier-types-SCN"> </a></td><td>Senior Citizen Number</td><td>Needs definition</td></tr><tr><td style="white-space:nowrap">PHN<a name="cs-identifier-types-PHN"> </a></td><td>Personal Health Number</td><td>Needs definition</td></tr><tr><td style="white-space:nowrap">NIC<a name="cs-identifier-types-NIC"> </a></td><td>National Identity Card</td><td>Needs definition</td></tr><tr><td style="white-space:nowrap">PLOC<a name="cs-identifier-types-PLOC"> </a></td><td>Provider Location</td><td>Needs definition</td></tr></table></div>
+  </text>
+  <url value="http://fhir.health.gov.lk/ips/CodeSystem/cs-identifier-types"/>
+  <version value="0.1.0"/>
+  <name value="CSIdentifierTypes"/>
+  <title value="Patient Business Identifier Types"/>
+  <status value="active"/>
+  <experimental value="false"/>
+  <date value="2024-05-21T08:44:33+00:00"/>
+  <publisher value="Ministry of Health, Sri Lanka"/>
+  <contact>
+    <name value="Ministry of Health, Sri Lanka"/>
+    <telecom>
+      <system value="url"/>
+      <value value="https://www.health.gov.lk/"/>
+    </telecom>
+    <telecom>
+      <system value="email"/>
+      <value value="digitalhealth@health.gov.lk"/>
+    </telecom>
+  </contact>
+  <contact>
+    <name value="Director, Health Information"/>
+    <telecom>
+      <system value="email"/>
+      <value value="digitalhealth@health.gov.lk"/>
+      <use value="work"/>
+    </telecom>
+  </contact>
+  <description value="Patient Business Identifier Types"/>
+  <jurisdiction>
+    <coding>
+      <system value="http://unstats.un.org/unsd/methods/m49/m49.htm"/>
+      <code value="001"/>
+      <display value="World"/>
+    </coding>
+  </jurisdiction>
+  <caseSensitive value="true"/>
+  <content value="complete"/>
+  <count value="4"/>
+  <concept>
+    <code value="SCN"/>
+    <display value="Senior Citizen Number"/>
+    <definition value="Needs definition"/>
+  </concept>
+  <concept>
+    <code value="PHN"/>
+    <display value="Personal Health Number"/>
+    <definition value="Needs definition"/>
+  </concept>
+  <concept>
+    <code value="NIC"/>
+    <display value="National Identity Card"/>
+    <definition value="Needs definition"/>
+  </concept>
+  <concept>
+    <code value="PLOC"/>
+    <display value="Provider Location"/>
+    <definition value="Needs definition"/>
+  </concept>
+</CodeSystem>

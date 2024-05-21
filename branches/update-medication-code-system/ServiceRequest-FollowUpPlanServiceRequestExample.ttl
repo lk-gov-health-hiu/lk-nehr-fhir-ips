@@ -1,0 +1,65 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sct: <http://snomed.info/id/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://fhir.health.gov.lk/ips/ServiceRequest/FollowUpPlanServiceRequestExample> a fhir:ServiceRequest ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "FollowUpPlanServiceRequestExample"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://fhir.health.gov.lk/ips/StructureDefinition/follow-up-plan"^^xsd:anyURI ;
+       fhir:link <http://fhir.health.gov.lk/ips/StructureDefinition/follow-up-plan>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: ServiceRequest</b><a name=\"FollowUpPlanServiceRequestExample\"> </a><a name=\"hcFollowUpPlanServiceRequestExample\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource ServiceRequest &quot;FollowUpPlanServiceRequestExample&quot; </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-follow-up-plan.html\">Referral Request For Follow-up Plan</a></p></div><p><b>status</b>: completed</p><p><b>intent</b>: order</p><p><b>code</b>: Follow up at HLC <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"https://browser.ihtsdotools.org/\">SNOMED CT</a>#410321003)</span></p><p><b>subject</b>: <a href=\"Patient-PatientExample.html\">Patient/PatientExample</a> &quot; SMITH&quot;</p><p><b>encounter</b>: <a href=\"Encounter-TargetFacilityEncounterExample.html\">Encounter/TargetFacilityEncounterExample</a></p><p><b>occurrence</b>: Count 1 times, Duration 3?ngen-7?, Once</p><p><b>requester</b>: <a href=\"Practitioner-GeneralPractitionerExample.html\">Practitioner/GeneralPractitionerExample</a> &quot; SMITH&quot;</p><p><b>locationReference</b>: <a href=\"Location-ProvidersLocationExample.html\">Location/ProvidersLocationExample</a> &quot;Name for the location&quot;</p><p><b>reasonCode</b>: Followed in 6 months at HLC <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"CodeSystem-cs-follow-up-reasons.html\">Follow up at HLC</a>#Followed-in-3-years-at-hlc)</span></p></div>"
+  ] ; # 
+  fhir:status [ fhir:v "completed"] ; # 
+  fhir:intent [ fhir:v "order"] ; # 
+  fhir:code [
+     fhir:coding ( [
+       a sct:410321003 ;
+       fhir:system [ fhir:v "http://snomed.info/sct"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "410321003" ]
+     ] ) ;
+     fhir:text [ fhir:v "Follow up at HLC" ]
+  ] ; # 
+  fhir:subject [
+     fhir:link <http://fhir.health.gov.lk/ips/Patient/PatientExample> ;
+     fhir:reference [ fhir:v "Patient/PatientExample" ]
+  ] ; # 
+  fhir:encounter [
+     fhir:link <http://fhir.health.gov.lk/ips/Encounter/TargetFacilityEncounterExample> ;
+     fhir:reference [ fhir:v "Encounter/TargetFacilityEncounterExample" ]
+  ] ; # 
+  fhir:occurrence [
+     a fhir:Timing ;
+     fhir:repeat [
+       fhir:count [ fhir:v "1"^^xsd:positiveInteger ] ;
+       fhir:duration [ fhir:v "3"^^xsd:decimal ] ;
+       fhir:durationUnit [ fhir:v "mo" ]
+     ]
+  ] ; # 
+  fhir:requester [
+     fhir:link <http://fhir.health.gov.lk/ips/Practitioner/GeneralPractitionerExample> ;
+     fhir:reference [ fhir:v "Practitioner/GeneralPractitionerExample" ]
+  ] ; # 
+  fhir:locationReference ( [
+     fhir:link <http://fhir.health.gov.lk/ips/Location/ProvidersLocationExample> ;
+     fhir:reference [ fhir:v "Location/ProvidersLocationExample" ]
+  ] ) ; # 
+  fhir:reasonCode ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://fhir.health.gov.lk/ips/CodeSystem/cs-follow-up-reasons"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "Followed-in-3-years-at-hlc" ]
+     ] ) ;
+     fhir:text [ fhir:v "Followed in 6 months at HLC" ]
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

@@ -1,0 +1,1250 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix loinc: <https://loinc.org/rdf/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sct: <http://snomed.info/id/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://fhir.health.gov.lk/ips/Bundle/HHIMSIPSBundleExampleWithMedicalHistory> a fhir:Bundle ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "HHIMSIPSBundleExampleWithMedicalHistory"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://fhir.health.gov.lk/ips/StructureDefinition/hhims-ips-bundle"^^xsd:anyURI ;
+       fhir:link <http://fhir.health.gov.lk/ips/StructureDefinition/hhims-ips-bundle>
+     ] )
+  ] ; # 
+  fhir:identifier [
+     fhir:system [ fhir:v "http://fhir.health.gov.lk/ips/identifier/hhims-ips"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "IPS-Summary-1" ]
+  ] ; # 
+  fhir:type [ fhir:v "document"] ; # 
+  fhir:timestamp [ fhir:v "2024-02-18T09:30:00+02:00"^^xsd:dateTime] ; # 
+  fhir:entry ( [
+     fhir:fullUrl [ fhir:v "http://hapi-fhir:8080/fhir/Composition/HHIMSCompositionExampleWithMedicalHistory"^^xsd:anyURI ] ;
+     fhir:resource ( <http://hapi-fhir:8080/fhir/Composition/HHIMSCompositionExampleWithMedicalHistory> )
+  ] [
+     fhir:fullUrl [ fhir:v "http://hapi-fhir:8080/fhir/Patient/PatientExample"^^xsd:anyURI ] ;
+     fhir:resource ( <http://hapi-fhir:8080/fhir/Patient/PatientExample> )
+  ] [
+     fhir:fullUrl [ fhir:v "http://hapi-fhir:8080/fhir/Encounter/TargetFacilityEncounterExample"^^xsd:anyURI ] ;
+     fhir:resource ( <http://hapi-fhir:8080/fhir/Encounter/TargetFacilityEncounterExample> )
+  ] [
+     fhir:fullUrl [ fhir:v "http://hapi-fhir:8080/fhir/Condition/MedicalHistoryExample"^^xsd:anyURI ] ;
+     fhir:resource ( <http://hapi-fhir:8080/fhir/Condition/MedicalHistoryExample> )
+  ] [
+     fhir:fullUrl [ fhir:v "http://hapi-fhir:8080/fhir/Communication/NotifiableDiseasesNotifiedExample"^^xsd:anyURI ] ;
+     fhir:resource ( <http://hapi-fhir:8080/fhir/Communication/NotifiableDiseasesNotifiedExample> )
+  ] [
+     fhir:fullUrl [ fhir:v "http://hapi-fhir:8080/fhir/Observation/WeightExample"^^xsd:anyURI ] ;
+     fhir:resource ( <http://hapi-fhir:8080/fhir/Observation/WeightExample> )
+  ] [
+     fhir:fullUrl [ fhir:v "http://hapi-fhir:8080/fhir/AllergyIntolerance/AllergiesExample"^^xsd:anyURI ] ;
+     fhir:resource ( <http://hapi-fhir:8080/fhir/AllergyIntolerance/AllergiesExample> )
+  ] [
+     fhir:fullUrl [ fhir:v "http://hapi-fhir:8080/fhir/MedicationRequest/MedicationRequestsExample"^^xsd:anyURI ] ;
+     fhir:resource ( <http://hapi-fhir:8080/fhir/MedicationRequest/MedicationRequestsExample> )
+  ] [
+     fhir:fullUrl [ fhir:v "http://hapi-fhir:8080/fhir/MedicationDispense/DrugDispensationExample"^^xsd:anyURI ] ;
+     fhir:resource ( <http://hapi-fhir:8080/fhir/MedicationDispense/DrugDispensationExample> )
+  ] [
+     fhir:fullUrl [ fhir:v "http://hapi-fhir:8080/fhir/ImagingStudy/ImagingExample"^^xsd:anyURI ] ;
+     fhir:resource ( <http://hapi-fhir:8080/fhir/ImagingStudy/ImagingExample> )
+  ] [
+     fhir:fullUrl [ fhir:v "http://hapi-fhir:8080/fhir/ServiceRequest/GeneralReferralServiceRequestExample"^^xsd:anyURI ] ;
+     fhir:resource ( <http://hapi-fhir:8080/fhir/ServiceRequest/GeneralReferralServiceRequestExample> )
+  ] [
+     fhir:fullUrl [ fhir:v "http://hapi-fhir:8080/fhir/ServiceRequest/InvestigationsServiceRequestExample"^^xsd:anyURI ] ;
+     fhir:resource ( <http://hapi-fhir:8080/fhir/ServiceRequest/InvestigationsServiceRequestExample> )
+  ] [
+     fhir:fullUrl [ fhir:v "http://hapi-fhir:8080/fhir/ServiceRequest/ImagingServiceRequestExample"^^xsd:anyURI ] ;
+     fhir:resource ( <http://hapi-fhir:8080/fhir/ServiceRequest/ImagingServiceRequestExample> )
+  ] [
+     fhir:fullUrl [ fhir:v "http://hapi-fhir:8080/fhir/ServiceRequest/ProcedureServiceRequestExample"^^xsd:anyURI ] ;
+     fhir:resource ( <http://hapi-fhir:8080/fhir/ServiceRequest/ProcedureServiceRequestExample> )
+  ] [
+     fhir:fullUrl [ fhir:v "http://hapi-fhir:8080/fhir/Task/HHIMSReferralTaskExample"^^xsd:anyURI ] ;
+     fhir:resource ( <http://hapi-fhir:8080/fhir/Task/HHIMSReferralTaskExample> )
+  ] [
+     fhir:fullUrl [ fhir:v "http://hapi-fhir:8080/fhir/Practitioner/GeneralPractitionerExample"^^xsd:anyURI ] ;
+     fhir:resource ( <http://hapi-fhir:8080/fhir/Practitioner/GeneralPractitionerExample> )
+  ] [
+     fhir:fullUrl [ fhir:v "http://hapi-fhir:8080/fhir/Location/ProvidersLocationExample"^^xsd:anyURI ] ;
+     fhir:resource ( <http://hapi-fhir:8080/fhir/Location/ProvidersLocationExample> )
+  ] [
+     fhir:fullUrl [ fhir:v "http://hapi-fhir:8080/fhir/Organization/OrganizationExample"^^xsd:anyURI ] ;
+     fhir:resource ( <http://hapi-fhir:8080/fhir/Organization/OrganizationExample> )
+  ] [
+     fhir:fullUrl [ fhir:v "http://hapi-fhir:8080/fhir/Device/DeviceInformationExample"^^xsd:anyURI ] ;
+     fhir:resource ( <http://hapi-fhir:8080/fhir/Device/DeviceInformationExample> )
+  ] ) . # 
+
+<http://hapi-fhir:8080/fhir/Composition/HHIMSCompositionExampleWithMedicalHistory> a fhir:Composition ;
+  fhir:id [ fhir:v "HHIMSCompositionExampleWithMedicalHistory"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://fhir.health.gov.lk/ips/StructureDefinition/hhims-composition"^^xsd:anyURI ;
+       fhir:link <http://fhir.health.gov.lk/ips/StructureDefinition/hhims-composition>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Composition_HHIMSCompositionExampleWithMedicalHistory\"> </a><p><b>Generated Narrative: Composition </b><a name=\"HHIMSCompositionExampleWithMedicalHistory\"> </a><a name=\"hcHHIMSCompositionExampleWithMedicalHistory\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">ResourceComposition &quot;HHIMSCompositionExampleWithMedicalHistory&quot; </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-hhims-composition.html\">HHIMS Composition</a></p></div><p><b>identifier</b>: <code>http://fhir.health.gov.lk/ips/identifier/hhims-ips-document</code>/PAT0001-v1</p><p><b>status</b>: final</p><p><b>type</b>: Patient summary Document <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"https://loinc.org/\">LOINC</a>#60591-5)</span></p><p><b>encounter</b>: See on this page: Encounter/TargetFacilityEncounterExample</p><p><b>date</b>: 2024-02-20</p><p><b>author</b>: </p><ul><li>See on this page: Practitioner/GeneralPractitionerExample</li><li>See on this page: Organization/OrganizationExample</li></ul><p><b>title</b>: LK NEHR Sri Lanka Patient Summary for HHIMS</p></div>"
+  ] ; # 
+  fhir:identifier [
+     fhir:system [ fhir:v "http://fhir.health.gov.lk/ips/identifier/hhims-ips-document"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "PAT0001-v1" ]
+  ] ; # 
+  fhir:status [ fhir:v "final"] ; # 
+  fhir:type [
+     fhir:coding ( [
+       a loinc:60591-5 ;
+       fhir:system [ fhir:v "http://loinc.org"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "60591-5" ]
+     ] )
+  ] ; # 
+  fhir:subject [
+     fhir:link <http://fhir.health.gov.lk/ips/Patient/PatientExample> ;
+     fhir:reference [ fhir:v "Patient/PatientExample" ]
+  ] ; # 
+  fhir:encounter [
+     fhir:link <http://fhir.health.gov.lk/ips/Encounter/TargetFacilityEncounterExample> ;
+     fhir:reference [ fhir:v "Encounter/TargetFacilityEncounterExample" ]
+  ] ; # 
+  fhir:date [ fhir:v "2024-02-20"^^xsd:date] ; # 
+  fhir:author ( [
+     fhir:link <http://fhir.health.gov.lk/ips/Practitioner/GeneralPractitionerExample> ;
+     fhir:reference [ fhir:v "Practitioner/GeneralPractitionerExample" ]
+  ] [
+     fhir:link <http://fhir.health.gov.lk/ips/Organization/OrganizationExample> ;
+     fhir:reference [ fhir:v "Organization/OrganizationExample" ]
+  ] ) ; # 
+  fhir:title [ fhir:v "LK NEHR Sri Lanka Patient Summary for HHIMS"] ; # 
+  fhir:section ( [
+     fhir:title [ fhir:v "Medication Summary section" ] ;
+     fhir:code [
+       fhir:coding ( [
+         a loinc:10160-0 ;
+         fhir:system [ fhir:v "http://loinc.org"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "10160-0" ]
+       ] )
+     ] ;
+     fhir:text [
+       fhir:status [ fhir:v "generated" ] ;
+       fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: MedicationRequest</b><a name=\"PrescriptionsExample\"></a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource MedicationRequest &quot;PrescriptionsExample&quot;</p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-medication-request.html\">Prescription Request</a></p></div><p><b>identifier</b>: Prescription identifier/prescription-12345</p><p><b>status</b>: completed</p><p><b>intent</b>: order</p><p><b>medication</b>: Medication <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\">(<a href=\"CodeSystem-cs-medication-name-msd.html\">Medication Names</a>#Vitamin-A-&amp;-D)</span></p><p><b>subject</b>: See (https://lk-gov-health-hiu.github.io/lk-nehr-fhir-ips/Patient-PatientExample)</p><p><b>encounter</b>: See (https://lk-gov-health-hiu.github.io/lk-nehr-fhir-ips/Encounter-TargetFacilityEncounter)</p><p><b>authoredOn</b>: 2023-10-11 17:21:33-0800</p><p><b>requester</b>: See (https://lk-gov-health-hiu.github.io/lk-nehr-fhir-ips/Practitioner-GeneralPractitionerExample)</p><p><b>performer</b>: See (https://lk-gov-health-hiu.github.io/lk-nehr-fhir-ips/Practitioner-GeneralPractitionerExample)</p><p><b>recorder</b>: See (https://lk-gov-health-hiu.github.io/lk-nehr-fhir-ips/Practitioner-GeneralPractitionerExample)</p><p><b>note</b>: Additional information regarding the patient's medication prescription (By Organization-OrganizationExample @Oct 12, 2023, 1:21:33)</p><blockquote><p><b>dosageInstruction</b></p><p><b>timing</b>: Code: LK-DF-04, Count 2 times, Duration 2days, 2 per 3 days</p><blockquote><p><b>doseAndRate</b></p></blockquote></blockquote><h3>DispenseRequests</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Quantity</b></td></tr><tr><td style=\"display: none\">*</td><td>5</td></tr></table><br/><p><b>Generated Narrative: MedicationDispense</b><a name=\"DrugDispensationExample\"></a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource MedicationDispense &quot;DrugDispensationExample&quot;</p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-drug-dispensation.html\">Drug Dispensation</a></p></div><p><b>status</b>: completed</p><p><b>medication</b>: Medication <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\">(<a href=\"CodeSystem-cs-medication-name-msd.html\">Medication Names</a>#Vitamin-A-&amp;-D)</span></p><p><b>subject</b>: See (https://lk-gov-health-hiu.github.io/lk-nehr-fhir-ips/Patient-PatientExample)</p><p><b>context</b>: See (https://lk-gov-health-hiu.github.io/lk-nehr-fhir-ips/Encounter-TargetFacilityEncounter)</p><h3>Performers</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Actor</b></td></tr><tr><td style=\"display: none\">*</td><td>See (https://lk-gov-health-hiu.github.io/lk-nehr-fhir-ips/Practitioner-GeneralPractitionerExample)</td></tr></table><p><b>location</b>: See (https://lk-gov-health-hiu.github.io/lk-nehr-fhir-ips/Location/ProvidersLocationExample)</p><p><b>authorizingPrescription</b>: See (https://lk-gov-health-hiu.github.io/lk-nehr-fhir-ips/MedicationRequest/PrescriptionsExample)</p><p><b>whenHandedOver</b>: 2023-10-11 17:21:33-0800</p><p><b>receiver</b>: See (https://lk-gov-health-hiu.github.io/lk-nehr-fhir-ips/Patient-PatientExample)</p></div>"
+     ] ;
+     fhir:entry ( [
+       fhir:link <http://fhir.health.gov.lk/ips/MedicationRequest/MedicationRequestsExample> ;
+       fhir:reference [ fhir:v "MedicationRequest/MedicationRequestsExample" ]
+     ] [
+       fhir:link <http://fhir.health.gov.lk/ips/MedicationDispense/DrugDispensationExample> ;
+       fhir:reference [ fhir:v "MedicationDispense/DrugDispensationExample" ]
+     ] )
+  ] [
+     fhir:title [ fhir:v "IPS Allergies and Intolerances Section" ] ;
+     fhir:code [
+       fhir:coding ( [
+         a loinc:48765-2 ;
+         fhir:system [ fhir:v "http://loinc.org"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "48765-2" ]
+       ] )
+     ] ;
+     fhir:text [
+       fhir:status [ fhir:v "generated" ] ;
+       fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: AllergyIntolerance</b><a name=\"AllergiesExample\"></a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource AllergyIntolerance &quot;AllergiesExample&quot;</p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-allergy-intolerance.html\">Allergy Intolerance</a></p></div><p><b>clinicalStatus</b>: Active <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\">(<a href=\"http://terminology.hl7.org/5.0.0/CodeSystem-allergyintolerance-clinical.html\">AllergyIntolerance Clinical Status Codes</a>#active)</span></p><p><b>verificationStatus</b>: Confirmed <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\">(<a href=\"http://terminology.hl7.org/5.0.0/CodeSystem-allergyintolerance-verification.html\">AllergyIntolerance Verification Status</a>#confirmed)</span></p><p><b>type</b>: allergy</p><p><b>code</b>: Allergy to food <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\">(<a href=\"https://browser.ihtsdotools.org/\">SNOMED CT</a>#414285001)</span></p><p><b>patient</b>: See (https://lk-gov-health-hiu.github.io/lk-nehr-fhir-ips/Patient-PatientExample)</p><p><b>encounter</b>: See (https://lk-gov-health-hiu.github.io/lk-nehr-fhir-ips/Encounter-TargetFacilityEncounter)</p><p><b>onset</b>: 2023-10-11 17:21:33-0800</p><p><b>recorder</b>: See (https://lk-gov-health-hiu.github.io/lk-nehr-fhir-ips/Practitioner-GeneralPractitionerExample)</p></div>"
+     ] ;
+     fhir:entry ( [
+       fhir:link <http://fhir.health.gov.lk/ips/AllergyIntolerance/AllergiesExample> ;
+       fhir:reference [ fhir:v "AllergyIntolerance/AllergiesExample" ]
+     ] )
+  ] [
+     fhir:title [ fhir:v "IPS Problems Section" ] ;
+     fhir:code [
+       fhir:coding ( [
+         a loinc:11450-4 ;
+         fhir:system [ fhir:v "http://loinc.org"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "11450-4" ]
+       ] )
+     ] ;
+     fhir:text [
+       fhir:status [ fhir:v "generated" ] ;
+       fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: Condition</b><a name=\"NoMedicalHistoryExample\"></a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource Condition &quot;NoMedicalHistoryExample&quot;</p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-no-medical-history.html\">Medical History</a></p></div><p><b>clinicalStatus</b>: Inactive <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\">(<a href=\"http://terminology.hl7.org/5.0.0/CodeSystem-condition-clinical.html\">Condition Clinical Status Codes</a>#inactive)</span></p><p><b>code</b>: No information about problems <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\">(<a href=\"http://hl7.org/fhir/uv/ips/STU1.1/CodeSystem-absent-unknown-uv-ips.html\">Absent and Unknown Data - IPS</a>#no-problem-info)</span></p><p><b>subject</b>: See (https://lk-gov-health-hiu.github.io/lk-nehr-fhir-ips/Patient-PatientExample)</p><p><b>encounter</b>: See (https://lk-gov-health-hiu.github.io/lk-nehr-fhir-ips/Encounter-TargetFacilityEncounter)</p><p><b>recordedDate</b>: 2023-10-06 13:28:17-0500</p></div>"
+     ] ;
+     fhir:entry ( [
+       fhir:link <http://fhir.health.gov.lk/ips/Condition/MedicalHistoryExample> ;
+       fhir:reference [ fhir:v "Condition/MedicalHistoryExample" ]
+     ] )
+  ] [
+     fhir:title [ fhir:v "IPS Vital Signs Section" ] ;
+     fhir:code [
+       fhir:coding ( [
+         a loinc:8716-3 ;
+         fhir:system [ fhir:v "http://loinc.org"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "8716-3" ]
+       ] )
+     ] ;
+     fhir:text [
+       fhir:status [ fhir:v "generated" ] ;
+       fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: Observation</b><a name=\"WeightExample\"></a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource Observation &quot;WeightExample&quot;</p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-weight.html\">Patient Weight Observation</a></p></div><p><b>status</b>: final</p><p><b>category</b>: Vital Signs <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\">(<a href=\"http://terminology.hl7.org/5.0.0/CodeSystem-observation-category.html\">Observation Category Codes</a>#vital-signs)</span></p><p><b>code</b>: Body Weight <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\">(<a href=\"https://loinc.org/\">LOINC</a>#29463-7)</span></p><p><b>subject</b>: See (https://lk-gov-health-hiu.github.io/lk-nehr-fhir-ips/Patient-PatientExample)</p><p><b>encounter</b>: See (https://lk-gov-health-hiu.github.io/lk-nehr-fhir-ips/Encounter-TargetFacilityEncounter)</p><p><b>effective</b>: 2022-11-30</p><p><b>performer</b>:</p><ul><li>See (https://lk-gov-health-hiu.github.io/lk-nehr-fhir-ips/Organization-OrganizationExample)</li><li>See (https://lk-gov-health-hiu.github.io/lk-nehr-fhir-ips/Practitioner-GeneralPractitionerExample)</li></ul><p><b>value</b>: 110 kg<span style=\"background: LightGoldenRodYellow\"> (Details: UCUM code kg = 'kg')</span></p></div>"
+     ] ;
+     fhir:entry ( [
+       fhir:link <http://fhir.health.gov.lk/ips/Observation/WeightExample> ;
+       fhir:reference [ fhir:v "Observation/WeightExample" ]
+     ] )
+  ] [
+     fhir:title [ fhir:v "Procedures Summary Section" ] ;
+     fhir:code [
+       fhir:coding ( [
+         fhir:system [ fhir:v "http://fhir.health.gov.lk/ips/CodeSystem/cs-composition-codes"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "Procedures-History" ]
+       ] )
+     ] ;
+     fhir:text [
+       fhir:status [ fhir:v "generated" ] ;
+       fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: ServiceRequest</b><a name=\"ProcedureServiceRequestExample\"></a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource ServiceRequest &quot;ProcedureServiceRequestExample&quot;</p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-procedures-request.html\">Procedure Request</a></p></div><p><b>status</b>: completed</p><p><b>intent</b>: order</p><p><b>code</b>: Cleaning and Dressing <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\">(<a href=\"CodeSystem-cs-procedure.html\">Procedures</a>#Cleaning-and-Dressing)</span></p><p><b>subject</b>: See (https://lk-gov-health-hiu.github.io/lk-nehr-fhir-ips/Patient/PatientExample)</p><p><b>encounter</b>: See (https://lk-gov-health-hiu.github.io/lk-nehr-fhir-ips/Encounter/TargetFacilityEncounter)</p><p><b>occurrence</b>: 2023-10-06 13:28:17-0500</p><p><b>requester</b>: See (https://lk-gov-health-hiu.github.io/lk-nehr-fhir-ips/Practitioner/GeneralPractitionerExample)</p><p><b>locationReference</b>: See (https://lk-gov-health-hiu.github.io/lk-nehr-fhir-ips/Location/ProvidersLocationExample)</p></div>"
+     ] ;
+     fhir:entry ( [
+       fhir:link <http://fhir.health.gov.lk/ips/ServiceRequest/ProcedureServiceRequestExample> ;
+       fhir:reference [ fhir:v "ServiceRequest/ProcedureServiceRequestExample" ]
+     ] )
+  ] [
+     fhir:title [ fhir:v "Imaging Summary section" ] ;
+     fhir:code [
+       fhir:coding ( [
+         a loinc:97684-5 ;
+         fhir:system [ fhir:v "http://loinc.org"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "97684-5" ]
+       ] )
+     ] ;
+     fhir:text [
+       fhir:status [ fhir:v "generated" ] ;
+       fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: ImagingStudy</b> <a name=\"ImagingExample\"></a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource ImagingStudy &quot;ImagingExample&quot;</p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-imaging-study.html\">Imaging Study</a></p></div><p><b>status</b>: registered</p><p><b>subject</b>: See (https://lk-gov-health-hiu.github.io/lk-nehr-fhir-ips/Patient-PatientExample)</p><p><b>encounter</b>: See (https://lk-gov-health-hiu.github.io/lk-nehr-fhir-ips/Encounter-TargetFacilityEncounter)</p><p><b>started</b>: 2023-10-06 13:28:17-0500</p><p><b>basedOn</b>: See (https://lk-gov-health-hiu.github.io/lk-nehr-fhir-ips/ServiceRequest/ImagingServiceRequestExample)</p><p><b>referrer</b>: See (https://lk-gov-health-hiu.github.io/lk-nehr-fhir-ips/Practitioner-GeneralPractitionerExample)</p><p><b>location</b>: See (https://lk-gov-health-hiu.github.io/lk-nehr-fhir-ips/Location/ProvidersLocationExample)</p><p><b>description</b>: Imaging Description</p><blockquote><p><b>series</b></p><p><b>uid</b>: 89c0c298-6c30-11ee-b962-0242ac120002</p><p><b>modality</b>: X-Ray Angiography (Details: DICOM code XA = 'X-Ray Angiography', stated as 'null')</p><h3>Performers</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Actor</b></td></tr><tr><td style=\"display: none\">*</td><td>See (https://lk-gov-health-hiu.github.io/lk-nehr-fhir-ips/Practitioner-GeneralPractitionerExample)</td></tr></table></blockquote><br/><p><b>Generated Narrative: ServiceRequest</b> <a name=\"ImagingServiceRequestExample\"></a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource ServiceRequest &quot;ImagingServiceRequestExample&quot;</p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-imaging-request.html\">Imaging Request</a></p></div><p><b>status</b>: completed</p><p><b>intent</b>: order</p><p><b>code</b>: Imaging requested <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\">( <a href=\"CodeSystem-cs-procedure-imaging.html\">Procedures</a>#X-Ray)</span></p><p><b>subject</b>: See (https://lk-gov-health-hiu.github.io/lk-nehr-fhir-ips/Patient-PatientExample)</p><p><b>encounter</b>: See (https://lk-gov-health-hiu.github.io/lk-nehr-fhir-ips/Encounter-TargetFacilityEncounter)</p><p><b>occurrence</b>: 2023-10-06 13:28:17-0500</p><p><b>requester</b>: See (https://lk-gov-health-hiu.github.io/lk-nehr-fhir-ips/Practitioner-GeneralPractitionerExample)</p><p><b>locationReference</b>: See (https://lk-gov-health-hiu.github.io/lk-nehr-fhir-ips/Location/ProvidersLocationExample)</p></div>"
+     ] ;
+     fhir:entry ( [
+       fhir:link <http://fhir.health.gov.lk/ips/ImagingStudy/ImagingExample> ;
+       fhir:reference [ fhir:v "ImagingStudy/ImagingExample" ]
+     ] [
+       fhir:link <http://fhir.health.gov.lk/ips/ServiceRequest/ImagingServiceRequestExample> ;
+       fhir:reference [ fhir:v "ServiceRequest/ImagingServiceRequestExample" ]
+     ] )
+  ] [
+     fhir:title [ fhir:v "Laboratory Investigations Summary section" ] ;
+     fhir:code [
+       fhir:coding ( [
+         a loinc:77597-3 ;
+         fhir:system [ fhir:v "http://loinc.org"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "77597-3" ]
+       ] )
+     ] ;
+     fhir:text [
+       fhir:status [ fhir:v "generated" ] ;
+       fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: ServiceRequest</b> <a name=\"InvestigationsServiceRequestExample\"></a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource ServiceRequest &quot;InvestigationsServiceRequestExample&quot;</p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-investigations-request.html\">Investigations Request</a></p></div><p><b>status</b>: completed</p><p><b>intent</b>: order</p><p><b>code</b>: Investigation requested <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\">( <a href=\"CodeSystem-cs-investigation.html\">Investigations</a>#FBC-WBC-th/uL)</span></p><p><b>subject</b>: See (https://lk-gov-health-hiu.github.io/lk-nehr-fhir-ips/Patient-PatientExample)</p><p><b>encounter</b>: See (https://lk-gov-health-hiu.github.io/lk-nehr-fhir-ips/Encounter-TargetFacilityEncounter)</p><p><b>occurrence</b>: 2023-10-06 13:28:17-0500</p><p><b>requester</b>: See (https://lk-gov-health-hiu.github.io/lk-nehr-fhir-ips/Practitioner-GeneralPractitionerExample)</p><p><b>locationReference</b>: See (https://lk-gov-health-hiu.github.io/lk-nehr-fhir-ips/Location/ProvidersLocationExample)</p></div>"
+     ] ;
+     fhir:entry ( [
+       fhir:link <http://fhir.health.gov.lk/ips/ServiceRequest/InvestigationsServiceRequestExample> ;
+       fhir:reference [ fhir:v "ServiceRequest/InvestigationsServiceRequestExample" ]
+     ] )
+  ] [
+     fhir:title [ fhir:v "Referrals Summary section" ] ;
+     fhir:code [
+       fhir:coding ( [
+         a loinc:57133-1 ;
+         fhir:system [ fhir:v "http://loinc.org"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "57133-1" ]
+       ] )
+     ] ;
+     fhir:text [
+       fhir:status [ fhir:v "generated" ] ;
+       fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: Task</b><a name=\"HHIMSReferralTaskExample\"></a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource Task &quot;HHIMSReferralTaskExample&quot;</p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-referral-task.html\">Referral Task</a></p></div><p><b>status</b>: completed</p><p><b>intent</b>: order</p><p><b>priority</b>: routine</p><p><b>description</b>: some information regarding the need for the referral request, if any.</p><p><b>focus</b>: See (https://lk-gov-health-hiu.github.io/lk-nehr-fhir-ips/ServiceRequest/GeneralReferralServiceRequestExample)</p><p><b>for</b>: See (https://lk-gov-health-hiu.github.io/lk-nehr-fhir-ips/Patient-PatientExample)</p><p><b>encounter</b>: See (https://lk-gov-health-hiu.github.io/lk-nehr-fhir-ips/Encounter-TargetFacilityEncounter)</p><p><b>authoredOn</b>: 2023-10-06 13:28:17-0500</p><p><b>requester</b>: See (https://lk-gov-health-hiu.github.io/lk-nehr-fhir-ips/Practitioner-GeneralPractitionerExample)</p><p><b>location</b>: See (https://lk-gov-health-hiu.github.io/lk-nehr-fhir-ips/Location/ProvidersLocationExample)</p></div>"
+     ] ;
+     fhir:entry ( [
+       fhir:link <http://fhir.health.gov.lk/ips/Task/HHIMSReferralTaskExample> ;
+       fhir:reference [ fhir:v "Task/HHIMSReferralTaskExample" ]
+     ] [
+       fhir:link <http://fhir.health.gov.lk/ips/ServiceRequest/GeneralReferralServiceRequestExample> ;
+       fhir:reference [ fhir:v "ServiceRequest/GeneralReferralServiceRequestExample" ]
+     ] )
+  ] [
+     fhir:title [ fhir:v "Notifiable Conditions Summary section" ] ;
+     fhir:code [
+       fhir:coding ( [
+         a loinc:LL625-5 ;
+         fhir:system [ fhir:v "http://loinc.org"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "LL625-5" ]
+       ] )
+     ] ;
+     fhir:text [
+       fhir:status [ fhir:v "generated" ] ;
+       fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: Communication</b><a name=\"NotifiableDiseasesNotifiedExample\"></a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource Communication &quot;NotifiableDiseasesNotifiedExample&quot;</p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-notifiable-diseases-notified.html\">Notifiable Diseases Notified</a></p></div><p><b>status</b>: completed</p><p><b>subject</b>: See (https://lk-gov-health-hiu.github.io/lk-nehr-fhir-ips/Patient-PatientExample)</p><p><b>encounter</b>: See (https://lk-gov-health-hiu.github.io/lk-nehr-fhir-ips/Encounter-TargetFacilityEncounter)</p><p><b>sent</b>: 2023-10-06 13:28:17-0500</p></div>"
+     ] ;
+     fhir:entry ( [
+       fhir:link <http://fhir.health.gov.lk/ips/Communication/NotifiableDiseasesNotifiedExample> ;
+       fhir:reference [ fhir:v "Communication/NotifiableDiseasesNotifiedExample" ]
+     ] )
+  ] [
+     fhir:title [ fhir:v "List of Encounter Locations section" ] ;
+     fhir:code [
+       fhir:coding ( [
+         a loinc:80412-0 ;
+         fhir:system [ fhir:v "http://loinc.org"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "80412-0" ]
+       ] )
+     ] ;
+     fhir:text [
+       fhir:status [ fhir:v "generated" ] ;
+       fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: Location</b><a name=\"ProvidersLocationExample\"></a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource Location &quot;ProvidersLocationExample&quot;</p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-providers-location.html\">Providers Location</a></p></div><p><b>identifier</b>: Provider location identifier/Location-ID-1, Provider location identifier/Location-ID-2</p><p><b>status</b>: active</p><p><b>name</b>: Name for the location</p><p><b>telecom</b>: <a href=\"tel:+27829999999\">+27829999999</a>, <a href=\"mailto:someone@something.com\">someone@something.com</a>, <a href=\"mailto:someone2@something.com\">someone2@something.com</a></p><p><b>address</b>: 177 Nawala Road Nugegoda Colombo 32350 LK</p><p><b>managingOrganization</b>: See (https://lk-gov-health-hiu.github.io/lk-nehr-fhir-ips/Organization-OrganizationExample)</p></div>"
+     ] ;
+     fhir:entry ( [
+       fhir:link <http://fhir.health.gov.lk/ips/Location/ProvidersLocationExample> ;
+       fhir:reference [ fhir:v "Location/ProvidersLocationExample" ]
+     ] )
+  ] [
+     fhir:title [ fhir:v "List of Practitioners section" ] ;
+     fhir:code [
+       fhir:coding ( [
+         a loinc:LA9327-3 ;
+         fhir:system [ fhir:v "http://loinc.org"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "LA9327-3" ]
+       ] )
+     ] ;
+     fhir:text [
+       fhir:status [ fhir:v "generated" ] ;
+       fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: Practitioner</b><a name=\"GeneralPractitionerExample\"></a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource Practitioner &quot;GeneralPractitionerExample&quot;</p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-practitioner.html\">Practitioner</a></p></div><p><b>name</b>: Tom Junes Smith</p><p><b>telecom</b>: ph: 27537652509(WORK), <a href=\"mailto:someone@something.org\">someone@something.org</a></p></div>"
+     ] ;
+     fhir:entry ( [
+       fhir:link <http://fhir.health.gov.lk/ips/Practitioner/GeneralPractitionerExample> ;
+       fhir:reference [ fhir:v "Practitioner/GeneralPractitionerExample" ]
+     ] )
+  ] [
+     fhir:title [ fhir:v "List of Used Devices section" ] ;
+     fhir:code [
+       fhir:coding ( [
+         fhir:system [ fhir:v "http://fhir.health.gov.lk/ips/CodeSystem/cs-composition-codes"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "Device-Information" ]
+       ] )
+     ] ;
+     fhir:text [
+       fhir:status [ fhir:v "generated" ] ;
+       fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: Device</b><a name=\"DeviceInformationExample\"> </a><a name=\"hcDeviceInformationExample\"></a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource Device &quot;DeviceInformationExample&quot;</p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-device-information.html\">Device Information</a></p></div><p><b>identifier</b>: <code>http://fhir.health.gov.lk/ips/identifier/system-id</code>/OpenMRS-1234-1</p><p><b>status</b>: active</p><p><b>type</b>: Medical record <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\">(<a href=\"https://browser.ihtsdotools.org/\">SNOMED CT</a>#129465004)</span></p><h3>Versions</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Type</b></td><td><b>Value</b></td></tr><tr><td style=\"display: none\">*</td><td>OpenMRS <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\">(<a href=\"CodeSystem-cs-device-classification.html\">Device Classification Codes</a>#OpenMRS)</span></td><td>2.5.0</td></tr></table><p><b>owner</b>: <a href=\"Organization-OrganizationExample.html\">Organization/OrganizationExample</a> &quot;Some Health Facility&quot;</p><p><b>location</b>: <a href=\"Location-ProvidersLocationExample.html\">Location/ProvidersLocationExample</a> &quot;Name for the location&quot;</p></div>"
+     ] ;
+     fhir:entry ( [
+       fhir:link <http://fhir.health.gov.lk/ips/Device/DeviceInformationExample> ;
+       fhir:reference [ fhir:v "Device/DeviceInformationExample" ]
+     ] )
+  ] ) . # 
+
+<http://hapi-fhir:8080/fhir/Patient/PatientExample> a fhir:Patient ;
+  fhir:id [ fhir:v "PatientExample"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://fhir.health.gov.lk/ips/StructureDefinition/ips-patient"^^xsd:anyURI ;
+       fhir:link <http://fhir.health.gov.lk/ips/StructureDefinition/ips-patient>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "extensions" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Patient_PatientExample\"> </a><p><b>Generated Narrative: Patient </b><a name=\"PatientExample\"> </a><a name=\"hcPatientExample\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">ResourcePatient &quot;PatientExample&quot; </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-ips-patient.html\">Patient</a></p></div><p><b>Patient Registration System Information</b>: See on this page: Device/DeviceInformationExample</p><p><b>identifier</b>: Personal Health Number/personal health number, Passport number/Passport-1, Passport number/Passport-2, Driver's license number/Drivers license-1, Driver's license number/Drivers license-2, National identity number/National identity number-1, National identity number/National identity number-2, Senior Citizen Number/Senior citizen number-1, Senior Citizen Number/Senior citizen number-2</p><p><b>name</b>: Mike John Smith (Official)</p><p><b>telecom</b>: <a href=\"tel:+27829999999\">+27829999999</a>, <a href=\"mailto:someone@something.com\">someone@something.com</a>, <a href=\"mailto:someone2@something.com\">someone2@something.com</a></p><p><b>gender</b>: male</p><p><b>birthDate</b>: 1983-05-22</p><p><b>address</b>: 177 Nawala Road Nugegoda Colombo 32350 LK </p></div>"
+  ] ; # 
+  fhir:extension ( [
+     fhir:url [ fhir:v "http://fhir.health.gov.lk/ips/StructureDefinition/patient-registration-system"^^xsd:anyURI ] ;
+     fhir:value [
+       a fhir:Reference ;
+       fhir:link <http://fhir.health.gov.lk/ips/Device/DeviceInformationExample> ;
+       fhir:reference [ fhir:v "Device/DeviceInformationExample" ]
+     ]
+  ] ) ; # 
+  fhir:identifier ( [
+     fhir:type [
+       fhir:coding ( [
+         fhir:system [ fhir:v "http://fhir.health.gov.lk/ips/CodeSystem/cs-identifier-types"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "PHN" ]
+       ] ) ;
+       fhir:text [ fhir:v "Personal Health Number" ]
+     ] ;
+     fhir:system [ fhir:v "http://fhir.health.gov.lk/ips/identifier/phn"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "personal health number" ]
+  ] [
+     fhir:type [
+       fhir:coding ( [
+         fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/v2-0203"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "PPN" ]
+       ] ) ;
+       fhir:text [ fhir:v "Passport number" ]
+     ] ;
+     fhir:system [ fhir:v "http://fhir.health.gov.lk/ips/identifier/passport"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "Passport-1" ]
+  ] [
+     fhir:type [
+       fhir:coding ( [
+         fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/v2-0203"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "PPN" ]
+       ] ) ;
+       fhir:text [ fhir:v "Passport number" ]
+     ] ;
+     fhir:system [ fhir:v "http://fhir.health.gov.lk/ips/identifier/passport"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "Passport-2" ]
+  ] [
+     fhir:type [
+       fhir:coding ( [
+         fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/v2-0203"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "DL" ]
+       ] ) ;
+       fhir:text [ fhir:v "Driver's license number" ]
+     ] ;
+     fhir:system [ fhir:v "http://fhir.health.gov.lk/ips/identifier/drivers"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "Drivers license-1" ]
+  ] [
+     fhir:type [
+       fhir:coding ( [
+         fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/v2-0203"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "DL" ]
+       ] ) ;
+       fhir:text [ fhir:v "Driver's license number" ]
+     ] ;
+     fhir:system [ fhir:v "http://fhir.health.gov.lk/ips/identifier/drivers"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "Drivers license-2" ]
+  ] [
+     fhir:type [
+       fhir:coding ( [
+         fhir:system [ fhir:v "http://fhir.health.gov.lk/ips/CodeSystem/cs-identifier-types"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "NIC" ]
+       ] ) ;
+       fhir:text [ fhir:v "National identity number" ]
+     ] ;
+     fhir:system [ fhir:v "http://fhir.health.gov.lk/ips/identifier/nic"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "National identity number-1" ]
+  ] [
+     fhir:type [
+       fhir:coding ( [
+         fhir:system [ fhir:v "http://fhir.health.gov.lk/ips/CodeSystem/cs-identifier-types"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "NIC" ]
+       ] ) ;
+       fhir:text [ fhir:v "National identity number" ]
+     ] ;
+     fhir:system [ fhir:v "http://fhir.health.gov.lk/ips/identifier/nic"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "National identity number-2" ]
+  ] [
+     fhir:type [
+       fhir:coding ( [
+         fhir:system [ fhir:v "http://fhir.health.gov.lk/ips/CodeSystem/cs-identifier-types"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "SCN" ]
+       ] ) ;
+       fhir:text [ fhir:v "Senior Citizen Number" ]
+     ] ;
+     fhir:system [ fhir:v "http://fhir.health.gov.lk/ips/identifier/scn"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "Senior citizen number-1" ]
+  ] [
+     fhir:type [
+       fhir:coding ( [
+         fhir:system [ fhir:v "http://fhir.health.gov.lk/ips/CodeSystem/cs-identifier-types"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "SCN" ]
+       ] ) ;
+       fhir:text [ fhir:v "Senior Citizen Number" ]
+     ] ;
+     fhir:system [ fhir:v "http://fhir.health.gov.lk/ips/identifier/scn"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "Senior citizen number-2" ]
+  ] ) ; # 
+  fhir:name ( [
+     fhir:use [ fhir:v "official" ] ;
+     fhir:family [ fhir:v "Smith" ] ;
+     fhir:given ( [ fhir:v "Mike" ] [ fhir:v "John" ] ) ;
+     fhir:prefix ( [ fhir:v "Mr." ] )
+  ] ) ; # 
+  fhir:telecom ( [
+     fhir:system [ fhir:v "phone" ] ;
+     fhir:value [ fhir:v "+27829999999" ]
+  ] [
+     fhir:system [ fhir:v "email" ] ;
+     fhir:value [ fhir:v "someone@something.com" ]
+  ] [
+     fhir:system [ fhir:v "email" ] ;
+     fhir:value [ fhir:v "someone2@something.com" ]
+  ] ) ; # 
+  fhir:gender [ fhir:v "male"] ; # 
+  fhir:birthDate [ fhir:v "1983-05-22"^^xsd:date] ; # 
+  fhir:address ( [
+     fhir:type [ fhir:v "postal" ] ;
+     fhir:line ( [ fhir:v "177" ] [ fhir:v "Nawala Road" ] ) ;
+     fhir:city [ fhir:v "Nugegoda" ] ;
+     fhir:district [ fhir:v "Ampara" ] ;
+     fhir:state [ fhir:v "Colombo" ] ;
+     fhir:postalCode [ fhir:v "32350" ] ;
+     fhir:country [ fhir:v "LK" ]
+  ] ) . # 
+
+<http://hapi-fhir:8080/fhir/Encounter/TargetFacilityEncounterExample> a fhir:Encounter ;
+  fhir:id [ fhir:v "TargetFacilityEncounterExample"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://fhir.health.gov.lk/ips/StructureDefinition/target-facility-encounter"^^xsd:anyURI ;
+       fhir:link <http://fhir.health.gov.lk/ips/StructureDefinition/target-facility-encounter>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Encounter_TargetFacilityEncounterExample\"> </a><p><b>Generated Narrative: Encounter </b><a name=\"TargetFacilityEncounterExample\"> </a><a name=\"hcTargetFacilityEncounterExample\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">ResourceEncounter &quot;TargetFacilityEncounterExample&quot; </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-target-facility-encounter.html\">Target Facility Encounter</a></p></div><p><b>status</b>: finished</p><p><b>class</b>: ambulatory (Details: ActCode code AMB  = ' ambulatory , stated as  null ')</p><p><b>subject</b>: See on this page: Patient/PatientExample</p><h3>Participants</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Individual</b></td></tr><tr><td style=\"display: none\">*</td><td>See on this page: Practitioner/GeneralPractitionerExample</td></tr></table><p><b>period</b>: 2022-12-01 --&gt; 2023-01-20</p><p><b>reasonCode</b>: Myalgia <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"https://browser.ihtsdotools.org/\">SNOMED CT</a>#68962001)</span></p><h3>Locations</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Location</b></td></tr><tr><td style=\"display: none\">*</td><td>See on this page: Location/ProvidersLocationExample</td></tr></table></div>"
+  ] ; # 
+  fhir:status [ fhir:v "finished"] ; # 
+  fhir:class [
+     fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/v3-ActCode"^^xsd:anyURI ] ;
+     fhir:code [ fhir:v "AMB" ]
+  ] ; # 
+  fhir:subject [
+     fhir:link <http://fhir.health.gov.lk/ips/Patient/PatientExample> ;
+     fhir:reference [ fhir:v "Patient/PatientExample" ]
+  ] ; # 
+  fhir:participant ( [
+     fhir:individual [
+       fhir:link <http://fhir.health.gov.lk/ips/Practitioner/GeneralPractitionerExample> ;
+       fhir:reference [ fhir:v "Practitioner/GeneralPractitionerExample" ]
+     ]
+  ] ) ; # 
+  fhir:period [
+     fhir:start [ fhir:v "2022-12-01"^^xsd:date ] ;
+     fhir:end [ fhir:v "2023-01-20"^^xsd:date ]
+  ] ; # 
+  fhir:reasonCode ( [
+     fhir:coding ( [
+       a sct:68962001 ;
+       fhir:system [ fhir:v "http://snomed.info/sct"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "68962001" ]
+     ] )
+  ] ) ; # 
+  fhir:location ( [
+     fhir:location [
+       fhir:link <http://fhir.health.gov.lk/ips/Location/ProvidersLocationExample> ;
+       fhir:reference [ fhir:v "Location/ProvidersLocationExample" ]
+     ]
+  ] ) . # 
+
+<http://hapi-fhir:8080/fhir/Condition/MedicalHistoryExample> a fhir:Condition ;
+  fhir:id [ fhir:v "MedicalHistoryExample"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://fhir.health.gov.lk/ips/StructureDefinition/medical-history"^^xsd:anyURI ;
+       fhir:link <http://fhir.health.gov.lk/ips/StructureDefinition/medical-history>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Condition_MedicalHistoryExample\"> </a><p><b>Generated Narrative: Condition </b><a name=\"MedicalHistoryExample\"> </a><a name=\"hcMedicalHistoryExample\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">ResourceCondition &quot;MedicalHistoryExample&quot; </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-medical-history.html\">Medical History</a></p></div><p><b>clinicalStatus</b>: Active <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"http://terminology.hl7.org/5.5.0/CodeSystem-condition-clinical.html\">Condition Clinical Status Codes</a>#active)</span></p><p><b>verificationStatus</b>: Confirmed <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"http://terminology.hl7.org/5.5.0/CodeSystem-condition-ver-status.html\">ConditionVerificationStatus</a>#confirmed)</span></p><p><b>category</b>: Problem List Item <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"http://terminology.hl7.org/5.5.0/CodeSystem-condition-category.html\">Condition Category Codes</a>#problem-list-item)</span></p><p><b>code</b>: Type I diabetes mellitus without complication <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"https://browser.ihtsdotools.org/\">SNOMED CT</a>#313435000)</span></p><p><b>subject</b>: See on this page: Patient/PatientExample</p><p><b>encounter</b>: See on this page: Encounter/TargetFacilityEncounterExample</p><p><b>recordedDate</b>: 2023-10-06 13:28:17-0500</p><p><b>recorder</b>: See on this page: Practitioner/GeneralPractitionerExample</p><p><b>asserter</b>: See on this page: Practitioner/GeneralPractitionerExample</p></div>"
+  ] ; # 
+  fhir:clinicalStatus [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/condition-clinical"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "active" ]
+     ] )
+  ] ; # 
+  fhir:verificationStatus [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/condition-ver-status"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "confirmed" ]
+     ] )
+  ] ; # 
+  fhir:category ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/condition-category"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "problem-list-item" ]
+     ] )
+  ] ) ; # 
+  fhir:code [
+     fhir:coding ( [
+       a sct:313435000 ;
+       fhir:system [ fhir:v "http://snomed.info/sct"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "313435000" ]
+     ] )
+  ] ; # 
+  fhir:subject [
+     fhir:link <http://fhir.health.gov.lk/ips/Patient/PatientExample> ;
+     fhir:reference [ fhir:v "Patient/PatientExample" ]
+  ] ; # 
+  fhir:encounter [
+     fhir:link <http://fhir.health.gov.lk/ips/Encounter/TargetFacilityEncounterExample> ;
+     fhir:reference [ fhir:v "Encounter/TargetFacilityEncounterExample" ]
+  ] ; # 
+  fhir:recordedDate [ fhir:v "2023-10-06T13:28:17-05:00"^^xsd:dateTime] ; # 
+  fhir:recorder [
+     fhir:link <http://fhir.health.gov.lk/ips/Practitioner/GeneralPractitionerExample> ;
+     fhir:reference [ fhir:v "Practitioner/GeneralPractitionerExample" ]
+  ] ; # 
+  fhir:asserter [
+     fhir:link <http://fhir.health.gov.lk/ips/Practitioner/GeneralPractitionerExample> ;
+     fhir:reference [ fhir:v "Practitioner/GeneralPractitionerExample" ]
+  ] . # 
+
+<http://hapi-fhir:8080/fhir/Communication/NotifiableDiseasesNotifiedExample> a fhir:Communication ;
+  fhir:id [ fhir:v "NotifiableDiseasesNotifiedExample"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://fhir.health.gov.lk/ips/StructureDefinition/notifiable-diseases-notified"^^xsd:anyURI ;
+       fhir:link <http://fhir.health.gov.lk/ips/StructureDefinition/notifiable-diseases-notified>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Communication_NotifiableDiseasesNotifiedExample\"> </a><p><b>Generated Narrative: Communication </b><a name=\"NotifiableDiseasesNotifiedExample\"> </a><a name=\"hcNotifiableDiseasesNotifiedExample\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">ResourceCommunication &quot;NotifiableDiseasesNotifiedExample&quot; </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-notifiable-diseases-notified.html\">Notifiable Diseases Notified</a></p></div><p><b>status</b>: completed</p><p><b>subject</b>: See on this page: Patient/PatientExample</p><p><b>encounter</b>: See on this page: Encounter/TargetFacilityEncounterExample</p><p><b>sent</b>: 2023-10-06 13:28:17-0500</p><p><b>sender</b>: See on this page: Device/DeviceInformationExample</p></div>"
+  ] ; # 
+  fhir:status [ fhir:v "completed"] ; # 
+  fhir:subject [
+     fhir:link <http://fhir.health.gov.lk/ips/Patient/PatientExample> ;
+     fhir:reference [ fhir:v "Patient/PatientExample" ]
+  ] ; # 
+  fhir:encounter [
+     fhir:link <http://fhir.health.gov.lk/ips/Encounter/TargetFacilityEncounterExample> ;
+     fhir:reference [ fhir:v "Encounter/TargetFacilityEncounterExample" ]
+  ] ; # 
+  fhir:sent [ fhir:v "2023-10-06T13:28:17-05:00"^^xsd:dateTime] ; # 
+  fhir:sender [
+     fhir:link <http://fhir.health.gov.lk/ips/Device/DeviceInformationExample> ;
+     fhir:reference [ fhir:v "Device/DeviceInformationExample" ]
+  ] . # 
+
+<http://hapi-fhir:8080/fhir/Observation/WeightExample> a fhir:Observation ;
+  fhir:id [ fhir:v "WeightExample"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://fhir.health.gov.lk/ips/StructureDefinition/weight"^^xsd:anyURI ;
+       fhir:link <http://fhir.health.gov.lk/ips/StructureDefinition/weight>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Observation_WeightExample\"> </a><p><b>Generated Narrative: Observation </b><a name=\"WeightExample\"> </a><a name=\"hcWeightExample\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">ResourceObservation &quot;WeightExample&quot; </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-weight.html\">Patient Weight Observation</a></p></div><p><b>status</b>: final</p><p><b>category</b>: Vital Signs <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"http://terminology.hl7.org/5.5.0/CodeSystem-observation-category.html\">Observation Category Codes</a>#vital-signs)</span></p><p><b>code</b>: Body Weight <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"https://loinc.org/\">LOINC</a>#29463-7)</span></p><p><b>subject</b>: See on this page: Patient/PatientExample</p><p><b>encounter</b>: See on this page: Encounter/TargetFacilityEncounterExample</p><p><b>effective</b>: 2022-11-30</p><p><b>performer</b>: </p><ul><li>See on this page: Organization/OrganizationExample</li><li>See on this page: Practitioner/GeneralPractitionerExample</li></ul><p><b>value</b>: 110 kg<span style=\"background: LightGoldenRodYellow\"> (Details: UCUM  codekg = 'kg')</span></p><p><b>device</b>: See on this page: Device/DeviceInformationExample</p></div>"
+  ] ; # 
+  fhir:status [ fhir:v "final"] ; # 
+  fhir:category ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/observation-category"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "vital-signs" ]
+     ] )
+  ] ) ; # 
+  fhir:code [
+     fhir:coding ( [
+       a loinc:29463-7 ;
+       fhir:system [ fhir:v "http://loinc.org"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "29463-7" ]
+     ] ) ;
+     fhir:text [ fhir:v "Body Weight" ]
+  ] ; # 
+  fhir:subject [
+     fhir:link <http://fhir.health.gov.lk/ips/Patient/PatientExample> ;
+     fhir:reference [ fhir:v "Patient/PatientExample" ]
+  ] ; # 
+  fhir:encounter [
+     fhir:link <http://fhir.health.gov.lk/ips/Encounter/TargetFacilityEncounterExample> ;
+     fhir:reference [ fhir:v "Encounter/TargetFacilityEncounterExample" ]
+  ] ; # 
+  fhir:effective [ fhir:v "2022-11-30"^^xsd:date] ; # 
+  fhir:performer ( [
+     fhir:link <http://fhir.health.gov.lk/ips/Organization/OrganizationExample> ;
+     fhir:reference [ fhir:v "Organization/OrganizationExample" ]
+  ] [
+     fhir:link <http://fhir.health.gov.lk/ips/Practitioner/GeneralPractitionerExample> ;
+     fhir:reference [ fhir:v "Practitioner/GeneralPractitionerExample" ]
+  ] ) ; # 
+  fhir:value [
+     a fhir:Quantity ;
+     fhir:value [ fhir:v "110"^^xsd:decimal ] ;
+     fhir:unit [ fhir:v "kg" ] ;
+     fhir:system [ fhir:v "http://unitsofmeasure.org"^^xsd:anyURI ] ;
+     fhir:code [ fhir:v "kg" ]
+  ] ; # 
+  fhir:device [
+     fhir:link <http://fhir.health.gov.lk/ips/Device/DeviceInformationExample> ;
+     fhir:reference [ fhir:v "Device/DeviceInformationExample" ]
+  ] . # 
+
+<http://hapi-fhir:8080/fhir/AllergyIntolerance/AllergiesExample> a fhir:AllergyIntolerance ;
+  fhir:id [ fhir:v "AllergiesExample"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://fhir.health.gov.lk/ips/StructureDefinition/allergy-intolerance"^^xsd:anyURI ;
+       fhir:link <http://fhir.health.gov.lk/ips/StructureDefinition/allergy-intolerance>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"AllergyIntolerance_AllergiesExample\"> </a><p><b>Generated Narrative: AllergyIntolerance </b><a name=\"AllergiesExample\"> </a><a name=\"hcAllergiesExample\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">ResourceAllergyIntolerance &quot;AllergiesExample&quot; </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-allergy-intolerance.html\">Allergy Intolerance</a></p></div><p><b>clinicalStatus</b>: Active <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"http://terminology.hl7.org/5.5.0/CodeSystem-allergyintolerance-clinical.html\">AllergyIntolerance Clinical Status Codes</a>#active)</span></p><p><b>verificationStatus</b>: Confirmed <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"http://terminology.hl7.org/5.5.0/CodeSystem-allergyintolerance-verification.html\">AllergyIntolerance Verification Status</a>#confirmed)</span></p><p><b>type</b>: allergy</p><p><b>code</b>: Allergy to food <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"https://browser.ihtsdotools.org/\">SNOMED CT</a>#414285001)</span></p><p><b>patient</b>: See on this page: Patient/PatientExample</p><p><b>encounter</b>: See on this page: Encounter/TargetFacilityEncounterExample</p><p><b>onset</b>: 2023-10-11 17:21:33-0800</p><p><b>recorder</b>: See on this page: Practitioner/GeneralPractitionerExample</p></div>"
+  ] ; # 
+  fhir:clinicalStatus [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/allergyintolerance-clinical"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "active" ]
+     ] )
+  ] ; # 
+  fhir:verificationStatus [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/allergyintolerance-verification"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "confirmed" ]
+     ] )
+  ] ; # 
+  fhir:type [ fhir:v "allergy"] ; # 
+  fhir:code [
+     fhir:coding ( [
+       a sct:414285001 ;
+       fhir:system [ fhir:v "http://snomed.info/sct"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "414285001" ]
+     ] ) ;
+     fhir:text [ fhir:v "Allergy to food" ]
+  ] ; # 
+  fhir:patient [
+     fhir:link <http://fhir.health.gov.lk/ips/Patient/PatientExample> ;
+     fhir:reference [ fhir:v "Patient/PatientExample" ]
+  ] ; # 
+  fhir:encounter [
+     fhir:link <http://fhir.health.gov.lk/ips/Encounter/TargetFacilityEncounterExample> ;
+     fhir:reference [ fhir:v "Encounter/TargetFacilityEncounterExample" ]
+  ] ; # 
+  fhir:onset [ fhir:v "2023-10-11T17:21:33-08:00"^^xsd:dateTime] ; # 
+  fhir:recorder [
+     fhir:link <http://fhir.health.gov.lk/ips/Practitioner/GeneralPractitionerExample> ;
+     fhir:reference [ fhir:v "Practitioner/GeneralPractitionerExample" ]
+  ] . # 
+
+<http://hapi-fhir:8080/fhir/MedicationRequest/MedicationRequestsExample> a fhir:MedicationRequest ;
+  fhir:id [ fhir:v "MedicationRequestsExample"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://fhir.health.gov.lk/ips/StructureDefinition/medication-request"^^xsd:anyURI ;
+       fhir:link <http://fhir.health.gov.lk/ips/StructureDefinition/medication-request>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"MedicationRequest_MedicationRequestsExample\"> </a><p><b>Generated Narrative: MedicationRequest </b><a name=\"MedicationRequestsExample\"> </a><a name=\"hcMedicationRequestsExample\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">ResourceMedicationRequest &quot;MedicationRequestsExample&quot; </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-medication-request.html\">Medication Request</a></p></div><p><b>identifier</b>: Prescription identifier/prescription-12345</p><p><b>status</b>: completed</p><p><b>intent</b>: order</p><p><b>medication</b>: Medication <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"CodeSystem-cs-medication-name-msd.html\">Medication Names For Pharmacy</a>#01403501)</span></p><p><b>subject</b>: See on this page: Patient/PatientExample</p><p><b>encounter</b>: See on this page: Encounter/TargetFacilityEncounterExample</p><p><b>authoredOn</b>: 2023-10-11 17:21:33-0800</p><p><b>requester</b>: See on this page: Practitioner/GeneralPractitionerExample</p><p><b>performer</b>: See on this page: Practitioner/GeneralPractitionerExample</p><p><b>recorder</b>: See on this page: Practitioner/GeneralPractitionerExample</p><p><b>note</b>: Additional information regarding the patient's medication prescription (By Organization/OrganizationExample @Oct 12, 2023, 1:21:33 AM)</p><blockquote><p><b>dosageInstruction</b></p><p><b>timing</b>: Count 2  times, Duration 2days , 2 per3 days</p><blockquote><p><b>doseAndRate</b></p></blockquote></blockquote><h3>DispenseRequests</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Quantity</b></td></tr><tr><td style=\"display: none\">*</td><td>5</td></tr></table></div>"
+  ] ; # 
+  fhir:identifier ( [
+     fhir:type [
+       fhir:coding ( [
+         fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/v2-0203"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "FILL" ] ;
+         fhir:display [ fhir:v "Filler Identifier" ]
+       ] ) ;
+       fhir:text [ fhir:v "Prescription identifier" ]
+     ] ;
+     fhir:system [ fhir:v "http://fhir.health.gov.lk/ips/identifier/medication"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "prescription-12345" ]
+  ] ) ; # 
+  fhir:status [ fhir:v "completed"] ; # 
+  fhir:intent [ fhir:v "order"] ; # 
+  fhir:medication [
+     a fhir:CodeableConcept ;
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://fhir.health.gov.lk/ips/CodeSystem/cs-medication-name-msd"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "01403501" ]
+     ] ) ;
+     fhir:text [ fhir:v "Medication" ]
+  ] ; # 
+  fhir:subject [
+     fhir:link <http://fhir.health.gov.lk/ips/Patient/PatientExample> ;
+     fhir:reference [ fhir:v "Patient/PatientExample" ]
+  ] ; # 
+  fhir:encounter [
+     fhir:link <http://fhir.health.gov.lk/ips/Encounter/TargetFacilityEncounterExample> ;
+     fhir:reference [ fhir:v "Encounter/TargetFacilityEncounterExample" ]
+  ] ; # 
+  fhir:authoredOn [ fhir:v "2023-10-11T17:21:33-08:00"^^xsd:dateTime] ; # 
+  fhir:requester [
+     fhir:link <http://fhir.health.gov.lk/ips/Practitioner/GeneralPractitionerExample> ;
+     fhir:reference [ fhir:v "Practitioner/GeneralPractitionerExample" ]
+  ] ; # 
+  fhir:performer [
+     fhir:link <http://fhir.health.gov.lk/ips/Practitioner/GeneralPractitionerExample> ;
+     fhir:reference [ fhir:v "Practitioner/GeneralPractitionerExample" ]
+  ] ; # 
+  fhir:recorder [
+     fhir:link <http://fhir.health.gov.lk/ips/Practitioner/GeneralPractitionerExample> ;
+     fhir:reference [ fhir:v "Practitioner/GeneralPractitionerExample" ]
+  ] ; # 
+  fhir:note ( [
+     fhir:author [
+       a fhir:Reference ;
+       fhir:link <http://fhir.health.gov.lk/ips/Organization/OrganizationExample> ;
+       fhir:reference [ fhir:v "Organization/OrganizationExample" ]
+     ] ;
+     fhir:time [ fhir:v "2023-10-11T17:21:33-08:00"^^xsd:dateTime ] ;
+     fhir:text [ fhir:v "Additional information regarding the patient's medication prescription" ]
+  ] ) ; # 
+  fhir:dosageInstruction ( [
+     fhir:timing [
+       fhir:repeat [
+         fhir:count [ fhir:v "2"^^xsd:positiveInteger ] ;
+         fhir:duration [ fhir:v "2"^^xsd:decimal ] ;
+         fhir:durationUnit [ fhir:v "d" ] ;
+         fhir:frequency [ fhir:v "2"^^xsd:positiveInteger ] ;
+         fhir:period [ fhir:v "3"^^xsd:decimal ] ;
+         fhir:periodUnit [ fhir:v "d" ]
+       ]
+     ] ;
+     fhir:doseAndRate ( [
+       fhir:dose [
+         a fhir:Quantity ;
+         fhir:value [ fhir:v "3"^^xsd:decimal ]
+       ]
+     ] )
+  ] ) ; # 
+  fhir:dispenseRequest [
+     fhir:quantity [
+       fhir:value [ fhir:v "5"^^xsd:decimal ]
+     ]
+  ] . # 
+
+<http://hapi-fhir:8080/fhir/MedicationDispense/DrugDispensationExample> a fhir:MedicationDispense ;
+  fhir:id [ fhir:v "DrugDispensationExample"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://fhir.health.gov.lk/ips/StructureDefinition/drug-dispensation"^^xsd:anyURI ;
+       fhir:link <http://fhir.health.gov.lk/ips/StructureDefinition/drug-dispensation>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"MedicationDispense_DrugDispensationExample\"> </a><p><b>Generated Narrative: MedicationDispense </b><a name=\"DrugDispensationExample\"> </a><a name=\"hcDrugDispensationExample\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">ResourceMedicationDispense &quot;DrugDispensationExample&quot; </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-drug-dispensation.html\">Drug Dispensation</a></p></div><p><b>status</b>: completed</p><p><b>medication</b>: Medication <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"CodeSystem-cs-medication-name-msd.html\">Medication Names For Pharmacy</a>#01403501)</span></p><p><b>subject</b>: See on this page: Patient/PatientExample</p><p><b>context</b>: See on this page: Encounter/TargetFacilityEncounterExample</p><h3>Performers</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Actor</b></td></tr><tr><td style=\"display: none\">*</td><td>See on this page: Practitioner/GeneralPractitionerExample</td></tr></table><p><b>location</b>: See on this page: Location/ProvidersLocationExample</p><p><b>authorizingPrescription</b>: See on this page: MedicationRequest/MedicationRequestsExample</p><p><b>whenHandedOver</b>: 2023-10-11 17:21:33-0800</p><p><b>receiver</b>: See on this page: Patient/PatientExample</p></div>"
+  ] ; # 
+  fhir:status [ fhir:v "completed"] ; # 
+  fhir:medication [
+     a fhir:CodeableConcept ;
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://fhir.health.gov.lk/ips/CodeSystem/cs-medication-name-msd"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "01403501" ]
+     ] ) ;
+     fhir:text [ fhir:v "Medication" ]
+  ] ; # 
+  fhir:subject [
+     fhir:link <http://fhir.health.gov.lk/ips/Patient/PatientExample> ;
+     fhir:reference [ fhir:v "Patient/PatientExample" ]
+  ] ; # 
+  fhir:context [
+     fhir:link <http://fhir.health.gov.lk/ips/Encounter/TargetFacilityEncounterExample> ;
+     fhir:reference [ fhir:v "Encounter/TargetFacilityEncounterExample" ]
+  ] ; # 
+  fhir:performer ( [
+     fhir:actor [
+       fhir:link <http://fhir.health.gov.lk/ips/Practitioner/GeneralPractitionerExample> ;
+       fhir:reference [ fhir:v "Practitioner/GeneralPractitionerExample" ]
+     ]
+  ] ) ; # 
+  fhir:location [
+     fhir:link <http://fhir.health.gov.lk/ips/Location/ProvidersLocationExample> ;
+     fhir:reference [ fhir:v "Location/ProvidersLocationExample" ]
+  ] ; # 
+  fhir:authorizingPrescription ( [
+     fhir:link <http://fhir.health.gov.lk/ips/MedicationRequest/MedicationRequestsExample> ;
+     fhir:reference [ fhir:v "MedicationRequest/MedicationRequestsExample" ]
+  ] ) ; # 
+  fhir:whenHandedOver [ fhir:v "2023-10-11T17:21:33-08:00"^^xsd:dateTime] ; # 
+  fhir:receiver ( [
+     fhir:link <http://fhir.health.gov.lk/ips/Patient/PatientExample> ;
+     fhir:reference [ fhir:v "Patient/PatientExample" ]
+  ] ) . # 
+
+<http://hapi-fhir:8080/fhir/ImagingStudy/ImagingExample> a fhir:ImagingStudy ;
+  fhir:id [ fhir:v "ImagingExample"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://fhir.health.gov.lk/ips/StructureDefinition/imaging-study"^^xsd:anyURI ;
+       fhir:link <http://fhir.health.gov.lk/ips/StructureDefinition/imaging-study>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"ImagingStudy_ImagingExample\"> </a><p><b>Generated Narrative: ImagingStudy </b><a name=\"ImagingExample\"> </a><a name=\"hcImagingExample\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">ResourceImagingStudy &quot;ImagingExample&quot; </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-imaging-study.html\">Imaging Study</a></p></div><p><b>status</b>: registered</p><p><b>subject</b>: See on this page: Patient/PatientExample</p><p><b>encounter</b>: See on this page: Encounter/TargetFacilityEncounterExample</p><p><b>started</b>: 2023-10-06 13:28:17-0500</p><p><b>basedOn</b>: See on this page: ServiceRequest/ImagingServiceRequestExample</p><p><b>referrer</b>: See on this page: Practitioner/GeneralPractitionerExample</p><p><b>location</b>: See on this page: Location/ProvidersLocationExample</p><p><b>description</b>: Imaging Description</p><blockquote><p><b>series</b></p><p><b>uid</b>: 2.16.124.113543.6003.1154777499.30246.19789.3503430045.1</p><p><b>modality</b>: Digital Radiography (Details: DICOM code DX  = ' Digital Radiography , stated as  null ')</p><h3>Performers</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Actor</b></td></tr><tr><td style=\"display: none\">*</td><td>See on this page: Practitioner/GeneralPractitionerExample</td></tr></table><h3>Instances</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Uid</b></td><td><b>SopClass</b></td></tr><tr><td style=\"display: none\">*</td><td>2.16.124.113543.6003.1154777499.30246.19789.3503430045.1.1</td><td>urn:oid:1.2.840.10008.5.1.4.1.1.2 (Details: unknown code urn:oid:1.2.840.10008.5.1.4.1.1.2  = ' urn:oid:1.2.840.10008.5.1.4.1.1.2 , stated as  null ')</td></tr></table></blockquote></div>"
+  ] ; # 
+  fhir:status [ fhir:v "registered"] ; # 
+  fhir:subject [
+     fhir:link <http://fhir.health.gov.lk/ips/Patient/PatientExample> ;
+     fhir:reference [ fhir:v "Patient/PatientExample" ]
+  ] ; # 
+  fhir:encounter [
+     fhir:link <http://fhir.health.gov.lk/ips/Encounter/TargetFacilityEncounterExample> ;
+     fhir:reference [ fhir:v "Encounter/TargetFacilityEncounterExample" ]
+  ] ; # 
+  fhir:started [ fhir:v "2023-10-06T13:28:17-05:00"^^xsd:dateTime] ; # 
+  fhir:basedOn ( [
+     fhir:link <http://fhir.health.gov.lk/ips/ServiceRequest/ImagingServiceRequestExample> ;
+     fhir:reference [ fhir:v "ServiceRequest/ImagingServiceRequestExample" ]
+  ] ) ; # 
+  fhir:referrer [
+     fhir:link <http://fhir.health.gov.lk/ips/Practitioner/GeneralPractitionerExample> ;
+     fhir:reference [ fhir:v "Practitioner/GeneralPractitionerExample" ]
+  ] ; # 
+  fhir:location [
+     fhir:link <http://fhir.health.gov.lk/ips/Location/ProvidersLocationExample> ;
+     fhir:reference [ fhir:v "Location/ProvidersLocationExample" ]
+  ] ; # 
+  fhir:description [ fhir:v "Imaging Description"] ; # 
+  fhir:series ( [
+     fhir:uid [ fhir:v "2.16.124.113543.6003.1154777499.30246.19789.3503430045.1" ] ;
+     fhir:modality [
+       fhir:system [ fhir:v "http://dicom.nema.org/resources/ontology/DCM"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "DX" ]
+     ] ;
+     fhir:performer ( [
+       fhir:actor [
+         fhir:link <http://fhir.health.gov.lk/ips/Practitioner/GeneralPractitionerExample> ;
+         fhir:reference [ fhir:v "Practitioner/GeneralPractitionerExample" ]
+       ]
+     ] ) ;
+     fhir:instance ( [
+       fhir:uid [ fhir:v "2.16.124.113543.6003.1154777499.30246.19789.3503430045.1.1" ] ;
+       fhir:sopClass [
+         fhir:system [ fhir:v "urn:ietf:rfc:3986"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "urn:oid:1.2.840.10008.5.1.4.1.1.2" ]
+       ]
+     ] )
+  ] ) . # 
+
+<http://hapi-fhir:8080/fhir/ServiceRequest/GeneralReferralServiceRequestExample> a fhir:ServiceRequest ;
+  fhir:id [ fhir:v "GeneralReferralServiceRequestExample"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://fhir.health.gov.lk/ips/StructureDefinition/general-referral-request"^^xsd:anyURI ;
+       fhir:link <http://fhir.health.gov.lk/ips/StructureDefinition/general-referral-request>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"ServiceRequest_GeneralReferralServiceRequestExample\"> </a><p><b>Generated Narrative: ServiceRequest </b><a name=\"GeneralReferralServiceRequestExample\"> </a><a name=\"hcGeneralReferralServiceRequestExample\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">ResourceServiceRequest &quot;GeneralReferralServiceRequestExample&quot; </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-general-referral-request.html\">General Referral Request</a></p></div><p><b>status</b>: completed</p><p><b>intent</b>: order</p><p><b>code</b>: Patient referral <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"https://browser.ihtsdotools.org/\">SNOMED CT</a>#3457005)</span></p><p><b>subject</b>: See on this page: Patient/PatientExample</p><p><b>encounter</b>: See on this page: Encounter/TargetFacilityEncounterExample</p><p><b>occurrence</b>: 2023-10-06 13:28:17-0500</p><p><b>requester</b>: See on this page: Practitioner/GeneralPractitionerExample</p><p><b>locationReference</b>: See on this page: Location/ProvidersLocationExample</p></div>"
+  ] ; # 
+  fhir:status [ fhir:v "completed"] ; # 
+  fhir:intent [ fhir:v "order"] ; # 
+  fhir:code [
+     fhir:coding ( [
+       a sct:3457005 ;
+       fhir:system [ fhir:v "http://snomed.info/sct"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "3457005" ]
+     ] ) ;
+     fhir:text [ fhir:v "Patient referral" ]
+  ] ; # 
+  fhir:subject [
+     fhir:link <http://fhir.health.gov.lk/ips/Patient/PatientExample> ;
+     fhir:reference [ fhir:v "Patient/PatientExample" ]
+  ] ; # 
+  fhir:encounter [
+     fhir:link <http://fhir.health.gov.lk/ips/Encounter/TargetFacilityEncounterExample> ;
+     fhir:reference [ fhir:v "Encounter/TargetFacilityEncounterExample" ]
+  ] ; # 
+  fhir:occurrence [ fhir:v "2023-10-06T13:28:17-05:00"^^xsd:dateTime] ; # 
+  fhir:requester [
+     fhir:link <http://fhir.health.gov.lk/ips/Practitioner/GeneralPractitionerExample> ;
+     fhir:reference [ fhir:v "Practitioner/GeneralPractitionerExample" ]
+  ] ; # 
+  fhir:locationReference ( [
+     fhir:link <http://fhir.health.gov.lk/ips/Location/ProvidersLocationExample> ;
+     fhir:reference [ fhir:v "Location/ProvidersLocationExample" ]
+  ] ) . # 
+
+<http://hapi-fhir:8080/fhir/ServiceRequest/InvestigationsServiceRequestExample> a fhir:ServiceRequest ;
+  fhir:id [ fhir:v "InvestigationsServiceRequestExample"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://fhir.health.gov.lk/ips/StructureDefinition/investigations-request"^^xsd:anyURI ;
+       fhir:link <http://fhir.health.gov.lk/ips/StructureDefinition/investigations-request>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"ServiceRequest_InvestigationsServiceRequestExample\"> </a><p><b>Generated Narrative: ServiceRequest </b><a name=\"InvestigationsServiceRequestExample\"> </a><a name=\"hcInvestigationsServiceRequestExample\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">ResourceServiceRequest &quot;InvestigationsServiceRequestExample&quot; </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-investigations-request.html\">Investigations Request</a></p></div><p><b>status</b>: completed</p><p><b>intent</b>: order</p><p><b>code</b>: Investigation requested <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"CodeSystem-cs-investigation.html\">Investigations</a>#FBC-WBC-th/uL)</span></p><p><b>subject</b>: See on this page: Patient/PatientExample</p><p><b>encounter</b>: See on this page: Encounter/TargetFacilityEncounterExample</p><p><b>occurrence</b>: 2023-10-06 13:28:17-0500</p><p><b>authoredOn</b>: 2023-10-06 13:28:17-0500</p><p><b>requester</b>: See on this page: Practitioner/GeneralPractitionerExample</p><p><b>locationReference</b>: See on this page: Location/ProvidersLocationExample</p></div>"
+  ] ; # 
+  fhir:status [ fhir:v "completed"] ; # 
+  fhir:intent [ fhir:v "order"] ; # 
+  fhir:code [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://fhir.health.gov.lk/ips/CodeSystem/cs-investigation"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "FBC-WBC-th/uL" ]
+     ] ) ;
+     fhir:text [ fhir:v "Investigation requested" ]
+  ] ; # 
+  fhir:subject [
+     fhir:link <http://fhir.health.gov.lk/ips/Patient/PatientExample> ;
+     fhir:reference [ fhir:v "Patient/PatientExample" ]
+  ] ; # 
+  fhir:encounter [
+     fhir:link <http://fhir.health.gov.lk/ips/Encounter/TargetFacilityEncounterExample> ;
+     fhir:reference [ fhir:v "Encounter/TargetFacilityEncounterExample" ]
+  ] ; # 
+  fhir:occurrence [ fhir:v "2023-10-06T13:28:17-05:00"^^xsd:dateTime] ; # 
+  fhir:authoredOn [ fhir:v "2023-10-06T13:28:17-05:00"^^xsd:dateTime] ; # 
+  fhir:requester [
+     fhir:link <http://fhir.health.gov.lk/ips/Practitioner/GeneralPractitionerExample> ;
+     fhir:reference [ fhir:v "Practitioner/GeneralPractitionerExample" ]
+  ] ; # 
+  fhir:locationReference ( [
+     fhir:link <http://fhir.health.gov.lk/ips/Location/ProvidersLocationExample> ;
+     fhir:reference [ fhir:v "Location/ProvidersLocationExample" ]
+  ] ) . # 
+
+<http://hapi-fhir:8080/fhir/ServiceRequest/ImagingServiceRequestExample> a fhir:ServiceRequest ;
+  fhir:id [ fhir:v "ImagingServiceRequestExample"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://fhir.health.gov.lk/ips/StructureDefinition/imaging-request"^^xsd:anyURI ;
+       fhir:link <http://fhir.health.gov.lk/ips/StructureDefinition/imaging-request>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"ServiceRequest_ImagingServiceRequestExample\"> </a><p><b>Generated Narrative: ServiceRequest </b><a name=\"ImagingServiceRequestExample\"> </a><a name=\"hcImagingServiceRequestExample\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">ResourceServiceRequest &quot;ImagingServiceRequestExample&quot; </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-imaging-request.html\">Imaging Request</a></p></div><p><b>status</b>: completed</p><p><b>intent</b>: order</p><p><b>code</b>: Imaging requested <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"CodeSystem-cs-procedure-imaging.html\">Procedures</a>#X-Ray)</span></p><p><b>subject</b>: See on this page: Patient/PatientExample</p><p><b>encounter</b>: See on this page: Encounter/TargetFacilityEncounterExample</p><p><b>occurrence</b>: 2023-10-06 13:28:17-0500</p><p><b>authoredOn</b>: 2023-10-06 13:28:17-0500</p><p><b>requester</b>: See on this page: Practitioner/GeneralPractitionerExample</p><p><b>locationReference</b>: See on this page: Location/ProvidersLocationExample</p></div>"
+  ] ; # 
+  fhir:status [ fhir:v "completed"] ; # 
+  fhir:intent [ fhir:v "order"] ; # 
+  fhir:code [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://fhir.health.gov.lk/ips/CodeSystem/cs-procedure-imaging"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "X-Ray" ]
+     ] ) ;
+     fhir:text [ fhir:v "Imaging requested" ]
+  ] ; # 
+  fhir:subject [
+     fhir:link <http://fhir.health.gov.lk/ips/Patient/PatientExample> ;
+     fhir:reference [ fhir:v "Patient/PatientExample" ]
+  ] ; # 
+  fhir:encounter [
+     fhir:link <http://fhir.health.gov.lk/ips/Encounter/TargetFacilityEncounterExample> ;
+     fhir:reference [ fhir:v "Encounter/TargetFacilityEncounterExample" ]
+  ] ; # 
+  fhir:occurrence [ fhir:v "2023-10-06T13:28:17-05:00"^^xsd:dateTime] ; # 
+  fhir:authoredOn [ fhir:v "2023-10-06T13:28:17-05:00"^^xsd:dateTime] ; # 
+  fhir:requester [
+     fhir:link <http://fhir.health.gov.lk/ips/Practitioner/GeneralPractitionerExample> ;
+     fhir:reference [ fhir:v "Practitioner/GeneralPractitionerExample" ]
+  ] ; # 
+  fhir:locationReference ( [
+     fhir:link <http://fhir.health.gov.lk/ips/Location/ProvidersLocationExample> ;
+     fhir:reference [ fhir:v "Location/ProvidersLocationExample" ]
+  ] ) . # 
+
+<http://hapi-fhir:8080/fhir/ServiceRequest/ProcedureServiceRequestExample> a fhir:ServiceRequest ;
+  fhir:id [ fhir:v "ProcedureServiceRequestExample"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://fhir.health.gov.lk/ips/StructureDefinition/procedures-request"^^xsd:anyURI ;
+       fhir:link <http://fhir.health.gov.lk/ips/StructureDefinition/procedures-request>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"ServiceRequest_ProcedureServiceRequestExample\"> </a><p><b>Generated Narrative: ServiceRequest </b><a name=\"ProcedureServiceRequestExample\"> </a><a name=\"hcProcedureServiceRequestExample\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">ResourceServiceRequest &quot;ProcedureServiceRequestExample&quot; </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-procedures-request.html\">Procedure Request</a></p></div><p><b>status</b>: completed</p><p><b>intent</b>: order</p><p><b>code</b>: Cleaning and Dressing <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"CodeSystem-cs-procedure.html\">Procedures</a>#Cleaning-and-Dressing)</span></p><p><b>subject</b>: See on this page: Patient/PatientExample</p><p><b>encounter</b>: See on this page: Encounter/TargetFacilityEncounterExample</p><p><b>occurrence</b>: 2023-10-06 13:28:17-0500</p><p><b>requester</b>: See on this page: Practitioner/GeneralPractitionerExample</p><p><b>locationReference</b>: See on this page: Location/ProvidersLocationExample</p></div>"
+  ] ; # 
+  fhir:status [ fhir:v "completed"] ; # 
+  fhir:intent [ fhir:v "order"] ; # 
+  fhir:code [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://fhir.health.gov.lk/ips/CodeSystem/cs-procedure"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "Cleaning-and-Dressing" ]
+     ] ) ;
+     fhir:text [ fhir:v "Cleaning and Dressing" ]
+  ] ; # 
+  fhir:subject [
+     fhir:link <http://fhir.health.gov.lk/ips/Patient/PatientExample> ;
+     fhir:reference [ fhir:v "Patient/PatientExample" ]
+  ] ; # 
+  fhir:encounter [
+     fhir:link <http://fhir.health.gov.lk/ips/Encounter/TargetFacilityEncounterExample> ;
+     fhir:reference [ fhir:v "Encounter/TargetFacilityEncounterExample" ]
+  ] ; # 
+  fhir:occurrence [ fhir:v "2023-10-06T13:28:17-05:00"^^xsd:dateTime] ; # 
+  fhir:requester [
+     fhir:link <http://fhir.health.gov.lk/ips/Practitioner/GeneralPractitionerExample> ;
+     fhir:reference [ fhir:v "Practitioner/GeneralPractitionerExample" ]
+  ] ; # 
+  fhir:locationReference ( [
+     fhir:link <http://fhir.health.gov.lk/ips/Location/ProvidersLocationExample> ;
+     fhir:reference [ fhir:v "Location/ProvidersLocationExample" ]
+  ] ) . # 
+
+<http://hapi-fhir:8080/fhir/Task/HHIMSReferralTaskExample> a fhir:Task ;
+  fhir:id [ fhir:v "HHIMSReferralTaskExample"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://fhir.health.gov.lk/ips/StructureDefinition/referral-task"^^xsd:anyURI ;
+       fhir:link <http://fhir.health.gov.lk/ips/StructureDefinition/referral-task>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Task_HHIMSReferralTaskExample\"> </a><p><b>Generated Narrative: Task </b><a name=\"HHIMSReferralTaskExample\"> </a><a name=\"hcHHIMSReferralTaskExample\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">ResourceTask &quot;HHIMSReferralTaskExample&quot; </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-referral-task.html\">Referral Task</a></p></div><p><b>status</b>: completed</p><p><b>intent</b>: order</p><p><b>priority</b>: routine</p><p><b>description</b>: some information regarding the need for the referral request, if any.</p><p><b>focus</b>: See on this page: ServiceRequest/GeneralReferralServiceRequestExample</p><p><b>for</b>: See on this page: Patient/PatientExample</p><p><b>encounter</b>: See on this page: Encounter/TargetFacilityEncounterExample</p><p><b>authoredOn</b>: 2023-10-06 13:28:17-0500</p><p><b>requester</b>: See on this page: Practitioner/GeneralPractitionerExample</p><p><b>location</b>: See on this page: Location/ProvidersLocationExample</p></div>"
+  ] ; # 
+  fhir:status [ fhir:v "completed"] ; # 
+  fhir:intent [ fhir:v "order"] ; # 
+  fhir:priority [ fhir:v "routine"] ; # 
+  fhir:description [ fhir:v "some information regarding the need for the referral request, if any."] ; # 
+  fhir:focus [
+     fhir:link <http://fhir.health.gov.lk/ips/ServiceRequest/GeneralReferralServiceRequestExample> ;
+     fhir:reference [ fhir:v "ServiceRequest/GeneralReferralServiceRequestExample" ]
+  ] ; # 
+  fhir:for [
+     fhir:link <http://fhir.health.gov.lk/ips/Patient/PatientExample> ;
+     fhir:reference [ fhir:v "Patient/PatientExample" ]
+  ] ; # 
+  fhir:encounter [
+     fhir:link <http://fhir.health.gov.lk/ips/Encounter/TargetFacilityEncounterExample> ;
+     fhir:reference [ fhir:v "Encounter/TargetFacilityEncounterExample" ]
+  ] ; # 
+  fhir:authoredOn [ fhir:v "2023-10-06T13:28:17-05:00"^^xsd:dateTime] ; # 
+  fhir:requester [
+     fhir:link <http://fhir.health.gov.lk/ips/Practitioner/GeneralPractitionerExample> ;
+     fhir:reference [ fhir:v "Practitioner/GeneralPractitionerExample" ]
+  ] ; # 
+  fhir:location [
+     fhir:link <http://fhir.health.gov.lk/ips/Location/ProvidersLocationExample> ;
+     fhir:reference [ fhir:v "Location/ProvidersLocationExample" ]
+  ] . # 
+
+<http://hapi-fhir:8080/fhir/Practitioner/GeneralPractitionerExample> a fhir:Practitioner ;
+  fhir:id [ fhir:v "GeneralPractitionerExample"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://fhir.health.gov.lk/ips/StructureDefinition/practitioner"^^xsd:anyURI ;
+       fhir:link <http://fhir.health.gov.lk/ips/StructureDefinition/practitioner>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Practitioner_GeneralPractitionerExample\"> </a><p><b>Generated Narrative: Practitioner </b><a name=\"GeneralPractitionerExample\"> </a><a name=\"hcGeneralPractitionerExample\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">ResourcePractitioner &quot;GeneralPractitionerExample&quot; </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-practitioner.html\">Practitioner</a></p></div><p><b>name</b>: Tom Junes Smith </p><p><b>telecom</b>: ph: 27537652509(WORK), <a href=\"mailto:someone@something.org\">someone@something.org</a></p></div>"
+  ] ; # 
+  fhir:name ( [
+     fhir:family [ fhir:v "Smith" ] ;
+     fhir:given ( [ fhir:v "Tom" ] [ fhir:v "Junes" ] ) ;
+     fhir:prefix ( [ fhir:v "Dr" ] )
+  ] ) ; # 
+  fhir:telecom ( [
+     fhir:system [ fhir:v "phone" ] ;
+     fhir:value [ fhir:v "27537652509" ] ;
+     fhir:use [ fhir:v "work" ]
+  ] [
+     fhir:system [ fhir:v "email" ] ;
+     fhir:value [ fhir:v "someone@something.org" ] ;
+     fhir:use [ fhir:v "home" ]
+  ] ) . # 
+
+<http://hapi-fhir:8080/fhir/Location/ProvidersLocationExample> a fhir:Location ;
+  fhir:id [ fhir:v "ProvidersLocationExample"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://fhir.health.gov.lk/ips/StructureDefinition/providers-location"^^xsd:anyURI ;
+       fhir:link <http://fhir.health.gov.lk/ips/StructureDefinition/providers-location>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Location_ProvidersLocationExample\"> </a><p><b>Generated Narrative: Location </b><a name=\"ProvidersLocationExample\"> </a><a name=\"hcProvidersLocationExample\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">ResourceLocation &quot;ProvidersLocationExample&quot; </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-providers-location.html\">Providers Location</a></p></div><p><b>identifier</b>: Provider location identifier/Location-ID-1, Provider location identifier/Location-ID-2</p><p><b>status</b>: active</p><p><b>name</b>: Name for the location</p><p><b>telecom</b>: <a href=\"tel:+27829999999\">+27829999999</a>, <a href=\"mailto:someone@something.com\">someone@something.com</a>, <a href=\"mailto:someone2@something.com\">someone2@something.com</a></p><p><b>address</b>: 177 Nawala Road Nugegoda Colombo 32350 LK </p><p><b>managingOrganization</b>: See on this page: Organization/OrganizationExample</p></div>"
+  ] ; # 
+  fhir:identifier ( [
+     fhir:type [
+       fhir:coding ( [
+         fhir:system [ fhir:v "http://fhir.health.gov.lk/ips/CodeSystem/cs-identifier-types"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "PLOC" ]
+       ] ) ;
+       fhir:text [ fhir:v "Provider location identifier" ]
+     ] ;
+     fhir:system [ fhir:v "http://fhir.health.gov.lk/ips/identifier/provider-location"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "Location-ID-1" ]
+  ] [
+     fhir:type [
+       fhir:coding ( [
+         fhir:system [ fhir:v "http://fhir.health.gov.lk/ips/CodeSystem/cs-identifier-types"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "PLOC" ]
+       ] ) ;
+       fhir:text [ fhir:v "Provider location identifier" ]
+     ] ;
+     fhir:system [ fhir:v "http://fhir.health.gov.lk/ips/identifier/provider-location"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "Location-ID-2" ]
+  ] ) ; # 
+  fhir:status [ fhir:v "active"] ; # 
+  fhir:name [ fhir:v "Name for the location"] ; # 
+  fhir:telecom ( [
+     fhir:system [ fhir:v "phone" ] ;
+     fhir:value [ fhir:v "+27829999999" ]
+  ] [
+     fhir:system [ fhir:v "email" ] ;
+     fhir:value [ fhir:v "someone@something.com" ]
+  ] [
+     fhir:system [ fhir:v "email" ] ;
+     fhir:value [ fhir:v "someone2@something.com" ]
+  ] ) ; # 
+  fhir:address [
+     fhir:type [ fhir:v "postal" ] ;
+     fhir:line ( [ fhir:v "177" ] [ fhir:v "Nawala Road" ] ) ;
+     fhir:city [ fhir:v "Nugegoda" ] ;
+     fhir:district [ fhir:v "Ampara" ] ;
+     fhir:state [ fhir:v "Colombo" ] ;
+     fhir:postalCode [ fhir:v "32350" ] ;
+     fhir:country [ fhir:v "LK" ]
+  ] ; # 
+  fhir:managingOrganization [
+     fhir:link <http://fhir.health.gov.lk/ips/Organization/OrganizationExample> ;
+     fhir:reference [ fhir:v "Organization/OrganizationExample" ]
+  ] . # 
+
+<http://hapi-fhir:8080/fhir/Organization/OrganizationExample> a fhir:Organization ;
+  fhir:id [ fhir:v "OrganizationExample"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://fhir.health.gov.lk/ips/StructureDefinition/organization"^^xsd:anyURI ;
+       fhir:link <http://fhir.health.gov.lk/ips/StructureDefinition/organization>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Organization_OrganizationExample\"> </a><p><b>Generated Narrative: Organization </b><a name=\"OrganizationExample\"> </a><a name=\"hcOrganizationExample\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">ResourceOrganization &quot;OrganizationExample&quot; </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-organization.html\">Organization</a></p></div><p><b>identifier</b>: Organization identifier/facility1</p><p><b>name</b>: Some Health Facility</p></div>"
+  ] ; # 
+  fhir:identifier ( [
+     fhir:type [
+       fhir:coding ( [
+         fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/v2-0203"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "XX" ]
+       ] ) ;
+       fhir:text [ fhir:v "Organization identifier" ]
+     ] ;
+     fhir:system [ fhir:v "http://fhir.health.gov.lk/ips/identifier/hin"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "facility1" ]
+  ] ) ; # 
+  fhir:name [ fhir:v "Some Health Facility"] . # 
+
+<http://hapi-fhir:8080/fhir/Device/DeviceInformationExample> a fhir:Device ;
+  fhir:id [ fhir:v "DeviceInformationExample"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://fhir.health.gov.lk/ips/StructureDefinition/device-information"^^xsd:anyURI ;
+       fhir:link <http://fhir.health.gov.lk/ips/StructureDefinition/device-information>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Device_DeviceInformationExample\"> </a><p><b>Generated Narrative: Device </b><a name=\"DeviceInformationExample\"> </a><a name=\"hcDeviceInformationExample\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">ResourceDevice &quot;DeviceInformationExample&quot; </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-device-information.html\">Device Information</a></p></div><p><b>identifier</b>: <code>http://fhir.health.gov.lk/ips/identifier/system-id</code>/OpenMRS-1234-1</p><p><b>status</b>: active</p><p><b>type</b>: Medical record <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"https://browser.ihtsdotools.org/\">SNOMED CT</a>#129465004)</span></p><h3>Versions</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Type</b></td><td><b>Value</b></td></tr><tr><td style=\"display: none\">*</td><td>OpenMRS <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"CodeSystem-cs-device-classification.html\">Device Classification Codes</a>#OpenMRS)</span></td><td>2.5.0</td></tr></table><p><b>owner</b>: See on this page: Organization/OrganizationExample</p><p><b>location</b>: See on this page: Location/ProvidersLocationExample</p></div>"
+  ] ; # 
+  fhir:identifier ( [
+     fhir:system [ fhir:v "http://fhir.health.gov.lk/ips/identifier/system-id"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "OpenMRS-1234-1" ]
+  ] ) ; # 
+  fhir:status [ fhir:v "active"] ; # 
+  fhir:type [
+     fhir:coding ( [
+       a sct:129465004 ;
+       fhir:system [ fhir:v "http://snomed.info/sct"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "129465004" ]
+     ] )
+  ] ; # 
+  fhir:version ( [
+     fhir:type [
+       fhir:coding ( [
+         fhir:system [ fhir:v "http://fhir.health.gov.lk/ips/CodeSystem/cs-device-classification"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "OpenMRS" ]
+       ] )
+     ] ;
+     fhir:value [ fhir:v "2.5.0" ]
+  ] ) ; # 
+  fhir:owner [
+     fhir:link <http://fhir.health.gov.lk/ips/Organization/OrganizationExample> ;
+     fhir:reference [ fhir:v "Organization/OrganizationExample" ]
+  ] ; # 
+  fhir:location [
+     fhir:link <http://fhir.health.gov.lk/ips/Location/ProvidersLocationExample> ;
+     fhir:reference [ fhir:v "Location/ProvidersLocationExample" ]
+  ] . # 
+
+# -------------------------------------------------------------------------------------
+

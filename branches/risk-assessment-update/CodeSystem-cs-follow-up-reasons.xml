@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<CodeSystem xmlns="http://hl7.org/fhir">
+  <id value="cs-follow-up-reasons"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p>This case-sensitive code system <code>http://fhir.health.gov.lk/ips/CodeSystem/cs-follow-up-reasons</code> defines the following codes:</p><table class="codes"><tr><td style="white-space:nowrap"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style="white-space:nowrap">Followed-in-3-months-at-hlc<a name="cs-follow-up-reasons-Followed-in-3-months-at-hlc"> </a></td><td>Followed in 3 months at HLC</td><td>Needs definition</td></tr><tr><td style="white-space:nowrap">Followed-in-6-months-at-hlc<a name="cs-follow-up-reasons-Followed-in-6-months-at-hlc"> </a></td><td>Followed in 6 months at HLC</td><td>Needs definition</td></tr><tr><td style="white-space:nowrap">Followed-in-1-year-at-hlc<a name="cs-follow-up-reasons-Followed-in-1-year-at-hlc"> </a></td><td>Followed in 1 year at HLC</td><td>Needs definition</td></tr><tr><td style="white-space:nowrap">Followed-in-3-years-at-hlc<a name="cs-follow-up-reasons-Followed-in-3-years-at-hlc"> </a></td><td>Followed in 3 years at HLC</td><td>Needs definition</td></tr></table></div>
+  </text>
+  <url value="http://fhir.health.gov.lk/ips/CodeSystem/cs-follow-up-reasons"/>
+  <version value="0.1.0"/>
+  <name value="CSFollowUpReasons"/>
+  <title value="Follow up at HLC"/>
+  <status value="active"/>
+  <experimental value="false"/>
+  <date value="2024-03-18T13:31:35+00:00"/>
+  <publisher value="Ministry of Health, Sri Lanka"/>
+  <contact>
+    <name value="Ministry of Health, Sri Lanka"/>
+    <telecom>
+      <system value="url"/>
+      <value value="https://www.health.gov.lk/"/>
+    </telecom>
+    <telecom>
+      <system value="email"/>
+      <value value="digitalhealth@health.gov.lk"/>
+    </telecom>
+  </contact>
+  <contact>
+    <name value="Director, Health Information"/>
+    <telecom>
+      <system value="email"/>
+      <value value="digitalhealth@health.gov.lk"/>
+      <use value="work"/>
+    </telecom>
+  </contact>
+  <description value="Follow up at Healthy Lifestyle Center"/>
+  <jurisdiction>
+    <coding>
+      <system value="http://unstats.un.org/unsd/methods/m49/m49.htm"/>
+      <code value="001"/>
+      <display value="World"/>
+    </coding>
+  </jurisdiction>
+  <caseSensitive value="true"/>
+  <content value="complete"/>
+  <count value="4"/>
+  <concept>
+    <code value="Followed-in-3-months-at-hlc"/>
+    <display value="Followed in 3 months at HLC"/>
+    <definition value="Needs definition"/>
+  </concept>
+  <concept>
+    <code value="Followed-in-6-months-at-hlc"/>
+    <display value="Followed in 6 months at HLC"/>
+    <definition value="Needs definition"/>
+  </concept>
+  <concept>
+    <code value="Followed-in-1-year-at-hlc"/>
+    <display value="Followed in 1 year at HLC"/>
+    <definition value="Needs definition"/>
+  </concept>
+  <concept>
+    <code value="Followed-in-3-years-at-hlc"/>
+    <display value="Followed in 3 years at HLC"/>
+    <definition value="Needs definition"/>
+  </concept>
+</CodeSystem>

@@ -1,0 +1,48 @@
+{
+  "resourceType" : "Condition",
+  "id" : "MedicalHistoryExample",
+  "meta" : {
+    "profile" : ["http://fhir.health.gov.lk/ips/StructureDefinition/medical-history"]
+  },
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: Condition </b><a name=\"MedicalHistoryExample\"> </a><a name=\"hcMedicalHistoryExample\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">ResourceCondition &quot;MedicalHistoryExample&quot; </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-medical-history.html\">Medical History</a></p></div><p><b>clinicalStatus</b>: Active <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"http://terminology.hl7.org/5.5.0/CodeSystem-condition-clinical.html\">Condition Clinical Status Codes</a>#active)</span></p><p><b>verificationStatus</b>: Confirmed <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"http://terminology.hl7.org/5.5.0/CodeSystem-condition-ver-status.html\">ConditionVerificationStatus</a>#confirmed)</span></p><p><b>category</b>: Problem List Item <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"http://terminology.hl7.org/5.5.0/CodeSystem-condition-category.html\">Condition Category Codes</a>#problem-list-item)</span></p><p><b>code</b>: Type I diabetes mellitus without complication <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"https://browser.ihtsdotools.org/\">SNOMED CT</a>#313435000)</span></p><p><b>subject</b>: <a href=\"Patient-PatientExample.html\">Patient/PatientExample</a> &quot; SMITH&quot;</p><p><b>encounter</b>: <a href=\"Encounter-TargetFacilityEncounterExample.html\">Encounter/TargetFacilityEncounterExample</a></p><p><b>recordedDate</b>: 2023-10-06 13:28:17-0500</p><p><b>recorder</b>: <a href=\"Practitioner-GeneralPractitionerExample.html\">Practitioner/GeneralPractitionerExample</a> &quot; SMITH&quot;</p><p><b>asserter</b>: <a href=\"Practitioner-GeneralPractitionerExample.html\">Practitioner/GeneralPractitionerExample</a> &quot; SMITH&quot;</p></div>"
+  },
+  "clinicalStatus" : {
+    "coding" : [{
+      "system" : "http://terminology.hl7.org/CodeSystem/condition-clinical",
+      "code" : "active"
+    }]
+  },
+  "verificationStatus" : {
+    "coding" : [{
+      "system" : "http://terminology.hl7.org/CodeSystem/condition-ver-status",
+      "code" : "confirmed"
+    }]
+  },
+  "category" : [{
+    "coding" : [{
+      "system" : "http://terminology.hl7.org/CodeSystem/condition-category",
+      "code" : "problem-list-item"
+    }]
+  }],
+  "code" : {
+    "coding" : [{
+      "system" : "http://snomed.info/sct",
+      "code" : "313435000"
+    }]
+  },
+  "subject" : {
+    "reference" : "Patient/PatientExample"
+  },
+  "encounter" : {
+    "reference" : "Encounter/TargetFacilityEncounterExample"
+  },
+  "recordedDate" : "2023-10-06T13:28:17-05:00",
+  "recorder" : {
+    "reference" : "Practitioner/GeneralPractitionerExample"
+  },
+  "asserter" : {
+    "reference" : "Practitioner/GeneralPractitionerExample"
+  }
+}

@@ -1,0 +1,21 @@
+SriLankaIPS
+=========================================
+
+/github/workspace/fsh-generated/resources/Bundle-HHIMSIPSBundleExampleWithMedicalHistory.json: line 565, col 12, Info - Reference to draft CodeSystem http://terminology.hl7.org/CodeSystem/condition-category|0.5.0 (BUSINESSRULE)
+/github/workspace/fsh-generated/resources/Bundle-HHIMSTransactionalBundleExampleNoMedicalHistory.json: line 256, col 8, Info - The entry resource matched more than one of the allowed profiles (http://fhir.health.gov.lk/ips/StructureDefinition/medical-history, http://fhir.health.gov.lk/ips/StructureDefinition/no-medical-history) (INVALID)
+/github/workspace/fsh-generated/resources/Bundle-HHIMSTransactionalBundleExampleNoMedicalHistory.json: line 256, col 8, Warning - Found multiple matching profiles among 2 choices: http://fhir.health.gov.lk/ips/StructureDefinition/medical-history, http://fhir.health.gov.lk/ips/StructureDefinition/no-medical-history (STRUCTURE)
+/github/workspace/fsh-generated/resources/Bundle-HHIMSTransactionalBundleExampleWithMedicalHistory.json: line 281, col 12, Info - Reference to draft CodeSystem http://terminology.hl7.org/CodeSystem/condition-category|0.5.0 (BUSINESSRULE)
+/github/workspace/fsh-generated/resources/Bundle-HHIMSTransactionalBundleExampleWithMedicalHistory.json: line 281, col 12, Info - Reference to draft CodeSystem http://terminology.hl7.org/CodeSystem/condition-category|0.5.0 (BUSINESSRULE)
+/github/workspace/fsh-generated/resources/Bundle-HIMSIPSBundleExample.json: line 554, col 12, Info - Reference to draft CodeSystem http://terminology.hl7.org/CodeSystem/condition-category|0.5.0 (BUSINESSRULE)
+/github/workspace/fsh-generated/resources/Bundle-HIMSTransactionalBundleExample.json: line 281, col 12, Info - Reference to draft CodeSystem http://terminology.hl7.org/CodeSystem/condition-category|0.5.0 (BUSINESSRULE)
+/github/workspace/fsh-generated/resources/Bundle-HIMSTransactionalBundleExample.json: line 281, col 12, Info - Reference to draft CodeSystem http://terminology.hl7.org/CodeSystem/condition-category|0.5.0 (BUSINESSRULE)
+/github/workspace/fsh-generated/resources/Condition-MedicalHistoryExample.json: line 26, col 6, Info - Reference to draft CodeSystem http://terminology.hl7.org/CodeSystem/condition-category|0.5.0 (BUSINESSRULE)
+/github/workspace/fsh-generated/resources/StructureDefinition-drug-dispensation.json: line 1, col 67078, Info - The string value contains text that looks like embedded HTML tags. If this content is rendered to HTML without appropriate post-processing, it may be a security risk (INVALID)
+/github/workspace/fsh-generated/resources/StructureDefinition-fasting-blood-sugar.json: line 1, col 83310, Info - Reference to draft CodeSystem http://terminology.hl7.org/CodeSystem/observation-category|0.1.0 (BUSINESSRULE)
+/github/workspace/fsh-generated/resources/StructureDefinition-no-allergy-intolerance.json: line 1, col 46672, Info - Reference to draft CodeSystem http://terminology.hl7.org/CodeSystem/allergyintolerance-clinical|0.5.0 (BUSINESSRULE)
+/github/workspace/fsh-generated/resources/StructureDefinition-no-allergy-intolerance.json: line 1, col 96744, Info - Reference to draft CodeSystem http://terminology.hl7.org/CodeSystem/allergyintolerance-clinical|0.5.0 (BUSINESSRULE)
+/github/workspace/fsh-generated/resources/StructureDefinition-random-blood-sugar.json: line 1, col 83069, Info - Reference to draft CodeSystem http://terminology.hl7.org/CodeSystem/observation-category|0.1.0 (BUSINESSRULE)
+/github/workspace/fsh-generated/resources/StructureDefinition-total-cholesterol.json: line 1, col 83066, Info - Reference to draft CodeSystem http://terminology.hl7.org/CodeSystem/observation-category|0.1.0 (BUSINESSRULE)
+
+err = 0, warn = 1, info = 14
+IG Publisher Version: 1.6.1

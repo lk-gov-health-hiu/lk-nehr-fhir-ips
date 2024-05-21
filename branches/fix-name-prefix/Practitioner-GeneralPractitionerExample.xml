@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Practitioner xmlns="http://hl7.org/fhir">
+  <id value="GeneralPractitionerExample"/>
+  <meta>
+    <profile value="http://fhir.health.gov.lk/ips/StructureDefinition/practitioner"/>
+  </meta>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative: Practitioner</b><a name="GeneralPractitionerExample"> </a></p><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Resource Practitioner &quot;GeneralPractitionerExample&quot; </p><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-practitioner.html">Practitioner</a></p></div><p><b>name</b>: Tom Junes Smith </p><p><b>telecom</b>: ph: 27537652509(WORK), <a href="mailto:someone@something.org">someone@something.org</a></p></div>
+  </text>
+  <name>
+    <family value="Smith"/>
+    <given value="Tom"/>
+    <given value="Junes"/>
+    <prefix value="Dr"/>
+  </name>
+  <telecom>
+    <system value="phone"/>
+    <value value="27537652509"/>
+    <use value="work"/>
+  </telecom>
+  <telecom>
+    <system value="email"/>
+    <value value="someone@something.org"/>
+    <use value="home"/>
+  </telecom>
+</Practitioner>

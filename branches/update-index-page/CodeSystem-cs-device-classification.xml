@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<CodeSystem xmlns="http://hl7.org/fhir">
+  <id value="cs-device-classification"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p>This case-sensitive code system <code>http://fhir.health.gov.lk/ips/CodeSystem/cs-device-classification</code> defines the following code:</p><table class="codes"><tr><td style="white-space:nowrap"><b>Code</b></td></tr><tr><td style="white-space:nowrap">OpenMRS<a name="cs-device-classification-OpenMRS"> </a></td></tr></table></div>
+  </text>
+  <url value="http://fhir.health.gov.lk/ips/CodeSystem/cs-device-classification"/>
+  <version value="0.1.0"/>
+  <name value="CSDeviceClassificationCodes"/>
+  <title value="Device Classification Codes"/>
+  <status value="active"/>
+  <experimental value="false"/>
+  <date value="2024-05-21T08:44:33+00:00"/>
+  <publisher value="Ministry of Health, Sri Lanka"/>
+  <contact>
+    <name value="Ministry of Health, Sri Lanka"/>
+    <telecom>
+      <system value="url"/>
+      <value value="https://www.health.gov.lk/"/>
+    </telecom>
+    <telecom>
+      <system value="email"/>
+      <value value="digitalhealth@health.gov.lk"/>
+    </telecom>
+  </contact>
+  <contact>
+    <name value="Director, Health Information"/>
+    <telecom>
+      <system value="email"/>
+      <value value="digitalhealth@health.gov.lk"/>
+      <use value="work"/>
+    </telecom>
+  </contact>
+  <description value="A list of device classification codes."/>
+  <jurisdiction>
+    <coding>
+      <system value="http://unstats.un.org/unsd/methods/m49/m49.htm"/>
+      <code value="001"/>
+      <display value="World"/>
+    </coding>
+  </jurisdiction>
+  <caseSensitive value="true"/>
+  <content value="complete"/>
+  <count value="1"/>
+  <concept>
+    <code value="OpenMRS"/>
+    <display value="OpenMRS"/>
+  </concept>
+</CodeSystem>
