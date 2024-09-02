@@ -554,7 +554,147 @@ Description: "Clinical document used to represent the International Patient Summ
 * section[sectionVitalSigns][=].entry[vitalSign][+] = Reference(HeightExample)
 * section[sectionVitalSigns][=].entry[vitalSign][+] = Reference(BMIExample)
 * section[sectionVitalSigns][=].text.status = #generated
-* section[sectionVitalSigns][=].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: Observation</b><a name=\"BloodPressureExample\"></a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource Observation &quot;BloodPressureExample&quot; </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-blood-pressure.html\">Blood Pressure Observation</a></p></div><p><b>status</b>: final</p><p><b>category</b>: Vital Signs <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"http://terminology.hl7.org/5.0.0/CodeSystem-observation-category.html\">Observation Category Codes</a>#vital-signs)</span></p><p><b>code</b>: Blood Pressure <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"https://loinc.org/\">LOINC</a>#85354-9)</span></p><p><b>subject</b>: See (https://lk-gov-health-hiu.github.io/lk-nehr-fhir-ips/Patient-PatientExample)</p><p><b>encounter</b>: See (https://lk-gov-health-hiu.github.io/lk-nehr-fhir-ips/Encounter-TargetFacilityEncounter)</p><p><b>effective</b>: 2022-11-30</p><p><b>performer</b>: </p><ul><li>See (https://lk-gov-health-hiu.github.io/lk-nehr-fhir-ips/Organization-OrganizationExample)</li><li>See (https://lk-gov-health-hiu.github.io/lk-nehr-fhir-ips/Practitioner-GeneralPractitionerExample)</li></ul><blockquote><p><b>component</b></p><p><b>code</b>: BP sys <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"https://loinc.org/\">LOINC</a>#8480-6)</span></p><p><b>value</b>: 106 mmHg<span style=\"background: LightGoldenRodYellow\"> (Details: UCUM code mm[Hg] = 'mm[Hg]')</span></p></blockquote><blockquote><p><b>component</b></p><p><b>code</b>: BP dias <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"https://loinc.org/\">LOINC</a>#8462-4)</span></p><p><b>value</b>: 60 mmHg<span style=\"background: LightGoldenRodYellow\"> (Details: UCUM code mm[Hg] = 'mm[Hg]')</span></p></blockquote><p><b>Generated Narrative: Observation</b><a name=\"RiskBehaviourTobaccoSmokerExample\"></a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource Observation &quot;RiskBehaviourTobaccoSmokerExample&quot; </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-risk-behaviour-tobacco-smoker.html\">Tobacco Smoker Observation</a></p></div><p><b>status</b>: final</p><p><b>category</b>: Social History <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"http://terminology.hl7.org/5.0.0/CodeSystem-observation-category.html\">Observation Category Codes</a>#social-history)</span></p><p><b>code</b>: Tobacco smoking status for tobacco smoker <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"https://loinc.org/\">LOINC</a>#81229-7)</span></p><p><b>subject</b>: See (https://lk-gov-health-hiu.github.io/lk-nehr-fhir-ips/Patient-PatientExample)</p><p><b>encounter</b>: See (https://lk-gov-health-hiu.github.io/lk-nehr-fhir-ips/Encounter-TargetFacilityEncounter)</p><p><b>effective</b>: 2022-11-30</p><p><b>performer</b>: </p><ul><li>See (https://lk-gov-health-hiu.github.io/lk-nehr-fhir-ips/Organization-OrganizationExample)</li><li>See (https://lk-gov-health-hiu.github.io/lk-nehr-fhir-ips/Practitioner-GeneralPractitionerExample)</li></ul><p><b>value</b>: Light tobacco smoker <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"https://loinc.org/\">LOINC</a>#LA18982-1)</span></p> <p><b>Generated Narrative: Observation</b><a name=\"HeightExample\"></a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource Observation &quot;HeightExample&quot; </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-height.html\">Patient Height Observation</a></p></div><p><b>status</b>: final</p><p><b>category</b>: Vital Signs <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"http://terminology.hl7.org/5.0.0/CodeSystem-observation-category.html\">Observation Category Codes</a>#vital-signs)</span></p><p><b>code</b>: Body Height <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"https://loinc.org/\">LOINC</a>#8302-2)</span></p><p><b>subject</b>: See (https://lk-gov-health-hiu.github.io/lk-nehr-fhir-ips/Patient-PatientExample)</p><p><b>encounter</b>: See (https://lk-gov-health-hiu.github.io/lk-nehr-fhir-ips/Encounter-TargetFacilityEncounter)</p><p><b>effective</b>: 2022-11-30</p><p><b>performer</b>: </p><ul><li>See (https://lk-gov-health-hiu.github.io/lk-nehr-fhir-ips/Organization-OrganizationExample)</li><li>See (https://lk-gov-health-hiu.github.io/lk-nehr-fhir-ips/Practitioner-GeneralPractitionerExample)</li></ul><p><b>value</b>: 185 cm<span style=\"background: LightGoldenRodYellow\"> (Details: UCUM code cm = 'cm')</span></p><br /><p><b>Generated Narrative: Observation</b><a name=\"BMIExample\"></a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource Observation &quot;BMIExample&quot; </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-bmi.html\">Patient BMI Observation</a></p></div><p><b>status</b>: final</p><p><b>category</b>: Vital Signs <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"http://terminology.hl7.org/5.0.0/CodeSystem-observation-category.html\">Observation Category Codes</a>#vital-signs)</span></p><p><b>code</b>: Body mass index (BMI) <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"https://loinc.org/\">LOINC</a>#39156-5)</span></p><p><b>subject</b>: See (https://lk-gov-health-hiu.github.io/lk-nehr-fhir-ips/Patient-PatientExample)</p><p><b>encounter</b>: See (https://lk-gov-health-hiu.github.io/lk-nehr-fhir-ips/Encounter-TargetFacilityEncounter)</p><p><b>effective</b>: 2022-11-30</p><p><b>performer</b>: </p><ul><li>See (https://lk-gov-health-hiu.github.io/lk-nehr-fhir-ips/Organization-OrganizationExample)</li><li>See (https://lk-gov-health-hiu.github.io/lk-nehr-fhir-ips/Practitioner-GeneralPractitionerExample)</li></ul><p><b>value</b>: 16.2 kg/m2<span style=\"background: LightGoldenRodYellow\"> (Details: UCUM code kg/m2 = 'kg/m2')</span></p><p><b>derivedFrom</b>: </p><ul><li>See (https://lk-gov-health-hiu.github.io/lk-nehr-fhir-ips/Observation-WeightExample)</li><li>See (https://lk-gov-health-hiu.github.io/lk-nehr-fhir-ips/Observation-HeightExample)</li></ul></div>"
+* section[sectionVitalSigns][=].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">
+  <p>
+    <b>Generated Narrative: Observation</b>
+    <a name=\"BloodPressureExample\"></a>
+  </p>
+  <div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\">
+    <p style=\"margin-bottom: 0px\">Resource Observation &quot;BloodPressureExample&quot;</p>
+    <p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-blood-pressure.html\">Blood Pressure Observation</a>
+    </p>
+  </div>
+  <p>
+    <b>status</b>: final
+  </p>
+  <p>
+    <b>category</b>: Vital Signs <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\">( <a href=\"http://terminology.hl7.org/5.0.0/CodeSystem-observation-category.html\">Observation Category Codes</a>#vital-signs) </span>
+  </p>
+  <p>
+    <b>code</b>: Blood Pressure <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\">( <a href=\"https://loinc.org/\">LOINC</a>#85354-9) </span>
+  </p>
+  <p>
+    <b>subject</b>: See (https://lk-gov-health-hiu.github.io/lk-nehr-fhir-ips/Patient-PatientExample)
+  </p>
+  <p>
+    <b>encounter</b>: See (https://lk-gov-health-hiu.github.io/lk-nehr-fhir-ips/Encounter-TargetFacilityEncounter)
+  </p>
+  <p>
+    <b>effective</b>: 2022-11-30
+  </p>
+  <p>
+    <b>performer</b>:
+  </p>
+  <ul>
+    <li>See (https://lk-gov-health-hiu.github.io/lk-nehr-fhir-ips/Organization-OrganizationExample)</li>
+    <li>See (https://lk-gov-health-hiu.github.io/lk-nehr-fhir-ips/Practitioner-GeneralPractitionerExample)</li>
+  </ul>
+  <blockquote>
+    <p>
+      <b>component</b>
+    </p>
+    <p>
+      <b>code</b>: BP sys <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\">( <a href=\"https://loinc.org/\">LOINC</a>#8480-6) </span>
+    </p>
+    <p>
+      <b>value</b>: 106 mmHg <span style=\"background: LightGoldenRodYellow\"> (Details: UCUM code mm[Hg] = 'mm[Hg]')</span>
+    </p>
+  </blockquote>
+  <blockquote>
+    <p>
+      <b>component</b>
+    </p>
+    <p>
+      <b>code</b>: BP dias <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\">( <a href=\"https://loinc.org/\">LOINC</a>#8462-4) </span>
+    </p>
+    <p>
+      <b>value</b>: 60 mmHg <span style=\"background: LightGoldenRodYellow\"> (Details: UCUM code mm[Hg] = 'mm[Hg]')</span>
+    </p>
+  </blockquote>
+  
+  <p>
+    <b>Generated Narrative: Observation</b>
+    <a name=\"HeightExample\"></a>
+  </p>
+  <div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\">
+    <p style=\"margin-bottom: 0px\">Resource Observation &quot;HeightExample&quot;</p>
+    <p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-height.html\">Patient Height Observation</a>
+    </p>
+  </div>
+  <p>
+    <b>status</b>: final
+  </p>
+  <p>
+    <b>category</b>: Vital Signs <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\">( <a href=\"http://terminology.hl7.org/5.0.0/CodeSystem-observation-category.html\">Observation Category Codes</a>#vital-signs) </span>
+  </p>
+  <p>
+    <b>code</b>: Body Height <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\">( <a href=\"https://loinc.org/\">LOINC</a>#8302-2) </span>
+  </p>
+  <p>
+    <b>subject</b>: See (https://lk-gov-health-hiu.github.io/lk-nehr-fhir-ips/Patient-PatientExample)
+  </p>
+  <p>
+    <b>encounter</b>: See (https://lk-gov-health-hiu.github.io/lk-nehr-fhir-ips/Encounter-TargetFacilityEncounter)
+  </p>
+  <p>
+    <b>effective</b>: 2022-11-30
+  </p>
+  <p>
+    <b>performer</b>:
+  </p>
+  <ul>
+    <li>See (https://lk-gov-health-hiu.github.io/lk-nehr-fhir-ips/Organization-OrganizationExample)</li>
+    <li>See (https://lk-gov-health-hiu.github.io/lk-nehr-fhir-ips/Practitioner-GeneralPractitionerExample)</li>
+  </ul>
+  <p>
+    <b>value</b>: 185 cm <span style=\"background: LightGoldenRodYellow\"> (Details: UCUM code cm = 'cm')</span>
+  </p>
+  <br />
+  <p>
+    <b>Generated Narrative: Observation</b>
+    <a name=\"BMIExample\"></a>
+  </p>
+  <div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\">
+    <p style=\"margin-bottom: 0px\">Resource Observation &quot;BMIExample&quot;</p>
+    <p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-bmi.html\">Patient BMI Observation</a>
+    </p>
+  </div>
+  <p>
+    <b>status</b>: final
+  </p>
+  <p>
+    <b>category</b>: Vital Signs <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\">( <a href=\"http://terminology.hl7.org/5.0.0/CodeSystem-observation-category.html\">Observation Category Codes</a>#vital-signs) </span>
+  </p>
+  <p>
+    <b>code</b>: Body mass index (BMI) <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\">( <a href=\"https://loinc.org/\">LOINC</a>#39156-5) </span>
+  </p>
+  <p>
+    <b>subject</b>: See (https://lk-gov-health-hiu.github.io/lk-nehr-fhir-ips/Patient-PatientExample)
+  </p>
+  <p>
+    <b>encounter</b>: See (https://lk-gov-health-hiu.github.io/lk-nehr-fhir-ips/Encounter-TargetFacilityEncounter)
+  </p>
+  <p>
+    <b>effective</b>: 2022-11-30
+  </p>
+  <p>
+    <b>performer</b>:
+  </p>
+  <ul>
+    <li>See (https://lk-gov-health-hiu.github.io/lk-nehr-fhir-ips/Organization-OrganizationExample)</li>
+    <li>See (https://lk-gov-health-hiu.github.io/lk-nehr-fhir-ips/Practitioner-GeneralPractitionerExample)</li>
+  </ul>
+  <p>
+    <b>value</b>: 16.2 kg/m2 <span style=\"background: LightGoldenRodYellow\"> (Details: UCUM code kg/m2 = 'kg/m2')</span>
+  </p>
+  <p>
+    <b>derivedFrom</b>:
+  </p>
+  <ul>
+    <li>See (https://lk-gov-health-hiu.github.io/lk-nehr-fhir-ips/Observation-WeightExample)</li>
+    <li>See (https://lk-gov-health-hiu.github.io/lk-nehr-fhir-ips/Observation-HeightExample)</li>
+  </ul>
+</div>"
 
 /** section[sectionSocialHistory][+].title = "IPS Social History Section"
 * section[sectionSocialHistory][=].code = $LNC#29762-2
