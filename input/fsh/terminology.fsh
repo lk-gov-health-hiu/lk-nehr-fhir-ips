@@ -3935,8 +3935,8 @@ Description: "A list of typical medications that can be prescribed to the patien
 * #05040201 "Amino acids Solution for Intravenous Infusion 200mL Bottle"
 * #05040202 "Branched chain Amino Acid (Methionine 200mg/ Choline 200mg)"
 * #05040401 "Disposable Infusion set (Non-Vented)"
-* #00305901 "test 1"
-* #00201012 "test 2"
+* #00305901 "code needs display name 1"
+* #00201012 "code needs display name 2"
 
 ValueSet: VSMedicationNamesForMSD
 Id: vs-medication-name-msd
