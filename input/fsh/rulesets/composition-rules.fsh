@@ -8,6 +8,8 @@ RuleSet: CompositionEntry(allowedResourcesForEntry, resourceID, sectionSLice, se
   * entry only Reference({allowedResourcesForEntry})
   * entry ^slicing.discriminator[+].type = #profile
   * entry ^slicing.discriminator[=].path = "resolve()"
+  * entry ^slicing.discriminator[+].type = #value
+  * entry ^slicing.discriminator[=].path = "resolve()"
   * entry ^slicing.rules = #open
   * entry ^short = "{shortDescription}"
   * entry ^definition = "{definition}"

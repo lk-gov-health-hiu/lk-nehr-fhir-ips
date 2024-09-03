@@ -30,6 +30,8 @@ Description: "This bundle contains all of the HIMS resources for IPS."
 * entry[condition] ^definition =
     "reason(s) why this should be supported."
 
+* insert BundleEntry(HIMSComposition, composition, reason why this should be supported.)    
+
 * insert BundleEntry(GeneralPractitioner, practitioner, reason why this should be supported.)
 * insert BundleEntry(TargetFacilityEncounter, encounters, reason why this should be supported.)
 * insert BundleEntry(FollowUpPlanServiceRequest, serviceRequests, reason why this should be supported.)

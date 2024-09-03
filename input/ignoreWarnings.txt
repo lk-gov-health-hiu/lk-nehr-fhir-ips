@@ -3,15 +3,11 @@
 # This is a known issue that is being addressed: https://chat.fhir.org/#narrow/stream/179202-terminology/topic/DICOM.20ValueSet.20Not.20Found
 ValueSet 'http://dicom.nema.org/medical/dicom/current/output/chtml/part04/sect_B.5.html#table_B.5-1' not found
 
-# These messages are not important as they are only indicating that this IG includes additional slices to the base IPS profiles
-This element does not match any known slice defined in the profile http://hl7.org/fhir/uv/ips/StructureDefinition/Composition-uv-ips|1.1.0 (this may not be a problem, but you should check that it's not intended to match a slice)
-
-# These messages are not important as they are only indicating that the bundle entry is profiled to allow more than one profile of the same type.
-%The entry resource matched more than one of the allowed profiles%
-%Found multiple matching profiles among 2 choices%
-
-# This is a known issue that is being addressed: https://chat.fhir.org/#narrow/stream/179252-IG-creation/topic/ConceptMap.20warnings.20in.20QA.20report
-The modifier extension http://hl7.org/fhir/1.0/StructureDefinition/extension-ConceptMap.element.target.equivalence from FHIR version 1.0 is not allowed to be used at this point (allowed = e:ConceptMap.element.target; this element is [[BackboneElement, ConceptMap.group.element.target]; this is a warning since contexts may be renamed between FHIR versions)
-
-# This is a known issue that is being addressed: https://chat.fhir.org/#narrow/stream/179252-IG-creation/topic/auto-oid.20root.20parameter
-This resource should have an OID assigned to cater for possible e.g. CDA usage (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/fhir-tools-ig/CodeSystem-ig-parameters.html#ig-parameters-auto-oid-root)
+# This is a known issue that is being addressed: https://chat.fhir.org/#narrow/stream/207835-IPS/topic/Duplicate.20anchor.20Ids
+WARNING: /Users/richard/Documents/lk-nehr-fhir-ips/output/StructureDefinition-blood-pressure-definitions.html: The html source has duplicate anchor Ids: Observation.effective[x].extension,Observation.effective[x].extension:data-absent-reason,Observation.effective[x].id,key_Observation.effective[x].extension:data-absent-reason
+WARNING: /Users/richard/Documents/lk-nehr-fhir-ips/output/StructureDefinition-bmi-definitions.html: The html source has duplicate anchor Ids: Observation.effective[x].extension,Observation.effective[x].extension:data-absent-reason,Observation.effective[x].id,key_Observation.effective[x].extension:data-absent-reason
+WARNING: /Users/richard/Documents/lk-nehr-fhir-ips/output/StructureDefinition-generic-observation-definitions.html: The html source has duplicate anchor Ids: Observation.effective[x].extension,Observation.effective[x].extension:data-absent-reason,Observation.effective[x].id,key_Observation.effective[x].extension:data-absent-reason
+WARNING: /Users/richard/Documents/lk-nehr-fhir-ips/output/StructureDefinition-height-definitions.html: The html source has duplicate anchor Ids: Observation.effective[x].extension,Observation.effective[x].extension:data-absent-reason,Observation.effective[x].id,key_Observation.effective[x].extension:data-absent-reason
+WARNING: /Users/richard/Documents/lk-nehr-fhir-ips/output/StructureDefinition-risk-behaviour-physical-activity-definitions.html: The html source has duplicate anchor Ids: Observation.effective[x].extension,Observation.effective[x].extension:data-absent-reason,Observation.effective[x].id,key_Observation.effective[x].extension:data-absent-reason
+WARNING: /Users/richard/Documents/lk-nehr-fhir-ips/output/StructureDefinition-risk-behaviour-tobacco-smoker-definitions.html: The html source has duplicate anchor Ids: Observation.effective[x].extension,Observation.effective[x].extension:data-absent-reason,Observation.effective[x].id,key_Observation.effective[x].extension:data-absent-reason
+WARNING: /Users/richard/Documents/lk-nehr-fhir-ips/output/StructureDefinition-weight-definitions.html: The html source has duplicate anchor Ids: Observation.effective[x].extension,Observation.effective[x].extension:data-absent-reason,Observation.effective[x].id,key_Observation.effective[x].extension:data-absent-reason

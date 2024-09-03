@@ -36,6 +36,8 @@ Description: "This bundle contains all of the HHIMS resources for IPS."
 * entry[medication-dispensation] ^definition =
     "reason(s) why this should be supported."
 
+* insert BundleEntry(HHIMSComposition, composition, reason why this should be supported.)
+
 * insert BundleEntry(Imaging, imagingstudy, reason why this should be supported.)
 * insert BundleEntry(NotifiableDiseasesNotified, communication-notifiable-conditions, reason why this should be supported.)
 * insert BundleEntry(ProvidersLocation, encounterLocations, reason why this should be supported.)
