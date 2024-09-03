@@ -265,7 +265,7 @@ Description: "Represents the patient's blood pressure."
 * category.coding.code = #vital-signs
 * category.coding.system = "http://terminology.hl7.org/CodeSystem/observation-category"
 * component 1..*
-* component ^slicing.discriminator.type = #pattern
+* component ^slicing.discriminator.type = #value
 * component ^slicing.discriminator.path = "code"
 * component ^slicing.rules = #open
 * component ^slicing.ordered = false
@@ -940,11 +940,11 @@ Description: "Clinical document used to represent the International Patient Summ
 * author only Reference(GeneralPractitioner or ServiceProvider or DeviceInformation)
 * title 1..1
 * section 1..*
-* section ^slicing.discriminator[+].type = #pattern
+/** section ^slicing.discriminator[+].type = #value
 * section ^slicing.discriminator[=].path = "code"
 * section ^slicing.rules = #open
 * section ^slicing.ordered = false
-* section ^slicing.description = "An entry resource included in HIMS IPS document bundle resource."
+* section ^slicing.description = "An entry resource included in HIMS IPS document bundle resource."*/
 * section contains
     sectionPractitioners 0..1 MS and
     sectionPhysicalActivity 0..1 MS and
@@ -993,11 +993,12 @@ Description: "Clinical document used to represent the International Patient Summ
 * author only Reference(GeneralPractitioner or ServiceProvider or DeviceInformation)
 * title 1..1
 * section 1..*
-* section ^slicing.discriminator[+].type = #pattern
+/** section ^slicing.discriminator[+].type = #value
 * section ^slicing.discriminator[=].path = "code"
 * section ^slicing.rules = #open
 * section ^slicing.ordered = false
-* section ^slicing.description = "An entry resource included in HHIMS IPS document bundle resource."
+* section ^slicing.description = "An entry resource included in HHIMS IPS document bundle resource."*/
+
 * section contains
  //   sectionInjections 0..1 MS and
     sectionImaging 0..1 MS and
@@ -1036,7 +1037,7 @@ Description: "Clinical document used to represent the International Patient Summ
 
 * insert EntryToSection(DrugDispensation, sectionMedications, medicationDispense, 0..*)
 
-* insert CompositionEntry(Task or ServiceRequest, InvestigationsServiceRequest, sectionInvestigations, $LNC#77597-3, Laboratory Investigations Summary section, serviceRequest, 
+* insert CompositionEntry(ServiceRequest, InvestigationsServiceRequest, sectionInvestigations, $LNC#77597-3, Laboratory Investigations Summary section, serviceRequest, 
     Investigatons relevant for the scope of the patient summary, This lists the investigations relevant for the scope of the patient summary., 0..*)
 //* insert EntryToSection(InvestigationsTask, sectionInvestigations, task, 0..*)
 
@@ -1123,3 +1124,42 @@ Description: "Is used to record key information about the system that contribute
 * version.type 1..1
 * version.type from VSDeviceClassificationCodes (extensible)
 * version.value 1..1
+
+Profile: MedicalHistoryList
+Parent: List
+Id: medical-history-list
+Title: "List - Medical History"
+Description: "Documents the medical history for the patient"
+* status = #current
+* title 1..1
+* title = "Medical History"
+* code 1..1
+* code = $LNC#LP73189-0
+* subject 1..1
+* subject only Reference(IPSPatient)
+* encounter 1..1
+* encounter only Reference(TargetFacilityEncounter)
+* date 1..1
+* source 1..1
+* source only Reference(GeneralPractitioner)
+* entry 1..*
+
+* insert Slice(entry, reasons why this should be supported, value, flag.coding, open, Slicing the entry based on the flag value, false)
+
+* entry contains
+    PastMedicalHistory 0..* MS and
+    CurrentMedicalInformation 0..* MS
+
+* entry[PastMedicalHistory] ^definition =
+    "Past medical history representing inactive problems."
+* entry[PastMedicalHistory].flag 1..1
+* entry[PastMedicalHistory].flag.coding 1..1
+* entry[PastMedicalHistory].flag.coding = $LNC#LP74217-8
+* entry[PastMedicalHistory].item only Reference(MedicalHistory or NoMedicalHistory)
+
+* entry[CurrentMedicalInformation] ^definition =
+    "Current medical information representing active problems."
+* entry[CurrentMedicalInformation].flag 1..1
+* entry[CurrentMedicalInformation].flag.coding 1..1
+* entry[CurrentMedicalInformation].flag.coding = $LNC#LP74664-1
+* entry[CurrentMedicalInformation].item only Reference(MedicalHistory or NoMedicalHistory)
