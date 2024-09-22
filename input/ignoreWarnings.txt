@@ -11,3 +11,7 @@ WARNING: /Users/richard/Documents/lk-nehr-fhir-ips/output/StructureDefinition-he
 WARNING: /Users/richard/Documents/lk-nehr-fhir-ips/output/StructureDefinition-risk-behaviour-physical-activity-definitions.html: The html source has duplicate anchor Ids: Observation.effective[x].extension,Observation.effective[x].extension:data-absent-reason,Observation.effective[x].id,key_Observation.effective[x].extension:data-absent-reason
 WARNING: /Users/richard/Documents/lk-nehr-fhir-ips/output/StructureDefinition-risk-behaviour-tobacco-smoker-definitions.html: The html source has duplicate anchor Ids: Observation.effective[x].extension,Observation.effective[x].extension:data-absent-reason,Observation.effective[x].id,key_Observation.effective[x].extension:data-absent-reason
 WARNING: /Users/richard/Documents/lk-nehr-fhir-ips/output/StructureDefinition-weight-definitions.html: The html source has duplicate anchor Ids: Observation.effective[x].extension,Observation.effective[x].extension:data-absent-reason,Observation.effective[x].id,key_Observation.effective[x].extension:data-absent-reason
+
+# This is a known issue and is being addressed. See https://chat.fhir.org/#narrow/stream/179252-IG-creation/topic/IG.20Publisher.20Version.3A.20v1.2E6.2E25
+%binds to the value set 'http://hl7.org/fhir/ValueSet/languages' which is experimental, but this structure is not labeled as experimental%
+%binds to the value set 'http://hl7.org/fhir/ValueSet/series-performer-function' which is experimental, but this structure is not labeled as experimental%
