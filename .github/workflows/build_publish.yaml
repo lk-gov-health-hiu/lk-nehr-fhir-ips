@@ -59,7 +59,7 @@ jobs:
           # Run the publisher - don't run the batch script but run the line directly
           args: java -Xms1g -Xmx8g -jar ./input-cache/publisher.jar publisher -ig .
       - name: Upload artifact
-        uses: actions/upload-pages-artifact@v1
+        uses: actions/upload-pages-artifact@v3
         with:
           # Upload entire repository
           path: "./output"
