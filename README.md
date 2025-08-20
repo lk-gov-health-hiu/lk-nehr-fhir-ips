@@ -6,7 +6,8 @@ Sri Lanka International Patient Summary Implementation
 ### Publication
 This Implementation Guide (IG) is published in the following location:
 
-* FHIR IG URL: <https://build.fhir.org/ig/lk-gov-health-hiu/lk-nehr-fhir-ips/branches/master/index.html>
+
+* FHIR IG URL: <https://build.fhir.org/ig/lk-gov-health-hiu/lk-nehr-fhir-ips/branches/master/index.html> - DISCONTINUED
 <br>
 
 ### Issues
