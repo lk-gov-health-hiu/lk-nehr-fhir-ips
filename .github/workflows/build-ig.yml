@@ -1,0 +1,19 @@
+# .github/workflows/build-ig.yml
+name: Build & Publish IG
+on:
+  push:
+    branches: [ main ]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: qligier/fhir-ig-action@v0.3.0
+        with:
+          sushi: latest          # run SUSHI before IG Publisher
+          ig-publisher: latest   # build the HTML
+      - name: Deploy to Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: output
