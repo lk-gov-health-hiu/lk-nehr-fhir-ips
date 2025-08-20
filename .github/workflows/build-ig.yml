@@ -3,7 +3,7 @@ name: 'Build & Publish IG'
 'on':
   push:
     branches:
-      - 'main'
+      - 'master'
 jobs:
   build:
     runs-on:
