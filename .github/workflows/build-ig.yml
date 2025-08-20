@@ -2,10 +2,14 @@
 name: Build & Publish IG
 on:
   push:
-    branches: [ main ]
+    branches: [ master ]
 jobs:
   build:
-    runs-on: ubuntu-latest
+   runs-on: [DESKTOP-T9TTC9A]   # <- your runner's labels
+    defaults:
+      run:
+        shell: pwsh
+   
     steps:
       - uses: actions/checkout@v4
       - uses: qligier/fhir-ig-action@v0.3.0
