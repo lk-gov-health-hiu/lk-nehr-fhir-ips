@@ -1,43 +1,22 @@
 ---
-name: 'Build & Publish IG (Windows self-hosted)'
+name: 'Build & Publish IG'
 'on':
   push:
     branches:
-      - 'master'
-  pull_request: null
+      - 'main'
 jobs:
   build:
     runs-on:
       - 'self-hosted'
       - 'windows'
       - 'x64'
-    defaults:
-      run:
-        shell: 'pwsh'
     steps:
       - uses: 'actions/checkout@v4'
-      - uses: 'actions/setup-java@v4'
+      - uses: 'qligier/fhir-ig-action@v0.3.0'
         with:
-          distribution: 'temurin'
-          java-version: '17'
-      - uses: 'actions/setup-node@v4'
-        with:
-          node-version: '18'
-      - name: 'Install SUSHI'
-        run: 'npm install -g fsh-sushi'
-      - name: 'Get IG Publisher'
-        run: '.\_updatePublisher.bat'
-        shell: 'cmd'
-      - name: 'Build IG'
-        run: '.\_genonce.bat'
-        shell: 'cmd'
-      - uses: 'actions/upload-artifact@v4'
-        if: '${{ github.event_name == ''pull_request'' }}'
-        with:
-          name: 'site'
-          path: 'output'
+          sushi: 'latest'
+          ig-publisher: 'latest'
       - name: 'Deploy to Pages'
-        if: 'github.ref == ''refs/heads/main'''
         uses: 'peaceiris/actions-gh-pages@v3'
         with:
           github_token: '${{ secrets.GITHUB_TOKEN }}'
