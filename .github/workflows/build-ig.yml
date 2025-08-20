@@ -10,14 +10,33 @@ jobs:
       - 'self-hosted'
       - 'windows'
       - 'x64'
+    defaults:
+      run:
+        shell: 'pwsh'
     steps:
       - uses: 'actions/checkout@v4'
-      - uses: 'qligier/fhir-ig-action@v0.3.0'
+      - uses: 'actions/setup-java@v4'
         with:
-          sushi: 'latest'
-          ig-publisher: 'latest'
-      - name: 'Deploy to Pages'
-        uses: 'peaceiris/actions-gh-pages@v3'
+          distribution: 'temurin'
+          java-version: '17'
+      - uses: 'actions/setup-node@v4'
         with:
-          github_token: '${{ secrets.GITHUB_TOKEN }}'
-          publish_dir: 'output'
+          node-version: '18'
+      - name: 'Install SUSHI'
+        run: 'npm i -g fsh-sushi'
+      - name: 'Update IG Publisher (Windows)'
+        run: '.\_updatePublisher.bat'
+        shell: 'cmd'
+      - name: 'Build (SUSHI debug)'
+        run: "$ErrorActionPreference = 'Stop'\nsushi build -l debug -s . 2>&1 | Tee-Object -FilePath .\\sushi.log\n"
+      - name: 'Build (Publisher debug)'
+        run: "$ErrorActionPreference = 'Stop'\n# Call the jar directly to be explicit about flags:\n$jar = Join-Path (Resolve-Path .) 'input-cache\\publisher.jar'\nif (!(Test-Path $jar)) { $jar = Join-Path (Resolve-Path .) '..\\publisher.jar' }\n& java -Xmx4g -jar $jar -ig . -debug 2>&1 | Tee-Object -FilePath .\\publisher.log\n"
+      - name: 'Annotate QA issues'
+        if: 'always()'
+        run: "if (Test-Path '.\\output\\qa.json') {\n  $qa = Get-Content .\\output\\qa.json -Raw | ConvertFrom-Json\n  foreach ($i in $qa.issues) {\n    $sev = $i.severity\n    $msg = $i.message; if (-not $msg) { $msg = $i.details }; if (-not $msg) { $msg = $i.text }\n    $path = $i.path; if (-not $path) { $path = $i.location }\n    if ($sev -in @('error','critical')) { Write-Output \"::error file=$path::$msg\" }\n    elseif ($sev -eq 'warning') { Write-Output \"::warning file=$path::$msg\" }\n  }\n}\n"
+      - name: 'Upload logs & QA'
+        if: 'always()'
+        uses: 'actions/upload-artifact@v4'
+        with:
+          name: 'ig-debug-artifacts'
+          path: "sushi.log\npublisher.log\noutput/qa.html\noutput/qa.json\n"
